@@ -1,0 +1,113 @@
+concept,id,complete,American English,Australian English (Perth),Belgian Dutch,Canadian English,Central German (Cologne),Central German (Honigberg),Central German (Luxembourg),Central German (Murrhardt),Danish,Dutch,Dutch (Antwerp),Dutch (Limburg),Dutch (Ostend),English,English (Buckie),English (Lindisfarne),English (Liverpool,English (London,English (North Carolina),English (Singapore),English (Tyrone),Faroese,German,High German (Biel),High German (Bodensee),High German (Graubuenden),High German (Herrlisheim),High German (North Alsace),High German (Ortisei),High German (Tuebingen),High German (Walser),Icelandic,Indian English (Delhi),LOCAL,Low German (Achterhoek),Low German (Bargstedt),New Zealand English (Auckland),Nigerian English (Igbo),Norwegian (Stavanger),Proto-Germanic,Scottish,South African English (Johannisburg),Swedish (Skane),Swedish (Stockholm),West Frisian (Grou),Yiddish (New York)
+all,369,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+yard,370,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,,x
+fast,371,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,
+hunger,372,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+nine,373,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+stool,374,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+year,375,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+father,376,44,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+I,377,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+north,378,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+storm,379,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+tear,381,25,x,x,,x,,x,,,x,,,,,x,x,x,x,x,x,x,x,x,x,,,,,,,,,x,x,x,,,x,x,x,,x,x,x,x,,
+tear,381,25,x,x,,x,,x,,,x,,,,,x,x,x,x,x,x,x,x,x,x,,,,,,,,,x,x,x,,,x,x,x,,x,x,x,x,,
+bath,382,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+young,383,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+five,384,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+is,385,41,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,,,x,x,x,,x,x
+open,386,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,,x,x,x
+ten,387,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+better,388,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+foot,389,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+knee,390,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+out,391,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+to fight,392,42,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,,x,x,x,x,x,x,x,x,,x,x,x,,x,x,x,x,x,x
+thing,393,43,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,
+to bite,394,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+four,395,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+lamb,396,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+oven,397,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+thorn,398,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,,x
+blood,399,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+full,400,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+leaf,401,41,x,x,x,x,x,x,,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,,x,x,x,x,x,
+over,402,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+ice,403,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+three,404,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+bone,405,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+good,406,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+liver,407,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+quick,408,38,x,x,x,x,x,x,,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,,x,,x,,x,x,x,x,x,,x,x,x,x,,x,x,x,x,x,
+thunder,409,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+brother,410,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+goose,411,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+rain,412,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+oak,413,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+toe,414,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,
+calf,415,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+green,416,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+mid,417,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+red,418,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+tongue,419,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+cold,420,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+hand,421,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,,x
+milk,422,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,,x,x,x,x,x,x
+right,423,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+to swear,424,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+tooth,425,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+corn,426,44,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+head,427,42,x,x,x,x,x,x,x,x,,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,,x,x,x,x,x,x
+moon,428,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+ring,429,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+top,430,40,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,,x,,,x,x,x,x,x,,x,x,x,,x,x,x,x,x,x
+cow,431,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+to hear,432,43,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,,x
+mother,433,43,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+salt,434,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+ash,435,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+two,436,46,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+daughter,437,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+heart,438,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+mouse,439,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+to see,440,40,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,,,x,x,x,x,,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+warm,441,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+day,442,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+holy,443,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+mouth,444,42,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,
+seven,445,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+fish,446,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+to wash,447,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+to drink,448,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+home,449,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,,x,x,x,x,x,x
+nail,450,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+sharp,451,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+what,452,46,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+ear,453,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+honey,454,44,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+naked,455,42,x,x,x,x,x,x,,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,,x,x,x
+to sit,456,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+in,457,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+white,458,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+earth,459,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+horn,460,44,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+name,461,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+six,462,46,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+wind,463,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+to eat,464,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+hound,465,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+needle,466,46,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+snow,467,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+one,468,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+wool,469,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+eight,470,44,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+house,471,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+new,472,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+sore,473,41,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,,x,x,x,x,x,x,x,x,x,,x,x,,x,x,x
+word,474,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+eye,475,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+hundred,476,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+night,477,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+stone,478,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+long,479,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
+_total_,-1,-1,111,111,109,111,108,110,100,109,108,109,109,105,108,111,111,111,111,111,111,111,111,105,111,107,102,107,106,109,107,107,105,110,111,111,107,105,111,110,110,5,111,111,108,110,105,103
