@@ -1,6 +1,6 @@
 ## Current Data
 
-The BDPA contains a list of 111 cognate sets across 21 German/Dutch dialects, transcribed in IPA, and already aligned. (More details in the ```data``` and ```tmp``` folders.) It seems like all of the entries were transcribed by a single person and aligned by another.
+The BDPA contains a list of 111 cognate sets across 21 German/Dutch dialects, transcribed in IPA, and already aligned. (More details in the ```data``` folder.) It seems like all of the entries were transcribed by a single person and aligned by another.
 
 ### TODO
 

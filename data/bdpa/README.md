@@ -1,6 +1,4 @@
-The data in ```bdpa``` were compiled by Paul Heggarty (transcriptions by Warren Maguire, with revisions by Paul Heggarty), and aligned by Johann-Mattis List (see references). I obtained them via http://alignments.lingpy.org/sources.php#Germanic.
-
-The group and doculect names in ```database comparisons``` are taken from [Sound Comparisons (Heggarty)](http://www.soundcomparisons.com). The data sets that are compared are Sound Comparisons (Heggarty), Languages and Origins in Europe (Renfrew & Heggarty 2009), and the Benchmark Database of Phonetic Alignments (List & Prokić; data from Renfrew & Heggarty 2009).
+The data were compiled by Paul Heggarty (transcriptions by Warren Maguire, with revisions by Paul Heggarty), and aligned by Johann-Mattis List (see references). I obtained them via http://alignments.lingpy.org/sources.php#Germanic.
 
 ---
 
@@ -9,8 +7,6 @@ The group and doculect names in ```database comparisons``` are taken from [Sound
 List, Johann-Mattis and Jelena Prokić. (2014). [**A benchmark database of phonetic alignments in historical linguistics and dialectology.**](https://pdfs.semanticscholar.org/4bd4/0ed75369e07756b338f81a9c9529e207e279.pdf) In: *Proceedings of the International Conference on Language Resources and Evaluation (LREC)*, 26—31 May 2014, Reykjavik. 288-294.
 
 Renfrew, C. and Heggarty, P. (2009). **Languages and Origins in Europe.** URL: http://www.languagesandpeoples.com/.
-
-Heggarty, P. **Sound Comparisons.** URL: http://www.soundcomparisons.com
 
 ---
 

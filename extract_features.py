@@ -5,7 +5,7 @@ import scipy.spatial.distance
 import numpy as np
 from matplotlib import pyplot as plt
 
-DATA_DIR = 'data'
+DATA_DIR = 'data/bdpa'
 VARIANTS = ['High German (Biel)', 'High German (Bodensee)',
             'High German (Graubuenden)', 'High German (Herrlisheim)',
             'High German (North Alsace)', 'High German (Ortisei)',
