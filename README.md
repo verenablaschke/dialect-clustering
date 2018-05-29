@@ -11,6 +11,7 @@ The BDPA contains a list of 111 cognate sets across 21 German/Dutch dialects, tr
     - If I add just one or two dialects, manual alignment might be worthwhile.
 - Possibly also check to what extend I might be able to use data from the Alignments of the Phonetischer Atlas von Deutschland (PAD) (prokic2018alignments), the Indo-European Lexical Cognacy Database (IELex) (dunn2012indo-european), the Morfologische Atlas van de Nederlandse Dialecten (MAND) (goemannodatemorfologische), or the Dynamische Syntactische Atlas van de Nederlandse Dialecten (DynaSAND) (barbiersnodatedynamische). Of course, for all of these, the transcription standards would probably differ from what I currently use.
 - Maybe check if the non-IPA phonetic transcriptions of the Norwegian and Swedish parts of the [Nordic Dialect Corpus](http://www.tekstlab.uio.no/nota/scandiasyn/) are compatible with one another.
+- The only difference between "High German (Herrlisheim)" and "High German (North Alsace)" is a slightly different coverage of entries. (That makes sense, since they seem to be derived from the same wordlist of Heggarty's.) Figure out if one is the subset of the other, else merge them?
 
 ## Current implementation 
 
@@ -27,8 +28,8 @@ Out of curiosity, I created a second dendrogram for all doculects (except for Pr
 
 - Improve the feature vector conversion & distance measure:
   - [ ] Deal with diphthongs.
-  - [x] If two dialects share a gap segment in an aligned entry, don't let that facture into the distance score. Changed the scores in the distance matrix, but didn't change the dendrogram.
-  - [ ] If an entry is missing for one of the words, should that entry be ignored for the distance measure? (In nerbonne1996phonetic missing entries are ignored, but I think I read other papers (which?) that didn't ignore such cases.)
+  - [x] If two dialects share a gap segment in an aligned entry, don't let that facture into the distance score. (Currently only applies to the distance matrix.)
+  - [x] If an entry is missing for one of the words, should that entry be ignored for the distance measure? (In nerbonne1996phonetic missing entries are ignored, but I think I read other papers (which?) that didn't ignore such cases.) (Currently only applies to the distance matrix.)
   - Appropriate gap penalization.
 - Try out different distance measures and clustering algorithms:
   - heeringa2006evaluation present and evaluate a bunch of different alignment/distance scoring strategies, such as including n-grams for phonetic context. See also nerbonne1997measuring.
@@ -37,7 +38,9 @@ Out of curiosity, I created a second dendrogram for all doculects (except for Pr
   - There are implementations where the focus is also on the features that distinguish dialect groups (prokic2012detecting, nerbonne2006identifying, wieling2011bipartite)
 - average per-word distance, average per-dialect distance, standard error, significance level (see nerbonne1996phonetic)
 - Figure out why LingPy crashes when trying to create a dendrogram from the data.
+- Depending on how the clustering algorithms work, shuffling the order of the dialects might result in a slightly different cluster hierarchy.
 - All of this is about the number of differences. It would also be interesting to consider the number of regular correspondences vs. unpredicatable correspondences/differences.
+  - Is the size of the data sufficient for extracting regular sound correspondences?
 
 ## Evaluation
 

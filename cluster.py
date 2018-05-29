@@ -66,14 +66,17 @@ def parse_file(filename):
             variant = cells[0].replace('.', '')
             if variant in VARIANTS:
                 entries[variant] = tokens2vec(cells[1:])
+            elif variant == 'LOCAL':
+                word_length = len(tokens2vec(cells[1:]))
         for variant in VARIANTS:
             try:
                 entries[variant]
             except KeyError:
                 # TODO: Variant is missing from the file.
                 print('{} has no entry for {}.'.format(variant, concept))
-                entries[variant] = tokens2vec(['-' for _ in range(len(cells) - 1)])
-    return entries
+                # entries[variant] = [None for _ in range(len(cells) - 1)]
+                entries[variant] = None
+    return entries, word_length
 
 
 def tokens2vec(tokens):
@@ -89,19 +92,30 @@ def tokens2vec(tokens):
     return segs
 
 
-def distance(dialect1, dialect2):
+def distance(dialect1, dialect2, ignore_missing_entries=True):
     assert len(dialect1) == len(dialect2)
     len_vecs = 0
     dist = 0
     for vec1, vec2 in zip(dialect1, dialect2):
         if vec1 is None and vec2 is None:
+            # Neither dialect has an entry for the concept.
             continue
-        len_vecs += 1
         if vec1 is None or vec2 is None:
-            # TODO: should gaps be penalized this heavily?
-            dist += LEN_IPA_VEC
-            continue
-        dist += scipy.spatial.distance.cityblock(vec1, vec2)
+            if ignore_missing_entries:
+                continue
+            # TODO
+
+        for seg1, seg2 in zip(vec1, vec2):
+            len_vecs += 1
+            if seg1 is None and seg2 is None:
+                # Ignore gap-gap alignments.
+                continue
+            if seg1 is None or seg2 is None:
+                # TODO: should gaps be penalized this heavily?
+                dist += LEN_IPA_VEC
+                continue
+            dist += scipy.spatial.distance.cityblock(seg1, seg2)
+
     len_vecs *= LEN_IPA_VEC
     return dist / len_vecs
 
@@ -158,17 +172,26 @@ def distance_matrix(samples, n_samples, visualize=True):
     return dist_matrix
 
 
-def flatten_matrix(samples):
-    # Flatten the matrix to 2D and replace None segments.
+def flatten_matrix(samples, word_lengths):
+    # Flattens the matrix to 2D and replaces None segments.
     samples_flat = []
     for dialect in samples:
-        vec_long = []
-        for vec in dialect:
-            if vec is None:
-                vec_long += numeric_null_segment()
-            else:
-                vec_long += vec
-        samples_flat.append(vec_long)
+        vec_dialect = []
+        i = 0
+        for word in dialect:
+            i += 1
+            vec_word = []
+            if word is None:
+                # TODO check if this changes the actual matrix.
+                word = [numeric_null_segment()
+                        for _ in range(word_lengths[i - 1])]
+            for vec in word:
+                if vec is None:
+                    vec_word += numeric_null_segment()
+                else:
+                    vec_word += vec
+            vec_dialect += vec_word
+        samples_flat.append(vec_dialect)
 
     # Convert to NumPy array.
     n_features = len(samples_flat[0])
@@ -197,22 +220,24 @@ def cluster(samples, method='average', visualize=True):
 
 # Represent the dialects as feature vectors.
 entries = {}
+word_lengths = []
 for root, dirs, files in os.walk(DATA_DIR):
     for f in files:
         if f.endswith('.msa'):
-            subentries = parse_file(os.path.join(root, f))
+            subentries, word_length = parse_file(os.path.join(root, f))
             if subentries is None:
                 continue
             for e in subentries:
                 try:
-                    entries[e] += subentries[e]
+                    entries[e].append(subentries[e])
                 except KeyError:
-                    entries[e] = subentries[e]
+                    entries[e] = [subentries[e]]
+            word_lengths.append(word_length)
 
 
 # Create a distance matrix.
 n_samples = len(VARIANTS)
 samples = [entries[v] for v in VARIANTS]
 distance_matrix(samples, n_samples)
-samples = flatten_matrix(samples)
+samples = flatten_matrix(samples, word_lengths)
 cluster(samples)
