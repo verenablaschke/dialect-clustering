@@ -5,50 +5,101 @@ import scipy.spatial.distance
 import numpy as np
 from matplotlib import pyplot as plt
 
-DATA_DIR = 'data/bdpa'
-VARIANTS = ['High German (Biel)', 'High German (Bodensee)',
-            'High German (Graubuenden)', 'High German (Herrlisheim)',
-            'High German (North Alsace)', 'High German (Ortisei)',
-            'High German (Tuebingen)', 'High German (Walser)',
-            'Central German (Cologne)', 'Central German (Honigberg)',
-            'Central German (Luxembourg)', 'Central German (Murrhardt)',
-            'German',
-            # Achterhoeks is spoken in NL, but it's Low German (Glottolog)
-            'Low German (Achterhoek)', 'Low German (Bargstedt)',
-            'Dutch', 'Belgian Dutch',
-            # Limburg here refers to the Dutch province
-            'Dutch (Antwerp)', 'Dutch (Limburg)', 'Dutch (Ostend)',
-            'West Frisian (Grou)',
-            # including Yiddish just out of curiosity
-            'Yiddish (New York)'
-            ]
+DOCULECTS = ['High German (Biel)', 'High German (Bodensee)',
+             'High German (Graubuenden)', 'High German (Herrlisheim)',
+             'High German (North Alsace)', 'High German (Ortisei)',
+             'High German (Tuebingen)', 'High German (Walser)',
+             'Central German (Cologne)', 'Central German (Honigberg)',
+             'Central German (Luxembourg)', 'Central German (Murrhardt)',
+             'German',
+             # Achterhoeks is spoken in NL, but it's Low German (Glottolog)
+             'Low German (Achterhoek)', 'Low German (Bargstedt)',
+             'Dutch', 'Belgian Dutch',
+             # Limburg here refers to the Dutch province
+             'Dutch (Antwerp)', 'Dutch (Limburg)', 'Dutch (Ostend)',
+             'West Frisian (Grou)',
+             # including Yiddish just out of curiosity
+             'Yiddish (New York)'
+             ]
 # just for fun  # TODO remove?
-VARIANTS_ALL = ['American English', 'Australian English (Perth)',
-                'Belgian Dutch', 'Canadian English',
-                'Central German (Cologne)', 'Central German (Honigberg)',
-                'Central German (Luxembourg)', 'Central German (Murrhardt)',
-                'Danish', 'Dutch', 'Dutch (Antwerp)', 'Dutch (Limburg)',
-                'Dutch (Ostend)', 'English', 'English (Buckie)',
-                'English (Lindisfarne)', 'English (Liverpool',
-                'English (London', 'English (North Carolina)',
-                'English (Singapore)', 'English (Tyrone)', 'Faroese',
-                'German', 'High German (Biel)', 'High German (Bodensee)',
-                'High German (Graubuenden)', 'High German (Herrlisheim)',
-                'High German (North Alsace)', 'High German (Ortisei)',
-                'High German (Tuebingen)', 'High German (Walser)',
-                'Icelandic', 'Indian English (Delhi)',
-                'Low German (Achterhoek)', 'Low German (Bargstedt)',
-                'New Zealand English (Auckland)', 'Nigerian English (Igbo)',
-                'Norwegian (Stavanger)', 'Scottish',
-                'South African English (Johannisburg)', 'Swedish (Skane)',
-                'Swedish (Stockholm)', 'West Frisian (Grou)',
-                'Yiddish (New York)']
-# VARIANTS = VARIANTS_ALL  # TODO remove
-ft = panphon.FeatureTable()
-LEN_IPA_VEC = len(ft.fts('e').numeric())
+DOCULECTS_ALL = ['American English', 'Australian English (Perth)',
+                 'Belgian Dutch', 'Canadian English',
+                 'Central German (Cologne)', 'Central German (Honigberg)',
+                 'Central German (Luxembourg)', 'Central German (Murrhardt)',
+                 'Danish', 'Dutch', 'Dutch (Antwerp)', 'Dutch (Limburg)',
+                 'Dutch (Ostend)', 'English', 'English (Buckie)',
+                 'English (Lindisfarne)', 'English (Liverpool',
+                 'English (London', 'English (North Carolina)',
+                 'English (Singapore)', 'English (Tyrone)', 'Faroese',
+                 'German', 'High German (Biel)', 'High German (Bodensee)',
+                 'High German (Graubuenden)', 'High German (Herrlisheim)',
+                 'High German (North Alsace)', 'High German (Ortisei)',
+                 'High German (Tuebingen)', 'High German (Walser)',
+                 'Icelandic', 'Indian English (Delhi)',
+                 'Low German (Achterhoek)', 'Low German (Bargstedt)',
+                 'New Zealand English (Auckland)', 'Nigerian English (Igbo)',
+                 'Norwegian (Stavanger)', 'Scottish',
+                 'South African English (Johannisburg)', 'Swedish (Skane)',
+                 'Swedish (Stockholm)', 'West Frisian (Grou)',
+                 'Yiddish (New York)']
+FT = panphon.FeatureTable()
+LEN_IPA_VEC = len(FT.fts('e').numeric())
 
 
-def parse_file(filename):
+def get_samples(directory, doculects=DOCULECTS):
+    """"Extracts the feature-vector representations of each doculect's entries.
+
+    Args:
+        directory (str): The directory containing MSA files from the BDPA.
+
+    Keyword args:
+        doculects (list(str)): The names of the doculects for which information
+                               should be extracted. (default: DOCULECTS)
+
+    Returns:
+        list(list(list(int))): A 4D matrix. The first (=outermost) dimension
+                               represents doculects, the next one concepts,
+                               then phonetic segments, then phonetic features.
+                               The second and third dimensions can also contain
+                               None values.
+        list(int): The number of segments (including gaps) each concept
+                   consists of.
+    """
+    entries = {}
+    word_lengths = []
+    for root, dirs, files in os.walk(directory):
+        for f in files:
+            if f.endswith('.msa'):
+                subentries, word_length = parse_file(os.path.join(root, f),
+                                                     doculects)
+                if subentries is None:
+                    continue
+                for e in subentries:
+                    try:
+                        entries[e].append(subentries[e])
+                    except KeyError:
+                        entries[e] = [subentries[e]]
+                word_lengths.append(word_length)
+    return [entries[v] for v in doculects], word_lengths
+
+
+def parse_file(filename, doculects):
+    """Extracts the phonetic segments as features vectors from a file.
+
+    Args:
+        filename (str): The MSA file.
+        doculects (list(str)): The names of the relevant doculects.
+
+    Returns:
+        dict(str -> list(list(int))): A dictionary from doculect names to a 3D
+                                      matrix. The first (=outermost) dimension
+                                      represents concepts, the next one
+                                      phonetic segments, and the last one
+                                      phonetic features. The lists can also be
+                                      None.
+        list(int): The number of segments (including gaps) each concept
+                   consists of.
+    """
     with open(filename, encoding='utf8') as f:
         lines = [line.replace('.', '').replace('\n', '')
                  for line in f.readlines()]
@@ -59,46 +110,77 @@ def parse_file(filename):
         #     # 'tear' is divided into two files, each with a different concept
         #     # set that only covers about half the doculects.
         #     return None
-        # Other lines: language_name......\tphonetic_representation
+        # Other lines: language_name......\tsegment_1\tsegment_2\tsegment_n
         entries = {}
         for line in lines[2:]:
             cells = line.split('\t')
-            variant = cells[0].replace('.', '')
-            if variant in VARIANTS:
-                entries[variant] = tokens2vec(cells[1:])
-            elif variant == 'LOCAL':
-                word_length = len(tokens2vec(cells[1:]))
-        for variant in VARIANTS:
+            doculect = cells[0].replace('.', '')
+            if doculect in doculects:
+                entries[doculect] = tokens2vec(cells[1:])
+            elif doculect == 'LOCAL':
+                # 'LOCAL' is present in all MSA files to summarize the segment/
+                # gap distribution across the entries for the concept.
+                word_length = len(cells[1:])
+        for doculect in doculects:
             try:
-                entries[variant]
+                entries[doculect]
             except KeyError:
-                # TODO: Variant is missing from the file.
-                print('{} has no entry for {}.'.format(variant, concept))
-                # entries[variant] = [None for _ in range(len(cells) - 1)]
-                entries[variant] = None
+                print('{} has no entry for {}.'.format(doculect, concept))
+                entries[doculect] = None
     return entries, word_length
 
 
-def tokens2vec(tokens):
+def tokens2vec(segments):
+    """Converts each phonetic segment in a list into a phonetic feature vector.
+
+    Args:
+        segments (list(str)): A list of phonetic segments, in IPA.
+
+    Returns:
+        list(list(int)): A 2D matrix. The first dimension describes concepts,
+                         the second one segments as numeric phonetic features.
+                         The first list may contain None entries if a segment
+                         has no phonetic feature representation.
+    """
     segs = []
-    for token in tokens:
-        # TODO: diphthongs!
+    for seg in segments:
+        # TODO: diphthongs & triphthongs! affricates!
         try:
-            segs.append(ft.fts(token).numeric())
+            segs.append(FT.fts(seg).numeric())
         except AttributeError:
             # Couldn't convert the IPA token,
-            # probably because it's an insertion/deletion dummy token.
+            # probably because it's an insertion/deletion dummy token ('-').
+            if seg != '-':  # and len(seg) == 1:
+                print("Couldn't convert '{}' in {}."
+                      .format(seg, ''.join(segments)))
             segs.append(None)
     return segs
 
 
-def distance(dialect1, dialect2, ignore_missing_entries=True):
-    assert len(dialect1) == len(dialect2)
+def distance(doculect1, doculect2,
+             gap_penalty=LEN_IPA_VEC, ignore_missing_entries=True):
+    """Calculates the relative distance between two doculects.
+
+    Args:
+        doculect1 (str): The name of the first doculect.
+        doculect2 (str): The name of the second doculect.
+
+    Keyword args:
+        gap_penalty (int/float): The cost of insertion/deletion.
+                                 (default: LEN_IPA_VEC)
+        ignore_missing_entries (bool): If true, ignores cases where one of the
+                                       doculect does not have an entry for a
+                                       concept.
+
+    Returns:
+        float: The distance score [0, 1].
+    """
+    assert len(doculect1) == len(doculect2)
     len_vecs = 0
     dist = 0
-    for vec1, vec2 in zip(dialect1, dialect2):
+    for vec1, vec2 in zip(doculect1, doculect2):
         if vec1 is None and vec2 is None:
-            # Neither dialect has an entry for the concept.
+            # Neither doculect has an entry for the concept.
             continue
         if vec1 is None or vec2 is None:
             if ignore_missing_entries:
@@ -111,38 +193,64 @@ def distance(dialect1, dialect2, ignore_missing_entries=True):
                 # Ignore gap-gap alignments.
                 continue
             if seg1 is None or seg2 is None:
-                # TODO: should gaps be penalized this heavily?
-                dist += LEN_IPA_VEC
+                # TODO: how heavily should gaps be penalized?
+                dist += gap_penalty
                 continue
+            # TODO try out other distance measures?
             dist += scipy.spatial.distance.cityblock(seg1, seg2)
 
     len_vecs *= LEN_IPA_VEC
+    # TODO check if the score can reach 1
     return dist / len_vecs
 
 
 def numeric_null_segment():
+    """Creates a dummy feature vector.
+
+    Returns:
+        list(str): A phonetic feature vector containing only 0s.
+    """
     # TODO better approach?
     return [0 for _ in range(LEN_IPA_VEC)]
 
 
-def distance_matrix(samples, n_samples, visualize=True):
+def distance_matrix(samples, visualize=True, doculects=DOCULECTS):
+    """Creates a distance matrix between all doculects.
+
+    Args:
+        samples (list(list(list(int)))): A 4D matrix (doculects, concepts,
+                                         segments, features). See get_samples.
+
+    Keyword args:
+        visualize (bool): If true, the distance matrix is displayed as a
+                          heatmap. (default: True)
+        doculects (list(str)): The names of the doculects (only needed if
+                               visualize is True). (default: DOCULECTS)
+
+    Returns:
+        np.array: A n_doculects x n_doculects matrix containing the doculect
+                  distances.
+    """
     dist_matrix = []
+    n_samples = len(samples)
     for i in range(n_samples):
         sample = samples[i]
         dist_matrix.append([])
         for j in range(n_samples):
             if i == j:
+                # Distance between a doculect and itself.
                 dist = 0
             elif j < i + 1:
+                # Our distance measure is commutative; we've already calculated
+                # this distance.
                 dist = dist_matrix[j][i]
             else:
                 dist = distance(sample, samples[j])
             dist_matrix[i].append(dist)
-
     dist_matrix = np.array(dist_matrix)
 
     if visualize:
-        # Heat map.
+        # Heatmap.
         fig, ax = plt.subplots()
         dist_matrix_percentage = dist_matrix * 100
         im = ax.imshow(dist_matrix_percentage,
@@ -158,14 +266,14 @@ def distance_matrix(samples, n_samples, visualize=True):
 
         # Labels
         ax.set_xticks(np.arange(n_samples))
-        ax.set_xticklabels(VARIANTS)
+        ax.set_xticklabels(doculects)
         ax.set_yticks(np.arange(n_samples))
-        ax.set_yticklabels(VARIANTS)
+        ax.set_yticklabels(doculects)
         plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
                  rotation_mode="anchor")
         plt.colorbar(im)
 
-        ax.set_title("Relative dialect distances (in %)")
+        ax.set_title("Relative doculect distances (in %)")
         fig.tight_layout()
         plt.show()
 
@@ -173,12 +281,22 @@ def distance_matrix(samples, n_samples, visualize=True):
 
 
 def flatten_matrix(samples, word_lengths):
-    # Flattens the matrix to 2D and replaces None segments.
+    """Flattens the matrix to 2D and replaces None segments.
+
+    Args:
+        samples (list(list(list(int)))): A 4D matrix (doculects, concepts,
+                                         segments, features). See get_samples.
+        word_lengths (list(int)): The number of segments (including gaps) each
+                                  concept consists of.
+
+    Returns:
+        np.array: An n_doculects x n_features matrix.
+    """
     samples_flat = []
-    for dialect in samples:
-        vec_dialect = []
+    for doculect in samples:
+        vec_doculect = []
         i = 0
-        for word in dialect:
+        for word in doculect:
             i += 1
             vec_word = []
             if word is None:
@@ -190,12 +308,11 @@ def flatten_matrix(samples, word_lengths):
                     vec_word += numeric_null_segment()
                 else:
                     vec_word += vec
-            vec_dialect += vec_word
-        samples_flat.append(vec_dialect)
+            vec_doculect += vec_word
+        samples_flat.append(vec_doculect)
 
     # Convert to NumPy array.
-    n_features = len(samples_flat[0])
-    samples_np = np.zeros([n_samples, n_features])
+    samples_np = np.zeros([len(samples_flat), len(samples_flat[0])])
     i = 0
     for entry in samples_flat:
         samples_np[i] = np.array(entry)
@@ -205,39 +322,36 @@ def flatten_matrix(samples, word_lengths):
 
 
 def cluster(samples, method='average', visualize=True):
+    """Performs hierarchical clustering on the doculects.
+
+    Args:
+        samples (np.array): An n_doculects x n_features matrix.
+
+    Keyword args:
+        method (str): The clustering method
+                      (see scipy.cluster.hierarchy.linkage).
+        visualize (bool): If true, displays the cluster hierarchy as a
+                          dendrogram.
+
+    Returns:
+        np.array: The linkage matrix encoding the hierarchical clusters.
+    """
     # 'average' corresponds to the UPGMA clustering algorithm
     linkage_matrix = scipy.cluster.hierarchy.linkage(samples, method=method)
     if visualize:
         scipy.cluster.hierarchy.dendrogram(
             linkage_matrix,
-            labels=VARIANTS,
+            labels=DOCULECTS,
             orientation='right',
             leaf_font_size=12.)
-        plt.show()
         # TODO label x axis
+        plt.show()
     return linkage_matrix
 
 
-# Represent the dialects as feature vectors.
-entries = {}
-word_lengths = []
-for root, dirs, files in os.walk(DATA_DIR):
-    for f in files:
-        if f.endswith('.msa'):
-            subentries, word_length = parse_file(os.path.join(root, f))
-            if subentries is None:
-                continue
-            for e in subentries:
-                try:
-                    entries[e].append(subentries[e])
-                except KeyError:
-                    entries[e] = [subentries[e]]
-            word_lengths.append(word_length)
+if __name__ == '__main__':
 
-
-# Create a distance matrix.
-n_samples = len(VARIANTS)
-samples = [entries[v] for v in VARIANTS]
-distance_matrix(samples, n_samples)
-samples = flatten_matrix(samples, word_lengths)
-cluster(samples)
+    samples, word_lengths = get_samples('data/bdpa')
+    distance_matrix(samples)
+    samples = flatten_matrix(samples, word_lengths)
+    cluster(samples)
