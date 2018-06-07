@@ -7,7 +7,8 @@ from matplotlib import pyplot as plt
 
 DOCULECTS = ['High German (Biel)', 'High German (Bodensee)',
              'High German (Graubuenden)', 'High German (Herrlisheim)',
-             'High German (North Alsace)', 'High German (Ortisei)',
+             # 'High German (North Alsace)',
+             'High German (Ortisei)',
              'High German (Tuebingen)', 'High German (Walser)',
              'Central German (Cologne)', 'Central German (Honigberg)',
              'Central German (Luxembourg)', 'Central German (Murrhardt)',
@@ -151,8 +152,9 @@ def tokens2vec(segments):
             # Couldn't convert the IPA token,
             # probably because it's an insertion/deletion dummy token ('-').
             if seg != '-':  # and len(seg) == 1:
-                print("Couldn't convert '{}' in {}."
-                      .format(seg, ''.join(segments)))
+                # print("Couldn't convert '{}' in {}."
+                #       .format(seg, ''.join(segments)))
+                pass  # TODO del
             segs.append(None)
     return segs
 
