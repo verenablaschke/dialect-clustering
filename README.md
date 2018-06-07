@@ -28,6 +28,7 @@ Out of curiosity, I created a second dendrogram for all doculects (except for Pr
 
 - Improve the feature vector conversion & distance measure:
   - [ ] Deal with diphthongs, triphthongs, affricates.
+    - Used the PHOIBLE feature table instead of PanPhon's feature vectors in the branch ```phoible-features```. It recognizes some multi-phone segments, but it doesn't have entries for many of them either.
   - [ ] Escape ʦ, ʧ.
   - [x] If two doculects share a gap segment in an aligned entry, don't let that facture into the distance score.
   - [x] If an entry is missing for one of the words, should that entry be ignored for the distance measure? (In nerbonne1996phonetic missing entries are ignored, but I think I read other papers (which?) that didn't ignore such cases.)
