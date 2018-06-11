@@ -1,3 +1,21 @@
+## Possible directions
+
+**Approach #1**: Follow the original plan: Do the clusters support dialect perception/assignment of dialects to standard languages?
+- Add additional (Low German) varieties from soundcorrespondences.com.
+- Align them with the other data. The already aligned BDPA data can be used to judge the alignments.
+- Figure out a distance measure that is debatably objective and lingustically motivated.
+- Cluster the dialects, compare to literature from dialectology.
+
+Problems: How to judge if the resulting model is "good" if there deliberatedly is no gold standard? How to make sure our decisions in the model selection, feature selection are objective in a way and not influenced by patterns we expect and/or would like to see in the data?
+
+
+**Approach #2**: Use existing literature on Germanic languages/dialects as gold standard. Try to improve phonetic distance measures/clustering approaches. Find a niche in the existing literature and try out something new.
+- Potentially add more data.
+  - Other Germanic doculects from BDPA.
+  - More Germanic doculects from BDPA. This adds an alignment steps.
+- What kinds of approaches haven't been used yet frequently? I'd like something that's linguistically motivated. Bringing sound correspondences into this would be interesting. This could also potentially emulate certain isoglosses and historical sound shifts.
+
+
 ## Current Data
 
 The BDPA contains a list of 111 cognate sets across 21 German/Dutch doculects, transcribed in IPA, tokenized (affricates and diphthongs constitute single segments), and already aligned. (More details in the ```data``` folder.) All of the entries were transcribed by a single person and aligned by another.
@@ -5,14 +23,16 @@ The BDPA contains a list of 111 cognate sets across 21 German/Dutch doculects, t
 ### TODO
 
 - Unfortunately, the BDPA contains only two Low German dialects. Check if I can add some of the ones from [Sound Comparisons (Heggarty)](http://www.soundcomparisons.com/#/en/Germanic) (heggartynodatesound).
-  - Were they also transcribed by the same person?
+  - (Many of) the Germanic entries were also collected by Paul Heggarty and transcribed by Warren Maguire.
   - They aren't aligned with the other entries.
     - It would be possible however to start the program with an alignment step whose success is measured with the gold standard data.
     - If I add just one or two dialects, manual alignment might be worthwhile.
+  - Some of the entries are marked "non-cognate", but this is also encoded in the corresponding CSV files.
 - Possibly also check to what extend I might be able to use data from the Alignments of the Phonetischer Atlas von Deutschland (PAD) (prokic2018alignments), the Indo-European Lexical Cognacy Database (IELex) (dunn2012indo-european), the Morfologische Atlas van de Nederlandse Dialecten (MAND) (goemannodatemorfologische), or the Dynamische Syntactische Atlas van de Nederlandse Dialecten (DynaSAND) (barbiersnodatedynamische). Of course, for all of these, the transcription standards would probably differ from what I currently use.
 - Maybe check if the non-IPA phonetic transcriptions of the Norwegian and Swedish parts of the [Nordic Dialect Corpus](http://www.tekstlab.uio.no/nota/scandiasyn/) are compatible with one another.
 - The only difference between "High German (Herrlisheim)" and "High German (North Alsace)" is a slightly different coverage of entries. (That makes sense, since they seem to be derived from the same wordlist of Heggarty's.) Figure out if one is the subset of the other, else merge them?
   - [x] There are three differences between the two lists. "North Alsace" contains entries for _quick_ (408) and _top_ (430); "Herrlisheim" doesn't. The entries for _right_ (423) are "ʁaːχ" (North Alsace) and "ʁaːχt" (Herrlisheim). Heggarty's original entries on languagesandpeoples.com and soundcomparisons.com (both of which have only one doculect from North Alsace, which was recorded in Herrlisheim) are identical to the "Herrlisheim" entries. No idea where the data for "North Alsace" comes from, then (transcription errors?), so I'm disregarding that file now.
+- I could also branch out by using all of the doculects with sufficient concept coverage from BDPA-Germanic. There are a bunch of varieties of English. Unfortunately not a lot of non-standard varieties for the other languages.
 
 ## Current implementation 
 

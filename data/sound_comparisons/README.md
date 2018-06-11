@@ -1,0 +1,1 @@
+These files are from http://www.soundcomparisons.com and they (like the BDPA data) were also collected by Paul Heggarty and transcribed by Warren Maguire.
