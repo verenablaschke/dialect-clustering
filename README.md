@@ -1,3 +1,5 @@
+# Dialect clustering based on systematic sound correspondences
+
 ## Possible directions
 
 **Approach #1**: Follow the original plan: Do the clusters support dialect perception/assignment of dialects to standard languages?
@@ -15,6 +17,12 @@ Problems: How to judge if the resulting model is "good" if there deliberatedly i
   - More Germanic doculects from BDPA. This adds an alignment steps.
 - What kinds of approaches haven't been used yet frequently? I'd like something that's linguistically motivated. Bringing sound correspondences into this would be interesting. This could also potentially emulate certain isoglosses and historical sound shifts.
 
+### Following approach #2
+
+**A.** induce sound correspondences/SC rules for each combination of dialects? (for each dialect vs the standard vernacular?)
+- How to encode them such that they can be used for clustering? Is there enough overlap between the rules that a binary scheme (rule present/rule absent) can be applied?
+
+or **B.** follow approaches like ```wieling2011bipartite``` or ```nerbonne2009data-driven```. Is it possible to generalize the phoneme correspondence rules they work with? What kind of other unexplored niche could I follow?
 
 ## Current Data
 
