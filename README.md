@@ -3,16 +3,17 @@
 Can we cluster dialects based on sound correspondences? Papers like ```wieling2011bipartite``` invest clustering based on the presence/absence of aligned sound segments for doculect-reference doculect alignments, and give dialect clusters in addition to correlating the segment alignments with the clusters. Given the data I have, I could attempt something similar, but try using the Proto-Germanic data from BDPA as reference doculect (effectively giving information about historical sound shifts) and/or abstracting the sound segment correspondences.
 
 Next steps: 
-- [ ] Go carefully through publications about segment-correspondence-based clustering: ```wieling2011bipartite```, ```wieling2010hierarchical```, ```nerbonne2009data-driven```, ```dhillon2001co-clustering```, ```wieling2013analyzing```. How exactly does this work, and why does it work? 
-      - Are there authors other than Wieling and Nerbonne that have attempted something similar for language clustering? Are there publications more recent than 2013 about this?
-      - Check conclusions about this (and other techniques) in [Advances in Dialectometry
+- Go carefully through publications about segment-correspondence-based clustering: ```wieling2011bipartite```, ```wieling2010hierarchical```, ```nerbonne2009data-driven```, ```dhillon2001co-clustering```, ```wieling2013analyzing```. How exactly does this work, and why does it work? 
+  - Are there authors other than Wieling and Nerbonne that have attempted something similar for language clustering? Are there publications more recent than 2013 about this?
+  - Check conclusions about this (and other techniques) in [Advances in Dialectometry
 Annual Review of Linguistics](https://www.annualreviews.org/doi/full/10.1146/annurev-linguist-030514-124930).
-      - ```clustering_via_eigenvectors.py``` is an implementation of the example from ```wieling2011bipartite```
-- [ ] Alignment: Proto-Germanic and (maybe) other doculects that were also transcribed by Maguire and shared on Heggarty's research project webpage(s). 
+  - ```clustering_via_eigenvectors.py``` is an implementation of the example from ```wieling2011bipartite```
+- Alignment: Proto-Germanic and (maybe) other doculects that were also transcribed by Maguire and shared on Heggarty's research project webpage(s). 
 
 
-(The part below hasn't been updated yet.)
-=======
+(The sections below haven't been updated yet.)
+
+---
 
 ## Current Data
 
