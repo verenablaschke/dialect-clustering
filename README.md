@@ -1,28 +1,18 @@
-# Dialect clustering based on systematic sound correspondences
+# Dialect clustering based on sound correspondences
 
-## Possible directions
+Can we cluster dialects based on sound correspondences? Papers like ```wieling2011bipartite``` invest clustering based on the presence/absence of aligned sound segments for doculect-reference doculect alignments, and give dialect clusters in addition to correlating the segment alignments with the clusters. Given the data I have, I could attempt something similar, but try using the Proto-Germanic data from BDPA as reference doculect (effectively giving information about historical sound shifts) and/or abstracting the sound segment correspondences.
 
-**Approach #1**: Follow the original plan: Do the clusters support dialect perception/assignment of dialects to standard languages?
-- Add additional (Low German) varieties from soundcorrespondences.com.
-- Align them with the other data. The already aligned BDPA data can be used to judge the alignments.
-- Figure out a distance measure that is debatably objective and lingustically motivated.
-- Cluster the dialects, compare to literature from dialectology.
+Next steps: 
+- [ ] Go carefully through publications about segment-correspondence-based clustering: ```wieling2011bipartite```, ```wieling2010hierarchical```, ```nerbonne2009data-driven```, ```dhillon2001co-clustering```, ```wieling2013analyzing```. How exactly does this work, and why does it work? 
+      - Are there authors other than Wieling and Nerbonne that have attempted something similar for language clustering? Are there publications more recent than 2013 about this?
+      - Check conclusions about this (and other techniques) in [Advances in Dialectometry
+Annual Review of Linguistics](https://www.annualreviews.org/doi/full/10.1146/annurev-linguist-030514-124930).
+      - ```clustering_via_eigenvectors.py``` is an implementation of the example from ```wieling2011bipartite```
+- [ ] Alignment: Proto-Germanic and (maybe) other doculects that were also transcribed by Maguire and shared on Heggarty's research project webpage(s). 
 
-Problems: How to judge if the resulting model is "good" if there deliberatedly is no gold standard? How to make sure our decisions in the model selection, feature selection are objective in a way and not influenced by patterns we expect and/or would like to see in the data?
 
-
-**Approach #2**: Use existing literature on Germanic languages/dialects as gold standard. Try to improve phonetic distance measures/clustering approaches. Find a niche in the existing literature and try out something new.
-- Potentially add more data.
-  - Other Germanic doculects from BDPA.
-  - More Germanic doculects from BDPA. This adds an alignment steps.
-- What kinds of approaches haven't been used yet frequently? I'd like something that's linguistically motivated. Bringing sound correspondences into this would be interesting. This could also potentially emulate certain isoglosses and historical sound shifts.
-
-### Following approach #2
-
-**A.** induce sound correspondences/SC rules for each combination of dialects? (for each dialect vs the standard vernacular?)
-- How to encode them such that they can be used for clustering? Is there enough overlap between the rules that a binary scheme (rule present/rule absent) can be applied?
-
-or **B.** follow approaches like ```wieling2011bipartite``` or ```nerbonne2009data-driven```. Is it possible to generalize the phoneme correspondence rules they work with? What kind of other unexplored niche could I follow?
+(The part below hasn't been updated yet.)
+=======
 
 ## Current Data
 
