@@ -1,15 +1,22 @@
-# Dialect clustering based on sound correspondences
+# Clustering dialect varieties based on historical sound correspondences
 
-Can we cluster dialects based on sound correspondences? Papers like ```wieling2011bipartite``` invest clustering based on the presence/absence of aligned sound segments for doculect-reference doculect alignments, and give dialect clusters in addition to correlating the segment alignments with the clusters. Given the data I have, I could attempt something similar, but try using the Proto-Germanic data from BDPA as reference doculect (effectively giving information about historical sound shifts) and/or abstracting the sound segment correspondences.
+Can we cluster dialects based on sound correspondences? Papers like ```wieling2011bipartite``` invest clustering based on the presence/absence of aligned sound segments for doculect-reference doculect alignments, and give dialect clusters in addition to correlating the segment alignments with the clusters. Given the data I have, I will attempt something similar, but use Proto-Germanic data as reference doculect, effectively trying to get information about historical sound shifts.
 
 Next steps: 
-- Go carefully through publications about segment-correspondence-based clustering: ```wieling2011bipartite```, ```wieling2010hierarchical```, ```nerbonne2009data-driven```, ```dhillon2001co-clustering```, ```wieling2013analyzing```. How exactly does this work, and why does it work? 
-  - Are there authors other than Wieling and Nerbonne that have attempted something similar for language clustering? Are there publications more recent than 2013 about this?
+- Go carefully through publications about segment-correspondence-based clustering: ```wieling2011bipartite```, ```wieling2010hierarchical```, ```nerbonne2009data-driven```, ```dhillon2001co-clustering```, ```wieling2013analyzing```, ```prokic2010exploring```, ```montemagni2013synchronic```, ```wieling2014analyzing```. How exactly does this work, and why does it work? 
+  - Are there authors other than Wieling and Nerbonne that have attempted something similar for language clustering? Are there publications more recent than 2014 about this?
   - Check conclusions about this (and other techniques) in [Advances in Dialectometry
 Annual Review of Linguistics](https://www.annualreviews.org/doi/full/10.1146/annurev-linguist-030514-124930).
   - ```clustering_via_eigenvectors.py``` is an implementation of the example from ```wieling2011bipartite```
 - Alignment: Proto-Germanic and (maybe) other doculects that were also transcribed by Maguire and shared on Heggarty's research project webpage(s). 
 
+
+Notes:
+- The method introduced in ```wieling2011bipartite``` is for flat clustering and a known number of clusters. ```wieling2010hierarchical``` is the hierarchical extension (the entire data set is the first cluster and then each cluster is recursively split into two clusters).
+- ```wieling2011bipartite``` and ```wieling2010hierarchical``` consider affricates/diphthongs/triphthongs separate sound segments. Combining them into single multi-token segments might be more informative, especially since I expect the consequences of the High German consonant shift to be visible (incl. the *stop* > *affricate* shifts).
+  - ```wieling2010hierarchical``` remark on a common alignment [-]:[ʃ], which commonly appears after [t]:[t]. Interpreting affricates as single segments with the result of correspondences such as [t]:[t͡ʃ], or using another approach to include contextual information seems more satisfying to me.
+
+---
 
 (The sections below haven't been updated yet.)
 
