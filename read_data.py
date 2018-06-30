@@ -1,34 +1,38 @@
+import logging
 import os
 import pandas as pd
 
-DOCULECTS = ['High German (Biel)', 'High German (Bodensee)',
-             'High German (Graubuenden)', 'High German (Herrlisheim)',
-             # 'High German (North Alsace)',
-             'High German (Ortisei)',
-             'High German (Tuebingen)', 'High German (Walser)',
-             'Central German (Cologne)', 'Central German (Honigberg)',
-             'Central German (Luxembourg)', 'Central German (Murrhardt)',
-             'German',
-             # Achterhoeks is spoken in NL, but it's Low German (Glottolog)
-             'Low German (Achterhoek)', 'Low German (Bargstedt)',
-             'Dutch', 'Belgian Dutch',
-             # Limburg here refers to the Dutch province
-             'Dutch (Antwerp)', 'Dutch (Limburg)', 'Dutch (Ostend)',
-             'West Frisian (Grou)',
-             # including Yiddish just out of curiosity
-             'Yiddish (New York)'
-             ]
+logging.basicConfig(level=logging.WARNING)
+logger = logging.getLogger(__name__)
+DOCULECTS_BDPA = ['High German (Biel)', 'High German (Bodensee)',
+                  'High German (Graubuenden)', 'High German (Herrlisheim)',
+                  # 'High German (North Alsace)',
+                  'High German (Ortisei)',
+                  'High German (Tuebingen)', 'High German (Walser)',
+                  'Central German (Cologne)', 'Central German (Honigberg)',
+                  'Central German (Luxembourg)', 'Central German (Murrhardt)',
+                  'German',
+                  # Achterhoeks is spoken in NL but it's Low German (Glottolog)
+                  'Low German (Achterhoek)', 'Low German (Bargstedt)',
+                  'Dutch', 'Belgian Dutch',
+                  # Limburg here refers to the Dutch province
+                  'Dutch (Antwerp)', 'Dutch (Limburg)', 'Dutch (Ostend)',
+                  'West Frisian (Grou)',
+                  # including Yiddish just out of curiosity
+                  'Yiddish (New York)'
+                  ]
 
 
 def get_samples(dir_bdpa='data/bdpa',
                 dir_soundcomparisons='data/soundcomparisons',
-                doculects=DOCULECTS):
+                doculects_bdpa=DOCULECTS_BDPA):
     entries = get_samples_bdpa(dir_bdpa)
-    entries = get_samples_soundcomparisons(dir_soundcomparisons, entries)
-    return entries
+    entries, doculects = get_samples_soundcomparisons(dir_soundcomparisons,
+                                                      entries)
+    return entries, doculects.update(doculects_bdpa)
 
 
-def get_samples_bdpa(directory, doculects=DOCULECTS):
+def get_samples_bdpa(directory, doculects=DOCULECTS_BDPA):
     """"Extracts phonetic transcriptions from multiple BDPA MSA files.
 
     Args:
@@ -77,25 +81,31 @@ def parse_file_bdpa(filename, doculects):
             cells = line.split('\t')
             doculect = cells[0]
             if doculect in doculects:
-                entries[doculect] = (''.join(cells[1:])
-                                     .replace('(', '').replace(')', ''))
+                entries[doculect] = clean_transcription(''.join(cells[1:]))
         for doculect in doculects:
             try:
                 entries[doculect]
             except KeyError:
-                print('{} has no entry for {}.'.format(doculect, concept))
+                logger.info('{} has no entry for {}.'
+                            .format(doculect, concept))
     return concept, entries
 
 
+def clean_transcription(word):
+    return word.strip().replace('.', '').replace('(', '').replace(')', '')
+
+
 def get_samples_soundcomparisons(directory, entries):
+    doculects = set()
     for root, dirs, files in os.walk(directory):
         for f in files:
             if f.endswith('.csv'):
-                entries = parse_file_soundcomparisons(os.path.join(root, f),
-                                                      entries)
-    return entries
+                entries, doculect = parse_file_soundcomparisons(
+                    os.path.join(root, f), entries)
+                doculects.update(doculect)
+    return entries, doculects
 
-
+# TODO deal with the 'Array' entry in Vesterkolonien.csv
 def parse_file_soundcomparisons(filename, entries):
     df = pd.read_csv(filename, encoding='utf8')
     if ('/') in filename:
@@ -108,24 +118,24 @@ def parse_file_soundcomparisons(filename, entries):
     noncognate = df['NotCognateWithMainWordInThisFamily2'].values
     for i, concept in enumerate(concepts):
         try:
-            word = str(words[i]).strip().replace('.', '')
+            word = clean_transcription(str(words[i]))
             if len(word) == 0:
-                print('{} has an empty entry for {} (skipped)'
-                      .format(doculect, concept))
+                logger.info('{} has an empty entry for {} (skipped)'
+                            .format(doculect, concept))
                 continue
             if noncognate[i] > 0:
-                print('{} has a non-cognate entry for {} ({}) (skipped)'
-                      .format(doculect, concept, word))
+                logger.info('{} has a non-cognate entry for {} ({}) (skipped)'
+                            .format(doculect, concept, word))
                 continue
             entries[concept][doculect] = word
         except KeyError:
             entries[concept] = {doculect: word}
-            print('{} has an entry for {}, '
-                  'which did not appear in the BDPA files (added)'
-                  .format(doculect, concept))
+            logger.info('{} has an entry for {}, '
+                        'which did not appear in the BDPA files (added)'
+                        .format(doculect, concept))
     for concept in entries:
         try:
             entries[concept][doculect]
         except KeyError:
-            print('{} has no entry for {}.'.format(doculect, concept))
-    return entries
+            logger.info('{} has no entry for {}.'.format(doculect, concept))
+    return entries, doculect
