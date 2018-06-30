@@ -77,13 +77,13 @@ def parse_file_bdpa(filename, doculects):
             cells = line.split('\t')
             doculect = cells[0]
             if doculect in doculects:
-                entries[doculect] = ''.join(cells[1:])
+                entries[doculect] = (''.join(cells[1:])
+                                     .replace('(', '').replace(')', ''))
         for doculect in doculects:
             try:
                 entries[doculect]
             except KeyError:
                 print('{} has no entry for {}.'.format(doculect, concept))
-                entries[doculect] = None
     return concept, entries
 
 
@@ -105,26 +105,27 @@ def parse_file_soundcomparisons(filename, entries):
     doculect = filename[:-4]
     concepts = df['WordModernName1'].values
     words = df['Phonetic'].values
+    noncognate = df['NotCognateWithMainWordInThisFamily2'].values
     for i, concept in enumerate(concepts):
         try:
-            entries[concept][doculect] = words[i]
+            word = str(words[i]).strip().replace('.', '')
+            if len(word) == 0:
+                print('{} has an empty entry for {} (skipped)'
+                      .format(doculect, concept))
+                continue
+            if noncognate[i] > 0:
+                print('{} has a non-cognate entry for {} ({}) (skipped)'
+                      .format(doculect, concept, word))
+                continue
+            entries[concept][doculect] = word
         except KeyError:
+            entries[concept] = {doculect: word}
             print('{} has an entry for {}, '
-                  'which did not appear in the BDPA files'
+                  'which did not appear in the BDPA files (added)'
                   .format(doculect, concept))
     for concept in entries:
         try:
             entries[concept][doculect]
         except KeyError:
             print('{} has no entry for {}.'.format(doculect, concept))
-            entries[concept][doculect] = None
     return entries
-
-
-entries = get_samples()
-print()
-print()
-for concept in entries:
-    print(concept)
-    print(entries[concept])
-    print()
