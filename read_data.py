@@ -29,7 +29,8 @@ def get_samples(dir_bdpa='data/bdpa',
     entries = get_samples_bdpa(dir_bdpa)
     entries, doculects = get_samples_soundcomparisons(dir_soundcomparisons,
                                                       entries)
-    return entries, doculects.update(doculects_bdpa)
+    doculects.update(doculects_bdpa)
+    return entries, sorted(doculects)
 
 
 def get_samples_bdpa(directory, doculects=DOCULECTS_BDPA):
@@ -102,7 +103,7 @@ def get_samples_soundcomparisons(directory, entries):
             if f.endswith('.csv'):
                 entries, doculect = parse_file_soundcomparisons(
                     os.path.join(root, f), entries)
-                doculects.update(doculect)
+                doculects.update([doculect])
     return entries, doculects
 
 # TODO deal with the 'Array' entry in Vesterkolonien.csv
