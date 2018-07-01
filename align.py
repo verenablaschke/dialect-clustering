@@ -50,16 +50,28 @@ def align(reference_doculect='ProtoGermanic', verbose=1):
             except KeyError:
                 correspondences[doculect] = tallies
 
+    all_correspondences_old = all_correspondences.keys()
+    all_correspondences = Counter()
+
+    for doculect, tallies in correspondences.items():
+        if verbose > 2:
+            print(doculect)
+            print(tallies)
+            print()
+        for corres in all_correspondences_old:
+            try:
+                # TODO a better way of excluding rare correspondences?
+                if tallies[corres] < 3:
+                    del tallies[corres]
+            except KeyError:
+                pass
+        all_correspondences.update(tallies)
+        if verbose > 1:
+            print(doculect)
+            print(tallies)
+            print()
+
     all_correspondences = sorted(all_correspondences.keys())
-
-    if verbose > 1:
-        for doculect, tallies in correspondences.items():
-            if doculect == 'Belgian Dutch':
-                print(doculect)
-                print(tallies)
-                print()
-
-    # TODO exclude rare alignments and/or uninformative alignments
     return correspondences, all_correspondences, doculects_all
 
 
@@ -70,6 +82,7 @@ A = np.zeros((len(doculects), len(all_correspondences)))
 for i, doculect in enumerate(doculects):
     for corres, count in correspondences[doculect].items():
         A[i, all_correspondences.index(corres)] = count
+print(A.shape)
 
 # Form the normalized matrix A_n.
 # NOTE that I already raise D_1, D_2 to the power of -0.5
