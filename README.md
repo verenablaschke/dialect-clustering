@@ -21,6 +21,8 @@ At the moment, I do not use the gold-standard alignments from the BDPA because t
 - Based on a brief look at the alignment tables created in ```align.py```, it appears that the P-G suffixes cause mis-alignments where root segments from the other doculects are sometimes aligned with the P-G suffix segments rather than the root segments.
 - [ ] Investigate whether affricates and geminates are treated as single segments. (Compare `ts` notation from `soundcomparisons` to affricate notation from `bpda`.)
 - [ ] Exclude statistically insignificant/rare alignments.
+  - Currently only including correspondences for a doculect if they occur at least three times in that doculect (as did `wieling2010hierarchical`). This makes sense intuively, but the threshold is of course somewhat arbitrary.
+  - Statistically insignificant alignments currently aren't excluded (most (all?) dialects exhibit correspondences like `n : n`, which don't seem very informative).
 
 Considering diphthongs/triphthongs/affricates/geminates single segments should yield more informative correspondences. Can we add more phonetic context though? 
 
@@ -30,12 +32,18 @@ Considering diphthongs/triphthongs/affricates/geminates single segments should y
   - Are there authors other than Wieling and Nerbonne that have attempted something similar for language clustering? Are there publications more recent than 2014 about this?
   - Check conclusions about this (and other techniques) in [Advances in Dialectometry
 Annual Review of Linguistics](https://www.annualreviews.org/doi/full/10.1146/annurev-linguist-030514-124930).
-  - ```clustering_via_eigenvectors.py``` is an implementation of the example from ```wieling2011bipartite```
+  - ```clustering_via_eigenvectors.py``` is an implementation of the example from ```wieling2011bipartite```.
+  - The clustering of the BDPA/SoundComparisons data is currently performed in `align.py`.
+  - The co-clustering of doculects and features currently doesn't seem to work great. I (arbitrarily) picked k=5 clusters. One of these clusters is only picked for a couple of sound correspondences but for no dialects. Why?
+
 
 Notes:
 - The method introduced in ```wieling2011bipartite``` is for flat clustering and a known number of clusters. ```wieling2010hierarchical``` is the hierarchical extension (the entire data set is the first cluster and then each cluster is recursively split into two clusters).
 - ```wieling2011bipartite``` and ```wieling2010hierarchical``` consider affricates/diphthongs/triphthongs separate sound segments. Combining them into single multi-token segments might be more informative, especially since I expect the consequences of the High German consonant shift to be visible (incl. the *stop* > *affricate* shifts).
   - ```wieling2010hierarchical``` remark on a common alignment [-]:[ʃ], which commonly appears after [t]:[t]. Interpreting affricates as single segments with the result of correspondences such as [t]:[t͡ʃ], or using another approach to include contextual information seems more satisfying to me. (see previous section)
+
+Additionally?
+- Analysis of eigenvectors/PMI-based analysis to rank correspondences by importance?
 
 ## Evaluation
 

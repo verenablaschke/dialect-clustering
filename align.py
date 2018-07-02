@@ -78,10 +78,10 @@ def align(reference_doculect='ProtoGermanic', verbose=1):
 correspondences, all_correspondences, doculects = align()
 
 # A = sparse.dok_matrix((len(doculects), len(all_correspondences)))
-A = np.zeros((len(doculects), len(all_correspondences)))
+A = np.zeros((len(doculects), len(all_correspondences)), dtype=np.bool_)
 for i, doculect in enumerate(doculects):
     for corres, count in correspondences[doculect].items():
-        A[i, all_correspondences.index(corres)] = count
+        A[i, all_correspondences.index(corres)] = 1
 print(A.shape)
 
 # Form the normalized matrix A_n.
