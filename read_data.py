@@ -22,7 +22,6 @@ DOCULECTS_BDPA = ['High German (Biel)', 'High German (Bodensee)',
                   'Yiddish (New York)'
                   ]
 
-
 def get_samples(dir_bdpa='data/bdpa',
                 dir_soundcomparisons='data/soundcomparisons',
                 doculects_bdpa=DOCULECTS_BDPA):
@@ -93,7 +92,8 @@ def parse_file_bdpa(filename, doculects):
 
 
 def clean_transcription(word):
-    return word.strip().replace('.', '').replace('(', '').replace(')', '')
+    return word.strip().replace('.', '').replace('(', '').replace(')', '') \
+               .replace('ʦ', 't͡s').replace('t͡ʃ', 'ʧ')  # TODO more?
 
 
 def get_samples_soundcomparisons(directory, entries):
@@ -105,6 +105,7 @@ def get_samples_soundcomparisons(directory, entries):
                     os.path.join(root, f), entries)
                 doculects.update([doculect])
     return entries, doculects
+
 
 # TODO deal with the 'Array' entry in Vesterkolonien.csv
 def parse_file_soundcomparisons(filename, entries):
@@ -120,6 +121,9 @@ def parse_file_soundcomparisons(filename, entries):
     for i, concept in enumerate(concepts):
         try:
             word = clean_transcription(str(words[i]))
+            # TODO check if this is actually right all cases
+            # TODO other cases like this one?
+            word = word.replace('ts', 't͡s')
             if len(word) == 0:
                 logger.info('{} has an empty entry for {} (skipped)'
                             .format(doculect, concept))

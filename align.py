@@ -7,7 +7,7 @@ import math
 import numpy as np
 
 
-def align_concept(doculects, reference_doculect='ProtoGermanic'):
+def align_concept(doculects, reference_doculect='ProtoGermanic', verbose=1):
     sequences = []
     labels = [reference_doculect]
     for doculect, word in doculects.items():
@@ -18,10 +18,12 @@ def align_concept(doculects, reference_doculect='ProtoGermanic'):
             labels.append(doculect)
     assert len(sequences) == len(labels), ("The reference doculect needs to be"
                                            " in the dict of doculects")
-    msa = Multiple(sequences)
+    msa = Multiple(sequences, merge_geminates=True)
     # TODO this is doing quite badly with P-G suffixes
     msa.prog_align()
     alignments = msa.alm_matrix
+    if verbose > 2:
+        print(msa)
     # TODO swaps
     corres = {}
     for i in range(1, len(labels)):
@@ -42,7 +44,9 @@ def align(reference_doculect='ProtoGermanic', verbose=1):
     if verbose > 0:
         print('Aligning the entries.')
     for concept, doculects in entries.items():
-        corres = align_concept(doculects)
+        if verbose > 2:
+            print(concept)
+        corres = align_concept(doculects, verbose=verbose)
         for doculect, tallies in corres.items():
             all_correspondences.update(tallies)
             try:
@@ -118,12 +122,24 @@ Z = np.zeros((n_samples + n_features, n_eigenvecs))
 # Does the n_eigenvecs+1 in the paper take care of rounding up? (see above.)
 # Why are we ignoring the first column/row?
 Z[:n_samples] = D_1 @ U[:, 1:1 + n_eigenvecs]
-Z[n_samples:] = D_2 @ V[:, 1:1 + n_eigenvecs]
-
+v_2 = V[:, 1:1 + n_eigenvecs]
+Z[n_samples:] = D_2 @ v_2
 kmeans = cluster.KMeans(k)
 clusters = kmeans.fit_predict(Z)
 
-for i, d in enumerate(clusters[:n_samples]):
-    print("{} belongs to cluster {}".format(doculects[i], d))
-for i, d in enumerate(clusters[n_samples:]):
-    print("{} describes cluster {}".format(all_correspondences[i], d))
+clusters_and_doculects = list(zip(clusters[:n_samples], doculects))
+clusters_and_features = sorted(zip(v_2,
+                                   clusters[n_samples:],
+                                   all_correspondences),
+                               reverse=True, key=lambda elem: elem[0][0])
+
+for c in range(k):
+    print("\nCluster {}:\n----------------------------------------".format(c))
+    for cl, d in clusters_and_doculects:
+        if c == cl:
+            print(d)
+    print('-------')
+    for v, cl, f in clusters_and_features:
+        if c == cl:
+            print("{}\t{}".format(f, v))
+    print('========================================')

@@ -19,7 +19,10 @@ At the moment, I do not use the gold-standard alignments from the BDPA because t
 
 - [ ] Figure out a way of combining the alignments with Proto-Germanic with the gold-standard alignments. At least compare them to get an idea of how good the new alignments are?
 - Based on a brief look at the alignment tables created in ```align.py```, it appears that the P-G suffixes cause mis-alignments where root segments from the other doculects are sometimes aligned with the P-G suffix segments rather than the root segments.
-- [ ] Investigate whether affricates and geminates are treated as single segments. (Compare `ts` notation from `soundcomparisons` to affricate notation from `bpda`.)
+- [ ] Multi-token segments:
+  - [x] LingPy treats diphthongs/triphthongs as single segments.
+  - [x] LingPy treats geminates as single segments.
+  - [ ] Affricates are only treated as single segments if they are connected with a tie bar or written as ligatures. The latter is the case for the BDPA data. The SoundComparisons data does not indicate affricates using either convention (see e.g.  `ts` in `soundcomparisons/westerkwartier.csv`), which results in them being treated as separate segments by LingPy.
 - [ ] Exclude statistically insignificant/rare alignments.
   - Currently only including correspondences for a doculect if they occur at least three times in that doculect (as did `wieling2010hierarchical`). This makes sense intuively, but the threshold is of course somewhat arbitrary.
   - Statistically insignificant alignments currently aren't excluded (most (all?) dialects exhibit correspondences like `n : n`, which don't seem very informative).
@@ -34,7 +37,7 @@ Considering diphthongs/triphthongs/affricates/geminates single segments should y
 Annual Review of Linguistics](https://www.annualreviews.org/doi/full/10.1146/annurev-linguist-030514-124930).
   - ```clustering_via_eigenvectors.py``` is an implementation of the example from ```wieling2011bipartite```.
   - The clustering of the BDPA/SoundComparisons data is currently performed in `align.py`.
-  - The co-clustering of doculects and features currently doesn't seem to work great. I (arbitrarily) picked k=5 clusters. One of these clusters is only picked for a couple of sound correspondences but for no dialects. Why?
+  - The co-clustering of doculects and features currently doesn't seem to work that great. I (arbitrarily) picked k=5 clusters. One of these clusters is only picked for a couple of sound correspondences but for no dialects (see `align.log`). Why? Is it the number of clusters? What are the particularities of the correspondences associated with the otherwise empty clusters?
 
 
 Notes:
