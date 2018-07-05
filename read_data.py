@@ -22,10 +22,33 @@ DOCULECTS_BDPA = ['High German (Biel)', 'High German (Bodensee)',
                   'Yiddish (New York)'
                   ]
 
+DOCULECTS_BDPA_ALL = ['American English', 'Australian English (Perth)',
+                      'Belgian Dutch', 'Canadian English',
+                      'Central German (Cologne)', 'Central German (Honigberg)',
+                      'Central German (Luxembourg)',
+                      'Central German (Murrhardt)', 'Danish', 'Dutch',
+                      'Dutch (Antwerp)', 'Dutch (Limburg)', 'Dutch (Ostend)',
+                      'English', 'English (Buckie)', 'English (Lindisfarne)',
+                      'English (Liverpool', 'English (London',
+                      'English (North Carolina)', 'English (Singapore)',
+                      'English (Tyrone)', 'Faroese', 'German',
+                      'High German (Biel)', 'High German (Bodensee)',
+                      'High German (Graubuenden)', 'High German (Herrlisheim)',
+                      'High German (North Alsace)', 'High German (Ortisei)',
+                      'High German (Tuebingen)', 'High German (Walser)',
+                      'Icelandic', 'Indian English (Delhi)',
+                      'Low German (Achterhoek)', 'Low German (Bargstedt)',
+                      'New Zealand English (Auckland)',
+                      'Nigerian English (Igbo)', 'Norwegian (Stavanger)',
+                      'Scottish', 'South African English (Johannisburg)',
+                      'Swedish (Skane)', 'Swedish (Stockholm)',
+                      'West Frisian (Grou)', 'Yiddish (New York)']
+
+
 def get_samples(dir_bdpa='data/bdpa',
                 dir_soundcomparisons='data/soundcomparisons',
                 doculects_bdpa=DOCULECTS_BDPA):
-    entries = get_samples_bdpa(dir_bdpa)
+    entries = get_samples_bdpa(dir_bdpa, doculects=doculects_bdpa)
     entries, doculects = get_samples_soundcomparisons(dir_soundcomparisons,
                                                       entries)
     doculects.update(doculects_bdpa)
