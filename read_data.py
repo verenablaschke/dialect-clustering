@@ -116,7 +116,9 @@ def parse_file_bdpa(filename, doculects):
 
 def clean_transcription(word):
     return word.strip().replace('.', '').replace('(', '').replace(')', '') \
-               .replace('ʦ', 't͡s').replace('t͡ʃ', 'ʧ')  # TODO more?
+               .replace('ʦ', 't͡s').replace('t͡ʃ', 'ʧ') \
+               .replace('ˈ', '').replace('̩', '')
+    # TODO more?
 
 
 def get_samples_soundcomparisons(directory, entries):
@@ -146,6 +148,7 @@ def parse_file_soundcomparisons(filename, entries):
             word = clean_transcription(str(words[i]))
             # TODO check if this is actually right all cases
             # TODO other cases like this one?
+            # (e.g. 'j' in the middle of triphthongs)
             word = word.replace('ts', 't͡s')
             if len(word) == 0:
                 logger.info('{} has an empty entry for {} (skipped)'

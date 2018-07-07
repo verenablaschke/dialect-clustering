@@ -10,6 +10,7 @@ Heggarty's Sound Comparisons project contains further entries for the same cogna
 - The only difference between "High German (Herrlisheim)" and "High German (North Alsace)" is a slightly different coverage of entries. (That makes sense, since they seem to be derived from the same wordlist of Heggarty's.) Figure out if one is the subset of the other, else merge them?
   - [x] There are three differences between the two lists. "North Alsace" contains entries for _quick_ (408) and _top_ (430); "Herrlisheim" doesn't. The entries for _right_ (423) are "ʁaːχ" (North Alsace) and "ʁaːχt" (Herrlisheim). Heggarty's original entries on languagesandpeoples.com and soundcomparisons.com (both of which have only one doculect from North Alsace, which was recorded in Herrlisheim) are identical to the "Herrlisheim" entries. No idea where the data for "North Alsace" comes from, then (transcription errors?), so I'm disregarding that file now.
 - I could also branch out by using all of the doculects with sufficient concept coverage from BDPA-Germanic. There are a bunch of varieties of English. Unfortunately not a lot of non-standard varieties for the other languages.
+- If I am re-aligning the entries anyway, why not use the Sound Comparisons versions of all the data? There are some slight inconsistensies between the two versions, despite having originally been transcribed by the same person (`ʦ` vs. `'ts`, between two vowels: `ɪ` vs. `j`, inclusion of stress marks).
 
 ## The Project
 
@@ -18,7 +19,7 @@ Heggarty's Sound Comparisons project contains further entries for the same cogna
 At the moment, I do not use the gold-standard alignments from the BDPA because they only contain 4 (out of 111) Proto-Germanic entries. Instead, I use LingPy's SCA-based MSA method for (re-)aligning the data.
 
 - [ ] Figure out a way of combining the alignments with Proto-Germanic with the gold-standard alignments. At least compare them to get an idea of how good the new alignments are?
-- Based on a brief look at the alignment tables created in ```align.py```, it appears that the P-G suffixes cause mis-alignments where root segments from the other doculects are sometimes aligned with the P-G suffix segments rather than the root segments.
+- I use LingPy's `lib_align(mode='global')` for the alignments. I tried out `lib_align` and `prog_align`, both with `mode='global'` and `mode='dialign'`, and based on quickly inspecting the output, `mode='dialign'` yields quite unsatisfying results for both alignment types while `mode='global'` seems fine for both of them. Including all available doculects in the alignment also appears to create better alignments than just using the DE-NL subset.
 - [ ] Multi-token segments:
   - [x] LingPy treats diphthongs/triphthongs as single segments.
   - [x] LingPy treats geminates as single segments.

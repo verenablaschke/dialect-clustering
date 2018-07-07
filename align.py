@@ -8,7 +8,8 @@ import numpy as np
 import argparse
 
 
-def align_concept(doculects, reference_doculect='ProtoGermanic', verbose=1):
+def align_concept(doculects, reference_doculect='ProtoGermanic',
+                  alignment_type='lib', alignment_mode='global', verbose=1):
     sequences = []
     labels = [reference_doculect]
     for doculect, word in doculects.items():
@@ -20,8 +21,10 @@ def align_concept(doculects, reference_doculect='ProtoGermanic', verbose=1):
     assert len(sequences) == len(labels), ("The reference doculect needs to be"
                                            " in the dict of doculects")
     msa = Multiple(sequences, merge_geminates=True)
-    # TODO this is doing quite badly with P-G suffixes
-    msa.prog_align()
+    if alignment_type == 'lib':
+        msa.lib_align(mode=alignment_mode)
+    else:
+        msa.prog_align(mode=alignment_mode)
     alignments = msa.alm_matrix
     if verbose > 2:
         print(msa)
@@ -34,11 +37,13 @@ def align_concept(doculects, reference_doculect='ProtoGermanic', verbose=1):
     return corres
 
 
-def align(reference_doculect='ProtoGermanic', verbose=1,
-          doculects_bdpa=DOCULECTS_BDPA, binary=True):
+def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
+          binary=True, msa_doculects_bdpa=DOCULECTS_BDPA_ALL,
+          alignment_type='lib', alignment_mode='global',
+          verbose=1):
     if verbose > 0:
         print('Reading the data files.')
-    entries, doculects_all = get_samples(doculects_bdpa=doculects_bdpa)
+    entries, doculects_all = get_samples(doculects_bdpa=msa_doculects_bdpa)
     doculects_all.remove(reference_doculect)
     correspondences = {}
     all_correspondences = Counter()
@@ -48,8 +53,15 @@ def align(reference_doculect='ProtoGermanic', verbose=1,
     for concept, doculects in entries.items():
         if verbose > 2:
             print(concept)
-        corres = align_concept(doculects, verbose=verbose)
+        corres = align_concept(doculects,
+                               reference_doculect=reference_doculect,
+                               alignment_type=alignment_type,
+                               alignment_mode=alignment_mode,
+                               verbose=verbose)
         for doculect, tallies in corres.items():
+            if doculect in msa_doculects_bdpa \
+               and doculect not in doculects_bdpa:
+                continue
             all_correspondences.update(tallies)
             try:
                 correspondences[doculect].update(tallies)
@@ -60,10 +72,10 @@ def align(reference_doculect='ProtoGermanic', verbose=1,
     all_correspondences = Counter()
 
     for doculect, tallies in correspondences.items():
-        if verbose > 2:
-            print(doculect)
-            print(tallies)
-            print()
+        # if verbose > 2:
+        #     print(doculect)
+        #     print(tallies)
+        #     print()
         if binary:
             for corres in all_correspondences_old:
                 try:
@@ -73,12 +85,20 @@ def align(reference_doculect='ProtoGermanic', verbose=1,
                 except KeyError:
                     pass
         all_correspondences.update(tallies)
-        if verbose > 1:
+        if verbose > 2:
             print(doculect)
             print(tallies)
             print()
 
     all_correspondences = sorted(all_correspondences.keys())
+    try:
+        # In case there are any null-to-null alignments because of a larger
+        # set of doculects being used for the alignment than for the tallies.
+        all_correspondences.remove(('-', '-'))
+    except ValueError:
+        pass
+    if verbose > 1:
+        print(all_correspondences)
     return correspondences, all_correspondences, doculects_all
 
 
@@ -103,24 +123,39 @@ if __name__ == "__main__":
     parser.add_argument(
         '-c', '--count', dest='binary', action='store_false',
         help='Matrix stores numbers of feature occurrences.')
-    parser.set_defaults(co_clustering=True, binary=True)
+    parser.add_argument(
+        '--alignment_type', default='lib', choices=['lib', 'prog'],
+        help='The LingPy alignment type.')
+    parser.add_argument(
+        '--alignment_mode', default='global', choices=['global', 'dialign'],
+        help='The LingPy alignment mode.')
+    parser.add_argument(
+        '--msa_doculects', default='all', choices=['all', 'de-nl'],
+        help='The BDPA doculects to be used during multi-alignment.')
     parser.add_argument(
         '-v', '--verbose', type=int, default=1, choices=[0, 1, 2, 3])
+    parser.set_defaults(co_clustering=True, binary=True)
     args = parser.parse_args()
 
-    doculects_lookup = {'de-nl': DOCULECTS_BDPA, 'all': DOCULECTS_BDPA_ALL}
-    doculects_bdpa = doculects_lookup[args.doculects]
     k = args.n_clusters
     if args.verbose > 0:
         print("Clusters: {}".format(k))
         print("Doculects: {}".format(args.doculects))
         print("Co-clustering: {}".format(args.co_clustering))
         print("Binary features: {}".format(args.binary))
+        print("Alignment: {} {} ({})".format(args.alignment_mode,
+                                             args.alignment_type,
+                                             args.msa_doculects))
         print()
 
+    doculects_lookup = {'de-nl': DOCULECTS_BDPA, 'all': DOCULECTS_BDPA_ALL}
     correspondences, all_correspondences, doculects = align(
-        doculects_bdpa=doculects_bdpa, verbose=args.verbose,
-        binary=args.binary)
+        doculects_bdpa=doculects_lookup[args.doculects],
+        alignment_type=args.alignment_type,
+        alignment_mode=args.alignment_mode, binary=args.binary,
+        msa_doculects_bdpa=doculects_lookup[args.msa_doculects],
+        verbose=args.verbose)
+    exit(1)  # TODO del
 
     n_samples = len(doculects)
     n_features = len(all_correspondences)
