@@ -17,9 +17,7 @@ DOCULECTS_BDPA = ['High German (Biel)', 'High German (Bodensee)',
                   'Dutch', 'Belgian Dutch',
                   # Limburg here refers to the Dutch province
                   'Dutch (Antwerp)', 'Dutch (Limburg)', 'Dutch (Ostend)',
-                  'West Frisian (Grou)',
-                  # including Yiddish just out of curiosity
-                  'Yiddish (New York)'
+                  'West Frisian (Grou)'
                   ]
 
 DOCULECTS_BDPA_ALL = ['American English', 'Australian English (Perth)',
@@ -132,7 +130,6 @@ def get_samples_soundcomparisons(directory, entries):
     return entries, doculects
 
 
-# TODO deal with the 'Array' entry in Vesterkolonien.csv
 def parse_file_soundcomparisons(filename, entries):
     df = pd.read_csv(filename, encoding='utf8')
     if ('/') in filename:
@@ -150,6 +147,9 @@ def parse_file_soundcomparisons(filename, entries):
             # TODO other cases like this one?
             # (e.g. 'j' in the middle of triphthongs)
             word = word.replace('ts', 't͡s')
+            if word == 'Array':
+                # Erroneous entry in Vesterkolonien.csv.
+                continue
             if len(word) == 0:
                 logger.info('{} has an empty entry for {} (skipped)'
                             .format(doculect, concept))

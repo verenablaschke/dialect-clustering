@@ -61,6 +61,10 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
         for doculect, tallies in corres.items():
             if doculect in msa_doculects_bdpa \
                and doculect not in doculects_bdpa:
+                try:
+                    doculects_all.remove(doculect)
+                except ValueError:
+                    pass
                 continue
             all_correspondences.update(tallies)
             try:
@@ -72,10 +76,6 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
     all_correspondences = Counter()
 
     for doculect, tallies in correspondences.items():
-        # if verbose > 2:
-        #     print(doculect)
-        #     print(tallies)
-        #     print()
         if binary:
             for corres in all_correspondences_old:
                 try:
@@ -155,7 +155,6 @@ if __name__ == "__main__":
         alignment_mode=args.alignment_mode, binary=args.binary,
         msa_doculects_bdpa=doculects_lookup[args.msa_doculects],
         verbose=args.verbose)
-    exit(1)  # TODO del
 
     n_samples = len(doculects)
     n_features = len(all_correspondences)
