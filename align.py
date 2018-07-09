@@ -2,7 +2,7 @@ from lingpy.align.multiple import Multiple
 from read_data import get_samples, DOCULECTS_BDPA, DOCULECTS_BDPA_ALL
 from collections import Counter
 from scipy import sparse, linalg
-from sklearn import cluster
+from sklearn import cluster, feature_extraction
 import math
 import numpy as np
 import argparse
@@ -39,7 +39,7 @@ def align_concept(doculects, reference_doculect='ProtoGermanic',
 
 def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
           binary=True, msa_doculects_bdpa=DOCULECTS_BDPA_ALL,
-          alignment_type='lib', alignment_mode='global',
+          alignment_type='lib', alignment_mode='global', min_count=0,
           verbose=1):
     if verbose > 0:
         print('Reading the data files.')
@@ -72,23 +72,24 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
             except KeyError:
                 correspondences[doculect] = tallies
 
-    all_correspondences_old = all_correspondences.keys()
-    all_correspondences = Counter()
+    if min_count or verbose > 2:
+        all_correspondences_old = all_correspondences.keys()
+        all_correspondences = Counter()
 
-    for doculect, tallies in correspondences.items():
-        if binary:
-            for corres in all_correspondences_old:
-                try:
-                    # TODO a better way of excluding rare correspondences?
-                    if tallies[corres] < 3:
-                        del tallies[corres]
-                except KeyError:
-                    pass
-        all_correspondences.update(tallies)
-        if verbose > 2:
-            print(doculect)
-            print(tallies)
-            print()
+        for doculect, tallies in correspondences.items():
+            if binary:
+                for corres in all_correspondences_old:
+                    try:
+                        # TODO a better way of excluding rare correspondences?
+                        if tallies[corres] < min_count:
+                            del tallies[corres]
+                    except KeyError:
+                        pass
+            all_correspondences.update(tallies)
+            if verbose > 2:
+                print(doculect)
+                print(tallies)
+                print()
 
     all_correspondences = sorted(all_correspondences.keys())
     try:
@@ -124,6 +125,12 @@ if __name__ == "__main__":
         '-c', '--count', dest='binary', action='store_false',
         help='Matrix stores numbers of feature occurrences.')
     parser.add_argument(
+        '-m', '--mincount', type=int, default=0,
+        help='Minimum count per sound correspondence and doculect.')
+    parser.add_argument(
+        '-t', '--tfidf', dest='tfidf', action='store_true',
+        help='Transform occurrence matrix with TF-IDF.')
+    parser.add_argument(
         '--alignment_type', default='lib', choices=['lib', 'prog'],
         help='The LingPy alignment type.')
     parser.add_argument(
@@ -134,7 +141,7 @@ if __name__ == "__main__":
         help='The BDPA doculects to be used during multi-alignment.')
     parser.add_argument(
         '-v', '--verbose', type=int, default=1, choices=[0, 1, 2, 3])
-    parser.set_defaults(co_clustering=True, binary=True)
+    parser.set_defaults(co_clustering=True, binary=True, tfidf=False)
     args = parser.parse_args()
 
     k = args.n_clusters
@@ -142,7 +149,9 @@ if __name__ == "__main__":
         print("Clusters: {}".format(k))
         print("Doculects: {}".format(args.doculects))
         print("Co-clustering: {}".format(args.co_clustering))
-        print("Binary features: {}".format(args.binary))
+        print("Binary features: {} (min. count {})".format(args.binary,
+                                                           args.mincount))
+        print("TF-IDF: {}".format(args.tfidf))
         print("Alignment: {} {} ({})".format(args.alignment_mode,
                                              args.alignment_type,
                                              args.msa_doculects))
@@ -151,7 +160,7 @@ if __name__ == "__main__":
     doculects_lookup = {'de-nl': DOCULECTS_BDPA, 'all': DOCULECTS_BDPA_ALL}
     correspondences, all_correspondences, doculects = align(
         doculects_bdpa=doculects_lookup[args.doculects],
-        alignment_type=args.alignment_type,
+        alignment_type=args.alignment_type, min_count=args.mincount,
         alignment_mode=args.alignment_mode, binary=args.binary,
         msa_doculects_bdpa=doculects_lookup[args.msa_doculects],
         verbose=args.verbose)
@@ -167,6 +176,12 @@ if __name__ == "__main__":
     if args.verbose > 0:
         print("Matrix shape: {}".format(A.shape))
 
+    if args.tfidf:
+        # TODO check out args
+        transformer = feature_extraction.text.TfidfTransformer(smooth_idf=False)
+        A = transformer.fit_transform(A)#.todense()
+        print(A.shape)
+
     if args.co_clustering:
         # Form the normalized matrix A_n.
         # NOTE that I already raise D_1, D_2 to the power of -0.5
@@ -177,7 +192,11 @@ if __name__ == "__main__":
 
         D_2 = np.zeros((n_features, n_features))
         for j in range(n_features):
-            D_2[j, j] = np.sum(A, axis=0)[j]
+            col_sum = np.sum(A, axis=0)
+            if len(col_sum.shape) == 2 and col_sum.shape[0] == 1:
+                # Else, this clashes with the tf-idf transformed matrix.
+                col_sum = np.array(col_sum).flatten()
+            D_2[j, j] = col_sum[j]
         D_2 = linalg.sqrtm(np.linalg.inv(D_2))
 
         A_n = D_1 @ A @ D_2

@@ -1,16 +1,20 @@
 # Clustering dialect varieties based on historical sound correspondences
 
-Can we cluster dialects based on sound correspondences? Papers like ```wieling2011bipartite``` invest clustering based on the presence/absence of aligned sound segments for doculect-reference doculect alignments, and give dialect clusters in addition to correlating the segment alignments with the clusters. Given the data I have, I will attempt something similar, but use Proto-Germanic data as reference doculect, effectively trying to get information about historical sound shifts.
+Can we cluster dialects based on sound correspondences? Papers like `wieling2011bipartite` invest clustering based on the presence/absence of aligned sound segments for doculect-reference doculect alignments, and give dialect clusters in addition to correlating the segment alignments with the clusters. Given the data I have, I will attempt something similar, but use Proto-Germanic data as reference doculect, effectively trying to get information about historical sound shifts.
 
 ## Data
 
-The BDPA contains a list of 111 cognate sets across 21 German/Dutch doculects, transcribed in IPA, tokenized (affricates and diphthongs constitute single segments), and already aligned. (More details in the ```data``` folder.) All of the entries were transcribed by Warren Maguire (with revisions by Paul Heggarty), and aligned by another person (*who?*).
+The BDPA contains a list of 111 cognate sets across 21 German/Dutch doculects, transcribed in IPA, tokenized (affricates and diphthongs constitute single segments), and already aligned. (More details in the `data` folder.) All of the entries were transcribed by Warren Maguire (with revisions by Paul Heggarty), and aligned by another person (*who?*).
 Heggarty's Sound Comparisons project contains further entries for the same cognates. The Germanic doculects I added from that project were also transcribed by Warren Maguire, but they are unaligned. 
 
 - The only difference between "High German (Herrlisheim)" and "High German (North Alsace)" is a slightly different coverage of entries. (That makes sense, since they seem to be derived from the same wordlist of Heggarty's.) Figure out if one is the subset of the other, else merge them?
   - [x] There are three differences between the two lists. "North Alsace" contains entries for _quick_ (408) and _top_ (430); "Herrlisheim" doesn't. The entries for _right_ (423) are "ʁaːχ" (North Alsace) and "ʁaːχt" (Herrlisheim). Heggarty's original entries on languagesandpeoples.com and soundcomparisons.com (both of which have only one doculect from North Alsace, which was recorded in Herrlisheim) are identical to the "Herrlisheim" entries. No idea where the data for "North Alsace" comes from, then (transcription errors?), so I'm disregarding that file now.
 - I could also branch out by using all of the doculects with sufficient concept coverage from BDPA-Germanic. There are a bunch of varieties of English. Unfortunately not a lot of non-standard varieties for the other languages.
-- If I am re-aligning the entries anyway, why not use the Sound Comparisons versions of all the data? There are some slight inconsistensies between the two versions, despite having originally been transcribed by the same person (`ʦ` vs. `'ts`, between two vowels: `ɪ` vs. `j`, inclusion of stress marks).
+- If I am re-aligning the entries anyway, why not use the Sound Comparisons versions of all the data? There are some slight inconsistensies between the two versions, despite having originally been transcribed by the same person (`ʦ` vs. `ts`, between two vowels: `ɪ` vs. `j`, inclusion of stress marks).
+
+Despite having been transcribed by the same person, there seem to be **noticeable transcription differences between the two data sets**, as evidenced by the fact that these tend to end up in singleton clusters. (Very striking with e.g. [`python align.py -t -c -d all](output/align-t-c-dall.log)`.)
+
+- [ ] Use either BDPA data or SoundComparisons data, but not both combined?
 
 ## The Project
 
@@ -23,28 +27,30 @@ At the moment, I do not use the gold-standard alignments from the BDPA because t
 - [ ] Multi-token segments:
   - [x] LingPy treats diphthongs/triphthongs as single segments.
   - [x] LingPy treats geminates as single segments.
-  - [ ] Affricates are only treated as single segments if they are connected with a tie bar or written as ligatures. The latter is the case for the BDPA data. The SoundComparisons data does not indicate affricates using either convention (see e.g.  `ts` in `soundcomparisons/westerkwartier.csv`), which results in them being treated as separate segments by LingPy.
+  - [ ] Affricates are only treated as single segments if they are connected with a tie bar or written as ligatures. The latter is the case for the BDPA data. The SoundComparisons data does not indicate affricates using either convention (see e.g.  `ts` in `soundcomparisons/westerkwartier.csv`), which results in them being treated as separate segments by LingPy. I now replace `ts` with `t͡s` although I have not yet double-checked if this is always appropriate.
+    - [ ] Other transcription differences (between two vowels: `ɪ` vs. `j`).
 - [ ] Exclude statistically insignificant/rare alignments.
-  - Currently only including correspondences for a doculect if they occur at least three times in that doculect (as did `wieling2010hierarchical`). This makes sense intuively, but the threshold is of course somewhat arbitrary.
+  - Optional (console arg): Only including correspondences for a doculect if they occur at least `mincount` times in that doculect (as did `wieling2010hierarchical`). This makes sense intuively, but the threshold is of course somewhat arbitrary.
+  - Optional (console arg): TF-IDF matrix instead of binary/count matrix.
   - Statistically insignificant alignments currently aren't excluded (most (all?) dialects exhibit correspondences like `n : n`, which don't seem very informative).
 
 Considering diphthongs/triphthongs/affricates/geminates single segments should yield more informative correspondences. Can we add more phonetic context though? 
 
 ### Clustering
 
-- Go carefully through publications about segment-correspondence-based clustering: ```wieling2011bipartite```, ```wieling2010hierarchical```, ```nerbonne2009data-driven```, ```dhillon2001co-clustering```, ```wieling2013analyzing```, ```prokic2010exploring```, ```montemagni2013synchronic```, ```wieling2014analyzing```. How exactly does this work, and why does it work? 
+- Go carefully through publications about segment-correspondence-based clustering: `wieling2011bipartite`, `wieling2010hierarchical`, `nerbonne2009data-driven`, `dhillon2001co-clustering`, `wieling2013analyzing`, `prokic2010exploring`, `montemagni2013synchronic`, `wieling2014analyzing`. How exactly does this work, and why does it work? 
   - Are there authors other than Wieling and Nerbonne that have attempted something similar for language clustering? Are there publications more recent than 2014 about this?
   - Check conclusions about this (and other techniques) in [Advances in Dialectometry
 Annual Review of Linguistics](https://www.annualreviews.org/doi/full/10.1146/annurev-linguist-030514-124930).
-  - ```clustering_via_eigenvectors.py``` is an implementation of the example from ```wieling2011bipartite```.
   - The clustering of the BDPA/SoundComparisons data is currently performed in `align.py`.
   - The co-clustering of doculects and features currently doesn't seem to work that great. I (arbitrarily) picked k=5 clusters. One of these clusters is only picked for a couple of sound correspondences but for no dialects (see `align.log`). Why? Is it the number of clusters? What are the particularities of the correspondences associated with the otherwise empty clusters?
+  - About `dhillon2001co-clustering`, on which the other papers are based: Why is the second largest singular value the most important one? I.e. why do we ignore the largest singular value/the first columns of U and V? Shouldn't they contain the most important information?
 
 
 Notes:
-- The method introduced in ```wieling2011bipartite``` is for flat clustering and a known number of clusters. ```wieling2010hierarchical``` is the hierarchical extension (the entire data set is the first cluster and then each cluster is recursively split into two clusters).
-- ```wieling2011bipartite``` and ```wieling2010hierarchical``` consider affricates/diphthongs/triphthongs separate sound segments. Combining them into single multi-token segments might be more informative, especially since I expect the consequences of the High German consonant shift to be visible (incl. the *stop* > *affricate* shifts).
-  - ```wieling2010hierarchical``` remark on a common alignment [-]:[ʃ], which commonly appears after [t]:[t]. Interpreting affricates as single segments with the result of correspondences such as [t]:[t͡ʃ], or using another approach to include contextual information seems more satisfying to me. (see previous section)
+- The method introduced in `wieling2011bipartite` is for flat clustering and a known number of clusters. `wieling2010hierarchical` is the hierarchical extension (the entire data set is the first cluster and then each cluster is recursively split into two clusters).
+- `wieling2011bipartite` and `wieling2010hierarchical` consider affricates/diphthongs/triphthongs separate sound segments. Combining them into single multi-token segments might be more informative, especially since I expect the consequences of the High German consonant shift to be visible (incl. the *stop* > *affricate* shifts).
+  - `wieling2010hierarchical` remark on a common alignment [-]:[ʃ], which commonly appears after [t]:[t]. Interpreting affricates as single segments with the result of correspondences such as [t]:[t͡ʃ], or using another approach to include contextual information seems more satisfying to me. (see previous section)
 
 Additionally?
 - Analysis of eigenvectors/PMI-based analysis to rank correspondences by importance?
@@ -53,7 +59,7 @@ Additionally?
 
 - Literature research on (non-statistical) analyses of the German/Dutch(/Low German/Frisian) dialect landscape. Get some hierarchy that I can compare my tree to?
 
-## Notes
+## Discussion
 
 All of the comparisons here are phonetic (and might possibly include morphological information in some cases) and on a word level, but I'm ignoring lexical, syntactical, morphological, etc. information in this analysis.
 
