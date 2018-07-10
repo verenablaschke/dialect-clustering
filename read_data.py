@@ -45,10 +45,10 @@ DOCULECTS_BDPA_ALL = ['American English', 'Australian English (Perth)',
 
 def get_samples(dir_bdpa='data/bdpa',
                 dir_soundcomparisons='data/soundcomparisons',
-                doculects_bdpa=DOCULECTS_BDPA):
+                doculects_bdpa=DOCULECTS_BDPA, include_sc=True):
     entries = get_samples_bdpa(dir_bdpa, doculects=doculects_bdpa)
     entries, doculects = get_samples_soundcomparisons(dir_soundcomparisons,
-                                                      entries)
+                                                      entries, include_sc)
     doculects.update(doculects_bdpa)
     return entries, sorted(doculects)
 
@@ -119,11 +119,13 @@ def clean_transcription(word):
     # TODO more?
 
 
-def get_samples_soundcomparisons(directory, entries):
+def get_samples_soundcomparisons(directory, entries, include_sc):
     doculects = set()
     for root, dirs, files in os.walk(directory):
         for f in files:
             if f.endswith('.csv'):
+                if (not include_sc) and 'protogermanic' not in f.lower():
+                    continue
                 entries, doculect = parse_file_soundcomparisons(
                     os.path.join(root, f), entries)
                 doculects.update([doculect])

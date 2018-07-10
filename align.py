@@ -38,12 +38,13 @@ def align_concept(doculects, reference_doculect='ProtoGermanic',
 
 
 def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
-          binary=True, msa_doculects_bdpa=DOCULECTS_BDPA_ALL,
+          include_sc=True, binary=True, msa_doculects_bdpa=DOCULECTS_BDPA_ALL,
           alignment_type='lib', alignment_mode='global', min_count=0,
           verbose=1):
     if verbose > 0:
         print('Reading the data files.')
-    entries, doculects_all = get_samples(doculects_bdpa=msa_doculects_bdpa)
+    entries, doculects_all = get_samples(doculects_bdpa=msa_doculects_bdpa,
+                                         include_sc=include_sc)
     doculects_all.remove(reference_doculect)
     correspondences = {}
     all_correspondences = Counter()
@@ -128,6 +129,12 @@ if __name__ == "__main__":
         '-d', '--doculects', default='de-nl', choices=['de-nl', 'all'],
         help='The BDPA doculects to be included.')
     parser.add_argument(
+        '--includesc', dest='include_sc', action='store_true',
+        help='Include the SoundComparison data.')
+    parser.add_argument(
+        '--excludesc', dest='include_sc', action='store_false',
+        help='Exclude the SoundComparison data (except for Proto Germanic).')
+    parser.add_argument(
         '-s', '--svd', dest='co_clustering', action='store_true',
         help='Include dimensionality reduction via SVD and co-clustering of '
         'doculects and correspondences.')
@@ -157,13 +164,15 @@ if __name__ == "__main__":
         help='The BDPA doculects to be used during multi-alignment.')
     parser.add_argument(
         '-v', '--verbose', type=int, default=1, choices=[0, 1, 2, 3])
-    parser.set_defaults(co_clustering=True, binary=True, tfidf=False)
+    parser.set_defaults(include_sc=True, co_clustering=True,
+                        binary=True, tfidf=False)
     args = parser.parse_args()
 
     k = args.n_clusters
     if args.verbose > 0:
         print("Clusters: {}".format(k))
-        print("Doculects: {}".format(args.doculects))
+        print("Doculects: {} (BDPA) {} (SC)".format(args.doculects,
+                                                    args.include_sc))
         print("Co-clustering: {}".format(args.co_clustering))
         print("Binary features: {} (min. count {})".format(args.binary,
                                                            args.mincount))
@@ -176,6 +185,7 @@ if __name__ == "__main__":
     doculects_lookup = {'de-nl': DOCULECTS_BDPA, 'all': DOCULECTS_BDPA_ALL}
     correspondences, all_correspondences, doculects = align(
         doculects_bdpa=doculects_lookup[args.doculects],
+        include_sc=args.include_sc,
         alignment_type=args.alignment_type, min_count=args.mincount,
         alignment_mode=args.alignment_mode, binary=args.binary,
         msa_doculects_bdpa=doculects_lookup[args.msa_doculects],
