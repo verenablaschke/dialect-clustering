@@ -34,7 +34,10 @@ At the moment, I do not use the gold-standard alignments from the BDPA because t
   - Optional (console arg): TF-IDF matrix instead of binary/count matrix.
   - Statistically insignificant alignments currently aren't excluded (most (all?) dialects exhibit correspondences like `n : n`, which don't seem very informative).
 
+
 Considering diphthongs/triphthongs/affricates/geminates single segments should yield more informative correspondences. Can we add more phonetic context though? 
+
+- see e.g. `montemagni2013synchronic`
 
 ### Clustering
 
@@ -49,8 +52,10 @@ Annual Review of Linguistics](https://www.annualreviews.org/doi/full/10.1146/ann
 
 Notes:
 - The method introduced in `wieling2011bipartite` is for flat clustering and a known number of clusters. `wieling2010hierarchical` is the hierarchical extension (the entire data set is the first cluster and then each cluster is recursively split into two clusters).
+  - I tried this out in the [`hierarchical` branch](https://github.com/verenablaschke/dialect-clustering/tree/hierarchical). When trying to run it, I often get a "singular matrix" error when trying to calculate the inverse of a matrix. Is it a bug in my code/how can I avoid it? (When it's running, the output looks good.)
 - `wieling2011bipartite` and `wieling2010hierarchical` consider affricates/diphthongs/triphthongs separate sound segments. Combining them into single multi-token segments might be more informative, especially since I expect the consequences of the High German consonant shift to be visible (incl. the *stop* > *affricate* shifts).
   - `wieling2010hierarchical` remark on a common alignment [-]:[ʃ], which commonly appears after [t]:[t]. Interpreting affricates as single segments with the result of correspondences such as [t]:[t͡ʃ], or using another approach to include contextual information seems more satisfying to me. (see previous section)
+
 
 Additionally?
 - Analysis of eigenvectors/PMI-based analysis to rank correspondences by importance?
