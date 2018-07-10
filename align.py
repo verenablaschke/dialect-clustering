@@ -103,6 +103,22 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
     return correspondences, all_correspondences, doculects_all
 
 
+def score(A, corres, doculects):
+    if len(doculects) == 0:
+        return 0
+    # TODO currently binary
+    occ = 0
+    for i in doculects:
+        if A[i, corres] > 0:
+            occ += 1
+    rep = occ / len(doculects)
+    rel_occ = occ / np.sum(A[:, corres] > 0)
+    rel_size = len(doculects) / A.shape[0]
+    dist = (rel_occ - rel_size) / (1 - rel_size)
+
+    return rep, dist, (rep + dist) / 2
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -165,14 +181,15 @@ if __name__ == "__main__":
         msa_doculects_bdpa=doculects_lookup[args.msa_doculects],
         verbose=args.verbose)
 
+    doculect2int = {x: i for i, x in enumerate(doculects)}
+    corres2int = {x: i for i, x in enumerate(all_correspondences)}
     n_samples = len(doculects)
     n_features = len(all_correspondences)
     # A = sparse.dok_matrix(n_samples, n_features))
     A = np.zeros((n_samples, n_features), dtype=np.bool_)
     for i, doculect in enumerate(doculects):
         for corres, count in correspondences[doculect].items():
-            A[i, all_correspondences.index(corres)] = (1 if args.binary
-                                                       else count)
+            A[i, corres2int[corres]] = 1 if args.binary else count
     if args.verbose > 0:
         print("Matrix shape: {}".format(A.shape))
 
@@ -230,20 +247,26 @@ if __name__ == "__main__":
 
     clusters_and_doculects = list(zip(clusters[:n_samples], doculects))
     if args.co_clustering:
-        clusters_and_features = sorted(zip(v_2,
-                                           clusters[n_samples:],
-                                           all_correspondences),
-                                       reverse=True,
-                                       key=lambda elem: elem[0][0])
+        clusters_and_features = list(zip(clusters[n_samples:],
+                                         all_correspondences))
 
     for c in range(k):
         print("\nCluster {}:\n-------------------------------------".format(c))
+        ds = []
         for cl, d in clusters_and_doculects:
             if c == cl:
                 print(d)
+                ds.append(doculect2int[d])
         if args.co_clustering:
-            print('-------')
-            for v, cl, f in clusters_and_features:
+            fs = []
+            for cl, f in clusters_and_features:
                 if c == cl:
-                    print("{}\t{}".format(f, v))
+                    rep, dist, imp = score(A, corres2int[f], ds)
+                    fs.append((imp * 100, rep * 100, dist * 100, f))
+            fs = sorted(fs, reverse=True)
+            print('-------')
+            print(len(fs))
+            for i, r, d, f in fs:
+                print("{}\t{:4.2f}\t(rep: {:4.2f} dist: {:4.2f})"
+                      .format(f, i, r, d))
         print('=====================================')
