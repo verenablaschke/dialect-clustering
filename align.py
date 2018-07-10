@@ -1,15 +1,19 @@
 from lingpy.align.multiple import Multiple
+from lingpy.sequence.sound_classes import token2class
 from read_data import get_samples, DOCULECTS_BDPA, DOCULECTS_BDPA_ALL
 from collections import Counter
 from scipy import sparse, linalg
-from sklearn import cluster, feature_extraction
+from sklearn import cluster
+from sklearn.feature_extraction.text import TfidfTransformer
 import math
 import numpy as np
 import argparse
+import sys
 
 
 def align_concept(doculects, reference_doculect='ProtoGermanic',
-                  alignment_type='lib', alignment_mode='global', verbose=1):
+                  alignment_type='lib', alignment_mode='global',
+                  context=False, verbose=1):
     sequences = []
     labels = [reference_doculect]
     for doculect, word in doculects.items():
@@ -29,17 +33,48 @@ def align_concept(doculects, reference_doculect='ProtoGermanic',
     if verbose > 2:
         print(msa)
     # TODO swaps
+    if context:
+        ref = ['#'] + alignments[0] + ['#']
+        ref_segments = []
+        for j in range(1, len(ref) - 1):
+            r_prev = seg2class(ref[j - 1])
+            r = ref[j]
+            r_next = seg2class(ref[j + 1])
+            ref_segments.append((r_prev, r, r_next))
+
     corres = {}
     for i in range(1, len(labels)):
-        c = zip(alignments[0], alignments[i])
-        c = Counter([x for x in c if x != ('-', '-')])
+        if context:
+            cur = ['#'] + alignments[i] + ['#']
+            cur_segments = []
+            for j in range(1, len(ref) - 1):
+                c_prev = seg2class(cur[j - 1])
+                c = cur[j]
+                c_next = seg2class(cur[j + 1])
+                cur_segments.append((c_prev, c, c_next))
+            c = zip(ref_segments, cur_segments)
+            c = Counter([x for x in c if (x[0][1], x[1][1]) != ('-', '-')])
+        else:
+            c = zip(alignments[0], alignments[i])
+            c = Counter([x for x in c if x != ('-', '-')])
         corres[labels[i]] = c
     return corres
+
+
+def seg2class(segment):
+    if segment == '#':
+        return '#'
+    # TODO
+    # return token2class(segment, 'sca')
+    cl = token2class(segment, 'dolgo')
+    return 'V' if cl == 'V' else 'C'
+
 
 
 def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
           include_sc=True, binary=True, msa_doculects_bdpa=DOCULECTS_BDPA_ALL,
           alignment_type='lib', alignment_mode='global', min_count=0,
+          context=False,
           verbose=1):
     if verbose > 0:
         print('Reading the data files.')
@@ -58,6 +93,7 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
                                reference_doculect=reference_doculect,
                                alignment_type=alignment_type,
                                alignment_mode=alignment_mode,
+                               context=context,
                                verbose=verbose)
         for doculect, tallies in corres.items():
             if doculect in msa_doculects_bdpa \
@@ -117,13 +153,14 @@ def score(A, corres, doculects):
     rel_size = len(doculects) / A.shape[0]
     dist = (rel_occ - rel_size) / (1 - rel_size)
 
+    # TODO try out harmonic mean?
     return rep, dist, (rep + dist) / 2
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-k', '--n_clusters', type=int, default=5,
+        '-k', '--n_clusters', type=int, default=7,
         help='The number of clusters.')
     parser.add_argument(
         '-d', '--doculects', default='de-nl', choices=['de-nl', 'all'],
@@ -148,6 +185,9 @@ if __name__ == "__main__":
         '-c', '--count', dest='binary', action='store_false',
         help='Matrix stores numbers of feature occurrences.')
     parser.add_argument(
+        '--context', dest='context', action='store_true',
+        help='Include left and right context of sound segments.')
+    parser.add_argument(
         '-m', '--mincount', type=int, default=0,
         help='Minimum count per sound correspondence and doculect.')
     parser.add_argument(
@@ -165,18 +205,18 @@ if __name__ == "__main__":
     parser.add_argument(
         '-v', '--verbose', type=int, default=1, choices=[0, 1, 2, 3])
     parser.set_defaults(include_sc=True, co_clustering=True,
-                        binary=True, tfidf=False)
+                        binary=True, tfidf=False, context=False)
     args = parser.parse_args()
 
     k = args.n_clusters
     if args.verbose > 0:
+        print("`python {}`".format(" ".join(sys.argv)))
         print("Clusters: {}".format(k))
         print("Doculects: {} (BDPA) {} (SC)".format(args.doculects,
                                                     args.include_sc))
         print("Co-clustering: {}".format(args.co_clustering))
-        print("Binary features: {} (min. count {})".format(args.binary,
-                                                           args.mincount))
-        print("TF-IDF: {}".format(args.tfidf))
+        print("Features: binary: {}, min. count {}, TF-IDF: {}, context: {}"
+              .format(args.binary, args.mincount, args.tfidf, args.context))
         print("Alignment: {} {} ({})".format(args.alignment_mode,
                                              args.alignment_type,
                                              args.msa_doculects))
@@ -185,7 +225,7 @@ if __name__ == "__main__":
     doculects_lookup = {'de-nl': DOCULECTS_BDPA, 'all': DOCULECTS_BDPA_ALL}
     correspondences, all_correspondences, doculects = align(
         doculects_bdpa=doculects_lookup[args.doculects],
-        include_sc=args.include_sc,
+        include_sc=args.include_sc, context=args.context,
         alignment_type=args.alignment_type, min_count=args.mincount,
         alignment_mode=args.alignment_mode, binary=args.binary,
         msa_doculects_bdpa=doculects_lookup[args.msa_doculects],
@@ -205,8 +245,8 @@ if __name__ == "__main__":
 
     if args.tfidf:
         # TODO check out args
-        transformer = feature_extraction.text.TfidfTransformer(smooth_idf=False)
-        A = transformer.fit_transform(A)#.todense()
+        transformer = TfidfTransformer(smooth_idf=False)
+        A = transformer.fit_transform(A)
         print(A.shape)
 
     if args.co_clustering:
@@ -275,8 +315,10 @@ if __name__ == "__main__":
                     fs.append((imp * 100, rep * 100, dist * 100, f))
             fs = sorted(fs, reverse=True)
             print('-------')
-            print(len(fs))
-            for i, r, d, f in fs:
-                print("{}\t{:4.2f}\t(rep: {:4.2f} dist: {:4.2f})"
+            for j, (i, r, d, f) in enumerate(fs):
+                if i < 60:
+                    print("and {} more".format(len(fs) - j))
+                    break
+                print("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})"
                       .format(f, i, r, d))
         print('=====================================')
