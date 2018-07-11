@@ -76,12 +76,29 @@ Dialects -- hierarchy vs. web; 'vertical' changes vs. horizontal' influences.
 
 ### Libraries
 
-List, Johann-Mattis; Greenhill, Simon; and Forkel, Robert (2018): **LingPy. A Python library for historical linguistics**. Version 2.6.3. URL: http://lingpy.org, DOI: https://zenodo.org/badge/latestdoi/5137/lingpy/lingpy. With contributions by Steven Moran, Peter Bouda, Johannes Dellert, Taraka Rama, Frank Nagel, and Tiago Tresoldi. Jena: Max Planck Institute for the Science of Human History.
+J.-M. List, S. Greenhill, and R. Forkel (2018):
+**LingPy. A Python library for historical linguistics**. 
+Version 2.6.3. 
+URL: http://lingpy.org, 
+DOI: https://zenodo.org/badge/latestdoi/5137/lingpy/lingpy. 
+With contributions by Steven Moran, Peter Bouda, Johannes Dellert, Taraka Rama, Frank Nagel, and Tiago Tresoldi. 
+Jena: Max Planck Institute for the Science of Human History.
 
 ### Data
 
-List, J.-M. and Prokić, J. (2014). [**A benchmark database of phonetic alignments in historical linguistics and dialectology.**](https://pdfs.semanticscholar.org/4bd4/0ed75369e07756b338f81a9c9529e207e279.pdf) In: *Proceedings of the International Conference on Language Resources and Evaluation (LREC)*, 26—31 May 2014, Reykjavik. 288-294.
+J.-M. List and J. Prokić (2014). 
+[**A benchmark database of phonetic alignments in historical linguistics and dialectology.**](https://pdfs.semanticscholar.org/4bd4/0ed75369e07756b338f81a9c9529e207e279.pdf)
+In: *Proceedings of the International Conference on Language Resources and Evaluation (LREC)*, 26—31 May 2014, Reykjavik. 288-294.
 
-Renfrew, C. and Heggarty, P. (2009). **Languages and Origins in Europe.** URL: http://www.languagesandpeoples.com/.
+C. Renfrew and P. Heggarty (2009).
+**Languages and Origins in Europe.**
+URL: http://www.languagesandpeoples.com/.
 
-Heggarty, P. **Sound Comparisons: Exploring Phonetic Diversity Across Language Families** http://www.soundcomparisons.com/
+P. Heggarty 
+**Sound Comparisons: Exploring Phonetic Diversity Across Language Families** 
+URL: http://www.soundcomparisons.com/
+
+H. Hammarström, S. Bank, R. Forkel, and M. Haspelmath (2018).
+**Glottolog 3.2.**
+Jena: Max Planck Institute for the Science of Human History.
+URL: http://glottolog.org
