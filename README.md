@@ -13,9 +13,7 @@ Despite having been transcribed by the same person, there seem to be **noticeabl
 - If I am re-aligning the entries anyway, why not use the Sound Comparisons versions of all the data? There are some slight inconsistensies between the two versions, despite having originally been transcribed by the same person (`ʦ` vs. `ts`, between two vowels: `ɪ` vs. `j`, inclusion of stress marks).
 - [ ] Use either BDPA data or SoundComparisons data, but not both combined.
 
-## The Project
-
-### Alignments
+## Alignments
 
 At the moment, I do not use the gold-standard alignments from the BDPA because they only contain 4 (out of 111) Proto-Germanic entries. Instead, I use LingPy's SCA-based MSA method for (re-)aligning the data.
 
@@ -36,9 +34,9 @@ At the moment, I do not use the gold-standard alignments from the BDPA because t
 - Adding some phonetic context (e.g. `montemagni2013synchronic`). Is the segment preceded/followed by a consonant/vowel/word boundary? Using more refined sound classes could also be insightful.
   - What about a model where I use segments, segments with C/V/# contexts and segments with sound-class contexts? And then it's up to the model/the sound corresponding ranking metrics to figure out which information is relevant?
 
-### Clustering
+## Clustering
 
-#### Bipartite spectral graph co-clustering
+### Bipartite spectral graph co-clustering
 
 Relevant literature:
 
@@ -58,13 +56,13 @@ Steps:
 2. Perform **SVD** on `A_n` to get the left and right singular vectors `u_i` and `v_i`. We ignore the singular vectors belonging to the first/largest singular value, and take the second singular vectors (`u_2`, `v_2`). (If clustering with k > 2, also skip the first singular vectors and take the `log(k)/log2` following vectors.)
    - `kluger2003spectral` gives some more information as to why we're ignoring the first singular value/vectors (section "Independent Rescaling of Genes and Conditions"). Apparently, the first singular vectors only "make a trivial constant contribution to the matrix". I will need to carefully re-read that section to understand *why* this is. However, trying this out for the toy example in `wieling2011bipartite`, it is very much the case that when using the first singular vectors, the resulting vector (after step 3) contains the same value for all entries, being maximally unhelpful for k-means clustering (step 4).
 
-3. Calculate `D_1 ^ -1/2 @ u_2` and `D_2 ^ -1/2 @ v_2`, and append them to get the vector/matrix Z. 
+3. Calculate `D_1 ^ -1/2 @ u_2` and `D_2 ^ -1/2 @ v_2`, and concatenate them to get the vector/matrix Z. 
 
 4. Perform **k-means** clustering on Z.
 
 5. If performing hierarchical clustering, repeat steps 1-4 on all clusters individually.
 
-#### Ranking sound correspondences by importance
+### Ranking sound correspondences by importance
 
 Also introduced in [`wieling2011bipartite`](https://www.sciencedirect.com/science/article/pii/S0885230810000410?via%3Dihub).
 
@@ -78,23 +76,26 @@ For each cluster, rank the associated sound correspondences by the following met
 
 According to `wieling2010hierarchical`, the values of the **second right singular vector** are a good substitute for the above metrics.
 
-#### Notes
+### Notes
 
 - How beneficial is co-clustering really? Why not just cluster the doculects (after TF-IDF maybe) and then apply the sound correspondence metrics? It seems like the benefit of co-clustering is mainly that `v_2` can be used for ranking the correspondences, although this doesn't seem to be very popular among the authors who used bipartite spectral graph clustering for dialect data...
 
-- I implemented the hierarchical version in the [`hierarchical` branch](https://github.com/verenablaschke/dialect-clustering/tree/hierarchical).  When trying to run it, I sometimes get a "singular matrix" error when trying to calculate the inverse of a matrix (for step 1 of the bipartite [...] clustering process).
+- I implemented the hierarchical version in the [`hierarchical` branch](https://github.com/verenablaschke/dialect-clustering/tree/hierarchical).  When trying to run it, I sometimes get a "singular matrix" error when trying to calculate the inverse of a matrix (for step 1 of the bipartite spectral graph co-clustering process).
   - This happens when the co-occurrence matrix for a cluster contains empty rows and/or columns. This shouldn't happen in the first case because empty rows/columns mean that the entries in question aren't similar to the other entries in the matrix, i.e. the previous clustering step performed quite poorly.
   - I'm working on a fix.
 
 ## Evaluation
 
-I have the Glottolog codes and family tree information for the doculects (soundcomparisons.com provides Glottolog 2.7 codes for the samples). The only issue is that two of these codes aren't in Glottolog 3.2 (the current version) anymore. Why were they removed? Should I use the Glottolog 2.7 family tree information, or should I try to find appropriate substitute codes from Glottolog 3.2?
+I have the Glottolog codes and family tree information for the doculects (soundcomparisons.com provides Glottolog 2.7 codes for the samples). The only issue is that two of these codes aren't in Glottolog 3.2 (the current version) anymore. Why were they removed? Should I use the family tree information from Glottolog 2.7, or should I try to find appropriate languoid substitutes from Glottolog 3.2?
 
 ## Discussion
 
-All of the comparisons here are phonetic (and might possibly include morphological information in some cases) and on a word level, but I'm ignoring lexical, syntactical, morphological, etc. information in this analysis.
+All of the comparisons here are phonetic (and might possibly include some morphological information in some cases) and on a word level, but I'm ignoring lexical, syntactical, morphological, etc. information in this analysis.
 
-Dialects -- hierarchy vs. web; 'vertical' changes vs. horizontal' influences.
+To what extend does clustering dialects and/or applying a hierarchical model to dialect data make sense? 
+- tree vs. web
+- 'vertical' changes vs. horizontal' influences
+- At least, I'm using data from a relatively large region. It might be harder to argue for doing this if the data just came from a very small geographical region (say, the same administrative district).
 
 - [ ] Read e.g. `heggarty2010splits`
 
@@ -109,6 +110,8 @@ URL: http://lingpy.org,
 DOI: https://zenodo.org/badge/latestdoi/5137/lingpy/lingpy. 
 With contributions by Steven Moran, Peter Bouda, Johannes Dellert, Taraka Rama, Frank Nagel, and Tiago Tresoldi. 
 Jena: Max Planck Institute for the Science of Human History.
+
+scikit-learn, scipy, numpy
 
 ### Data
 
