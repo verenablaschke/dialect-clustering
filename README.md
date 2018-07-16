@@ -55,6 +55,7 @@ Steps:
 
 2. Perform **SVD** on `A_n` to get the left and right singular vectors `u_i` and `v_i`. We ignore the singular vectors belonging to the first/largest singular value, and take the second singular vectors (`u_2`, `v_2`). (If clustering with k > 2, also skip the first singular vectors and take the `log(k)/log2` following vectors.)
    - `kluger2003spectral` gives some more information as to why we're ignoring the first singular value/vectors (section "Independent Rescaling of Genes and Conditions"). Apparently, the first singular vectors only "make a trivial constant contribution to the matrix". I will need to carefully re-read that section to understand *why* this is. However, trying this out for the toy example in `wieling2011bipartite`, it is very much the case that when using the first singular vectors, the resulting vector (after step 3) contains the same value for all entries, being maximally unhelpful for k-means clustering (step 4).
+   - Why `log(k)/log2`?
 
 3. Calculate `D_1 ^ -1/2 @ u_2` and `D_2 ^ -1/2 @ v_2`, and concatenate them to get the vector/matrix Z. 
 

@@ -1,0 +1,213 @@
+\documentclass{article}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{tipa}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.3in]{geometry}
+
+\title{Clustering Dialect Varieties Based on Historical Sound Correspondences}
+\author{Verena Blaschke}
+\date{\today}
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+\newpage
+% TODO Eigenständigkeits- bzw. Antiplagiatserklärung  
+
+\pagenumbering{arabic}
+
+
+\section{Introduction}
+
+% --- on clustering dialects and determining relevant features ---
+
+clustering dialects and determining relevant features
+
+\cite{prokic2012detecting}
+
+% --- on historical sound correspondences ---
+
+historical sound correspondences
+
+% --- on BSGC ---
+
+Bipartite spectral graph co-clustering
+
+introduced in \cite{dhillon2001co-clustering}
+
+introduced as a method for dialect clustering in \cite{wieling2011bipartite}
+
+\cite{wieling2013analyzing} applied this method for clustering British English dialects and compared the results to clusters obtained via PCA
+ 
+\cite{montemagni2013synchronic} applied this method to Tuscan dialects and used left and right contexts for the sound segments
+
+\cite{zha2001bipartite} introduced a similar (the same??) method as Dhillon at the same time, in another journal
+
+% This algorithms and related ones were investigated by \cite{kluger2003spectral} for their use in bioinformatics as well (co-clustering genes and phenotypes).
+ 
+\section{Data}
+
+continental European West Germanic dialects and standard languages
+
+intro to \cite{heggarty2018sound} and(?) \cite{listnodatebenchmark}
+
+All of the entries were transcribed by Warren Maguire (with revisions by Paul Heggarty)
+
+unable to use (modern doculect) data from both sources because of transcription differences
+
+if I stick with BDPA: The only difference between "High German (Herrlisheim)" and "High German (North Alsace)" is a slightly different coverage of entries. They seem to be derived from the same wordlist of Heggarty's.
+
+segmentation: affricates, diph-/triphthongs
+
+\subsection{Alignments}
+
+explain \cite{list2018lingpy} SCA-based MSA method
+
+using all of the BDPA data instead of just the dialects
+
+\section{Clustering}
+
+\subsection{Bipartite spectral graph co-clustering}
+
+The method, as taken from \cite{dhillon2001co-clustering}:
+
+\begin{enumerate}
+\item 
+Given a (binary) co-occurrence matrix $A^{m \times n}$ ($m$ = number of doculects, $n$ = number of sound correspondences), normalize this matrix.
+First, create two diagonal matrices $D_1^{m \times m}$ and $D_2^{n x n}$ that, respectively, contain the row sums/column sums of $A$.
+Compute the diagonal matrices' inverses. 
+% Since they are diagonal, this is very easy, but only possible if no entries on their diagonals are 0.
+Then, compute the square roots of the inverses
+% (also easy because of the diagonal structure)
+.
+Finally, create the normalized matrix $A_n = D_1^{-\frac{1}{2}} \times A \times D_2^{-\frac{1}{2}}$.
+Effectively: divide each entry by the square root of the sum of its row's entries and by the square root of the sum of its column's entries.
+This reduces the importance of doculects/correspondences that co-occur with a large number of other entries.
+
+\item
+Perform SVD on $A_n$ to get the left and right singular vectors $u_i$ and $v_i$.
+We ignore the singular vectors belonging to the first/largest singular value, and take the second singular vectors ($u_2$, $v_2$).
+(If clustering with $k > 2$, also skip the first singular vectors and take the $log(k)/log2$ following vectors.)
+\cite{kluger2003spectral}: The first singular vectors only "make a trivial constant contribution to the matrix".
+However, trying this out for the toy example in `wieling2011bipartite`, it is very much the case that when using the first singular vectors, the resulting vector (after step 3) contains the same value for all entries, being maximally unhelpful for k-means clustering (step 4).
+
+\item
+Calculate $D_1^{-\frac{1}{2}} \times u_2$ and $D_2^{-\frac{1}{2}} \times v_2$, and concatenate them to get the vector/matrix $Z$. 
+
+\item
+Perform k-means clustering on Z.
+
+% \item
+% If performing hierarchical clustering, repeat steps 1-4 on all clusters individually.
+\end{enumerate}
+
+
+\subsection{TF-IDF/SVD and k-means}
+
+TF-IDF conceptually similar to first step of BSGC: adjusting feature frequencies by how informative they are
+
+\begin{equation*}
+\operatorname{tf-idf}(t, d) =
+\frac{\text{number of occurrences of } t \text{ in } d}
+{\text{number of tokens in } d}
+\times
+log
+\frac{\text{number of documents}}
+{\text{number of documents with } t}
+\end{equation*}
+% TODO src
+
+\subsection{Ranking sound correspondences by importance}
+
+Ranking the sound correspondences for each cluster
+(BSGC: correspondences that are in the cluster,
+TF-IDF: correspondences that are exhibited by the cluster's doculects)
+
+introduced in \cite{wieling2011bipartite}
+
+For each cluster, rank the associated sound correspondences by the following metrics:
+
+\textbf{Representativeness}.
+How many doculects in this cluster exhibit this sound correspondence?
+
+\begin{equation*}
+\operatorname{representativeness}(cluster_i, corres_j) = 
+\frac{\text{number of doculects in } cluster_i \text{ with }  corres_j}
+{\text{number of doculects in }  cluster_i}
+\end{equation*}
+
+\textbf{Distinctiveness}.
+How often occurs a sound correspondence in this cluster compared to other clusters? 
+This requires two additional measures: 
+
+\begin{equation*}
+\operatorname{relative\_occurrence}(cluster_i, corres_j) = 
+\frac{\text{number of doculects in } cluster_i \text{ with }  corres_j}
+{\text{total number of doculects with } corres_j}
+\end{equation*}
+
+and
+
+\begin{equation*}
+\operatorname{relative\_size}(cluster_i) = 
+\frac{\text{number of doculects in } cluster_i}
+{\text{total number of doculects}}
+\end{equation*}
+
+Then, 
+
+\begin{equation*}
+\operatorname{distinctiveness}(cluster_i, corres_j) = 
+\frac{\operatorname{relative\_occurrence}(cluster_i, corres_j) - \operatorname{relative\_size}(cluster_i)}
+{1 - \operatorname{relative\_size}(cluster_i)}
+\end{equation*}
+
+\textbf{Importance}
+The average of representativeness and distinctiveness.
+
+\begin{equation*}
+\operatorname{importance}(cluster_i, corres_j) = 
+\frac{\operatorname{representativeness}(cluster_i, corres_j) + \operatorname{distinctiveness}(cluster_i, corres_j)}
+{2}
+\end{equation*}
+
+% TODO maybe: try out harmonic mean instead. I don't like how correspondences with low representativeness/distinctiveness but 100% of the other metric still get pretty high scores. Using the harmonic mean would give them a score closer to the lower score, I think.
+
+According to \cite{wieling2010hierarchical}, the values of the second right singular vector are a good substitute for the above metrics.
+
+\section{Results}
+
+comparison with language ancestry data from \cite{hammarstrom2018glottolog}
+
+comparison of highest-ranked sound correspondences
+(+ example words?)
+
+effect of context information
+
+comparison with sound shifts (e.g. High German consonant shift)
+
+\section{Discussion}
+
+% -- specific ---
+
+is the context beneficial?
+
+How beneficial is co-clustering really? Why not just cluster the doculects (after TF-IDF maybe) and then apply the sound correspondence metrics? It seems like the benefit of co-clustering is mainly that $v_2$ can be used for ranking the correspondences, although this doesn't seem to be very popular among the authors who used bipartite spectral graph clustering for dialect data...
+
+comparison to the results discussed in \cite{wieling2011bipartite}
+They remark on a common alignment [-]:[\textesh], which commonly appears after [t]:[t]. Interpreting affricates as single segments with the result of correspondences such as [t]:[\t{t\textesh}], or using another approach to include contextual information seems more satisfying to me.
+
+% --- more general ---
+
+All of the comparisons here are phonetic (and might possibly include some morphological information in some cases) and on a word level, but we are ignoring lexical, syntactical, morphological, etc. information in this analysis.
+
+To what extend does clustering dialects and/or applying a hierarchical model to dialect data make sense? (tree vs. web, `vertical' changes vs. `horizontal' influences)
+data is from a relatively large region though
+
+\bibliographystyle{chicago}
+\bibliography{lib}
+\end{document}
+
+% NOTES
+% intros to SVD, k-means, tf-idf, alignments?
