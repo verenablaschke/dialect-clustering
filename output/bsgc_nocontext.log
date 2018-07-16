@@ -1,0 +1,107 @@
+`python align.py --excludesc --mincount 3`
+Clusters: 7
+Doculects: de-nl (BDPA) False (SC)
+Co-clustering: True
+Features: binary: True, min. count 3, TF-IDF: False
+Context: none: True, CV: False, sound classes: False
+Alignment: global lib (all)
+
+Reading the data files.
+Aligning the entries.
+Matrix shape: (20, 177)
+
+Cluster 0:
+-------------------------------------
+High German (Ortisei)
+-------
+(('θ',), 't͡s')	100.00	(rep: 100.00, dist: 100.00)
+(('u', 'ː'), 'aɵ')	100.00	(rep: 100.00, dist: 100.00)
+(('d',), 't͡s')	100.00	(rep: 100.00, dist: 100.00)
+(('o', 'ː'), 'ʊə')	73.68	(rep: 100.00, dist: 47.37)
+(('a',), 'ɔ')	73.68	(rep: 100.00, dist: 47.37)
+and 22 more
+=====================================
+
+Cluster 1:
+-------------------------------------
+Belgian Dutch
+Dutch (Antwerp)
+Dutch (Ostend)
+-------
+(('f',), 'v')	100.00	(rep: 100.00, dist: 100.00)
+(('e',), 'eː')	85.29	(rep: 100.00, dist: 70.59)
+(('b',), 'f')	85.29	(rep: 100.00, dist: 70.59)
+(('r',), 's')	83.33	(rep: 66.67, dist: 100.00)
+and 25 more
+=====================================
+
+Cluster 2:
+-------------------------------------
+Central German (Honigberg)
+-------
+(('θ',), 'tʰ')	100.00	(rep: 100.00, dist: 100.00)
+(('z',), 'n')	100.00	(rep: 100.00, dist: 100.00)
+(('u', 'ː'), 'eu')	100.00	(rep: 100.00, dist: 100.00)
+(('u',), 'aː')	100.00	(rep: 100.00, dist: 100.00)
+(('o', 'ː'), 'e')	100.00	(rep: 100.00, dist: 100.00)
+(('n',), 'ɳ')	100.00	(rep: 100.00, dist: 100.00)
+(('a', 'i'), 'eiə')	100.00	(rep: 100.00, dist: 100.00)
+(('a',), 'ʊə')	100.00	(rep: 100.00, dist: 100.00)
+(('a',), 'ʊ')	100.00	(rep: 100.00, dist: 100.00)
+(('a',), 'æiə')	100.00	(rep: 100.00, dist: 100.00)
+(('x',), 'ʃ')	73.68	(rep: 100.00, dist: 47.37)
+(('d',), 'tʰ')	73.68	(rep: 100.00, dist: 47.37)
+=====================================
+
+Cluster 3:
+-------------------------------------
+Central German (Cologne)
+Central German (Luxembourg)
+Central German (Murrhardt)
+Dutch (Limburg)
+German
+High German (Biel)
+High German (Bodensee)
+High German (Graubuenden)
+High German (Herrlisheim)
+High German (Tuebingen)
+High German (Walser)
+Low German (Achterhoek)
+-------
+(('t',), 't͡s')	70.83	(rep: 83.33, dist: 58.33)
+(('t',), 's')	70.83	(rep: 83.33, dist: 58.33)
+and 63 more
+=====================================
+
+Cluster 4:
+-------------------------------------
+Low German (Bargstedt)
+-------
+(('e', 'ː'), 'ɐ')	73.68	(rep: 100.00, dist: 47.37)
+(('d',), '-')	73.68	(rep: 100.00, dist: 47.37)
+and 15 more
+=====================================
+
+Cluster 5:
+-------------------------------------
+-------
+and 6 more
+=====================================
+
+Cluster 6:
+-------------------------------------
+Dutch
+West Frisian (Grou)
+-------
+(('θ',), '-')	75.00	(rep: 50.00, dist: 100.00)
+(('u',), 'oʊ')	75.00	(rep: 50.00, dist: 100.00)
+(('o', 'ː'), 'oə')	75.00	(rep: 50.00, dist: 100.00)
+(('e',), 'ʌ')	75.00	(rep: 50.00, dist: 100.00)
+(('e',), 'eɪ')	75.00	(rep: 50.00, dist: 100.00)
+(('a', 'i'), 'iə')	75.00	(rep: 50.00, dist: 100.00)
+(('-',), 'ɹ')	75.00	(rep: 50.00, dist: 100.00)
+(('-',), 'j')	75.00	(rep: 50.00, dist: 100.00)
+(('u',), 'ʌ')	72.22	(rep: 100.00, dist: 44.44)
+(('l',), 'ɫ')	72.22	(rep: 100.00, dist: 44.44)
+and 11 more
+=====================================

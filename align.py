@@ -2,7 +2,7 @@ from lingpy.align.multiple import Multiple
 from lingpy.sequence.sound_classes import token2class
 from read_data import get_samples, DOCULECTS_BDPA, DOCULECTS_BDPA_ALL
 from collections import Counter
-from scipy import sparse, linalg
+from scipy import linalg
 from sklearn import cluster
 from sklearn.feature_extraction.text import TfidfTransformer
 import math
@@ -13,7 +13,8 @@ import sys
 
 def align_concept(doculects, reference_doculect='ProtoGermanic',
                   alignment_type='lib', alignment_mode='global',
-                  context=False, verbose=1):
+                  no_context=True, context_cv=False, context_sc=False,
+                  verbose=1):
     sequences = []
     labels = [reference_doculect]
     for doculect, word in doculects.items():
@@ -33,48 +34,71 @@ def align_concept(doculects, reference_doculect='ProtoGermanic',
     if verbose > 2:
         print(msa)
     # TODO swaps
-    if context:
+
+    if context_cv:
         ref = ['#'] + alignments[0] + ['#']
-        ref_segments = []
+        ref_segments_cv = []
         for j in range(1, len(ref) - 1):
             r_prev = seg2class(ref[j - 1])
             r = ref[j]
             r_next = seg2class(ref[j + 1])
-            ref_segments.append((r_prev, r, r_next))
+            ref_segments_cv.append((r_prev, r, r_next))
+    if context_sc:
+        ref = ['#'] + alignments[0] + ['#']
+        ref_segments_sc = []
+        for j in range(1, len(ref) - 1):
+            r_prev = seg2class(ref[j - 1], sca=True)
+            r = ref[j]
+            r_next = seg2class(ref[j + 1], sca=True)
+            ref_segments_sc.append((r_prev, r, r_next))
 
     corres = {}
     for i in range(1, len(labels)):
-        if context:
+        corres_i = Counter()
+
+        if no_context:
+            c = zip(alignments[0], alignments[i])
+            # Making the first part a tuple so corres.keys() can be sorted
+            # later on if segments with contexts (-> always tuples) are also
+            # included.
+            corres_i.update([(tuple(x[0]), x[1]) for x in c
+                             if x != ('-', '-')])
+
+        ref_segments = []
+        sca_model = []
+        if context_cv:
+            ref_segments.append(ref_segments_cv)
+            sca_model.append(False)
+        if context_sc:
+            ref_segments.append(ref_segments_sc)
+            sca_model.append(True)
+        for ref_segs, sca in zip(ref_segments, sca_model):
             cur = ['#'] + alignments[i] + ['#']
             cur_segments = []
             for j in range(1, len(ref) - 1):
-                c_prev = seg2class(cur[j - 1])
+                c_prev = seg2class(cur[j - 1], sca=sca)
                 c = cur[j]
-                c_next = seg2class(cur[j + 1])
+                c_next = seg2class(cur[j + 1], sca=sca)
                 cur_segments.append((c_prev, c, c_next))
-            c = zip(ref_segments, cur_segments)
-            c = Counter([x for x in c if (x[0][1], x[1][1]) != ('-', '-')])
-        else:
-            c = zip(alignments[0], alignments[i])
-            c = Counter([x for x in c if x != ('-', '-')])
-        corres[labels[i]] = c
+            c = zip(ref_segs, cur_segments)
+            corres_i.update([x for x in c if (x[0][1], x[1][1]) != ('-', '-')])
+        corres[labels[i]] = corres_i
     return corres
 
 
-def seg2class(segment):
-    if segment == '#':
-        return '#'
-    # TODO
-    # return token2class(segment, 'sca')
+def seg2class(segment, sca=False):
+    if segment in ['#', '-']:
+        return segment
+    if sca:
+        return token2class(segment, 'sca')
     cl = token2class(segment, 'dolgo')
     return 'V' if cl == 'V' else 'C'
-
 
 
 def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
           include_sc=True, binary=True, msa_doculects_bdpa=DOCULECTS_BDPA_ALL,
           alignment_type='lib', alignment_mode='global', min_count=0,
-          context=False,
+          no_context=True, context_cv=False, context_sc=False,
           verbose=1):
     if verbose > 0:
         print('Reading the data files.')
@@ -93,7 +117,8 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
                                reference_doculect=reference_doculect,
                                alignment_type=alignment_type,
                                alignment_mode=alignment_mode,
-                               context=context,
+                               no_context=no_context, context_cv=context_cv,
+                               context_sc=context_sc,
                                verbose=verbose)
         for doculect, tallies in corres.items():
             if doculect in msa_doculects_bdpa \
@@ -140,17 +165,17 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
     return correspondences, all_correspondences, doculects_all
 
 
-def score(A, corres, doculects):
-    if len(doculects) == 0:
-        return 0
+def score(A, corres, cluster_docs):
+    if len(cluster_docs) == 0:
+        return 0, 0, 0
     # TODO currently binary
     occ = 0
-    for i in doculects:
+    for i in cluster_docs:
         if A[i, corres] > 0:
             occ += 1
-    rep = occ / len(doculects)
+    rep = occ / len(cluster_docs)
     rel_occ = occ / np.sum(A[:, corres] > 0)
-    rel_size = len(doculects) / A.shape[0]
+    rel_size = len(cluster_docs) / A.shape[0]
     dist = (rel_occ - rel_size) / (1 - rel_size)
 
     # TODO try out harmonic mean?
@@ -185,8 +210,15 @@ if __name__ == "__main__":
         '-c', '--count', dest='binary', action='store_false',
         help='Matrix stores numbers of feature occurrences.')
     parser.add_argument(
-        '--context', dest='context', action='store_true',
-        help='Include left and right context of sound segments.')
+        '--context_cv', dest='context_cv', action='store_true',
+        help='Include left and right context of sound segments (C vs V vs #).')
+    parser.add_argument(
+        '--exclude_contextless', dest='context_none', action='store_false',
+        help='Exclude sound segments without context.')
+    parser.add_argument(
+        '--context_sc', dest='context_sc', action='store_true',
+        help='Include left and right context of sound segments '
+             '(sound classes).')
     parser.add_argument(
         '-m', '--mincount', type=int, default=0,
         help='Minimum count per sound correspondence and doculect.')
@@ -205,7 +237,8 @@ if __name__ == "__main__":
     parser.add_argument(
         '-v', '--verbose', type=int, default=1, choices=[0, 1, 2, 3])
     parser.set_defaults(include_sc=True, co_clustering=True,
-                        binary=True, tfidf=False, context=False)
+                        binary=True, tfidf=False, exclude_contextless=False,
+                        context_cv=False, context_sc=False)
     args = parser.parse_args()
 
     k = args.n_clusters
@@ -215,8 +248,11 @@ if __name__ == "__main__":
         print("Doculects: {} (BDPA) {} (SC)".format(args.doculects,
                                                     args.include_sc))
         print("Co-clustering: {}".format(args.co_clustering))
-        print("Features: binary: {}, min. count {}, TF-IDF: {}, context: {}"
-              .format(args.binary, args.mincount, args.tfidf, args.context))
+        print("Features: binary: {}, min. count {}, TF-IDF: {}"
+              .format(args.binary, args.mincount, args.tfidf))
+        print("Context: none: {}, CV: {}, sound classes: {}"
+              .format(not args.exclude_contextless, args.context_cv,
+                      args.context_sc))
         print("Alignment: {} {} ({})".format(args.alignment_mode,
                                              args.alignment_type,
                                              args.msa_doculects))
@@ -225,7 +261,8 @@ if __name__ == "__main__":
     doculects_lookup = {'de-nl': DOCULECTS_BDPA, 'all': DOCULECTS_BDPA_ALL}
     correspondences, all_correspondences, doculects = align(
         doculects_bdpa=doculects_lookup[args.doculects],
-        include_sc=args.include_sc, context=args.context,
+        include_sc=args.include_sc, no_context=not args.exclude_contextless,
+        context_cv=args.context_cv, context_sc=args.context_sc,
         alignment_type=args.alignment_type, min_count=args.mincount,
         alignment_mode=args.alignment_mode, binary=args.binary,
         msa_doculects_bdpa=doculects_lookup[args.msa_doculects],
@@ -313,12 +350,18 @@ if __name__ == "__main__":
                 if c == cl:
                     rep, dist, imp = score(A, corres2int[f], ds)
                     fs.append((imp * 100, rep * 100, dist * 100, f))
-            fs = sorted(fs, reverse=True)
-            print('-------')
-            for j, (i, r, d, f) in enumerate(fs):
-                if i < 60:
-                    print("and {} more".format(len(fs) - j))
-                    break
-                print("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})"
-                      .format(f, i, r, d))
+        else:
+            fs = []
+            for f in all_correspondences:
+                rep, dist, imp = score(A, corres2int[f], ds)
+                if imp > 0:
+                    fs.append((imp * 100, rep * 100, dist * 100, f))
+        fs = sorted(fs, reverse=True)
+        print('-------')
+        for j, (i, r, d, f) in enumerate(fs):
+            if i < 70:
+                print("and {} more".format(len(fs) - j))
+                break
+            print("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})"
+                  .format(f, i, r, d))
         print('=====================================')

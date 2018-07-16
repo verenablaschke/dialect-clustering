@@ -145,7 +145,7 @@ def parse_file_soundcomparisons(filename, entries):
     for i, concept in enumerate(concepts):
         try:
             word = clean_transcription(str(words[i]))
-            # TODO check if this is actually right all cases
+            # TODO check if this is actually correct all cases
             # TODO other cases like this one?
             # (e.g. 'j' in the middle of triphthongs)
             word = word.replace('ts', 't͡s')
