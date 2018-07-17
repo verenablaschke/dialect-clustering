@@ -4,8 +4,10 @@ from read_data import get_samples, DOCULECTS_BDPA, DOCULECTS_BDPA_ALL
 from collections import Counter
 from scipy import linalg
 from sklearn import cluster
+from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfTransformer
 import math
+import matplotlib.pyplot as plt
 import numpy as np
 import argparse
 import sys
@@ -142,7 +144,6 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
             if binary:
                 for corres in all_correspondences_old:
                     try:
-                        # TODO a better way of excluding rare correspondences?
                         if tallies[corres] < min_count:
                             del tallies[corres]
                     except KeyError:
@@ -180,6 +181,15 @@ def score(A, corres, cluster_docs):
 
     # TODO try out harmonic mean?
     return rep, dist, (rep + dist) / 2
+
+
+def visualize(x, y, labels):
+    fig, ax = plt.subplots()
+    ax.scatter(x, y)
+    for i, label in enumerate(labels):
+        ax.annotate(label, (x[i], y[i]))
+    # fig.savefig('svd.pdf', bbox_inches='tight')
+    plt.show()
 
 
 if __name__ == "__main__":
@@ -285,6 +295,9 @@ if __name__ == "__main__":
         transformer = TfidfTransformer(smooth_idf=False)
         A = transformer.fit_transform(A)
         print(A.shape)
+        pca = PCA(2)
+        x = pca.fit_transform(A.todense())
+        visualize(x[:, 0], x[:, 1], doculects)
 
     if args.co_clustering:
         # Form the normalized matrix A_n.
@@ -326,6 +339,10 @@ if __name__ == "__main__":
         Z[:n_samples] = D_1 @ U[:, 1:1 + n_eigenvecs]
         v_2 = V[:, 1:1 + n_eigenvecs]
         Z[n_samples:] = D_2 @ v_2
+        if n_eigenvecs > 1:
+            # TODO it would be neat to cluster the most important sound
+            # correspondences as well
+            visualize(Z[:n_samples, 0], Z[:n_samples, 1], doculects)
     else:
         Z = A
 

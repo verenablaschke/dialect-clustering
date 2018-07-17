@@ -1,8 +1,10 @@
 \documentclass{article}
+\usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage{amsmath}
 \usepackage{tipa}
-\usepackage[utf8]{inputenc}
+\usepackage{forest}
+\usetikzlibrary{decorations.pathreplacing}
 \usepackage[margin=1.3in]{geometry}
 
 \title{Clustering Dialect Varieties Based on Historical Sound Correspondences}
@@ -12,6 +14,7 @@
 \begin{document}
 \pagenumbering{gobble}
 \maketitle
+% TODO abstract
 \newpage
 % TODO Eigenständigkeits- bzw. Antiplagiatserklärung  
 
@@ -50,6 +53,8 @@ introduced as a method for dialect clustering in \cite{wieling2011bipartite}
 
 continental European West Germanic dialects and standard languages
 
+\subsection{actual data}
+
 intro to \cite{heggarty2018sound} and(?) \cite{listnodatebenchmark}
 
 All of the entries were transcribed by Warren Maguire (with revisions by Paul Heggarty)
@@ -59,6 +64,107 @@ unable to use (modern doculect) data from both sources because of transcription 
 if I stick with BDPA: The only difference between "High German (Herrlisheim)" and "High German (North Alsace)" is a slightly different coverage of entries. They seem to be derived from the same wordlist of Heggarty's.
 
 segmentation: affricates, diph-/triphthongs
+
+\subsection{notes on continental West Germanic dialects/languages}
+
+similarities not only because of genetic relatedness but also--enabled by the geographic proximity--mutual influences
+cf. \cite[p. 8]{harbert2007germanic}
+
+sound changes that characterize some but not all CWG variants:
+
+- High German consonant shift
+  - some notes. try \cite[pp. 47-48]{harbert2007germanic} or Beekes
+  - \cite[p. 15]{harbert2007germanic}: mostly in Alpine German, partially in Franconian, not in Low German
+
+- North-Sea-Germanic sound shifts/differences NSG vs other West Germanic dialects: \cite{stiles2013pan-west}
+
+\begin{figure}
+\centering
+\begin{forest}
+for tree={
+  parent anchor=south, 
+  child anchor=north,
+%   l sep=1cm,
+%   s sep=1cm
+}
+[West Germanic
+  [North Sea Germanic
+    [Anglo-Frisian
+        [Frisian]
+    ] 
+    [Old Saxon
+        [Low German]
+    ]
+  ]
+  [Franconian
+    [Low Franconian
+        [Dutch]
+    ]
+    [High Franconian, name=a]
+  ]
+  [Alpine Germanic
+    [Alemannic]
+    [Bavarian, name=b]
+  ]
+]
+\draw[decorate,decoration={brace,mirror}]
+  (a.south west) -- node[below] {Middle High German} (b.south east);
+\end{forest}
+\caption{Harbert 2007: somewhat taking into account the convergence of certain Germanic varieties due to mutual influence (tree + waves?)}
+\label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+\centering
+\scalebox{0.8}{
+\begin{forest}
+for tree={
+  parent anchor=south, 
+  child anchor=north,
+%   l sep=1cm,
+%   s sep=1cm
+}
+[West Germanic
+  [North Sea Germanic
+    [Anglo-Frisian
+        [Frisian]
+    ] 
+    [Old Saxon
+        [Low German]
+    ]
+  ]
+  [Franconian
+    [Low Franconian
+        [Dutch]
+    ]
+    [High Franconian
+        [German
+            [Standard German]
+            [Alsatian]
+        ]
+        [Middle Franconian
+            [Luxembourgish]
+            [Ripurarian]
+        ]
+    ]
+  ]
+  [High German
+    [Alpine Germanic
+        [Alemannic
+            [Swiss German]
+            [Swabian]
+            [Walser]
+        ]
+        [Bavarian]
+    ]
+  ]
+]
+\end{forest}
+}
+\caption{Glottolog 3.2: entirely a tree}
+\label{fig:my_label}
+\end{figure}
+
 
 \subsection{Alignments}
 
@@ -178,14 +284,17 @@ According to \cite{wieling2010hierarchical}, the values of the second right sing
 
 \section{Results}
 
+\subsection{Comparison with Glottolog tree}
 comparison with language ancestry data from \cite{hammarstrom2018glottolog}
 
+\subection{Sound correspondences}
 comparison of highest-ranked sound correspondences
 (+ example words?)
 
-effect of context information
-
 comparison with sound shifts (e.g. High German consonant shift)
+
+\subsection{Context information}
+effect of context information
 
 \section{Discussion}
 

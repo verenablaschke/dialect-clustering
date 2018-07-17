@@ -87,7 +87,11 @@ According to `wieling2010hierarchical`, the values of the **second right singula
 
 ## Evaluation
 
-I have the Glottolog codes and family tree information for the doculects (soundcomparisons.com provides Glottolog 2.7 codes for the samples). The only issue is that two of these codes aren't in Glottolog 3.2 (the current version) anymore. Why were they removed? Should I use the family tree information from Glottolog 2.7, or should I try to find appropriate languoid substitutes from Glottolog 3.2?
+I have the Glottolog codes and family tree information for the doculects (soundcomparisons.com provides Glottolog 2.7 codes for the samples). 
+
+Issues:
+
+- Two of these codes aren't in Glottolog 3.2 (the current version) anymore. Why were they removed? Should I use the family tree information from Glottolog 2.7, or should I try to find appropriate languoid substitutes from Glottolog 3.2?
 
 ## Discussion
 
