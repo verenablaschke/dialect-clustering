@@ -29,9 +29,17 @@ clustering dialects and determining relevant features
 
 \cite{prokic2012detecting}
 
+
+\cite{heggarty2010splits} created a NeighborNet for Germanic languages, based on pronunciation differences between modern varieties. 
+~conclude~ that this works because the pronunciation differences implicitly include information on sound changes that were not shared by all varieties
+
+\cite{prokic2013combining}: judging regularity of correspondences via contingency table
+
 % --- on historical sound correspondences ---
 
 historical sound correspondences
+
+\cite{kondrak2009identication}
 
 % --- on BSGC ---
 
@@ -51,7 +59,7 @@ introduced as a method for dialect clustering in \cite{wieling2011bipartite}
  
 \section{Data}
 
-continental European West Germanic dialects and standard languages
+continental European West Germanic dialects (CWG) and standard languages
 
 \subsection{actual data}
 
@@ -65,10 +73,13 @@ if I stick with BDPA: The only difference between "High German (Herrlisheim)" an
 
 segmentation: affricates, diph-/triphthongs
 
+some doculects do not have (cognate) entries for some entries. give some statistics about the coverage?
+
 \subsection{notes on continental West Germanic dialects/languages}
 
 similarities not only because of genetic relatedness but also--enabled by the geographic proximity--mutual influences
 cf. \cite[p. 8]{harbert2007germanic}
+
 
 sound changes that characterize some but not all CWG variants:
 
@@ -111,7 +122,7 @@ for tree={
   (a.south west) -- node[below] {Middle High German} (b.south east);
 \end{forest}
 \caption{Harbert 2007: somewhat taking into account the convergence of certain Germanic varieties due to mutual influence (tree + waves?)}
-\label{fig:my_label}
+\label{fig:cwg_harbert}
 \end{figure}
 
 \begin{figure}
@@ -162,19 +173,75 @@ for tree={
 \end{forest}
 }
 \caption{Glottolog 3.2: entirely a tree}
-\label{fig:my_label}
+\label{fig:cwg_glottolog}
 \end{figure}
 
 
+\section{Methods}
+
 \subsection{Alignments}
 
-explain \cite{list2018lingpy} SCA-based MSA method
+% TODO. dataset
+% 4 P-G words in BDPA
+Since the Proto-Germanic words are not aligned with the BDPA entries, we need to align them first. 
+We can carry out alignment based on data from all the investigated doculects at once using multi-sequence alignment.
+% TODO details (all steps) & double-check
+For this, we use a library-based version \cite{notredame2000t-coffee:} of the progressive multi-sequence alignment method \cite{thompson1994clustal}.
+For each concept:
 
-using all of the BDPA data instead of just the dialects
+% "global" mode: \cite{needleman1970general}
+% "SCA" model: \cite{list2012sca:}
 
-\section{Clustering}
+% TODO either double-check (& possibly extend these details), or remove them (& just name them) since they are not the focus of this work
+\begin{enumerate}
+\item
+Create alignments for all possible binary combinations of sequences.
+These alignments are created using the Needleman-Wunsch algorithm (\cite{needleman1970general}) and based on the sound class method by \cite{list2012sca:}.
+All segment alignments from this step are stored in a library, each together with a corresponding sound-class based weight. % TODO check the nature of these weights
 
-\subsection{Bipartite spectral graph co-clustering}
+\item
+Use the binary calculations to create a distance matrix between the sequences.
+Convert the distance matrix into a tree.
+
+\item 
+Progressing from the tips of the tree to the root, join the closest two alignments at each step.
+Merge alignments using the library created in the first step.
+\end{enumerate}
+
+This method is performed using the implementation in the LingPy library for Python (\cite{list2018lingpy}).
+For the multi-sequence alignment, we use all of the Germanic BDPA data instead of just the CWG doculects, because this yielded better results in preliminary experiments. % TODO vague?
+Table ~\ref{tab:msa}
+
+\begin{table}[]
+\begin{center}
+\begin{tabular}{l|llllll}
+Doculect       & \multicolumn{6}{l}{Sound segments} \\ \hline
+Proto-Germanic & x   & a     & n   & d   & u   & z  \\
+Biel           & h   & ɒ     & ŋ   & -   & -   & -  \\
+Std. German    & h   & a     & n   & t   & -   & -  \\
+Vesterkolonien & h   & æ̃ː    & -   & t   & -   & - 
+\end{tabular}
+\end{center}
+\label{tab:msa}
+\caption Extract of the aligned sequence table for the concept ``hand''.
+\end{table}
+
+We then extract the pairwise sound correspondences between Proto-Germanic and each doculect from the alignments.
+
+ignore gap-gap alignments caused by the inclusion of additional doculects for the MSA step
+ignore swaps (swapped segments are aligned with gaps) -- happen only in 3 of the 111 terms
+
+% TODO motivation
+In addition to the simple correspondences, we also extract sound correspondences with some contextual information.
+To do this, we pad each sequence with `#' to represent word boundaries.
+% TODO more
+
+% TODO include left and right context separately?
+% a : æ̃ː, (C, a, C) : (C, æ̃ː, C), (G, a, N) : (H, æ̃ː, -)
+
+\subsection{Clustering}
+
+\subsubsection{Bipartite spectral graph co-clustering}
 
 The method, as taken from \cite{dhillon2001co-clustering}:
 
@@ -209,7 +276,7 @@ Perform k-means clustering on Z.
 \end{enumerate}
 
 
-\subsection{TF-IDF/SVD and k-means}
+\subsubsection{TF-IDF/SVD and k-means}
 
 TF-IDF conceptually similar to first step of BSGC: adjusting feature frequencies by how informative they are
 
@@ -287,13 +354,12 @@ According to \cite{wieling2010hierarchical}, the values of the second right sing
 \subsection{Comparison with Glottolog tree}
 comparison with language ancestry data from \cite{hammarstrom2018glottolog}
 
-\subection{Sound correspondences}
+\subsection{Sound correspondences}
 comparison of highest-ranked sound correspondences
 (+ example words?)
 
 comparison with sound shifts (e.g. High German consonant shift)
 
-\subsection{Context information}
 effect of context information
 
 \section{Discussion}
