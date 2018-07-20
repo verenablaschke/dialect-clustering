@@ -1,4 +1,4 @@
-concept,id,n_entries,American English,Australian English (Perth),Belgian Dutch,Canadian English,Central German (Cologne),Central German (Honigberg),Central German (Luxembourg),Central German (Murrhardt),Danish,Dutch,Dutch (Antwerp),Dutch (Limburg),Dutch (Ostend),English,English (Buckie),English (Lindisfarne),English (Liverpool,English (London,English (North Carolina),English (Singapore),English (Tyrone),Faroese,German,High German (Biel),High German (Bodensee),High German (Graubuenden),High German (Herrlisheim),High German (North Alsace),High German (Ortisei),High German (Tuebingen),High German (Walser),Icelandic,Indian English (Delhi),LOCAL,Low German (Achterhoek),Low German (Bargstedt),New Zealand English (Auckland),Nigerian English (Igbo),Norwegian (Stavanger),Proto-Germanic,Scottish,South African English (Johannisburg),Swedish (Skane),Swedish (Stockholm),West Frisian (Grou),Yiddish (New York)
+concept,id,complete,American English,Australian English (Perth),Belgian Dutch,Canadian English,Central German (Cologne),Central German (Honigberg),Central German (Luxembourg),Central German (Murrhardt),Danish,Dutch,Dutch (Antwerp),Dutch (Limburg),Dutch (Ostend),English,English (Buckie),English (Lindisfarne),English (Liverpool,English (London,English (North Carolina),English (Singapore),English (Tyrone),Faroese,German,High German (Biel),High German (Bodensee),High German (Graubuenden),High German (Herrlisheim),High German (North Alsace),High German (Ortisei),High German (Tuebingen),High German (Walser),Icelandic,Indian English (Delhi),LOCAL,Low German (Achterhoek),Low German (Bargstedt),New Zealand English (Auckland),Nigerian English (Igbo),Norwegian (Stavanger),Proto-Germanic,Scottish,South African English (Johannisburg),Swedish (Skane),Swedish (Stockholm),West Frisian (Grou),Yiddish (New York)
 all,369,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
 yard,370,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,,x
 fast,371,44,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,
@@ -10,7 +10,7 @@ father,376,44,x,x,x,x,x,x,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,
 I,377,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
 north,378,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
 storm,379,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
-tear,381,25,x,x,,x,,x,,,x,,,,,x,x,x,x,x,x,x,x,x,x,,,,,,,,,x,x,x,,,x,x,x,,x,x,x,x,,
+tear,380,21,,,x,,x,,x,x,,x,x,x,x,,,,,,,,,,x,x,x,x,x,x,x,x,x,,,x,x,x,,,,,,,,,x,
 tear,381,25,x,x,,x,,x,,,x,,,,,x,x,x,x,x,x,x,x,x,x,,,,,,,,,x,x,x,,,x,x,x,,x,x,x,x,,
 bath,382,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
 young,383,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
@@ -110,4 +110,4 @@ hundred,476,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
 night,477,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
 stone,478,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
 long,479,45,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,,x,x,x,x,x,x
-_total_,-1,-1,111,111,109,111,108,110,100,109,108,109,109,105,108,111,111,111,111,111,111,111,111,105,111,107,102,107,106,109,107,107,105,110,111,111,107,105,111,110,110,5,111,111,108,110,105,103
+_total_,-1,-1,110,110,110,110,109,109,101,110,107,110,110,106,109,110,110,110,110,110,110,110,110,104,111,108,103,108,107,110,108,108,106,109,110,111,108,106,110,109,109,5,110,110,107,109,106,103
