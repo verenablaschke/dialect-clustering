@@ -2,7 +2,7 @@ import logging
 import os
 import pandas as pd
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
 
@@ -21,12 +21,23 @@ def clean_transcription(word):
     # Removing blank space characters is necessary because sometimes the
     # 'no voicing' diacritic is combined with a (superfluous) blank space
     # instead of an IPA character.
-    return str(word).strip().replace('.', '').replace(' ', '') \
-                    .replace('(', '').replace(')', '') \
-                    .replace('[', '').replace(']', '') \
-                    .replace('ˈ', '').replace('̩', '') \
-                    .replace('ʦ', 't͡s').replace('t͡ʃ', 'ʧ')  # TODO check
+    to_remove = ['.', ' ', '(', ')', '[', ']', 'ˈ', '̩']
+    word = str(word).strip()
+    for c in to_remove:
+        word = word.replace(c, '')
+    # TODO check
+    word.replace('ts', 't͡s').replace('tʃ', 't͡ʃ')
     # TODO more?
+    return word
+
+
+def simplify_transcription(word):
+    to_remove = ['̝', '̞', 'ˑ', '̈', '̠', '̺', '̥', '̟', '̟', '̧',
+                 '̽']
+    word = clean_transcription(word)
+    for c in to_remove:
+        word = word.replace(c, '')
+    return word
 
 
 def get_samples_soundcomparisons(directory, entries, id2concept):
@@ -60,7 +71,7 @@ def parse_file(filename, entries, id2concept):
     for i, w, n in zip(ids, words, noncognate):
         concept = id2concept[i]
         # TODO check if this is actually correct all cases
-        word = clean_transcription(w)
+        word = simplify_transcription(w)
         if word == 'Array':
             # Erroneous entry in Veenkolonien.csv.
             continue
@@ -72,7 +83,10 @@ def parse_file(filename, entries, id2concept):
             logger.info('{} has a non-cognate entry for {}/{} ({}) '
                         '(skipped)'.format(doculect, i, concept, word))
             continue
-        entries[concept][doculect] = word
+        try:
+            entries[concept][doculect] = word
+        except KeyError:
+            entries[concept] = {doculect: word}
     for concept in entries:
         try:
             entries[concept][doculect]

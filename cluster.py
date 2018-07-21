@@ -129,13 +129,13 @@ if __name__ == "__main__":
         print(A.shape)
         # x = PCA(2).fit_transform(A.todense())
         # visualize(x[:, 0], x[:, 1], doculects)
-        dist = 1 - cosine_similarity(A)
-        dendrogram(
-            linkage(dist, method='average'),
-            labels=doculects,
-            orientation='right',
-            leaf_font_size=12.)
-        plt.show()
+        # dist = 1 - cosine_similarity(A)
+        # dendrogram(
+        #     linkage(dist, method='average'),
+        #     labels=doculects,
+        #     orientation='right',
+        #     leaf_font_size=12.)
+        # plt.show()
 
 
     if args.co_clustering:

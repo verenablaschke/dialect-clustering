@@ -2,6 +2,7 @@ from lingpy.align.multiple import Multiple
 from lingpy.sequence.sound_classes import token2class
 from read_data import get_samples
 from collections import Counter
+import numpy as np
 
 
 def align_concept(doculects, doculects_cwg,
@@ -26,12 +27,37 @@ def align_concept(doculects, doculects_cwg,
         msa.prog_align(mode=alignment_mode)
     alignments = msa.alm_matrix
     if verbose > 2:
-        print(msa)
+        for line, label in zip(alignments, labels):
+            print("{:15s} {}".format(label, '\t'.join(line)))
+        print()
 
     if verbose > 1 and msa.swap_check():
         print("SWAPS!")
         print(msa.swap_index)
-        print(msa)
+        print()
+
+    # Remove doculects that were only used for alignment.
+    msa_cwg = []
+    labels_cwg = []
+    for line, label in zip(alignments, labels):
+        if label in doculects_cwg or label == reference_doculect:
+            labels_cwg.append(label)
+            msa_cwg.append(line)
+    # Remove all-gap columns that might remain.
+    gap_cols = np.nonzero(np.all(np.array(msa_cwg) == '-', axis=0))[0]
+    if len(gap_cols) > 0:
+        if verbose > 2:
+            print("Removing columns", gap_cols)
+        gap_cols = sorted(gap_cols, reverse=True)
+        for line in msa_cwg:
+            for g in gap_cols:
+                del line[g]
+    if verbose > 2:
+        for line, label in zip(msa_cwg, labels_cwg):
+            print("{:15s} {}".format(label, '\t'.join(line)))
+        print()
+    alignments = msa_cwg
+    labels = labels_cwg
 
     if context_cv:
         ref = ['#'] + alignments[0] + ['#']
@@ -52,8 +78,6 @@ def align_concept(doculects, doculects_cwg,
 
     corres = {}
     for i in range(1, len(labels)):
-        if labels[i] not in doculects_cwg:
-            continue
         corres_i = Counter()
 
         if no_context:
@@ -153,5 +177,4 @@ def align(reference_doculect='ProtoGermanic', binary=True,
         pass
     if verbose > 1:
         print(all_correspondences)
-    print(len(doculects_cwg), doculects_cwg)
     return correspondences, all_correspondences, doculects_cwg
