@@ -119,7 +119,7 @@ def seg2class(segment, sca=False):
     return 'V' if cl == 'V' else 'C'
 
 
-def align(reference_doculect='ProtoGermanic', binary=True,
+def align(reference_doculect='ProtoGermanic',
           alignment_type='lib', alignment_mode='global', min_count=0,
           no_context=True, context_cv=False, context_sc=False,
           verbose=1):
@@ -154,13 +154,12 @@ def align(reference_doculect='ProtoGermanic', binary=True,
         all_correspondences = Counter()
 
         for doculect, tallies in correspondences.items():
-            if binary:
-                for corres in all_correspondences_old:
-                    try:
-                        if tallies[corres] < min_count:
-                            del tallies[corres]
-                    except KeyError:
-                        pass
+            for corres in all_correspondences_old:
+                try:
+                    if tallies[corres] < min_count:
+                        del tallies[corres]
+                except KeyError:
+                    pass
             all_correspondences.update(tallies)
             if verbose > 2:
                 print(doculect)

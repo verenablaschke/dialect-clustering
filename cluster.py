@@ -16,17 +16,21 @@ def score(A, corres, cluster_docs):
     if len(cluster_docs) == 0:
         return 0, 0, 0
     # TODO currently binary
-    occ = 0
+    occ_binary = 0
+    occ_abs = 0
+    total = 0
     for i in cluster_docs:
         if A[i, corres] > 0:
-            occ += 1
-    rep = occ / len(cluster_docs)
-    rel_occ = occ / np.sum(A[:, corres] > 0)
+            occ_binary += 1
+            occ_abs += A[i, corres]
+        total += A[i].sum()
+    rep = occ_binary / len(cluster_docs)
+    rel_occ = occ_binary / np.sum(A[:, corres] > 0)
     rel_size = len(cluster_docs) / A.shape[0]
     dist = (rel_occ - rel_size) / (1 - rel_size)
 
     # TODO try out harmonic mean?
-    return rep, dist, (rep + dist) / 2
+    return rep, dist, (rep + dist) / 2, occ_abs / total, occ_abs
 
 
 def visualize(x, y, labels):
@@ -107,7 +111,7 @@ if __name__ == "__main__":
         no_context=not args.exclude_contextless,
         context_cv=args.context_cv, context_sc=args.context_sc,
         alignment_type=args.alignment_type, min_count=args.mincount,
-        alignment_mode=args.alignment_mode, binary=args.binary,
+        alignment_mode=args.alignment_mode,
         verbose=args.verbose)
 
     doculect2int = {x: i for i, x in enumerate(doculects)}
@@ -115,12 +119,15 @@ if __name__ == "__main__":
     n_samples = len(doculects)
     n_features = len(all_correspondences)
     # A = sparse.dok_matrix(n_samples, n_features))
-    A = np.zeros((n_samples, n_features), dtype=np.bool_)
+    A = np.zeros((n_samples, n_features), dtype=np.int16)
     for i, doculect in enumerate(doculects):
         for corres, count in correspondences[doculect].items():
-            A[i, corres2int[corres]] = 1 if args.binary else count
+            A[i, corres2int[corres]] = count
     if args.verbose > 0:
         print("Matrix shape: {}".format(A.shape))
+    A_original = A.copy()
+    if args.binary:
+        A = A.astype(np.bool_)
 
     if args.tfidf:
         # TODO check out args
@@ -136,7 +143,6 @@ if __name__ == "__main__":
         #     orientation='right',
         #     leaf_font_size=12.)
         # plt.show()
-
 
     if args.co_clustering:
         # Form the normalized matrix A_n.
@@ -204,20 +210,20 @@ if __name__ == "__main__":
             fs = []
             for cl, f in clusters_and_features:
                 if c == cl:
-                    rep, dist, imp = score(A, corres2int[f], ds)
-                    fs.append((imp * 100, rep * 100, dist * 100, f))
+                    rep, dist, imp, rel, a = score(A_original, corres2int[f], ds)
+                    fs.append((imp * 100, rep * 100, dist * 100, rel * 100, a, f))
         else:
             fs = []
             for f in all_correspondences:
-                rep, dist, imp = score(A, corres2int[f], ds)
+                rep, dist, imp, rel, a = score(A_original, corres2int[f], ds)
                 if imp > 0:
-                    fs.append((imp * 100, rep * 100, dist * 100, f))
+                    fs.append((imp * 100, rep * 100, dist * 100, rel * 100, a, f))
         fs = sorted(fs, reverse=True)
         print('-------')
-        for j, (i, r, d, f) in enumerate(fs):
+        for j, (i, r, d, rel, a, f) in enumerate(fs):
             if i < 80:
                 print("and {} more".format(len(fs) - j))
                 break
-            print("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})"
-                  .format(f, i, r, d))
+            print("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f}), {:4.4f} ({})"
+                  .format(f, i, r, d, rel, a))
         print('=====================================')
