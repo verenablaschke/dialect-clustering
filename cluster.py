@@ -1,9 +1,10 @@
 from align import align
-from read_data import DOCULECTS_BDPA, DOCULECTS_BDPA_ALL
 from scipy import linalg
+from scipy.cluster.hierarchy import dendrogram, linkage
 from sklearn import cluster
 from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -42,15 +43,6 @@ if __name__ == "__main__":
     parser.add_argument(
         '-k', '--n_clusters', type=int, default=7,
         help='The number of clusters.')
-    parser.add_argument(
-        '-d', '--doculects', default='de-nl', choices=['de-nl', 'all'],
-        help='The BDPA doculects to be included.')
-    parser.add_argument(
-        '--includesc', dest='include_sc', action='store_true',
-        help='Include the SoundComparison data.')
-    parser.add_argument(
-        '--excludesc', dest='include_sc', action='store_false',
-        help='Exclude the SoundComparison data (except for Proto Germanic).')
     parser.add_argument(
         '-s', '--svd', dest='co_clustering', action='store_true',
         help='Include dimensionality reduction via SVD and co-clustering of '
@@ -91,7 +83,7 @@ if __name__ == "__main__":
         help='The BDPA doculects to be used during multi-alignment.')
     parser.add_argument(
         '-v', '--verbose', type=int, default=1, choices=[0, 1, 2, 3])
-    parser.set_defaults(include_sc=True, co_clustering=True,
+    parser.set_defaults(co_clustering=True,
                         binary=True, tfidf=False, exclude_contextless=False,
                         context_cv=False, context_sc=False)
     args = parser.parse_args()
@@ -100,8 +92,6 @@ if __name__ == "__main__":
     if args.verbose > 0:
         print("`python {}`".format(" ".join(sys.argv)))
         print("Clusters: {}".format(k))
-        print("Doculects: {} (BDPA) {} (SC)".format(args.doculects,
-                                                    args.include_sc))
         print("Co-clustering: {}".format(args.co_clustering))
         print("Features: binary: {}, min. count {}, TF-IDF: {}"
               .format(args.binary, args.mincount, args.tfidf))
@@ -113,14 +103,11 @@ if __name__ == "__main__":
                                              args.msa_doculects))
         print()
 
-    doculects_lookup = {'de-nl': DOCULECTS_BDPA, 'all': DOCULECTS_BDPA_ALL}
     correspondences, all_correspondences, doculects = align(
-        doculects_bdpa=doculects_lookup[args.doculects],
-        include_sc=args.include_sc, no_context=not args.exclude_contextless,
+        no_context=not args.exclude_contextless,
         context_cv=args.context_cv, context_sc=args.context_sc,
         alignment_type=args.alignment_type, min_count=args.mincount,
         alignment_mode=args.alignment_mode, binary=args.binary,
-        msa_doculects_bdpa=doculects_lookup[args.msa_doculects],
         verbose=args.verbose)
 
     doculect2int = {x: i for i, x in enumerate(doculects)}
@@ -140,13 +127,20 @@ if __name__ == "__main__":
         transformer = TfidfTransformer(smooth_idf=False)
         A = transformer.fit_transform(A)
         print(A.shape)
-        pca = PCA(2)
-        x = pca.fit_transform(A.todense())
-        visualize(x[:, 0], x[:, 1], doculects)
+        # x = PCA(2).fit_transform(A.todense())
+        # visualize(x[:, 0], x[:, 1], doculects)
+        dist = 1 - cosine_similarity(A)
+        dendrogram(
+            linkage(dist, method='average'),
+            labels=doculects,
+            orientation='right',
+            leaf_font_size=12.)
+        plt.show()
+
 
     if args.co_clustering:
         # Form the normalized matrix A_n.
-        # NOTE that I already raise D_1, D_2 to the power of -0.5
+        # Note that I already raise D_1, D_2 to the power of -0.5.
         D_1 = np.zeros((n_samples, n_samples))
         for i in range(n_samples):
             D_1[i, i] = np.sum(A[i])
@@ -221,7 +215,7 @@ if __name__ == "__main__":
         fs = sorted(fs, reverse=True)
         print('-------')
         for j, (i, r, d, f) in enumerate(fs):
-            if i < 70:
+            if i < 80:
                 print("and {} more".format(len(fs) - j))
                 break
             print("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})"

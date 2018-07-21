@@ -1,10 +1,11 @@
 from lingpy.align.multiple import Multiple
 from lingpy.sequence.sound_classes import token2class
-from read_data import get_samples, DOCULECTS_BDPA, DOCULECTS_BDPA_ALL
+from read_data import get_samples
 from collections import Counter
 
 
-def align_concept(doculects, reference_doculect='ProtoGermanic',
+def align_concept(doculects, doculects_cwg,
+                  reference_doculect='ProtoGermanic',
                   alignment_type='lib', alignment_mode='global',
                   no_context=True, context_cv=False, context_sc=False,
                   verbose=1):
@@ -16,6 +17,7 @@ def align_concept(doculects, reference_doculect='ProtoGermanic',
         else:
             sequences.append(word)
             labels.append(doculect)
+    print(len(labels), labels)
     assert len(sequences) == len(labels), ("The reference doculect needs to be"
                                            " in the dict of doculects")
     msa = Multiple(sequences, merge_geminates=True)
@@ -49,9 +51,10 @@ def align_concept(doculects, reference_doculect='ProtoGermanic',
             r_next = seg2class(ref[j + 1], sca=True)
             ref_segments_sc.append((r_prev, r, r_next))
 
-    # TODO already weed out the unused doculects here
     corres = {}
     for i in range(1, len(labels)):
+        if labels[i] not in doculects_cwg:
+            continue
         corres_i = Counter()
 
         if no_context:
@@ -80,6 +83,7 @@ def align_concept(doculects, reference_doculect='ProtoGermanic',
                 cur_segments.append((c_prev, c, c_next))
             c = zip(ref_segs, cur_segments)
             corres_i.update([x for x in c if (x[0][1], x[1][1]) != ('-', '-')])
+
         corres[labels[i]] = corres_i
     return corres
 
@@ -93,16 +97,14 @@ def seg2class(segment, sca=False):
     return 'V' if cl == 'V' else 'C'
 
 
-def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
-          include_sc=True, binary=True, msa_doculects_bdpa=DOCULECTS_BDPA_ALL,
+def align(reference_doculect='ProtoGermanic', binary=True,
           alignment_type='lib', alignment_mode='global', min_count=0,
           no_context=True, context_cv=False, context_sc=False,
           verbose=1):
     if verbose > 0:
         print('Reading the data files.')
-    entries, doculects_all = get_samples(doculects_bdpa=msa_doculects_bdpa,
-                                         include_sc=include_sc)
-    doculects_all.remove(reference_doculect)
+    entries, doculects_cwg, doculects_add = get_samples()
+    doculects_cwg.remove(reference_doculect)
     correspondences = {}
     all_correspondences = Counter()
 
@@ -111,7 +113,7 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
     for concept, doculects in entries.items():
         if verbose > 2:
             print(concept)
-        corres = align_concept(doculects,
+        corres = align_concept(doculects, doculects_cwg,
                                reference_doculect=reference_doculect,
                                alignment_type=alignment_type,
                                alignment_mode=alignment_mode,
@@ -119,13 +121,6 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
                                context_sc=context_sc,
                                verbose=verbose)
         for doculect, tallies in corres.items():
-            if doculect in msa_doculects_bdpa \
-               and doculect not in doculects_bdpa:
-                try:
-                    doculects_all.remove(doculect)
-                except ValueError:
-                    pass
-                continue
             all_correspondences.update(tallies)
             try:
                 correspondences[doculect].update(tallies)
@@ -159,4 +154,5 @@ def align(reference_doculect='ProtoGermanic', doculects_bdpa=DOCULECTS_BDPA,
         pass
     if verbose > 1:
         print(all_correspondences)
-    return correspondences, all_correspondences, doculects_all
+    print(len(doculects_cwg), doculects_cwg)
+    return correspondences, all_correspondences, doculects_cwg
