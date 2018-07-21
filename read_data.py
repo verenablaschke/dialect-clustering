@@ -21,11 +21,11 @@ def clean_transcription(word):
     # Removing blank space characters is necessary because sometimes the
     # 'no voicing' diacritic is combined with a (superfluous) blank space
     # instead of an IPA character.
-    return word.strip().replace('.', '').replace(' ', '') \
-               .replace('(', '').replace(')', '') \
-               .replace('[', '').replace(']', '') \
-               .replace('ˈ', '').replace('̩', '') \
-               .replace('ʦ', 't͡s').replace('t͡ʃ', 'ʧ')  # TODO check
+    return str(word).strip().replace('.', '').replace(' ', '') \
+                    .replace('(', '').replace(')', '') \
+                    .replace('[', '').replace(']', '') \
+                    .replace('ˈ', '').replace('̩', '') \
+                    .replace('ʦ', 't͡s').replace('t͡ʃ', 'ʧ')  # TODO check
     # TODO more?
 
 
@@ -59,26 +59,20 @@ def parse_file(filename, entries, id2concept):
     noncognate = df['NotCognateWithMainWordInThisFamily2'].values
     for i, w, n in zip(ids, words, noncognate):
         concept = id2concept[i]
-        try:
-            # TODO check if this is actually correct all cases
-            word = clean_transcription(str(w))
-            if word == 'Array':
-                # Erroneous entry in Veenkolonien.csv.
-                continue
-            if len(word) == 0:
-                logger.info('{} has an empty entry for {} (skipped)'
-                            .format(doculect, concept))
-                continue
-            if n > 0:
-                logger.info('{} has a non-cognate entry for {} ({}) (skipped)'
-                            .format(doculect, concept, word))
-                continue
-            entries[concept][doculect] = word
-        except KeyError:
-            entries[concept] = {doculect: word}
-            logger.info('{} has an entry for {}, '
-                        'which did not appear in the BDPA files (added)'
-                        .format(doculect, concept))
+        # TODO check if this is actually correct all cases
+        word = clean_transcription(w)
+        if word == 'Array':
+            # Erroneous entry in Veenkolonien.csv.
+            continue
+        if len(word) == 0:
+            logger.info('{} has an empty entry for {}/{} (skipped)'
+                        .format(doculect, i, concept))
+            continue
+        if n > 0:
+            logger.info('{} has a non-cognate entry for {}/{} ({}) '
+                        '(skipped)'.format(doculect, i, concept, word))
+            continue
+        entries[concept][doculect] = word
     for concept in entries:
         try:
             entries[concept][doculect]
