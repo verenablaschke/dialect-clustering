@@ -17,7 +17,6 @@ def align_concept(doculects, doculects_cwg,
         else:
             sequences.append(word)
             labels.append(doculect)
-    print(len(labels), labels)
     assert len(sequences) == len(labels), ("The reference doculect needs to be"
                                            " in the dict of doculects")
     msa = Multiple(sequences, merge_geminates=True)
@@ -31,8 +30,8 @@ def align_concept(doculects, doculects_cwg,
 
     if verbose > 1 and msa.swap_check():
         print("SWAPS!")
-        print(alignments[0])
         print(msa.swap_index)
+        print(msa)
 
     if context_cv:
         ref = ['#'] + alignments[0] + ['#']

@@ -18,9 +18,14 @@ def get_samples(dir_cwg='data/soundcomparisons/cwg/',
 
 
 def clean_transcription(word):
-    return word.strip().replace('.', '').replace('(', '').replace(')', '') \
-               .replace('ˈ', '').replace('̩', '')
-               # .replace('ʦ', 't͡s').replace('t͡ʃ', 'ʧ') \
+    # Removing blank space characters is necessary because sometimes the
+    # 'no voicing' diacritic is combined with a (superfluous) blank space
+    # instead of an IPA character.
+    return word.strip().replace('.', '').replace(' ', '') \
+               .replace('(', '').replace(')', '') \
+               .replace('[', '').replace(']', '') \
+               .replace('ˈ', '').replace('̩', '') \
+               .replace('ʦ', 't͡s').replace('t͡ʃ', 'ʧ')  # TODO check
     # TODO more?
 
 
