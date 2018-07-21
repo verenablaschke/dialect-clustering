@@ -66,7 +66,8 @@ def align_concept(doculects, doculects_cwg,
             r_prev = seg2class(ref[j - 1])
             r = ref[j]
             r_next = seg2class(ref[j + 1])
-            ref_segments_cv.append((r_prev, r, r_next))
+            ref_segments_cv.append((r_prev, r))
+            ref_segments_cv.append((r, r_next))
     if context_sc:
         ref = ['#'] + alignments[0] + ['#']
         ref_segments_sc = []
@@ -74,7 +75,8 @@ def align_concept(doculects, doculects_cwg,
             r_prev = seg2class(ref[j - 1], sca=True)
             r = ref[j]
             r_next = seg2class(ref[j + 1], sca=True)
-            ref_segments_sc.append((r_prev, r, r_next))
+            ref_segments_sc.append((r_prev, r))
+            ref_segments_sc.append((r, r_next))
 
     corres = {}
     for i in range(1, len(labels)):
@@ -82,11 +84,7 @@ def align_concept(doculects, doculects_cwg,
 
         if no_context:
             c = zip(alignments[0], alignments[i])
-            # Making the first part a tuple so corres.keys() can be sorted
-            # later on if segments with contexts (-> always tuples) are also
-            # included.
-            corres_i.update([(tuple(x[0]), x[1]) for x in c
-                             if x != ('-', '-')])
+            corres_i.update([(tuple(x[0]), x[1]) for x in c])
 
         ref_segments = []
         sca_model = []
@@ -103,9 +101,10 @@ def align_concept(doculects, doculects_cwg,
                 c_prev = seg2class(cur[j - 1], sca=sca)
                 c = cur[j]
                 c_next = seg2class(cur[j + 1], sca=sca)
-                cur_segments.append((c_prev, c, c_next))
+                cur_segments.append((c_prev, c))
+                cur_segments.append((c, c_next))
             c = zip(ref_segs, cur_segments)
-            corres_i.update([x for x in c if (x[0][1], x[1][1]) != ('-', '-')])
+            corres_i.update([x for x in c])
 
         corres[labels[i]] = corres_i
     return corres
