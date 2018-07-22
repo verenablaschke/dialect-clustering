@@ -16,6 +16,10 @@ for root, dirs, files in os.walk(dir_cwg):
             df['Phonetic'] = df['Phonetic'].apply(clean_transcription)
             df['Phonetic'].replace('nan', np.nan, inplace=True)
             df.dropna(subset=['Phonetic'], inplace=True)
+            df['NotCognateWithMainWordInThisFamily2'].replace('1', np.nan,
+                                                              inplace=True)
+            df.dropna(subset=['NotCognateWithMainWordInThisFamily2'],
+                      inplace=True)
             entries = df['Phonetic'].values
             words = df['WordId'].values
             if ('/') in f:
@@ -35,6 +39,7 @@ print("min", np.amin(docs))
 print("max", np.amax(docs))
 print("mean", np.mean(docs))
 print("std", np.std(docs))
+print("sum", np.sum(docs))
 print()
 print()
 
@@ -47,3 +52,4 @@ print("min", np.amin(concepts))
 print("max", np.amax(concepts))
 print("mean", np.mean(concepts))
 print("std", np.std(concepts))
+print("sum", np.sum(concepts))

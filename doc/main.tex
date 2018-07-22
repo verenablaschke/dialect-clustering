@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage{amsmath}
@@ -63,20 +64,19 @@ continental European West Germanic dialects (CWG) and standard languages
 
 \subsection{actual data}
 
-\citet{heggarty2018sound} compiled IPA transcriptions of word lists in a range of Germanic doculects.
-From this database, we used 110 cognate sets from 21 modern continental West Germanic doculects and a reconstruction of Proto-Germanic.
+\citet{heggarty2018sound} compiled IPA transcriptions of word lists in a range of Germanic doculects for his Sound Comparisons project.
+From this database, we used 110 cognate sets from 20 modern CWG doculects and a reconstruction of Proto-Germanic.
 For the phonetic alignment step (see section~\ref{s:alignments}), we used 14 additional doculects that are Germanic but not continental West Germanic. 
 To control for transciber bias, we only worked with doculects that shared the same transcriptor, Warren Maguire.
+We excluded one CWG doculect that covered only 35 concepts. % Schaeddel (Frisian)
+The Proto-Germanic data cover all 110 concepts; each of the modern doculects covers at least 103 concepts, and each concept is covered by at least 17 modern doculects.
+In total, we have 2181 sequence alignments between Proto-Germanic and modern CWG doculects.
 
 We simplified the transcriptions slightly by removing diacritics for vowel articulation and syllabicity, and suprasegmentals for stress and for half-long sounds.
 This is similar how \citet{list2014benchmark} processed an earlier version of the data \citep{renfrew2009languages}.
 We did not work with the Germanic data \citeauthor{list2014benchmark} published as it does not include Proto-Germanic entries for most concepts.
 
 segmentation: affricates, diph-/triphthongs
-
-some doculects do not have (cognate) entries for some entries. give some statistics about the coverage?
-
-excluded entries with low cognate coverage  (Schäddel: 35 concepts)
 
 \subsection{notes on continental West Germanic dialects/languages}
 
@@ -185,9 +185,7 @@ for tree={
 \subsection{Alignments}
 \label{s:alignments}
 
-% TODO. dataset
-% 4 P-G words in BDPA
-Since the Proto-Germanic words are not aligned with the BDPA entries, we need to align them first. 
+In order to extract sound correspondences, we need to align the sound sequences corresponding to each concept first.
 We can carry out alignment based on data from all the investigated doculects at once using multi-sequence alignment.
 % TODO details (all steps) & double-check
 For this, we use a library-based version \citet{notredame2000t-coffee:} of the progressive multi-sequence alignment method \citet{thompson1994clustal}.
@@ -199,21 +197,25 @@ For each concept:
 % TODO either double-check (& possibly extend these details), or remove them (& just name them) since they are not the focus of this work
 \begin{enumerate}
 \item
+Divide each phonetic representation for a word into an array of sound segments.
+These sound segments are typically single IPA tokens (including diacritics), but we use multi-token segments for affricates, diph- and triphthongs, and geminates.
+
+\item
 Create alignments for all possible binary combinations of sequences.
-These alignments are created using the Needleman-Wunsch algorithm (\citet{needleman1970general}) and based on the sound class method by \citet{list2012sca:}.
+These alignments are created using the Needleman-Wunsch algorithm \citep{needleman1970general} and based on the sound class method by \citet{list2012sca:}.
 All segment alignments from this step are stored in a library, each together with a corresponding sound-class based weight. % TODO check the nature of these weights
 
 \item
 Use the binary calculations to create a distance matrix between the sequences.
-Convert the distance matrix into a tree.
+Convert the distance matrix into a tree. % Sokal and Michener (1958)
 
 \item 
 Progressing from the tips of the tree to the root, join the closest two alignments at each step.
 Merge alignments using the library created in the first step.
 \end{enumerate}
 
-This method is performed using the implementation in the LingPy library for Python (\citet{list2018lingpy}).
-For the multi-sequence alignment, we use all of the Germanic BDPA data instead of just the CWG doculects, because this yielded better results in preliminary experiments. % TODO vague?
+This method is performed using the implementation in the LingPy library for Python \citep{list2018lingpy.}.
+For multi-sequence alignment, we use all of the Germanic data we extracted from the Sound Comparisons project instead of just the CWG doculects and Proto-Germanic, because this yielded better results in preliminary experiments. % TODO vague?
 Table ~\ref{tab:msa}
 
 \begin{table}[]
@@ -221,9 +223,9 @@ Table ~\ref{tab:msa}
 \begin{tabular}{l|llllll}
 Doculect       & \multicolumn{6}{l}{Sound segments} \\ \hline
 Proto-Germanic & x   & a     & n   & d   & u   & z  \\
-Biel           & h   & ɒ     & ŋ   & -   & -   & -  \\
+Biel           & h   & \textturnscripta     & \ng   & -   & -   & -  \\
 Std. German    & h   & a     & n   & t   & -   & -  \\
-Vesterkolonien & h   & æ̃ː    & -   & t   & -   & - 
+Vesterkolonien & h   & \~\ae\textlengthmark    & -   & t   & -   & - 
 \end{tabular}
 \end{center}
 \label{tab:msa}
@@ -237,7 +239,7 @@ ignore swaps (swapped segments are aligned with gaps) -- happen only in 3 of the
 
 % TODO motivation
 In addition to the simple correspondences, we also extract sound correspondences with some contextual information.
-To do this, we pad each sequence with `#' to represent word boundaries.
+To do this, we pad each sequence with `\#' to represent word boundaries.
 % TODO more
 
 % TODO include left and right context separately?

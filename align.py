@@ -26,7 +26,7 @@ def align_concept(doculects, doculects_cwg,
     else:
         msa.prog_align(mode=alignment_mode)
     alignments = msa.alm_matrix
-    if verbose > 2:
+    if verbose > 3:
         for line, label in zip(alignments, labels):
             print("{:15s} {}".format(label, '\t'.join(line)))
         print()
@@ -46,7 +46,7 @@ def align_concept(doculects, doculects_cwg,
     # Remove all-gap columns that might remain.
     gap_cols = np.nonzero(np.all(np.array(msa_cwg) == '-', axis=0))[0]
     if len(gap_cols) > 0:
-        if verbose > 2:
+        if verbose > 3:
             print("Removing columns", gap_cols)
         gap_cols = sorted(gap_cols, reverse=True)
         for line in msa_cwg:
@@ -149,7 +149,7 @@ def align(reference_doculect='ProtoGermanic',
             except KeyError:
                 correspondences[doculect] = tallies
 
-    if min_count or verbose > 2:
+    if min_count or verbose > 3:
         all_correspondences_old = all_correspondences.keys()
         all_correspondences = Counter()
 
@@ -161,7 +161,7 @@ def align(reference_doculect='ProtoGermanic',
                 except KeyError:
                     pass
             all_correspondences.update(tallies)
-            if verbose > 2:
+            if verbose > 3:
                 print(doculect)
                 print(tallies)
                 print()
@@ -176,3 +176,7 @@ def align(reference_doculect='ProtoGermanic',
     if verbose > 1:
         print(all_correspondences)
     return correspondences, all_correspondences, doculects_cwg
+
+
+if __name__ == "__main__":
+    align(verbose=3)
