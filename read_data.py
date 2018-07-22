@@ -21,10 +21,13 @@ def clean_transcription(word):
     # Removing blank space characters is necessary because sometimes the
     # 'no voicing' diacritic is combined with a (superfluous) blank space
     # instead of an IPA character.
-    to_remove = ['.', ' ', '(', ')', '[', ']', 'ˈ', '̩']
+    to_remove = ['.', ' ', '(', ')', '[', ']', 'ˈ', 'ˌ']
     word = str(word).strip()
     for c in to_remove:
         word = word.replace(c, '')
+    # Change LATIN SMALL LETTER C + COMBINING CEDILLA
+    # to LATIN SMALL LETTER C WITH CEDILLA so LingPy deals with it properly.
+    word = word.replace('ç', 'ç')
     # TODO check
     word.replace('ts', 't͡s').replace('tʃ', 't͡ʃ')
     # TODO more?
@@ -32,8 +35,17 @@ def clean_transcription(word):
 
 
 def simplify_transcription(word):
-    to_remove = ['̝', '̞', 'ˑ', '̈', '̠', '̺', '̥', '̟', '̟', '̧',
-                 '̽']
+    to_remove = ['̝',  # raised
+                 '̞',  # lowered
+                 '̽',  # mid-centralized
+                 '̈',  # centralized
+                 '̟',  # advanced
+                 '̠',  # retracted
+                 '̺',  # apical
+                 '̥',  # voiceless
+                 'ˑ',  # half-long
+                 '̩'  # syllabic
+                 ]
     word = clean_transcription(word)
     for c in to_remove:
         word = word.replace(c, '')

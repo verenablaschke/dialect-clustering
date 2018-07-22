@@ -14,7 +14,7 @@ for root, dirs, files in os.walk(dir_cwg):
             df = pd.read_csv(dir_cwg + f, encoding='utf8')
             # Remove faulty/empty concepts.
             df['Phonetic'] = df['Phonetic'].apply(clean_transcription)
-            df['Phonetic'].replace('', np.nan, inplace=True)
+            df['Phonetic'].replace('nan', np.nan, inplace=True)
             df.dropna(subset=['Phonetic'], inplace=True)
             entries = df['Phonetic'].values
             words = df['WordId'].values
