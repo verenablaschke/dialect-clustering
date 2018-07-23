@@ -1,4 +1,5 @@
 import logging
+import numpy as np
 import os
 import pandas as pd
 
@@ -70,10 +71,11 @@ def parse_file(filename, entries):
         filename = filename.split('\\')[-1]
     doculect = filename[:-4]
     concepts = df['WordModernName1'].values
+    df['Phonetic'].replace('nan', np.nan, inplace=True)
+    df.dropna(subset=['Phonetic'], inplace=True)
     words = df['Phonetic'].values
     noncognate = df['NotCognateWithMainWordInThisFamily2'].values
     for concept, w, n in zip(concepts, words, noncognate):
-        # TODO check if this is actually correct all cases
         word = simplify_transcription(w)
         if word == 'Array':
             # Erroneous entry in Veenkolonien.csv.

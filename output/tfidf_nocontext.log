@@ -1,0 +1,305 @@
+`python cluster.py --tfidf --direct`
+Clusters: 7
+Co-clustering: False
+Features: binary: True, min. count 0, TF-IDF: True
+Context: none: True, CV: False, sound classes: False
+Alignment: global lib (all)
+
+Reading the data files.
+Aligning the entries.
+Matrix shape: (20, 735)
+(20, 735)
+
+Cluster 0:
+-------------------------------------
+Cologne
+Herrlisheim
+Luxembourg
+Ortisei
+Tuebingen
+-------
+(('r',), ('χ',))	80.95	(rep: 100.00, dist: 61.90)	32 (1.0038)
+Cologne ['nɔχt']
+Herrlisheim ['sɛːχ', 'joːχ', 'bʁeːdəχ', 'noχt', 'haχt͡s', 'ɡɔːχtə', 'ʃvœːχ', 'ʔeβəχ', 'fiəχ', 'doːχtəχ', 'ʃɒχf', 'møətəχ', 'ʔaχt', 'voχt', 'fɒtəχ']
+Luxembourg ['ɡaːχt']
+Ortisei ['sɛːχ', 'jɔːχ', 'bʁʊədəχ', 'noχt͡s', 'hɛχt͡s', 'ɡɔχtn', 'ʃβøːχ', 'ʔyːbəχ', 'fiəχ', 'dɔχtəχ', 'leːbəχ', 'mʊətəχ', 'foətəχ']
+Tuebingen ['jɔːχ', 'leːbɔχ']
+(('k',), ('ʃ',))	80.00	(rep: 60.00, dist: 100.00)	6 (0.1882)
+Cologne ['ʔɛɪʃ', 'ʔiʃ']
+Herrlisheim ['ʔaiʃ', 'ʔɪʃ']
+Luxembourg ['ʔeːʃ', 'ʔœʃ']
+(('e',), ('aɪ',))	80.00	(rep: 60.00, dist: 100.00)	4 (0.1255)
+Luxembourg ['dʀaɪ']
+Ortisei ['dʁaɪ', 'naɪn']
+Tuebingen ['faɪf']
+(('eː',), ('ɔ',))	76.67	(rep: 80.00, dist: 73.33)	7 (0.2196)
+Cologne ['jɔ']
+Luxembourg ['mɔnt']
+Ortisei ['mɔnt']
+Tuebingen ['bʁʊədɔ', 'dɔχtɔ', 'mʊətɔ', 'fatɔ']
+(('p',), ('f',))	75.00	(rep: 100.00, dist: 50.00)	8 (0.2509)
+Cologne ['ʔɔfə']
+Herrlisheim ['ʔofə', 'ʃɒχf']
+Luxembourg ['ʃaːf']
+Ortisei ['ʔofn', 'ʃɑʁf']
+Tuebingen ['ʔofə', 'ʃaɔf']
+(('t',), ('s',))	70.37	(rep: 100.00, dist: 40.74)	30 (0.9410)
+Cologne ['fʊs', 'ʔus', 'ʔɛs', 'bɛsɒ', 'βiːs']
+Herrlisheim ['ɸeːs', 'sɔls', 'ʔys', 'ʔɪs', 'bɛsəχ', 'vis', 'βɒs']
+Luxembourg ['fœʊs', 'ʔæʊs', 'iɛs', 'bɛsʌ', 'væis']
+Ortisei ['baɪs', 'fʊəs', 'ʔaɵs', 'ʔɪs', 'bɪsəχ', 'βaɪs', 'βɔs']
+Tuebingen ['fuəs', 'ʔɐus', 'ʔis', 'bɛsɔ', 'βɛis', 'βaːs']
+(('x',), ('k',))	70.37	(rep: 100.00, dist: 40.74)	5 (0.1568)
+Cologne ['zɛks']
+Herrlisheim ['sɪks']
+Luxembourg ['zɛks']
+Ortisei ['sɪks']
+Tuebingen ['sɪks']
+(('x',), ('ʃ',))	70.00	(rep: 40.00, dist: 100.00)	6 (0.1882)
+Cologne ['zøʃ', 'fɛʃ', 'ʀɛɪʃ']
+Luxembourg ['nuɛʃt', 'fæʃt', 'dʊɪʃtɐ']
+(('ɡ',), ('ʃ',))	70.00	(rep: 40.00, dist: 100.00)	4 (0.1255)
+Cologne ['hʊniʃ', 'hɛlɪʃ']
+Luxembourg ['hʊnəʃ', 'hɛləʃ']
+(('oː',), ('øə',))	70.00	(rep: 40.00, dist: 100.00)	3 (0.0941)
+Herrlisheim ['møətəχ', 'ɡøət']
+Ortisei ['bløət͡s']
+(('e',), ('ʏ',))	70.00	(rep: 40.00, dist: 100.00)	3 (0.0941)
+Cologne ['fʏnəf', 'nʏŋ']
+Ortisei ['fʏɱf']
+and 280 more
+=====================================
+
+Cluster 1:
+-------------------------------------
+Feer
+-------
+(('a',), ('ʊ',))	100.00	(rep: 100.00, dist: 100.00)	4 (0.6421)
+Feer ['lʊŋ', 'tʰʊs', 'hʊn', 'gʊs']
+(('u',), ('ɒ̃',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3210)
+Feer ['hɒ̃nəŋ', 'tʰɒ̃ŋ']
+(('n',), ('ɲ',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3210)
+Feer ['hyɲ', 'viɲ']
+(('ai',), ('iæ',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3210)
+Feer ['stiæn', 'ʔiæn']
+(('-',), ('ç',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3210)
+Feer ['bitç', 'ʔitç']
+(('-',), ('e',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3210)
+Feer ['vaske', 'ʔikʰʲe']
+(('-',), ('a',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3210)
+Feer ['sgarap', 'varam']
+(('θ',), ('l',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1605)
+Feer ['brʊlə']
+(('ɡ',), ('d',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1605)
+Feer ['dreːn']
+(('z',), ('ŋ',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1605)
+Feer ['hɒ̃nəŋ']
+(('z',), ('kʰ',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1605)
+Feer ['ʔõŋkʰ']
+and 157 more
+=====================================
+
+Cluster 2:
+-------------------------------------
+Grou
+Ostend
+Veenkolonien
+-------
+(('z',), ('m',))	85.29	(rep: 100.00, dist: 70.59)	3 (0.1553)
+Grou ['iəpm']
+Ostend ['ɔːpm']
+Veenkolonien ['opm']
+(('o',), ('ə',))	85.29	(rep: 100.00, dist: 70.59)	3 (0.1553)
+Grou ['mwanə']
+Ostend ['mɔːnə']
+Veenkolonien ['monə']
+(('ɡ',), ('h',))	83.33	(rep: 66.67, dist: 100.00)	4 (0.2070)
+Ostend ['ɾeːhə̃', 'hɾuənə', 'hoət']
+Veenkolonien ['hanzə']
+(('u',), ('ə̃',))	83.33	(rep: 66.67, dist: 100.00)	3 (0.1553)
+Grou ['hɒ̃w̃ə̃', 'sõw̃ə̃n']
+Ostend ['neːhə̃']
+(('uː',), ('oː',))	83.33	(rep: 66.67, dist: 100.00)	2 (0.1035)
+Grou ['moːs']
+Veenkolonien ['moːs']
+(('n',), ('r',))	83.33	(rep: 66.67, dist: 100.00)	2 (0.1035)
+Grou ['bɛtr']
+Ostend ['betr']
+(('a',), ('iə',))	83.33	(rep: 66.67, dist: 100.00)	2 (0.1035)
+Grou ['niəkŋ']
+Veenkolonien ['zβiə']
+(('oː',), ('ɑʊ',))	66.67	(rep: 33.33, dist: 100.00)	5 (0.2588)
+Veenkolonien ['stɑʊlə', 'vɑʊɾə', 'kɑʊ', 'blɑʊt', 'χɑʊt']
+(('e',), ('ʌ',))	66.67	(rep: 33.33, dist: 100.00)	4 (0.2070)
+Grou ['sjʌχ', 'mʌɫqə', 'fjʌχt͡si', 'njʌʁʌn']
+(('uː',), ('ʉ',))	66.67	(rep: 33.33, dist: 100.00)	3 (0.1553)
+Ostend ['ʉt', 'ʉs', 'mʉs']
+(('ai',), ('ɒɪ',))	66.67	(rep: 33.33, dist: 100.00)	3 (0.1553)
+Veenkolonien ['hɒɪm', 'hɒɪləχ', 'ɒɪnə']
+and 247 more
+=====================================
+
+Cluster 3:
+-------------------------------------
+Biel
+Graubuenden
+Hard
+Walser
+-------
+(('e',), ('yː',))	100.00	(rep: 100.00, dist: 100.00)	13 (0.5165)
+Biel ['tɾyː', 'fyːf', 'nyːn']
+Graubuenden ['kʰnyː', 'fyːf', 'nyːn']
+Hard ['dʁyː', 'kʰnyː', 'fyːɸ', 'nyː']
+Walser ['dɾyː', 'fyːɸ', 'nyː']
+(('u',), ('uː',))	87.50	(rep: 75.00, dist: 100.00)	3 (0.1192)
+Biel ['muː']
+Graubuenden ['muːl']
+Walser ['huːnt']
+(('oː',), ('ʊɔ',))	75.00	(rep: 50.00, dist: 100.00)	4 (0.1589)
+Graubuenden ['fʊɔs', 'brʊɔdr', 'blʊɔt']
+Walser ['bɾʊɔdɛɾ']
+(('-',), ('ɐ',))	75.00	(rep: 50.00, dist: 100.00)	4 (0.1589)
+Graubuenden ['tɾɛːnɐ', 't͡seːbɐ', 'kʰɔːɾɐ']
+Walser ['t͡seːbɐ']
+(('oː',), ('ʏɛ',))	75.00	(rep: 50.00, dist: 100.00)	2 (0.0795)
+Biel ['ɡɾʏɛn']
+Graubuenden ['ɡɾʏɛn']
+(('oː',), ('oɛ',))	75.00	(rep: 50.00, dist: 100.00)	2 (0.0795)
+Hard ['ɡoɛt']
+Walser ['ɸoɛs']
+(('n',), ('ɾ',))	75.00	(rep: 50.00, dist: 100.00)	2 (0.0795)
+Biel ['bɛsəɾ']
+Graubuenden ['bɛsɾ']
+(('n',), ('b',))	75.00	(rep: 50.00, dist: 100.00)	2 (0.0795)
+Graubuenden ['t͡seːbɐ']
+Walser ['t͡seːbɐ']
+(('uː',), ('uː',))	73.21	(rep: 100.00, dist: 46.43)	11 (0.4370)
+Biel ['uːs', 'huːs', 'muːs']
+Graubuenden ['uːs', 'huːs', 'muːs']
+Hard ['ʔuːs', 'huːs', 'muːs']
+Walser ['huːs', 'muːs']
+(('iː',), ('iː',))	73.21	(rep: 100.00, dist: 46.43)	8 (0.3178)
+Biel ['biːs', 'βiːs']
+Graubuenden ['biːs', 'βiːs']
+Hard ['biːs', 'viːs']
+Walser ['biːs', 'βiːs']
+(('a',), ('iː',))	73.21	(rep: 100.00, dist: 46.43)	4 (0.1589)
+Biel ['iːs']
+Graubuenden ['iːs']
+Hard ['ʔiːs']
+Walser ['ʔiːʃ']
+and 223 more
+=====================================
+
+Cluster 4:
+-------------------------------------
+Achterhoek
+Antwerp
+Dutch_Std_BE
+Dutch_Std_NL
+Limburg
+-------
+(('r',), ('d',))	80.95	(rep: 100.00, dist: 61.90)	5 (0.1590)
+Achterhoek ['dʊndʁ']
+Antwerp ['d̬ɔndəs']
+Dutch_Std_BE ['dʌndər']
+Dutch_Std_NL ['dʌndəʁ']
+Limburg ['dʊndəχ']
+(('a',), ('ɛː',))	80.00	(rep: 60.00, dist: 100.00)	4 (0.1272)
+Achterhoek ['nɛːχɫ']
+Antwerp ['d͡zvɛːs']
+Limburg ['ɛːʃ', 'bɛːtəχ']
+(('-',), ('t',))	80.00	(rep: 60.00, dist: 100.00)	4 (0.1272)
+Antwerp ['nɑɫt']
+Dutch_Std_BE ['hɔndɾt', 'naːɫt']
+Dutch_Std_NL ['naːɫt']
+(('pp',), ('p',))	75.00	(rep: 100.00, dist: 50.00)	5 (0.1590)
+Achterhoek ['tɔp']
+Antwerp ['tɔp']
+Dutch_Std_BE ['tɔp']
+Dutch_Std_NL ['tʰɔp']
+Limburg ['tɔp']
+(('l',), ('ɫ',))	70.37	(rep: 100.00, dist: 40.74)	15 (0.4771)
+Achterhoek ['stɔːɫ', 'nɛːχɫ', 'kɔɫt']
+Antwerp ['kaɫəf', 'nɑːxɫ', 'nɑɫt']
+Dutch_Std_BE ['kɑɫf', 'naːxəɫ', 'naːɫt']
+Dutch_Std_NL ['stuːɫ', 'ɫɑŋ', 'naχʌɫ', 'ɫɑm', 'naːɫt']
+Limburg ['naːɣɫ']
+(('u',), ('oɐ',))	70.00	(rep: 40.00, dist: 100.00)	9 (0.2863)
+Achterhoek ['noɐt', 'hoɐn', 'kʰoɐn', 'doɐn', 'βoɐt']
+Limburg ['noɐt', 'hoɐn', 'koɐʁ', 'doɐn']
+(('uː',), ('æʏ',))	70.00	(rep: 40.00, dist: 100.00)	4 (0.1272)
+Dutch_Std_BE ['æʏt', 'hæʏs', 'mæʏs']
+Dutch_Std_NL ['æʏt']
+(('a',), ('aʊ',))	70.00	(rep: 40.00, dist: 100.00)	4 (0.1272)
+Dutch_Std_BE ['zaʊt', 'kaʊt']
+Dutch_Std_NL ['zaʊt', 'kaʊt']
+(('a',), ('ɛɪ',))	70.00	(rep: 40.00, dist: 100.00)	3 (0.0954)
+Dutch_Std_BE ['ɛɪs']
+Dutch_Std_NL ['bɛɪtʰɹ', 'ɛɪs']
+(('θ',), ('ʁ',))	70.00	(rep: 40.00, dist: 100.00)	2 (0.0636)
+Achterhoek ['bʁʏʁ']
+Dutch_Std_NL ['bʁuəʁ']
+(('w',), ('χ',))	70.00	(rep: 40.00, dist: 100.00)	2 (0.0636)
+Achterhoek ['neːχn']
+Dutch_Std_NL ['neɪχə']
+and 246 more
+=====================================
+
+Cluster 5:
+-------------------------------------
+Heligoland
+-------
+(('u',), ('ɪ',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3185)
+Heligoland ['mɪtʰ', 'hɪn']
+(('u',), ('uɐ',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3185)
+Heligoland ['huɐn', 'kʰuɐ']
+(('ai',), ('ea',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3185)
+Heligoland ['bean', 'ʔeakʰɛn']
+(('θ',), ('ɖ',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1592)
+Heligoland ['nuʌɖ']
+(('z',), ('g',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1592)
+Heligoland ['hagə']
+(('w',), ('g',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1592)
+Heligoland ['neɐgæn']
+(('u',), ('ɑː',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1592)
+Heligoland ['tʰβɑːn']
+(('u',), ('æ',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1592)
+Heligoland ['neɐgæn']
+(('u',), ('oɒ',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1592)
+Heligoland ['ʔoɒvɜ']
+(('u',), ('oɑ',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1592)
+Heligoland ['ʔoɑvən']
+(('t',), ('ʈ',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1592)
+Heligoland ['haːʈ']
+and 173 more
+=====================================
+
+Cluster 6:
+-------------------------------------
+Westerkwartier
+-------
+(('s',), ('ʒ',))	100.00	(rep: 100.00, dist: 100.00)	4 (0.6260)
+Westerkwartier ['ʒeɛɹ', 'ʒetʰ', 'ʒøɛχ', 'ʒveæɹ']
+(('s',), ('sʲ',))	100.00	(rep: 100.00, dist: 100.00)	4 (0.6260)
+Westerkwartier ['zɛsʲ', 'fɪsʲ', 'hysʲ', 'sʲøːbⁿm']
+(('u',), ('ɶ',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3130)
+Westerkwartier ['dɶnaɹ', 'hɶnɶx']
+(('oː',), ('aɔ',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3130)
+Westerkwartier ['ʃdaɔɫ', 'kʰaɔ']
+(('e',), ('ĩ',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3130)
+Westerkwartier ['t͡sĩn', 'ʔĩn']
+(('e',), ('ẽ',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3130)
+Westerkwartier ['rẽŋ', 'drẽŋkʰ']
+(('a',), ('ã',))	100.00	(rep: 100.00, dist: 100.00)	2 (0.3130)
+Westerkwartier ['t͡sãnt͡s', 'hãnt͡s']
+(('θ',), ('t͡ʃ',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1565)
+Westerkwartier ['noət͡ʃ']
+(('ɡ',), ('gⁿ',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1565)
+Westerkwartier ['reigⁿŋ']
+(('x',), ('ɦ',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1565)
+Westerkwartier ['ɦõŋʌɹ']
+(('u',), ('ɔu',))	100.00	(rep: 100.00, dist: 100.00)	1 (0.1565)
+Westerkwartier ['ʔɔupⁿm']
+and 172 more
+=====================================

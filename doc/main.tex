@@ -351,6 +351,8 @@ The average of representativeness and distinctiveness.
 {2}
 \end{equation*}
 
+We additionally re-rank correspondences with the same importance score by the number of occurrences in a cluster; more frequent correspondences rank higher.
+
 % TODO maybe: try out harmonic mean instead. I don't like how correspondences with low representativeness/distinctiveness but 100% of the other metric still get pretty high scores. Using the harmonic mean would give them a score closer to the lower score, I think.
 
 According to \citet{wieling2010hierarchical}, the values of the second right singular vector are a good substitute for the above metrics.
@@ -385,6 +387,8 @@ All of the comparisons here are phonetic (and might possibly include some morpho
 
 To what extend does clustering dialects and/or applying a hierarchical model to dialect data make sense? (tree vs. web, `vertical' changes vs. `horizontal' influences)
 data is from a relatively large region though
+
+more abstract sound correspondence rules (incl. context) to model sound changes more generally (nasalization, lenition)
 
 \bibliographystyle{chicago}
 \bibliography{lib}

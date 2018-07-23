@@ -5,7 +5,7 @@ from collections import Counter
 import numpy as np
 
 
-def align_concept(doculects, doculects_cwg,
+def align_concept(doculects, doculects_cwg, corres2lang2word=None,
                   reference_doculect='ProtoGermanic',
                   alignment_type='lib', alignment_mode='global',
                   no_context=True, context_cv=False, context_sc=False,
@@ -43,6 +43,7 @@ def align_concept(doculects, doculects_cwg,
         if label in doculects_cwg or label == reference_doculect:
             labels_cwg.append(label)
             msa_cwg.append(line)
+
     # Remove all-gap columns that might remain.
     gap_cols = np.nonzero(np.all(np.array(msa_cwg) == '-', axis=0))[0]
     if len(gap_cols) > 0:
@@ -79,12 +80,14 @@ def align_concept(doculects, doculects_cwg,
             ref_segments_sc.append((r, r_next))
 
     corres = {}
+    if corres2lang2word is None:
+        corres2lang2word = {}
     for i in range(1, len(labels)):
         corres_i = Counter()
 
         if no_context:
             c = zip(alignments[0], alignments[i])
-            corres_i.update([(tuple(x[0]), x[1]) for x in c])
+            corres_i.update([(tuple([x[0]]), tuple([x[1]])) for x in c])
 
         ref_segments = []
         sca_model = []
@@ -106,8 +109,19 @@ def align_concept(doculects, doculects_cwg,
             c = zip(ref_segs, cur_segments)
             corres_i.update([x for x in c])
 
-        corres[labels[i]] = corres_i
-    return corres
+        d = labels[i]
+        corres[d] = corres_i
+        for c in corres_i:
+            try:
+                # Use doculects[d] instead of sequences[i] because LingPy
+                # changes the contents of 'sequences'.
+                corres2lang2word[c][d].append(doculects[d])
+            except KeyError:
+                try:
+                    corres2lang2word[c][d] = [doculects[d]]
+                except KeyError: 
+                    corres2lang2word[c] = {d: [doculects[d]]}
+    return corres, corres2lang2word
 
 
 def seg2class(segment, sca=False):
@@ -132,16 +146,18 @@ def align(reference_doculect='ProtoGermanic',
 
     if verbose > 0:
         print('Aligning the entries.')
+    corres2lang2word = None
     for concept, doculects in entries.items():
         if verbose > 2:
             print(concept)
-        corres = align_concept(doculects, doculects_cwg,
-                               reference_doculect=reference_doculect,
-                               alignment_type=alignment_type,
-                               alignment_mode=alignment_mode,
-                               no_context=no_context, context_cv=context_cv,
-                               context_sc=context_sc,
-                               verbose=verbose)
+        corres, corres2lang2word = align_concept(doculects, doculects_cwg,
+            corres2lang2word=corres2lang2word,
+            reference_doculect=reference_doculect,
+            alignment_type=alignment_type,
+            alignment_mode=alignment_mode,
+            no_context=no_context, context_cv=context_cv,
+            context_sc=context_sc,
+            verbose=verbose)
         for doculect, tallies in corres.items():
             all_correspondences.update(tallies)
             try:
@@ -173,9 +189,10 @@ def align(reference_doculect='ProtoGermanic',
         all_correspondences.remove(('-', '-'))
     except ValueError:
         pass
-    if verbose > 1:
-        print(all_correspondences)
-    return correspondences, all_correspondences, doculects_cwg
+    if verbose > 2:
+        print(corres2lang2word)
+    return (correspondences, all_correspondences,
+            doculects_cwg, corres2lang2word)
 
 
 if __name__ == "__main__":

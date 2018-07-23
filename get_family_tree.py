@@ -1,6 +1,6 @@
 import csv
 
-DOCULECT_INFO = 'data/soundcomparisons_glottolog/glottolog_codes.csv'
+DOCULECT_INFO = 'data/soundcomparisons/glottolog/glottolog_codes.csv'
 GLOTTOLOG_INFO = 'data/glottolog/languoid.csv'
 
 lang2parent = {}
@@ -15,7 +15,7 @@ with open(GLOTTOLOG_INFO, encoding='utf8') as f:
 with open(DOCULECT_INFO, encoding='utf8') as f:
     reader = csv.DictReader(f, delimiter=',')
     for row in reader:
-        lang = row['BDPA']
+        lang = row['Filename']
         code = row['Code']
         print(lang)
         try:

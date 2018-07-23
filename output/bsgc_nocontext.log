@@ -1,6 +1,5 @@
-`python align.py --excludesc --mincount 3`
+`python cluster.py --mincount 3`
 Clusters: 7
-Doculects: de-nl (BDPA) False (SC)
 Co-clustering: True
 Features: binary: True, min. count 3, TF-IDF: False
 Context: none: True, CV: False, sound classes: False
@@ -8,100 +7,269 @@ Alignment: global lib (all)
 
 Reading the data files.
 Aligning the entries.
-Matrix shape: (20, 177)
+Matrix shape: (20, 178)
 
 Cluster 0:
 -------------------------------------
-High German (Ortisei)
+Antwerp
+Dutch_Std_BE
 -------
-(('θ',), 't͡s')	100.00	(rep: 100.00, dist: 100.00)
-(('u', 'ː'), 'aɵ')	100.00	(rep: 100.00, dist: 100.00)
-(('d',), 't͡s')	100.00	(rep: 100.00, dist: 100.00)
-(('o', 'ː'), 'ʊə')	73.68	(rep: 100.00, dist: 47.37)
-(('a',), 'ɔ')	73.68	(rep: 100.00, dist: 47.37)
-and 22 more
+(('oː',), ('uː',))	100.00	(rep: 100.00, dist: 100.00)	9 (0.7840)
+Antwerp ['xuː', 'kuː', 'bluːt', 'bɾuːs', 'stuː']
+Dutch_Std_BE ['kuː', 'xruːn', 'bɾuːr', 'stuːl']
+(('f',), ('v',))	81.48	(rep: 100.00, dist: 62.96)	9 (0.7840)
+Antwerp ['viːs', 'vaːf', 'vɪs', 'vɔɫ', 'oːvə']
+Dutch_Std_BE ['viəɹ', 'vɪs', 'vut', 'vaːd̪ər']
+(('e',), ('eː',))	81.48	(rep: 100.00, dist: 62.96)	7 (0.6098)
+Antwerp ['reːçɪn', 'neːʝə', 'zeːvə']
+Dutch_Std_BE ['zeː', 'reːʝn', 'neːʝn', 'zeːβn']
+(('ɡ',), ('ç',))	75.00	(rep: 50.00, dist: 100.00)	4 (0.3484)
+Antwerp ['reːçɪn', 'çjans', 'çɾyn', 'daç']
+Dutch_Std_BE ['çaːrt']
+(('au',), ('oə',))	75.00	(rep: 50.00, dist: 100.00)	4 (0.3484)
+Antwerp ['roət', 'oəx', 'oəs', 'loəf']
+(('ai',), ('eə',))	75.00	(rep: 50.00, dist: 100.00)	4 (0.3484)
+Antwerp ['steən', 'beən', 'zeər', 'teən']
+Dutch_Std_BE ['zeəɹ']
+(('x',), ('ç',))	75.00	(rep: 50.00, dist: 100.00)	3 (0.2613)
+Antwerp ['aɪçt', 'rɪçt', 'fɛçt']
+Dutch_Std_BE ['rɛçt', 'fɛçt']
+(('uː',), ('æʏ',))	75.00	(rep: 50.00, dist: 100.00)	3 (0.2613)
+Dutch_Std_BE ['mæʏs', 'æʏt', 'hæʏs']
+(('e',), ('iː',))	75.00	(rep: 50.00, dist: 100.00)	3 (0.2613)
+Antwerp ['viːs', 'kniː']
+Dutch_Std_BE ['tiːn', 'kniː', 'd̪ɾiː']
+(('b',), ('β',))	75.00	(rep: 50.00, dist: 100.00)	3 (0.2613)
+Dutch_Std_BE ['oːβr', 'zeːβn', 'leːβər']
+(('ɡ',), ('x',))	72.22	(rep: 100.00, dist: 44.44)	10 (0.8711)
+Antwerp ['xɑɾt', 'xuː', 'oəx', 'nɑːxɫ']
+Dutch_Std_BE ['xut', 'xans', 'oːx', 'xruːn', 'dax', 'naːxəɫ']
+and 18 more
 =====================================
 
 Cluster 1:
 -------------------------------------
-Belgian Dutch
-Dutch (Antwerp)
-Dutch (Ostend)
+Achterhoek
+Biel
+Cologne
+Dutch_Std_NL
+Feer
+Graubuenden
+Grou
+Limburg
+Luxembourg
+Ostend
+Veenkolonien
+Walser
 -------
-(('f',), 'v')	100.00	(rep: 100.00, dist: 100.00)
-(('e',), 'eː')	85.29	(rep: 100.00, dist: 70.59)
-(('b',), 'f')	85.29	(rep: 100.00, dist: 70.59)
-(('r',), 's')	83.33	(rep: 66.67, dist: 100.00)
-and 25 more
+(('e',), ('a',))	70.83	(rep: 41.67, dist: 100.00)	23 (0.3642)
+Achterhoek ['hatə']
+Biel ['hart͡s', 'zakə', 'ɾaχt', 'faχt', 'saχs']
+Dutch_Std_NL ['haɹt', 'aɹdə']
+Feer ['haχt', 'sat', 'ʔas', 'draŋk', 'madⁿn']
+Luxembourg ['vant', 'ʔan', 'ʔiva']
+Ostend ['artə', 'raht', 'faht', 'zasə']
+Walser ['t͡sahə', 'haɹt͡s', 'raɡə', 'ʔardə', 'raχt', 'ʔas']
+(('oː',), ('ə',))	63.54	(rep: 58.33, dist: 68.75)	35 (0.5542)
+Achterhoek ['nɔːɫdə', 'hatə', 'oːʁə', 'βʌlə', 'iʁdə', 'naːmə']
+Biel ['βɵlə', 'ʔaʃə', 'aːrtə', 'lapəɾə', 'nɒmə']
+Cologne ['naːmə']
+Dutch_Std_NL ['aɹdə']
+Graubuenden ['ɛʃə', 'ɛrdə', 'lɛːbəɾə']
+Grou ['nœɫə', 'βʌɫə', 'jɪskə', 'iədə', 'namə']
+Ostend ['ɔːɾə', 'artə', 'oχə', 'βœlə', 'ɑsə', 'aːrdə', 'naːmə']
+Veenkolonien ['naːɫə', 'oʁə', 'aːskə', 'iəɾdə']
+Walser ['naːdlə', 'βolə', 'ʔæʃə', 'ʔardə', 'labəɾə']
+(('f',), ('ɸ',))	62.50	(rep: 25.00, dist: 100.00)	10 (0.1584)
+Achterhoek ['ɸɪʃ', 'ɸʊɫ', 'ɸastə']
+Limburg ['ɸiəχ', 'ɸiːɸ']
+Walser ['fyːɸ', 'ɸolə', 'ʔoːɸə', 'ɸoɛs']
+(('b',), ('v',))	62.50	(rep: 25.00, dist: 100.00)	9 (0.1425)
+Achterhoek ['zœːvn']
+Cologne ['ʔʏvɒ', 'lɪvɒ']
+Dutch_Std_NL ['oʊvəɹ', 'zeɪvə', 'lɛɪvəʁ']
+Feer ['søːvn', 'lʏva']
+Grou ['ɫɛɪvr']
+Luxembourg ['ʔiva', 'ziːvən', 'lɪəvʌ']
+Ostend ['oːvr', 'seːvn', 'leːvəs']
+Veenkolonien ['ovɹˠ', 'lɛɪvɹ']
+(('s',), ('-',))	58.33	(rep: 66.67, dist: 50.00)	24 (0.3800)
+Achterhoek ['χans', 'mys', 'is']
+Biel ['ɡɒns', 'muːs', 'iːs']
+Cologne ['jans', 'muːs']
+Dutch_Std_NL ['χɑns', 'mæøs', 'ɛɪs']
+Feer ['gʊs', 'mʏs']
+Graubuenden ['ɡans', 'muːs', 'iːs']
+Grou ['ɡoəs', 'moːs', 'iːs']
+Limburg ['xans', 'muːs', 'iːs']
+Luxembourg ['ɡæns', 'mæʊs']
+Ostend ['χɑ̃zə', 'mʉs', 'is']
+Veenkolonien ['hanzə', 'moːs', 'is']
+Walser ['ɡans', 'muːs']
+(('u',), ('oɐ',))	58.33	(rep: 16.67, dist: 100.00)	9 (0.1425)
+Achterhoek ['βoɐt', 'doɐn', 'kʰoɐn', 'hoɐn', 'noɐt']
+Limburg ['doɐn', 'koɐʁ', 'hoɐn', 'noɐt']
+(('oː',), ('ʊ',))	58.33	(rep: 16.67, dist: 100.00)	7 (0.1108)
+Biel ['n̪ɑːdʊ']
+Cologne ['mʊtɒ', 'fʊs']
+Dutch_Std_NL ['mʊdəʁ']
+Feer ['gʊt', 'brʊlə', 'fʊtʰ']
+Limburg ['blʊt']
+Luxembourg ['ɡʊt', 'blʊt͡s', 'bʁʊdɐ', 'ʃtʊl']
+(('oː',), ('oː',))	58.33	(rep: 16.67, dist: 100.00)	7 (0.1108)
+Achterhoek ['χoːt', 'koː', 'bloːt', 'βoːt']
+Cologne ['joːt', 'bʁoːdɒ', 'ʃtoːl']
+Limburg ['bʁoːχ', 'foːt']
+Ostend ['moːdr']
+(('ai',), ('ɛɪ',))	58.33	(rep: 16.67, dist: 100.00)	7 (0.1108)
+Achterhoek ['snɛɪ', 'hɛɪləχ']
+Biel ['ʃtɛɪ', 'pɛɪ', 'ɛɪs']
+Cologne ['hɛɪm', 'ʔɛɪʃ']
+Dutch_Std_NL ['bɛɪn', 'hɛɪm', 'ɛɪk', 'hɛɪlʌχ']
+(('ai',), ('eɪ',))	58.33	(rep: 16.67, dist: 100.00)	7 (0.1108)
+Biel ['heɪm']
+Cologne ['ʃteɪn', 'beɪn', 'ʃneɪ', 'ʔeɪŋə']
+Dutch_Std_NL ['steɪn', 'eɪn', 'tʰeɪn']
+(('t',), ('t',))	58.33	(rep: 100.00, dist: 16.67)	169 (2.6762)
+Achterhoek ['steːn', 'aχtə', 'tβɛɪ', 'tiːnə', 'hatə', 'zɪt', 'tɔp', 'stʌʁəm', 'fɛχt', 'βat', 'dɒχtʁ', 'bɛtʁ', 'bit', 'yt', 'ɛt', 'βoːt', 'stɔːɫ', 'ɸastə']
+Biel ['ʃtɛɪ', 'ɒχt', 'nɒχt', 'ʃtʊɾm', 'ɾaχt', 'faχt', 'tɔχtəɾ', 'ʃtʊɛʊ', 'fɛʃt']
+Cologne ['ʃteɪn', 'tʁɔn', 'ʃtʊʀm', 'βat', 'dɔːχtɒ', 'ʃtoːl']
+Dutch_Std_NL ['steɪn', 'ɑχt', 'haɹt', 'nɑχt', 'zɪt', 'zaʊt', 'ʁɛχt', 'fɛχt', 'vɑt', 'dɔχtəɹ', 'bæɪt', 'æʏt', 'ɛɪt', 'fut', 'stuːɫ', 'fɑst']
+Feer ['stiæn', 'ʔaχt', 'haχt', 'sat', 'saːlt', 'rɔχt', 'fɛçt', 'vat', 'do:χtɐ', 'bitç', 'vitç', 'ʔitç', 'feːst']
+Graubuenden ['ʃtai', 'ʔaχt', 'naχt', 'tɾɛːnɐ', 'ʃtʊrm', 'ɾeχt', 'fɛχt', 'dɔχtr', 'ʃtuɛl', 'fɛʃt']
+Grou ['stiən', 'aχt', 'tβaː', 'hɛt', 'naχt', 'tinə', 'sɪt', 'tɔp', 'tɾiən', 'sɔːt', 'stβaɾəm', 'tɔŋə', 'rjœχt', 'βɔt', 'dɒχtər', 'bɛtr', 'bit', 'yt', 'tiən', 'it', 'foət', 'stuəɫ', 'fɛəst']
+Limburg ['stɛi', 'hɑt', 'taŋk', 'zɪt', 'tɔp', 'zɔːt', 'ʃtoʁəm', 'tʊŋ', 'βɑt', 'dɔtəχ', 'bɛːtəχ', 'biːt', 'uːt', 'eət', 'foːt', 'ʃtʊːl']
+Luxembourg ['steːn', 'ʔaːχt', 'ʃtʊɛm', 'fæʃt', 'vaːt', 'dʊɪʃtɐ', 'ʃtʊl', 'fɛst']
+Ostend ['stɛːn', 'ɑχtə', 'tiənə', 'artə', 'naχt', 'tɑnt', 'zɛt', 'tɔp', 'zut', 'stɔɾm', 'tʊŋə', 'raht', 'faht', 'dɔχtəs', 'betr', 'bit', 'ʉt', 'βɛt', 'tɛːn', 'ɛt', 'vuət', 'stuəl', 'vɑstə']
+Veenkolonien ['stɔɪn', 'aːχtə', 'tβɛɪə', 'hæːt', 'naχt', 'zɪt', 'tɾoːnə', 'zɔːt', 'stœːɾəm', 'rɛχt', 'fɛχt', 'βat', 'biːt', 'yt', 'βɒɪt', 'ɛɪt', 'stɑʊlə', 'vastə']
+Walser ['ʃtæɪ', 'ʔaχt', 'naχt', 'ʔiʃt', 'ʃtuɾəm', 'raχt', 'dɔxtɛɾ', 'ʃtuəl', 'fɛʃt']
+and 55 more
 =====================================
 
 Cluster 2:
 -------------------------------------
-Central German (Honigberg)
+Heligoland
 -------
-(('θ',), 'tʰ')	100.00	(rep: 100.00, dist: 100.00)
-(('z',), 'n')	100.00	(rep: 100.00, dist: 100.00)
-(('u', 'ː'), 'eu')	100.00	(rep: 100.00, dist: 100.00)
-(('u',), 'aː')	100.00	(rep: 100.00, dist: 100.00)
-(('o', 'ː'), 'e')	100.00	(rep: 100.00, dist: 100.00)
-(('n',), 'ɳ')	100.00	(rep: 100.00, dist: 100.00)
-(('a', 'i'), 'eiə')	100.00	(rep: 100.00, dist: 100.00)
-(('a',), 'ʊə')	100.00	(rep: 100.00, dist: 100.00)
-(('a',), 'ʊ')	100.00	(rep: 100.00, dist: 100.00)
-(('a',), 'æiə')	100.00	(rep: 100.00, dist: 100.00)
-(('x',), 'ʃ')	73.68	(rep: 100.00, dist: 47.37)
-(('d',), 'tʰ')	73.68	(rep: 100.00, dist: 47.37)
+(('u',), ('ɒ',))	100.00	(rep: 100.00, dist: 100.00)	4 (0.8316)
+Heligoland ['dʒɒŋ', 'hɒŋə', 'hɒnɐtʰ', 'tʰɒŋ']
+(('k',), ('g',))	100.00	(rep: 100.00, dist: 100.00)	4 (0.8316)
+Heligoland ['vɐsgə', 'ʔeasgən', 'sgapʰ', 'noɐgɤlt']
+(('uː',), ('ʏ',))	100.00	(rep: 100.00, dist: 100.00)	3 (0.6237)
+Heligoland ['mʏs', 'ʔʏtʰ', 'hʏs']
+(('a',), ('oɐ',))	100.00	(rep: 100.00, dist: 100.00)	3 (0.6237)
+Heligoland ['soɐltʰ', 'noɐgɤlt', 'foɐ']
+(('-',), ('β',))	100.00	(rep: 100.00, dist: 100.00)	3 (0.6237)
+Heligoland ['βɑː', 'tʰβɑːn', 'tʰβaːn']
+(('ɡ',), ('g',))	73.68	(rep: 100.00, dist: 47.37)	4 (0.8316)
+Heligoland ['goa', 'goː', 'guːs', 'gʁeːn']
+(('z',), ('n',))	73.68	(rep: 100.00, dist: 47.37)	3 (0.6237)
+Heligoland ['kʰaləfkʰən', 'lamkʰən', 'mɛdⁿn']
+(('d',), ('-',))	64.91	(rep: 100.00, dist: 29.82)	12 (2.4948)
+Heligoland ['goa', 'vɪn', 'ʀoɒ', 'goː', 'vøœ', 'hɔn', 'hɒnɐtʰ', 'blo', 'kʰul', 'hɪn', 'hoɑ', 'foɐ']
+(('t',), ('d',))	64.91	(rep: 100.00, dist: 29.82)	4 (0.8316)
+Heligoland ['ʃdeɐ', 'sdʊʁɤm', 'dɔχdɐ', 'ʃduːl']
+(('r',), ('ʀ',))	64.91	(rep: 100.00, dist: 29.82)	4 (0.8316)
+Heligoland ['ʀoɒ', 'ʀaen', 'vaʀm', 'ʀɛç']
+(('b',), ('-',))	64.91	(rep: 100.00, dist: 29.82)	3 (0.6237)
+Heligoland ['nan', 'bleː', 'hoɑ']
+and 2 more
 =====================================
 
 Cluster 3:
 -------------------------------------
-Central German (Cologne)
-Central German (Luxembourg)
-Central German (Murrhardt)
-Dutch (Limburg)
-German
-High German (Biel)
-High German (Bodensee)
-High German (Graubuenden)
-High German (Herrlisheim)
-High German (Tuebingen)
-High German (Walser)
-Low German (Achterhoek)
+Westerkwartier
 -------
-(('t',), 't͡s')	70.83	(rep: 83.33, dist: 58.33)
-(('t',), 's')	70.83	(rep: 83.33, dist: 58.33)
-and 63 more
+(('s',), ('ʒ',))	100.00	(rep: 100.00, dist: 100.00)	4 (0.8299)
+Westerkwartier ['ʒøɛχ', 'ʒveæɹ', 'ʒetʰ', 'ʒeɛɹ']
+(('s',), ('sʲ',))	100.00	(rep: 100.00, dist: 100.00)	4 (0.8299)
+Westerkwartier ['fɪsʲ', 'sʲøːbⁿm', 'zɛsʲ', 'hysʲ']
+(('e',), ('e',))	100.00	(rep: 100.00, dist: 100.00)	3 (0.6224)
+Westerkwartier ['ʒetʰ', 'ʔeʃ', 'negⁿŋ']
+(('d',), ('tʰ',))	73.68	(rep: 100.00, dist: 47.37)	10 (2.0747)
+Westerkwartier ['vintʰ', 'rɒotʰ', 'xutʰ', 'voɹtʰ', 'hundətʰ', 'blʊutʰ', 'kʰoɫtʰ', 'nogtʰ', 'hɔ̃ntʰ', 'hœftʰ']
+(('z',), ('ɹ',))	73.68	(rep: 100.00, dist: 47.37)	4 (0.8299)
+Westerkwartier ['ʔoɔɹ', 'ɦõŋʌɹ', 'høæɹ', 'dɶnaɹ']
+(('n',), ('m',))	73.68	(rep: 100.00, dist: 47.37)	3 (0.6224)
+Westerkwartier ['sʲøːbⁿm', 'ʔɔobⁿm', 'ʔɔupⁿm']
+(('oː',), ('u',))	64.91	(rep: 100.00, dist: 29.82)	3 (0.6224)
+Westerkwartier ['xutʰ', 'mukɐ', 'futʰ']
 =====================================
 
 Cluster 4:
 -------------------------------------
-Low German (Bargstedt)
+Hard
+Herrlisheim
+Ortisei
+Tuebingen
 -------
-(('e', 'ː'), 'ɐ')	73.68	(rep: 100.00, dist: 47.37)
-(('d',), '-')	73.68	(rep: 100.00, dist: 47.37)
-and 15 more
+(('a',), ('ɔ',))	75.00	(rep: 50.00, dist: 100.00)	21 (0.9620)
+Herrlisheim ['kʰɔlp', 'ʔɔl', 'ɡɔns', 'kʰɔlt', 'sɔls', 'lɔŋ', 'nɔkətʰ', 'lɔm']
+Ortisei ['ʔɔχt', 'kʰɔlp', 'ɡɔχtn', 'nɔχt', 'ɡɔns', 'kʰɔlt͡s', 'sɔlt͡s', 'lɔŋk', 'βɔs', 'nɔkt͡s', 'lɔm', 'dɔk', 'nɔmɛ']
+Tuebingen ['leːbɔχ', 'dɔnɔχ']
+(('oː',), ('ɛ',))	75.00	(rep: 50.00, dist: 100.00)	9 (0.4123)
+Hard ['vʊlɛ', 'ʔɛʁdɛ']
+Ortisei ['ʔaʊɡɛ', 'βʌlɛ', 'ʔaʃɛ', 'ʔɛʁdɛ', 'nɔmɛ']
+Tuebingen ['wʊlɛ', 'ʔaʃɛ', 'ʔɛʁdɛ', 'naːmɛ']
+(('oː',), ('ʊə',))	75.00	(rep: 50.00, dist: 100.00)	6 (0.2749)
+Hard ['blʊət', 'mʊətəʁ', 'ʃtʊəl']
+Ortisei ['mʊətəχ', 'bʁʊədəχ', 'fʊəs']
+Tuebingen ['mʊətɔ', 'bʁʊədɔ']
+(('ɡ',), ('ɡ',))	65.28	(rep: 100.00, dist: 30.56)	25 (1.1452)
+Hard ['ɡaːʁtə', 'ʁeɐɡə', 'ɡoɛt', 'ɡans', 'ɡɾỹɛ̃', 'daːɡ', 'naːɡl']
+Herrlisheim ['ɡɔːχtə', 'ɡøət', 'ɡɔns', 'ɡʁeːn']
+Ortisei ['ɡɔχtn', 'hʊŋɡəχ', 'ʁeːɡn', 'ɡʊɛt͡s', 'ɡɔns', 'ʔaʊɡɛ', 'ɡʁiɛn', 'nɔːɡl']
+Tuebingen ['ɡaɔt̪ə', 'ʁeəɡə', 'ɡuət', 'ɡaːs', 'ɡʁeə', 'naːɡl']
+(('t',), ('s',))	65.28	(rep: 100.00, dist: 30.56)	23 (1.0536)
+Hard ['vaːs', 'bɛsəʁ', 'biːs', 'ʔuːs', 'fʊɛs']
+Herrlisheim ['sɔls', 'βɒs', 'bɛsəχ', 'bis', 'ʔys', 'ɸeːs']
+Ortisei ['βɔs', 'bɪsəχ', 'baɪs', 'ʔaɵs', 'βaɪs', 'fʊəs']
+Tuebingen ['βaːs', 'bɛsɔ', 'bɐis', 'ʔɐus', 'βɛis', 'fuəs']
+(('r',), ('ʁ',))	62.50	(rep: 100.00, dist: 25.00)	64 (2.9317)
+Hard ['fiəʁ', 'ɡaːʁtə', 'hɛʁt͡s', 'jɔːʁ', 'ʁeɐɡə', 'ʃvøːʁ', 'ʁɪŋ', 'vaːʁm', 'mʊətəʁ', 'ʏbəʁ', 'ʔɛʁdɛ', 'ʃtʊʁm', 'kʰɔɐʁn', 'hɔɐʁn', 'leəbəʁ', 'ʁeɐxt', 'ʃaːʁf', 'nɔːʁdə', 'dʁyː', 'dɔxtəʁ', 'dʁɪnk', 'bʁʏədəʁ', 'fatəʁ']
+Herrlisheim ['ʁoːtʰ', 'ʁaːjə', 'ʁɪŋ', 'vɔːʁm', 'toʁən', 'ʃtʊʁm', 'kʰoʁən', 'ɡʁeːn', 'hoʁən', 'ʁaːχt', 'tʁɪŋk', 'bʁeːdəχ']
+Ortisei ['ʁɔːt͡s', 'ʁeːɡn', 'βɔʁt͡s', 'ʁɪŋk', 'βɑʁm', 'dɔʁn', 'ʔɛʁdɛ', 'ʃtʊʁm', 'kʰɔʁn', 'ɡʁiɛn', 'hɔʁn', 'ʁɛχt͡s', 'ʃɑʁf', 'dʁaɪ', 'tʁɪŋk', 'bʁʊədəχ']
+Tuebingen ['hɛʁt͡s', 'ʁɑɵt', 'ʁeəɡə', 'ʃβøʁ', 'ʁɪŋ', 'hʊndʁt', 'ʔɛʁdɛ', 'ɡʁeə', 'ʁeəxt', 'dʁɛi', 'dʁɪŋk', 'bʁʊədɔ']
+(('t',), ('t͡s',))	62.50	(rep: 100.00, dist: 25.00)	31 (1.4201)
+Hard ['t͡sβoɐ', 't͡sẽə̃', 'hɛʁt͡s', 't͡sãː', 'saːlt͡s', 't͡sʊŋə', 't͡seːə']
+Herrlisheim ['t͡svɛi', 't͡sɛː', 'haχt͡s', 't͡saːn', 'sɪt͡s', 't͡sʊŋ', 't͡seː']
+Ortisei ['t͡sβɔə', 't͡seːn', 'hɛχt͡s', 't͡sɑːn', 'sɪt͡s', 'sɔlt͡s', 't͡sʊŋɡɛ', 'ʁɛχt͡s', 't͡sɛːχ']
+Tuebingen ['t͡sβɔe', 't͡seə', 'hɛʁt͡s', 't͡saː', 'sit͡s', 'salt͡s', 't͡suŋɡ', 't͡saɪə']
+(('k',), ('kʰ',))	62.50	(rep: 100.00, dist: 25.00)	18 (0.8246)
+Hard ['kʰalp', 'kʰnyː', 'kʰʊɛ', 'kʰaːlt', 'kʰɔɐʁn']
+Herrlisheim ['kʰɔlp', 'kʰyː', 'kʰɔlt', 'kʰoʁən']
+Ortisei ['kʰɔlp', 'kʰuɛ', 'kʰɔlt͡s', 'kʰɔʁn']
+Tuebingen ['kʰalp', 'kʰuə', 'kʰalt', 'kʰɔn', 'kʰɛk']
+(('ll',), ('l',))	62.50	(rep: 100.00, dist: 25.00)	12 (0.5497)
+Hard ['ʔal', 'vʊlɛ', 'fʊl']
+Herrlisheim ['ʔɔl', 'vʊlə', 'fʊl']
+Ortisei ['ʔal', 'βʌlɛ', 'fʌl']
+Tuebingen ['ʔal', 'wʊlɛ', 'fʊl']
+(('d',), ('t͡s',))	62.50	(rep: 25.00, dist: 100.00)	8 (0.3665)
+Ortisei ['ʁɔːt͡s', 'ɡʊɛt͡s', 'βɔʁt͡s', 'hɒnt͡s', 'bløət͡s', 'kʰɔlt͡s', 'nɔkt͡s', 'hʊnt͡s']
+(('z',), ('ʁ',))	62.50	(rep: 25.00, dist: 100.00)	5 (0.2290)
+Hard ['oːʁ', 'hʊŋəʁ', 'høːʁ', 'bɛsəʁ', 'dɔnəʁ']
+and 39 more
 =====================================
 
 Cluster 5:
 -------------------------------------
 -------
-and 6 more
+(('θ',), ('-',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('z',), ('r',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('oː',), ('oə',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('eː',), ('-',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('e',), ('ʌ',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('ai',), ('iə',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('-',), ('j',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
 =====================================
 
 Cluster 6:
 -------------------------------------
-Dutch
-West Frisian (Grou)
 -------
-(('θ',), '-')	75.00	(rep: 50.00, dist: 100.00)
-(('u',), 'oʊ')	75.00	(rep: 50.00, dist: 100.00)
-(('o', 'ː'), 'oə')	75.00	(rep: 50.00, dist: 100.00)
-(('e',), 'ʌ')	75.00	(rep: 50.00, dist: 100.00)
-(('e',), 'eɪ')	75.00	(rep: 50.00, dist: 100.00)
-(('a', 'i'), 'iə')	75.00	(rep: 50.00, dist: 100.00)
-(('-',), 'ɹ')	75.00	(rep: 50.00, dist: 100.00)
-(('-',), 'j')	75.00	(rep: 50.00, dist: 100.00)
-(('u',), 'ʌ')	72.22	(rep: 100.00, dist: 44.44)
-(('l',), 'ɫ')	72.22	(rep: 100.00, dist: 44.44)
-and 11 more
+(('ɡ',), ('h',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('uː',), ('ʉ',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('u',), ('œ',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('r',), ('s',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('e',), ('iə',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
+(('au',), ('ɔː',))	0.00	(rep: 0.00, dist: 0.00)	0 (0.0000)
 =====================================

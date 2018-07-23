@@ -14,7 +14,7 @@ import sys
 
 def score(A, corres, cluster_docs):
     if len(cluster_docs) == 0:
-        return 0, 0, 0
+        return 0, 0, 0, 0, 0
     # TODO currently binary
     occ_binary = 0
     occ_abs = 0
@@ -33,13 +33,17 @@ def score(A, corres, cluster_docs):
     return rep, dist, (rep + dist) / 2, occ_abs / total, occ_abs
 
 
-def visualize(x, y, labels):
+def visualize(x, y, labels, settings):
     fig, ax = plt.subplots()
     ax.scatter(x, y)
     for i, label in enumerate(labels):
         ax.annotate(label, (x[i], y[i]))
-    # fig.savefig('svd.pdf', bbox_inches='tight')
-    plt.show()
+    fig.savefig('output/scatter{}.pdf'.format(settings), bbox_inches='tight')
+    with open('output/scatter{}.txt'.format(settings),
+              'w', encoding='utf8') as f:
+        f.write("Place,x,y")
+        for x_i, y_i, label in zip(x, y, labels):
+            f.write("{},{},{}\n".format(label, x_i, y_i))
 
 
 if __name__ == "__main__":
@@ -106,8 +110,9 @@ if __name__ == "__main__":
                                              args.alignment_type,
                                              args.msa_doculects))
         print()
+    settings = "".join(sys.argv[1:])
 
-    correspondences, all_correspondences, doculects = align(
+    correspondences, all_correspondences, doculects, corres2lang2word = align(
         no_context=not args.exclude_contextless,
         context_cv=args.context_cv, context_sc=args.context_sc,
         alignment_type=args.alignment_type, min_count=args.mincount,
@@ -118,7 +123,6 @@ if __name__ == "__main__":
     corres2int = {x: i for i, x in enumerate(all_correspondences)}
     n_samples = len(doculects)
     n_features = len(all_correspondences)
-    # A = sparse.dok_matrix(n_samples, n_features))
     A = np.zeros((n_samples, n_features), dtype=np.int16)
     for i, doculect in enumerate(doculects):
         for corres, count in correspondences[doculect].items():
@@ -130,19 +134,20 @@ if __name__ == "__main__":
         A = A.astype(np.bool_)
 
     if args.tfidf:
-        # TODO check out args
-        transformer = TfidfTransformer(smooth_idf=False)
+        transformer = TfidfTransformer()
         A = transformer.fit_transform(A)
         print(A.shape)
         x = PCA(2).fit_transform(A.todense())
-        visualize(x[:, 0], x[:, 1], doculects)
+        visualize(x[:, 0], x[:, 1], doculects, settings)
         dist = 1 - cosine_similarity(A)
+        fig, ax = plt.subplots()
         dendrogram(
             linkage(dist, method='average'),
             labels=doculects,
             orientation='right',
             leaf_font_size=12.)
-        plt.show()
+        fig.savefig('output/dendrogram{}.pdf'.format(settings),
+                    bbox_inches='tight')
 
     if args.co_clustering:
         # Form the normalized matrix A_n.
@@ -156,38 +161,27 @@ if __name__ == "__main__":
         for j in range(n_features):
             col_sum = np.sum(A, axis=0)
             if len(col_sum.shape) == 2 and col_sum.shape[0] == 1:
-                # Else, this clashes with the tf-idf transformed matrix.
+                # Otherwise, this clashes with the tf-idf transformed matrix.
                 col_sum = np.array(col_sum).flatten()
             D_2[j, j] = col_sum[j]
         D_2 = linalg.sqrtm(np.linalg.inv(D_2))
 
         A_n = D_1 @ A @ D_2
 
-        # Get the singular values, singular vectors of A_n.
-
+        # Get the singular vectors of A_n.
         U, S, V_T = np.linalg.svd(A_n)
         V = np.transpose(V_T)
 
-        # TODO change this to hierarchical clustering?
         # Use the singular vectors to get the eigenvectors.
-
-        # Rounding (up) isn't mentioned, but it seems necessary to do slices.
         n_eigenvecs = math.ceil(math.log(k, 2))
-        # l = int(round(math.log(k, 2)))
         if args.verbose > 1:
             print("{} eigenvectors".format(n_eigenvecs))
 
         Z = np.zeros((n_samples + n_features, n_eigenvecs))
-        # Does the n_eigenvecs+1 in the paper take care of rounding up?
-        # (see above)
-        # Why are we ignoring the first column/row?
-        Z[:n_samples] = D_1 @ U[:, 1:1 + n_eigenvecs]
-        v_2 = V[:, 1:1 + n_eigenvecs]
-        Z[n_samples:] = D_2 @ v_2
+        Z[:n_samples] = D_1 @ U[:, 1:n_eigenvecs + 1]
+        Z[n_samples:] = D_2 @ V[:, 1:n_eigenvecs + 1]
         if n_eigenvecs > 1:
-            # TODO it would be neat to cluster the most important sound
-            # correspondences as well
-            visualize(Z[:n_samples, 0], Z[:n_samples, 1], doculects)
+            visualize(Z[:n_samples, 0], Z[:n_samples, 1], doculects, settings)
     else:
         Z = A
 
@@ -210,20 +204,29 @@ if __name__ == "__main__":
             fs = []
             for cl, f in clusters_and_features:
                 if c == cl:
-                    rep, dist, imp, rel, a = score(A_original, corres2int[f], ds)
-                    fs.append((imp * 100, rep * 100, dist * 100, rel * 100, a, f))
+                    rep, dist, imp, rel, abs_n = score(A_original,
+                                                       corres2int[f], ds)
+                    fs.append((imp * 100, rep * 100, dist * 100,
+                               rel * 100, abs_n, f))
         else:
             fs = []
             for f in all_correspondences:
-                rep, dist, imp, rel, a = score(A_original, corres2int[f], ds)
+                rep, dist, imp, rel, abs_n = score(A_original,
+                                                   corres2int[f], ds)
                 if imp > 0:
-                    fs.append((imp * 100, rep * 100, dist * 100, rel * 100, a, f))
+                    fs.append((imp * 100, rep * 100, dist * 100,
+                               rel * 100, abs_n, f))
         fs = sorted(fs, reverse=True)
         print('-------')
         for j, (i, r, d, rel, a, f) in enumerate(fs):
-            if i < 80:
+            if j > 10:
                 print("and {} more".format(len(fs) - j))
                 break
-            print("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f}), {:4.4f} ({})"
-                  .format(f, i, r, d, rel, a))
+            print("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})\t{} ({:4.4f})"
+                  .format(f, i, r, d, a, rel))
+            for d in ds:
+                try:
+                    print(doculects[d], corres2lang2word[f][doculects[d]])
+                except KeyError:
+                    pass
         print('=====================================')
