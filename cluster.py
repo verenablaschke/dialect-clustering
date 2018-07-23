@@ -140,14 +140,32 @@ if __name__ == "__main__":
         x = PCA(2).fit_transform(A.todense())
         visualize(x[:, 0], x[:, 1], doculects, settings)
         dist = 1 - cosine_similarity(A)
+        Z = linkage(dist, method='average')
         fig, ax = plt.subplots()
         dendrogram(
-            linkage(dist, method='average'),
+            Z,
             labels=doculects,
             orientation='right',
             leaf_font_size=12.)
         fig.savefig('output/dendrogram{}.pdf'.format(settings),
                     bbox_inches='tight')
+        print(doculects)
+        print(Z)
+        # Add new cluster IDs.
+        cluster_ids = np.arange(20, 20 + Z.shape[0]).reshape(-1, 1)
+        Z = np.hstack((Z, cluster_ids))
+        cluster2docs = {i: [d] for i, d in enumerate(doculects)}
+        for row in Z:
+            cluster2docs[row[-1]] = cluster2docs[row[0]] + cluster2docs[row[1]]
+        for c in sorted(list(cluster2docs.items())):
+            print(c)
+        # clusters_and_doculects = []
+        # for c, docs in cluster2docs.items():
+        #     for d in docs:
+        #         clusters_and_doculects.append((c, d))
+        clusters_and_doculects = [(c, d) for c, docs in cluster2docs.items()
+                                  for d in docs]
+        k = len(cluster2docs)
 
     if args.co_clustering:
         # Form the normalized matrix A_n.
@@ -182,16 +200,14 @@ if __name__ == "__main__":
         Z[n_samples:] = D_2 @ V[:, 1:n_eigenvecs + 1]
         if n_eigenvecs > 1:
             visualize(Z[:n_samples, 0], Z[:n_samples, 1], doculects, settings)
-    else:
-        Z = A
 
-    kmeans = cluster.KMeans(k)
-    clusters = kmeans.fit_predict(Z)
+        kmeans = cluster.KMeans(k)
+        clusters = kmeans.fit_predict(Z)
 
-    clusters_and_doculects = list(zip(clusters[:n_samples], doculects))
-    if args.co_clustering:
-        clusters_and_features = list(zip(clusters[n_samples:],
-                                         all_correspondences))
+        clusters_and_doculects = list(zip(clusters[:n_samples], doculects))
+        if args.co_clustering:
+            clusters_and_features = list(zip(clusters[n_samples:],
+                                             all_correspondences))
 
     for c in range(k):
         print("\nCluster {}:\n-------------------------------------".format(c))
@@ -229,4 +245,10 @@ if __name__ == "__main__":
                     print(doculects[d], corres2lang2word[f][doculects[d]])
                 except KeyError:
                     pass
+            if len(ds) == 0:
+                # Bipartite spectral graph clustering: clusters can consists of
+                # only correspondences.
+                print("{} doculects: {}".format(len(corres2lang2word[f]),
+                                                corres2lang2word[f].keys()))
+            print()
         print('=====================================')

@@ -5,6 +5,7 @@
 \usepackage{amsmath}
 \usepackage{tipa}
 \usepackage{forest}
+\usepackage{changepage}
 \usetikzlibrary{decorations.pathreplacing}
 \usepackage[margin=1.3in]{geometry}
 
@@ -76,7 +77,6 @@ We simplified the transcriptions slightly by removing diacritics for vowel artic
 This is similar how \citet{list2014benchmark} processed an earlier version of the data \citep{renfrew2009languages}.
 We did not work with the Germanic data \citeauthor{list2014benchmark} published as it does not include Proto-Germanic entries for most concepts.
 
-segmentation: affricates, diph-/triphthongs
 
 \subsection{notes on continental West Germanic dialects/languages}
 
@@ -128,9 +128,11 @@ for tree={
 \label{fig:cwg_harbert}
 \end{figure}
 
+
 \begin{figure}
+\begin{adjustwidth}{-3cm}{-3cm}
 \centering
-\scalebox{0.8}{
+\scalebox{0.9}{
 \begin{forest}
 for tree={
   parent anchor=south, 
@@ -175,8 +177,75 @@ for tree={
 ]
 \end{forest}
 }
+\end{adjustwidth}
 \caption{Glottolog 3.2: entirely a tree}
 \label{fig:cwg_glottolog}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{adjustwidth}{-3cm}{-3cm}
+\scalebox{0.6}{
+\begin{forest}
+for tree={
+  parent anchor=south, 
+  child anchor=north,
+  align=center,
+  l sep=1.5cm,
+  s sep=0.3cm
+}
+[West Germanic
+  [North Sea Germanic
+    [Anglo-Frisian\\Frisian
+        [Western Frisian\\\textit{Grou}]
+        [Northern Frisian
+            [Ferring\\\textit{Feer}]
+            [Helgoland\\\textit{Heligoland}]
+        ]
+    ] 
+    [Altsächsisch \[Old Saxon\]\\Middle-Modern Low German\\Low German
+        [Achterhoeks\\\textit{Achterhoek}]
+        [Ostfriesisch-Groningisch\\Gronings
+            [Veenkolonials\\\textit{Veenkolonien}]
+            [Westerwolds\\\textit{Westerkwartier}]
+        ]
+    ]
+  ]
+  [Franconian
+    [Low Franconian\\Macro-Dutch\\Modern Dutch
+        [Dutch\\\textit{Std Dutch (NL)}]
+        [Vlaams\\\textit{Std Dutch (BE)}
+            [Ostvlaams\\\textit{Ostend}]
+            [Antwerps\\\textit{Antwerp}]
+            [Limburgs\\\textit{Limburg}]
+        ]
+    ]
+    [High Franconian
+        [German\\Alsatian\\\textit{Herrlisheim}]
+        [Middle Franconian
+            [Luxembourgish\\\textit{Luxembourg}]
+            [Ripurarian\\Kölsch\\\textit{Cologne}]
+        ]
+    ]
+  ]
+  [High German\\Middle-Modern High German\\Modern High German\\Alpine Germanic
+    [Alemannic
+        [Swiss German
+            [Basel\\\textit{Biel}]
+            [Low Alemannic\\\textit{Hard}]
+            [Graubenden-Grisons\\\textit{Graubuenden}]
+        ]
+        [Swabian\\\textit{Tuebingen}]
+        [Walser\\\textit{Walser}]
+    ]
+    [Bayerisch \[Bavarian\]\\Cimbrian\\\textit{Ortisei}]
+  ]
+]
+\end{forest}
+}
+\end{adjustwidth}
+\caption{Glottolog 3.2 for the doculects we used}
 \end{figure}
 
 
@@ -214,7 +283,7 @@ Progressing from the tips of the tree to the root, join the closest two alignmen
 Merge alignments using the library created in the first step.
 \end{enumerate}
 
-This method is performed using the implementation in the LingPy library for Python \citep{list2018lingpy.}.
+We use the LingPy library for Python \citep{list2018lingpy.} to perform these steps.
 For multi-sequence alignment, we use all of the Germanic data we extracted from the Sound Comparisons project instead of just the CWG doculects and Proto-Germanic, because this yielded better results in preliminary experiments. % TODO vague?
 Table ~\ref{tab:msa}
 
@@ -222,14 +291,16 @@ Table ~\ref{tab:msa}
 \begin{center}
 \begin{tabular}{l|llllll}
 Doculect       & \multicolumn{6}{l}{Sound segments} \\ \hline
-Proto-Germanic & x   & a     & n   & d   & u   & z  \\
-Biel           & h   & \textturnscripta     & \ng   & -   & -   & -  \\
-Std. German    & h   & a     & n   & t   & -   & -  \\
-Vesterkolonien & h   & \~\ae\textlengthmark    & -   & t   & -   & - 
+ProtoGermanic  & k    & a    & l   & d    & a  & z  \\
+Westerkwartier & k\textsuperscript{h}   & o    & \textltilde   & t\textsuperscript{h}   & -  & -  \\
+Luxembourg     & k\textsuperscript{h}   & a\textlengthmark   & l   & -    & -  & -  \\
+Walser         & x    & a\textlengthmark    & l   & t    & -  & -  \\
+Biel           & \textchi    & \textscripta\textupsilon   & -   & t    & -  & -  \\
+Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{ts}  & -  & - 
 \end{tabular}
 \end{center}
 \label{tab:msa}
-\caption{Extract of the aligned sequence table for the concept ``hand''.}
+\caption{Extract of the aligned sequence table for the concept ``cold''.}
 \end{table}
 
 We then extract the pairwise sound correspondences between Proto-Germanic and each doculect from the alignments.
