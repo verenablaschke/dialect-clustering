@@ -8,8 +8,99 @@ from sklearn.metrics.pairwise import cosine_similarity
 import math
 import matplotlib.pyplot as plt
 import numpy as np
+import pickle
 import argparse
 import sys
+
+
+def construct_A(all_correspondences, correspondences, doculects,
+                min_count=0, binary=False):
+    corres2int = {x: i for i, x in enumerate(all_correspondences)}
+    n_samples = len(doculects)
+    n_features = len(all_correspondences)
+    A = np.zeros((n_samples, n_features), dtype=np.int16)
+    for i, doculect in enumerate(doculects):
+        for corres, count in correspondences[doculect].items():
+            if count >= min_count:
+                A[i, corres2int[corres]] = count
+    print("Matrix shape: {}".format(A.shape))
+    A_original = A.copy()
+    if binary:
+        A = A.astype(np.bool_)
+    return A, A_original
+
+
+def tfidf_hierarchical(A, doculects, context):
+    A = TfidfTransformer().fit_transform(A)
+    dist = 1 - cosine_similarity(A)
+    Z = linkage(dist, method='average')
+    fig, ax = plt.subplots()
+    dendrogram(
+        Z,
+        labels=doculects,
+        orientation='right',
+        leaf_font_size=12.)
+    fig.savefig('output/dendrogram-{}.pdf'.format(context),
+                bbox_inches='tight')
+    # Add new cluster IDs.
+    n_samples = len(doculects)
+    cluster_ids = np.arange(n_samples, n_samples + Z.shape[0]) \
+                    .reshape(-1, 1)
+    Z = np.hstack((Z, cluster_ids))
+    with open('output/dendrogram-{}.pickle', 'w', encoding='utf8') as f:
+        pickle.dump(Z, f)
+    cluster2docs = {i: [d] for i, d in enumerate(doculects)}
+    for row in Z:
+        cluster2docs[row[-1]] = cluster2docs[row[0]] + cluster2docs[row[1]]
+    clusters_and_doculects = [(c, d) for c, docs in cluster2docs.items()
+                              for d in docs]
+    return len(cluster2docs), clusters_and_doculects
+
+
+def bsgc(A, k, doculects, all_correspondences, context):
+    n_samples = len(doculects)
+    n_features = len(all_correspondences)
+    # Form the normalized matrix A_n.
+    # Note that I already raise D_1, D_2 to the power of -0.5.
+    D_1 = np.zeros((n_samples, n_samples))
+    for i in range(n_samples):
+        D_1[i, i] = np.sum(A[i])
+    D_1 = linalg.sqrtm(np.linalg.inv(D_1))
+
+    D_2 = np.zeros((n_features, n_features))
+    for j in range(n_features):
+        col_sum = np.sum(A, axis=0)
+        if len(col_sum.shape) == 2 and col_sum.shape[0] == 1:
+            # TODO delete this? seems unnecessary now
+            # Otherwise, this clashes with the tf-idf transformed matrix.
+            col_sum = np.array(col_sum).flatten()
+        D_2[j, j] = col_sum[j]
+    D_2 = linalg.sqrtm(np.linalg.inv(D_2))
+
+    A_n = D_1 @ A @ D_2
+
+    # Get the singular vectors of A_n.
+    U, S, V_T = np.linalg.svd(A_n)
+    V = np.transpose(V_T)
+
+    # Use the singular vectors to get the eigenvectors.
+    n_eigenvecs = math.ceil(math.log(k, 2))
+    if args.verbose > 1:
+        print("{} eigenvectors".format(n_eigenvecs))
+
+    Z = np.zeros((n_samples + n_features, n_eigenvecs))
+    Z[:n_samples] = D_1 @ U[:, 1:n_eigenvecs + 1]
+    Z[n_samples:] = D_2 @ V[:, 1:n_eigenvecs + 1]
+    if n_eigenvecs > 1:
+        visualize(Z[:n_samples, 0], Z[:n_samples, 1], doculects, context)
+
+    kmeans = cluster.KMeans(k)
+    clusters = kmeans.fit_predict(Z)
+
+    clusters_and_doculects = list(zip(clusters[:n_samples], doculects))
+    clusters_and_features = list(zip(clusters[n_samples:],
+                                     all_correspondences))
+    return clusters_and_doculects, clusters_and_features
 
 
 def score(A, corres, cluster_docs):
@@ -33,174 +124,23 @@ def score(A, corres, cluster_docs):
     return rep, dist, (rep + dist) / 2, occ_abs / total, occ_abs
 
 
-def visualize(x, y, labels, settings):
+def visualize(x, y, labels, context):
     fig, ax = plt.subplots()
     ax.scatter(x, y)
     for i, label in enumerate(labels):
         ax.annotate(label, (x[i], y[i]))
-    fig.savefig('output/scatter{}.pdf'.format(settings), bbox_inches='tight')
-    with open('output/scatter{}.txt'.format(settings),
+    fig.savefig('output/scatter-{}.pdf'.format(context), bbox_inches='tight')
+    with open('output/scatter-{}.txt'.format(context),
               'w', encoding='utf8') as f:
         f.write("Place,x,y")
         for x_i, y_i, label in zip(x, y, labels):
             f.write("{},{},{}\n".format(label, x_i, y_i))
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        '-k', '--n_clusters', type=int, default=5,
-        help='The number of clusters.')
-    parser.add_argument(
-        '-s', '--svd', dest='co_clustering', action='store_true',
-        help='Include dimensionality reduction via SVD and co-clustering of '
-        'doculects and correspondences.')
-    parser.add_argument(
-        '-n', '--direct', dest='co_clustering', action='store_false',
-        help='Clustering is performed using the occurrence matrix.')
-    parser.add_argument(
-        '-b', '--binary', dest='binary', action='store_true',
-        help='Binary matrix (feature present/absent?).')
-    parser.add_argument(
-        '-c', '--count', dest='binary', action='store_false',
-        help='Matrix stores numbers of feature occurrences.')
-    parser.add_argument(
-        '--context_cv', dest='context_cv', action='store_true',
-        help='Include left and right context of sound segments (C vs V vs #).')
-    parser.add_argument(
-        '--exclude_contextless', dest='context_none', action='store_false',
-        help='Exclude sound segments without context.')
-    parser.add_argument(
-        '--context_sc', dest='context_sc', action='store_true',
-        help='Include left and right context of sound segments '
-             '(sound classes).')
-    parser.add_argument(
-        '-m', '--mincount', type=int, default=0,
-        help='Minimum count per sound correspondence and doculect.')
-    parser.add_argument(
-        '-t', '--tfidf', dest='tfidf', action='store_true',
-        help='Transform occurrence matrix with TF-IDF.')
-    parser.add_argument(
-        '--alignment_type', default='lib', choices=['lib', 'prog'],
-        help='The LingPy alignment type.')
-    parser.add_argument(
-        '--alignment_mode', default='global', choices=['global', 'dialign'],
-        help='The LingPy alignment mode.')
-    parser.add_argument(
-        '--msa_doculects', default='all', choices=['all', 'de-nl'],
-        help='The BDPA doculects to be used during multi-alignment.')
-    parser.add_argument(
-        '-v', '--verbose', type=int, default=1, choices=[0, 1, 2, 3])
-    parser.set_defaults(co_clustering=True,
-                        binary=True, tfidf=False, exclude_contextless=False,
-                        context_cv=False, context_sc=False)
-    args = parser.parse_args()
-
-    k = args.n_clusters
-    if args.verbose > 0:
-        print("`python {}`".format(" ".join(sys.argv)))
-        print("Clusters: {}".format(k))
-        print("Co-clustering: {}".format(args.co_clustering))
-        print("Features: binary: {}, min. count {}, TF-IDF: {}"
-              .format(args.binary, args.mincount, args.tfidf))
-        print("Context: none: {}, CV: {}, sound classes: {}"
-              .format(not args.exclude_contextless, args.context_cv,
-                      args.context_sc))
-        print("Alignment: {} {} ({})".format(args.alignment_mode,
-                                             args.alignment_type,
-                                             args.msa_doculects))
-        print()
-    settings = "".join(sys.argv[1:])
-
-    correspondences, all_correspondences, doculects, corres2lang2word = align(
-        no_context=not args.exclude_contextless,
-        context_cv=args.context_cv, context_sc=args.context_sc,
-        alignment_type=args.alignment_type, min_count=args.mincount,
-        alignment_mode=args.alignment_mode,
-        verbose=args.verbose)
-
-    doculect2int = {x: i for i, x in enumerate(doculects)}
-    corres2int = {x: i for i, x in enumerate(all_correspondences)}
-    n_samples = len(doculects)
-    n_features = len(all_correspondences)
-    A = np.zeros((n_samples, n_features), dtype=np.int16)
-    for i, doculect in enumerate(doculects):
-        for corres, count in correspondences[doculect].items():
-            A[i, corres2int[corres]] = count
-    if args.verbose > 0:
-        print("Matrix shape: {}".format(A.shape))
-    A_original = A.copy()
-    if args.binary:
-        A = A.astype(np.bool_)
-
-    if args.tfidf:
-        A = TfidfTransformer().fit_transform(A)
-        # x = PCA(2).fit_transform(A.todense())
-        # visualize(x[:, 0], x[:, 1], doculects, settings)
-        dist = 1 - cosine_similarity(A)
-        Z = linkage(dist, method='average')
-        fig, ax = plt.subplots()
-        dendrogram(
-            Z,
-            labels=doculects,
-            orientation='right',
-            leaf_font_size=12.)
-        fig.savefig('output/dendrogram{}.pdf'.format(settings),
-                    bbox_inches='tight')
-        # Add new cluster IDs.
-        cluster_ids = np.arange(20, 20 + Z.shape[0]).reshape(-1, 1)
-        Z = np.hstack((Z, cluster_ids))
-        print([(i, d) for i, d in enumerate(doculects)])
-        print(Z)
-        cluster2docs = {i: [d] for i, d in enumerate(doculects)}
-        for row in Z:
-            cluster2docs[row[-1]] = cluster2docs[row[0]] + cluster2docs[row[1]]
-        clusters_and_doculects = [(c, d) for c, docs in cluster2docs.items()
-                                  for d in docs]
-        k = len(cluster2docs)
-
-    if args.co_clustering:
-        # Form the normalized matrix A_n.
-        # Note that I already raise D_1, D_2 to the power of -0.5.
-        D_1 = np.zeros((n_samples, n_samples))
-        for i in range(n_samples):
-            D_1[i, i] = np.sum(A[i])
-        D_1 = linalg.sqrtm(np.linalg.inv(D_1))
-
-        D_2 = np.zeros((n_features, n_features))
-        for j in range(n_features):
-            col_sum = np.sum(A, axis=0)
-            if len(col_sum.shape) == 2 and col_sum.shape[0] == 1:
-                # Otherwise, this clashes with the tf-idf transformed matrix.
-                col_sum = np.array(col_sum).flatten()
-            D_2[j, j] = col_sum[j]
-        D_2 = linalg.sqrtm(np.linalg.inv(D_2))
-
-        A_n = D_1 @ A @ D_2
-
-        # Get the singular vectors of A_n.
-        U, S, V_T = np.linalg.svd(A_n)
-        V = np.transpose(V_T)
-
-        # Use the singular vectors to get the eigenvectors.
-        n_eigenvecs = math.ceil(math.log(k, 2))
-        if args.verbose > 1:
-            print("{} eigenvectors".format(n_eigenvecs))
-
-        Z = np.zeros((n_samples + n_features, n_eigenvecs))
-        Z[:n_samples] = D_1 @ U[:, 1:n_eigenvecs + 1]
-        Z[n_samples:] = D_2 @ V[:, 1:n_eigenvecs + 1]
-        if n_eigenvecs > 1:
-            visualize(Z[:n_samples, 0], Z[:n_samples, 1], doculects, settings)
-
-        kmeans = cluster.KMeans(k)
-        clusters = kmeans.fit_predict(Z)
-
-        clusters_and_doculects = list(zip(clusters[:n_samples], doculects))
-        if args.co_clustering:
-            clusters_and_features = list(zip(clusters[n_samples:],
-                                             all_correspondences))
-
+def print_clusters(A_original, k, clusters_and_doculects,
+                   doculect2int, corres2int, corres2lang2word,
+                   doculects, all_correspondences,
+                   clusters_and_features=None):
     for c in range(k):
         print("\nCluster {}:\n-------------------------------------".format(c))
         ds = []
@@ -208,7 +148,7 @@ if __name__ == "__main__":
             if c == cl:
                 print(d)
                 ds.append(doculect2int[d])
-        if args.co_clustering:
+        if clusters_and_features:
             fs = []
             for cl, f in clusters_and_features:
                 if c == cl:
@@ -244,3 +184,21 @@ if __name__ == "__main__":
                                                   corres2lang2word[f]))
             print()
         print('=====================================')
+
+
+if __name__ == "__main__":
+    correspondences, all_correspondences, doculects, corres2lang2word = align(
+        no_context=True, context_cv=True, context_sc=False,
+        min_count=0, alignment_type='lib', alignment_mode='global',
+        verbose=1)
+
+    corres_no_context = [c for c in all_correspondences if len(c[0]) == 1]
+    doculect2int = {x: i for i, x in enumerate(doculects)}
+
+    # TODO construct A multiple times (with/without context, minimum count)
+    # TODO call the tfidf & bsgc functions
+
+    # print_clusters(A_original, k, clusters_and_doculects,
+    #                doculect2int, corres2int, corres2lang2word,
+    #                doculects, all_correspondences,
+    #                clusters_and_features)
