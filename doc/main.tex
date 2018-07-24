@@ -368,6 +368,21 @@ log
 \end{equation*}
 % TODO src
 
+sklearn uses 
+\begin{equation*}
+\operatorname{tf-idf}(t, d) =
+\frac{\text{number of occurrences of } t \text{ in } d}
+{\text{number of tokens in } d}
+\times
+(
+log
+\frac{\text{number of documents}}
+{\text{number of documents with } t}
++ 1)
+\end{equation*}
+
+implementation by \cite{pedregosa2011scikit-learn:}
+
 \subsection{Ranking sound correspondences by importance}
 
 Ranking the sound correspondences for each cluster
@@ -414,12 +429,16 @@ Then,
 \end{equation*}
 
 \textbf{Importance}
+\citet{wieling2011bipartite}: 
 The average of representativeness and distinctiveness.
+
+We use the harmonic mean instead (penalize cases were one value is very high but the other is very low)
 
 \begin{equation*}
 \operatorname{importance}(cluster_i, corres_j) = 
-\frac{\operatorname{representativeness}(cluster_i, corres_j) + \operatorname{distinctiveness}(cluster_i, corres_j)}
-{2}
+\frac{
+2 * \operatorname{rep}(cluster_i, corres_j) * \operatorname{dist}(cluster_i, corres_j)}
+{\operatorname{rep}(cluster_i, corres_j) + \operatorname{dist}(cluster_i, corres_j)}
 \end{equation*}
 
 We additionally re-rank correspondences with the same importance score by the number of occurrences in a cluster; more frequent correspondences rank higher.
@@ -430,22 +449,20 @@ According to \citet{wieling2010hierarchical}, the values of the second right sin
 
 \section{Results}
 
-\subsection{Comparison with Glottolog tree}
-comparison with language ancestry data from \citet{hammarstrom2018glottolog}
 
-\subsection{Sound correspondences}
-comparison of highest-ranked sound correspondences
+highest-ranked sound correspondences
 (+ example words?)
-
-comparison with sound shifts (e.g. High German consonant shift)
-
-effect of context information
 
 \section{Discussion}
 
 % -- specific ---
 
-is the context beneficial?
+\subsection{Comparison with Glottolog tree}
+comparison with language ancestry data from \citet{hammarstrom2018glottolog}
+
+comparison with sound shifts (e.g. High German consonant shift)
+
+effect of context information
 
 How beneficial is co-clustering really? Why not just cluster the doculects (after TF-IDF maybe) and then apply the sound correspondence metrics? It seems like the benefit of co-clustering is mainly that $v_2$ can be used for ranking the correspondences, although this doesn't seem to be very popular among the authors who used bipartite spectral graph clustering for dialect data...
 

@@ -13,7 +13,8 @@ import sys
 
 
 def score(A, corres, cluster_docs):
-    if len(cluster_docs) == 0:
+    cluster_size = len(cluster_docs)
+    if cluster_size == 0:
         return 0, 0, 0, 0, 0
     # TODO currently binary
     occ_binary = 0
@@ -24,12 +25,11 @@ def score(A, corres, cluster_docs):
             occ_binary += 1
             occ_abs += A[i, corres]
         total += A[i].sum()
-    rep = occ_binary / len(cluster_docs)
+    rep = occ_binary / cluster_size
     rel_occ = occ_binary / np.sum(A[:, corres] > 0)
-    rel_size = len(cluster_docs) / A.shape[0]
+    rel_size = cluster_size / A.shape[0]
     dist = (rel_occ - rel_size) / (1 - rel_size)
 
-    # TODO try out harmonic mean?
     return rep, dist, (rep + dist) / 2, occ_abs / total, occ_abs
 
 
@@ -49,7 +49,7 @@ def visualize(x, y, labels, settings):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-k', '--n_clusters', type=int, default=7,
+        '-k', '--n_clusters', type=int, default=5,
         help='The number of clusters.')
     parser.add_argument(
         '-s', '--svd', dest='co_clustering', action='store_true',
@@ -134,11 +134,9 @@ if __name__ == "__main__":
         A = A.astype(np.bool_)
 
     if args.tfidf:
-        transformer = TfidfTransformer()
-        A = transformer.fit_transform(A)
-        print(A.shape)
-        x = PCA(2).fit_transform(A.todense())
-        visualize(x[:, 0], x[:, 1], doculects, settings)
+        A = TfidfTransformer().fit_transform(A)
+        # x = PCA(2).fit_transform(A.todense())
+        # visualize(x[:, 0], x[:, 1], doculects, settings)
         dist = 1 - cosine_similarity(A)
         Z = linkage(dist, method='average')
         fig, ax = plt.subplots()
@@ -149,20 +147,14 @@ if __name__ == "__main__":
             leaf_font_size=12.)
         fig.savefig('output/dendrogram{}.pdf'.format(settings),
                     bbox_inches='tight')
-        print(doculects)
-        print(Z)
         # Add new cluster IDs.
         cluster_ids = np.arange(20, 20 + Z.shape[0]).reshape(-1, 1)
         Z = np.hstack((Z, cluster_ids))
+        print([(i, d) for i, d in enumerate(doculects)])
+        print(Z)
         cluster2docs = {i: [d] for i, d in enumerate(doculects)}
         for row in Z:
             cluster2docs[row[-1]] = cluster2docs[row[0]] + cluster2docs[row[1]]
-        for c in sorted(list(cluster2docs.items())):
-            print(c)
-        # clusters_and_doculects = []
-        # for c, docs in cluster2docs.items():
-        #     for d in docs:
-        #         clusters_and_doculects.append((c, d))
         clusters_and_doculects = [(c, d) for c, docs in cluster2docs.items()
                                   for d in docs]
         k = len(cluster2docs)
@@ -246,9 +238,9 @@ if __name__ == "__main__":
                 except KeyError:
                     pass
             if len(ds) == 0:
-                # Bipartite spectral graph clustering: clusters can consists of
+                # Bipartite spectral graph clustering: clusters can consist of
                 # only correspondences.
-                print("{} doculects: {}".format(len(corres2lang2word[f]),
-                                                corres2lang2word[f].keys()))
+                print("{} doculect(s): {}".format(len(corres2lang2word[f]),
+                                                  corres2lang2word[f]))
             print()
         print('=====================================')
