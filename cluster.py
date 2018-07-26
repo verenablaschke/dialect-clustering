@@ -2,32 +2,49 @@ from align import align
 from scipy import linalg
 from scipy.cluster.hierarchy import dendrogram, linkage
 from sklearn import cluster
-from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import math
 import matplotlib.pyplot as plt
 import numpy as np
 import pickle
-import argparse
-import sys
 
 
 def construct_A(all_correspondences, correspondences, doculects,
                 min_count=0, binary=False):
-    corres2int = {x: i for i, x in enumerate(all_correspondences)}
+    # Remove rare correspondences that don't meet the min_count requirement.
+    corres2int = {}
+    i = 0
+    for d in correspondences.values():
+        for k, v in d.items():
+            if k in corres2int:
+                continue
+            if k not in all_correspondences:
+                continue
+            if v >= min_count:
+                corres2int[k] = i
+                i += 1
+
     n_samples = len(doculects)
-    n_features = len(all_correspondences)
+    n_features = len(corres2int)
     A = np.zeros((n_samples, n_features), dtype=np.int16)
     for i, doculect in enumerate(doculects):
         for corres, count in correspondences[doculect].items():
-            if count >= min_count:
+            if corres in all_correspondences and count >= min_count:
                 A[i, corres2int[corres]] = count
+
     print("Matrix shape: {}".format(A.shape))
     A_original = A.copy()
     if binary:
         A = A.astype(np.bool_)
-    return A, A_original
+
+    if min_count == 0:
+        all_corres = all_correspondences
+    else:
+        all_corres = sorted(corres2int.items(), key=lambda x: x[1])
+        all_corres = [k for (k, v) in all_corres]
+    print(all_corres[:5])  # TODO del
+    return A, A_original, corres2int, all_corres
 
 
 def tfidf_hierarchical(A, doculects, context):
@@ -47,7 +64,7 @@ def tfidf_hierarchical(A, doculects, context):
     cluster_ids = np.arange(n_samples, n_samples + Z.shape[0]) \
                     .reshape(-1, 1)
     Z = np.hstack((Z, cluster_ids))
-    with open('output/dendrogram-{}.pickle', 'w', encoding='utf8') as f:
+    with open('output/dendrogram-{}.pickle'.format(context), 'wb') as f:
         pickle.dump(Z, f)
     cluster2docs = {i: [d] for i, d in enumerate(doculects)}
     for row in Z:
@@ -68,12 +85,9 @@ def bsgc(A, k, doculects, all_correspondences, context):
     D_1 = linalg.sqrtm(np.linalg.inv(D_1))
 
     D_2 = np.zeros((n_features, n_features))
+    col_sum = np.sum(A, axis=0)
+    print(n_features, len(col_sum), D_2.shape)
     for j in range(n_features):
-        col_sum = np.sum(A, axis=0)
-        if len(col_sum.shape) == 2 and col_sum.shape[0] == 1:
-            # TODO delete this? seems unnecessary now
-            # Otherwise, this clashes with the tf-idf transformed matrix.
-            col_sum = np.array(col_sum).flatten()
         D_2[j, j] = col_sum[j]
     D_2 = linalg.sqrtm(np.linalg.inv(D_2))
 
@@ -85,8 +99,7 @@ def bsgc(A, k, doculects, all_correspondences, context):
 
     # Use the singular vectors to get the eigenvectors.
     n_eigenvecs = math.ceil(math.log(k, 2))
-    if args.verbose > 1:
-        print("{} eigenvectors".format(n_eigenvecs))
+    print("{} eigenvectors".format(n_eigenvecs))
 
     Z = np.zeros((n_samples + n_features, n_eigenvecs))
     Z[:n_samples] = D_1 @ U[:, 1:n_eigenvecs + 1]
@@ -137,16 +150,17 @@ def visualize(x, y, labels, context):
             f.write("{},{},{}\n".format(label, x_i, y_i))
 
 
-def print_clusters(A_original, k, clusters_and_doculects,
+def print_clusters(filename, A_original, k, clusters_and_doculects,
                    doculect2int, corres2int, corres2lang2word,
                    doculects, all_correspondences,
                    clusters_and_features=None):
+    fo = open(filename, 'w', encoding='utf8')
     for c in range(k):
-        print("\nCluster {}:\n-------------------------------------".format(c))
+        fo.write("\nCluster {}:\n--------------------------------\n".format(c))
         ds = []
         for cl, d in clusters_and_doculects:
             if c == cl:
-                print(d)
+                fo.write(d + "\n")
                 ds.append(doculect2int[d])
         if clusters_and_features:
             fs = []
@@ -165,25 +179,29 @@ def print_clusters(A_original, k, clusters_and_doculects,
                     fs.append((imp * 100, rep * 100, dist * 100,
                                rel * 100, abs_n, f))
         fs = sorted(fs, reverse=True)
-        print('-------')
+        fo.write("-------\n")
         for j, (i, r, d, rel, a, f) in enumerate(fs):
             if j > 10:
-                print("and {} more".format(len(fs) - j))
+                fo.write("and {} more\n".format(len(fs) - j))
                 break
-            print("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})\t{} ({:4.4f})"
-                  .format(f, i, r, d, a, rel))
+            fo.write("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})"
+                     "\t{} ({:4.4f})\n".format(f, i, r, d, a, rel))
             for d in ds:
                 try:
-                    print(doculects[d], corres2lang2word[f][doculects[d]])
+                    fo.write("{}: {}\n"
+                             .format(doculects[d],
+                                     corres2lang2word[f][doculects[d]]))
                 except KeyError:
                     pass
             if len(ds) == 0:
                 # Bipartite spectral graph clustering: clusters can consist of
                 # only correspondences.
-                print("{} doculect(s): {}".format(len(corres2lang2word[f]),
-                                                  corres2lang2word[f]))
-            print()
-        print('=====================================')
+                fo.write("{} doculect(s): {}\n"
+                         .format(len(corres2lang2word[f]),
+                                 corres2lang2word[f]))
+            fo.write("\n")
+        fo.write("=====================================\n")
+    fo.close()
 
 
 if __name__ == "__main__":
@@ -195,10 +213,52 @@ if __name__ == "__main__":
     corres_no_context = [c for c in all_correspondences if len(c[0]) == 1]
     doculect2int = {x: i for i, x in enumerate(doculects)}
 
-    # TODO construct A multiple times (with/without context, minimum count)
-    # TODO call the tfidf & bsgc functions
+    print("Constructing features for tfidf-context.")
+    A, A_original, corres2int, all_corres = construct_A(all_correspondences,
+                                                        correspondences,
+                                                        doculects)
+    print("Creating dendrogram.")
+    k, clusters_and_doculects = tfidf_hierarchical(A, doculects,
+                                                   context='context')
+    print_clusters("output/tfidf-context.txt", A_original, k,
+                   clusters_and_doculects, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres)
 
-    # print_clusters(A_original, k, clusters_and_doculects,
-    #                doculect2int, corres2int, corres2lang2word,
-    #                doculects, all_correspondences,
-    #                clusters_and_features)
+    print("Constructing features for tfidf-nocontext.")
+    A, A_original, corres2int, all_corres = construct_A(corres_no_context,
+                                                        correspondences,
+                                                        doculects)
+    k, clusters_and_doculects = tfidf_hierarchical(A, doculects,
+                                                   context='nocontext')
+    print_clusters("output/tfidf-nocontext.txt", A_original, k,
+                   clusters_and_doculects, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres)
+
+    k = 5
+    print("Constructing features for bsgc-context.")
+    A, A_original, corres2int, all_corres = construct_A(all_correspondences,
+                                                        correspondences,
+                                                        doculects,
+                                                        min_count=3,
+                                                        binary=True)
+    clusters_and_doculects, clusters_and_features = bsgc(A, k, doculects,
+                                                         all_corres,
+                                                         context='context')
+    print_clusters("output/bsgc-context.txt", A_original, k,
+                   clusters_and_doculects, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres,
+                   clusters_and_features)
+
+    print("Constructing features for bsgc-nocontext.")
+    A, A_original, corres2int, all_corres = construct_A(corres_no_context,
+                                                        correspondences,
+                                                        doculects,
+                                                        min_count=3,
+                                                        binary=True)
+    clusters_and_doculects, clusters_and_features = bsgc(A, k, doculects,
+                                                         all_corres,
+                                                         context='nocontext')
+    print_clusters("output/bsgc-nocontext.txt", A_original, k,
+                   clusters_and_doculects, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres,
+                   clusters_and_features)
