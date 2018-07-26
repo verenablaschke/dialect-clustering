@@ -5,7 +5,7 @@ from collections import Counter
 import numpy as np
 
 
-def align_concept(doculects, doculects_cwg, corres2lang2word=None,
+def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
                   reference_doculect='ProtoGermanic',
                   alignment_type='lib', alignment_mode='global',
                   no_context=True, context_cv=False, context_sc=False,
@@ -53,10 +53,9 @@ def align_concept(doculects, doculects_cwg, corres2lang2word=None,
         for line in msa_cwg:
             for g in gap_cols:
                 del line[g]
-    if verbose > 2:
-        for line, label in zip(msa_cwg, labels_cwg):
-            print("{:15s} {}".format(label, '\t'.join(line)))
-        print()
+    for line, label in zip(msa_cwg, labels_cwg):
+        f.write("{:15s} {}\n".format(label, '\t'.join(line)))
+    f.write("\n")
     alignments = msa_cwg
     labels = labels_cwg
 
@@ -119,7 +118,7 @@ def align_concept(doculects, doculects_cwg, corres2lang2word=None,
             except KeyError:
                 try:
                     corres2lang2word[c][d] = [doculects[d]]
-                except KeyError: 
+                except KeyError:
                     corres2lang2word[c] = {d: [doculects[d]]}
     return corres, corres2lang2word
 
@@ -137,6 +136,7 @@ def align(reference_doculect='ProtoGermanic',
           alignment_type='lib', alignment_mode='global', min_count=0,
           no_context=True, context_cv=False, context_sc=False,
           verbose=1):
+    f = open('output/alignments.txt', 'w', encoding='utf8')
     if verbose > 0:
         print('Reading the data files.')
     entries, doculects_cwg, doculects_add = get_samples()
@@ -148,9 +148,8 @@ def align(reference_doculect='ProtoGermanic',
         print('Aligning the entries.')
     corres2lang2word = None
     for concept, doculects in entries.items():
-        if verbose > 2:
-            print(concept)
-        corres, corres2lang2word = align_concept(doculects, doculects_cwg,
+        f.write("{}\n".format(concept))
+        corres, corres2lang2word = align_concept(doculects, doculects_cwg, f,
             corres2lang2word=corres2lang2word,
             reference_doculect=reference_doculect,
             alignment_type=alignment_type,
@@ -164,6 +163,7 @@ def align(reference_doculect='ProtoGermanic',
                 correspondences[doculect].update(tallies)
             except KeyError:
                 correspondences[doculect] = tallies
+    f.close()
 
     if min_count or verbose > 3:
         all_correspondences_old = all_correspondences.keys()
