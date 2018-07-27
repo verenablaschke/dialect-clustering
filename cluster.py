@@ -97,7 +97,7 @@ def bsgc(A, k, doculects, all_correspondences, context):
 
     # Use the singular vectors to get the eigenvectors.
     n_eigenvecs = math.ceil(math.log(k, 2))
-    print("{} eigenvectors".format(n_eigenvecs))
+    # print("{} eigenvector(s)".format(n_eigenvecs))
 
     Z = np.zeros((n_samples + n_features, n_eigenvecs))
     Z[:n_samples] = D_1 @ U[:, 1:n_eigenvecs + 1]
@@ -107,11 +107,133 @@ def bsgc(A, k, doculects, all_correspondences, context):
 
     kmeans = cluster.KMeans(k)
     clusters = kmeans.fit_predict(Z)
-
+    # print(sorted(list(zip(clusters[:n_samples], Z[:n_samples], doculects))))
+    # print(sorted(list(zip(clusters[n_samples:], Z[n_samples:], all_correspondences))))
     clusters_and_doculects = list(zip(clusters[:n_samples], doculects))
     clusters_and_features = list(zip(clusters[n_samples:],
                                      all_correspondences))
     return clusters_and_doculects, clusters_and_features
+
+
+def split_features(A, doculects, all_correspondences,
+                   clusters_and_doculects, clusters_and_features):
+    rows_0 = []
+    rows_1 = []
+    docs_0 = []
+    docs_1 = []
+    for i, (c, d) in enumerate(clusters_and_doculects):
+        if c == 0:
+            rows_0.append(i)
+            docs_0.append(d)
+        else:
+            rows_1.append(i)
+            docs_1.append(d)
+    print(rows_0)
+    print(docs_0)
+    print(rows_1)
+    print(docs_1)
+    cols_0 = []
+    cols_1 = []
+    corres_0 = []
+    corres_1 = []
+    for i, (c, f) in enumerate(clusters_and_features):
+        if c == 0:
+            cols_0.append(i)
+            corres_0.append(f)
+        else:
+            cols_1.append(i)
+            corres_1.append(f)
+
+    A_0 = None
+    if docs_0 and corres_0:
+        A_0 = A[rows_0]
+        A_0 = A_0[:, cols_0]
+        non0 = np.nonzero(A_0)
+        cols = set(non0[1])
+        rows = set(non0[0])
+        print(0)
+        rows_to_move = []
+        docs_to_move = []
+        for c in range(A_0.shape[0]):
+            if c not in rows:
+                print("!", c, docs_0[c])
+                rows_to_move.append(rows_0[c])
+                docs_to_move.append(docs_0[c])
+        cols_to_move = []
+        corres_to_move = []
+        for c in range(A_0.shape[1]):
+            if c not in cols:
+                print("!", c, corres_0[c])
+                cols_to_move.append(cols_0[c])
+                corres_to_move.append(corres_0[c])
+        for r in rows_to_move:
+            rows_0.remove(r)
+            rows_1.append(r)
+        for d in docs_to_move:
+            docs_0.remove(d)
+            docs_1.append(d)
+        for c in cols_to_move:
+            cols_0.remove(c)
+            cols_1.append(c)
+        for c in corres_to_move:
+            corres_0.remove(c)
+            corres_1.append(c)
+
+    A_1 = None
+    if docs_1 and corres_1:
+        A_1 = A[rows_1]
+        A_1 = A_1[:, cols_1]
+        non0 = np.nonzero(A_1)
+        cols = set(non0[1])
+        rows = set(non0[0])
+        print(1)
+        rows_to_move = []
+        docs_to_move = []
+        for c in range(A_1.shape[0]):
+            if c not in rows:
+                print("!", c, docs_1[c])
+                rows_to_move.append(rows_1[c])
+                docs_to_move.append(docs_1[c])
+        cols_to_move = []
+        corres_to_move = []
+        for c in range(A_1.shape[1]):
+            if c not in cols:
+                print("!", c, corres_1[c])
+                cols_to_move.append(cols_1[c])
+                corres_to_move.append(corres_1[c])
+        for r in rows_to_move:
+            rows_1.remove(r)
+            rows_0.append(r)
+        for d in docs_to_move:
+            docs_1.remove(d)
+            docs_0.append(d)
+        for c in cols_to_move:
+            cols_1.remove(c)
+            cols_0.append(c)
+        for c in corres_to_move:
+            corres_1.remove(c)
+            corres_0.append(c)
+
+        A_0 = A[rows_0]
+        A_0 = A_0[:, cols_0]
+        A_1 = A[rows_1]
+        A_1 = A_1[:, cols_1]
+        print(A_0.shape, A_1.shape)
+    return (A_0, docs_0, corres_0), (A_1, docs_1, corres_1)
+
+
+def bsgc_hierarchical(A, doculects, all_correspondences, context):
+    clusters_and_doculects, clusters_and_features = bsgc(A, 2, doculects,
+                                                         all_correspondences,
+                                                         context)
+    print(0, len([x for x in clusters_and_features if x[0] == 0]), 'correspondences')
+    print(0, len([x for x in clusters_and_doculects if x[0] == 0]), 'doculects')
+    print(1, len([x for x in clusters_and_features if x[0] == 1]), 'correspondences')
+    print(1, len([x for x in clusters_and_doculects if x[0] == 1]), 'doculects')
+    new_features = split_features(A, doculects, all_correspondences, clusters_and_doculects, clusters_and_features)
+    for (A, docs, corres) in new_features:
+        if len(docs) > 2:
+            bsgc_hierarchical(A, docs, corres, context)
 
 
 def score(A, corres, cluster_docs):
@@ -210,59 +332,55 @@ if __name__ == "__main__":
     corres_no_context = [c for c in all_correspondences if len(c[0]) == 1]
     doculect2int = {x: i for i, x in enumerate(doculects)}
 
-    print("Constructing features for tfidf-context.")
-    A, A_original, corres2int, all_corres = construct_A(all_correspondences,
-                                                        correspondences,
-                                                        doculects)
-    print("Creating dendrogram.")
-    k, clusters_and_doculects = tfidf_hierarchical(A, doculects,
-                                                   context='context')
-    print("Scoring.")
-    print_clusters("output/tfidf-context.txt", A_original, k,
-                   clusters_and_doculects, doculect2int, corres2int,
-                   corres2lang2word, doculects, all_corres)
+    # print("Constructing features for tfidf-context.")
+    # A, A_original, corres2int, all_corres = construct_A(all_correspondences,
+    #                                                     correspondences,
+    #                                                     doculects)
+    # print("Creating dendrogram.")
+    # k, clusters_and_doculects = tfidf_hierarchical(A, doculects,
+    #                                                context='context')
+    # print("Scoring.")
+    # print_clusters("output/tfidf-context.txt", A_original, k,
+    #                clusters_and_doculects, doculect2int, corres2int,
+    #                corres2lang2word, doculects, all_corres)
 
-    print("\nConstructing features for tfidf-nocontext.")
-    A, A_original, corres2int, all_corres = construct_A(corres_no_context,
-                                                        correspondences,
-                                                        doculects)
-    print("Creating dendrogram.")
-    k, clusters_and_doculects = tfidf_hierarchical(A, doculects,
-                                                   context='nocontext')
-    print("Scoring.")
-    print_clusters("output/tfidf-nocontext.txt", A_original, k,
-                   clusters_and_doculects, doculect2int, corres2int,
-                   corres2lang2word, doculects, all_corres)
+    # print("\nConstructing features for tfidf-nocontext.")
+    # A, A_original, corres2int, all_corres = construct_A(corres_no_context,
+    #                                                     correspondences,
+    #                                                     doculects)
+    # print("Creating dendrogram.")
+    # k, clusters_and_doculects = tfidf_hierarchical(A, doculects,
+    #                                                context='nocontext')
+    # print("Scoring.")
+    # print_clusters("output/tfidf-nocontext.txt", A_original, k,
+    #                clusters_and_doculects, doculect2int, corres2int,
+    #                corres2lang2word, doculects, all_corres)
 
-    k = 5
-    print("\nConstructing features for bsgc-context.")
-    A, A_original, corres2int, all_corres = construct_A(all_correspondences,
-                                                        correspondences,
-                                                        doculects,
-                                                        # min_count=3,
-                                                        binary=True)
-    print("Clustering.")
-    clusters_and_doculects, clusters_and_features = bsgc(A, k, doculects,
-                                                         all_corres,
-                                                         context='context')
-    print("Scoring.")
-    print_clusters("output/bsgc-context.txt", A_original, k,
-                   clusters_and_doculects, doculect2int, corres2int,
-                   corres2lang2word, doculects, all_corres,
-                   clusters_and_features)
+    # k = 5
+    # print("\nConstructing features for bsgc-context.")
+    # A, A_original, corres2int, all_corres = construct_A(all_correspondences,
+    #                                                     correspondences,
+    #                                                     doculects,
+    #                                                     binary=True)
+    # print("Clustering.")
+    # clusters_and_doculects, clusters_and_features = bsgc(A, k, doculects,
+    #                                                      all_corres,
+    #                                                      context='context')
+    # print("Scoring.")
+    # print_clusters("output/bsgc-context.txt", A_original, k,
+    #                clusters_and_doculects, doculect2int, corres2int,
+    #                corres2lang2word, doculects, all_corres,
+    #                clusters_and_features)
 
     print("\nConstructing features for bsgc-nocontext.")
     A, A_original, corres2int, all_corres = construct_A(corres_no_context,
                                                         correspondences,
                                                         doculects,
-                                                        # min_count=3,
                                                         binary=True)
     print("Clustering.")
-    clusters_and_doculects, clusters_and_features = bsgc(A, k, doculects,
-                                                         all_corres,
-                                                         context='nocontext')
-    print("Scoring.")
-    print_clusters("output/bsgc-nocontext.txt", A_original, k,
-                   clusters_and_doculects, doculect2int, corres2int,
-                   corres2lang2word, doculects, all_corres,
-                   clusters_and_features)
+    bsgc_hierarchical(A, doculects, all_corres, context='nocontext')
+    # print("Scoring.")
+    # print_clusters("output/bsgc-nocontext.txt", A_original, k,
+    #                clusters_and_doculects, doculect2int, corres2int,
+    #                corres2lang2word, doculects, all_corres,
+    #                clusters_and_features)
