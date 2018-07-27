@@ -85,19 +85,19 @@ def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
                     cur_right = cur[c + offset]
                     offset += 1
                 if context_cv:
-                    ref_left = (seg2class(ref_left, sca=False), ref_i)
-                    cur_left = (seg2class(cur_left, sca=False), cur_i)
-                    ref_right = (ref_i, seg2class(ref_right, sca=False))
-                    cur_right = (cur_i, seg2class(cur_right, sca=False))
-                    corres_i.update([(ref_left, cur_left),
-                                     (ref_right, cur_right)])
+                    r_left = (seg2class(ref_left, sca=False), ref_i)
+                    c_left = (seg2class(cur_left, sca=False), cur_i)
+                    r_right = (ref_i, seg2class(ref_right, sca=False))
+                    c_right = (cur_i, seg2class(cur_right, sca=False))
+                    corres_i.update([(r_left, c_left),
+                                     (r_right, c_right)])
                 if context_sc:
-                    ref_left = (seg2class(ref_left, sca=True), ref_i)
-                    cur_left = (seg2class(cur_left, sca=True), cur_i)
-                    ref_right = (ref_i, seg2class(ref_right, sca=True))
-                    cur_right = (cur_i, seg2class(cur_right, sca=True))
-                    corres_i.update([(ref_left, cur_left),
-                                     (ref_right, cur_right)])
+                    r_left = (seg2class(ref_left, sca=True), ref_i)
+                    c_left = (seg2class(cur_left, sca=True), cur_i)
+                    r_right = (ref_i, seg2class(ref_right, sca=True))
+                    c_right = (cur_i, seg2class(cur_right, sca=True))
+                    corres_i.update([(r_left, c_left),
+                                     (r_right, c_right)])
         # End character-level correspondence extraction.
 
         d = labels_cwg[i]

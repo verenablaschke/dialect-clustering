@@ -204,7 +204,7 @@ def print_clusters(filename, A_original, k, clusters_and_doculects,
 
 if __name__ == "__main__":
     correspondences, all_correspondences, doculects, corres2lang2word = align(
-        no_context=True, context_cv=True, context_sc=False,
+        no_context=True, context_cv=True, context_sc=True,
         min_count=3, alignment_type='lib', alignment_mode='global',
         verbose=1)
 
