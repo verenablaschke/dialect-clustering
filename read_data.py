@@ -27,6 +27,7 @@ def clean_transcription(word):
     # Change LATIN SMALL LETTER C + COMBINING CEDILLA
     # to LATIN SMALL LETTER C WITH CEDILLA so LingPy deals with it properly.
     word = word.replace('ç', 'ç')
+    word = word.replace('g', 'ɡ')
     affricates = {'ts': 't͡s', 'dz': 'd͡z', 'tʃ': 't͡ʃ', 'dʒ': 'd͡ʒ',
                   'pf': 'p͡f', 'kx': 'k͡x'}
     for k, v in affricates.items():

@@ -85,7 +85,6 @@ def bsgc(A, k, doculects, all_correspondences, context):
 
     D_2 = np.zeros((n_features, n_features))
     col_sum = np.sum(A, axis=0)
-    print(n_features, len(col_sum), D_2.shape)
     for j in range(n_features):
         D_2[j, j] = col_sum[j]
     D_2 = linalg.sqrtm(np.linalg.inv(D_2))
@@ -173,13 +172,13 @@ def print_clusters(filename, A_original, k, clusters_and_doculects,
             for f in all_correspondences:
                 rep, dist, imp, rel, abs_n = score(A_original,
                                                    corres2int[f], ds)
-                if imp > 0:
+                if imp > 0 or (rep > 0.9 and len(ds) == len(doculects)):
                     fs.append((imp * 100, rep * 100, dist * 100,
                                rel * 100, abs_n, f))
         fs = sorted(fs, reverse=True)
         fo.write("-------\n")
         for j, (i, r, d, rel, a, f) in enumerate(fs):
-            if j > 10 or i < 80:
+            if j > 10 and i < 100:
                 fo.write("and {} more\n".format(len(fs) - j))
                 break
             fo.write("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})"
