@@ -118,7 +118,6 @@ def score(A, corres, cluster_docs):
     cluster_size = len(cluster_docs)
     if cluster_size == 0:
         return 0, 0, 0, 0, 0
-    # TODO currently binary
     occ_binary = 0
     occ_abs = 0
     total = 0
@@ -131,8 +130,11 @@ def score(A, corres, cluster_docs):
     rel_occ = occ_binary / np.sum(A[:, corres] > 0)
     rel_size = cluster_size / A.shape[0]
     dist = (rel_occ - rel_size) / (1 - rel_size)
+    imp = 2 * rep * dist / (rep + dist)
+    if dist < 0:
+        imp = 0
 
-    return rep, dist, (rep + dist) / 2, occ_abs / total, occ_abs
+    return rep, dist, imp, occ_abs
 
 
 def visualize(x, y, labels, context):
@@ -164,25 +166,23 @@ def print_clusters(filename, A_original, k, clusters_and_doculects,
         if clusters_and_features:
             for cl, f in clusters_and_features:
                 if c == cl:
-                    rep, dist, imp, rel, abs_n = score(A_original,
-                                                       corres2int[f], ds)
-                    fs.append((imp * 100, rep * 100, dist * 100,
-                               rel * 100, abs_n, f))
+                    rep, dist, imp, abs_n = score(A_original,
+                                                  corres2int[f], ds)
+                    fs.append((imp * 100, rep * 100, dist * 100, abs_n, f))
         else:
             for f in all_correspondences:
-                rep, dist, imp, rel, abs_n = score(A_original,
-                                                   corres2int[f], ds)
+                rep, dist, imp, abs_n = score(A_original,
+                                              corres2int[f], ds)
                 if imp > 0 or (rep > 0.9 and len(ds) == len(doculects)):
-                    fs.append((imp * 100, rep * 100, dist * 100,
-                               rel * 100, abs_n, f))
+                    fs.append((imp * 100, rep * 100, dist * 100, abs_n, f))
         fs = sorted(fs, reverse=True)
         fo.write("-------\n")
-        for j, (i, r, d, rel, a, f) in enumerate(fs):
+        for j, (i, r, d, a, f) in enumerate(fs):
             if j > 10 and i < 100:
                 fo.write("and {} more\n".format(len(fs) - j))
                 break
             fo.write("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})"
-                     "\t{} ({:4.4f})\n".format(f, i, r, d, a, rel))
+                     "\t({} times)\n".format(f, i, r, d, a))
             for d in ds:
                 try:
                     fo.write("{}: {}\n"
