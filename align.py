@@ -2,7 +2,6 @@ from lingpy.align.multiple import Multiple
 from lingpy.sequence.sound_classes import token2class
 from read_data import get_samples
 from collections import Counter
-import numpy as np
 
 
 def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
@@ -43,72 +42,65 @@ def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
         if label in doculects_cwg or label == reference_doculect:
             labels_cwg.append(label)
             msa_cwg.append(line)
-
-    # Remove all-gap columns that might remain.
-    gap_cols = np.nonzero(np.all(np.array(msa_cwg) == '-', axis=0))[0]
-    if len(gap_cols) > 0:
-        if verbose > 3:
-            print("Removing columns", gap_cols)
-        gap_cols = sorted(gap_cols, reverse=True)
-        for line in msa_cwg:
-            for g in gap_cols:
-                del line[g]
-    for line, label in zip(msa_cwg, labels_cwg):
-        f.write("{:15s} {}\n".format(label, '\t'.join(line)))
+            f.write("{:15s} {}\n".format(label, '\t'.join(line)))
     f.write("\n")
-    alignments = msa_cwg
-    labels = labels_cwg
 
-    if context_cv:
-        ref = ['#'] + alignments[0] + ['#']
-        ref_segments_cv = []
-        for j in range(1, len(ref) - 1):
-            r_prev = seg2class(ref[j - 1])
-            r = ref[j]
-            r_next = seg2class(ref[j + 1])
-            ref_segments_cv.append((r_prev, r))
-            ref_segments_cv.append((r, r_next))
-    if context_sc:
-        ref = ['#'] + alignments[0] + ['#']
-        ref_segments_sc = []
-        for j in range(1, len(ref) - 1):
-            r_prev = seg2class(ref[j - 1], sca=True)
-            r = ref[j]
-            r_next = seg2class(ref[j + 1], sca=True)
-            ref_segments_sc.append((r_prev, r))
-            ref_segments_sc.append((r, r_next))
-
+    # Padding in case context_cv or context_sc is True.
+    ref = ['#'] + msa_cwg[0] + ['#']
     corres = {}
     if corres2lang2word is None:
         corres2lang2word = {}
-    for i in range(1, len(labels)):
+    for i in range(1, len(labels_cwg)):
         corres_i = Counter()
+        cur = ['#'] + msa_cwg[i] + ['#']
 
-        if no_context:
-            c = zip(alignments[0], alignments[i])
-            corres_i.update([(tuple([x[0]]), tuple([x[1]])) for x in c])
+        # Extract the sound correspondences from the sequences.
+        for c in range(1, len(ref) - 1):
+            ref_i = ref[c]
+            cur_i = cur[c]
+            if ref_i == cur_i == '-':
+                # Ignore gap-gap alignments.
+                continue
+            if no_context:
+                corres_i.update([(tuple([ref_i]), tuple([cur_i]))])
+            if context_cv or context_sc:
+                ref_left = ref[c - 1]
+                cur_left = cur[c - 1]
+                offset = 2
+                while ref_left == cur_left == '-':
+                    # If the context is a gap for both doculects, get the
+                    # nearest left context that is not a gap for at least one
+                    # of the doculects.
+                    ref_left = ref[c - offset]
+                    cur_left = cur[c - offset]
+                    offset += 1
+                ref_right = ref[c + 1]
+                cur_right = cur[c + 1]
+                offset = 2
+                while ref_right == cur_right == '-':
+                    # If the context is a gap for both doculects, get the
+                    # nearest right context that is not a gap for at least one
+                    # of the doculects.
+                    ref_right = ref[c + offset]
+                    cur_right = cur[c + offset]
+                    offset += 1
+                if context_cv:
+                    ref_left = (seg2class(ref_left, sca=False), ref_i)
+                    cur_left = (seg2class(cur_left, sca=False), cur_i)
+                    ref_right = (ref_i, seg2class(ref_right, sca=False))
+                    cur_right = (cur_i, seg2class(cur_right, sca=False))
+                    corres_i.update([(ref_left, cur_left),
+                                     (ref_right, cur_right)])
+                if context_sc:
+                    ref_left = (seg2class(ref_left, sca=True), ref_i)
+                    cur_left = (seg2class(cur_left, sca=True), cur_i)
+                    ref_right = (ref_i, seg2class(ref_right, sca=True))
+                    cur_right = (cur_i, seg2class(cur_right, sca=True))
+                    corres_i.update([(ref_left, cur_left),
+                                     (ref_right, cur_right)])
+        # End character-level correspondence extraction.
 
-        ref_segments = []
-        sca_model = []
-        if context_cv:
-            ref_segments.append(ref_segments_cv)
-            sca_model.append(False)
-        if context_sc:
-            ref_segments.append(ref_segments_sc)
-            sca_model.append(True)
-        for ref_segs, sca in zip(ref_segments, sca_model):
-            cur = ['#'] + alignments[i] + ['#']
-            cur_segments = []
-            for j in range(1, len(ref) - 1):
-                c_prev = seg2class(cur[j - 1], sca=sca)
-                c = cur[j]
-                c_next = seg2class(cur[j + 1], sca=sca)
-                cur_segments.append((c_prev, c))
-                cur_segments.append((c, c_next))
-            c = zip(ref_segs, cur_segments)
-            corres_i.update([x for x in c])
-
-        d = labels[i]
+        d = labels_cwg[i]
         corres[d] = corres_i
         for c in corres_i:
             try:
