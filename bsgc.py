@@ -51,21 +51,13 @@ def split_features(A, doculects, all_correspondences,
     rows = [[], []]
     docs = [[], []]
     for i, (c, d) in enumerate(clusters_and_doculects):
-        if c == 0:
-            rows[0].append(i)
-            docs[0].append(d)
-        else:
-            rows[1].append(i)
-            docs[1].append(d)
+        rows[c].append(i)
+        docs[c].append(d)
     cols = [[], []]
     corres = [[], []]
     for i, (c, f) in enumerate(clusters_and_features):
-        if c == 0:
-            cols[0].append(i)
-            corres[0].append(f)
-        else:
-            cols[1].append(i)
-            corres[1].append(f)
+        cols[c].append(i)
+        corres[c].append(f)
 
     # Occasionally, sound correspondences whose eigenvalues are close to the
     # kmeans decision boundary end up in the "wrong" cluster in that they do
@@ -77,7 +69,6 @@ def split_features(A, doculects, all_correspondences,
             A_new = A[rows[cur]]
             A_new = A_new[:, cols[cur]]
             non0 = np.nonzero(A_new)
-            cols_non0 = set(non0[1])
             rows_non0 = set(non0[0])
             rows_to_move = []
             docs_to_move = []
@@ -88,6 +79,7 @@ def split_features(A, doculects, all_correspondences,
                                                                docs[other]))
                     rows_to_move.append(rows[cur][c])
                     docs_to_move.append(docs[cur][c])
+            cols_non0 = set(non0[1])
             cols_to_move = []
             corres_to_move = []
             for c in range(A_new.shape[1]):
@@ -132,4 +124,4 @@ def bsgc_hierarchical(A, doculects, all_correspondences):
     clusters = bsgc_recursive(A, doculects, all_correspondences)
     clusters = sorted(clusters.items(), key=lambda x: len(x[0]))
     clusters = [c for c in clusters if len(c[0]) > 0]
-    return clusters
+    return [c[0] for c in clusters], [c[1] for c in clusters]

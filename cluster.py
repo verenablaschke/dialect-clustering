@@ -66,9 +66,8 @@ def tfidf_hierarchical(A, doculects, context):
     cluster2docs = {i: [d] for i, d in enumerate(doculects)}
     for row in Z:
         cluster2docs[row[-1]] = cluster2docs[row[0]] + cluster2docs[row[1]]
-    clusters_and_doculects = [(c, d) for c, docs in cluster2docs.items()
-                              for d in docs]
-    return len(cluster2docs), clusters_and_doculects
+    clusters_and_doculects = [docs for _, docs in cluster2docs.items()]
+    return clusters_and_doculects
 
 
 def score(A, corres, cluster_docs):
@@ -94,38 +93,21 @@ def score(A, corres, cluster_docs):
     return rep, dist, imp, occ_abs
 
 
-def visualize(x, y, labels, context):
-    fig, ax = plt.subplots()
-    ax.scatter(x, y)
-    for i, label in enumerate(labels):
-        ax.annotate(label, (x[i], y[i]))
-    fig.savefig('output/scatter-{}.pdf'.format(context), bbox_inches='tight')
-    with open('output/scatter-{}.txt'.format(context),
-              'w', encoding='utf8') as f:
-        f.write("Place,x,y")
-        for x_i, y_i, label in zip(x, y, labels):
-            f.write("{},{},{}\n".format(label, x_i, y_i))
-
-
-def print_clusters(filename, A_original, k, clusters_and_doculects,
-                   doculect2int, corres2int, corres2lang2word,
-                   doculects, all_correspondences,
-                   clusters_and_features=None):
+def print_clusters(filename, A_original, clusters, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_correspondences,
+                   feature_clusters=None):
     fo = open(filename, 'w', encoding='utf8')
-    for c in range(k):
-        fo.write("\nCluster {}:\n--------------------------------\n".format(c))
-        ds = []
-        for cl, d in clusters_and_doculects:
-            if c == cl:
-                fo.write(d + "\n")
-                ds.append(doculect2int[d])
+    if feature_clusters is None:
+        feature_clusters = [None] * len(clusters)
+    for c, features in zip(clusters, feature_clusters):
+        fo.write("\n")
+        fo.write(", ".join(c) + "\n")
+        ds = [doculect2int[doc] for doc in c]
         fs = []
-        if clusters_and_features:
-            for cl, f in clusters_and_features:
-                if c == cl:
-                    rep, dist, imp, abs_n = score(A_original,
-                                                  corres2int[f], ds)
-                    fs.append((imp * 100, rep * 100, dist * 100, abs_n, f))
+        if features:
+            for f in features:
+                rep, dist, imp, abs_n = score(A_original, corres2int[f], ds)
+                fs.append((imp * 100, rep * 100, dist * 100, abs_n, f))
         else:
             for f in all_correspondences:
                 rep, dist, imp, abs_n = score(A_original,
@@ -160,63 +142,56 @@ def print_clusters(filename, A_original, k, clusters_and_doculects,
 
 if __name__ == "__main__":
     correspondences, all_correspondences, doculects, corres2lang2word = align(
-        no_context=True, context_cv=True, context_sc=True,
-        min_count=3, alignment_type='lib', alignment_mode='global',
-        verbose=1)
+        no_context=True, context_cv=True, context_sc=True, min_count=3,
+        alignment_type='lib', alignment_mode='global', verbose=1)
 
     corres_no_context = [c for c in all_correspondences if len(c[0]) == 1]
     doculect2int = {x: i for i, x in enumerate(doculects)}
 
-    # print("Constructing features for tfidf-context.")
-    # A, A_original, corres2int, all_corres = construct_A(all_correspondences,
-    #                                                     correspondences,
-    #                                                     doculects)
-    # print("Creating dendrogram.")
-    # k, clusters_and_doculects = tfidf_hierarchical(A, doculects,
-    #                                                context='context')
-    # print("Scoring.")
-    # print_clusters("output/tfidf-context.txt", A_original, k,
-    #                clusters_and_doculects, doculect2int, corres2int,
-    #                corres2lang2word, doculects, all_corres)
+    print("Constructing features for tfidf-context.")
+    A, A_original, corres2int, all_corres = construct_A(all_correspondences,
+                                                        correspondences,
+                                                        doculects)
+    print("Creating dendrogram.")
+    clusters = tfidf_hierarchical(A, doculects, context='context')
+    print("Scoring.")
+    print_clusters("output/tfidf-context.txt", A_original,
+                   clusters, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres)
 
-    # print("\nConstructing features for tfidf-nocontext.")
-    # A, A_original, corres2int, all_corres = construct_A(corres_no_context,
-    #                                                     correspondences,
-    #                                                     doculects)
-    # print("Creating dendrogram.")
-    # k, clusters_and_doculects = tfidf_hierarchical(A, doculects,
-    #                                                context='nocontext')
-    # print("Scoring.")
-    # print_clusters("output/tfidf-nocontext.txt", A_original, k,
-    #                clusters_and_doculects, doculect2int, corres2int,
-    #                corres2lang2word, doculects, all_corres)
+    print("\nConstructing features for tfidf-nocontext.")
+    A, A_original, corres2int, all_corres = construct_A(corres_no_context,
+                                                        correspondences,
+                                                        doculects)
+    print("Creating dendrogram.")
+    clusters = tfidf_hierarchical(A, doculects, context='nocontext')
+    print("Scoring.")
+    print_clusters("output/tfidf-nocontext.txt", A_original,
+                   clusters, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres)
 
-    # k = 5
-    # print("\nConstructing features for bsgc-context.")
+    print("\nConstructing features for bsgc-context.")
     A, A_original, corres2int, all_corres = construct_A(all_correspondences,
                                                         correspondences,
                                                         doculects,
                                                         binary=True)
     print("Clustering.")
-    clusters = bsgc_hierarchical(A, doculects, all_corres)
-    print("\n")
-    for k in clusters:
-        print(k[0], len(k[1]))
-    # print("Scoring.")
-    # print_clusters("output/bsgc-context.txt", A_original, k,
-    #                clusters_and_doculects, doculect2int, corres2int,
-    #                corres2lang2word, doculects, all_corres,
-    #                clusters_and_features)
+    clusters, feature_clusters = bsgc_hierarchical(A, doculects, all_corres)
+    print("Scoring.")
+    print_clusters("output/bsgc-context.txt", A_original,
+                   clusters, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres,
+                   feature_clusters)
 
-    # print("\nConstructing features for bsgc-nocontext.")
-    # A, A_original, corres2int, all_corres = construct_A(corres_no_context,
-    #                                                     correspondences,
-    #                                                     doculects,
-    #                                                     binary=True)
-    # print("Clustering.")
-    # bsgc_hierarchical(A, doculects, all_corres, context='nocontext')
-    # print("Scoring.")
-    # print_clusters("output/bsgc-nocontext.txt", A_original, k,
-    #                clusters_and_doculects, doculect2int, corres2int,
-    #                corres2lang2word, doculects, all_corres,
-    #                clusters_and_features)
+    print("\nConstructing features for bsgc-nocontext.")
+    A, A_original, corres2int, all_corres = construct_A(corres_no_context,
+                                                        correspondences,
+                                                        doculects,
+                                                        binary=True)
+    print("Clustering.")
+    clusters, feature_clusters = bsgc_hierarchical(A, doculects, all_corres)
+    print("Scoring.")
+    print_clusters("output/bsgc-nocontext.txt", A_original,
+                   clusters, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres,
+                   feature_clusters)
