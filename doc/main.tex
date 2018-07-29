@@ -113,6 +113,46 @@ sound changes that characterize some but not all CWG variants:
 \caption{Glottolog 3.2 for the doculects we used}
 \end{figure}
 
+\citet[pp. 182-199]{goblirsch2005lautverschiebungen}:
+
+\begin{itemize}
+  \item HG consonant shift: voiceless plosives to affricates 
+  \begin{itemize}
+    \item Suedoberdeutsch (Suedbairisch, Suedmittelbairisch, Suedalemannisch, parts of Mittelalemannisch): pf, ts, kx
+    Ortisei
+    \item Nordoberdeutsch (Nordbairisch, Mittelbairisch, Nordalemannisch, parts of Mittelalemannisch, Ostfraenkisch, Suedrheinfraenkisch).
+    similar to Std German wrt the HGCS
+    p, t - pf, ts; kV - aspirated
+    \item Suedmitteldeutsch (Moselfraenkisch, Rheinfraenkisch, parts of Thueringisch, parts of Obersaechsisch, Schlesisch)
+    \item Nordmitteldeutsch (Ripuarian, Nordhessisch, Nordthueringisch, Nordobersaechsisch):
+    Vp, Vt, Vk - Vf, Vs, Vx; t - ts
+    Cologne
+  \end{itemize}
+\end{itemize}
+
+Biel, Hard, Graubuenden, Tuebingen, Walser - N/S Alemannic?
+
+Herrlisheim?
+
+Luxembourg?
+
+not affected by HGCS: Dutch, Low German, Frisian
+
+
+\citet[pp. 215-235]{goblirsch2005lautverschiebungen}: "Typology of modern Germanic obstruent systems", from least to most innovative
+\begin{itemize}
+  \item aspirationless:
+  East Swedisch; Dutch, S Low German, Nordenglisch, Scots(, Frisian); Normitteldeutsch
+  no consistent sound shift
+  \item general:
+  Swedish, Norwegian; English, Low German, NE Dutch
+  \item voiceless:
+  E Danish, S Swedish, SW Norwegian; North Frisian; Suedmitteldeutsche Dialekte ohne Lenisierung
+  \item length:
+  Oberdeutsche Dialekte ohne Lenisierung
+  \item aspiration:
+  Danish; N Low German; High German dialects with lenition
+\end{itemize}
 
 \section{Methods}
 
@@ -334,6 +374,45 @@ According to \citet{wieling2010hierarchical}, the values of the second right sin
 highest-ranked sound correspondences
 (+ example words?)
 
+bsgc-context: $\geq$90\% imp for non-singleton clusters:
+\begin{itemize}
+\item Antwerp, Dutch Std BE, Ostend:
+(('C', 'e'), ('C', 'e\textlengthmark')) (rep: 100.00, dist: 100.00) (10 times)
+\item Biel, Cologne, Graubuenden, Hard, Herrlisheim, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier
+\begin{itemize}
+\item (('V', 't'), ('V', 's'))  94.74 (rep: 90.00, dist: 100.00)  (61 times)
+\item (('V', 's'), ('V', '\textesh')) 94.74 (rep: 90.00, dist: 100.00)  (40 times)
+\item (('s', 'T'), ('\textesh', 'T')) 94.74 (rep: 90.00, dist: 100.00)  (36 times)
+\item (('s', 'C'), ('\textesh', 'C')) 90.00 (rep: 100.00, dist: 81.82)  (57 times)
+\item (('s', 'C'), ('\textesh', '-')) 90.00 (rep: 100.00, dist: 81.82)  (43 times)
+\end{itemize}
+\item Achterhoek, Biel, Cologne, Graubuenden, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier
+\begin{itemize}
+\item (('s', 'C'), ('\textesh', 'C')) 95.65 (rep: 91.67, dist: 100.00)  (60 times)
+\item (('s', 'C'), ('\textesh', '-')) 95.65 (rep: 91.67, dist: 100.00)  (46 times)
+\end{itemize}
+\item Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier: 
+(('-',), ('\textglotstop',))  92.31 (rep: 85.71, dist: 100.00)  (169 times)
+\end{itemize}
+
+bsgc-nocontext: highest (non-singleton) score: 88.00  (rep: 78.57, dist: 100.00), one singleton with a corres of 100\%
+$\geq$80\% imp for non-singleton clusters:
+\begin{itemize}
+\item Achterhoek, Cologne, Herrlisheim, Luxembourg:
+(('k',), ('\textesh',)) 85.71 (rep: 75.00, dist: 100.00)  (9 times) 
+\item Dutch Std BE, Dutch Std NL, Veenkolonien, Westerkwartier:
+(('o\textlengthmark',), ('u',)) 85.71 (rep: 75.00, dist: 100.00)  (10 times)
+\item Biel, Feer, Graubuenden, Hard, Limburg, Ortisei, Tuebingen, Walser:
+(('b',), ('p',))  85.71 (rep: 75.00, dist: 100.00)  (23 times)
+\item Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser:
+(('s',), ('\textesh',)) 80.19 (rep: 83.33, dist: 77.27) (99 times)
+\item Achterhoek, Biel, Cologne, Feer, Graubuenden, Grou, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser:
+\begin{itemize}
+\item (('\textg',), ('\textg',))  88.00 (rep: 78.57, dist: 100.00)  (65 times)
+\item (('ll',), ('l',)) 83.33 (rep: 71.43, dist: 100.00)  (30 times)
+\end{itemize}
+\end{itemize}
+
 \section{Discussion}
 
 % -- specific ---
@@ -345,51 +424,16 @@ comparison with sound shifts (e.g. High German consonant shift)
 
 \subsection{(grouping dialects by) sound shifts}
 
-\citet[pp. 182-199]{goblirsch2005lautverschiebungen}:
-
-\begin{itemize}
-  \item HG consonant shift: voiceless plosives to affricates 
-  \begin{itemize}
-    \item Suedoberdeutsch (Suedbairisch, Suedmittelbairisch, Suedalemannisch, parts of Mittelalemannisch): pf, ts, kx
-    Ortisei
-    \item Nordoberdeutsch (Nordbairisch, Mittelbairisch, Nordalemannisch, parts of Mittelalemannisch, Ostfraenkisch, Suedrheinfraenkisch).
-    similar to Std German wrt the HGCS
-    p, t - pf, ts; kV - aspirated
-    \item Suedmitteldeutsch (Moselfraenkisch, Rheinfraenkisch, parts of Thueringisch, parts of Obersaechsisch, Schlesisch)
-    \item Nordmitteldeutsch (Ripuarian, Nordhessisch, Nordthueringisch, Nordobersaechsisch):
-    Vp, Vt, Vk - Vf, Vs, Vx; t - ts
-    Cologne
-  \end{itemize}
-\end{itemize}
-
-Biel, Hard, Graubuenden, Tuebingen, Walser - N/S Alemannic?
-
-Herrlisheim?
-
-Luxembourg?
-
-not affected by HGCS: Dutch, Low German, Frisian
-
-
-\citet[pp. 215-235]{goblirsch2005lautverschiebungen}: "Typology of modern Germanic obstruent systems", from least to most innovative
-\begin{itemize}
-  \item aspirationless:
-  East Swedisch; Dutch, S Low German, Nordenglisch, Scots(, Frisian); Normitteldeutsch
-  no consistent sound shift
-  \item general:
-  Swedish, Norwegian; English, Low German, NE Dutch
-  \item voiceless:
-  E Danish, S Swedish, SW Norwegian; North Frisian; Suedmitteldeutsche Dialekte ohne Lenisierung
-  \item length:
-  Oberdeutsche Dialekte ohne Lenisierung
-  \item aspiration:
-  Danish; N Low German; High German dialects with lenition
-\end{itemize}
+BSGC mostly picks up on s $>$ \textesh
 
 \subsection{effect of context information}
 
-\subsection{other}
+really helps for BSGC: higher importance values! (more values $\geq$80, scores $\geq$90 at all)
+
+\subsection{co-clustering}
 How beneficial is co-clustering really? Why not just cluster the doculects (after TF-IDF maybe) and then apply the sound correspondence metrics? It seems like the benefit of co-clustering is mainly that $v_2$ can be used for ranking the correspondences, although this doesn't seem to be very popular among the authors who used bipartite spectral graph clustering for dialect data...
+
+wrongly assigned sound correspondences (k means initialization?)
 
 comparison to the results discussed in \citet{wieling2011bipartite}
 They remark on a common alignment [-]:[\textesh], which commonly appears after [t]:[t]. Interpreting affricates as single segments with the result of correspondences such as [t]:[\t{t\textesh}], or using another approach to include contextual information seems more satisfying to me.
