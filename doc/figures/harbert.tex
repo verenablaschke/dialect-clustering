@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{forest}
+\usetikzlibrary{decorations.pathreplacing}
+\begin{document}
+\begin{forest}
+for tree={
+  parent anchor=south, 
+  child anchor=north,
+}
+[West Germanic
+  [North Sea Germanic
+    [Anglo-Frisian
+        [Frisian]
+    ] 
+    [Old Saxon
+        [Low German]
+    ]
+  ]
+  [Franconian
+    [Low Franconian
+        [Dutch]
+    ]
+    [High Franconian, name=a]
+  ]
+  [Alpine Germanic
+    [Alemannic]
+    [Bavarian, name=b]
+  ]
+]
+\draw[decorate,decoration={brace,mirror}]
+  (a.south west) -- node[below] {Middle High German} (b.south east);
+\end{forest}
+\end{document}

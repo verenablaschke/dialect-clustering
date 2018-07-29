@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from align import align
 from bsgc import bsgc_hierarchical
 from scipy.cluster.hierarchy import dendrogram, linkage
@@ -117,7 +118,7 @@ def print_clusters(filename, A_original, clusters, doculect2int, corres2int,
         fs = sorted(fs, reverse=True)
         fo.write("-------\n")
         for j, (i, r, d, a, f) in enumerate(fs):
-            if j > 10 and i < 100:
+            if (j > 10 and i < 100) or i < 80:
                 fo.write("and {} more\n".format(len(fs) - j))
                 break
             fo.write("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})"

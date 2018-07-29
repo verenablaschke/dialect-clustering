@@ -1,0 +1,97 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\tikzset{every label/.style={rotate=-45}}
+\begin{tikzpicture}
+% Doculects by singleton cluster number (alphabetical index).
+\node[label={right:Luxembourg}] (13) at (1, 0) {};
+\node[label={right:Cologne}] (3) at (2, 0) {};
+\node[label={right:Tuebingen}] (16) at (3, 0) {};
+\node[label={right:Hard}] (9) at (4, 0) {};
+\node[label={right:Graubuenden}] (7) at (5, 0) {};
+\node[label={right:Biel}] (2) at (6, 0) {};
+\node[label={right:Walser}] (18) at (7, 0) {};
+\node[label={right:Westerkwartier}] (19) at (8, 0) {};
+\node[label={right:Heligoland}] (10) at (9, 0) {};
+\node[label={right:Feer}] (6) at (10, 0) {};
+\node[label={right:Ostend}] (15) at (11, 0) {};
+\node[label={right:Dutch Std BE}] (4) at (12, 0) {};
+\node[label={right:Antwerp}] (1) at (13, 0) {};
+\node[label={right:Grou}] (8) at (14, 0) {};
+\node[label={right:Limburg}] (12) at (15, 0) {};
+\node[label={right:Achterhoek}] (0) at (16, 0) {};
+\node[label={right:Veenkolonien}] (17) at (17, 0) {};
+\node[label={right:Dutch Std NL}] (5) at (18, 0) {};
+\node[label={right:Ortisei}] (14) at (19, 0) {};
+\node[label={right:Herrlisheim}] (11) at (20, 0) {};
+
+% Clusters from Z.
+\node (20) at (1.5,2.5069142269122553) {};
+\draw  (3) |- (20.center);
+\draw  (13) |- (20.center);
+\node (21) at (2.25,3.4393644611463174) {};
+\draw  (16) |- (21.center);
+\draw  (20) |- (21.center);
+\node (22) at (19.5,3.5406726206513794) {};
+\draw  (11) |- (22.center);
+\draw  (14) |- (22.center);
+\node (23) at (11.5,3.6698243188474002) {};
+\draw  (4) |- (23.center);
+\draw  (15) |- (23.center);
+\node (24) at (5.5,3.673764676917043) {};
+\draw  (2) |- (24.center);
+\draw  (7) |- (24.center);
+\node (25) at (15.5,3.9276939630167917) {};
+\draw  (0) |- (25.center);
+\draw  (12) |- (25.center);
+\node (26) at (12.25,3.960720485717081) {};
+\draw  (1) |- (26.center);
+\draw  (23) |- (26.center);
+\node (27) at (6.25,4.0531975153767545) {};
+\draw  (18) |- (27.center);
+\draw  (24) |- (27.center);
+\node (28) at (3.125,4.413194353549088) {};
+\draw  (9) |- (28.center);
+\draw  (21) |- (28.center);
+\node (29) at (16.25,5.0145383821161476) {};
+\draw  (17) |- (29.center);
+\draw  (25) |- (29.center);
+\node (30) at (8.5,5.206828469356475) {};
+\draw  (10) |- (30.center);
+\draw  (19) |- (30.center);
+\node (31) at (13.125,5.217085864904029) {};
+\draw  (8) |- (31.center);
+\draw  (26) |- (31.center);
+\node (32) at (9.25,5.695900978411265) {};
+\draw  (6) |- (32.center);
+\draw  (30) |- (32.center);
+\node (33) at (14.6875,6.53777370473954) {};
+\draw  (29) |- (33.center);
+\draw  (31) |- (33.center);
+\node (34) at (16.34375,6.7761041547553935) {};
+\draw  (5) |- (34.center);
+\draw  (33) |- (34.center);
+\node (35) at (4.6875,7.040274302300754) {};
+\draw  (27) |- (35.center);
+\draw  (28) |- (35.center);
+\node (36) at (6.96875,7.824253672317817) {};
+\draw  (32) |- (36.center);
+\draw  (35) |- (36.center);
+\node (37) at (11.65625,8.323877411027938) {};
+\draw  (34) |- (37.center);
+\draw  (36) |- (37.center);
+\node (38) at (15.578125,9.328709913542639) {};
+\draw  (22) |- (38.center);
+\draw  (37) |- (38.center);
+
+% Y axis.
+\draw[->] (0,0) -- node[label={[rotate=135, label distance=1cm]90:Distance}]{{}} (0, 10.0);
+\draw (1pt,0.0) -- (-3pt,0.0) node[anchor=east] {0.00};
+\draw (1pt,1.5) -- (-3pt,1.5) node[anchor=east] {0.10};
+\draw (1pt,3.0) -- (-3pt,3.0) node[anchor=east] {0.20};
+\draw (1pt,4.5) -- (-3pt,4.5) node[anchor=east] {0.30};
+\draw (1pt,6.0) -- (-3pt,6.0) node[anchor=east] {0.40};
+\draw (1pt,7.5) -- (-3pt,7.5) node[anchor=east] {0.50};
+\draw (1pt,9.0) -- (-3pt,9.0) node[anchor=east] {0.60};
+\end{tikzpicture}
+\end{document}

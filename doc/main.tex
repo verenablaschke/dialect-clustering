@@ -3,10 +3,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage{amsmath}
-\usepackage{tipa}
 \usepackage{forest}
-\usepackage{changepage}
 \usetikzlibrary{decorations.pathreplacing}
+\usepackage{tipa}
+\usepackage{changepage}
+\usepackage{standalone}
 \usepackage[margin=1.3in]{geometry}
 
 \title{Clustering Dialect Varieties Based on Historical Sound Correspondences}
@@ -77,6 +78,7 @@ We simplified the transcriptions slightly by removing diacritics for vowel artic
 This is similar how \citet{list2014benchmark} processed an earlier version of the data \citep{renfrew2009languages}.
 We did not work with the Germanic data \citeauthor{list2014benchmark} published as it does not include Proto-Germanic entries for most concepts.
 
+note on inflected forms
 
 \subsection{notes on continental West Germanic dialects/languages}
 
@@ -94,36 +96,7 @@ sound changes that characterize some but not all CWG variants:
 
 \begin{figure}
 \centering
-\begin{forest}
-for tree={
-  parent anchor=south, 
-  child anchor=north,
-%   l sep=1cm,
-%   s sep=1cm
-}
-[West Germanic
-  [North Sea Germanic
-    [Anglo-Frisian
-        [Frisian]
-    ] 
-    [Old Saxon
-        [Low German]
-    ]
-  ]
-  [Franconian
-    [Low Franconian
-        [Dutch]
-    ]
-    [High Franconian, name=a]
-  ]
-  [Alpine Germanic
-    [Alemannic]
-    [Bavarian, name=b]
-  ]
-]
-\draw[decorate,decoration={brace,mirror}]
-  (a.south west) -- node[below] {Middle High German} (b.south east);
-\end{forest}
+\includestandalone[width=\textwidth]{figures/harbert}
 \caption{Harbert 2007: somewhat taking into account the convergence of certain Germanic varieties due to mutual influence (tree + waves?)}
 \label{fig:cwg_harbert}
 \end{figure}
@@ -132,119 +105,11 @@ for tree={
 \begin{figure}
 \begin{adjustwidth}{-3cm}{-3cm}
 \centering
-\scalebox{0.9}{
-\begin{forest}
-for tree={
-  parent anchor=south, 
-  child anchor=north,
-%   l sep=1cm,
-%   s sep=1cm
-}
-[West Germanic
-  [North Sea Germanic
-    [Anglo-Frisian
-        [Frisian]
-    ] 
-    [Old Saxon
-        [Low German]
-    ]
-  ]
-  [Franconian
-    [Low Franconian
-        [Dutch]
-    ]
-    [High Franconian
-        [German
-            [Standard German]
-            [Alsatian]
-        ]
-        [Middle Franconian
-            [Luxembourgish]
-            [Ripurarian]
-        ]
-    ]
-  ]
-  [High German
-    [Alpine Germanic
-        [Alemannic
-            [Swiss German]
-            [Swabian]
-            [Walser]
-        ]
-        [Bavarian]
-    ]
-  ]
-]
-\end{forest}
+\scalebox{0.8}{
+\input{figures/glottolog}
 }
 \end{adjustwidth}
-\caption{Glottolog 3.2: entirely a tree}
-\label{fig:cwg_glottolog}
-\end{figure}
-
-
-\begin{figure}
-\centering
-\begin{adjustwidth}{-3cm}{-3cm}
-\scalebox{0.6}{
-\begin{forest}
-for tree={
-  parent anchor=south, 
-  child anchor=north,
-  align=center,
-  l sep=1.5cm,
-  s sep=0.3cm
-}
-[West Germanic
-  [North Sea Germanic
-    [Anglo-Frisian\\Frisian
-        [Western Frisian\\\textit{Grou}]
-        [Northern Frisian
-            [Ferring\\\textit{Feer}]
-            [Helgoland\\\textit{Heligoland}]
-        ]
-    ] 
-    [Altsächsisch \[Old Saxon\]\\Middle-Modern Low German\\Low German
-        [Achterhoeks\\\textit{Achterhoek}]
-        [Ostfriesisch-Groningisch\\Gronings
-            [Veenkolonials\\\textit{Veenkolonien}]
-            [Westerwolds\\\textit{Westerkwartier}]
-        ]
-    ]
-  ]
-  [Franconian
-    [Low Franconian\\Macro-Dutch\\Modern Dutch
-        [Dutch\\\textit{Std Dutch (NL)}]
-        [Vlaams\\\textit{Std Dutch (BE)}
-            [Ostvlaams\\\textit{Ostend}]
-            [Antwerps\\\textit{Antwerp}]
-            [Limburgs\\\textit{Limburg}]
-        ]
-    ]
-    [High Franconian
-        [German\\Alsatian\\\textit{Herrlisheim}]
-        [Middle Franconian
-            [Luxembourgish\\\textit{Luxembourg}]
-            [Ripurarian\\Kölsch\\\textit{Cologne}]
-        ]
-    ]
-  ]
-  [High German\\Middle-Modern High German\\Modern High German\\Alpine Germanic
-    [Alemannic
-        [Swiss German
-            [Basel\\\textit{Biel}]
-            [Low Alemannic\\\textit{Hard}]
-            [Graubenden-Grisons\\\textit{Graubuenden}]
-        ]
-        [Swabian\\\textit{Tuebingen}]
-        [Walser\\\textit{Walser}]
-    ]
-    [Bayerisch \[Bavarian\]\\Cimbrian\\\textit{Ortisei}]
-  ]
-]
-\end{forest}
-}
-\end{adjustwidth}
+% \includestandalone[width=\textwidth]{figures/glottolog}
 \caption{Glottolog 3.2 for the doculects we used}
 \end{figure}
 
@@ -385,6 +250,11 @@ implementation by \cite{pedregosa2011scikit-learn:}
 
 \subsection{Ranking sound correspondences by importance}
 
+Representativeness: How many doculects in this cluster exhibit this sound correspondence? \citep{wieling2011bipartite}
+Distinctiveness: How often does a sound correspondence occur in this cluster compared to other clusters? \citep{wieling2011bipartite}
+Regularity: How often does this correspondence occur compared to the original sound? similar to \citet{prokic2013combining}. also like bigram MLE
+Frequency: Is it a rare or frequent correspondence? could maybe be combined with regularity, especially since the chance for mis-alignments is a lot higher for rare correspondences
+
 Ranking the sound correspondences for each cluster
 (BSGC: correspondences that are in the cluster,
 TF-IDF: correspondences that are exhibited by the cluster's doculects)
@@ -403,7 +273,7 @@ How many doculects in this cluster exhibit this sound correspondence?
 \end{equation*}
 
 \textbf{Distinctiveness}.
-How often occurs a sound correspondence in this cluster compared to other clusters? 
+How often does a sound correspondence occur in this cluster compared to other clusters? 
 This requires two additional measures: 
 
 \begin{equation*}
@@ -449,6 +319,17 @@ According to \citet{wieling2010hierarchical}, the values of the second right sin
 
 \section{Results}
 
+\begin{figure}
+  \includestandalone[width=\textwidth]{figures/dendrogram-nocontext}
+  \caption{TFIDF no context}
+  \label{fig:tfidf-nocontext}
+\end{figure}
+
+\begin{figure}
+  \includestandalone[width=\textwidth]{figures/dendrogram-context}
+  \caption{TFIDF context}
+  \label{fig:tfidf-context}
+\end{figure}
 
 highest-ranked sound correspondences
 (+ example words?)
@@ -462,8 +343,52 @@ comparison with language ancestry data from \citet{hammarstrom2018glottolog}
 
 comparison with sound shifts (e.g. High German consonant shift)
 
-effect of context information
+\subsection{(grouping dialects by) sound shifts}
 
+\citet[pp. 182-199]{goblirsch2005lautverschiebungen}:
+
+\begin{itemize}
+  \item HG consonant shift: voiceless plosives to affricates 
+  \begin{itemize}
+    \item Suedoberdeutsch (Suedbairisch, Suedmittelbairisch, Suedalemannisch, parts of Mittelalemannisch): pf, ts, kx
+    Ortisei
+    \item Nordoberdeutsch (Nordbairisch, Mittelbairisch, Nordalemannisch, parts of Mittelalemannisch, Ostfraenkisch, Suedrheinfraenkisch).
+    similar to Std German wrt the HGCS
+    p, t - pf, ts; kV - aspirated
+    \item Suedmitteldeutsch (Moselfraenkisch, Rheinfraenkisch, parts of Thueringisch, parts of Obersaechsisch, Schlesisch)
+    \item Nordmitteldeutsch (Ripuarian, Nordhessisch, Nordthueringisch, Nordobersaechsisch):
+    Vp, Vt, Vk - Vf, Vs, Vx; t - ts
+    Cologne
+  \end{itemize}
+\end{itemize}
+
+Biel, Hard, Graubuenden, Tuebingen, Walser - N/S Alemannic?
+
+Herrlisheim?
+
+Luxembourg?
+
+not affected by HGCS: Dutch, Low German, Frisian
+
+
+\citet[pp. 215-235]{goblirsch2005lautverschiebungen}: "Typology of modern Germanic obstruent systems", from least to most innovative
+\begin{itemize}
+  \item aspirationless:
+  East Swedisch; Dutch, S Low German, Nordenglisch, Scots(, Frisian); Normitteldeutsch
+  no consistent sound shift
+  \item general:
+  Swedish, Norwegian; English, Low German, NE Dutch
+  \item voiceless:
+  E Danish, S Swedish, SW Norwegian; North Frisian; Suedmitteldeutsche Dialekte ohne Lenisierung
+  \item length:
+  Oberdeutsche Dialekte ohne Lenisierung
+  \item aspiration:
+  Danish; N Low German; High German dialects with lenition
+\end{itemize}
+
+\subsection{effect of context information}
+
+\subsection{other}
 How beneficial is co-clustering really? Why not just cluster the doculects (after TF-IDF maybe) and then apply the sound correspondence metrics? It seems like the benefit of co-clustering is mainly that $v_2$ can be used for ranking the correspondences, although this doesn't seem to be very popular among the authors who used bipartite spectral graph clustering for dialect data...
 
 comparison to the results discussed in \citet{wieling2011bipartite}
