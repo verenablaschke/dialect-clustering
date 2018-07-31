@@ -121,7 +121,7 @@ def seg2class(segment, sca=False):
     if sca:
         return token2class(segment, 'sca')
     cl = token2class(segment, 'dolgo')
-    return 'V' if cl == 'V' else 'C'
+    return '<V>' if cl == 'V' else '<C>'
 
 
 def align(reference_doculect='ProtoGermanic',

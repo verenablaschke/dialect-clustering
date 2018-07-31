@@ -1,7 +1,7 @@
 
 Achterhoek
 -------
-(('uː',), ('y',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+uː > y	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Achterhoek: ['mys', 'hys', 'yt']
 
 and 34 more
@@ -9,16 +9,16 @@ and 34 more
 
 Antwerp
 -------
-(('ɡ',), ('ç',))	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+ɡ > ç	100.00	(rep: 100.00, dist: 100.00)	(5 times)
 Antwerp: ['aɪlɪç', 'reːçɪn', 'çɾyn', 'daç', 'çjans']
 
-(('au',), ('oə',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+au > oə	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Antwerp: ['roət', 'loəf', 'oəs', 'oəx']
 
-(('ai',), ('eə',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+ai > eə	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Antwerp: ['steən', 'teən', 'zeər', 'beən']
 
-(('x',), ('ç',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+x > ç	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Antwerp: ['rɪçt', 'fɛçt', 'aɪçt']
 
 and 43 more
@@ -26,10 +26,10 @@ and 43 more
 
 Biel
 -------
-(('k',), ('χ',))	100.00	(rep: 100.00, dist: 100.00)	(7 times)
+k > χ	100.00	(rep: 100.00, dist: 100.00)	(7 times)
 Biel: ['χʊə', 'mɪʊχ', 'χɑʊp', 'χnœɪ', 'χɑʊt', 'χɔːɾn', 'eiχə']
 
-(('a',), ('ɑʊ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+a > ɑʊ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Biel: ['χɑʊp', 'sɑʊt͡s', 'χɑʊt']
 
 and 41 more
@@ -37,10 +37,10 @@ and 41 more
 
 Cologne
 -------
-(('eː',), ('ɒ',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+eː > ɒ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Cologne: ['mʊtɒ', 'bʁoːdɒ', 'fatɒ', 'dɔːχtɒ']
 
-(('au',), ('ɔʊ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+au > ɔʊ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Cologne: ['lɔʊf', 'hɔʊp', 'ʔɔʊχ']
 
 and 41 more
@@ -48,13 +48,13 @@ and 41 more
 
 Dutch_Std_BE
 -------
-(('uː',), ('æʏ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+uː > æʏ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Dutch_Std_BE: ['mæʏs', 'hæʏs', 'æʏt']
 
-(('e',), ('iː',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+e > iː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Dutch_Std_BE: ['kniː', 'tiːn', 'd̪ɾiː']
 
-(('b',), ('β',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+b > β	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Dutch_Std_BE: ['leːβər', 'zeːβn', 'oːβr']
 
 and 43 more
@@ -62,10 +62,10 @@ and 43 more
 
 Dutch_Std_NL
 -------
-(('u',), ('oʊ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+u > oʊ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Dutch_Std_NL: ['oʊvə', 'oʊpə', 'oʊvəɹ']
 
-(('e',), ('eɪ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+e > eɪ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Dutch_Std_NL: ['ʁeɪχə', 'zeɪvə', 'neɪχə']
 
 and 40 more
@@ -73,10 +73,10 @@ and 40 more
 
 Feer
 -------
-(('a',), ('ʊ',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+a > ʊ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Feer: ['tʰʊs', 'hʊn', 'lʊŋ', 'ɡʊs']
 
-(('a',), ('eː',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+a > eː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Feer: ['beːda', 'ʔeːskʰ', 'feːst']
 
 and 31 more
@@ -84,10 +84,10 @@ and 31 more
 
 Graubuenden
 -------
-(('oː',), ('ʊɔ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+oː > ʊɔ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Graubuenden: ['blʊɔt', 'fʊɔs', 'brʊɔdr']
 
-(('oː',), ('ɐ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+oː > ɐ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Graubuenden: ['t͡sʊŋɡɐ', 'namɐ', 'wʊlɐ']
 
 and 40 more
@@ -95,19 +95,19 @@ and 40 more
 
 Grou
 -------
-(('ai',), ('iə',))	100.00	(rep: 100.00, dist: 100.00)	(7 times)
+ai > iə	100.00	(rep: 100.00, dist: 100.00)	(7 times)
 Grou: ['iən', 'stiən', 'sniə', 'hiəm', 'tiən', 'siər', 'biən']
 
-(('-',), ('j',))	100.00	(rep: 100.00, dist: 100.00)	(6 times)
+∅ > j	100.00	(rep: 100.00, dist: 100.00)	(6 times)
 Grou: ['jɪskə', 'sjʌχ', 'rjœχt', 'fjaʊɾ', 'fjʌχt͡si', 'njʌʁʌn']
 
-(('z',), ('r',))	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+z > r	100.00	(rep: 100.00, dist: 100.00)	(5 times)
 Grou: ['bɛtr', 'hʌŋr', 'tʌŋr', 'jɛr', 'iər']
 
-(('oː',), ('oə',))	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+oː > oə	100.00	(rep: 100.00, dist: 100.00)	(5 times)
 Grou: ['bɫoət', 'moər', 'foət', 'ɡoət', 'bɾoər']
 
-(('e',), ('ʌ',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+e > ʌ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Grou: ['mʌɫqə', 'sjʌχ', 'fjʌχt͡si', 'njʌʁʌn']
 
 and 31 more
@@ -120,22 +120,22 @@ and 40 more
 
 Heligoland
 -------
-(('u',), ('ɒ',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+u > ɒ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Heligoland: ['tʰɒŋ', 'hɒŋə', 'dʒɒŋ', 'hɒnɐtʰ']
 
-(('k',), ('ɡ',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+k > ɡ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Heligoland: ['ʔeasɡən', 'vɐsɡə', 'sɡapʰ', 'noɐɡɤlt']
 
-(('z',), ('n',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+z > n	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Heligoland: ['kʰaləfkʰən', 'lamkʰən', 'ʔeakʰɛn']
 
-(('uː',), ('ʏ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+uː > ʏ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Heligoland: ['mʏs', 'hʏs', 'ʔʏtʰ']
 
-(('a',), ('oɐ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+a > oɐ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Heligoland: ['soɐltʰ', 'noɐɡɤlt', 'foɐ']
 
-(('-',), ('β',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+∅ > β	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Heligoland: ['tʰβɑːn', 'tʰβaːn', 'βɑː']
 
 and 28 more
@@ -143,13 +143,13 @@ and 28 more
 
 Herrlisheim
 -------
-(('oː',), ('eː',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+oː > eː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Herrlisheim: ['ɡʁeːn', 'ɸeːs', 'bʁeːdəχ']
 
-(('ai',), ('ai',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+ai > ai	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Herrlisheim: ['hailikʰ', 'bain', 'ʔaiʃ']
 
-(('a',), ('i',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+a > i	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Herrlisheim: ['hailikʰ', 'honik', 'ʔis']
 
 and 40 more
@@ -157,7 +157,7 @@ and 40 more
 
 Limburg
 -------
-(('d',), ('k',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+d > k	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Limburg: ['haŋk', 'hʊŋk', 'βɪŋk']
 
 and 42 more
@@ -165,10 +165,10 @@ and 42 more
 
 Luxembourg
 -------
-(('e',), ('ɨ',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+e > ɨ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Luxembourg: ['zɨt͡s', 'mɨlɪʃ', 'fɨnəf', 'mɨt']
 
-(('u',), ('ʊɛ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+u > ʊɛ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Luxembourg: ['vʊɛt', 'ʃtʊɛm', 'ʔʊɛvən']
 
 and 38 more
@@ -176,13 +176,13 @@ and 38 more
 
 Ortisei
 -------
-(('d',), ('t͡s',))	100.00	(rep: 100.00, dist: 100.00)	(8 times)
+d > t͡s	100.00	(rep: 100.00, dist: 100.00)	(8 times)
 Ortisei: ['hɒnt͡s', 'ʁɔːt͡s', 'βɔʁt͡s', 'bløət͡s', 'hʊnt͡s', 'kʰɔlt͡s', 'ɡʊɛt͡s', 'nɔkt͡s']
 
-(('θ',), ('t͡s',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+θ > t͡s	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Ortisei: ['noχt͡s', 'bɔːt͡s', 'mʊnt͡s']
 
-(('uː',), ('aɵ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+uː > aɵ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Ortisei: ['maɵs', 'haɵs', 'ʔaɵs']
 
 and 41 more
@@ -190,19 +190,19 @@ and 41 more
 
 Ostend
 -------
-(('e',), ('iə',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+e > iə	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Ostend: ['kniə', 'tiənə', 'dɾiə', 'viəɾə']
 
-(('au',), ('ɔː',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+au > ɔː	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Ostend: ['rɔːt', 'lɔːf', 'ɔːs', 'ɔːɾə']
 
-(('ɡ',), ('h',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+ɡ > h	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Ostend: ['ɾeːhə̃', 'hɾuənə', 'hoət']
 
-(('uː',), ('ʉ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+uː > ʉ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Ostend: ['mʉs', 'ʉs', 'ʉt']
 
-(('u',), ('œ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+u > œ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Ostend: ['dœndr', 'βœlə', 'vœl']
 
 and 38 more
@@ -210,19 +210,19 @@ and 38 more
 
 Tuebingen
 -------
-(('eː',), ('ɔ',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+eː > ɔ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Tuebingen: ['mʊətɔ', 'bʁʊədɔ', 'fatɔ', 'dɔχtɔ']
 
-(('uː',), ('ɐu',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+uː > ɐu	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Tuebingen: ['mɐus', 'hɐus', 'ʔɐus']
 
-(('k',), ('ç',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+k > ç	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Tuebingen: ['mɪliç', 'ʔiç', 'ʔɔɪçɛ']
 
-(('ai',), ('ɔɪ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+ai > ɔɪ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Tuebingen: ['ʔɔɪs', 'hɔɪm', 'ʔɔɪçɛ']
 
-(('a',), ('aɔ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+a > aɔ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Tuebingen: ['βaɔm', 'ɡaɔt̪ə', 'ʃaɔf']
 
 and 37 more
@@ -230,16 +230,16 @@ and 37 more
 
 Veenkolonien
 -------
-(('oː',), ('ɑʊ',))	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+oː > ɑʊ	100.00	(rep: 100.00, dist: 100.00)	(5 times)
 Veenkolonien: ['kɑʊ', 'blɑʊt', 'vɑʊɾə', 'χɑʊt', 'stɑʊlə']
 
-(('e',), ('ɛɪ',))	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+e > ɛɪ	100.00	(rep: 100.00, dist: 100.00)	(5 times)
 Veenkolonien: ['knɛɪ', 'zɛɪ', 'ɹɛɪɡn', 'ɛɪt', 'nɛɪɡŋ']
 
-(('ai',), ('ɒɪ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+ai > ɒɪ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Veenkolonien: ['hɒɪləχ', 'ɒɪnə', 'hɒɪm']
 
-(('a',), ('o',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+a > o	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Veenkolonien: ['noʁəɫ', 'nokt', 'βod̪ɹ']
 
 and 35 more
@@ -247,13 +247,13 @@ and 35 more
 
 Walser
 -------
-(('ai',), ('æɪ',))	100.00	(rep: 100.00, dist: 100.00)	(6 times)
+ai > æɪ	100.00	(rep: 100.00, dist: 100.00)	(6 times)
 Walser: ['hæɪlɪk', 'ʔæɪs', 'ʃtæɪ', 'hæɪmət', 'bæɪ', 'ʔæɪxə']
 
-(('k',), ('x',))	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+k > x	100.00	(rep: 100.00, dist: 100.00)	(5 times)
 Walser: ['xuɛ', 'milx', 'xalp', 'xaːlt', 'ʔæɪxə']
 
-(('z',), ('ɾ',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+z > ɾ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Walser: ['hʊŋɡəɾ', 'dɔnɛɾ', 'høːɾ']
 
 and 45 more
@@ -261,13 +261,13 @@ and 45 more
 
 Westerkwartier
 -------
-(('s',), ('ʒ',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+s > ʒ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Westerkwartier: ['ʒetʰ', 'ʒøɛχ', 'ʒveæɹ', 'ʒeɛɹ']
 
-(('s',), ('sʲ',))	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+s > sʲ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
 Westerkwartier: ['hysʲ', 'sʲøːbⁿm', 'fɪsʲ', 'zɛsʲ']
 
-(('e',), ('e',))	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+e > e	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Westerkwartier: ['ʒetʰ', 'ʔeʃ', 'neɡⁿŋ']
 
 and 31 more
@@ -275,7 +275,7 @@ and 31 more
 
 Cologne, Luxembourg
 -------
-(('x',), ('ʃ',))	100.00	(rep: 100.00, dist: 100.00)	(6 times)
+x > ʃ	100.00	(rep: 100.00, dist: 100.00)	(6 times)
 Cologne: ['zøʃ', 'ʀɛɪʃ', 'fɛʃ']
 Luxembourg: ['nuɛʃt', 'fæʃt', 'dʊɪʃtɐ']
 
@@ -284,7 +284,7 @@ and 45 more
 
 Tuebingen, Cologne, Luxembourg
 -------
-(('x',), ('ʃ',))	80.00	(rep: 66.67, dist: 100.00)	(6 times)
+x > ʃ	80.00	(rep: 66.67, dist: 100.00)	(6 times)
 Cologne: ['zøʃ', 'ʀɛɪʃ', 'fɛʃ']
 Luxembourg: ['nuɛʃt', 'fæʃt', 'dʊɪʃtɐ']
 
@@ -293,7 +293,7 @@ and 58 more
 
 Herrlisheim, Ortisei
 -------
-(('a',), ('ɔ',))	100.00	(rep: 100.00, dist: 100.00)	(21 times)
+a > ɔ	100.00	(rep: 100.00, dist: 100.00)	(21 times)
 Herrlisheim: ['kʰɔlp', 'lɔŋ', 'lɔm', 'sɔls', 'ʔɔl', 'kʰɔlt', 'ɡɔns', 'nɔkətʰ']
 Ortisei: ['kʰɔlp', 'lɔŋk', 'lɔm', 'sɔlt͡s', 'nɔχt', 'nɔmɛ', 'dɔk', 'kʰɔlt͡s', 'ɡɔns', 'ɡɔχtn', 'βɔs', 'ʔɔχt', 'nɔkt͡s']
 
@@ -312,7 +312,7 @@ and 46 more
 
 Achterhoek, Limburg
 -------
-(('u',), ('oɐ',))	100.00	(rep: 100.00, dist: 100.00)	(9 times)
+u > oɐ	100.00	(rep: 100.00, dist: 100.00)	(9 times)
 Achterhoek: ['noɐt', 'βoɐt', 'doɐn', 'hoɐn', 'kʰoɐn']
 Limburg: ['noɐt', 'doɐn', 'hoɐn', 'koɐʁ']
 
@@ -321,21 +321,21 @@ and 44 more
 
 Antwerp, Dutch_Std_BE, Ostend
 -------
-(('f',), ('v',))	100.00	(rep: 100.00, dist: 100.00)	(17 times)
+f > v	100.00	(rep: 100.00, dist: 100.00)	(17 times)
 Antwerp: ['oːvə', 'vaːf', 'vɔɫ', 'viːs', 'vɪs']
 Dutch_Std_BE: ['vut', 'viəɹ', 'vɪs', 'vaːd̪ər']
 Ostend: ['vɑstə', 'ɔːvn', 'vøvə', 'vuət', 'vœl', 'viəɾə', 'vɛs']
 
-(('e',), ('eː',))	100.00	(rep: 100.00, dist: 100.00)	(10 times)
+e > eː	100.00	(rep: 100.00, dist: 100.00)	(10 times)
 Antwerp: ['reːçɪn', 'zeːvə', 'neːʝə']
 Dutch_Std_BE: ['zeː', 'reːʝn', 'zeːβn', 'neːʝn']
 Ostend: ['ɾeːhə̃', 'seːvn', 'neːhə̃']
 
-(('r',), ('s',))	80.00	(rep: 66.67, dist: 100.00)	(11 times)
+r > s	80.00	(rep: 66.67, dist: 100.00)	(11 times)
 Antwerp: ['nɔst', 'βɔst', 'd͡zvɛːs', 'moːd̪əs', 'viːs', 'fɑːd̪əs', 'dɔxtəs']
 Ostend: ['leːvəs', 'sβaːs', 'zɛːs', 'dɔχtəs']
 
-(('oː',), ('uː',))	80.00	(rep: 66.67, dist: 100.00)	(9 times)
+oː > uː	80.00	(rep: 66.67, dist: 100.00)	(9 times)
 Antwerp: ['kuː', 'bluːt', 'xuː', 'bɾuːs', 'stuː']
 Dutch_Std_BE: ['kuː', 'xruːn', 'bɾuːr', 'stuːl']
 Ostend: ['bɾuːɾə']
@@ -345,7 +345,7 @@ and 60 more
 
 Walser, Biel, Graubuenden
 -------
-(('e',), ('yː',))	82.76	(rep: 100.00, dist: 70.59)	(9 times)
+e > yː	82.76	(rep: 100.00, dist: 70.59)	(9 times)
 Walser: ['dɾyː', 'fyːɸ', 'nyː']
 Biel: ['tɾyː', 'fyːf', 'nyːn']
 Graubuenden: ['kʰnyː', 'fyːf', 'nyːn']
@@ -360,7 +360,7 @@ and 61 more
 
 Veenkolonien, Achterhoek, Limburg
 -------
-(('u',), ('oɐ',))	80.00	(rep: 66.67, dist: 100.00)	(9 times)
+u > oɐ	80.00	(rep: 66.67, dist: 100.00)	(9 times)
 Achterhoek: ['noɐt', 'βoɐt', 'doɐn', 'hoɐn', 'kʰoɐn']
 Limburg: ['noɐt', 'doɐn', 'hoɐn', 'koɐʁ']
 
@@ -374,12 +374,12 @@ and 41 more
 
 Grou, Antwerp, Dutch_Std_BE, Ostend
 -------
-(('f',), ('v',))	85.71	(rep: 75.00, dist: 100.00)	(17 times)
+f > v	85.71	(rep: 75.00, dist: 100.00)	(17 times)
 Antwerp: ['oːvə', 'vaːf', 'vɔɫ', 'viːs', 'vɪs']
 Dutch_Std_BE: ['vut', 'viəɹ', 'vɪs', 'vaːd̪ər']
 Ostend: ['vɑstə', 'ɔːvn', 'vøvə', 'vuət', 'vœl', 'viəɾə', 'vɛs']
 
-(('e',), ('eː',))	85.71	(rep: 75.00, dist: 100.00)	(10 times)
+e > eː	85.71	(rep: 75.00, dist: 100.00)	(10 times)
 Antwerp: ['reːçɪn', 'zeːvə', 'neːʝə']
 Dutch_Std_BE: ['zeː', 'reːʝn', 'zeːβn', 'neːʝn']
 Ostend: ['ɾeːhə̃', 'seːvn', 'neːhə̃']
@@ -389,12 +389,12 @@ and 64 more
 
 Feer, Heligoland, Westerkwartier
 -------
-(('t',), ('d',))	100.00	(rep: 100.00, dist: 100.00)	(11 times)
+t > d	100.00	(rep: 100.00, dist: 100.00)	(11 times)
 Feer: ['beːda', 'sdʊrʌm', 'sduːl']
 Heligoland: ['sdʊʁɤm', 'ʃdeɐ', 'ʃduːl', 'dɔχdɐ']
 Westerkwartier: ['bɛdɐ', 'ʃdøœm', 'ʃdæin', 'ʃdaɔɫ']
 
-(('d',), ('tʰ',))	80.00	(rep: 66.67, dist: 100.00)	(13 times)
+d > tʰ	80.00	(rep: 66.67, dist: 100.00)	(13 times)
 Feer: ['voʌtʰ', 'blotʰ', 'hʊnɐtʰ']
 Heligoland: ['hɒnɐtʰ']
 Westerkwartier: ['rɒotʰ', 'voɹtʰ', 'blʊutʰ', 'hɔ̃ntʰ', 'kʰoɫtʰ', 'xutʰ', 'hœftʰ', 'vintʰ', 'hundətʰ', 'noɡtʰ']
@@ -409,7 +409,7 @@ and 78 more
 
 Dutch_Std_NL, Veenkolonien, Achterhoek, Limburg, Grou, Antwerp, Dutch_Std_BE, Ostend
 -------
-(('s',), ('-',))	80.00	(rep: 100.00, dist: 66.67)	(24 times)
+s > ∅	80.00	(rep: 100.00, dist: 66.67)	(24 times)
 Dutch_Std_NL: ['ɛɪs', 'mæøs', 'χɑns']
 Veenkolonien: ['is', 'moːs', 'hanzə']
 Achterhoek: ['is', 'mys', 'χans']
@@ -429,7 +429,7 @@ and 73 more
 
 Feer, Heligoland, Westerkwartier, Walser, Biel, Graubuenden, Hard, Tuebingen, Cologne, Luxembourg
 -------
-(('-',), ('ʔ',))	80.00	(rep: 100.00, dist: 66.67)	(137 times)
+∅ > ʔ	80.00	(rep: 100.00, dist: 66.67)	(137 times)
 Feer: ['ʔeːskʰ', 'ʔiæn', 'ʔas', 'ʔɪkʰ', 'ʔoːn', 'ʔitç', 'ʔytʰ', 'ʔõŋkʰ', 'ʔaːl', 'ʔeːbⁿm', 'ʔeɛt', 'ʔaχt', 'ʔikʰʲe', 'ʔuʌ', 'ʔuːk', 'ʔaoɑ']
 Heligoland: ['ʔeasɡən', 'ʔɛs', 'ʔɪkʰ', 'ʔuːŋ', 'ʔitʰ', 'ʔʏtʰ', 'ʔoɑvən', 'ʔɑːl', 'ʔepʰən', 'ʔiɐ', 'ʔaχ', 'ʔeakʰɛn', 'ʔoo', 'ʔoɒvɜ']
 Westerkwartier: ['ʔaʃ', 'ʔɑin', 'ʔeʃ', 'ʔɪkʰ', 'ʔĩn', 'ʔæitʰ', 'ʔʏtʰ', 'ʔɔobⁿm', 'ʔɑɫ', 'ʔɔupⁿm', 'ʔeɛdæ', 'ʔaχtʰ', 'ʔækobɔum', 'ʔoɔɹ', 'ʔɔuχ', 'ʔouvɾʰ']
@@ -451,399 +451,5 @@ and 114 more
 
 Herrlisheim, Ortisei, Dutch_Std_NL, Veenkolonien, Achterhoek, Limburg, Grou, Antwerp, Dutch_Std_BE, Ostend, Feer, Heligoland, Westerkwartier, Walser, Biel, Graubuenden, Hard, Tuebingen, Cologne, Luxembourg
 -------
-(('a',), ('-',))	 nan	(rep: 100.00, dist:  nan)	(1053 times)
-Herrlisheim: ['hailikʰ', 'noχt', 'ʁoːtʰ', 'mɪlɪʃ', 'ʔɛːns', 'kʰɔlp', 'voχt', 'dɪŋ', 'kniː', 'honik', 'lɔŋ', 'laipʰ', 'ʔɪʃ', 'lɔm', 'ʃtʊʁm', 'sɔls', 'ʃtɛːn', 'joːχ', 'ʃneː', 'ʁɪŋ', 'fɛʃt', 'vɔːʁm', 'ʁaːχt', 'bløːt', 'hys', 'ʔofə', 'ʔɔl', 'haːm', 'jʊŋ', 'hʊnt', 'dœː', 'kʰɔlt', 'ʔofə', 'bɔːt', 'mʊnt', 'naːjəl', 'ɡøət', 'fʊl', 'sɛːχ', 'hœʏpt', 'fɪʃ', 'vɪnt', 'bain', 'hʊndəχt', 'ʃtøːl', 'vis', 'ʃɒχf', 'nɔkətʰ']
-Ortisei: ['haɪlɪk', 'noχt͡s', 'ʁɔːt͡s', 'mɪlç', 'ʔɔəns', 'kʰɔlp', 'βɔʁt͡s', 'dɪŋk', 'kniɛ', 'hoːnik', 'lɔŋk', 'laːp', 'ʔiː', 'lɔm', 'ʃtʊʁm', 'sɔlt͡s', 'ʁeːɡn', 'ʃtan', 'jɔːχ', 'ʃneə', 'ʁɪŋk', 'fɪʃt', 'βɑʁm', 'ʁɛχt͡s', 'bløət͡s', 'haɵs', 'ʔofn', 'ʔal', 'haɪm', 'jʊŋk', 'hʊnt͡s', 'dɔk', 'kʰɔlt͡s', 'hɔʁn', 'ʔofn', 'ɡɔχtn', 'bɔːt͡s', 'mʊnt͡s', 'nɔːɡl', 'kʰɔʁn', 'ɡʊɛt͡s', 'fʌl', 'sɛːχ', 'haʊpt', 'fiʃ', 'βɪnt', 'baɪn', 'hʊndəχt', 'ʃtʊɛl', 'βaɪs', 'ʃɑʁf', 'nɔkt͡s']
-Dutch_Std_NL: ['hɛɪlʌχ', 'nɔɹt', 'ʁoːt', 'eɪn', 'vɔɹt', 'dɪŋ', 'kʰni', 'hɔnɪŋ', 'ɫɑŋ', 'loʊf', 'ɪk', 'tʰɔp', 'ɫɑm', 'zaʊt', 'steɪn', 'jaɹ', 'sneu', 'ʁɪŋ', 'fɑst', 'ʁɛχt', 'bløt', 'haøs', 'oʊvə', 'ɑɫ', 'hɛɪm', 'jʌŋ', 'hɔnt', 'dɑχ', 'kaʊt', 'oʊpə', 'χaɹt', 'bɑt', 'mʌnt', 'naχʌɫ', 'χut', 'vʌɫ', 'zeɹ', 'hɒʊft', 'fɪs', 'kvik', 'vɪnt', 'bɛɪn', 'hʊnəɹt', 'stuːɫ', 'vɪt', 'naːkt']
-Veenkolonien: ['hɒɪləχ', 'lɛɪvɹ', 'noːɹt', 'roːt', 'mɛɤk', 'kʰaɤf', 'voːɹt', 'dɪŋ', 'knɛɪ', 'hønəχ', 'dʏndɹˠ', 'læːɡ', 'lɒʊf', 'ɪk', 'tʰɔp', 'lamɹ', 'stœːɾəm', 'zɔːt', 'ɹɛɪɡn', 'stɔɪn', 'joə', 'snɛː', 'ɾɪŋ', 'βaːm', 'rɛχt', 'blɑʊt', 'hys', 'obm', 'aɤ', 'hɒɪm', 'jʊŋk', 'daχ', 'kʰɔːɫt', 'opm', 'bat', 'mɔ̃t', 'noʁəɫ', 'koɾn', 'χɑʊt', 'fʊː', 'ziːɹ', 'høʏft', 'fɪs', 'βɪnt', 'bɔɪ̃', 'ɔn̪d̪əʁt', 'mɪdn', 'βɒɪt', 'sχaːp', 'nokt']
-Achterhoek: ['hɛɪləχ', 'lɛːβʁ', 'noɐt', 'ʁoːt', 'mɛlək', 'kɑləɸ', 'βoɐt', 'dɪŋ', 'kneɪ', 'hɔnʌχ', 'dʊndʁ', 'tɔp', 'lam', 'stʌʁəm', 'steːn', 'joɐ', 'snɛɪ', 'ʁɪŋ', 'βaɾəm', 'ʁɛχ', 'bloːt', 'hys', 'ɔːβn', 'aɫ', 'heːm', 'jʊŋə', 'hʊnt', 'daχ', 'kɔɫt', 'hoɐn', 'χoɐt', 'bat', 'mʊnt', 'nɛːχɫ', 'kʰoɐn', 'χoːt', 'ɸʊɫ', 'zeɐ', 'høːs', 'ɸɪʃ', 'βɪnt', 'beːn', 'hʊndəʁt', 'mɪdn', 'stɔːɫ', 'βɪt', 'sχaɾəp', 'naːkənt']
-Limburg: ['heːlɪç', 'noɐt', 'ʁʊət', 'mɪlɪk', 'kɔːɸ', 'wɔət', 'dɪŋk', 'knɛɪ', 'øənɪŋ', 'laŋk', 'ɪç', 'tɔp', 'lɑm', 'ʃtoʁəm', 'zɔːt', 'ʁeən', 'stɛi', 'jɔːχ', 'snɛi', 'ʁɪŋk', 'fas', 'βɛʁəm', 'ʁɛç', 'blʊt', 'huːs', 'ɔβə', 'al', 'heːm', 'jʊŋk', 'hʊŋk', 'daːχ', 'kɔːt', 'hoɐn', 'opə', 'çaːt', 'bɑt', 'mʊŋk', 'naːɣɫ', 'koɐʁ', 'xwʌt', 'ziəχ', 'jəʁoːt', 'føʃ', 'βɪŋk', 'biː', 'hõət', 'ʃtʊːl', 'βɪət', 'ʃɛʁəp', 'nɑks']
-Grou: ['hɪɫəχ', 'ɫɛɪvr', 'noət', 'rɪiət', 'iən', 'kɪiəɫ', 'βœt', 'dɪŋ', 'knɪbɫ', 'hynɪŋ', 'tʌŋr', 'ɫaŋ', 'ɫɪiəf', 'ek', 'tɔp', 'ɫaːm', 'stβaɾəm', 'sɔːt', 'rɒɪn', 'stiən', 'iər', 'sniə', 'rɪŋ', 'fɛəst', 'βaːɾəm', 'rjœχt', 'bɫoət', 'huːs', 'ũn', 'ɒɫ', 'hiəm', 'jʌŋ', 'hũn', 'dɒɪ', 'kɔːt', 'hõə̃n', 'iəpm', 'bat', 'nɒɪɫ', 'kõə̃n', 'ɡoət', 'fʌɫ', 'siər', 'haːt', 'fɪsk', 'kβɪk', 'βin', 'biən', 'hʊndət', 'mɪdn', 'stuəɫ', 'βit', 'skɛrp', 'niəkŋ']
-Antwerp: ['aɪlɪç', 'nɔst', 'roət', 'mɛlək', 'iən', 'kaɫəf', 'βɔst', 'dɪŋ', 'kniː', 'øːnɪŋ', 'laɪŋ', 'loəf', 'ik', 'tɔp', 'lam', 'stəɾəm', 'zɔt', 'steən', 'jɑːɾ', 'sniə', 'rɪŋ', 'fast', 'βaːɾəm', 'rɪçt', 'bluːt', 'ɔɐs', 'oːvə', 'aɫ', 'hem', 'jʊŋ', 'ɐʊnt', 'daç', 'kɔːt', 'opə', 'xɑɾt', 'bat', 'mɔnt', 'nɑːxɫ', 'xuː', 'vɔɫ', 'zeər', 'hɔft', 'vɪs', 'kβɪk', 'βɪnt', 'beən', 'ʌndəstʰ', 'stuː', 'βit', 'sjaːɾəp', 'nakt']
-Dutch_Std_BE: ['hɛɪləç', 'nɔːrt', 'roːt', 'mɛlk', 'eːn', 'kɑɫf', 'βɔːrt', 'dɪŋ', 'kniː', 'hoːnɪŋ', 'laŋ', 'lɔːf', 'ɪk', 'tɔp', 'lɑm', 'stɔrm', 'zaʊt', 'reːʝn', 'steːn', 'jaːɹ', 'sneu', 'rɪŋ', 'βɑst', 'βarm', 'rɛçt', 'blut', 'hæʏs', 'oːβn', 'ɑɫ', 'heːm', 'jʊŋ', 'hʊnt', 'dax', 'kaʊt', 'hɔːrn', 'oːpn', 'çaːrt', 'bɑt', 'mʊnt', 'naːxəɫ', 'xut', 'βʌɫ', 'zeəɹ', 'hoːft', 'vɪs', 'kβik', 'βɪnt', 'beːn', 'hɔndɾt', 'mɪdn', 'stuːl', 'βɪt', 'sçɛrp', 'naːkt']
-Ostend: ['ɛləç', 'nɔːɾt', 'rɔːt', 'maɔk', 'ɛːn', 'kɔːf', 'βɔɾtʰ', 'dɪŋk', 'kniə', 'dœndr', 'laŋ', 'lɔːf', 'ɛk', 'tɔp', 'lɑm', 'stɔɾm', 'zut', 'stɛːn', 'jɔːr', 'snɛʊ', 'rɪŋk', 'βɑrm', 'raht', 'bluət', 'ʉs', 'ɔːvn', 'ɑo', 'heːm', 'jʊŋk', 'ʊnt', 'daχ', 'kut', 'ɔːpm', 'ɣɑːs̆t', 'bɑt', 'mʊnt', 'naːχə', 'kɔːrn', 'hoət', 'vœl', 'zɛːs', 'oːft', 'vɛs', 'kβɪk', 'βɪnt', 'bɛːn', 'ʊndrt', 'mɛdn', 'stuəl', 'βɛt', 'ʃχɛrp', 'nakt']
-Feer: ['helikʰ', 'noɤt', 'ruət', 'muəlk', 'ʔiæn', 'kʰuələ', 'voʌtʰ', 'deŋ', 'hœneŋ', 'lʊŋ', 'ʔɪkʰ', 'lom', 'sdʊrʌm', 'saːlt', 'rɪn', 'stiæn', 'joɤ', 'snæ', 'rɪŋ', 'feːst', 'varam', 'rɔχt', 'blotʰ', 'hʏs', 'ʔõŋkʰ', 'ʔaːl', 'jɒŋ', 'hyɲ', 'dai', 'kʰul', 'hʊrn', 'ʔeːbⁿm', 'ɡuɤt', 'mœs', 'naːjl', 'kʰʊrn', 'ɡʊt', 'fɔl', 'sie', 'hoːt', 'fask', 'viɲ', 'hʊnɐtʰ', 'madⁿn', 'sduːl', 'vitç', 'sɡarap', 'naːɡət']
-Heligoland: ['hele', 'nuʌɖ', 'ʀoɒ', 'molk', 'jaːn', 'vøœ', 'dɪŋ', 'hœnõŋ', 'lɔŋ', 'bleː', 'ʔɪkʰ', 'tʰɔpʰ', 'sdʊʁɤm', 'soɐltʰ', 'ʀaen', 'ʃdeɐ', 'ʃoɐ', 'sneː', 'ʁɪŋ', 'fas', 'vaʀm', 'ʀɛç', 'blo', 'hʏs', 'ʔoɑvən', 'ʔɑːl', 'dʒɒŋ', 'hɪn', 'dae', 'kʰul', 'huɐn', 'ʔepʰən', 'ɡoa', 'mɪtʰ', 'noʏɘl', 'kʰuɐ', 'ɡoː', 'fol', 'seɐ', 'hoɑ', 'fɛsk', 'vɪn', 'bean', 'hɒnɐtʰ', 'mɛdⁿn', 'ʃduːl', 'vɪtʰ', 'sɡapʰ', 'noɐɡɤlt']
-Westerkwartier: ['haelɛχ', 'lɛifɹ', 'noət͡ʃ', 'rɒotʰ', 'miʟk', 'ʔɑin', 'kʰɑɫf', 'voɹtʰ', 'deːŋ', 'kʰnɛe', 'hɶnɶx', 'laːŋ', 'lɑof', 'ʔɪkʰ', 'tʰɔpʰ', 'ʃdøœm', 'zʏɫt͡s', 'reiɡⁿŋ', 'ʃdæin', 'joɹ', 'ʃæe', 'rẽŋ', 'fastʰ', 'væam', 'ɹɛaxtʰ', 'blʊutʰ', 'hysʲ', 'ʔɔobⁿm', 'ʔɑɫ', 'jɒŋ', 'hɔ̃ntʰ', 'daχ', 'kʰoɫtʰ', 'hoːdⁿn', 'ʔɔupⁿm', 'batʰ', 'mɔ̃ntʰ', 'nɔχɔ', 'xutʰ', 'foɫ', 'ʒeɛɹ', 'hœftʰ', 'fɪsʲ', 'vintʰ', 'bɛĩ', 'hundətʰ', 'mɪdⁿn', 'ʃdaɔɫ', 'vetʰ', 'ʃxapʰ', 'noɡtʰ']
-Walser: ['hæɪlɪk', 'ɹoːt', 'milx', 'ʔæɪs', 'xalp', 'βɔːrt', 'dɪŋɡ', 'tʰənɜ̹ʏ', 'hoːnɪɡ', 'lɪŋɡ', 'laʊp', 'ʔiː', 'ʃtuɾəm', 'saːlt͡s', 'ʃtæɪ', 'jaːr', 'ʃneː', 'rɪŋɡ', 'fɛʃt', 'βaːɾəm', 'raχt', 'bloɐt', 'huːs', 'ʔoːɸə', 'ʔal', 'jʊŋɡ', 'huːnt', 'daːk', 'xaːlt', 'ʔoɸə', 'baːt', 'naːɡl', 'ɡoət', 'sɛːɹ', 'hɑopt', 'fiʃ', 'kʰɛk', 'bæɪ', 'hʊndət', 'ʃtuəl', 'βiːs', 'ʃaɹɸ', 'nakɪk']
-Biel: ['heilɪk', 'nɔrt', 'rɔːt', 'mɪʊχ', 'ɛɪs', 'χɑʊp', 'βɔrt', 'dɪŋ', 'χnœɪ', 'hɔnik', 'laŋ', 'lɑʊp', 'ʔiːk', 'lɒm', 'ʃtʊɾm', 'sɑʊt͡s', 'ʃtɛɪ', 'jɑːr', 'ʃneː', 'rɪŋ', 'fɛʃt', 'βaːrm', 'ɾaχt', 'blʊɛt', 'huːs', 'ʔɔfɛ', 'ɔʊ', 'heɪm', 'jʊŋ', 'hʊnt', 't̪ɒːk', 'χɑʊt', 'hɔrn', 'ʔɔfə', 'bɑːt', 'muː', 'nɑku', 'χɔːɾn', 'ɡʊət', 'fɔʊ', 'sɛːr', 'hɔopt', 'fɪʃ', 'k͡xɛkχ', 'βɪnt', 'pɛɪ', 'hʊn̪d̪ət', 'ʃtʊɛʊ', 'βiːs', 'ʃɑːɾf', 'nɒkχt']
-Graubuenden: ['haɪlik', 'nɔrd', 'roːt', 'mɪlχ', 'aɪnt͡s', 'kʰalp', 'βɔrt', 'dɪŋk', 'kʰnyː', 'donɾ', 'laŋk', 'laʊp', 'ʔiː', 'lam', 'ʃtʊrm', 'sɑːlt͡s', 'ʃtai', 'jɑːr', 'ʃneː', 'riŋk', 'fɛʃt', 'βaːrm', 'ɾeχt', 'blʊɔt', 'huːs', 'ʔoːfə', 'ʔal', 'haɪm', 'jʊŋk', 'hʊnt', 'dɑɒk', 'qʰɑːlt', 'ʔofə', 'bɑːt', 'muːl', 'nɑːɡl', 'ɡoɔt', 'fol', 'sɛːɾ', 'haʊpt', 'fiʃ', 'kʰɛk', 'βint', 'bai', 'hondət', 'ʃtuɛl', 'βiːs', 'ʃarf', 'nakt']
-Hard: ['haɪlɪɡ', 'roːtʰ', 'mɪlx', 'ʔõɛ̃s', 'kʰalp', 'dɪŋ', 'kʰnyː', 'hɔːnɪɡ', 'laŋ', 'loːp', 'ʔiː', 'lam', 'ʃtʊʁm', 'saːlt͡s', 'ʃtõɐ̃', 'jɔːʁ', 'ʃneɪ', 'ʁɪŋ', 'fɛʃt', 'vaːʁm', 'ʁeɐxt', 'blʊət', 'huːs', 'ʔoːfə', 'ʔal', 'hoɐm', 'jʊŋ', 'hʊnd', 'daːɡ', 'kʰaːlt', 'hɔɐʁn', 'ʔofə', 'baːt', 'mʊnt', 'naːɡl', 'kʰɔɐʁn', 'ɡoɛt', 'fʊl', 'haʊpt', 'fɪʃ', 'vɪnt', 'bõɐ̃', 'hʊndəʁt', 'ʃtʊəl', 'viːs', 'ʃaːʁf', 'nakɪk']
-Tuebingen: ['haɪliç', 'nɔt', 'ʁɑɵt', 'mɪliç', 'ʔɔɪs', 'kʰalp', 'βɔt', 'dɪŋ', 'kniː', 'hoːniç', 'laŋ', 'lɑʊp', 'ʔiç', 'lam', 'ʃtʊɔm', 'salt͡s', 'ʃtɔẽ', 'jɔːχ', 'ʃneː', 'ʁɪŋ', 'fɪʃt', 'βaɔm', 'ʁeəxt', 'bluɔt', 'hɐus', 'ʔoːfə', 'ʔal', 'hɔɪm', 'jʊŋ', 'hʊnt', 'tʰaːk', 'kʰalt', 'hɒn', 'ʔofə', 'baːt', 'munt', 'naːɡl', 'kʰɔn', 'ɡuət', 'fʊl', 'hɑɵpt', 'fiʃ', 'kʰɛk', 'vɪnt', 'bɔ̃ẽ', 'hʊndʁt', 'ʃtuəl', 'βɛis', 'ʃaɔf', 'nakət']
-Cologne: ['hɛlɪʃ', 'nɔχt', 'ʁotʰ', 'mɪləʃ', 'kʰaləf', 'βɔːt', 'dɪŋ', 'kʰni', 'hʊniʃ', 'laŋ', 'lɔʊf', 'ʔiʃ', 'lam', 'ʃtʊʀm', 'zaːlt͡s', 'ʀɛn', 'ʃteɪn', 'jɔ', 'ʃneɪ', 'ʀɪŋ', 'fas', 'βɛʁəm', 'ʀɛɪʃ', 'blot', 'huːs', 'ʔɔvə', 'ʔal', 'hɛɪm', 'jʊŋ', 'hʊŋk', 'daːχ', 'kʰalt', 'hɔːn', 'ʔɔfə', 'bat', 'mʊŋɡ', 'neəl', 'kʰɔːn', 'joːt', 'fʌl', 'hɔʊp', 'fɪʃ', 'vɪnt', 'beɪn', 'hʊndɐt', 'ʃtoːl', 'βiːs', 'ʃɛʁəp', 'nak']
-Luxembourg: ['hɛləʃ', 'ʀoːt', 'mɨlɪʃ', 'ʔeːnt', 'kʰaləf', 'vʊɛt', 'kʰnɛi', 'hʊnəʃ', 'laːŋ', 'ʔœʃ', 'lam', 'ʃtʊɛm', 'zalt͡s', 'ʁeːn', 'steːn', 'joɐ', 'ʃnɛi', 'ʁɐŋ', 'fɛst', 'vaːm', 'ʀiət͡s', 'blʊt͡s', 'hɛʊs', 'ʔʊɛvən', 'ʔal', 'heːm', 'jʊŋk', 'hʊnt', 'daːχ', 'kʰaːl', 'ʔʊpən', 'ɡaːχt', 'bʊɛt', 'mɔnt', 'noːl', 'kʰaːχ', 'ɡʊt', 'fʊl', 'zɛɪɐ', 'haːpt', 'fəʃ', 'vant', 'beːn', 'hɔnɐt', 'mɨt', 'ʃtʊl', 'væis', 'ʃaːf']
-
-(('b',), ('b',))	 nan	(rep: 100.00, dist:  nan)	(132 times)
-Herrlisheim: ['bɛsəχ', 'bis', 'bløːt', 'bɔːt', 'bʁeːdəχ', 'bain']
-Ortisei: ['bɪsəχ', 'leːbəχ', 'baɪs', 'bløət͡s', 'bɔːt͡s', 'ziːbm', 'bʁʊədəχ', 'baɪn', 'ʔyːbəχ']
-Dutch_Std_NL: ['bɛɪtʰɹ', 'bæɪt', 'bløt', 'bɑt', 'bʁuəʁ', 'bɛɪn']
-Veenkolonien: ['bɛt̪ɹˠ', 'biːt', 'blɑʊt', 'bat', 'zøbm', 'bɾaɹ', 'bɔɪ̃']
-Achterhoek: ['bɛtʁ', 'bit', 'bloːt', 'bat', 'bʁʏʁ', 'beːn']
-Limburg: ['bɛːtəχ', 'biːt', 'blʊt', 'bɑt', 'bʁoːχ', 'biː']
-Grou: ['bɛtr', 'bit', 'bɫoət', 'bat', 'bɾoər', 'biən']
-Antwerp: ['baːt', 'bluːt', 'bat', 'bɾuːs', 'beən']
-Dutch_Std_BE: ['betəɹ', 'bɛɪt', 'blut', 'bɑt', 'bɾuːr', 'beːn']
-Ostend: ['betr', 'bit', 'bluət', 'bɑt', 'bɾuːɾə', 'bɛːn']
-Feer: ['beːda', 'bitç', 'blotʰ', 'brʊlə', 'bijɛn']
-Heligoland: ['betʰɐ', 'bɪtʰ', 'blo', 'bʁuɐ', 'bean']
-Westerkwartier: ['bɛdɐ', 'bitʰ', 'blʊutʰ', 'batʰ', 'bruɤɹ', 'bɛĩ']
-Walser: ['bɛsəɹ', 'labəɾə', 'biːs', 'bloɐt', 'baːt', 'bɾʊɔdɛɾ', 'bæɪ', 'ʔobər']
-Biel: ['bɛsəɾ', 'biːs', 'blʊɛt', 'bɑːt', 'bɾuətəɾ']
-Graubuenden: ['bɛsɾ', 'lɛːbəɾə', 'biːs', 'blʊɔt', 'bɑːt', 'seːbɐ', 'brʊɔdr', 'bai', 'ʏbr']
-Hard: ['bɛsəʁ', 'leəbəʁ', 'biːs', 'blʊət', 'baːt', 'sebə', 'bʁʏədəʁ', 'bõɐ̃', 'ʏbəʁ']
-Tuebingen: ['bɛsɔ', 'leːbɔχ', 'bɐis', 'bluɔt', 'baːt', 'siːbə', 'bʁʊədɔ', 'bɔ̃ẽ', 'ʔyːbɔ']
-Cologne: ['bɛsɒ', 'biːs', 'blot', 'bat', 'zɪbə', 'bʁoːdɒ', 'beɪn']
-Luxembourg: ['bɛsʌ', 'bæis', 'blʊt͡s', 'bʊɛt', 'bʁʊdɐ', 'beːn']
-
-(('d',), ('d',))	 nan	(rep: 95.00, dist:  nan)	(84 times)
-Herrlisheim: ['dœː', 'hʊndəχt', 'mɪdə', 'doːχtəχ']
-Ortisei: ['dɔk', 'hʊndəχt', 'dɔχtəχ']
-Dutch_Std_NL: ['mʊdəʁ', 'dɑχ', 'dʁɪŋk', 'mɪdə', 'dɔχtəɹ']
-Veenkolonien: ['daχ', 'dʁɛŋk', 'mɪdn', 'dɒχt̪ɹˠ']
-Achterhoek: ['daχ', 'dʁɪŋk', 'hʊndəʁt', 'mɪdn', 'dɒχtʁ']
-Limburg: ['mɔdəχ', 'daːχ', 'dʁɪŋk', 'mɪdə', 'fadəχ', 'dɔtəχ']
-Grou: ['dɒɪ', 'dɾɪŋk', 'hʊndət', 'mɪdn', 'dɒχtər']
-Antwerp: ['daç', 'dɾɪŋk', 'ʌndəstʰ', 'mɪdə', 'dɔxtəs']
-Dutch_Std_BE: ['modər', 'dax', 'hɔndɾt', 'mɪdn', 'dɔxtr']
-Ostend: ['moːdr', 'daχ', 'dɾɪŋk', 'ʊndrt', 'mɛdn', 'dɔχtəs']
-Feer: ['dai', 'draŋk', 'p͡fedɐ', 'do:χtɐ']
-Heligoland: ['dae', 'dʁɪŋk', 'dɔχdɐ']
-Westerkwartier: ['daχ', 'drẽŋkʰ', 'hundətʰ', 'dɔχtɹ']
-Walser: ['daːk', 'drɪŋk', 'hʊndət', 'dɔxtɛɾ']
-Biel: ['drɪŋkχ']
-Graubuenden: ['dɑɒk', 'dɾɪŋkʰ', 'hondət', 'dɔχtr']
-Hard: ['hʊnd', 'daːɡ', 'dʁɪnk', 'hʊndəʁt', 'dɔxtəʁ']
-Tuebingen: ['dʁɪŋk', 'hʊndʁt', 'dɔχtɔ']
-Cologne: ['daːχ', 'jaːdə', 'dʁɪŋk', 'hʊndɐt', 'mɪdə', 'dɔːχtɒ']
-Luxembourg: ['daːχ', 'dʀɪŋk', 'dʊɪʃtɐ']
-
-(('e',), ('ɪ',))	 nan	(rep: 95.00, dist:  nan)	(138 times)
-Herrlisheim: ['sɪt͡s', 'mɪlɪʃ', 'dɪŋ', 'ʔɪs', 'ʔɪʃ', 'ʔɪn', 'ʁɪŋ', 'ʔɪs', 'fɪnəɸ', 'tʁɪŋk', 'vɪnt', 'mɪdə', 'sɪks']
-Ortisei: ['sɪt͡s', 'mɪlç', 'dɪŋk', 'ʔɪn', 'ʁɪŋk', 'ʔɪs', 'tʁɪŋk', 'βɪnt', 'mɪtɛ', 'sɪks']
-Dutch_Std_NL: ['zɪt', 'dɪŋ', 'ɪs', 'ɪk', 'ɪn', 'ʁɪŋ', 'dʁɪŋk', 'vɪnt', 'mɪdə']
-Veenkolonien: ['zɪt', 'dɪŋ', 'ɪs', 'ɪk', 'ɪn', 'ɾɪŋ', 'βɪnt', 'mɪdn']
-Achterhoek: ['zɪt', 'dɪŋ', 'ɪs', 'ɪn', 'ʁɪŋ', 'dʁɪŋk', 'βɪnt', 'mɪdn']
-Limburg: ['zɪt', 'mɪlɪk', 'dɪŋk', 'ɪs', 'ɪç', 'ɪn', 'ʁɪŋk', 'dʁɪŋk', 'βɪŋk', 'mɪdə']
-Grou: ['sɪt', 'dɪŋ', 'knɪbɫ', 'ɪs', 'rɪŋ', 'dɾɪŋk', 'mɪdn']
-Antwerp: ['zɪt', 'dɪŋ', 'ɪs', 'rɪŋ', 'rɪçt', 'dɾɪŋk', 'βɪnt', 'mɪdə', 'zɪs']
-Dutch_Std_BE: ['zɪt', 'dɪŋ', 'ɪs', 'ɪk', 'ɪn', 'rɪŋ', 'd̪rɪŋk', 'βɪnt', 'mɪdn']
-Ostend: ['dɪŋk', 'ɪn', 'rɪŋk', 'dɾɪŋk', 'βɪnt']
-Feer: ['ʔɪkʰ', 'rɪn', 'rɪŋ']
-Heligoland: ['dɪŋ', 'ʔɪkʰ', 'ʁɪŋ', 'dʁɪŋk', 'vɪn']
-Westerkwartier: ['ʔɪkʰ', 'mɪdⁿn']
-Walser: ['dɪŋɡ', 'rɪŋɡ', 'drɪŋk']
-Biel: ['sɪt͡s', 'dɪŋ', 'ʔɪʃ', 'ʔɪn', 'rɪŋ', 'ʔɪs', 'drɪŋkχ', 'βɪnt', 'mɪtɪ']
-Graubuenden: ['sɪt͡s', 'mɪlχ', 'dɪŋk', 'ʔɪn', 'dɾɪŋkʰ']
-Hard: ['mɪlx', 'dɪŋ', 'ʁɪŋ', 'dʁɪnk', 'vɪnt', 'sɪks']
-Tuebingen: ['mɪliç', 'dɪŋ', 'ʁɪŋ', 'dʁɪŋk', 'vɪnt', 'sɪks']
-Cologne: ['mɪləʃ', 'dɪŋ', 'ʔɪs', 'ʔɪn', 'ʀɪŋ', 'dʁɪŋk', 'zɪbə', 'vɪnt', 'mɪdə']
-Luxembourg: ['dɪŋən', 't͡sɪŋ', 'dʀɪŋk', 'nɪŋ']
-
-(('i',), ('-',))	 nan	(rep: 100.00, dist:  nan)	(121 times)
-Herrlisheim: ['sɪt͡s', 'ʔɪs', 'ʔɪn', 'ɡʁeːn', 'ʃvœːχ', 'ʔeβəχ']
-Ortisei: ['sɪt͡s', 'ʔiʃ', 'ʔɪn', 'ɡʁiɛn', 'ʃβøːχ', 'ʔyːbəχ']
-Dutch_Std_NL: ['bɛɪtʰɹ', 'zɪt', 'ɪs', 'ɪn', 'χʁun', 'zveɹ', 'oʊvəɹ']
-Veenkolonien: ['bɛt̪ɹˠ', 'zɪt', 'ɪs', 'ɪn', 'χɹœʏ̃', 'zβiə', 'ovɹˠ']
-Achterhoek: ['bɛtʁ', 'zɪt', 'ɪs', 'ɪn', 'χøːn', 'zβiɐ', 'ɔːβʁ']
-Limburg: ['zɪt', 'ɪs', 'ɪn', 'χʁøn', 'ʃβeəχ', 'øβəχ']
-Grou: ['bɛtr', 'sɪt', 'ɪs', 'in', 'ɡɾiən', 'sβar', 'owr']
-Antwerp: ['zɪt', 'ɪs', 'in', 'çɾyn', 'd͡zvɛːs', 'oːfəɾ']
-Dutch_Std_BE: ['zɪt', 'ɪs', 'ɪn', 'xruːn', 'zβeəɹ', 'oːβr']
-Ostend: ['betr', 'zɛt', 'ɛs', 'ɪn', 'sβaːs', 'oːvr']
-Feer: ['sat', 'ʔas', 'ʔoːn', 'dreːn', 'svea', 'ʔaoɑ']
-Heligoland: ['ʔɛs', 'ʔuːŋ', 'ɡʁeːn', 'sveɑ', 'ʔoɒvɜ']
-Westerkwartier: ['ʒetʰ', 'ʔeʃ', 'ʔĩn', 'xɣɶn', 'ʒveæɹ', 'ʔouvɾʰ']
-Walser: ['ʔiʃt', 'i', 'ɡryɛ', 'ʔobər']
-Biel: ['sɪt͡s', 'ʔɪʃ', 'ʔɪn', 'ɡɾʏɛn', 'ʃβœːr', 'ʏpəɾ']
-Graubuenden: ['bɛsɾ', 'sɪt͡s', 'ʔiʃ', 'ʔɪn', 'ɡɾʏɛn', 'ʃβœːɾ', 'ʏbr']
-Hard: ['ʔiʃt', 'ʔin', 'ɡɾỹɛ̃', 'ʃvøːʁ', 'ʏbəʁ']
-Tuebingen: ['sit͡s', 'ʔiʃ', 'ʔin', 'ɡʁeə', 'ʃβøʁ', 'ʔyːbɔ']
-Cologne: ['zɛt͡s', 'ʔɪs', 'ʔɪn', 'jɒʁœ̃', 'ʃβøɐ', 'ʔʏvɒ']
-Luxembourg: ['zɨt͡s', 'ɐs', 'ʔan', 'ɡʁɪŋ', 'ʃviɛ', 'ʔiva']
-
-(('l',), ('l',))	 nan	(rep: 95.00, dist:  nan)	(185 times)
-Herrlisheim: ['hailikʰ', 'naːdl', 'mɪlɪʃ', 'kʰɔlp', 'lɔŋ', 'laipʰ', 'lɔm', 'sɔls', 'bløːt', 'kʰɔlt', 'naːjəl', 'ʃtøːl']
-Ortisei: ['haɪlɪk', 'nɔːdl', 'leːbəχ', 'mɪlç', 'kʰɔlp', 'lɔŋk', 'laːp', 'lɔm', 'sɔlt͡s', 'bløət͡s', 'kʰɔlt͡s', 'nɔːɡl', 'ʃtʊɛl']
-Dutch_Std_NL: ['hɛɪlʌχ', 'lɛɪvəʁ', 'loʊf', 'bløt']
-Veenkolonien: ['hɒɪləχ', 'lɛɪvɹ', 'læːɡ', 'lɒʊf', 'lamɹ', 'blɑʊt', 'stɑʊlə']
-Achterhoek: ['hɛɪləχ', 'lɛːβʁ', 'mɛlək', 'kɑləɸ', 'laŋə', 'lam', 'bloːt']
-Limburg: ['heːlɪç', 'nɔlt', 'lɛɪβəχ', 'mɪlɪk', 'laŋk', 'lɑm', 'blʊt', 'ʃtʊːl']
-Antwerp: ['aɪlɪç', 'levər', 'mɛlək', 'laɪŋ', 'loəf', 'lam', 'bluːt']
-Dutch_Std_BE: ['hɛɪləç', 'leːβər', 'mɛlk', 'laŋ', 'lɔːf', 'lɑm', 'blut', 'stuːl']
-Ostend: ['ɛləç', 'leːvəs', 'laŋ', 'lɔːf', 'lɑm', 'bluət', 'stuəl']
-Feer: ['helikʰ', 'neːdˡl', 'lʏva', 'muəlk', 'kʰuələ', 'lʊŋ', 'lom', 'saːlt', 'blotʰ', 'kʰul', 'naːjl', 'sduːl']
-Heligoland: ['hele', 'neɛdˡl', 'lʏva', 'molk', 'kʰaləfkʰən', 'lɔŋ', 'bleː', 'lamkʰən', 'soɐltʰ', 'blo', 'kʰul', 'noʏɘl', 'ʃduːl']
-Westerkwartier: ['haelɛχ', 'lɛifɹ', 'laːŋ', 'lɑof', 'lɑmɐ̰', 'blʊutʰ']
-Walser: ['hæɪlɪk', 'naːdlə', 'labəɾə', 'milx', 'xalp', 'lɪŋɡ', 'laʊp', 'saːlt͡s', 'bloɐt', 'xaːlt', 'naːɡl', 'ʃtuəl']
-Biel: ['heilɪk', 'lapəɾə', 'laŋ', 'lɑʊp', 'lɒm', 'blʊɛt']
-Graubuenden: ['haɪlik', 'lɛːbəɾə', 'mɪlχ', 'kʰalp', 'laŋk', 'laʊp', 'lam', 'sɑːlt͡s', 'blʊɔt', 'qʰɑːlt', 'nɑːɡl', 'ʃtuɛl']
-Hard: ['haɪlɪɡ', 'nɔːdl', 'leəbəʁ', 'mɪlx', 'kʰalp', 'laŋ', 'loːp', 'lam', 'saːlt͡s', 'blʊət', 'kʰaːlt', 'naːɡl', 'ʃtʊəl']
-Tuebingen: ['haɪliç', 'nɔːdl', 'leːbɔχ', 'mɪliç', 'kʰalp', 'laŋ', 'lɑʊp', 'lam', 'salt͡s', 'bluɔt', 'kʰalt', 'naːɡl', 'ʃtuəl']
-Cologne: ['hɛlɪʃ', 'nɔːdl', 'lɪvɒ', 'mɪləʃ', 'kʰaləf', 'laŋ', 'lɔʊf', 'lam', 'zaːlt͡s', 'blot', 'kʰalt', 'neəl', 'ʃtoːl']
-Luxembourg: ['hɛləʃ', 'nʊl', 'lɪəvʌ', 'mɨlɪʃ', 'kʰaləf', 'laːŋ', 'lam', 'zalt͡s', 'blʊt͡s', 'kʰaːl', 'noːl', 'ʃtʊl']
-
-(('m',), ('m',))	 nan	(rep: 100.00, dist:  nan)	(210 times)
-Herrlisheim: ['mɪlɪʃ', 'myːs', 'lɔm', 'ʃtʊʁm', 'vɔːʁm', 'nɒmə', 'haːm', 'møətəχ', 'moːn', 'mʊnt', 'mɪdə']
-Ortisei: ['mɪlç', 'maɵs', 'lɔm', 'ʃtʊʁm', 'βɑʁm', 'nɔmɛ', 'haɪm', 'mʊətəχ', 'mɔnt', 'mʊnt͡s', 'mɪtɛ']
-Dutch_Std_NL: ['mæøs', 'ɫɑm', 'naːm', 'hɛɪm', 'mʊdəʁ', 'maːn', 'mʌnt', 'mɪdə']
-Veenkolonien: ['mɛɤk', 'moːs', 'lamɹ', 'stœːɾəm', 'βaːm', 'noːm', 'hɒɪm', 'moɡə', 'monə', 'mɔ̃t', 'mɪdn']
-Achterhoek: ['mɛlək', 'mys', 'lam', 'stʌʁəm', 'βaɾəm', 'naːmə', 'heːm', 'mɔːnə', 'mʊnt', 'mɪdn']
-Limburg: ['mɪlɪk', 'muːs', 'lɑm', 'ʃtoʁəm', 'βɛʁəm', 'naːm', 'heːm', 'mɔdəχ', 'mɔn', 'mʊŋk', 'mɪdə']
-Grou: ['mʌɫqə', 'moːs', 'ɫaːm', 'stβaɾəm', 'βaːɾəm', 'namə', 'hiəm', 'moər', 'mwanə', 'mʊŋə', 'mɪdn']
-Antwerp: ['mɛlək', 'mɔəs', 'lam', 'stəɾəm', 'βaːɾəm', 'nɑːm', 'hem', 'moːd̪əs', 'mɑːn', 'mɔnt', 'mɪdə']
-Dutch_Std_BE: ['mɛlk', 'mæʏs', 'lɑm', 'stɔrm', 'βarm', 'naːm', 'heːm', 'modər', 'maːn', 'mʊnt', 'mɪdn']
-Ostend: ['maɔk', 'mʉs', 'lɑm', 'stɔɾm', 'βɑrm', 'naːmə', 'heːm', 'moːdr', 'mɔːnə', 'mʊnt', 'mɛdn']
-Feer: ['muəlk', 'mʏs', 'lom', 'sdʊrʌm', 'varam', 'nø̃ːm', 'mõːn', 'mœs', 'madⁿn']
-Heligoland: ['molk', 'mʏs', 'lamkʰən', 'sdʊʁɤm', 'vaʀm', 'neːm', 'mɛm', 'muːŋ', 'mɪtʰ', 'mɛdⁿn']
-Westerkwartier: ['miʟk', 'mysʲ', 'lɑmɐ̰', 'ʃdøœm', 'væam', 'nõːm', 'mukɐ', 'mõɤn', 'mɔ̃ntʰ', 'mɪdⁿn']
-Walser: ['milx', 'muːs', 'ʃtuɾəm', 'βaːɾəm', 'nama', 'hæɪmət', 'mama', 'maːna', 'mitɛ']
-Biel: ['mɪʊχ', 'muːs', 'lɒm', 'ʃtʊɾm', 'βaːrm', 'nɒmə', 'heɪm', 'moətəɾ', 'mɔːnt', 'muː', 'mɪtɪ']
-Graubuenden: ['mɪlχ', 'muːs', 'lam', 'ʃtʊrm', 'βaːrm', 'namɐ', 'haɪm', 'moɔtr', 'mont', 'muːl', 'miti']
-Hard: ['mɪlx', 'muːs', 'lam', 'ʃtʊʁm', 'vaːʁm', 'naːmə', 'hoɐm', 'mʊətəʁ', 'muː', 'mʊnt', 'mɪətə']
-Tuebingen: ['mɪliç', 'mɐus', 'lam', 'ʃtʊɔm', 'βaɔm', 'naːmɛ', 'hɔɪm', 'mʊətɔ', 'mõː', 'munt', 'mitɛ']
-Cologne: ['mɪləʃ', 'muːs', 'lam', 'ʃtʊʀm', 'βɛʁəm', 'naːmə', 'hɛɪm', 'mʊtɒ', 'mɔ̃t', 'mʊŋɡ', 'mɪdə']
-Luxembourg: ['mɨlɪʃ', 'mæʊs', 'lam', 'ʃtʊɛm', 'vaːm', 'nɵm', 'heːm', 'mam', 'mɔnt', 'mɔnt', 'mɨt']
-
-(('n',), ('-',))	 nan	(rep: 100.00, dist:  nan)	(564 times)
-Herrlisheim: ['haχt͡s', 'bɛsəχ', 't͡sʊŋ', 'ʔaʃə', 'voχt', 'dɪŋ', 'kniː', 't͡sɛː', 'laipʰ', 'sɔls', 'ʁaːjə', 'joːχ', 'bløːt', 'hys', 'nɒmə', 'ʔofə', 'moːn', 't͡seː', 'hoʁən', 'ʔofə', 'bɔːt', 'kʰoʁən', 'sɛβə', 'hœʏpt', 'bain', 'ʔoːχ', 'hʊndəχt', 'ʔœʏjə']
-Ortisei: ['hɛχt͡s', 'bɪsəχ', 't͡sʊŋɡɛ', 'ʔaʃɛ', 'βɔʁt͡s', 'dɪŋk', 'kniɛ', 'laːp', 'sɔlt͡s', 'ʁeːɡn', 'jɔːχ', 'bløət͡s', 'haɵs', 'nɔmɛ', 'hɔʁn', 'bɔːt͡s', 'kʰɔʁn', 'haʊpt', 'baɪn', 'ʔoːχ', 'hʊndəχt', 'ʔaʊɡɛ']
-Dutch_Std_NL: ['haɹt', 'bɛɪtʰɹ', 'tʰʌŋ', 'ɑs', 'vɔɹt', 'dɪŋ', 'kʰni', 'loʊf', 'zaʊt', 'ʁeɪχə', 'jaɹ', 'bløt', 'haøs', 'naːm', 'oʊvə', 'fæɪf', 'maːn', 'oʊpə', 'bɑt', 'koʁə', 'zeɪvə', 'hɒʊft', 'bɛɪn', 'neɪχə', 'oəɹ', 'hʊnəɹt', 'oʊχ']
-Veenkolonien: ['hæːt', 'bɛt̪ɹˠ', 'tʰɔŋə', 'aːskə', 'voːɹt', 'dɪŋ', 'knɛɪ', 'hønəχ', 'læːɡ', 'lɒʊf', 'zɔːt', 'ɹɛɪɡn', 'joə', 'χɹœʏ̃', 'blɑʊt', 'hys', 'noːm', 'βiːβə', 'monə', 'bat', 'mɔ̃t', 'koɾn', 'høʏft', 'bɔɪ̃', 'oə', 'ɔn̪d̪əʁt', 'oʁə']
-Achterhoek: ['hatə', 'bɛtʁ', 'tʰʊŋə', 'as', 'βoɐt', 'dɪŋ', 'kneɪ', 'hɔnʌχ', 'joɐ', 'bloːt', 'hys', 'naːmə', 'fiːfə', 'mɔːnə', 'hoɐn', 'bat', 'kʰoɐn', 'høːs', 'beːn', 'neːχn', 'oɐ', 'hʊndəʁt', 'oːʁə']
-Limburg: ['hɑt', 'bɛːtəχ', 'tʊŋ', 'ɛːʃ', 'wɔət', 'dɪŋk', 'knɛɪ', 'zɔːt', 'ʁeən', 'stɛi', 'jɔːχ', 'blʊt', 'huːs', 'naːm', 'ɔβə', 'ɸiːɸ', 'mɔn', 'hoɐn', 'opə', 'bɑt', 'koɐʁ', 'jəʁoːt', 'biː', 'ʊəχ', 'hõət', 'oːx']
-Grou: ['hɛt', 'bɛtr', 'tɔŋə', 'jɪskə', 'βœt', 'dɪŋ', 'ɫɪiəf', 'sɔːt', 'rɒɪn', 'iər', 'bɫoət', 'huːs', 'namə', 'fiːf', 'mwanə', 'ɡoəs', 'hõə̃n', 'bat', 'kõə̃n', 'haːt', 'biən', 'iər', 'hʊndət', 'iəχ']
-Antwerp: ['haɾt', 'b̬ɛtʰəs', 'tʌŋ', 'as', 'βɔst', 'dɪŋ', 'kniː', 'loəf', 'zɔt', 'reːçɪn', 'jɑːɾ', 'bluːt', 'ɔɐs', 'nɑːm', 'oːvə', 'vaːf', 'mɑːn', 'doːɾə', 'oːɾən', 'opə', 'bat', 'koːrə', 'zeːvə', 'hɔft', 'beən', 'neːʝə', 'oːr', 'ʌndəstʰ', 'oəx']
-Dutch_Std_BE: ['hart', 'betəɹ', 'tʊŋ', 'ɑs', 'βɔːrt', 'dɪŋ', 'kniː', 'lɔːf', 'zaʊt', 'reːʝn', 'jaːɹ', 'blut', 'hæʏs', 'naːm', 'fɛɪɸ', 'maːn', 'hɔːrn', 'bɑt', 'koːɾən', 'hoːft', 'beːn', 'oːr', 'hɔndɾt', 'oːx']
-Ostend: ['artə', 'betr', 'tʊŋə', 'ɑsə', 'βɔɾtʰ', 'dɪŋk', 'kniə', 'lɔːf', 'zut', 'ɾeːhə̃', 'jɔːr', 'bluət', 'ʉs', 'naːmə', 'vøvə', 'mɔːnə', 'χɑ̃zə', 'ɔːɾən', 'bɑt', 'kɔːrn', 'oːft', 'bɛːn', 'neːhə̃', 'ɔːɾə', 'ʊndrt', 'oχə']
-Feer: ['haχt', 'beːda', 'tʰɒ̃ŋ', 'ʔeːskʰ', 'voʌtʰ', 'deŋ', 'saːlt', 'rɪn', 'joɤ', 'blotʰ', 'hʏs', 'nø̃ːm', 'fiːf', 'mõːn', 'ɡʊs', 'hʊrn', 'mœs', 'kʰʊrn', 'hoːt', 'ʔuʌ', 'hʊnɐtʰ', 'ʔuːk']
-Heligoland: ['haːʈ', 'betʰɐ', 'tʰɒŋ', 'vøœ', 'dɪŋ', 'bleː', 'soɐltʰ', 'ʀaen', 'ʃdeɐ', 'ʃoɐ', 'blo', 'hʏs', 'neːm', 'fiu', 'muːŋ', 'ɡuːs', 'huɐn', 'mɪtʰ', 'kʰuɐ', 'hoɑ', 'bean', 'βɑː', 'hɒnɐtʰ', 'ʔoo']
-Westerkwartier: ['hat͡sʲ', 'bɛdɐ', 't͡sɒŋ', 'ʔaʃ', 'voɹtʰ', 'deːŋ', 'kʰnɛe', 'lɑof', 'zʏɫt͡s', 'reiɡⁿŋ', 'joɹ', 'ʃæe', 'blʊutʰ', 'hysʲ', 'nõːm', 'fif', 'mõɤn', 'hoːdⁿn', 'batʰ', 'hœftʰ', 'bɛĩ', 'ʔoɔɹ', 'hundətʰ', 'ʔɔuχ']
-Walser: ['haɹt͡s', 'bɛsəɹ', 't͡sʊŋɡə', 'ʔæʃə', 'ʔæɪs', 'βɔːrt', 'dɪŋɡ', 'tʰənɜ̹ʏ', 'laʊp', 'saːlt͡s', 'raɡə', 'ʃtæɪ', 'i', 'jaːr', 'ɡryɛ', 'bloɐt', 'huːs', 'nama', 'ʔoːɸə', 'fyːɸ', 'maːna', 'doːɾə', 'hoːɾə', 'ʔoɸə', 'baːt', 'kʰoːɾə', 'siːpə', 'hɑopt', 'bæɪ', 'nyː', 'ʔoːɹ', 'hʊndət', 'ʔɑʊk']
-Biel: ['hart͡s', 'bɛsəɾ', 't͡sʊŋə', 'ʔaʃə', 'ɛɪs', 'βɔrt', 'dɪŋ', 'χnœɪ', 't͡saə', 'lɑʊp', 'sɑʊt͡s', 'zakə', 'ʃtɛɪ', 'jɑːr', 'blʊɛt', 'huːs', 'nɒmə', 'ʔɔfɛ', 'fyːf', 't͡saɪə', 'hɔrn', 'ʔɔfə', 'bɑːt', 'muː', 'χɔːɾn', 'sepə', 'hɔopt', 'pɛɪ', 'nyːn', 'ɔːr', 'hʊn̪d̪ət', 'ɔok']
-Graubuenden: ['hɛrt͡s', 'bɛsɾ', 't͡sʊŋɡɐ', 'ɛʃə', 'βɔrt', 'dɪŋk', 'kʰnyː', 'laʊp', 'sɑːlt͡s', 'rɛːɡɐ', 'ʃtai', 'jɑːr', 'blʊɔt', 'huːs', 'namɐ', 'ʔoːfə', 'fyːf', 'hoːɾə', 'ʔofə', 'bɑːt', 'kʰɔːɾɐ', 'seːbɐ', 'haʊpt', 'bai', 'nyːn', 'ɔːr', 'hondət', 'aok']
-Hard: ['hɛʁt͡s', 'bɛsəʁ', 't͡sãː', 't͡sʊŋə', 'ʔɛʃə', 'ʔõɛ̃s', 'dɪŋ', 'kʰnyː', 't͡sẽə̃', 'loːp', 'saːlt͡s', 'ʁeɐɡə', 'ʃtõɐ̃', 'jɔːʁ', 'ɡɾỹɛ̃', 'blʊət', 'huːs', 'naːmə', 'ʔoːfə', 'fyːɸ', 'muː', 't͡seːə', 'hɔɐʁn', 'ʔofə', 'baːt', 'kʰɔɐʁn', 'sebə', 'haʊpt', 'bõɐ̃', 'nyː', 'oːʁ', 'hʊndəʁt', 'ʔɔʊk']
-Tuebingen: ['hɛʁt͡s', 'bɛsɔ', 't͡saː', 't͡suŋɡ', 'ʔaʃɛ', 'ʔɔɪs', 'βɔt', 'dɪŋ', 'kniː', 't͡seə', 'lɑʊp', 'salt͡s', 'ʁeəɡə', 'ʃtɔẽ', 'jɔːχ', 'ɡʁeə', 'bluɔt', 'hɐus', 'naːmɛ', 'ʔoːfə', 'faɪf', 'mõː', 'ɡaːs', 't͡saɪə', 'hɒn', 'ʔofə', 'baːt', 'kʰɔn', 'siːbə', 'hɑɵpt', 'bɔ̃ẽ', 'nae', 'ʔɑʊɔ', 'hʊndʁt', 'ʔɑʊk']
-Cologne: ['hɛt͡s', 'bɛsɒ', 't͡sʊŋ', 'ʔɛʃ', 'βɔːt', 'dɪŋ', 'kʰni', 'lɔʊf', 'zaːlt͡s', 'ʀɛn', 'jɔ', 'jɒʁœ̃', 'blot', 'huːs', 'naːmə', 'ʔɔvə', 'mɔ̃t', 't͡si', 'hɔːn', 'ʔɔfə', 'bat', 'kʰɔːn', 'zɪbə', 'hɔʊp', 'beɪn', 'nʏŋ', 'ʔoɐ', 'hʊndɐt', 'ʔɔʊχ']
-Luxembourg: ['heɐt͡s', 'bɛsʌ', 't͡sɔŋ', 'ʔaks', 'vʊɛt', 'kʰnɛi', 'zalt͡s', 'ʁeːn', 'joɐ', 'blʊt͡s', 'hɛʊs', 'nɵm', 'dɔɐ', 'bʊɛt', 'kʰaːχ', 'haːpt', 'beːn', 'ʔœʊɑ', 'hɔnɐt', 'ʔaː']
-
-(('n',), ('n',))	 nan	(rep: 100.00, dist:  nan)	(530 times)
-Herrlisheim: ['t͡saːn', 'naːdl', 'hɒnt', 'noχt', 'ʔɛːns', 'kniː', 'honik', 'donəχ', 'ʃtɛːn', 'ʔɪn', 'nɔːχt', 'ʃneː', 'ɡʁeːn', 'nɒmə', 'fɪnəɸ', 'moːn', 'toʁən', 'hʊnt', 'ɡɔns', 'hoʁən', 'mʊnt', 'naːjəl', 'kʰoʁən', 'vɪnt', 'bain', 'niːn', 'hʊndəχt', 'nɔkətʰ', 'nɛi']
-Ortisei: ['t͡sɑːn', 'nɔːdl', 'hɒnt͡s', 'noχt͡s', 'ʔɔəns', 'kniɛ', 'hoːnik', 'dɔnəχ', 't͡seːn', 'ʁeːɡn', 'ʃtan', 'ʔɪn', 'nɔχt', 'ʃneə', 'ɡʁiɛn', 'nɔmɛ', 'ʔofn', 'mɔnt', 'dɔʁn', 'hʊnt͡s', 'ɡɔns', 'hɔʁn', 'ʔofn', 'mʊnt͡s', 'nɔːɡl', 'kʰɔʁn', 'βɪnt', 'baɪn', 'naɪn', 'hʊndəχt', 'nɔkt͡s', 'naɪ']
-Dutch_Std_NL: ['tʰɑnt', 'naːɫt', 'hɑnt', 'nɔɹt', 'eɪn', 'kʰni', 'hɔnɪŋ', 'dʌndəʁ', 'tʰin', 'steɪn', 'ɪn', 'nɑχt', 'sneu', 'χʁun', 'naːm', 'maːn', 'hɔnt', 'χɑns', 'tʰeɪn', 'mʌnt', 'naχʌɫ', 'vɪnt', 'bɛɪn', 'neɪχə', 'hʊnəɹt', 'naːkt', 'niu']
-Veenkolonien: ['tʰanə', 'naːɫə', 'noːɹt', 'ɒɪnə', 'knɛɪ', 'hønəχ', 'dʏndɹˠ', 'tʰinə', 'ɹɛɪɡn', 'stɔɪn', 'ɪn', 'naχt', 'snɛː', 'noːm', 'monə', 'doːɾn', 'hanzə', 'tʰɑʊnə', 'noʁəɫ', 'koɾn', 'βɪnt', 'nɛɪɡŋ', 'nokt', 'nɛɪ']
-Achterhoek: ['tʰant', 'nɔːɫdə', 'hant', 'noɐt', 'kneɪ', 'hɔnʌχ', 'dʊndʁ', 'tiːnə', 'steːn', 'ɪn', 'naχ', 'snɛɪ', 'χøːn', 'naːmə', 'ɔːβn', 'mɔːnə', 'doɐn', 'hʊnt', 'χans', 'tʰeːn', 'hoɐn', 'mʊnt', 'nɛːχɫ', 'kʰoɐn', 'zœːvn', 'βɪnt', 'beːn', 'neːχn', 'hʊndəʁt', 'naːkənt', 'niː']
-Limburg: ['nɔlt', 'noɐt', 'knɛɪ', 'øənɪŋ', 'dʊndəχ', 'ʁeən', 'ɪn', 'nax', 'snɛi', 'χʁøn', 'naːm', 'mɔn', 'doɐn', 'xans', 'tʰiən', 'hoɐn', 'naːɣɫ', 'nɑks', 'nœɪ']
-Grou: ['tinə', 'nœɫə', 'noət', 'iən', 'knɪbɫ', 'hynɪŋ', 't͡siən', 'rɒɪn', 'stiən', 'in', 'naχt', 'sniə', 'ɡɾiən', 'namə', 'ũn', 'mwanə', 'tβanə', 'hũn', 'tiən', 'hõə̃n', 'nɒɪɫ', 'kõə̃n', 'sõw̃ə̃n', 'βin', 'biən', 'njʌʁʌn', 'hʊndət', 'niəkŋ', 'nɛi']
-Antwerp: ['tant', 'nɑɫt', 'hant', 'nɔst', 'iən', 'kniː', 'øːnɪŋ', 'd̬ɔndəs', 'tʰin', 'reːçɪn', 'steən', 'in', 'naxt', 'sniə', 'çɾyn', 'nɑːm', 'mɑːn', 'ɐʊnt', 'çjans', 'teən', 'oːɾən', 'mɔnt', 'nɑːxɫ', 'βɪnt', 'beən', 'neːʝə', 'ʌndəstʰ', 'nakt', 'nif']
-Dutch_Std_BE: ['tant', 'naːɫt', 'hantʰ', 'nɔːrt', 'eːn', 'kniː', 'hoːnɪŋ', 'dʌndər', 'tiːn', 'reːʝn', 'steːn', 'ɪn', 'naxt', 'sneu', 'xruːn', 'naːm', 'oːβn', 'maːn', 'dɔːrn', 'hʊnt', 'xans', 'teːn', 'hɔːrn', 'oːpn', 'mʊnt', 'naːxəɫ', 'koːɾən', 'zeːβn', 'βɪnt', 'beːn', 'neːʝn', 'hɔndɾt', 'naːkt', 'niu']
-Ostend: ['tɑnt', 'nɑɔdɫ', 'ɑnt', 'nɔːɾt', 'ɛːn', 'kniə', 'dœndr', 'tiənə', 'stɛːn', 'ɪn', 'naχt', 'snɛʊ', 'hɾuənə', 'naːmə', 'ɔːvn', 'mɔːnə', 'dɔːn', 'ʊnt', 'tɛːn', 'ɔːɾən', 'mʊnt', 'naːχə', 'kɔːrn', 'seːvn', 'βɪnt', 'bɛːn', 'neːhə̃', 'ʊndrt', 'nakt', 'niːβə']
-Feer: ['neːdˡl', 'hʊn', 'noɤt', 'ʔiæn', 'hɒ̃nəŋ', 'kʰnœbʝɛn', 'hœneŋ', 'tʰɔna', 'tʰʲiːn', 'rɪn', 'stiæn', 'ʔoːn', 'nɑχtʰ', 'snæ', 'dreːn', 'nø̃ːm', 'mõːn', 'tʰuʌn', 'hʊrn', 'naːjl', 'kʰʊrn', 'søːvn', 'bijɛn', 'njyɡⁿŋ', 'hʊnɐtʰ', 'naːɡət', 'nai']
-Heligoland: ['tʰeæn', 'neɛdˡl', 'hɔn', 'nuʌɖ', 'ʔeasɡən', 'jaːn', 'kʰnæbean', 'hœnõŋ', 'tʰʏnə', 'tʰaen', 'ʀaen', 'noʌχ', 'sneː', 'ɡʁeːn', 'neːm', 'ʔoɑvən', 'hɪn', 'tʰβaːn', 'huɐn', 'ʔepʰən', 'noʏɘl', 'vɪn', 'bean', 'neɐɡæn', 'hɒnɐtʰ', 'noɐɡɤlt', 'nae']
-Westerkwartier: ['t͡sãnt͡s', 'nɑɫtʰ', 'hãnt͡s', 'noət͡ʃ', 'ʔɑin', 'kʰnɛe', 'hɶnɶx', 'dɶnaɹ', 't͡sĩn', 'ʃdæin', 'ʔĩn', 'naχtʰ', 'xɣɶn', 'nõːm', 'mõɤn', 'doɤn', 'hɔ̃ntʰ', 'xansʲ', 'hoːdⁿn', 'mɔ̃ntʰ', 'nɔχɔ', 'vintʰ', 'neɡⁿŋ', 'hundətʰ', 'noɡtʰ', 'næi']
-Walser: ['t͡sant', 'naːdlə', 'hant', 'nɔɾdə', 'tʰənɜ̹ʏ', 'hoːnɪɡ', 'dɔnɛɾ', 'naχt', 'ʃneː', 'nama', 'maːna', 'huːnt', 'ɡans', 'naːɡl', 'nyː', 'hʊndət', 'nakɪk', 'nɜ̹ʏ']
-Biel: ['t͡sɑːn', 'nɔrt', 'χnœɪ', 'hɔnik', 'dɔnəɾ', 'ʔɪn', 'nɒχt', 'ʃneː', 'ɡɾʏɛn', 'nɒmə', 'mɔːnt', 'tɔːɾn', 'hʊnt', 'ɡɒns', 'hɔrn', 'nɑku', 'χɔːɾn', 'βɪnt', 'nyːn', 'nɒkχt', 'nœɪ']
-Graubuenden: ['t͡sɑːn', 'hant', 'nɔrd', 'aɪnt͡s', 'kʰnyː', 'donɾ', 't͡seːn', 'ʔɪn', 'naχt', 'ʃneː', 'ɡɾʏɛn', 'namɐ', 'mont', 'dɔrn', 'hʊnt', 'ɡans', 'nɑːɡl', 'βint', 'nyːn', 'hondət', 'nakt', 'nœʏ']
-Hard: ['nɔːdl', 'hant', 'nɔːʁdə', 'kʰnyː', 'hɔːnɪɡ', 'dɔnəʁ', 'ʔin', 'naːxt', 'ʃneɪ', 'naːmə', 'dɔrnə', 'hʊnd', 'ɡans', 'hɔɐʁn', 'mʊnt', 'naːɡl', 'kʰɔɐʁn', 'dʁɪnk', 'vɪnt', 'nyː', 'hʊndəʁt', 'nakɪk', 'nœʏ']
-Tuebingen: ['nɔːdl', 'hant', 'nɔt', 'kniː', 'hoːniç', 'dɔnɔχ', 'ʔin', 'naːχt', 'ʃneː', 'naːmɛ', 'dɔn', 'hʊnt', 'hɒn', 'munt', 'naːɡl', 'kʰɔn', 'vɪnt', 'nae', 'hʊndʁt', 'nakət', 'nui']
-Cologne: ['t͡sant', 'nɔːdl', 'hant', 'nɔχt', 'kʰni', 'hʊniʃ', 'donɒ', 't͡seːn', 'ʀɛn', 'ʃteɪn', 'ʔɪn', 'naːχ', 'ʃneɪ', 'naːmə', 'fʏnəf', 'dɔːn', 'jans', 'hɔːn', 'neəl', 'kʰɔːn', 'vɪnt', 'beɪn', 'nʏŋ', 'hʊndɐt', 'nak', 'nœʏ']
-Luxembourg: ['t͡sant', 'nʊl', 'hant', 'nʊəʁdən', 'ʔeːnt', 'kʰnɛi', 'hʊnəʃ', 'dɔnʌ', 'ʁeːn', 'steːn', 'ʔan', 'nuɛʃt', 'ʃnɛi', 'nɵm', 'ʔʊɛvən', 'fɨnəf', 'mɔnt', 'hʊnt', 'ɡæns', 'ʔʊpən', 'mɔnt', 'noːl', 'ziːvən', 'vant', 'beːn', 'nɪŋ', 'hɔnɐt', 'nɑɪ']
-
-(('n',), ('ŋ',))	 nan	(rep: 100.00, dist:  nan)	(146 times)
-Herrlisheim: ['t͡sʊŋ', 'hʊŋəχ', 'lɔŋ', 'ʁɪŋ', 'jʊŋ', 'tʁɪŋk']
-Ortisei: ['t͡sʊŋɡɛ', 'hʊŋɡəχ', 'lɔŋk', 'ʁɪŋk', 'jʊŋk', 'tʁɪŋk']
-Dutch_Std_NL: ['tʰʌŋ', 'hʌŋəʁ', 'hɔnɪŋ', 'ɫɑŋ', 'ʁɪŋ', 'jʌŋ', 'dʁɪŋk']
-Veenkolonien: ['tʰɔŋə', 'ɔŋɹ', 'ɾɪŋ', 'jʊŋk', 'dʁɛŋk', 'nɛɪɡŋ']
-Achterhoek: ['tʰʊŋə', 'hʊŋʁ', 'laŋə', 'ʁɪŋ', 'jʊŋə', 'dʁɪŋk']
-Limburg: ['taŋk', 'haŋk', 'tʊŋ', 'hʊŋəχ', 'øənɪŋ', 'laŋk', 'ʁɪŋk', 'jʊŋk', 'hʊŋk', 'mʊŋk', 'dʁɪŋk', 'βɪŋk']
-Grou: ['tɔŋə', 'hʌŋr', 'hynɪŋ', 'tʌŋr', 'ɫaŋ', 'rɪŋ', 'jʌŋ', 'mʊŋə', 'dɾɪŋk']
-Antwerp: ['tʌŋ', 'ʊŋəs', 'øːnɪŋ', 'laɪŋ', 'rɪŋ', 'jʊŋ', 'dɾɪŋk']
-Dutch_Std_BE: ['tʊŋ', 'hʊŋəɹ', 'hoːnɪŋ', 'laŋ', 'rɪŋ', 'jʊŋ', 'd̪rɪŋk']
-Ostend: ['tʊŋə', 'ʊŋr', 'laŋ', 'rɪŋk', 'jʊŋk', 'dɾɪŋk']
-Feer: ['tʰɒ̃ŋ', 'hœneŋ', 'lʊŋ', 'rɪŋ', 'ʔõŋkʰ', 'jɒŋ', 'draŋk', 'njyɡⁿŋ']
-Heligoland: ['tʰɒŋ', 'hɒŋə', 'hœnõŋ', 'lɔŋ', 'ʔuːŋ', 'ʁɪŋ', 'muːŋ', 'dʒɒŋ', 'dʁɪŋk']
-Westerkwartier: ['t͡sɒŋ', 'ɦõŋʌɹ', 'laːŋ', 'reiɡⁿŋ', 'rẽŋ', 'jɒŋ', 'drẽŋkʰ', 'neɡⁿŋ']
-Walser: ['t͡sʊŋɡə', 'hʊŋɡəɾ', 'lɪŋɡ', 'rɪŋɡ', 'jʊŋɡ', 'drɪŋk']
-Biel: ['hɒŋ', 't͡sʊŋə', 'hʊŋəz', 'laŋ', 'rɪŋ', 'jʊŋ', 'drɪŋkχ']
-Graubuenden: ['t͡sʊŋɡɐ', 'hʊŋɡr', 'laŋk', 'riŋk', 'jʊŋk', 'dɾɪŋkʰ']
-Hard: ['t͡sʊŋə', 'hʊŋəʁ', 'laŋ', 'ʁɪŋ', 'jʊŋ']
-Tuebingen: ['t͡suŋɡ', 'hʊŋɔ', 'laŋ', 'ʁɪŋ', 'jʊŋ', 'dʁɪŋk']
-Cologne: ['t͡sʊŋ', 'ʔeɪŋə', 'hʊŋɒ', 'laŋ', 'ʀɪŋ', 'jʊŋ', 'hʊŋk', 'mʊŋɡ', 'dʁɪŋk']
-Luxembourg: ['t͡sɔŋ', 'hʊŋʌ', 'dɪŋən', 't͡sɪŋ', 'laːŋ', 'ʁɐŋ', 'ɡʁɪŋ', 'jʊŋk', 'dʀɪŋk', 'nɪŋ']
-
-(('oː',), ('-',))	 nan	(rep: 100.00, dist:  nan)	(187 times)
-Herrlisheim: ['haχt͡s', 'bɛsəχ', 'naːdl', 't͡sʊŋ', 't͡seː', 'ʔaχt', 'fiəχ', 'ʔoːχ']
-Ortisei: ['hɛχt͡s', 'bɪsəχ', 'nɔːdl', 'leːbəχ', 't͡sɛːχ', 'fiəχ', 'ʔoːχ']
-Dutch_Std_NL: ['haɹt', 'bɛɪtʰɹ', 'naːɫt', 'lɛɪvəʁ', 'tʰʌŋ', 'ɑs', 'naːm', 'tʰeɪn', 'vʌɫ', 'fiəʁ', 'oəɹ', 'oʊχ']
-Veenkolonien: ['hæːt', 'bɛt̪ɹˠ', 'lɛɪvɹ', 'noːm', 'tʰɑʊnə', 'βʌɫ', 'βaːɾə', 'oə']
-Achterhoek: ['bɛtʁ', 'lɛːβʁ', 'as', 'tʰeːn', 'fiəʁə', 'oɐ']
-Limburg: ['hɑt', 'bɛːtəχ', 'nɔlt', 'lɛɪβəχ', 'tʊŋ', 'ɛːʃ', 'naːm', 'tʰiən', 'eət', 'βøl', 'ɸiəχ', 'ʊəχ', 'oːx']
-Grou: ['hɛt', 'bɛtr', 'ɫɛɪvr', 'tiən', 'fjaʊɾ', 'iər', 'iəχ']
-Antwerp: ['haɾt', 'b̬ɛtʰəs', 'nɑɫt', 'levər', 'tʌŋ', 'as', 'nɑːm', 'teən', 'wʌɫ', 'viːs', 'oːr', 'oəx']
-Dutch_Std_BE: ['hart', 'betəɹ', 'naːɫt', 'leːβər', 'tʊŋ', 'ɑs', 'naːm', 'teːn', 'βʌɫ', 'viəɹ', 'oːr', 'oːx']
-Ostend: ['betr', 'nɑɔdɫ', 'leːvəs', 'tɛːn', 'viəɾə']
-Feer: ['haχt', 'beːda', 'neːdˡl', 'lʏva', 'tʰɒ̃ŋ', 'ʔeːskʰ', 'nø̃ːm', 'tʰuʌn', 'ʔeɛt', 'ʔol', 'fjaoɔ', 'ʔuʌ', 'ʔuːk']
-Heligoland: ['haːʈ', 'betʰɐ', 'neɛdˡl', 'lʏva', 'tʰɒŋ', 'neːm', 'tʰβaːn', 'ʔiɐ', 'ʔɔl', 'ʃdʲuɐ', 'βɑː', 'ʔoo']
-Westerkwartier: ['hat͡sʲ', 'bɛdɐ', 'nɑɫtʰ', 'lɛifɹ', 't͡sɒŋ', 'ʔaʃ', 'nõːm', 't͡səũɴ', 'voɫ', 'fiɾ', 'ʔoɔɹ', 'ʔɔuχ']
-Walser: ['haɹt͡s', 'bɛsəɹ', 't͡seːbɐ', 'fiəɹ', 'ʔoːɹ', 'ʔɑʊk']
-Biel: ['hart͡s', 'bɛsəɾ', 't͡saɪə', 'fiəɾ', 'ɔːr', 'ɔok']
-Graubuenden: ['hɛrt͡s', 'bɛsɾ', 't͡seːbɐ', 'fiɛɾ', 'ɔːr', 'aok']
-Hard: ['hɛʁt͡s', 'bɛsəʁ', 'nɔːdl', 'leəbəʁ', 't͡seːə', 'fiəʁ', 'oːʁ', 'ʔɔʊk']
-Tuebingen: ['hɛʁt͡s', 'bɛsɔ', 'nɔːdl', 'leːbɔχ', 't͡suŋɡ', 't͡saɪə', 'fiɔ', 'ʔɑʊɔ', 'ʔɑʊk']
-Cologne: ['hɛt͡s', 'bɛsɒ', 'nɔːdl', 'lɪvɒ', 't͡sʊŋ', 'ʔɛʃ', 't͡si', 'ʔɛtʰ', 'vʌl', 'fiə', 'ʔoɐ', 'ʔɔʊχ']
-Luxembourg: ['heɐt͡s', 'bɛsʌ', 'nʊl', 'lɪəvʌ', 't͡sɔŋ', 'ʔaks', 'nɵm', 't͡sɛif', 'ʔeɐt', 'vɔl', 'fə̆ɪɜ', 'ʔœʊɑ', 'ʔaː']
-
-(('s',), ('s',))	 nan	(rep: 95.00, dist:  nan)	(185 times)
-Herrlisheim: ['sɪt͡s', 'ʔɪs', 'seː', 'sɔls', 'hys', 'sɛβə', 'sɛːχ', 'sɪks']
-Ortisei: ['sɪt͡s', 'sɔlt͡s', 'haɵs', 'sɛːχ', 'sɪks']
-Dutch_Std_NL: ['ɑs', 'ɪs', 'steɪn', 'sneu', 'fɑst', 'haøs', 'vɑs', 'fɪs', 'stuːɫ', 'zɛs']
-Veenkolonien: ['aːskə', 'ɪs', 'stœːɾəm', 'stɔɪn', 'snɛː', 'vastə', 'hys', 'βaːs', 'fɪs', 'stɑʊlə', 'sχaːp']
-Achterhoek: ['as', 'ɪs', 'stʌʁəm', 'steːn', 'snɛɪ', 'ɸastə', 'hys', 'βas', 'stɔːɫ', 'sχaɾəp', 'zɛsə']
-Limburg: ['ɪs', 'stɛi', 'snɛi', 'fas', 'huːs', 'sɛs']
-Grou: ['sɪt', 'jɪskə', 'ɪs', 'sjʌχ', 'stβaɾəm', 'sɔːt', 'stiən', 'sniə', 'fɛəst', 'huːs', 'sβar', 'sõw̃ə̃n', 'βɒskiə', 'siər', 'fɪsk', 'stuəɫ', 'skɛrp', 'sɒɪs']
-Antwerp: ['as', 'ɪs', 'stəɾəm', 'steən', 'sniə', 'fast', 'ɔɐs', 'βas', 'vɪs', 'stuː', 'sjaːɾəp', 'zɪs']
-Dutch_Std_BE: ['ɑs', 'ɪs', 'stɔrm', 'steːn', 'sneu', 'βɑst', 'hæʏs', 'βɑs', 'vɪs', 'stuːl', 'sçɛrp', 'zɛs']
-Ostend: ['ɑsə', 'ɛs', 'stɔɾm', 'stɛːn', 'snɛʊ', 'vɑstə', 'ʉs', 'sβaːs', 'seːvn', 'βɑs', 'vɛs', 'stuəl', 'zasə']
-Feer: ['sat', 'ʔeːskʰ', 'ʔas', 'sɛ', 'sdʊrʌm', 'saːlt', 'stiæn', 'snæ', 'feːst', 'hʏs', 'svea', 'søːvn', 'vaske', 'sie', 'fask', 'sduːl', 'sɡarap', 'seːks']
-Heligoland: ['ʔeasɡən', 'ʔɛs', 'sdʊʁɤm', 'soɐltʰ', 'sneː', 'fas', 'hʏs', 'sveɑ', 'seːbⁿm', 'vɐsɡə', 'seɐ', 'fɛsk', 'sɡapʰ', 'sœs̪']
-Westerkwartier: ['fastʰ']
-Walser: ['saːlt͡s', 'huːs', 'siːpə', 'sɛːɹ', 'sæks']
-Biel: ['sɪt͡s', 'sɑʊt͡s', 'huːs', 'sepə', 'sɛːr', 'saχs']
-Graubuenden: ['sɪt͡s', 'sɑːlt͡s', 'huːs', 'seːbɐ', 'sɛːɾ', 'seɪks']
-Hard: ['saːlt͡s', 'huːs', 'sebə', 'sɪks']
-Tuebingen: ['sit͡s', 'seə', 'salt͡s', 'hɐus', 'siːbə', 'sɪks']
-Cologne: ['ʔɪs', 'fas', 'huːs', 'zɛks']
-Luxembourg: ['ʔaks', 'ɐs', 'steːn', 'fɛst', 'hɛʊs', 'zɛks']
-
-(('u',), ('-',))	 nan	(rep: 100.00, dist:  nan)	(92 times)
-Herrlisheim: ['hɒnt', 't͡sɛː', 'toʁən', 'niːn']
-Ortisei: ['hɒnt͡s', 't͡seːn', 'dɔʁn', 'ziːbm', 'naɪn']
-Dutch_Std_NL: ['hɑnt', 'tʰin', 'tʰʁaːn']
-Veenkolonien: ['hæ̃ːt', 'ɔŋɹ', 'tʰinə', 'doːɾn', 'zøbm', 'nɛɪɡŋ']
-Achterhoek: ['hant', 'hʊŋʁ', 'tiːnə', 'doɐn', 'tʰʁɔːn', 'zœːvn', 'neːχn']
-Limburg: ['haŋk', 'doɐn', 'tʰʁɒːn']
-Grou: ['hɒ̃w̃ə̃', 'hʌŋr', 't͡siən', 'tɾiən']
-Antwerp: ['hant', 'tʰin', 'doːɾə', 'tʰɾan']
-Dutch_Std_BE: ['hantʰ', 'tiːn', 'dɔːrn', 'traːn', 'zeːβn', 'neːʝn']
-Ostend: ['ɑnt', 'ʊŋr', 'tiənə', 'dɔːn', 'seːvn']
-Feer: ['hʊn', 'tʰʲiːn', 'tʰuʌ', 'søːvn', 'njyɡⁿŋ']
-Heligoland: ['hɔn', 'tʰaen', 'tʰβɑːn', 'seːbⁿm']
-Westerkwartier: ['hãnt͡s', 't͡sĩn', 'doɤn', 'tʰɹõː', 'sʲøːbⁿm', 'neɡⁿŋ']
-Walser: ['hant', 't͡sahə', 'doːɾə', 'nyː']
-Biel: ['hɒŋ', 't͡saə', 'tɔːɾn', 'nyːn']
-Graubuenden: ['hant', 'hʊŋɡr', 't͡seːn', 'dɔrn', 'nyːn']
-Hard: ['hant', 't͡sẽə̃', 'nyː']
-Tuebingen: ['hant', 't͡seə', 'dɔn', 'nae']
-Cologne: ['hant', 't͡seːn', 'dɔːn', 'tʁɔn', 'nʏŋ']
-Luxembourg: ['hant', 't͡sɪŋ', 'dɔɐ', 'tʰʀɛɪn', 'nɪŋ']
-
-(('w',), ('-',))	 nan	(rep: 100.00, dist:  nan)	(150 times)
-Herrlisheim: ['kʰyː', 'kniː', 'seː', 'ʃneː', 't͡seː', 'fiəχ', 'niːn', 'nɔkətʰ']
-Ortisei: ['kʰuɛ', 'kniɛ', 'ʃaɵ', 'ʃneə', 't͡sɛːχ', 'fiəχ', 'naɪn', 'nɔkt͡s']
-Dutch_Std_NL: ['ku', 'kʰni', 'zi', 'sneu', 'tʰeɪn', 'fiəʁ', 'kvik', 'naːkt']
-Veenkolonien: ['kɑʊ', 'knɛɪ', 'zɛɪ', 'snɛː', 'tʰɑʊnə', 'βaːɾə', 'nokt']
-Achterhoek: ['koː', 'kneɪ', 'zɛɪ', 'snɛɪ', 'tʰeːn', 'fiəʁə', 'naːkənt']
-Limburg: ['kɒʊ', 'knɛɪ', 'ziə', 'snɛi', 'tʰiən', 'ɸiəχ', 'nɑks']
-Grou: ['kɒʊ', 'sjʌχ', 'sniə', 'tiən', 'fjaʊɾ', 'kβɪk', 'niəkŋ']
-Antwerp: ['kuː', 'kniː', 'zeə', 'sniə', 'teən', 'viːs', 'kβɪk', 'nakt']
-Dutch_Std_BE: ['kuː', 'kniː', 'zeː', 'sneu', 'teːn', 'viəɹ', 'kβik', 'naːkt']
-Ostend: ['kuə', 'kniə', 'zɛː', 'snɛʊ', 'tɛːn', 'viəɾə', 'kβɪk', 'nakt']
-Feer: ['kʰʏ', 'sɛ', 'snæ', 'tʰuʌn', 'tʰao', 'fjaoɔ', 'naːɡət']
-Heligoland: ['kʰɪ', 'sneː', 'tʰβaːn', 'tʰɑo', 'ʃdʲuɐ', 'noɐɡɤlt']
-Westerkwartier: ['kʰaɔ', 'kʰnɛe', 'ʒøɛχ', 'ʃæe', 't͡səũɴ', 'fiɾ', 'noɡtʰ']
-Walser: ['xuɛ', 'tʰənɜ̹ʏ', 'ʃneː', 't͡seːbɐ', 'fiəɹ', 'kʰɛk', 'nyː', 'nakɪk']
-Biel: ['χʊə', 'χnœɪ', 'ʃneː', 't͡saɪə', 'fiəɾ', 'k͡xɛkχ']
-Graubuenden: ['kʰʊa', 'kʰnyː', 'ʃneː', 't͡seːbɐ', 'fiɛɾ', 'kʰɛk', 'nakt']
-Hard: ['kʰʊɛ', 'kʰnyː', 'ʃneɪ', 't͡seːə', 'fiəʁ', 'nyː', 'nakɪk']
-Tuebingen: ['kʰuə', 'kniː', 'seə', 'ʃneː', 't͡saɪə', 'fiɔ', 'kʰɛk', 'nae', 'nakət']
-Cologne: ['kʰo', 'kʰni', 'zøʃ', 'ʃneɪ', 't͡si', 'fiə', 'nak']
-Luxembourg: ['kʰœʊ', 'kʰnɛi', 'ʃnɛi', 't͡sɛif', 'fə̆ɪɜ', 'nɪŋ']
-
-(('x',), ('-',))	 nan	(rep: 100.00, dist:  nan)	(160 times)
-Herrlisheim: ['seː', 't͡sɛː', 'ʁɪŋ', 'tʁaːnə', 't͡seː', 'βɒs', 'vis']
-Ortisei: ['ʃaɵ', 't͡seːn', 'ʁɪŋk', 'tʁɛːnə', 't͡sɛːχ', 'βɔs', 'βaɪs']
-Dutch_Std_NL: ['zi', 'tʰin', 'ʁɪŋ', 'tʰʁaːn', 'tʰeɪn', 'vɑt', 'vɪt', 'zɛs']
-Veenkolonien: ['ɔŋɹ', 'zɛɪ', 'tʰinə', 'ɾɪŋ', 'tɾoːnə', 'tʰɑʊnə', 'βat', 'ɔn̪d̪əʁt', 'βɒɪt', 'zɛːzə']
-Achterhoek: ['zɛɪ', 'tiːnə', 'ʁɪŋ', 'tʰʁɔːn', 'tʰeːn', 'βat', 'βɪt', 'zɛsə']
-Limburg: ['ziə', 'ʁɪŋk', 'tʰʁɒːn', 'tʰiən', 'βɑt', 'βɪət', 'sɛs', 'dɔtəχ']
-Grou: ['t͡siən', 'rɪŋ', 'tɾiən', 'tiən', 'βɔt', 'βit', 'sɒɪs']
-Antwerp: ['aɪlɪç', 'ʊŋəs', 'zeə', 'tʰin', 'oəs', 'rɪŋ', 'ɔɐs', 'tʰɾan', 'ɐʊnt', 'teən', 'oːɾən', 'βat', 'ʌndəstʰ', 'βit', 'zɪs']
-Dutch_Std_BE: ['zeː', 'tiːn', 'rɪŋ', 'traːn', 'teːn', 'βɑt', 'βɪt', 'zɛs']
-Ostend: ['artə', 'ɛləç', 'ɑnt', 'ʊŋr', 'zɛː', 'tiənə', 'ɔːs', 'rɪŋk', 'ʉs', 'ʊnt', 'tɛːn', 'ɔːɾən', 'βɑdə', 'oːft', 'ʊndrt', 'βɛt', 'zasə']
-Feer: ['sɛ', 'tʰʲiːn', 'rɪŋ', 'tʰuʌ', 'tʰuʌn', 'vat', 'vitç']
-Heligoland: ['tʰaen', 'ʁɪŋ', 'tʰβɑːn', 'tʰβaːn', 'vatʰ', 'vɪtʰ', 'sœs̪']
-Westerkwartier: ['t͡sĩn', 'rẽŋ', 'tʰɹõː', 't͡səũɴ', 'vatʰ', 'vetʰ', 'zɛsʲ']
-Walser: ['t͡sahə', 'rɪŋɡ', 'dɾaːnə', 't͡seːbɐ', 'βas', 'βiːs']
-Biel: ['t͡saə', 'rɪŋ', 't̪raːnə', 't͡saɪə', 'βɒs', 'βiːs']
-Graubuenden: ['t͡seːn', 'riŋk', 'tɾɛːnɐ', 't͡seːbɐ', 'vas', 'βiːs']
-Hard: ['t͡sẽə̃', 'ʁɪŋ', 'tʁɛːnə', 't͡seːə', 'vaːs', 'viːs']
-Tuebingen: ['seə', 't͡seə', 'ʁɪŋ', 'tʁeːnə', 't͡saɪə', 'βaːs', 'βɛis']
-Cologne: ['t͡seːn', 'ʀɪŋ', 'tʁɔn', 't͡si', 'βat', 'βiːs']
-Luxembourg: ['t͡sɪŋ', 'ʁɐŋ', 'ʀiət͡s', 'tʰʀɛɪn', 't͡sɛif', 'vaːt', 'væis']
-
-(('x',), ('h',))	 nan	(rep: 100.00, dist:  nan)	(189 times)
-Herrlisheim: ['haχt͡s', 'hailikʰ', 'hɒnt', 'hʊŋəχ', 'heːχ', 'hys', 'haːm', 'hʊnt', 'hoʁən', 'hœʏpt', 'hʊndəχt']
-Ortisei: ['hɛχt͡s', 'haɪlɪk', 'hɒnt͡s', 'hʊŋɡəχ', 'hɛːχ', 'haɵs', 'haɪm', 'hʊnt͡s', 'hɔʁn', 'haʊpt', 'hʊndəχt']
-Dutch_Std_NL: ['haɹt', 'hɛɪlʌχ', 'hɑnt', 'hʌŋəʁ', 'hoɹ', 'haøs', 'hɛɪm', 'hɔnt', 'hɒʊft', 'hʊnəɹt']
-Veenkolonien: ['hæːt', 'hɒɪləχ', 'hæ̃ːt', 'høː', 'hys', 'hɒɪm', 'høʏft']
-Achterhoek: ['hatə', 'hɛɪləχ', 'hant', 'hʊŋʁ', 'høɐ', 'hys', 'heːm', 'hʊnt', 'hoɐn', 'høːs', 'hʊndəʁt']
-Limburg: ['hɑt', 'heːlɪç', 'haŋk', 'hʊŋəχ', 'hyəχ', 'huːs', 'heːm', 'hʊŋk', 'hoɐn', 'hõət']
-Grou: ['hɛt', 'hɪɫəχ', 'hɒ̃w̃ə̃', 'hʌŋr', 'huːs', 'hiəm', 'hũn', 'hõə̃n', 'haːt', 'hʊndət']
-Antwerp: ['haɾt', 'hant', 'hem', 'hɔft']
-Dutch_Std_BE: ['hart', 'hɛɪləç', 'hantʰ', 'hʊŋəɹ', 'hoːɹ', 'hæʏs', 'heːm', 'hʊnt', 'hɔːrn', 'hoːft', 'hɔndɾt']
-Ostend: ['raht', 'heːm', 'faht']
-Feer: ['haχt', 'helikʰ', 'hʊn', 'hɒ̃nəŋ', 'hʏs', 'hyɲ', 'hʊrn', 'hoːt', 'hʊnɐtʰ']
-Heligoland: ['haːʈ', 'hele', 'hɔn', 'hɒŋə', 'haɡə', 'hʏs', 'hɪn', 'huɐn', 'hoɑ', 'hɒnɐtʰ']
-Westerkwartier: ['hat͡sʲ', 'haelɛχ', 'hãnt͡s', 'høæɹ', 'hysʲ', 'hɔ̃ntʰ', 'hoːdⁿn', 'hœftʰ', 'hundətʰ']
-Walser: ['haɹt͡s', 'hæɪlɪk', 'hant', 'hʊŋɡəɾ', 'høːɾ', 'huːs', 'hæɪmət', 'huːnt', 'hoːɾə', 'hɑopt', 'hʊndət']
-Biel: ['hart͡s', 'heilɪk', 'hɒŋ', 'hʊŋəz', 'huːs', 'heɪm', 'hʊnt', 'hɔrn', 'hɔopt', 'hʊn̪d̪ət']
-Graubuenden: ['hɛrt͡s', 'haɪlik', 'hant', 'hʊŋɡr', 'huːs', 'haɪm', 'hʊnt', 'hoːɾə', 'haʊpt', 'hondət']
-Hard: ['hɛʁt͡s', 'haɪlɪɡ', 'hant', 'hʊŋəʁ', 'høːʁ', 'huːs', 'hoɐm', 'hʊnd', 'hɔɐʁn', 'haʊpt', 'hʊndəʁt']
-Tuebingen: ['hɛʁt͡s', 'haɪliç', 'hant', 'hʊŋɔ', 'høɔ', 'hɐus', 'hɔɪm', 'hʊnt', 'hɒn', 'hɑɵpt', 'hʊndʁt']
-Cologne: ['hɛt͡s', 'hɛlɪʃ', 'hant', 'hʊŋɒ', 'hʏɐ', 'huːs', 'hɛɪm', 'hʊŋk', 'hɔːn', 'hɔʊp', 'hʊndɐt']
-Luxembourg: ['heɐt͡s', 'hɛləʃ', 'hant', 'hʊŋʌ', 'hɛʊs', 'heːm', 'hʊnt', 'haːpt', 'hɔnɐt']
-
-(('z',), ('-',))	 nan	(rep: 100.00, dist:  nan)	(945 times)
-Herrlisheim: ['hailikʰ', 't͡saːn', 'hɒnt', 'kʰyː', 'noχt', 'ʁoːtʰ', 'mɪlɪʃ', 'kʰɔlp', 'dɪŋ', 'lɔŋ', 'lɔm', 'ʃtʊʁm', 'ʃtɛːn', 'nɔːχt', 'ʃneː', 'ʁɪŋ', 'fɛʃt', 'vɔːʁm', 'ʁaːχt', 'ɡʁeːn', 'ʔofə', 'ʔɔl', 'haːm', 'toʁən', 'jʊŋ', 'hʊnt', 'dœː', 'kʰɔlt', 'ɸeːs', 'ʔofə', 'ɡɔːχtə', 'mʊnt', 'naːjəl', 'ɡøət', 'fʊl', 'sɛːχ', 'fiəχ', 'fɪʃ', 'vɪnt', 'ʔaiʃ', 'mɪdə', 'ʃtøːl', 'vis', 'ʃɒχf', 'nɔkətʰ', 'nɛi']
-Ortisei: ['haɪlɪk', 't͡sɑːn', 'hɒnt͡s', 'kʰuɛ', 'noχt͡s', 'ʁɔːt͡s', 'mɪlç', 'kʰɔlp', 'lɔŋk', 'lɔm', 'ʃtʊʁm', 'ʃtan', 'nɔχt', 'ʃneə', 'dʁaɪ', 'ʁɪŋk', 'fɪʃt', 'βɑʁm', 'ʁɛχt͡s', 'ɡʁiɛn', 'ʔofn', 'ʔal', 'haɪm', 'dɔʁn', 'jʊŋk', 'hʊnt͡s', 'dɔk', 'kʰɔlt͡s', 'fʊəs', 'ʔofn', 'mʊnt͡s', 'nɔːɡl', 'ɡʊɛt͡s', 'fʌl', 'sɛːχ', 'fiəχ', 'fiʃ', 'βɪnt', 'ʔaɪçɛ', 'mɪtɛ', 'ʃtʊɛl', 'βaɪs', 'ʃɑʁf', 'nɔkt͡s', 'naɪ']
-Dutch_Std_NL: ['hɛɪlʌχ', 'hɑnt', 'ku', 'nɔɹt', 'ʁoːt', 'eɪn', 'dɪŋ', 'ɫɑŋ', 'tʰɔp', 'ɫɑm', 'steɪn', 'nɑχt', 'sneu', 'dʁi', 'ʁɪŋ', 'fɑst', 'ʁɛχt', 'χʁun', 'oʊvə', 'ɑɫ', 'hɛɪm', 'jʌŋ', 'hɔnt', 'dɑχ', 'kaʊt', 'fut', 'oʊpə', 'χaɹt', 'mʌnt', 'naχʌɫ', 'χut', 'vʌɫ', 'zeɹ', 'fiəʁ', 'fɪs', 'kvik', 'vɪnt', 'ɛɪk', 'mɪdə', 'stuːɫ', 'vɪt', 'naːkt', 'niu']
-Veenkolonien: ['hɒɪləχ', 'tʰanə', 'hæ̃ːt', 'kɑʊ', 'noːɹt', 'roːt', 'mɛɤk', 'ɒɪnə', 'kʰaɤf', 'dɪŋ', 'læːɡ', 'høː', 'tʰɔp', 'lamɹ', 'stœːɾəm', 'stɔɪn', 'naχt', 'snɛː', 'dɾɛɪə', 'ɾɪŋ', 'vastə', 'βaːm', 'rɛχt', 'χɹœʏ̃', 'obm', 'aɤ', 'hɒɪm', 'doːɾn', 'jʊŋk', 'daχ', 'kʰɔːɫt', 'vɑʊɾə', 'opm', 'mɔ̃t', 'noʁəɫ', 'χɑʊt', 'fʊː', 'ziːɹ', 'βaːɾə', 'fɪs', 'βɪnt', 'oə', 'mɪdn', 'stɑʊlə', 'βɒɪt', 'sχaːp', 'nokt', 'nɛɪ']
-Achterhoek: ['hɛɪləχ', 'hant', 'koː', 'noɐt', 'ʁoːt', 'mɛlək', 'kɑləɸ', 'dɪŋ', 'laŋə', 'høɐ', 'tɔp', 'lam', 'stʌʁəm', 'steːn', 'naχ', 'snɛɪ', 'dʁeː', 'ʁɪŋ', 'ɸastə', 'βaɾəm', 'ʁɛχ', 'χøːn', 'ɔːβn', 'aɫ', 'heːm', 'doɐn', 'jʊŋə', 'hʊnt', 'daχ', 'kɔɫt', 'βoːt', 'χoɐt', 'mʊnt', 'nɛːχɫ', 'χoːt', 'ɸʊɫ', 'zeɐ', 'fiəʁə', 'ɸɪʃ', 'βɪnt', 'eːkə', 'oɐ', 'mɪdn', 'stɔːɫ', 'βɪt', 'sχaɾəp', 'naːkənt', 'niː']
-Limburg: ['heːlɪç', 'haŋk', 'kɒʊ', 'noɐt', 'ʁʊət', 'mɪlɪk', 'kɔːɸ', 'laŋk', 'tɔp', 'lɑm', 'ʃtoʁəm', 'stɛi', 'nax', 'snɛi', 'dʁɛɪ', 'ʁɪŋk', 'fas', 'βɛʁəm', 'ʁɛç', 'χʁøn', 'ɔβə', 'al', 'heːm', 'doɐn', 'jʊŋk', 'hʊŋk', 'daːχ', 'kɔːt', 'foːt', 'opə', 'çaːt', 'mʊŋk', 'naːɣɫ', 'xwʌt', 'ziəχ', 'ɸiəχ', 'føʃ', 'βɪŋk', 'iːk', 'mɪdə', 'ʃtʊːl', 'βɪət', 'ʃɛʁəp', 'nɑks', 'nœɪ']
-Grou: ['hɪɫəχ', 'tinə', 'hɒ̃w̃ə̃', 'kɒʊ', 'noət', 'rɪiət', 'mʌɫqə', 'iən', 'kɪiəɫ', 'dɪŋ', 'ɫaŋ', 'tɔp', 'ɫaːm', 'stβaɾəm', 'stiən', 'naχt', 'sniə', 'tɾɛɪjə', 'rɪŋ', 'fɛəst', 'βaːɾəm', 'rjœχt', 'ɡɾiən', 'ũn', 'ɒɫ', 'hiəm', 'tβanə', 'jʌŋ', 'hũn', 'dɒɪ', 'kɔːt', 'foət', 'iəpm', 'mʊŋə', 'nɒɪɫ', 'ɡoət', 'fʌɫ', 'siər', 'fjaʊɾ', 'fɪsk', 'kβɪk', 'βin', 'iːk', 'mɪdn', 'stuəɫ', 'βit', 'skɛrp', 'niəkŋ', 'nɛi']
-Antwerp: ['aɪlɪç', 'hant', 'kuː', 'nɔst', 'roət', 'mɛlək', 'iən', 'kaɫəf', 'dɪŋ', 'laɪŋ', 'tɔp', 'lam', 'stəɾəm', 'steən', 'naxt', 'sniə', 'dɾaː', 'rɪŋ', 'fast', 'βaːɾəm', 'rɪçt', 'çɾyn', 'oːvə', 'aɫ', 'hem', 'doːɾə', 'jʊŋ', 'ɐʊnt', 'daç', 'kɔːt', 'fut', 'opə', 'xɑɾt', 'mɔnt', 'nɑːxɫ', 'xuː', 'vɔɫ', 'zeər', 'viːs', 'vɪs', 'kβɪk', 'βɪnt', 'aɪk', 'mɪdə', 'stuː', 'βit', 'sjaːɾəp', 'nakt']
-Dutch_Std_BE: ['hɛɪləç', 'hantʰ', 'kuː', 'nɔːrt', 'roːt', 'mɛlk', 'eːn', 'kɑɫf', 'dɪŋ', 'laŋ', 'tɔp', 'lɑm', 'stɔrm', 'steːn', 'naxt', 'sneu', 'd̪ɾiː', 'rɪŋ', 'βɑst', 'βarm', 'rɛçt', 'xruːn', 'oːβn', 'ɑɫ', 'heːm', 'dɔːrn', 'jʊŋ', 'hʊnt', 'dax', 'kaʊt', 'vut', 'oːpn', 'çaːrt', 'mʊnt', 'naːxəɫ', 'xut', 'βʌɫ', 'zeəɹ', 'viəɹ', 'vɪs', 'kβik', 'βɪnt', 'ɛɪk', 'mɪdn', 'stuːl', 'βɪt', 'sçɛrp', 'naːkt', 'niu']
-Ostend: ['ɛləç', 'ɑnt', 'kuə', 'nɔːɾt', 'rɔːt', 'maɔk', 'ɛːn', 'kɔːf', 'ʊŋr', 'laŋ', 'tɔp', 'lɑm', 'stɔɾm', 'stɛːn', 'naχt', 'snɛʊ', 'dɾiə', 'rɪŋk', 'vɑstə', 'βɑrm', 'raht', 'hɾuənə', 'ɔːvn', 'ɑo', 'heːm', 'dɔːn', 'jʊŋk', 'ʊnt', 'daχ', 'kut', 'vuət', 'ɔːpm', 'ɣɑːs̆t', 'mʊnt', 'naːχə', 'hoət', 'vœl', 'zɛːs', 'viəɾə', 'vɛs', 'kβɪk', 'βɪnt', 'ɛːk', 'mɛdn', 'stuəl', 'βɛt', 'ʃχɛrp', 'nakt']
-Feer: ['helikʰ', 'beːda', 'tʰʊs', 'hʊn', 'kʰʏ', 'noɤt', 'ruət', 'muəlk', 'ʔiæn', 'kʰuələ', 'deŋ', 'tʰɔna', 'lʊŋ', 'çiɛ', 'lom', 'sdʊrʌm', 'stiæn', 'nɑχtʰ', 'snæ', 'tri', 'rɪŋ', 'feːst', 'varam', 'rɔχt', 'dreːn', 'ʔaːl', 'jɒŋ', 'hyɲ', 'dai', 'kʰul', 'fʊtʰ', 'ʔeːbⁿm', 'ɡuɤt', 'mœs', 'naːjl', 'ɡʊt', 'fɔl', 'sie', 'fjaoɔ', 'fask', 'viɲ', 'ʔikʰʲe', 'ʔuʌ', 'madⁿn', 'sduːl', 'vitç', 'sɡarap', 'naːɡət', 'nai']
-Heligoland: ['hele', 'betʰɐ', 'tʰeæn', 'hɔn', 'kʰɪ', 'nuʌɖ', 'ʀoɒ', 'molk', 'jaːn', 'hɒŋə', 'dɪŋ', 'tʰʏnə', 'lɔŋ', 'tʰɔpʰ', 'sdʊʁɤm', 'ʃdeɐ', 'noʌχ', 'sneː', 'txei', 'ʁɪŋ', 'fas', 'vaʀm', 'ʀɛç', 'ɡʁeːn', 'ʔoɑvən', 'ʔɑːl', 'dʒɒŋ', 'hɪn', 'dae', 'kʰul', 'fʊtʰ', 'ʔepʰən', 'ɡoa', 'mɪtʰ', 'noʏɘl', 'ɡoː', 'fol', 'seɐ', 'ʃdʲuɐ', 'fɛsk', 'vɪn', 'βɑː', 'mɛdⁿn', 'ʃduːl', 'vɪtʰ', 'sɡapʰ', 'noɐɡɤlt', 'nae']
-Westerkwartier: ['haelɛχ', 'bɛdɐ', 'hãnt͡s', 'kʰaɔ', 'noət͡ʃ', 'rɒotʰ', 'miʟk', 'ʔɑin', 'kʰɑɫf', 'deːŋ', 'laːŋ', 'tʰɔpʰ', 'lɑmɐ̰', 'ʃdøœm', 'ʃdæin', 'naχtʰ', 'ʃæe', 'dɾaɛ', 'rẽŋ', 'fastʰ', 'væam', 'ɹɛaxtʰ', 'xɣɶn', 'ʔɔobⁿm', 'ʔɑɫ', 'doɤn', 'jɒŋ', 'hɔ̃ntʰ', 'daχ', 'kʰoɫtʰ', 'futʰ', 'ʔɔupⁿm', 'mɔ̃ntʰ', 'nɔχɔ', 'xutʰ', 'foɫ', 'ʒeɛɹ', 'fiɾ', 'fɪsʲ', 'vintʰ', 'mɪdⁿn', 'ʃdaɔɫ', 'vetʰ', 'ʃxapʰ', 'noɡtʰ', 'næi']
-Walser: ['hæɪlɪk', 'hant', 'xuɛ', 'nɔɾdə', 'ɹoːt', 'milx', 'xalp', 'lɪŋɡ', 'ʃtuɾəm', 'ʃtæɪ', 'naχt', 'ʃneː', 'dɾyː', 'rɪŋɡ', 'fɛʃt', 'βaːɾəm', 'raχt', 'ɡryɛ', 'ʔoːɸə', 'ʔal', 'doːɾə', 'jʊŋɡ', 'huːnt', 'daːk', 'xaːlt', 'ɸoɛs', 'ʔoɸə', 'ɡaːɹtə', 'naːɡl', 'ɡoət', 'ɸolə', 'sɛːɹ', 'fiəɹ', 'fiʃ', 'kʰɛk', 'ʔæɪxə', 'mitɛ', 'ʃtuəl', 'βiːs', 'ʃaɹɸ', 'nakɪk', 'nɜ̹ʏ']
-Biel: ['heilɪk', 't͡sɑːn', 'hɒŋ', 'χʊə', 'nɔrt', 'rɔːt', 'mɪʊχ', 'χɑʊp', 'dɪŋ', 'laŋ', 'lɒm', 'ʃtʊɾm', 'ʃtɛɪ', 'nɒχt', 'ʃneː', 'tɾyː', 'rɪŋ', 'fɛʃt', 'βaːrm', 'ɾaχt', 'ɡɾʏɛn', 'ʔɔfɛ', 'ɔʊ', 'heɪm', 'tɔːɾn', 'jʊŋ', 'hʊnt', 't̪ɒːk', 'χɑʊt', 'foəs', 'ʔɔfə', 'ɡɒrtə', 'muː', 'nɑku', 'ɡʊət', 'fɔʊ', 'sɛːr', 'fiəɾ', 'fɪʃ', 'βɪnt', 'eiχə', 'mɪtɪ', 'ʃtʊɛʊ', 'βiːs', 'ʃɑːɾf', 'nɒkχt', 'nœɪ']
-Graubuenden: ['haɪlik', 't͡sɑːn', 'hant', 'kʰʊa', 'nɔrd', 'roːt', 'mɪlχ', 'kʰalp', 'hʊŋɡr', 'laŋk', 'lam', 'ʃtʊrm', 'ʃtai', 'naχt', 'ʃneː', 'dɾei', 'riŋk', 'fɛʃt', 'βaːrm', 'ɾeχt', 'ɡɾʏɛn', 'ʔoːfə', 'ʔal', 'haɪm', 'dɔrn', 'jʊŋk', 'hʊnt', 'dɑɒk', 'qʰɑːlt', 'fʊɔs', 'ʔofə', 'ɡɑːrtə', 'muːl', 'nɑːɡl', 'ɡoɔt', 'fol', 'sɛːɾ', 'fiɛɾ', 'fiʃ', 'kʰɛk', 'βint', 'ʔaɪχə', 'miti', 'ʃtuɛl', 'βiːs', 'ʃarf', 'nakt', 'nœʏ']
-Hard: ['haɪlɪɡ', 't͡sãː', 'hant', 'kʰʊɛ', 'nɔːʁdə', 'roːtʰ', 'mɪlx', 'kʰalp', 'dɪŋ', 'laŋ', 'lam', 'ʃtʊʁm', 'ʃtõɐ̃', 'naːxt', 'ʃneɪ', 'dʁyː', 'ʁɪŋ', 'fɛʃt', 'vaːʁm', 'ʁeɐxt', 'ɡɾỹɛ̃', 'ʔoːfə', 'ʔal', 'hoɐm', 'dɔrnə', 'jʊŋ', 'hʊnd', 'daːɡ', 'kʰaːlt', 'fʊɛs', 'ʔofə', 'ɡaːʁtə', 'mʊnt', 'naːɡl', 'ɡoɛt', 'fʊl', 'fiəʁ', 'fɪʃ', 'vɪnt', 'ʔoɐxə', 'mɪətə', 'ʃtʊəl', 'viːs', 'ʃaːʁf', 'nakɪk', 'nœʏ']
-Tuebingen: ['haɪliç', 'bɛsɔ', 't͡saː', 'hant', 'kʰuə', 'nɔt', 'ʁɑɵt', 'mɪliç', 'kʰalp', 'hʊŋɔ', 'dɪŋ', 'laŋ', 'høɔ', 'lam', 'ʃtʊɔm', 'ʃtɔẽ', 'naːχt', 'ʃneː', 'dʁɛi', 'ʁɪŋ', 'fɪʃt', 'βaɔm', 'ʁeəxt', 'ɡʁeə', 'ʔoːfə', 'ʔal', 'hɔɪm', 'dɔn', 'jʊŋ', 'hʊnt', 'tʰaːk', 'kʰalt', 'fuəs', 'ʔofə', 'ɡaɔt̪ə', 'munt', 'naːɡl', 'ɡuət', 'fʊl', 'fiɔ', 'fiʃ', 'kʰɛk', 'vɪnt', 'ʔɔɪçɛ', 'ʔɑʊɔ', 'mitɛ', 'ʃtuəl', 'βɛis', 'ʃaɔf', 'nakət', 'nui']
-Cologne: ['hɛlɪʃ', 'bɛsɒ', 'hant', 'kʰo', 'nɔχt', 'ʁotʰ', 'mɪləʃ', 'ʔeɪŋə', 'kʰaləf', 'hʊŋɒ', 'dɪŋ', 'donɒ', 'laŋ', 'hʏɐ', 'lam', 'ʃtʊʀm', 'ʃteɪn', 'naːχ', 'ʃneɪ', 'dʀeɪ', 'ʀɪŋ', 'fas', 'βɛʁəm', 'ʀɛɪʃ', 'jɒʁœ̃', 'ʔɔvə', 'ʔal', 'hɛɪm', 'dɔːn', 'jʊŋ', 'hʊŋk', 'daːχ', 'kʰalt', 'fʊs', 'ʔɔfə', 'jaːdə', 'mʊŋɡ', 'neəl', 'joːt', 'fʌl', 'fiə', 'fɪʃ', 'vɪnt', 'ʔɛɪʃ', 'ʔoɐ', 'mɪdə', 'ʃtoːl', 'βiːs', 'ʃɛʁəp', 'nak', 'nœʏ']
-Luxembourg: ['hɛləʃ', 'bɛsʌ', 'hant', 'kʰœʊ', 'ʀoːt', 'mɨlɪʃ', 'kʰaləf', 'hʊŋʌ', 'dɪŋən', 'dɔnʌ', 'laːŋ', 'lam', 'ʃtʊɛm', 'steːn', 'nuɛʃt', 'ʃnɛi', 'dʀaɪ', 'ʁɐŋ', 'fɛst', 'vaːm', 'ʀiət͡s', 'ɡʁɪŋ', 'ʔʊɛvən', 'ʔal', 'heːm', 'dɔɐ', 'jʊŋk', 'hʊnt', 'daːχ', 'kʰaːl', 'fœʊs', 'ʔʊpən', 'ɡaːχt', 'mɔnt', 'noːl', 'ɡʊt', 'fʊl', 'zɛɪɐ', 'fə̆ɪɜ', 'fəʃ', 'vant', 'ʔeːʃ', 'ʔœʊɑ', 'mɨt', 'ʃtʊl', 'væis', 'ʃaːf', 'nɑɪ']
-
-(('ɡ',), ('-',))	 nan	(rep: 95.00, dist:  nan)	(149 times)
-Herrlisheim: ['t͡sʊŋ', 'hʊŋəχ', 'dɪŋ', 'honik', 'lɔŋ', 'ʃneː', 'ʁɪŋ', 'jʊŋ', 'dœː']
-Ortisei: ['dɪŋk', 'hoːnik', 'ʃneə']
-Dutch_Std_NL: ['tʰʌŋ', 'hʌŋəʁ', 'dɪŋ', 'hɔnɪŋ', 'ɫɑŋ', 'sneu', 'ʁɪŋ', 'jʌŋ']
-Veenkolonien: ['tʰɔŋə', 'ɔŋɹ', 'dɪŋ', 'hønəχ', 'snɛː', 'ɾɪŋ']
-Achterhoek: ['tʰʊŋə', 'hʊŋʁ', 'dɪŋ', 'hɔnʌχ', 'laŋə', 'snɛɪ', 'ʁɪŋ', 'jʊŋə']
-Limburg: ['tʊŋ', 'hʊŋəχ', 'dɪŋk', 'øənɪŋ', 'ʁeən', 'snɛi']
-Grou: ['tɔŋə', 'hʌŋr', 'dɪŋ', 'hynɪŋ', 'ɫaŋ', 'rɒɪn', 'sniə', 'rɪŋ', 'jʌŋ', 'dɒɪ', 'nɒɪɫ']
-Antwerp: ['tʌŋ', 'ʊŋəs', 'dɪŋ', 'øːnɪŋ', 'laɪŋ', 'sniə', 'rɪŋ', 'jʊŋ']
-Dutch_Std_BE: ['tʊŋ', 'hʊŋəɹ', 'dɪŋ', 'hoːnɪŋ', 'laŋ', 'sneu', 'rɪŋ', 'jʊŋ']
-Ostend: ['tʊŋə', 'ʊŋr', 'dɪŋk', 'laŋ', 'snɛʊ']
-Feer: ['tʰɒ̃ŋ', 'hɒ̃nəŋ', 'deŋ', 'hœneŋ', 'lʊŋ', 'rɪn', 'snæ', 'rɪŋ', 'jɒŋ', 'dai']
-Heligoland: ['hele', 'tʰɒŋ', 'hɒŋə', 'dɪŋ', 'hœnõŋ', 'lɔŋ', 'ʀaen', 'sneː', 'ʁɪŋ', 'dʒɒŋ', 'dae', 'noʏɘl', 'ʔoo']
-Westerkwartier: ['t͡sɒŋ', 'ɦõŋʌɹ', 'deːŋ', 'hɶnɶx', 'laːŋ', 'ʃæe', 'rẽŋ', 'jɒŋ']
-Walser: ['dɪŋɡ', 'hoːnɪɡ', 'ʃneː']
-Biel: ['t͡sʊŋə', 'hʊŋəz', 'dɪŋ', 'hɔnik', 'laŋ', 'ʃneː', 'rɪŋ', 'jʊŋ']
-Graubuenden: ['dɪŋk', 'ʃneː']
-Hard: ['t͡sʊŋə', 'hʊŋəʁ', 'dɪŋ', 'hɔːnɪɡ', 'laŋ', 'ʃneɪ', 'ʁɪŋ', 'jʊŋ']
-Tuebingen: ['hʊŋɔ', 'dɪŋ', 'hoːniç', 'laŋ', 'ʃneː', 'ʁɪŋ', 'jʊŋ']
-Cologne: ['t͡sʊŋ', 'hʊŋɒ', 'dɪŋ', 'hʊniʃ', 'laŋ', 'ʀɛn', 'ʃneɪ', 'ʀɪŋ', 'jʊŋ', 'neəl']
-Luxembourg: ['t͡sɔŋ', 'hʊŋʌ', 'dɪŋən', 'hʊnəʃ', 'laːŋ', 'ʁeːn', 'ʃnɛi', 'ʁɐŋ', 'noːl', 'ʔaː']
-
+and 18 more
 =====================================

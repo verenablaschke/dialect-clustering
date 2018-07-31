@@ -112,7 +112,7 @@ def bsgc_recursive(A, doculects, all_correspondences, clusters=None):
                                   clusters_and_doculects,
                                   clusters_and_features)
     if clusters is None:
-        clusters = {}
+        clusters = {tuple(doculects): all_correspondences}
     for (A, docs, corres) in new_features:
         clusters[docs] = corres
         if len(docs) > 2:

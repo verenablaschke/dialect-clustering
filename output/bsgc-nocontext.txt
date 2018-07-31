@@ -1,32 +1,25 @@
 
 Herrlisheim
 -------
-and 13 more
-=====================================
-
-Biel
--------
-and 8 more
-=====================================
-
-Walser
--------
-and 1 more
-=====================================
-
-Limburg
--------
-and 3 more
+and 9 more
 =====================================
 
 Dutch_Std_BE
 -------
-and 13 more
+and 10 more
 =====================================
 
-Luxembourg
+Biel
 -------
-and 5 more
+and 9 more
+=====================================
+
+Veenkolonien
+-------
+oː > ɑʊ	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+Veenkolonien: ['kɑʊ', 'blɑʊt', 'vɑʊɾə', 'χɑʊt', 'stɑʊlə']
+
+and 4 more
 =====================================
 
 Feer
@@ -34,17 +27,9 @@ Feer
 and 1 more
 =====================================
 
-Veenkolonien
+Graubuenden
 -------
-(('oː',), ('ɑʊ',))	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Veenkolonien: ['kɑʊ', 'blɑʊt', 'vɑʊɾə', 'χɑʊt', 'stɑʊlə']
-
-and 6 more
-=====================================
-
-Graubuenden, Ortisei
--------
-and 14 more
+and 1 more
 =====================================
 
 Grou, Heligoland
@@ -59,57 +44,71 @@ and 16 more
 
 Dutch_Std_NL, Westerkwartier
 -------
-and 14 more
-=====================================
-
-Achterhoek, Cologne
--------
-and 10 more
+and 19 more
 =====================================
 
 Hard, Tuebingen
 -------
+and 14 more
+=====================================
+
+Achterhoek, Limburg
+-------
+u > oɐ	100.00	(rep: 100.00, dist: 100.00)	(9 times)
+Achterhoek: ['noɐt', 'βoɐt', 'doɐn', 'hoɐn', 'kʰoɐn']
+Limburg: ['noɐt', 'doɐn', 'hoɐn', 'koɐʁ']
+
+and 6 more
+=====================================
+
+Ortisei, Walser
+-------
 and 11 more
 =====================================
 
-Feer, Hard, Tuebingen
+Cologne, Luxembourg
 -------
-and 12 more
+and 14 more
 =====================================
 
 Dutch_Std_BE, Dutch_Std_NL, Westerkwartier
 -------
-and 27 more
+and 29 more
 =====================================
 
-Achterhoek, Cologne, Luxembourg
+Feer, Hard, Tuebingen
 -------
 and 15 more
 =====================================
 
-Graubuenden, Ortisei, Walser
+Cologne, Herrlisheim, Luxembourg
 -------
-and 15 more
-=====================================
-
-Achterhoek, Cologne, Herrlisheim, Luxembourg
--------
-(('k',), ('ʃ',))	85.71	(rep: 75.00, dist: 100.00)	(9 times)
+k > ʃ	100.00	(rep: 100.00, dist: 100.00)	(9 times)
 Cologne: ['mɪləʃ', 'ʔiʃ', 'ʔɛɪʃ']
 Herrlisheim: ['mɪlɪʃ', 'ʔɪʃ', 'ʔaiʃ']
 Luxembourg: ['mɨlɪʃ', 'ʔœʃ', 'ʔeːʃ']
 
-and 27 more
+and 22 more
+=====================================
+
+Graubuenden, Ortisei, Walser
+-------
+and 12 more
 =====================================
 
 Dutch_Std_BE, Dutch_Std_NL, Veenkolonien, Westerkwartier
 -------
-(('oː',), ('u',))	85.71	(rep: 75.00, dist: 100.00)	(10 times)
+oː > u	85.71	(rep: 75.00, dist: 100.00)	(10 times)
 Dutch_Std_BE: ['blut', 'vut', 'xut']
 Dutch_Std_NL: ['ku', 'χʁun', 'fut', 'χut']
 Westerkwartier: ['mukɐ', 'futʰ', 'xutʰ']
 
 and 33 more
+=====================================
+
+Achterhoek, Cologne, Herrlisheim, Limburg, Luxembourg
+-------
+and 30 more
 =====================================
 
 Feer, Graubuenden, Hard, Ortisei, Tuebingen, Walser
@@ -119,17 +118,20 @@ and 48 more
 
 Antwerp, Dutch_Std_BE, Dutch_Std_NL, Ostend, Veenkolonien, Westerkwartier
 -------
-and 50 more
+b > f	90.91	(rep: 83.33, dist: 100.00)	(17 times)
+Antwerp: ['kaɫəf', 'loəf', 'hɔft', 'oːfəɾ']
+Dutch_Std_BE: ['kɑɫf', 'lɔːf', 'hoːft']
+Dutch_Std_NL: ['loʊf', 'hɒʊft']
+Ostend: ['kɔːf', 'lɔːf', 'oːft']
+Veenkolonien: ['kʰaɤf', 'lɒʊf', 'høʏft']
+Westerkwartier: ['lɛifɹ', 'kʰɑɫf', 'lɑof', 'hœftʰ']
+
+and 49 more
 =====================================
 
-Feer, Graubuenden, Hard, Limburg, Ortisei, Tuebingen, Walser
+Biel, Feer, Graubuenden, Hard, Ortisei, Tuebingen, Walser
 -------
-and 54 more
-=====================================
-
-Biel, Feer, Graubuenden, Hard, Limburg, Ortisei, Tuebingen, Walser
--------
-(('b',), ('p',))	85.71	(rep: 75.00, dist: 100.00)	(23 times)
+b > p	92.31	(rep: 85.71, dist: 100.00)	(23 times)
 Biel: ['lapəɾə', 'χɑʊp', 'lɑʊp', 'sepə', 'hɔopt', 'pɛɪ', 'ʏpəɾ']
 Graubuenden: ['kʰalp', 'laʊp', 'haʊpt']
 Hard: ['kʰalp', 'loːp', 'haʊpt']
@@ -137,12 +139,12 @@ Ortisei: ['kʰɔlp', 'laːp', 'haʊpt']
 Tuebingen: ['kʰalp', 'lɑʊp', 'hɑɵpt']
 Walser: ['xalp', 'laʊp', 'siːpə', 'hɑopt']
 
-and 69 more
+and 67 more
 =====================================
 
 Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser
 -------
-(('s',), ('ʃ',))	80.19	(rep: 83.33, dist: 77.27)	(99 times)
+s > ʃ	80.19	(rep: 83.33, dist: 77.27)	(99 times)
 Achterhoek: ['ɸɪʃ']
 Biel: ['ʔaʃə', 'ʔɪʃ', 'ʃtʊɾm', 'ʃtɛɪ', 'ʃneː', 'fɛʃt', 'ʃβœːr', 'βaʃ', 'fɪʃ', 'ʃtʊɛʊ', 'ʃɑːɾf']
 Cologne: ['ʔɛʃ', 'ʃtʊʀm', 'ʃteɪn', 'ʃneɪ', 'ʃβøɐ', 'βɛʃ', 'fɪʃ', 'ʃtoːl', 'ʃɛʁəp']
@@ -160,7 +162,7 @@ and 108 more
 
 Achterhoek, Biel, Cologne, Feer, Graubuenden, Grou, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser
 -------
-(('ɡ',), ('ɡ',))	88.00	(rep: 78.57, dist: 100.00)	(65 times)
+ɡ > ɡ	88.00	(rep: 78.57, dist: 100.00)	(65 times)
 Biel: ['ɡɾʏɛn', 'ɡɒns', 'ɡɒrtə', 'ɡʊət']
 Feer: ['ɡʊs', 'ɡuɤt', 'ɡʊt']
 Graubuenden: ['t͡sʊŋɡɐ', 'hʊŋɡr', 'rɛːɡɐ', 'ɡɾʏɛn', 'ɡans', 'ɡɑːrtə', 'nɑːɡl', 'ɡoɔt']
@@ -173,7 +175,7 @@ Ortisei: ['t͡sʊŋɡɛ', 'hʊŋɡəχ', 'ʁeːɡn', 'ɡʁiɛn', 'ɡɔns', 'ɡɔ
 Tuebingen: ['t͡suŋɡ', 'ʁeəɡə', 'ɡʁeə', 'ɡaːs', 'ɡaɔt̪ə', 'naːɡl', 'ɡuət']
 Walser: ['t͡sʊŋɡə', 'hʊŋɡəɾ', 'lɪŋɡ', 'raɡə', 'rɪŋɡ', 'ɡryɛ', 'jʊŋɡ', 'ɡans', 'ɡaːɹtə', 'naːɡl', 'ɡoət']
 
-(('ll',), ('l',))	83.33	(rep: 71.43, dist: 100.00)	(30 times)
+ll > l	83.33	(rep: 71.43, dist: 100.00)	(30 times)
 Achterhoek: ['βʌlə']
 Biel: ['βɵlə']
 Cologne: ['ʔal', 'vʌl', 'fʌl']
@@ -189,4 +191,9 @@ Tuebingen: ['ʔal', 'wʊlɛ', 'fʊl']
 Walser: ['ʔal', 'βolə', 'ɸolə']
 
 and 124 more
+=====================================
+
+Achterhoek, Antwerp, Biel, Cologne, Dutch_Std_BE, Dutch_Std_NL, Feer, Graubuenden, Grou, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Ostend, Tuebingen, Veenkolonien, Walser, Westerkwartier
+-------
+and 176 more
 =====================================
