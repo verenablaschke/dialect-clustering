@@ -1,7 +1,9 @@
 \documentclass{standalone}
 \usepackage{tikz}
+\usepackage{tipa}
 \begin{document}
 \tikzset{doc/.append style={prefix after command={\pgfextra{\tikzset{every label/.style={rotate=-45}}}}}}
+\tikzset{corres/.style={fill=white, above=0.18cm, inner sep=0pt}}
 \begin{tikzpicture}
 % Doculects by singleton cluster number (alphabetical index).
 \node[doc, label=right:Luxembourg] (13) at (1, 0) {};
@@ -83,6 +85,19 @@
 \node (38) at (15.578125,9.328709913542639) {};
 \draw (22) |- (38.center);
 \draw (37) |- (38.center);
+
+% Sound correspondences.
+\node[corres] at (20) {x $>$ \textesh};
+\node[corres] at (21) {x $>$ \textesh};
+\node[corres] at (22) {a $>$ \textopeno};
+\node[corres] at (25) {u $>$ o\textturna};
+\node[corres] at (26) {f $>$ v};
+\node[corres] at (27) {e $>$ y\textlengthmark};
+\node[corres] at (29) {u $>$ o\textturna};
+\node[corres] at (31) {f $>$ v};
+\node[corres] at (32) {t $>$ d};
+\node[corres] at (34) {s $>$ $\emptyset$};
+\node[corres] at (36) {$\emptyset$ $>$ \textglotstop};
 
 % Y axis.
 \draw[->] (0,0) -- node[label={[rotate=90, label distance=1cm]90:Distance}]{{}} (0, 10.0);

@@ -218,8 +218,7 @@ In addition to the simple correspondences, we also extract sound correspondences
 To do this, we pad each sequence with `\#' to represent word boundaries.
 % TODO more
 
-% TODO include left and right context separately?
-% a : æ̃ː, (C, a, C) : (C, æ̃ː, C), (G, a, N) : (H, æ̃ː, -)
+dealing with gaps, don't include word boundaries multiple times
 
 \subsection{Clustering}
 
@@ -361,20 +360,25 @@ According to \citet{wieling2010hierarchical}, the values of the second right sin
 
 \begin{figure}
   \includestandalone[width=\textwidth]{figures/tfidf-nocontext}
-  \caption{TFIDF no context}
+  \caption{TFIDF without context information and highest-rating correspondence per non-singleton cluster (with $\geq$80\% importance score)}
   \label{fig:tfidf-nocontext}
 \end{figure}
 
 \begin{figure}
   \includestandalone[width=\textwidth]{figures/tfidf-context}
-  \caption{TFIDF context and highest-rating correspondence per non-singleton cluster (with $>$80\% importance score)}
+  \caption{TFIDF context and highest-rating correspondence per non-singleton cluster (with $\geq$80\% importance score)}
   \label{fig:tfidf-context}
 \end{figure}
 
+\begin{figure}
+  \includestandalone[width=\textwidth]{figures/bsgc-nocontext}
+  \caption{BSGC without context information and highest-rating correspondence per non-singleton cluster (with $\geq$80\% importance score)}
+  \label{fig:bsgc-nocontext}
+\end{figure}
 
 \begin{figure}
   \includestandalone[width=\textwidth]{figures/bsgc-context}
-  \caption{BSGC context and highest-rating correspondence per non-singleton cluster (with $>$80\% importance score)}
+  \caption{BSGC context and highest-rating correspondence per non-singleton cluster (with $\geq$80\% importance score)}
   \label{fig:bsgc-context}
 \end{figure}
 
@@ -386,39 +390,39 @@ highest-ranked sound correspondences
 bsgc-context: $\geq$90\% imp for non-singleton clusters:
 \begin{itemize}
 \item Antwerp, Dutch Std BE, Ostend:
-(('C', 'e'), ('C', 'e\textlengthmark')) (rep: 100.00, dist: 100.00) (10 times)
+(('C', 'e'), ('C', 'e\textlengthmark'))	(rep: 100.00, dist: 100.00)	(10 times)
 \item Biel, Cologne, Graubuenden, Hard, Herrlisheim, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier
 \begin{itemize}
-\item (('V', 't'), ('V', 's'))  94.74 (rep: 90.00, dist: 100.00)  (61 times)
-\item (('V', 's'), ('V', '\textesh')) 94.74 (rep: 90.00, dist: 100.00)  (40 times)
-\item (('s', 'T'), ('\textesh', 'T')) 94.74 (rep: 90.00, dist: 100.00)  (36 times)
-\item (('s', 'C'), ('\textesh', 'C')) 90.00 (rep: 100.00, dist: 81.82)  (57 times)
-\item (('s', 'C'), ('\textesh', '-')) 90.00 (rep: 100.00, dist: 81.82)  (43 times)
+\item (('V', 't'), ('V', 's'))	94.74	(rep: 90.00, dist: 100.00)	(61 times)
+\item (('V', 's'), ('V', '\textesh'))	94.74	(rep: 90.00, dist: 100.00)	(40 times)
+\item (('s', 'T'), ('\textesh', 'T'))	94.74	(rep: 90.00, dist: 100.00)	(36 times)
+\item (('s', 'C'), ('\textesh', 'C'))	90.00	(rep: 100.00, dist: 81.82)	(57 times)
+\item (('s', 'C'), ('\textesh', '-'))	90.00	(rep: 100.00, dist: 81.82)	(43 times)
 \end{itemize}
 \item Achterhoek, Biel, Cologne, Graubuenden, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier
 \begin{itemize}
-\item (('s', 'C'), ('\textesh', 'C')) 95.65 (rep: 91.67, dist: 100.00)  (60 times)
-\item (('s', 'C'), ('\textesh', '-')) 95.65 (rep: 91.67, dist: 100.00)  (46 times)
+\item (('s', 'C'), ('\textesh', 'C'))	95.65	(rep: 91.67, dist: 100.00)	(60 times)
+\item (('s', 'C'), ('\textesh', '-'))	95.65	(rep: 91.67, dist: 100.00)	(46 times)
 \end{itemize}
 \item Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier: 
-(('-',), ('\textglotstop',))  92.31 (rep: 85.71, dist: 100.00)  (169 times)
+(('-',), ('\textglotstop',))	92.31	(rep: 85.71, dist: 100.00)	(169 times)
 \end{itemize}
 
-bsgc-nocontext: highest (non-singleton) score: 88.00  (rep: 78.57, dist: 100.00), one singleton with a corres of 100\%
+bsgc-nocontext: highest (non-singleton) score: 88.00	(rep: 78.57, dist: 100.00), one singleton with a corres of 100\%
 $\geq$80\% imp for non-singleton clusters:
 \begin{itemize}
 \item Achterhoek, Cologne, Herrlisheim, Luxembourg:
-(('k',), ('\textesh',)) 85.71 (rep: 75.00, dist: 100.00)  (9 times) 
+(('k',), ('\textesh',))	85.71	(rep: 75.00, dist: 100.00)	(9 times) 
 \item Dutch Std BE, Dutch Std NL, Veenkolonien, Westerkwartier:
-(('o\textlengthmark',), ('u',)) 85.71 (rep: 75.00, dist: 100.00)  (10 times)
+(('o\textlengthmark',), ('u',))	85.71	(rep: 75.00, dist: 100.00)	(10 times)
 \item Biel, Feer, Graubuenden, Hard, Limburg, Ortisei, Tuebingen, Walser:
-(('b',), ('p',))  85.71 (rep: 75.00, dist: 100.00)  (23 times)
+(('b',), ('p',))	85.71	(rep: 75.00, dist: 100.00)	(23 times)
 \item Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser:
-(('s',), ('\textesh',)) 80.19 (rep: 83.33, dist: 77.27) (99 times)
+(('s',), ('\textesh',))	80.19	(rep: 83.33, dist: 77.27)	(99 times)
 \item Achterhoek, Biel, Cologne, Feer, Graubuenden, Grou, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser:
 \begin{itemize}
-\item (('\textg',), ('\textg',))  88.00 (rep: 78.57, dist: 100.00)  (65 times)
-\item (('ll',), ('l',)) 83.33 (rep: 71.43, dist: 100.00)  (30 times)
+\item (('\textg',), ('\textg',))	88.00	(rep: 78.57, dist: 100.00)	(65 times)
+\item (('ll',), ('l',))	83.33	(rep: 71.43, dist: 100.00)	(30 times)
 \end{itemize}
 \end{itemize}
 

@@ -1,0 +1,54 @@
+\documentclass{standalone}
+\usepackage{forest}
+\usepackage{tipa}
+\begin{document}
+\begin{forest}
+for tree={
+  parent anchor=south, 
+  child anchor=north,
+}
+[
+    [\textg $>$ \textg
+        [Grou]
+        [s $>$ \textesh
+            [b $>$ p
+                [
+                    [
+                        [Limburg]
+                        [
+                            [Feer]
+                            [
+                                [Hard]
+                                [
+                                    [Ortisei]
+                                    [[Walser][Tuebingen]]
+                                ]
+                            ]
+                        ]
+                    ]
+                    [Graubuenden]
+                ]
+                [Biel]
+            ]
+            [k $>$ \textesh
+                [Herrlisheim]
+                [
+                    [Luxembourg]
+                    [[Achterhoek][Cologne]]
+                ]
+            ]
+        ]
+    ]
+    [b $>$ f
+        [[Antwerp][Ostend]]
+        [o\textlengthmark{} $>$ u
+            [Veenkolonien]
+            [
+                [[Westerkwartier][Dutch Std NL]]
+                [Dutch Std BE]
+            ]
+        ]
+    ]
+]
+\end{forest}
+\end{document}

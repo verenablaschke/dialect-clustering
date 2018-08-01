@@ -1,0 +1,57 @@
+\documentclass{standalone}
+\usepackage{forest}
+\usepackage{tipa}
+\begin{document}
+\begin{forest}
+for tree={
+  parent anchor=south, 
+  child anchor=north,
+}
+[
+    [\textg\textit{Vowel} $>$ \textg\textit{Vowel}
+        [t\# $>$ s\#
+            [
+                [Na $>$ Na
+                    [Biel]
+                    [Na $>$ Na
+                        [Graubuenden]
+                        [Walser]
+                    ]
+                ]
+                [En $>$ In
+                    [Herrlisheim]
+                    [[Hard][Ortisei]]
+                ]
+            ]
+            [
+                [Limburg]
+                [
+                    [Feer]
+                    [
+                        [Tuebingen]
+                        [
+                            [Luxembourg]
+                            [[Achterhoek][Cologne]]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+        [Heligoland]    
+    ]
+    [bA $>$ f$\emptyset$
+        [Grou]
+        [bA $>$ f$\emptyset$
+            [Westerkwartier]
+            [sK $>$ s$\emptyset$
+                [[Dutch Std NL][Veenkolonien]]
+                [sK $>$ s$\emptyset$
+                    [Ostend]
+                    [[Antwerp][Dutch Std BE]]
+                ]
+            ]
+        ]
+    ]
+]
+\end{forest}
+\end{document}
