@@ -50,11 +50,13 @@ def print_clusters(filename, A_original, clusters, doculect2int, corres2int,
     importance_scores = []
     n_nonsingleton_notall = 0
     fo = open(filename, 'w', encoding='utf8')
+    fo2 = open(filename.replace('.txt', '-complete.txt'), 'w', encoding='utf8')
     if feature_clusters is None:
         feature_clusters = [None] * len(clusters)
     for c, features in zip(clusters, feature_clusters):
-        fo.write("\n")
-        fo.write(", ".join(c) + "\n")
+        msg = "\n" + ", ".join(c) + "\n"
+        fo.write(msg)
+        fo2.write(msg)
         ds = [doculect2int[doc] for doc in c]
         if len(ds) > 1 and len(ds) < len(doculects):
             n_nonsingleton_notall += 1
@@ -78,30 +80,46 @@ def print_clusters(filename, A_original, clusters, doculect2int, corres2int,
                         importance_scores.append(imp)
         n_above_threshold_total += n_above_threshold
         fs = sorted(fs, reverse=True)
-        fo.write("-------\n")
-        fo.write("{} correspondences above the threshold ({}% importance)\n\n"
-                 .format(n_above_threshold, THRESHOLD))
+        msg = "-------\n" \
+              "{} correspondences above the threshold ({}% importance)\n\n" \
+              .format(n_above_threshold, THRESHOLD)
+        fo.write(msg)
+        fo2.write(msg)
+        wrote_more = False
         for j, (i, r, d, a, f) in enumerate(fs):
-            if (j > 10 and i < 100) or i < THRESHOLD:
+            msg = "{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})" \
+                  "\t({} times)\n".format(tuple2corres(f), i, r, d, a)
+            cont = (j < 10 or i == 100) and i >= THRESHOLD
+            if (not cont) and (not wrote_more):
                 fo.write("and {} more\n".format(len(fs) - j))
-                break
-            fo.write("{}\t{:4.2f}\t(rep: {:4.2f}, dist: {:4.2f})"
-                     "\t({} times)\n".format(tuple2corres(f), i, r, d, a))
+                wrote_more = True
+                if not features:
+                    break
+            if cont:
+                fo.write(msg)
+            fo2.write(msg)
             for d in ds:
                 try:
-                    fo.write("{}: {}\n"
-                             .format(doculects[d],
-                                     corres2lang2word[f][doculects[d]]))
+                    msg = "{}: {}\n".format(doculects[d],
+                                            corres2lang2word[f][doculects[d]])
+                    if cont:
+                        fo.write(msg)
+                    fo2.write(msg)
                 except KeyError:
                     pass
             if len(ds) == 0:
                 # Bipartite spectral graph clustering: clusters can consist of
                 # only correspondences.
-                fo.write("{} doculect(s): {}\n"
-                         .format(len(corres2lang2word[f]),
-                                 corres2lang2word[f]))
-            fo.write("\n")
+                msg = "{} doculect(s): {}\n".format(len(corres2lang2word[f]),
+                                                    corres2lang2word[f])
+                if cont:
+                    fo.write(msg)
+                fo2.write(msg)
+            if cont:
+                fo.write("\n")
+            fo2.write("\n")
         fo.write("=====================================\n")
+        fo2.write("=====================================\n")
     fo.write("\n\n{} clusters\n".format(len(clusters)))
     fo.write("{} clusters excl. singletons "
              "and the cluster including all doculects\n"
@@ -120,3 +138,4 @@ def print_clusters(filename, A_original, clusters, doculect2int, corres2int,
     fo.write("{} correspondences == 100% importance\n"
              .format(len(np.where(importance_scores >= 99.99999)[0])))
     fo.close()
+    fo2.close()

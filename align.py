@@ -66,6 +66,9 @@ def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
             if context_cv or context_sc:
                 left = ref[c - 1]
                 if left != cur[c - 1]:
+                    # Use context information only if it can be made to form
+                    # a phonological rule (i.e. the context is the same in both
+                    # the reference and modern doculect).
                     left = None
                 offset = 2
                 while left == '-':
@@ -89,20 +92,20 @@ def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
                         right = None
                     offset += 1
                 if context_cv and left:
-                    corres_i.update([(ref_i, cur_i, "{}_".format(
+                    corres_i.update([(ref_i, cur_i, "{} _".format(
                         seg2class(left)))])
                 if context_cv and right:
-                    corres_i.update([(ref_i, cur_i, "_{}".format(
+                    corres_i.update([(ref_i, cur_i, "_ {}".format(
                         seg2class(right)))])
                 if (context_sc and left and
                         not (context_cv and left == '#')):
                     # Don't add sound class-independent context
                     # information (-> word boundaries) twice.
-                    corres_i.update([(ref_i, cur_i, "{}_".format(
+                    corres_i.update([(ref_i, cur_i, "{} _".format(
                         seg2class(left, sca=True)))])
                 if (context_sc and right and
                         not (context_cv and right == '#')):
-                    corres_i.update([(ref_i, cur_i, "_{}".format(
+                    corres_i.update([(ref_i, cur_i, "_ {}".format(
                         seg2class(right, sca=True)))])
         # End character-level correspondence extraction.
 
@@ -127,7 +130,7 @@ def seg2class(segment, sca=False):
     if sca:
         return token2class(segment, 'sca')
     cl = token2class(segment, 'dolgo')
-    return '<V>' if cl == 'V' else '<C>'
+    return 'vowel' if cl == 'V' else 'cons'
 
 
 def align(reference_doculect='ProtoGermanic',
@@ -163,13 +166,17 @@ def align(reference_doculect='ProtoGermanic',
                 correspondences[doculect] = tallies
     f.close()
 
-    if min_count or verbose > 3:
+    with open('output/corres.txt', 'w', encoding='utf8') as f:
         all_correspondences_old = all_correspondences.keys()
         all_correspondences = Counter()
 
         for doculect, tallies in correspondences.items():
+            f.write("Doculect: {}\n\n".format(doculect))
+            f.write(str(tallies.items()))
+            f.write("\n=================================================\n\n")
             for corres in all_correspondences_old:
                 try:
+                    # Remove rare correspondences.
                     if tallies[corres] < min_count:
                         del tallies[corres]
                 except KeyError:
