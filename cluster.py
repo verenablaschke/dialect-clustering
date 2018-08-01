@@ -77,7 +77,7 @@ if __name__ == "__main__":
         no_context=True, context_cv=True, context_sc=True, min_count=3,
         alignment_type='lib', alignment_mode='global', verbose=1)
 
-    corres_no_context = [c for c in all_correspondences if len(c[0]) == 1]
+    corres_no_context = [c for c in all_correspondences if len(c) == 2]
     doculect2int = {x: i for i, x in enumerate(doculects)}
 
     print("Constructing features for tfidf-context.")
