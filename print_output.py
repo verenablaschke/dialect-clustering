@@ -7,9 +7,14 @@ THRESHOLD = 80
 def tuple2corres(tup):
     # (('V', 'r'), ('-', 'ʁ'))
     # -> Vr > ∅ʁ
-    hist = ''.join(tup[0])
-    cur = ''.join(tup[1])
-    return '{} > {}'.format(hist, cur).replace('-', '∅')
+    # hist = ''.join(tup[0])
+    # cur = ''.join(tup[1])
+    s = '{} > {}'.format(tup[0], tup[1])
+    try:
+        s += ' / {}'.format(tup[2])
+    except IndexError:
+        pass
+    return s.replace('-', '∅')
 
 
 def score(A, corres, cluster_docs):

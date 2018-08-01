@@ -62,47 +62,48 @@ def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
                 # Ignore gap-gap alignments.
                 continue
             if no_context:
-                corres_i.update([(tuple([ref_i]), tuple([cur_i]))])
+                corres_i.update([(ref_i, cur_i)])
             if context_cv or context_sc:
-                ref_left = ref[c - 1]
-                cur_left = cur[c - 1]
+                left = ref[c - 1]
+                if left != cur[c - 1]:
+                    left = None
                 offset = 2
-                while ref_left == cur_left == '-':
+                while left == '-':
                     # If the context is a gap for both doculects, get the
                     # nearest left context that is not a gap for at least one
                     # of the doculects.
-                    ref_left = ref[c - offset]
-                    cur_left = cur[c - offset]
+                    left = ref[c - offset]
+                    if left != cur[c - offset]:
+                        left = None
                     offset += 1
-                ref_right = ref[c + 1]
-                cur_right = cur[c + 1]
+                right = ref[c + 1]
+                if right != cur[c + 1]:
+                    right = None
                 offset = 2
-                while ref_right == cur_right == '-':
+                while right == '-':
                     # If the context is a gap for both doculects, get the
                     # nearest right context that is not a gap for at least one
                     # of the doculects.
-                    ref_right = ref[c + offset]
-                    cur_right = cur[c + offset]
+                    right = ref[c + offset]
+                    if right != cur[c + offset]:
+                        right = None
                     offset += 1
-                if context_cv:
-                    r_left = (seg2class(ref_left, sca=False), ref_i)
-                    c_left = (seg2class(cur_left, sca=False), cur_i)
-                    r_right = (ref_i, seg2class(ref_right, sca=False))
-                    c_right = (cur_i, seg2class(cur_right, sca=False))
-                    corres_i.update([(r_left, c_left),
-                                     (r_right, c_right)])
-                if (context_sc and
-                        not (context_cv and ref_left == cur_left == '#')):
+                if context_cv and left:
+                    corres_i.update([(ref_i, cur_i, "{}_".format(
+                        seg2class(left)))])
+                if context_cv and right:
+                    corres_i.update([(ref_i, cur_i, "_{}".format(
+                        seg2class(right)))])
+                if (context_sc and left and
+                        not (context_cv and left == '#')):
                     # Don't add sound class-independent context
                     # information (-> word boundaries) twice.
-                    r_left = (seg2class(ref_left, sca=True), ref_i)
-                    c_left = (seg2class(cur_left, sca=True), cur_i)
-                    corres_i.update([(r_left, c_left)])
-                if (context_sc and
-                        not (context_cv and ref_right == cur_right == '#')):
-                    r_right = (ref_i, seg2class(ref_right, sca=True))
-                    c_right = (cur_i, seg2class(cur_right, sca=True))
-                    corres_i.update([(r_right, c_right)])
+                    corres_i.update([(ref_i, cur_i, "{}_".format(
+                        seg2class(left, sca=True)))])
+                if (context_sc and right and
+                        not (context_cv and right == '#')):
+                    corres_i.update([(ref_i, cur_i, "_{}".format(
+                        seg2class(right, sca=True)))])
         # End character-level correspondence extraction.
 
         d = labels_cwg[i]
