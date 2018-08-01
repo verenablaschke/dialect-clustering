@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
@@ -8,7 +8,9 @@
 \usepackage{tipa}
 \usepackage{changepage}
 \usepackage{standalone}
-\usepackage[margin=1.3in]{geometry}
+\usepackage[margin=3cm]{geometry}
+
+% \linespread{1.25}
 
 \title{Clustering Dialect Varieties Based on Historical Sound Correspondences}
 \author{Verena Blaschke}
@@ -160,9 +162,12 @@ not affected by HGCS: Dutch, Low German, Frisian
 \label{s:alignments}
 
 In order to extract sound correspondences, we need to align the sound sequences corresponding to each concept first.
-We can carry out alignment based on data from all the investigated doculects at once using multi-sequence alignment.
-% TODO details (all steps) & double-check
-For this, we use a library-based version \citet{notredame2000t-coffee:} of the progressive multi-sequence alignment method \citet{thompson1994clustal}.
+We carry out alignment based on data from all the investigated doculects at once using multi-sequence alignment.
+% TODO motivate MSA here
+we use all of the Germanic data we extracted from the Sound Comparisons project instead of just the CWG doculects and Proto-Germanic,
+
+For this, we use a library-based version \citep{notredame2000t-coffee:} of the progressive multi-sequence alignment method \citep{thompson1994clustal}.
+This algorithm is described below.
 For each concept:
 
 % "global" mode: \citet{needleman1970general}
@@ -171,17 +176,17 @@ For each concept:
 % TODO either double-check (& possibly extend these details), or remove them (& just name them) since they are not the focus of this work
 \begin{enumerate}
 \item
-Divide each phonetic representation for a word into an array of sound segments.
-These sound segments are typically single IPA tokens (including diacritics), but we use multi-token segments for affricates, diph- and triphthongs, and geminates.
+Divide the phonetic representation of each word into an array of sound segments.
+These sound segments are often single IPA tokens (including diacritics), but we use multi-token segments for affricates, diph- and triphthongs, and geminates.
 
 \item
-Create alignments for all possible binary combinations of sequences.
-These alignments are created using the Needleman-Wunsch algorithm \citep{needleman1970general} and based on the sound class method by \citet{list2012sca:}.
-All segment alignments from this step are stored in a library, each together with a corresponding sound-class based weight. % TODO check the nature of these weights
+Create alignments for all possible binary sequence combinations.
+These alignments are created using the algorithm from \citet{needleman1970general} and based on the sound classes introduced by \citet{list2012sca:}.
+All segment alignments from this step are stored in a library, each associated with a weight reflecting its... % TODO. in how far DOES it reflect probable sound class changes in the LingPy implementation (vs. relative frequency)
 
 \item
 Use the binary calculations to create a distance matrix between the sequences.
-Convert the distance matrix into a tree. % Sokal and Michener (1958)
+Convert the distance matrix into a tree using the UPGMA method \citep{sokal1958statistical}.
 
 \item 
 Progressing from the tips of the tree to the root, join the closest two alignments at each step.
@@ -189,14 +194,13 @@ Merge alignments using the library created in the first step.
 \end{enumerate}
 
 We use the LingPy library for Python \citep{list2018lingpy.} to perform these steps.
-For multi-sequence alignment, we use all of the Germanic data we extracted from the Sound Comparisons project instead of just the CWG doculects and Proto-Germanic, because this yielded better results in preliminary experiments. % TODO vague?
-Table ~\ref{tab:msa}
+Table~\ref{tab:msa} shows an excerpt from the multi-sequence alignment for the concept ``cold''.
 
 \begin{table}[]
 \begin{center}
 \begin{tabular}{l|llllll}
 Doculect       & \multicolumn{6}{l}{Sound segments} \\ \hline
-ProtoGermanic  & k    & a    & l   & d    & a  & z  \\
+Proto-Germanic  & k    & a    & l   & d    & a  & z  \\
 Westerkwartier & k\textsuperscript{h}   & o    & \textltilde   & t\textsuperscript{h}   & -  & -  \\
 Luxembourg     & k\textsuperscript{h}   & a\textlengthmark   & l   & -    & -  & -  \\
 Walser         & x    & a\textlengthmark    & l   & t    & -  & -  \\
@@ -205,20 +209,46 @@ Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{t
 \end{tabular}
 \end{center}
 \label{tab:msa}
-\caption{Extract of the aligned sequence table for the concept ``cold''.}
+\caption{An excerpt from the aligned sequence table for the concept ``cold''.}
 \end{table}
 
-We then extract the pairwise sound correspondences between Proto-Germanic and each doculect from the alignments.
+\subsection{Sound Correspondences}
 
-ignore gap-gap alignments caused by the inclusion of additional doculects for the MSA step
+After performing sound segment-wise alignment, we extract sound correspondences between each modern doculect and Proto-Germanic from the alignment table.
+We use segment-to-segment correspondences as well as correspondences that include contextual information:
+
+\begin{itemize}
+\item
+\textbf{No context}:
+These are simple segment-to-segment correspondences.
+For the example given in Table~\ref{tab:msa}, the correspondences for the Ortisei doculect are:
+k $>$ k\textsuperscript{h}, a $>$ \textopeno, l $>$ l, d $>$ \texttoptiebar{ts}, a $>$ $\emptyset$, and z $>$ $\emptyset$.
+
+\item
+\textbf{Simple context}:
+We (separately) add information about the left and right single-segment context, stating whether the context is a word boundary (\#), gap ($\emptyset$), consonant, or vowel.
+The correspondences for the same example as above are:
+% TODO sort out how I represent consonants/vowels here as well as in the figures.
+\#k $>$ \#k\textsuperscript{h}, Ca $>$ C\textopeno, Vl $>$ Vl, Cd $>$ C\texttoptiebar{ts}, Ca $>$ C$\emptyset$, Vz $>$ $\emptyset\emptyset$,
+kV $>$ k\textsuperscript{h}V, aC $>$ \textopeno{}C, lC $>$ lC, dV $>$ \texttoptiebar{ts}$\emptyset$, aC $>$ $\emptyset\emptyset$, and z\# $>$ $\emptyset$\#.
+
+\item
+\textbf{Sound class-based context}:
+This is similar to the previous category, but we give more fine-grained information about consonants and vowels.
+We use the sound classes introduced by \citet{list2012sca:}, which discern between fifteen consonant groups and sixteen vowel groups.
+The correspondences for the given example are:
+\#k $>$ \#k\textsuperscript{h}, Ka $>$ K\textopeno, Al $>$ Al, Ld $>$ L\texttoptiebar{ts}, Ta $>$ C$\emptyset$, Az $>$ $\emptyset\emptyset$,
+kA $>$ k\textsuperscript{h}U, aL $>$ \textopeno{}L, lT $>$ lC, dA $>$ \texttoptiebar{ts}$\emptyset$, aS $>$ $\emptyset\emptyset$, and z\# $>$ $\emptyset$\#.
+\end{itemize}
+
+% TODO only use contexts when the contexts would be identical ie when we could just write them as phono rule? check montemagni. also ref them here
+
+We ignore gap-gap alignments, as they are 
 ignore swaps (swapped segments are aligned with gaps) -- happen only in 3 of the 111 terms
 
-% TODO motivation
-In addition to the simple correspondences, we also extract sound correspondences with some contextual information.
-To do this, we pad each sequence with `\#' to represent word boundaries.
-% TODO more
-
 dealing with gaps, don't include word boundaries multiple times
+
+For each doculect, we ignore segment correspondences that occur less than three times across all concepts to reduce the effect misalignments can have.
 
 \subsection{Clustering}
 
@@ -390,39 +420,39 @@ highest-ranked sound correspondences
 bsgc-context: $\geq$90\% imp for non-singleton clusters:
 \begin{itemize}
 \item Antwerp, Dutch Std BE, Ostend:
-(('C', 'e'), ('C', 'e\textlengthmark'))	(rep: 100.00, dist: 100.00)	(10 times)
+(('C', 'e'), ('C', 'e\textlengthmark')) (rep: 100.00, dist: 100.00) (10 times)
 \item Biel, Cologne, Graubuenden, Hard, Herrlisheim, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier
 \begin{itemize}
-\item (('V', 't'), ('V', 's'))	94.74	(rep: 90.00, dist: 100.00)	(61 times)
-\item (('V', 's'), ('V', '\textesh'))	94.74	(rep: 90.00, dist: 100.00)	(40 times)
-\item (('s', 'T'), ('\textesh', 'T'))	94.74	(rep: 90.00, dist: 100.00)	(36 times)
-\item (('s', 'C'), ('\textesh', 'C'))	90.00	(rep: 100.00, dist: 81.82)	(57 times)
-\item (('s', 'C'), ('\textesh', '-'))	90.00	(rep: 100.00, dist: 81.82)	(43 times)
+\item (('V', 't'), ('V', 's'))  94.74   (rep: 90.00, dist: 100.00)  (61 times)
+\item (('V', 's'), ('V', '\textesh'))   94.74   (rep: 90.00, dist: 100.00)  (40 times)
+\item (('s', 'T'), ('\textesh', 'T'))   94.74   (rep: 90.00, dist: 100.00)  (36 times)
+\item (('s', 'C'), ('\textesh', 'C'))   90.00   (rep: 100.00, dist: 81.82)  (57 times)
+\item (('s', 'C'), ('\textesh', '-'))   90.00   (rep: 100.00, dist: 81.82)  (43 times)
 \end{itemize}
 \item Achterhoek, Biel, Cologne, Graubuenden, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier
 \begin{itemize}
-\item (('s', 'C'), ('\textesh', 'C'))	95.65	(rep: 91.67, dist: 100.00)	(60 times)
-\item (('s', 'C'), ('\textesh', '-'))	95.65	(rep: 91.67, dist: 100.00)	(46 times)
+\item (('s', 'C'), ('\textesh', 'C'))   95.65   (rep: 91.67, dist: 100.00)  (60 times)
+\item (('s', 'C'), ('\textesh', '-'))   95.65   (rep: 91.67, dist: 100.00)  (46 times)
 \end{itemize}
 \item Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier: 
-(('-',), ('\textglotstop',))	92.31	(rep: 85.71, dist: 100.00)	(169 times)
+(('-',), ('\textglotstop',))    92.31   (rep: 85.71, dist: 100.00)  (169 times)
 \end{itemize}
 
-bsgc-nocontext: highest (non-singleton) score: 88.00	(rep: 78.57, dist: 100.00), one singleton with a corres of 100\%
+bsgc-nocontext: highest (non-singleton) score: 88.00    (rep: 78.57, dist: 100.00), one singleton with a corres of 100\%
 $\geq$80\% imp for non-singleton clusters:
 \begin{itemize}
 \item Achterhoek, Cologne, Herrlisheim, Luxembourg:
-(('k',), ('\textesh',))	85.71	(rep: 75.00, dist: 100.00)	(9 times) 
+(('k',), ('\textesh',)) 85.71   (rep: 75.00, dist: 100.00)  (9 times) 
 \item Dutch Std BE, Dutch Std NL, Veenkolonien, Westerkwartier:
-(('o\textlengthmark',), ('u',))	85.71	(rep: 75.00, dist: 100.00)	(10 times)
+(('o\textlengthmark',), ('u',)) 85.71   (rep: 75.00, dist: 100.00)  (10 times)
 \item Biel, Feer, Graubuenden, Hard, Limburg, Ortisei, Tuebingen, Walser:
-(('b',), ('p',))	85.71	(rep: 75.00, dist: 100.00)	(23 times)
+(('b',), ('p',))    85.71   (rep: 75.00, dist: 100.00)  (23 times)
 \item Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser:
-(('s',), ('\textesh',))	80.19	(rep: 83.33, dist: 77.27)	(99 times)
+(('s',), ('\textesh',)) 80.19   (rep: 83.33, dist: 77.27)   (99 times)
 \item Achterhoek, Biel, Cologne, Feer, Graubuenden, Grou, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser:
 \begin{itemize}
-\item (('\textg',), ('\textg',))	88.00	(rep: 78.57, dist: 100.00)	(65 times)
-\item (('ll',), ('l',))	83.33	(rep: 71.43, dist: 100.00)	(30 times)
+\item (('\textg',), ('\textg',))    88.00   (rep: 78.57, dist: 100.00)  (65 times)
+\item (('ll',), ('l',)) 83.33   (rep: 71.43, dist: 100.00)  (30 times)
 \end{itemize}
 \end{itemize}
 
