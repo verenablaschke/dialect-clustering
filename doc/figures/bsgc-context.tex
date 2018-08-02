@@ -1,4 +1,5 @@
 \documentclass{standalone}
+\usepackage[T1]{fontenc}
 \usepackage{forest}
 \usepackage{tipa}
 \begin{document}
@@ -6,49 +7,44 @@
 for tree={
   parent anchor=south, 
   child anchor=north,
+  align=center
 }
 [
-    [\textg\textit{Vowel} $>$ \textg\textit{Vowel}
-        [t\# $>$ s\#
-            [
-                [Na $>$ Na
-                    [Biel]
-                    [Na $>$ Na
-                        [Graubuenden]
-                        [Walser]
-                    ]
-                ]
-                [En $>$ In
-                    [Herrlisheim]
-                    [[Hard][Ortisei]]
-                ]
-            ]
+    [$\emptyset$ $>$ \textglotstop / \# \_
+        [t $>$ s
             [
                 [Limburg]
                 [
-                    [Feer]
                     [
-                        [Tuebingen]
                         [
-                            [Luxembourg]
-                            [[Achterhoek][Cologne]]
+                            [Cologne]
+                            [
+                                [
+                                    [Feer]
+                                    [[Hard][Tuebingen]]
+                                ]
+                                [Luxembourg]
+                            ]
                         ]
+                        [Ortisei]
                     ]
+                    [Herrlisheim]
                 ]
             ]
+            [[Walser][Graubuenden]]
         ]
-        [Heligoland]    
+        [[Westerkwartier][Heligoland]]
     ]
-    [bA $>$ f$\emptyset$
+    [s $>$ s / \_ T
         [Grou]
-        [bA $>$ f$\emptyset$
-            [Westerkwartier]
-            [sK $>$ s$\emptyset$
-                [[Dutch Std NL][Veenkolonien]]
-                [sK $>$ s$\emptyset$
-                    [Ostend]
-                    [[Antwerp][Dutch Std BE]]
-                ]
+        [
+            [
+                [Dutch Std NL]
+                [[Achterhoek][Veenkolonien]]
+            ]
+            [
+                [[Antwerp][Dutch Std BE]]
+                [Ostend]
             ]
         ]
     ]

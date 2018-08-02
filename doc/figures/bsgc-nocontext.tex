@@ -1,4 +1,5 @@
 \documentclass{standalone}
+\usepackage[T1]{fontenc}
 \usepackage{forest}
 \usepackage{tipa}
 \begin{document}
@@ -6,46 +7,47 @@
 for tree={
   parent anchor=south, 
   child anchor=north,
+  align=center
 }
 [
-    [\textg $>$ \textg
-        [Grou]
-        [s $>$ \textesh
-            [b $>$ p
+    [ll $>$ l
+        [u $>$ \textupsilon
+            [
                 [
                     [
-                        [Limburg]
                         [
-                            [Feer]
+                            [Luxembourg]
                             [
-                                [Hard]
+                                [Cologne]
                                 [
-                                    [Ortisei]
-                                    [[Walser][Tuebingen]]
+                                    [Feer]
+                                    [
+                                        [Hard]
+                                        [[Herrlisheim][Limburg]]
+                                    ]
                                 ]
                             ]
                         ]
+                        [[Biel][Walser]]
                     ]
-                    [Graubuenden]
+                    [Achterhoek]
                 ]
-                [Biel]
+                [[Ortisei][Tuebingen]]
             ]
-            [k $>$ \textesh
-                [Herrlisheim]
-                [
-                    [Luxembourg]
-                    [[Achterhoek][Cologne]]
-                ]
-            ]
+            [Graubuenden]
         ]
+        [Heligoland]
     ]
     [b $>$ f
-        [[Antwerp][Ostend]]
-        [o\textlengthmark{} $>$ u
-            [Veenkolonien]
+        [Westerkwartier]
+        [
+            [Ostend]
             [
-                [[Westerkwartier][Dutch Std NL]]
-                [Dutch Std BE]
+                [[Dutch Std NL][Veenkolonien]]
+                [
+                    [Grou]
+                    [[Antwerp][Dutch Std BE]]
+                ]
             ]
         ]
     ]
