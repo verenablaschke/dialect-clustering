@@ -2,9 +2,15 @@
 
 Can we cluster dialects based on sound correspondences? Papers like `wieling2011bipartite` invest clustering based on the presence/absence of aligned sound segments for doculect-reference doculect alignments, and give dialect clusters in addition to correlating the segment alignments with the clusters. Given the data I have, I will attempt something similar, but use Proto-Germanic data as reference doculect, effectively trying to get information about historical sound shifts.
 
-For reproducibility: 
+Decided on a hash seed for reproducibility: 
 ```
-set pythonhashseed=123
+export pythonhashseed=123
+./cluster.py
+```
+
+On Windows, the above (+ setting the relevant encodings to UTF-8) is included in:
+```
+run.bat
 ```
 
 ## Data

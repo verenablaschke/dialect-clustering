@@ -35,6 +35,7 @@ def clean_transcription(word):
     return word
 
 
+# TODO del
 def simplify_transcription(word):
     to_remove = ['̝',  # raised
                  '̞',  # lowered
@@ -48,8 +49,8 @@ def simplify_transcription(word):
                  '̩'  # syllabic
                  ]
     word = clean_transcription(word)
-    for c in to_remove:
-        word = word.replace(c, '')
+    # for c in to_remove:
+    #     word = word.replace(c, '')
     return word
 
 
