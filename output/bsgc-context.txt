@@ -6,11 +6,25 @@ Herrlisheim
 and 20 more
 =====================================
 
+Biel
+-------
+0 correspondences above the threshold (80% importance)
+
+and 17 more
+=====================================
+
 Dutch_Std_BE
 -------
 0 correspondences above the threshold (80% importance)
 
 and 19 more
+=====================================
+
+Dutch_Std_NL
+-------
+0 correspondences above the threshold (80% importance)
+
+and 9 more
 =====================================
 
 Walser
@@ -20,25 +34,25 @@ Walser
 and 17 more
 =====================================
 
-Ostend
--------
-0 correspondences above the threshold (80% importance)
-
-and 18 more
-=====================================
-
 Tuebingen
 -------
 0 correspondences above the threshold (80% importance)
 
-and 1 more
+and 8 more
 =====================================
 
-Biel
+Veenkolonien
 -------
 0 correspondences above the threshold (80% importance)
 
-and 17 more
+and 28 more
+=====================================
+
+Cologne
+-------
+0 correspondences above the threshold (80% importance)
+
+and 1 more
 =====================================
 
 Ortisei
@@ -55,11 +69,14 @@ Limburg
 and 11 more
 =====================================
 
-Achterhoek
+Heligoland
 -------
-0 correspondences above the threshold (80% importance)
+1 correspondences above the threshold (80% importance)
 
-and 13 more
+r > ʀ / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Heligoland: ['ʀoɒ', 'ʀäen', 'ʀɛç']
+
+and 16 more
 =====================================
 
 Feer
@@ -76,18 +93,25 @@ Graubuenden
 and 15 more
 =====================================
 
-Dutch_Std_NL
--------
-0 correspondences above the threshold (80% importance)
-
-and 9 more
-=====================================
-
 Hard
 -------
 0 correspondences above the threshold (80% importance)
 
 and 17 more
+=====================================
+
+Luxembourg
+-------
+0 correspondences above the threshold (80% importance)
+
+and 1 more
+=====================================
+
+Westerkwartier
+-------
+0 correspondences above the threshold (80% importance)
+
+and 18 more
 =====================================
 
 Grou
@@ -103,30 +127,6 @@ Grou: ['jɪs̺kə', 'βɒs̺kiə', 'fɪs̺k', 's̺kɛrp']
 and 17 more
 =====================================
 
-Luxembourg
--------
-1 correspondences above the threshold (80% importance)
-
-e > ɨ̞	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Luxembourg: ['zɨ̞t͡s', 'mɨ̞lɪ̠ʃ', 'fɨ̞nəf', 'mɨ̞t']
-
-and 6 more
-=====================================
-
-Westerkwartier
--------
-0 correspondences above the threshold (80% importance)
-
-and 18 more
-=====================================
-
-Veenkolonien
--------
-0 correspondences above the threshold (80% importance)
-
-and 28 more
-=====================================
-
 Antwerp
 -------
 1 correspondences above the threshold (80% importance)
@@ -137,28 +137,18 @@ Antwerp: ['steən', 'teən', 'beən']
 and 38 more
 =====================================
 
-Heligoland
--------
-1 correspondences above the threshold (80% importance)
-
-r > ʀ / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Heligoland: ['ʀoɒ', 'ʀäen', 'ʀɛç']
-
-and 16 more
-=====================================
-
-Cologne
+Achterhoek
 -------
 0 correspondences above the threshold (80% importance)
 
-and 1 more
+and 13 more
 =====================================
 
-Biel, Graubuenden
+Ostend
 -------
 0 correspondences above the threshold (80% importance)
 
-and 32 more
+and 18 more
 =====================================
 
 Heligoland, Westerkwartier
@@ -168,13 +158,6 @@ Heligoland, Westerkwartier
 and 35 more
 =====================================
 
-Achterhoek, Veenkolonien
--------
-0 correspondences above the threshold (80% importance)
-
-and 41 more
-=====================================
-
 Antwerp, Dutch_Std_BE
 -------
 0 correspondences above the threshold (80% importance)
@@ -182,11 +165,25 @@ Antwerp, Dutch_Std_BE
 and 58 more
 =====================================
 
+Biel, Graubuenden
+-------
+0 correspondences above the threshold (80% importance)
+
+and 32 more
+=====================================
+
+Achterhoek, Veenkolonien
+-------
+0 correspondences above the threshold (80% importance)
+
+and 41 more
+=====================================
+
 Luxembourg, Tuebingen
 -------
 0 correspondences above the threshold (80% importance)
 
-and 8 more
+and 9 more
 =====================================
 
 Antwerp, Dutch_Std_BE, Ostend
@@ -219,7 +216,7 @@ Feer, Luxembourg, Tuebingen
 -------
 0 correspondences above the threshold (80% importance)
 
-and 15 more
+and 14 more
 =====================================
 
 Cologne, Feer, Luxembourg, Tuebingen
@@ -236,18 +233,18 @@ Cologne, Feer, Hard, Luxembourg, Tuebingen
 and 65 more
 =====================================
 
-Cologne, Feer, Hard, Luxembourg, Ortisei, Tuebingen
--------
-0 correspondences above the threshold (80% importance)
-
-and 116 more
-=====================================
-
 Achterhoek, Antwerp, Dutch_Std_BE, Dutch_Std_NL, Ostend, Veenkolonien
 -------
 0 correspondences above the threshold (80% importance)
 
 and 126 more
+=====================================
+
+Cologne, Feer, Hard, Luxembourg, Ortisei, Tuebingen
+-------
+0 correspondences above the threshold (80% importance)
+
+and 116 more
 =====================================
 
 Achterhoek, Antwerp, Dutch_Std_BE, Dutch_Std_NL, Grou, Ostend, Veenkolonien
@@ -414,7 +411,7 @@ and 376 more
 18 clusters excl. singletons and the cluster including all doculects
 max. importance score: 100.00%
 376 correspondences (total)
-16 correspondences >= the threshold (80% importance)
-9 correspondences >= 90% importance
-7 correspondences >= 95% importance
-6 correspondences == 100% importance
+15 correspondences >= the threshold (80% importance)
+8 correspondences >= 90% importance
+6 correspondences >= 95% importance
+5 correspondences == 100% importance

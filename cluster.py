@@ -3,6 +3,7 @@ from align import align
 from bsgc import bsgc_hierarchical
 from print_output import print_clusters
 from scipy.cluster.hierarchy import dendrogram, linkage
+from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import matplotlib.pyplot as plt
@@ -47,7 +48,23 @@ def construct_A(all_correspondences, correspondences, doculects,
 
 
 def tfidf_hierarchical(A, doculects, context):
+    # TF-IDF
     A = TfidfTransformer().fit_transform(A)
+
+    # Truncated SVD
+    n_components = A.shape[0] if A.shape[0] < A.shape[1] else A.shape[1]
+    svd = TruncatedSVD(n_components=n_components, random_state=123).fit(A)
+    for i, v in enumerate(np.cumsum(svd.explained_variance_ratio_)):
+        if v >= 0.85:
+            n_components = i + 1
+            break
+    A = TruncatedSVD(n_components=n_components, random_state=123) \
+        .fit_transform(A)
+    print("Truncated A to {} compontents "
+          "which explain {:4.2f}% of the variance".format(n_components,
+                                                          v * 100))
+
+    # Cluster via UPGMA and cosine similarity.
     dist = 1 - cosine_similarity(A)
     Z = linkage(dist, method='average')
     fig, ax = plt.subplots()
@@ -58,7 +75,8 @@ def tfidf_hierarchical(A, doculects, context):
         leaf_font_size=12.)
     fig.savefig('output/dendrogram-{}.pdf'.format(context),
                 bbox_inches='tight')
-    # Add new cluster IDs.
+
+    # Update cluster IDs.
     n_samples = len(doculects)
     cluster_ids = np.arange(n_samples, n_samples + Z.shape[0]) \
                     .reshape(-1, 1)

@@ -76,10 +76,6 @@ We excluded one CWG doculect that covered only 35 concepts. % Schaeddel (Frisian
 The Proto-Germanic data cover all 110 concepts; each of the modern doculects covers at least 103 concepts, and each concept is covered by at least 17 modern doculects.
 In total, we have 2181 sequence alignments between Proto-Germanic and modern CWG doculects.
 
-We simplified the transcriptions slightly by removing diacritics for vowel articulation and syllabicity, and suprasegmentals for stress and for half-long sounds.
-This is similar how \citet{list2014benchmark} processed an earlier version of the data \citep{renfrew2009languages}.
-We did not work with the Germanic data \citeauthor{list2014benchmark} published as it does not include Proto-Germanic entries for most concepts.
-
 note on inflected forms
 
 \subsection{notes on continental West Germanic dialects/languages}
@@ -87,6 +83,7 @@ note on inflected forms
 similarities not only because of genetic relatedness but also--enabled by the geographic proximity--mutual influences
 cf. \citet[p. 8]{harbert2007germanic}
 
+\citet[pp. 72-80]{nielsen1989germanic} gives an overview of the history of attempting to divide the West Germanic dialects into subgroups with the associated criteria (phonological, morphological, lexical, and/or extra-linguistic) and criticisms.
 
 sound changes that characterize some but not all CWG variants:
 
@@ -94,7 +91,6 @@ sound changes that characterize some but not all CWG variants:
   - some notes. try \citet[pp. 47-48]{harbert2007germanic} or Beekes
   - \citet[p. 15]{harbert2007germanic}: mostly in Alpine German, partially in Franconian, not in Low German
 
-- North-Sea-Germanic sound shifts/differences NSG vs other West Germanic dialects: \citet{stiles2013pan-west}
 
 \begin{figure}
 \centering
@@ -115,6 +111,10 @@ sound changes that characterize some but not all CWG variants:
 \caption{Glottolog 3.2 for the doculects we used}
 \end{figure}
 
+\subsubsection{North Sea Germanic vs. Other}
+\citet{stiles2013pan-west} posits that the most significant division of West Germanic varieties is the split into Ingv\ae{}onic (that is, North Sea Germanic) varieties and non-Ingv\ae{}onic varieties.
+
+\subsubsection{German dialect groups by affricates}
 \citet[pp. 182-199]{goblirsch2005lautverschiebungen}:
 
 \begin{itemize}
@@ -140,8 +140,9 @@ Luxembourg?
 
 not affected by HGCS: Dutch, Low German, Frisian
 
-
+\subsubsection{Germanic varieties by obstruent systems}
 \citet[pp. 215-235]{goblirsch2005lautverschiebungen}: "Typology of modern Germanic obstruent systems", from least to most innovative
+
 \begin{itemize}
   \item aspirationless:
   East Swedisch; Dutch, S Low German, Nordenglisch, Scots(, Frisian); Normitteldeutsch
@@ -315,6 +316,8 @@ log
 + 1)
 \end{equation*}
 
+truncated singular vector decomposition (preserve a large enough number of components to explain at least 85\% of the variance)
+
 implementation by \cite{pedregosa2011scikit-learn:}
 
 \subsection{Ranking sound correspondences by importance}
@@ -418,43 +421,10 @@ highest-ranked sound correspondences
 % TODO update!
 
 bsgc-context: $\geq$90\% imp for non-singleton clusters:
-\begin{itemize}
-\item Antwerp, Dutch Std BE, Ostend:
-(('C', 'e'), ('C', 'e\textlengthmark')) (rep: 100.00, dist: 100.00) (10 times)
-\item Biel, Cologne, Graubuenden, Hard, Herrlisheim, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier
-\begin{itemize}
-\item (('V', 't'), ('V', 's'))  94.74   (rep: 90.00, dist: 100.00)  (61 times)
-\item (('V', 's'), ('V', '\textesh'))   94.74   (rep: 90.00, dist: 100.00)  (40 times)
-\item (('s', 'T'), ('\textesh', 'T'))   94.74   (rep: 90.00, dist: 100.00)  (36 times)
-\item (('s', 'C'), ('\textesh', 'C'))   90.00   (rep: 100.00, dist: 81.82)  (57 times)
-\item (('s', 'C'), ('\textesh', '-'))   90.00   (rep: 100.00, dist: 81.82)  (43 times)
-\end{itemize}
-\item Achterhoek, Biel, Cologne, Graubuenden, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier
-\begin{itemize}
-\item (('s', 'C'), ('\textesh', 'C'))   95.65   (rep: 91.67, dist: 100.00)  (60 times)
-\item (('s', 'C'), ('\textesh', '-'))   95.65   (rep: 91.67, dist: 100.00)  (46 times)
-\end{itemize}
-\item Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser, Westerkwartier: 
-(('-',), ('\textglotstop',))    92.31   (rep: 85.71, dist: 100.00)  (169 times)
-\end{itemize}
 
-bsgc-nocontext: highest (non-singleton) score: 88.00    (rep: 78.57, dist: 100.00), one singleton with a corres of 100\%
+bsgc-nocontext: highest (non-singleton) score: 88.00	(rep: 78.57, dist: 100.00), one singleton with a corres of 100\%
 $\geq$80\% imp for non-singleton clusters:
-\begin{itemize}
-\item Achterhoek, Cologne, Herrlisheim, Luxembourg:
-(('k',), ('\textesh',)) 85.71   (rep: 75.00, dist: 100.00)  (9 times) 
-\item Dutch Std BE, Dutch Std NL, Veenkolonien, Westerkwartier:
-(('o\textlengthmark',), ('u',)) 85.71   (rep: 75.00, dist: 100.00)  (10 times)
-\item Biel, Feer, Graubuenden, Hard, Limburg, Ortisei, Tuebingen, Walser:
-(('b',), ('p',))    85.71   (rep: 75.00, dist: 100.00)  (23 times)
-\item Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser:
-(('s',), ('\textesh',)) 80.19   (rep: 83.33, dist: 77.27)   (99 times)
-\item Achterhoek, Biel, Cologne, Feer, Graubuenden, Grou, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser:
-\begin{itemize}
-\item (('\textg',), ('\textg',))    88.00   (rep: 78.57, dist: 100.00)  (65 times)
-\item (('ll',), ('l',)) 83.33   (rep: 71.43, dist: 100.00)  (30 times)
-\end{itemize}
-\end{itemize}
+
 
 \section{Discussion}
 
@@ -475,6 +445,11 @@ really helps for BSGC: higher importance values! (more values $\geq$80, scores $
 
 \subsection{co-clustering}
 How beneficial is co-clustering really? Why not just cluster the doculects (after TF-IDF maybe) and then apply the sound correspondence metrics? It seems like the benefit of co-clustering is mainly that $v_2$ can be used for ranking the correspondences, although this doesn't seem to be very popular among the authors who used bipartite spectral graph clustering for dialect data...
+
+why does bsgc not work that well here despite it working quite nicely for wieling, montemagni, ...?
+- number of samples
+- doculects/language family ("tighter")
+- narrowness of transcription
 
 wrongly assigned sound correspondences (k means initialization?)
 

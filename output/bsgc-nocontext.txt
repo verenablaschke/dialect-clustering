@@ -13,11 +13,11 @@ Dutch_Std_NL
 and 7 more
 =====================================
 
-Feer
+Herrlisheim
 -------
 0 correspondences above the threshold (80% importance)
 
-and 1 more
+and 8 more
 =====================================
 
 Antwerp
@@ -31,21 +31,14 @@ Tuebingen
 -------
 0 correspondences above the threshold (80% importance)
 
-and 10 more
+and 6 more
 =====================================
 
 Biel
 -------
 0 correspondences above the threshold (80% importance)
 
-and 8 more
-=====================================
-
-Graubuenden
--------
-0 correspondences above the threshold (80% importance)
-
-and 13 more
+and 5 more
 =====================================
 
 Veenkolonien
@@ -55,11 +48,11 @@ Veenkolonien
 and 8 more
 =====================================
 
-Limburg
+Ortisei
 -------
 0 correspondences above the threshold (80% importance)
 
-and 4 more
+and 14 more
 =====================================
 
 Heligoland
@@ -69,7 +62,7 @@ Heligoland
 and 9 more
 =====================================
 
-Herrlisheim
+Feer
 -------
 0 correspondences above the threshold (80% importance)
 
@@ -85,40 +78,19 @@ and 8 more
 
 Cologne
 -------
-0 correspondences above the threshold (80% importance)
+1 correspondences above the threshold (80% importance)
 
-and 1 more
+e > ɛ̝	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+Cologne: ['hɛ̝t͡s', 'zɛ̝t͡s', 'ʔɛ̝s', 'fɛ̝ʃ', 'zɛ̝ks']
+
+and 12 more
 =====================================
 
 Hard
 -------
 0 correspondences above the threshold (80% importance)
 
-and 11 more
-=====================================
-
-Luxembourg
--------
-1 correspondences above the threshold (80% importance)
-
-e > ɨ̞	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Luxembourg: ['zɨ̞t͡s', 'mɨ̞lɪ̠ʃ', 'fɨ̞nəf', 'mɨ̞t']
-
-and 7 more
-=====================================
-
-Walser
--------
-0 correspondences above the threshold (80% importance)
-
-and 6 more
-=====================================
-
-Ortisei
--------
-0 correspondences above the threshold (80% importance)
-
-and 11 more
+and 1 more
 =====================================
 
 Grou
@@ -129,6 +101,34 @@ Grou
 Grou: ['jɪs̺kə', 's̺jʌχ', 'rjœχt', 'fjäˑʊɾ̥', 'fjʌ̝χt͡siˑ', 'njʌʁʌn']
 
 and 7 more
+=====================================
+
+Walser
+-------
+0 correspondences above the threshold (80% importance)
+
+and 8 more
+=====================================
+
+Limburg
+-------
+0 correspondences above the threshold (80% importance)
+
+and 1 more
+=====================================
+
+Graubuenden
+-------
+0 correspondences above the threshold (80% importance)
+
+and 13 more
+=====================================
+
+Luxembourg
+-------
+0 correspondences above the threshold (80% importance)
+
+and 8 more
 =====================================
 
 Achterhoek
@@ -145,11 +145,11 @@ Ostend
 and 13 more
 =====================================
 
-Biel, Walser
+Hard, Herrlisheim
 -------
 0 correspondences above the threshold (80% importance)
 
-and 14 more
+and 9 more
 =====================================
 
 Antwerp, Dutch_Std_BE
@@ -159,20 +159,6 @@ Antwerp, Dutch_Std_BE
 and 33 more
 =====================================
 
-Ortisei, Tuebingen
--------
-0 correspondences above the threshold (80% importance)
-
-and 21 more
-=====================================
-
-Herrlisheim, Luxembourg
--------
-0 correspondences above the threshold (80% importance)
-
-and 9 more
-=====================================
-
 Dutch_Std_NL, Veenkolonien
 -------
 0 correspondences above the threshold (80% importance)
@@ -180,11 +166,11 @@ Dutch_Std_NL, Veenkolonien
 and 15 more
 =====================================
 
-Feer, Herrlisheim, Luxembourg
+Hard, Herrlisheim, Limburg
 -------
 0 correspondences above the threshold (80% importance)
 
-and 15 more
+and 10 more
 =====================================
 
 Antwerp, Dutch_Std_BE, Grou
@@ -194,23 +180,18 @@ Antwerp, Dutch_Std_BE, Grou
 and 41 more
 =====================================
 
-Cologne, Feer, Herrlisheim, Luxembourg
+Feer, Hard, Herrlisheim, Limburg
 -------
-1 correspondences above the threshold (80% importance)
-
-k > ʃ	85.71	(rep: 75.00, dist: 100.00)	(9 times)
-Cologne: ['mɪləʃ', 'ʔiʃ', 'ʔɛ̝ˑɪʃ']
-Herrlisheim: ['mɪlɪʃ', 'ʔɪʃ', 'ʔäiʃ']
-Luxembourg: ['mɨ̞lɪ̠ʃ', 'ʔœ̈ʃ', 'ʔeːʃ']
+0 correspondences above the threshold (80% importance)
 
 and 20 more
 =====================================
 
-Cologne, Feer, Hard, Herrlisheim, Luxembourg
+Feer, Hard, Herrlisheim, Limburg, Luxembourg
 -------
 0 correspondences above the threshold (80% importance)
 
-and 43 more
+and 38 more
 =====================================
 
 Antwerp, Dutch_Std_BE, Dutch_Std_NL, Grou, Veenkolonien
@@ -220,14 +201,28 @@ Antwerp, Dutch_Std_BE, Dutch_Std_NL, Grou, Veenkolonien
 and 56 more
 =====================================
 
-Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg
+Antwerp, Dutch_Std_BE, Dutch_Std_NL, Grou, Ostend, Veenkolonien
 -------
 0 correspondences above the threshold (80% importance)
 
-and 47 more
+and 69 more
 =====================================
 
-Antwerp, Dutch_Std_BE, Dutch_Std_NL, Grou, Ostend, Veenkolonien
+Feer, Hard, Herrlisheim, Limburg, Luxembourg, Tuebingen
+-------
+1 correspondences above the threshold (80% importance)
+
+a > äː	80.00	(rep: 66.67, dist: 100.00)	(19 times)
+Feer: ['säːlt', 'ʔäːl', 'näːjl̩', 'näːɡət']
+Hard: ['väːs']
+Herrlisheim: ['t͡säːn', 'tʁäːnə', 'näːjəl']
+Limburg: ['näːm', 'däːχ', 'çäːt', 'näːɣɫ̩']
+Tuebingen: ['t͡säː', 'näːχt', 'näːmɛ̈', 'tʰäːk', 'ɡäːs', 'βäːs', 'bäːt', 'näːɡl̩']
+
+and 55 more
+=====================================
+
+Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg, Tuebingen
 -------
 0 correspondences above the threshold (80% importance)
 
@@ -258,18 +253,25 @@ Westerkwartier: ['ʔɑɫ', 'voˑɫ', 'foɫ']
 and 75 more
 =====================================
 
-Biel, Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg, Walser
+Biel, Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg, Tuebingen
 -------
 0 correspondences above the threshold (80% importance)
 
-and 75 more
+and 74 more
 =====================================
 
-Achterhoek, Biel, Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg, Walser
+Biel, Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg, Tuebingen, Walser
 -------
 0 correspondences above the threshold (80% importance)
 
-and 81 more
+and 82 more
+=====================================
+
+Achterhoek, Biel, Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg, Tuebingen, Walser
+-------
+0 correspondences above the threshold (80% importance)
+
+and 88 more
 =====================================
 
 Achterhoek, Biel, Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser
