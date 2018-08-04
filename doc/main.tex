@@ -61,24 +61,8 @@ introduced as a method for dialect clustering in \citet{wieling2011bipartite}
 \citet{zha2001bipartite} introduced a similar (the same??) method as Dhillon at the same time, in another journal
 
 % This algorithms and related ones were investigated by \citet{kluger2003spectral} for their use in bioinformatics as well (co-clustering genes and phenotypes).
- 
-\section{Data}
 
-continental European West Germanic dialects (CWG) and standard languages
-
-\subsection{actual data}
-
-\citet{heggarty2018sound} compiled IPA transcriptions of word lists in a range of Germanic doculects for his Sound Comparisons project.
-From this database, we used 110 cognate sets from 20 modern CWG doculects and a reconstruction of Proto-Germanic.
-For the phonetic alignment step (see section~\ref{s:alignments}), we used 14 additional doculects that are Germanic but not continental West Germanic. 
-To control for transciber bias, we only worked with doculects that shared the same transcriptor, Warren Maguire.
-We excluded one CWG doculect that covered only 35 concepts. % Schaeddel (Frisian)
-The Proto-Germanic data cover all 110 concepts; each of the modern doculects covers at least 103 concepts, and each concept is covered by at least 17 modern doculects.
-In total, we have 2181 sequence alignments between Proto-Germanic and modern CWG doculects.
-
-note on inflected forms
-
-\subsection{notes on continental West Germanic dialects/languages}
+\subsection{Continental West Germanic Doculects}
 
 similarities not only because of genetic relatedness but also--enabled by the geographic proximity--mutual influences
 cf. \citet[p. 8]{harbert2007germanic}
@@ -157,6 +141,23 @@ not affected by HGCS: Dutch, Low German, Frisian
   Danish; N Low German; High German dialects with lenition
 \end{itemize}
 
+
+\newpage
+\section{Data}
+
+continental European West Germanic dialects (CWG) and standard languages
+
+\citet{heggarty2018sound} compiled IPA transcriptions of word lists in a range of Germanic doculects for his Sound Comparisons project.
+From this database, we used 110 cognate sets from 20 modern CWG doculects and a reconstruction of Proto-Germanic.
+For the phonetic alignment step (see section~\ref{s:alignments}), we used 14 additional doculects that are Germanic but not continental West Germanic. 
+To control for transciber bias, we only worked with doculects that shared the same transcriptor, Warren Maguire.
+We excluded one CWG doculect that covered only 35 concepts. % Schaeddel (Frisian)
+The Proto-Germanic data cover all 110 concepts; each of the modern doculects covers at least 103 concepts, and each concept is covered by at least 17 modern doculects.
+In total, we have 2181 sequence alignments between Proto-Germanic and modern CWG doculects.
+
+note on inflected forms
+
+\newpage
 \section{Methods}
 
 \subsection{Alignments}
@@ -251,7 +252,56 @@ dealing with gaps, don't include word boundaries multiple times
 
 For each doculect, we ignore segment correspondences that occur less than three times across all concepts to reduce the effect misalignments can have.
 
+\newpage
 \subsection{Clustering}
+
+We implemented two approaches to custering the data.
+Both clustering approaches consist of three steps: ..normalizing.. the data, dimensionality reduction, and hierarchical clustering.
+Each approach is carried out once with only the context-less sound correspondences, and once with all types of correspondences.
+
+\subsubsection{TF-IDF/SVD and k-means}
+
+% TF-IDF conceptually similar to first step of BSGC: adjusting feature frequencies by how informative they are
+
+We first TF-IDF transform the doculect-by-correspondence tally matrix.
+
+% TODO sources for tfidf?
+
+TF (term frequency) is calculated as follows
+
+\begin{equation*}
+\operatorname{tf}(doculect_i, corres_j) =
+\frac{\text{number of occurrences of } corres_j \text{ in } doculect_i}
+{\text{number of sound correspondences in } doculect_i}
+\end{equation*}
+
+and IDF (inverse document frequency) is calculated as
+
+\begin{equation*}
+\operatorname{idf}(corres_j) =
+\frac{\text{number of doculects}}
+{\text{number of doculects with } corres_j}
+\end{equation*}
+.
+
+To combine term frequency and inverse document frequency and transform the tally matrix, 
+we use the implementation by \cite{pedregosa2011scikit-learn:}, 
+which is defined as
+
+\begin{equation*}
+\operatorname{tf-idf}(doculect_i, corres_j) =
+\text{tf}(doculect_i, corres_j)
+\times
+(
+log
+(\text{idf}(corres_j))
++ 1)
+\end{equation*}
+
+We then apply truncated singular vector decomposition (preserve a large enough number of components to explain at least 85\% of the variance)
+remove noise
+
+
 
 \subsubsection{Bipartite spectral graph co-clustering}
 
@@ -288,43 +338,10 @@ Perform k-means clustering on Z.
 \end{enumerate}
 
 
-\subsubsection{TF-IDF/SVD and k-means}
-
-TF-IDF conceptually similar to first step of BSGC: adjusting feature frequencies by how informative they are
-
-\begin{equation*}
-\operatorname{tf-idf}(t, d) =
-\frac{\text{number of occurrences of } t \text{ in } d}
-{\text{number of tokens in } d}
-\times
-log
-\frac{\text{number of documents}}
-{\text{number of documents with } t}
-\end{equation*}
-% TODO src
-
-sklearn uses 
-\begin{equation*}
-\operatorname{tf-idf}(t, d) =
-\frac{\text{number of occurrences of } t \text{ in } d}
-{\text{number of tokens in } d}
-\times
-(
-log
-\frac{\text{number of documents}}
-{\text{number of documents with } t}
-+ 1)
-\end{equation*}
-
-truncated singular vector decomposition (preserve a large enough number of components to explain at least 85\% of the variance)
-
-implementation by \cite{pedregosa2011scikit-learn:}
-
 \subsection{Ranking sound correspondences by importance}
 
 Representativeness: How many doculects in this cluster exhibit this sound correspondence? \citep{wieling2011bipartite}
 Distinctiveness: How often does a sound correspondence occur in this cluster compared to other clusters? \citep{wieling2011bipartite}
-Regularity: How often does this correspondence occur compared to the original sound? similar to \citet{prokic2013combining}. also like bigram MLE
 Frequency: Is it a rare or frequent correspondence? could maybe be combined with regularity, especially since the chance for mis-alignments is a lot higher for rare correspondences
 
 Ranking the sound correspondences for each cluster
@@ -389,6 +406,7 @@ We additionally re-rank correspondences with the same importance score by the nu
 
 According to \citet{wieling2010hierarchical}, the values of the second right singular vector are a good substitute for the above metrics.
 
+\newpage
 \section{Results}
 
 \begin{figure}
@@ -426,6 +444,10 @@ bsgc-nocontext: highest (non-singleton) score: 88.00	(rep: 78.57, dist: 100.00),
 $\geq$80\% imp for non-singleton clusters:
 
 
+svd how many components. svd vs no svd
+
+
+\newpage
 \section{Discussion}
 
 % -- specific ---
@@ -464,6 +486,10 @@ To what extend does clustering dialects and/or applying a hierarchical model to 
 data is from a relatively large region though
 
 more abstract sound correspondence rules (incl. context) to model sound changes more generally (nasalization, lenition)
+
+Regularity: How often does this correspondence occur compared to the original sound? similar to \citet{prokic2013combining}. also like bigram MLE
+
+investigate further the influence of data selection/preprocessing/properties on bsgc performance
 
 \bibliographystyle{chicago}
 \bibliography{lib}
