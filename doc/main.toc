@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Continental West Germanic Doculects}{1}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}North Sea Germanic vs. Other}{1}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}German dialect groups by affricates}{3}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Germanic varieties by obstruent systems}{3}{subsubsection.1.1.3}
+\contentsline {section}{\numberline {2}Data}{4}{section.2}
+\contentsline {section}{\numberline {3}Methods}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Alignments}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Sound Correspondences}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Clustering}{7}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}TF-IDF/SVD and k-means}{7}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Bipartite spectral graph co-clustering}{7}{subsubsection.3.3.2}
+\contentsline {subsection}{\numberline {3.4}Ranking sound correspondences by importance}{8}{subsection.3.4}
+\contentsline {section}{\numberline {4}Results}{9}{section.4}
+\contentsline {section}{\numberline {5}Discussion}{11}{section.5}
+\contentsline {subsection}{\numberline {5.1}Comparison with Glottolog tree}{11}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}(grouping dialects by) sound shifts}{11}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}effect of context information}{11}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}co-clustering}{11}{subsection.5.4}

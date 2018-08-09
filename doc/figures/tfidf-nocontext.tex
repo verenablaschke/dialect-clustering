@@ -1,120 +1,118 @@
 \documentclass{standalone}
-\usepackage{tikz}
-\usepackage{tipa}
+\usepackage{tikz, tipa}
 \begin{document}
-\tikzset{doc/.append style={prefix after command={\pgfextra{\tikzset{every
-label/.style={rotate=-45}}}}}}
-\tikzset{corres/.style={fill=white, above=0.18cm, inner sep=0pt}}
+\tikzset{corres/.style={fill=white, right=6mm, above=1mm, inner sep=0pt}}
 \begin{tikzpicture}
 % Doculects by singleton cluster number (alphabetical index).
-\node[doc, label=right:Veenkolonien] (17) at (1, 0) {};
-\node[doc, label=right:Achterhoek] (0) at (2, 0) {};
-\node[doc, label=right:Ostend] (15) at (3, 0) {};
-\node[doc, label=right:Dutch Std BE] (4) at (4, 0) {};
-\node[doc, label=right:Antwerp] (1) at (5, 0) {};
-\node[doc, label=right:Dutch Std NL] (5) at (6, 0) {};
-\node[doc, label=right:Grou] (8) at (7, 0) {};
-\node[doc, label=right:Luxembourg] (13) at (8, 0) {};
-\node[doc, label=right:Cologne] (3) at (9, 0) {};
-\node[doc, label=right:Tuebingen] (16) at (10, 0) {};
-\node[doc, label=right:Feer] (6) at (11, 0) {};
-\node[doc, label=right:Limburg] (12) at (12, 0) {};
-\node[doc, label=right:Walser] (18) at (13, 0) {};
-\node[doc, label=right:Graubuenden] (7) at (14, 0) {};
-\node[doc, label=right:Biel] (2) at (15, 0) {};
-\node[doc, label=right:Hard] (9) at (16, 0) {};
-\node[doc, label=right:Ortisei] (14) at (17, 0) {};
-\node[doc, label=right:Herrlisheim] (11) at (18, 0) {};
-\node[doc, label=right:Westerkwartier] (19) at (19, 0) {};
-\node[doc, label=right:Heligoland] (10) at (20, 0) {};
+\node[label=left:Ortisei] (14) at (0, 0.5) {};
+\node[label=left:Herrlisheim] (11) at (0, 1.0) {};
+\node[label=left:Walser] (18) at (0, 1.5) {};
+\node[label=left:Graubuenden] (7) at (0, 2.0) {};
+\node[label=left:Biel] (2) at (0, 2.5) {};
+\node[label=left:Hard] (9) at (0, 3.0) {};
+\node[label=left:Tuebingen] (16) at (0, 3.5) {};
+\node[label=left:Cologne] (3) at (0, 4.0) {};
+\node[label=left:Luxembourg] (13) at (0, 4.5) {};
+\node[label=left:Feer] (6) at (0, 5.0) {};
+\node[label=left:Limburg] (12) at (0, 5.5) {};
+\node[label=left:Westerkwartier] (19) at (0, 6.0) {};
+\node[label=left:Heligoland] (10) at (0, 6.5) {};
+\node[label=left:Veenkolonien] (17) at (0, 7.0) {};
+\node[label=left:Achterhoek] (0) at (0, 7.5) {};
+\node[label=left:Ostend] (15) at (0, 8.0) {};
+\node[label=left:Dutch Std BE] (4) at (0, 8.5) {};
+\node[label=left:Antwerp] (1) at (0, 9.0) {};
+\node[label=left:Dutch Std NL] (5) at (0, 9.5) {};
+\node[label=left:Grou] (8) at (0, 10.0) {};
 
 % Clusters from Z.
-\node (20) at (8.5,3.297427111466786) {};
-\draw (3) |- (20.center);
-\draw (13) |- (20.center);
-\node (21) at (13.5,3.800302250218722) {};
-\draw (7) |- (21.center);
-\draw (18) |- (21.center);
-\node (22) at (3.5,4.0281504830116805) {};
-\draw (4) |- (22.center);
-\draw (15) |- (22.center);
-\node (23) at (9.25,4.099198422770579) {};
-\draw (16) |- (23.center);
-\draw (20) |- (23.center);
-\node (24) at (4.25,4.161116672196509) {};
-\draw (1) |- (24.center);
-\draw (22) |- (24.center);
-\node (25) at (1.5,4.315763733219021) {};
-\draw (0) |- (25.center);
-\draw (17) |- (25.center);
-\node (26) at (17.5,4.364249424038783) {};
-\draw (11) |- (26.center);
-\draw (14) |- (26.center);
-\node (27) at (14.25,4.593665214553075) {};
-\draw (2) |- (27.center);
-\draw (21) |- (27.center);
-\node (28) at (19.5,4.795839045913226) {};
-\draw (10) |- (28.center);
-\draw (19) |- (28.center);
-\node (29) at (10.125,5.334094469731883) {};
-\draw (6) |- (29.center);
-\draw (23) |- (29.center);
-\node (30) at (2.875,5.904899139633866) {};
-\draw (24) |- (30.center);
-\draw (25) |- (30.center);
-\node (31) at (15.125,6.042634193238002) {};
-\draw (9) |- (31.center);
-\draw (27) |- (31.center);
-\node (32) at (11.0625,6.411397502799506) {};
-\draw (12) |- (32.center);
-\draw (29) |- (32.center);
-\node (33) at (13.09375,6.557983445071964) {};
-\draw (31) |- (33.center);
-\draw (32) |- (33.center);
-\node (34) at (4.4375,7.060721212948669) {};
-\draw (5) |- (34.center);
-\draw (30) |- (34.center);
-\node (35) at (15.296875,7.5888204410735955) {};
-\draw (26) |- (35.center);
-\draw (33) |- (35.center);
-\node (36) at (17.3984375,7.913777514498104) {};
-\draw (28) |- (36.center);
-\draw (35) |- (36.center);
-\node (37) at (5.71875,8.31013451844877) {};
-\draw (8) |- (37.center);
-\draw (34) |- (37.center);
-\node (38) at (11.55859375,9.111958520468919) {};
-\draw (36) |- (38.center);
-\draw (37) |- (38.center);
+\node (20) at (3.297427111466786,4.25) {};
+\draw (3) -| (20.center);
+\draw (13) -| (20.center);
+\node (21) at (3.800302250218722,1.75) {};
+\draw (7) -| (21.center);
+\draw (18) -| (21.center);
+\node (22) at (4.0281504830116805,8.25) {};
+\draw (4) -| (22.center);
+\draw (15) -| (22.center);
+\node (23) at (4.099198422770579,3.875) {};
+\draw (16) -| (23.center);
+\draw (20) -| (23.center);
+\node (24) at (4.161116672196509,8.625) {};
+\draw (1) -| (24.center);
+\draw (22) -| (24.center);
+\node (25) at (4.315763733219021,7.25) {};
+\draw (0) -| (25.center);
+\draw (17) -| (25.center);
+\node (26) at (4.364249424038783,0.75) {};
+\draw (11) -| (26.center);
+\draw (14) -| (26.center);
+\node (27) at (4.593665214553075,2.125) {};
+\draw (2) -| (27.center);
+\draw (21) -| (27.center);
+\node (28) at (4.795839045913226,6.25) {};
+\draw (10) -| (28.center);
+\draw (19) -| (28.center);
+\node (29) at (5.334094469731883,4.4375) {};
+\draw (6) -| (29.center);
+\draw (23) -| (29.center);
+\node (30) at (5.904899139633866,7.9375) {};
+\draw (24) -| (30.center);
+\draw (25) -| (30.center);
+\node (31) at (6.042634193238002,2.5625) {};
+\draw (9) -| (31.center);
+\draw (27) -| (31.center);
+\node (32) at (6.411397502799506,4.96875) {};
+\draw (12) -| (32.center);
+\draw (29) -| (32.center);
+\node (33) at (6.557983445071964,3.765625) {};
+\draw (31) -| (33.center);
+\draw (32) -| (33.center);
+\node (34) at (7.060721212948669,8.71875) {};
+\draw (5) -| (34.center);
+\draw (30) -| (34.center);
+\node (35) at (7.5888204410735955,2.2578125) {};
+\draw (26) -| (35.center);
+\draw (33) -| (35.center);
+\node (36) at (7.913777514498104,4.25390625) {};
+\draw (28) -| (36.center);
+\draw (35) -| (36.center);
+\node (37) at (8.31013451844877,9.359375) {};
+\draw (8) -| (37.center);
+\draw (34) -| (37.center);
+\node (38) at (9.111958520468919,6.806640625) {};
+\draw (36) -| (38.center);
+\draw (37) -| (38.center);
 
 % Sound correspondences.
 \node[corres] at (20) {x $>$ \textesh};
-% \node[corres] at (21) { $>$ };
-% \node[corres] at (22) { $>$ };
-\node[corres] at (23) {n $>$ n\texthalflength};
+% \node[corres] at (21) {};
+% \node[corres] at (22) {};
+\node[corres] at (23) {n $>$ n\textlengthmark};
 \node[corres] at (24) {f $>$ v};
-% \node[corres] at (25) { $>$ };
+% \node[corres] at (25) {};
 \node[corres] at (26) {a $>$ \textopeno};
 \node[corres] at (27) {e $>$ y\textlengthmark};
 \node[corres] at (28) {t $>$ \textsubring{d}};
-% \node[corres] at (29) { $>$ };
-% \node[corres] at (30) { $>$ };
+% \node[corres] at (29) {};
+% \node[corres] at (30) {};
 \node[corres] at (31) {e $>$ y\textlengthmark};
-% \node[corres] at (32) { $>$ };
-% \node[corres] at (33) { $>$ };
-% \node[corres] at (34) { $>$ };
-\node[corres] at (35) {t $>$ s};
-\node[corres] at (36) {$\emptyset$ $>$ \textglotstop};
-% \node[corres] at (37) { $>$ };
+% \node[corres] at (32) {};
+% \node[corres] at (33) {};
+% % \node[corres] at (34) {};
+\node[corres] at (35) {t $>$ s}; % TODO adjust better
+\node[corres] at (36) {$\emptyset$ $>$ \textglotstop{}};
+% \node[corres] at (37) {};
+% \node[corres] at (38) {};
 
-% Y axis.
-\draw[->] (0,0) -- node[label={[rotate=90, label distance=1cm]90:Distance}]{{}} (0, 10.0);
-\draw (1pt,0.0) -- (-3pt,0.0) node[anchor=east] {0.00};
-\draw (1pt,1.5) -- (-3pt,1.5) node[anchor=east] {0.10};
-\draw (1pt,3.0) -- (-3pt,3.0) node[anchor=east] {0.20};
-\draw (1pt,4.5) -- (-3pt,4.5) node[anchor=east] {0.30};
-\draw (1pt,6.0) -- (-3pt,6.0) node[anchor=east] {0.40};
-\draw (1pt,7.5) -- (-3pt,7.5) node[anchor=east] {0.50};
-\draw (1pt,9.0) -- (-3pt,9.0) node[anchor=east] {0.60};
+% X axis.
+\draw[->] (0,0) -- node[label={[label distance=-1.3cm]Cosine distance}]{{}} (10.0, 0);
+\draw (0.0, 1pt) -- (0.0, -3pt) node[label={[label distance=-7mm]0.00}] {};
+\draw (1.5, 1pt) -- (1.5, -3pt) node[label={[label distance=-7mm]0.10}] {};
+\draw (3.0, 1pt) -- (3.0, -3pt) node[label={[label distance=-7mm]0.20}] {};
+\draw (4.5, 1pt) -- (4.5, -3pt) node[label={[label distance=-7mm]0.30}] {};
+\draw (6.0, 1pt) -- (6.0, -3pt) node[label={[label distance=-7mm]0.40}] {};
+\draw (7.5, 1pt) -- (7.5, -3pt) node[label={[label distance=-7mm]0.50}] {};
+\draw (9.0, 1pt) -- (9.0, -3pt) node[label={[label distance=-7mm]0.60}] {};
 \end{tikzpicture}
 \end{document}

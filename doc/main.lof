@@ -1,0 +1,5 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Harbert 2007: somewhat taking into account the convergence of certain Germanic varieties due to mutual influence (tree + waves?)}}{1}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Glottolog 3.2 for the doculects we used}}{2}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces TFIDF with (right) and without (left) context information, highest-rating correspondence per non-singleton cluster (with $\geq $80\% importance score). truncated svd: right}}{9}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces BSGC without context information and highest-rating correspondence per non-singleton cluster (with $\geq $80\% importance score)}}{10}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces BSGC context and highest-rating correspondence per non-singleton cluster (with $\geq $80\% importance score)}}{10}{figure.5}

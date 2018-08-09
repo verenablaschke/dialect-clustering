@@ -2,13 +2,16 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
-\usepackage{amsmath}
-\usepackage{forest}
-\usetikzlibrary{decorations.pathreplacing}
-\usepackage{tipa}
-\usepackage{changepage}
-\usepackage{standalone}
-\usepackage[margin=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{tipa} % IPA
+\usepackage{amsmath} % formulae
+\usepackage{forest} % (non-dendrogram) trees
+\usetikzlibrary{decorations.pathreplacing} % draw braces in tikz figure
+\usepackage{standalone} % import figures
+\usepackage{changepage} % adjust text width
+\usepackage{parskip} % proper paragraphs, no indentation
+\usepackage[margin=3cm, showframe]{geometry}
+% TODO remove showframe
 
 % \linespread{1.25}
 
@@ -17,9 +20,67 @@
 \date{\today}
 
 \begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+\vspace*{.1\textheight}
+
+{\Large Bachelor's Thesis}
+\vspace{2em}
+
+\hrule
+\vspace{0.6cm}
+{\huge\bfseries
+Clustering Dialect Varieties Based on Historical Sound Correspondences
+}\\[0.7cm] 
+\hrule
+\vspace*{.05\textheight}
+ 
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushleft} 
+{\large
+\textit{Author}\\
+Verena Blaschke}\\
+\href{mailto:verena.blaschke@student.uni-tuebingen.de}{\textit{verena.blaschke@student.uni-tuebingen.de}}\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushright}
+{\large
+\textit{Supervisor}\\
+Dr. Çağrı Çöltekin}\\
+\href{mailto:ccoltekin@sfs.uni-tuebingen.de}{\textit{ccoltekin@sfs.uni-tuebingen.de}}\\
+\end{flushright}
+\end{minipage}\\
+
+\vspace*{.1\textheight}
+
+A thesis presented for the degree of\\
+Bachelor of Arts\\
+in\\
+International Studies in Computational Linguistics
+
+\vspace{2em}
+
+Seminar für Sprachwissenschaft\\
+Eberhard Karls Universität Tübingen
+
+\vspace*{.1\textheight}
+August 2018
+\end{center}
+  
+\end{titlepage}
+
+
+
+
 \pagenumbering{gobble}
-\maketitle
 % TODO abstract
+\newpage
+\tableofcontents
+\listoftables
+\listoffigures
 \newpage
 % TODO Eigenständigkeits- bzw. Antiplagiatserklärung  
 
@@ -44,7 +105,7 @@ clustering dialects and determining relevant features
 
 historical sound correspondences
 
-\citet{kondrak2009identication}
+% \citet{kondrak2009identication}
 
 % --- on BSGC ---
 
@@ -60,7 +121,7 @@ introduced as a method for dialect clustering in \citet{wieling2011bipartite}
 
 \citet{zha2001bipartite} introduced a similar (the same??) method as Dhillon at the same time, in another journal
 
-% This algorithms and related ones were investigated by \citet{kluger2003spectral} for their use in bioinformatics as well (co-clustering genes and phenotypes).
+% These algorithms and related ones were investigated by \citet{kluger2003spectral} for their use in bioinformatics as well (co-clustering genes and phenotypes).
 
 \subsection{Continental West Germanic Doculects}
 
@@ -164,50 +225,51 @@ note on inflected forms
 \label{s:alignments}
 
 In order to extract sound correspondences, we need to align the sound sequences corresponding to each concept first.
-We carry out alignment based on data from all the investigated doculects at once using multi-sequence alignment.
-% TODO motivate MSA here
-we use all of the Germanic data we extracted from the Sound Comparisons project instead of just the CWG doculects and Proto-Germanic,
+We carry out alignment based on data from all the investigated doculects at once using multiple sequence alignment.
+Using multiple sequence alignment instead of carrying out pairwise alignments between the modern data and the reference data makes it possible to carry out the alignment based on patterns found in commonalities between the modern doculects as well.
+Because of this, we use all of the Germanic data we extracted from the Sound Comparisons project instead of only the CWG doculects and Proto-Germanic.
 
-For this, we use a library-based version \citep{notredame2000t-coffee:} of the progressive multi-sequence alignment method \citep{thompson1994clustal}.
-This algorithm is described below.
+We use a library-based version \citep{notredame2000t-coffee:} of the progressive multiple sequence alignment method \citep{thompson1994clustal}.
 For each concept:
 
-% "global" mode: \citet{needleman1970general}
-% "SCA" model: \citet{list2012sca:}
-
-% TODO either double-check (& possibly extend these details), or remove them (& just name them) since they are not the focus of this work
 \begin{enumerate}
 \item
 Divide the phonetic representation of each word into an array of sound segments.
-These sound segments are often single IPA tokens (including diacritics), but we use multi-token segments for affricates, diph- and triphthongs, and geminates.
+These sound segments are typically single IPA tokens (including diacritics), but we use multi-token segments for affricates, diph- and triphthongs, and geminates.
 
 \item
 Create alignments for all possible binary sequence combinations.
-These alignments are created using the algorithm from \citet{needleman1970general} and based on the sound classes introduced by \citet{list2012sca:}.
-All segment alignments from this step are stored in a library, each associated with a weight reflecting its... % TODO. in how far DOES it reflect probable sound class changes in the LingPy implementation (vs. relative frequency)
+These alignments are created using the algorithm from \citet{needleman1970general},
+with a scoring scheme based on the sound classes introduced by \citet{list2012sca}.
+All segment alignments from this step are stored in a library,
+each associated with a weight reflecting its relative frequency.
+% TODO. in how far does it reflect probable sound class changes in the LingPy implementation (vs. relative frequency)
 
 \item
 Use the binary calculations to create a distance matrix between the sequences.
 Convert the distance matrix into a tree using the UPGMA method \citep{sokal1958statistical}.
 
 \item 
-Progressing from the tips of the tree to the root, join the closest two alignments at each step.
-Merge alignments using the library created in the first step.
+Progressing from the tips of the tree to the root,
+consecutively join the alignments meeting at branchings,
+until (at the root) all alignments have been consolidated into one alignment table.
+Alignments are merged using the library created in the first step.
 \end{enumerate}
 
-We use the LingPy library for Python \citep{list2018lingpy.} to perform these steps.
-Table~\ref{tab:msa} shows an excerpt from the multi-sequence alignment for the concept ``cold''.
+We use the LingPy library for Python \citep{list2018lingpy} to perform these steps.
+Table~\ref{tab:msa} shows an excerpt from the multiple sequence alignment for the concept ``cold''.
 
-\begin{table}[]
+\begin{table}[h]
 \begin{center}
 \begin{tabular}{l|llllll}
+\hline
 Doculect       & \multicolumn{6}{l}{Sound segments} \\ \hline
 Proto-Germanic  & k    & a    & l   & d    & a  & z  \\
-Westerkwartier & k\textsuperscript{h}   & o    & \textltilde   & t\textsuperscript{h}   & -  & -  \\
-Luxembourg     & k\textsuperscript{h}   & a\textlengthmark   & l   & -    & -  & -  \\
-Walser         & x    & a\textlengthmark    & l   & t    & -  & -  \\
+Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{ts}  & -  & - \\ 
 Biel           & \textchi    & \textscripta\textupsilon   & -   & t    & -  & -  \\
-Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{ts}  & -  & - 
+Walser         & x    & a\textlengthmark    & l   & t    & -  & -  \\
+Luxembourg     & k\textsuperscript{h}   & a\textlengthmark   & l   & -    & -  & -  \\
+Westerkwartier & k\textsuperscript{h}   & o    & \textltilde   & t\textsuperscript{h}   & -  & -  \\ \hline
 \end{tabular}
 \end{center}
 \label{tab:msa}
@@ -216,34 +278,39 @@ Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{t
 
 \subsection{Sound Correspondences}
 
-After performing sound segment-wise alignment, we extract sound correspondences between each modern doculect and Proto-Germanic from the alignment table.
-We use segment-to-segment correspondences as well as correspondences that include contextual information:
+After performing sound segment-wise alignment,
+we extract sound correspondences between each
+modern doculect and Proto-Germanic from the alignment table.
+We use straightforward segment-to-segment correspondences
+as well as correspondences that include contextual information:
 
 \begin{itemize}
 \item
 \textbf{No context}:
 These are simple segment-to-segment correspondences.
-For the example given in Table~\ref{tab:msa}, the correspondences for the Ortisei doculect are:
+For the example given in Table~\ref{tab:msa},
+the correspondences for the Ortisei doculect are:
 k $>$ k\textsuperscript{h}, a $>$ \textopeno, l $>$ l, d $>$ \texttoptiebar{ts}, a $>$ $\emptyset$, and z $>$ $\emptyset$.
 
 \item
 \textbf{Simple context}:
-We (separately) add information about the left and right single-segment context, stating whether the context is a word boundary (\#), gap ($\emptyset$), consonant, or vowel.
-The correspondences for the same example as above are:
-% TODO sort out how I represent consonants/vowels here as well as in the figures.
-\#k $>$ \#k\textsuperscript{h}, Ca $>$ C\textopeno, Vl $>$ Vl, Cd $>$ C\texttoptiebar{ts}, Ca $>$ C$\emptyset$, Vz $>$ $\emptyset\emptyset$,
-kV $>$ k\textsuperscript{h}V, aC $>$ \textopeno{}C, lC $>$ lC, dV $>$ \texttoptiebar{ts}$\emptyset$, aC $>$ $\emptyset\emptyset$, and z\# $>$ $\emptyset$\#.
+We (separately) add information about the
+left and right single-segment context,
+stating whether the context is a
+word boundary (\#), gap ($\emptyset$), consonant (C), or vowel (V). 
+This can only be performed when the context in question is of
+the same type for both Proto-Germanic and the modern doculect.
 
 \item
 \textbf{Sound class-based context}:
-This is similar to the previous category, but we give more fine-grained information about consonants and vowels.
-We use the sound classes introduced by \citet{list2012sca:}, which discern between fifteen consonant groups and sixteen vowel groups.
-The correspondences for the given example are:
-\#k $>$ \#k\textsuperscript{h}, Ka $>$ K\textopeno, Al $>$ Al, Ld $>$ L\texttoptiebar{ts}, Ta $>$ C$\emptyset$, Az $>$ $\emptyset\emptyset$,
-kA $>$ k\textsuperscript{h}U, aL $>$ \textopeno{}L, lT $>$ lC, dA $>$ \texttoptiebar{ts}$\emptyset$, aS $>$ $\emptyset\emptyset$, and z\# $>$ $\emptyset$\#.
+This is similar to the previous category,
+but we give more fine-grained information about consonants and vowels.
+We use the sound classes introduced by \citet{list2012sca},
+which discern between fifteen consonant groups and sixteen vowel groups.
+
 \end{itemize}
 
-% TODO only use contexts when the contexts would be identical ie when we could just write them as phono rule? check montemagni. also ref them here
+% TODO check montemagni. also ref them here
 
 We ignore gap-gap alignments, as they are 
 ignore swaps (swapped segments are aligned with gaps) -- happen only in 3 of the 111 terms
@@ -251,6 +318,25 @@ ignore swaps (swapped segments are aligned with gaps) -- happen only in 3 of the
 dealing with gaps, don't include word boundaries multiple times
 
 For each doculect, we ignore segment correspondences that occur less than three times across all concepts to reduce the effect misalignments can have.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{l|llllll}
+\hline
+       & \multicolumn{6}{l}{Sound segments and inferred correspondences} \\ \hline
+Pr.-Germ.  & k    & a    & l   & d    & a  & z  \\
+Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{ts}  & -  & - \rule[-2mm]{0pt}{0pt}\\\hline
+No context & k $>$ k\textsuperscript{h} & a $>$ \textopeno & l $>$ l & d $>$ \texttoptiebar{ts} & a $>$ $\emptyset$ & z $>$ $\emptyset$ \rule{0pt}{4mm}\\[3mm]
+Simple & k $>$ k\textsuperscript{h} / \#\_ & a $>$ \textopeno / C\_ & l $>$ l / V\_ & d $>$ \texttoptiebar{ts} / C\_ & a $>$ $\emptyset$ / C\_ & \\
+context & k $>$ k\textsuperscript{h} / \_V & a $>$ \textopeno{} / \_C & l $>$ l / \_C & & & z $>$ $\emptyset$ / \_\# \\[3mm]
+Sound class- & k $>$ k\textsuperscript{h} / \#\_ & a $>$ \textopeno / K\_ &  l $>$ l / A\_ & d $>$ \texttoptiebar{ts} / L\_ & & \\
+based context & & a $>$ \textopeno{} / \_L & & & & z $>$ $\emptyset$ / \_\# \\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:corres}
+\caption{An excerpt from the aligned sequence table for the concept ``cold''.}
+\end{table}
 
 \newpage
 \subsection{Clustering}
@@ -285,7 +371,7 @@ and IDF (inverse document frequency) is calculated as
 .
 
 To combine term frequency and inverse document frequency and transform the tally matrix, 
-we use the implementation by \cite{pedregosa2011scikit-learn:}, 
+we use the implementation by \cite{pedregosa2011scikit-learn}, 
 which is defined as
 
 \begin{equation*}
@@ -410,15 +496,14 @@ According to \citet{wieling2010hierarchical}, the values of the second right sin
 \section{Results}
 
 \begin{figure}
-  \includestandalone[width=\textwidth]{figures/tfidf-nocontext}
-  \caption{TFIDF without context information and highest-rating correspondence per non-singleton cluster (with $\geq$80\% importance score)}
-  \label{fig:tfidf-nocontext}
-\end{figure}
-
-\begin{figure}
-  \includestandalone[width=\textwidth]{figures/tfidf-context}
-  \caption{TFIDF context and highest-rating correspondence per non-singleton cluster (with $\geq$80\% importance score)}
-  \label{fig:tfidf-context}
+    \begin{adjustwidth}{-0.6cm}{-0.5cm}
+    \centering
+    \includestandalone[height=0.28\textheight]{figures/tfidf-nocontext}
+    \hspace{-5mm}
+    \includestandalone[height=0.28\textheight]{figures/tfidf-context}
+    \end{adjustwidth}
+    \caption{TFIDF with (right) and without (left) context information, highest-rating correspondence per non-singleton cluster (with $\geq$80\% importance score). truncated svd: right}
+    \label{fig:tfidf-nocontext}
 \end{figure}
 
 \begin{figure}
@@ -440,7 +525,7 @@ highest-ranked sound correspondences
 
 bsgc-context: $\geq$90\% imp for non-singleton clusters:
 
-bsgc-nocontext: highest (non-singleton) score: 88.00	(rep: 78.57, dist: 100.00), one singleton with a corres of 100\%
+bsgc-nocontext: highest (non-singleton) score: 88.00  (rep: 78.57, dist: 100.00), one singleton with a corres of 100\%
 $\geq$80\% imp for non-singleton clusters:
 
 
