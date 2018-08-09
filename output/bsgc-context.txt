@@ -223,7 +223,7 @@ Cologne, Feer, Luxembourg, Tuebingen
 -------
 0 correspondences above the threshold (80% importance)
 
-and 20 more
+and 21 more
 =====================================
 
 Cologne, Feer, Hard, Luxembourg, Tuebingen
