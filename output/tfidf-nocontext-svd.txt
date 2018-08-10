@@ -803,10 +803,11 @@ and 201 more
 
 
 39 clusters
+----
 18 clusters excl. singletons and the cluster including all doculects
 max. importance score: 100.00%
 201 correspondences (total)
 113 correspondences >= the threshold (80% importance)
-99 correspondences >= 90% importance
-94 correspondences >= 95% importance
-93 correspondences == 100% importance
+15 correspondences >= 90% importance
+10 correspondences >= 95% importance
+9 correspondences == 100% importance

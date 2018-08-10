@@ -296,7 +296,7 @@ These are simple segment-to-segment correspondences.
 We (separately) add information about the
 left and right single-segment context,
 stating whether the context is a
-word boundary (\#), gap ($\emptyset$), consonant (C), or vowel (V). 
+word boundary (\#), gap ($\emptyset$), consonant, or vowel. 
 This can only be performed when the context in question is of
 the same type for both Proto-Germanic and the modern doculect.
 
@@ -340,11 +340,15 @@ matrix storing the absolute frequencies of the sound correspondences.
 \begin{tabular}{l|llllll}
 \hline
        & \multicolumn{6}{l}{Sound segments and inferred correspondences} \\ \hline
+
 Proto-Germ.  & k    & a    & l   & d    & a  & z  \\
 Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{ts}  & -  & - \rule[-2mm]{0pt}{0pt}\\\hline
+
 No context & k $>$ k\textsuperscript{h} & a $>$ \textopeno & l $>$ l & d $>$ \texttoptiebar{ts} & a $>$ $\emptyset$ & z $>$ $\emptyset$ \rule{0pt}{4mm}\\[3mm]
-Simple & k $>$ k\textsuperscript{h} / \#\_ & a $>$ \textopeno / C\_ & l $>$ l / V\_ & d $>$ \texttoptiebar{ts} / C\_ & a $>$ $\emptyset$ / C\_ & \\
+
+Simple & k $>$ k\textsuperscript{h} / \#\_ & a $>$ \textopeno / cons\_ & l $>$ l / vow\_ & d $>$ \texttoptiebar{ts} / cons\_ & a $>$ $\emptyset$ / cons\_ & \\
 context & k $>$ k\textsuperscript{h} / \_V & a $>$ \textopeno{} / \_C & l $>$ l / \_C & & & z $>$ $\emptyset$ / \_\# \\[3mm]
+
 Sound class- &  & a $>$ \textopeno / K\_ &  l $>$ l / A\_ & d $>$ \texttoptiebar{ts} / L\_ & & \\
 based context & & a $>$ \textopeno{} / \_L & & & & \\
 \hline
@@ -632,6 +636,83 @@ such that more frequent correspondences rank higher.
   \label{fig:bsgc-context}
 \end{figure}
 
+\subsection{TFIDF}
+
+context:
+excl. singletons and the cluster including all doculects
+max. importance score: 100.00\%
+376 correspondences (total)
+225 correspondences >= the threshold (80\% importance)
+25 correspondences >= 90\% importance
+19 correspondences >= 95\% importance
+19 correspondences == 100\% importance
+
+correspondences with 100\% importance:
+
+
+\begin{table}[h]
+\begin{tabular}{llrrrrc}
+\hline
+Cluster & Sound correspondence & Imp & Rep & Dist & Count & No context\\ \hline
+
+Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6 & x\\[2mm] % fɛ̝ʃ, fæʃt
+
+Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10 & x\\
+    & a $>$ \textopeno / \_cons & 100 & 100 & 100 & 10 \\[2mm] % kʰɔlt, kʰɔlt͡s
+    
+Heligoland, Westerkwartier & t $>$ \textsubring{d} & 100 & 100 & 100 & 8 & only nocontext \\[2mm]
+
+Antwerp, Dutch Std BE & u $>$ \textlowering{o}\textlengthmark & 100 & 100 & 100 & 8 \\
+    & u $>$ \textopeno{} / cons\_ & 100 & 100 & 100 & 7\\
+    & e $>$ \textlengthmark & 100 & 100 & 100 & 7\\
+    & u $>$ \textopeno{} / \_cons & 100 & 100 & 100 & 6\\[2mm]
+    
+Antwerp, Dutch Std BE, & f $>$ v & 100 & 100 & 100 & 15 & x\\
+Ostend & k $>$ \textsubplus{k} & 100 & 100 & 100 & 13 & x\\
+    & f $>$ v / \#\_ & 100 & 100 & 100 & 12\\[2mm]
+    
+Feer, Heligoland & d $>$ $\emptyset$ / cons\_ & 100 & 100 & 100 & 8\\[2mm]
+
+Biel, Graubuenden, & e $>$ y\textlengthmark & 100 & 100 & 100 & 13 & x\\
+Hard, Walser & & & & & \\[2mm]
+
+Herrlisheim, Ortisei, Hard, & t $>$ s & 90 & 82 & 100 & 59 & only nocontext\\
+Biel, Graubuenden, Walser, & & & & & \\
+Limburg, Feer, Tuebingen, & & & & & \\
+Cologne, Luxembourg & & & & & \\[2mm]
+
+Herrlisheim, Ortisei, Tuebingen, & t $>$ s & 100 & 100 & 100 & 59\\
+Cologne, Luxembourg, Hard, & s $>$ \textesh{} / \_cons & 100 & 100 & 100 & 44\\
+Biel, Graubuenden, Walser & t $>$ s / \_\# & 100 & 100 & 100 & 34\\
+    & s $>$ \textesh{} / \_T & 94 & 89 & 100 & 33\\
+    & t $>$ \texttoptiebar{ts} & 90 & 100 & 82 & 71\\
+    & t $>$ \texttoptiebar{ts} / \#\_ & 90 & 100 & 82 & 45\\[2mm]
+    
+Heligoland, Westerkwartier, & $\emptyset$ $>$ \textglotstop{} & 96 & 92 & 100 & 169 & only nocontext\\
+Herrlisheim, Ortisei, Hard, & s $>$ \textesh & 92 & 85 & 100 & 107 & only nocontext\\
+Biel, Graubuenden, Walser, & & & & & \\
+Limburg, Feer, Tuebingen, & & & & & \\
+Cologne, Luxembourg & & & & & \\[2mm]
+
+Westerkwartier, Feer, Heligoland, & $\emptyset$ $>$ \textglotstop{} / \#\_ & 100 & 100 & 100 & 169\\
+Herrlisheim, Ortisei, Tuebingen, & $\emptyset$ $>$ \textglotstop{} & 100 & 100 & 100 & 169\\
+Cologne, Luxembourg, Hard, & t $>$ \texttoptiebar{ts} & 91 & 83 & 100 & 76\\
+Biel Graubuenden, Walser & k $>$ k\textsuperscript{h} & 91 & 83 & 100 & 52\\
+    & t $>$ \texttoptiebar{ts} / \#\_ & 91 & 83 & 100 & 49\\
+    & k $>$ k\textsuperscript{h} / \#\_ & 91 & 83 & 100 & 46\\
+    & ll $>$ l & 91 & 83 & 100 & 30\\[2mm]
+
+Grou, Dutch Std NL, Limburg, & k $>$ k / \#\_ & 100 & 100 & 100 & 40\\
+Osten, Antweerp, Dutch Std BE, &  t $>$ t / \_\# & 100 & 100 & 100 & 37\\
+Achterhoek, Veenkolonien & & & & &\\\hline
+\end{tabular}
+\caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
+Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.}
+\end{table}
+
+
+
+\subsection{BSGC}
 
 highest-ranked sound correspondences
 (+ example words?)
