@@ -5,13 +5,14 @@
 \usepackage{hyperref}
 \usepackage{tipa} % IPA
 \usepackage{amsmath} % formulae
+\usepackage{mathtools} % displaystyle in formulae with cases
 \usepackage{forest} % (non-dendrogram) trees
 \usetikzlibrary{decorations.pathreplacing} % draw braces in tikz figure
 \usepackage{standalone} % import figures
 \usepackage{changepage} % adjust text width
 \usepackage{parskip} % proper paragraphs, no indentation
-\usepackage[margin=3cm, showframe]{geometry}
-% TODO remove showframe
+\usepackage{showframe} % TODO remove
+\usepackage[margin=3cm]{geometry}
 
 % \linespread{1.25}
 
@@ -24,7 +25,7 @@
 \begin{titlepage}
 \begin{center}
 
-\vspace*{.1\textheight}
+\vspace*{.15\textheight}
 
 {\Large Bachelor's Thesis}
 \vspace{2em}
@@ -54,20 +55,21 @@ Dr. Çağrı Çöltekin}\\
 \end{flushright}
 \end{minipage}\\
 
+\vfill
+
+A thesis submitted in partial fulfillment\\
+of the requirements for the degree of\\[2mm]
+{\large Bachelor of Arts}\\
+in\\[1mm]
+{\large International Studies in Computational Linguistics}
+
 \vspace*{.1\textheight}
 
-A thesis presented for the degree of\\
-Bachelor of Arts\\
-in\\
-International Studies in Computational Linguistics
-
-\vspace{2em}
-
-Seminar für Sprachwissenschaft\\
+{\large Seminar für Sprachwissenschaft\\
 Eberhard Karls Universität Tübingen
 
-\vspace*{.1\textheight}
-August 2018
+\vspace{1em}
+August 2018}
 \end{center}
   
 \end{titlepage}
@@ -221,7 +223,7 @@ note on inflected forms
 \newpage
 \section{Methods}
 
-\subsection{Alignments}
+\subsection{Multiple Sequence Alignment}
 \label{s:alignments}
 
 In order to extract sound correspondences, we need to align the sound sequences corresponding to each concept first.
@@ -272,11 +274,11 @@ Luxembourg     & k\textsuperscript{h}   & a\textlengthmark   & l   & -    & -  &
 Westerkwartier & k\textsuperscript{h}   & o    & \textltilde   & t\textsuperscript{h}   & -  & -  \\ \hline
 \end{tabular}
 \end{center}
-\label{tab:msa}
 \caption{An excerpt from the aligned sequence table for the concept ``cold''.}
+\label{tab:msa}
 \end{table}
 
-\subsection{Sound Correspondences}
+\subsection{Sound Correspondence Extraction}
 
 After performing sound segment-wise alignment,
 we extract sound correspondences between each
@@ -288,9 +290,6 @@ as well as correspondences that include contextual information:
 \item
 \textbf{No context}:
 These are simple segment-to-segment correspondences.
-For the example given in Table~\ref{tab:msa},
-the correspondences for the Ortisei doculect are:
-k $>$ k\textsuperscript{h}, a $>$ \textopeno, l $>$ l, d $>$ \texttoptiebar{ts}, a $>$ $\emptyset$, and z $>$ $\emptyset$.
 
 \item
 \textbf{Simple context}:
@@ -307,53 +306,77 @@ This is similar to the previous category,
 but we give more fine-grained information about consonants and vowels.
 We use the sound classes introduced by \citet{list2012sca},
 which discern between fifteen consonant groups and sixteen vowel groups.
+We do not include information on word boundaries or gaps here,
+as it would be identical to the word boundary- or gap-related information
+included in the correspondences with simple contextual information.
 
 \end{itemize}
 
 % TODO check montemagni. also ref them here
 
-We ignore gap-gap alignments, as they are 
-ignore swaps (swapped segments are aligned with gaps) -- happen only in 3 of the 111 terms
+Table~\ref{tab:corres} shows the sound correspondences
+that can be inferred for the aligned segments
+from Proto-Germanic and Ortisei German for the alignment
+shown in Table~\ref{tab:msa}.
 
-dealing with gaps, don't include word boundaries multiple times
+We ignore gap-gap alignments,
+as they do not contain information on correspondences
+between Proto-Germanic and the modern doculect in question,
+only about an inserted sound segment in one or more other doculects.
+Furthermore, we treat insertions and deletions
+that LingPy flags as swaps (metathesis) as normal insertions/deletions,
+as such cases only happen for 3 of the 111 concepts.
 
-For each doculect, we ignore segment correspondences that occur less than three times across all concepts to reduce the effect misalignments can have.
+For each doculect, we ignore sound correspondences
+that occurless than three times across all concepts
+to reduce the effect misalignments can have. 
+
+After extracting the sound correspondences for
+all modern doculects, we have a doculect-by-correspondence
+matrix storing the absolute frequencies of the sound correspondences.
 
 \begin{table}[h]
 \begin{center}
 \begin{tabular}{l|llllll}
 \hline
        & \multicolumn{6}{l}{Sound segments and inferred correspondences} \\ \hline
-Pr.-Germ.  & k    & a    & l   & d    & a  & z  \\
+Proto-Germ.  & k    & a    & l   & d    & a  & z  \\
 Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{ts}  & -  & - \rule[-2mm]{0pt}{0pt}\\\hline
 No context & k $>$ k\textsuperscript{h} & a $>$ \textopeno & l $>$ l & d $>$ \texttoptiebar{ts} & a $>$ $\emptyset$ & z $>$ $\emptyset$ \rule{0pt}{4mm}\\[3mm]
 Simple & k $>$ k\textsuperscript{h} / \#\_ & a $>$ \textopeno / C\_ & l $>$ l / V\_ & d $>$ \texttoptiebar{ts} / C\_ & a $>$ $\emptyset$ / C\_ & \\
 context & k $>$ k\textsuperscript{h} / \_V & a $>$ \textopeno{} / \_C & l $>$ l / \_C & & & z $>$ $\emptyset$ / \_\# \\[3mm]
-Sound class- & k $>$ k\textsuperscript{h} / \#\_ & a $>$ \textopeno / K\_ &  l $>$ l / A\_ & d $>$ \texttoptiebar{ts} / L\_ & & \\
-based context & & a $>$ \textopeno{} / \_L & & & & z $>$ $\emptyset$ / \_\# \\
+Sound class- &  & a $>$ \textopeno / K\_ &  l $>$ l / A\_ & d $>$ \texttoptiebar{ts} / L\_ & & \\
+based context & & a $>$ \textopeno{} / \_L & & & & \\
 \hline
 \end{tabular}
 \end{center}
+\caption{Proto-Germanic--Ortisei German sound correspondences extracted from the aligned entries for the concept ``cold''.}
 \label{tab:corres}
-\caption{An excerpt from the aligned sequence table for the concept ``cold''.}
 \end{table}
 
-\newpage
+
 \subsection{Clustering}
 
 We implemented two approaches to custering the data.
-Both clustering approaches consist of three steps: ..normalizing.. the data, dimensionality reduction, and hierarchical clustering.
-Each approach is carried out once with only the context-less sound correspondences, and once with all types of correspondences.
+Both clustering approaches follow a similar structure:
+we first normalize the doculect-by-correspondence tally matrix
+to adjust feature frequencies by how informative they are,
+% dimensionality reduction,
+then we perform hierarchical clustering.
+Each approach is carried out once with only
+the context-less sound correspondences,
+and once with all context types.
 
-\subsubsection{TF-IDF/SVD and k-means}
+\subsubsection{TF-IDF and UPGMA}
 
-% TF-IDF conceptually similar to first step of BSGC: adjusting feature frequencies by how informative they are
-
-We first TF-IDF transform the doculect-by-correspondence tally matrix.
+We first transform the frequencies
+in the doculect-by-correspondence tally matrix
+by applying TF-IDF weighting.
 
 % TODO sources for tfidf?
 
-TF (term frequency) is calculated as follows
+Term frequency (TF) measures the relative frequency
+of each sound correspondence within a doculect:
 
 \begin{equation*}
 \operatorname{tf}(doculect_i, corres_j) =
@@ -361,136 +384,227 @@ TF (term frequency) is calculated as follows
 {\text{number of sound correspondences in } doculect_i}
 \end{equation*}
 
-and IDF (inverse document frequency) is calculated as
+while inverse document frequency (IDF)
+considers how many doculects cover a given
+sound correspondence:
 
 \begin{equation*}
 \operatorname{idf}(corres_j) =
+log(
 \frac{\text{number of doculects}}
 {\text{number of doculects with } corres_j}
+).
 \end{equation*}
-.
 
-To combine term frequency and inverse document frequency and transform the tally matrix, 
-we use the implementation by \cite{pedregosa2011scikit-learn}, 
-which is defined as
+To combine term frequency and inverse document frequency
+and transform the tally matrix, 
+we use the implementation in the Python library scikit-learn
+\citep{pedregosa2011scikit-learn},
+where it is calculated as
 
 \begin{equation*}
 \operatorname{tf-idf}(doculect_i, corres_j) =
 \text{tf}(doculect_i, corres_j)
 \times
 (
-log
-(\text{idf}(corres_j))
-+ 1)
+\text{idf}(corres_j)
++ 1).
 \end{equation*}
 
-We then apply truncated singular vector decomposition (preserve a large enough number of components to explain at least 85\% of the variance)
-remove noise
+% We then apply truncated singular vector decomposition (preserve a large enough number of components to explain at least 85\% of the variance)
+% remove noise
+
+We create a doculect-by-doculect distance matrix
+with distances bounded between $0$ (identical) and $1$ (maximally different)
+by calculating the cosine distances between each
+binary combination of row vectors from the doculect-by-correspondence matrix:
+
+\begin{equation*}
+\operatorname{cosine\_distance}(doculect_i,doculect_j) =
+1 -
+\frac{doculect_i \cdot doculect_j}{\lVert doculect_i \rVert \lVert doculect_j \rVert}
+.
+\end{equation*}
+
+We then convert this distance matrix into a dendrogram,
+using the UPGMA method introduced by \citet{sokal1958statistical},
+as UPGMA was found to be preferable to other
+distance matrix-based hierarchical clustering methods
+for analyzing dialect distances by \citet{heeringa2004measuring}.
 
 
+\subsubsection{Bipartite Spectral Graph Co-clustering}
 
-\subsubsection{Bipartite spectral graph co-clustering}
+For the other clustering method, we use the approach
+introduced by \citet{dhillon2001co-clustering}.
+We follow \citeauthor*{wieling2009bipartite} who introduced
+this method to dialectometry for flat clustering \citeyearpar{wieling2009bipartite} and hierarchical clustering \citeyearpar{wieling2010hierarchical}.
 
-The method, as taken from \citet{dhillon2001co-clustering}:
+For this approach, we use a binary version of the
+doculect-by-correspondence tally matrix that only
+indicates whether a doculect exhibits
+a sound correspondence ($1$) or not ($0$).
+
+This method works as follows:
 
 \begin{enumerate}
 \item 
-Given a (binary) co-occurrence matrix $A^{m \times n}$ ($m$ = number of doculects, $n$ = number of sound correspondences), normalize this matrix.
-First, create two diagonal matrices $D_1^{m \times m}$ and $D_2^{n x n}$ that, respectively, contain the row sums/column sums of $A$.
-Compute the diagonal matrices' inverses. 
-% Since they are diagonal, this is very easy, but only possible if no entries on their diagonals are 0.
-Then, compute the square roots of the inverses
-% (also easy because of the diagonal structure)
+% Given a (binary) co-occurrence matrix $A^{m \times n}$ ($m$ = number of doculects, $n$ = number of sound correspondences), normalize this matrix.
+We begin with normalizing the binary co-occurrence matrix
+$A^{m \times n}$ ($m$ = number of doculects, $n$ = number of sound correspondences).
+First, we create two diagonal matrices
+$D_1^{m \times m}$ and $D_2^{n x n}$ that, respectively,
+contain the row sums or column sums of $A$.
+We use these diagonal matrices to reduce
+the importance of doculects (or correspondences)
+that co-occur with a large number
+of sound correspondences (or doculects).
+Thus we create the normalized matrix $A_n$
+by dividing each entry in $A$ by
+the square root of the sum of its row's entries
+and by the square root of the sum of its column's entries:
+\begin{equation*}
+A_n = D_1^{-\frac{1}{2}} \times A \times D_2^{-\frac{1}{2}}.
+\end{equation*}
+
+\item
+We perform singular value decomposition on $A_n$
+to obtain the left and right singular vectors $u_i$ and $v_i$.
+We ignore the singular vectors belonging
+to the largest singular value as they do not contain
+information relevant for partitioning the data \citep{kluger2003spectral},
+and work with the second singular vectors ($u_2$, $v_2$) instead.
+We calculate the vector $Z^{(m + n) \times 1}$ such that
+% \begin{equation*}
+% Z = 
+% \begin{cases}
+% D_1^{-\frac{1}{2}} \times u_2, & \text{for the first } m \text{ entries}\\
+% D_2^{-\frac{1}{2}} \times v_2, & \text{for the last } n \text{ entries}
+% \end{cases}
+% \end{equation*}
+\begin{align*}
+Z_{[0, m]} = D_1^{-\frac{1}{2}} \times u_2\\
+Z_{[m, m+n]} = D_2^{-\frac{1}{2}} \times v_2
 .
-Finally, create the normalized matrix $A_n = D_1^{-\frac{1}{2}} \times A \times D_2^{-\frac{1}{2}}$.
-Effectively: divide each entry by the square root of the sum of its row's entries and by the square root of the sum of its column's entries.
-This reduces the importance of doculects/correspondences that co-occur with a large number of other entries.
+\end{align*}
+% TODO make this understandable
+
+% We calculate $D_1^{-\frac{1}{2}} \times u_2$
+% and $D_2^{-\frac{1}{2}} \times v_2$,
+% and concatenate them to the vector $Z$. 
 
 \item
-Perform SVD on $A_n$ to get the left and right singular vectors $u_i$ and $v_i$.
-We ignore the singular vectors belonging to the first/largest singular value, and take the second singular vectors ($u_2$, $v_2$).
-(If clustering with $k > 2$, also skip the first singular vectors and take the $log(k)/log2$ following vectors.)
-\citet{kluger2003spectral}: The first singular vectors only "make a trivial constant contribution to the matrix".
-However, trying this out for the toy example in `wieling2011bipartite`, it is very much the case that when using the first singular vectors, the resulting vector (after step 3) contains the same value for all entries, being maximally unhelpful for k-means clustering (step 4).
+We perform k-means clustering on $Z$ with $k = 2$.
 
 \item
-Calculate $D_1^{-\frac{1}{2}} \times u_2$ and $D_2^{-\frac{1}{2}} \times v_2$, and concatenate them to get the vector/matrix $Z$. 
-
-\item
-Perform k-means clustering on Z.
-
-% \item
-% If performing hierarchical clustering, repeat steps 1-4 on all clusters individually.
+For each cluster that contains at least two doculects,
+we create the binary co-occurrence matrix $A$ describing
+the doculects and sound correspondences in this cluster,
+and repeat steps 1--3.
 \end{enumerate}
 
+% TODO sources for svd, kmeans nec?
+
+If a cluster produced in step 3 contains
+sound correspondences that are not exhibited
+by any of the doculects in this cluster,
+we assign this correspondence to the other cluster.
+This only happens rarely, and in these cases the corresponding
+value in $Z$ is near the k-means decision boundary.
+We need to change the cluster identity in such cases,
+as it would otherwise not be possible to normalize
+the cluster's co-occurrence matrix when partitioning
+the cluster elements again.
+% TODO do parts of this belong in the results section??
 
 \subsection{Ranking sound correspondences by importance}
 
-Representativeness: How many doculects in this cluster exhibit this sound correspondence? \citep{wieling2011bipartite}
-Distinctiveness: How often does a sound correspondence occur in this cluster compared to other clusters? \citep{wieling2011bipartite}
-Frequency: Is it a rare or frequent correspondence? could maybe be combined with regularity, especially since the chance for mis-alignments is a lot higher for rare correspondences
+When all doculects have been assigned to this hierarchical cluster structure,
+we rank the sound correspondences associated with each cluster.
+In the case of the TF-IDF method, these are
+the sound correspondences exhibited by each cluster's doculects;
+for the graph clustering method,
+these are the sound correspondences that are in the same cluster.
 
-Ranking the sound correspondences for each cluster
-(BSGC: correspondences that are in the cluster,
-TF-IDF: correspondences that are exhibited by the cluster's doculects)
+We use the representativeness and distinctiveness metrics
+introduced by \citet{wieling2011bipartite},
+as well as a modified version of their importance measure.
 
-introduced in \citet{wieling2011bipartite}
-
-For each cluster, rank the associated sound correspondences by the following metrics:
-
-\textbf{Representativeness}.
-How many doculects in this cluster exhibit this sound correspondence?
+Representativeness measures how many doculects in a given cluster
+exhibit a given sound correspondence:
 
 \begin{equation*}
-\operatorname{representativeness}(cluster_i, corres_j) = 
+\operatorname{rep}(cluster_i, corres_j) = 
 \frac{\text{number of doculects in } cluster_i \text{ with }  corres_j}
 {\text{number of doculects in }  cluster_i}
+.
 \end{equation*}
 
-\textbf{Distinctiveness}.
-How often does a sound correspondence occur in this cluster compared to other clusters? 
-This requires two additional measures: 
+Representativeness is bounded between
+$0$ (no doculects in the cluster show the given sound correspondence)
+and $1$ (all doculects in the cluster do).
 
-\begin{equation*}
-\operatorname{relative\_occurrence}(cluster_i, corres_j) = 
+Distinctiveness indicates how often a given sound correspondence
+occurs in a given cluster compared to other clusters. 
+This requires two additional measures:
+relative occurrence,hich indicates the proportion
+of doculects exhibiting the sound correspondence
+that is in the given clusters,
+and relative size, which gives the number of doculects 
+in the cluster relative to the number of all examined modern doculects:
+
+\begin{align*}
+\operatorname{relative\_occurrence}(cluster_i, corres_j) &= 
 \frac{\text{number of doculects in } cluster_i \text{ with }  corres_j}
-{\text{total number of doculects with } corres_j}
-\end{equation*}
-
-and
-
-\begin{equation*}
-\operatorname{relative\_size}(cluster_i) = 
+{\text{total number of doculects with } corres_j}\\
+\operatorname{relative\_size}(cluster_i) &= 
 \frac{\text{number of doculects in } cluster_i}
 {\text{total number of doculects}}
-\end{equation*}
+.
+\end{align*}
 
-Then, 
+These two concepts are combined to determine the distinctiveness score:
 
 \begin{equation*}
-\operatorname{distinctiveness}(cluster_i, corres_j) = 
+\operatorname{dist}(cluster_i, corres_j) = 
 \frac{\operatorname{relative\_occurrence}(cluster_i, corres_j) - \operatorname{relative\_size}(cluster_i)}
 {1 - \operatorname{relative\_size}(cluster_i)}
+.
 \end{equation*}
 
-\textbf{Importance}
-\citet{wieling2011bipartite}: 
-The average of representativeness and distinctiveness.
+Distinctiveness has an upper bound of
+$1$ (the sound correspondence only occurs in the given cluster),
+but no lower bound.
+A value of $0$ indicates that the sound correspondence
+has the same relative frequency within the cluster
+as among the total set of doculects.
+Negative values indicate that the sound correspondence
+has a lower relative frequency within the cluster
+than among all doculects.
 
-We use the harmonic mean instead (penalize cases were one value is very high but the other is very low)
+Importance is the average of representativeness and distinctiveness.
+\citet{wieling2011bipartite} use the arithmetic mean
+and mention the possibility of exploring
+other ways of combining the two metrics.
+We use the harmonic mean in order to penalize cases
+where the representativeness value is very high
+but the distinctiveness value is very low (or vice versa).
+We also assign an importance score of $0$ to
+cases with negative distinctiveness values:
 
 \begin{equation*}
-\operatorname{importance}(cluster_i, corres_j) = 
+\operatorname{imp}(cluster_i, corres_j) = 
+\begin{dcases}
 \frac{
 2 * \operatorname{rep}(cluster_i, corres_j) * \operatorname{dist}(cluster_i, corres_j)}
-{\operatorname{rep}(cluster_i, corres_j) + \operatorname{dist}(cluster_i, corres_j)}
+{\operatorname{rep}(cluster_i, corres_j) + \operatorname{dist}(cluster_i, corres_j)}, & \text{if dist}(cluster_i, corres_j) \geq 0\\
+0, & \text{otherwise}.
+\end{dcases}
 \end{equation*}
 
-We additionally re-rank correspondences with the same importance score by the number of occurrences in a cluster; more frequent correspondences rank higher.
-
-% TODO maybe: try out harmonic mean instead. I don't like how correspondences with low representativeness/distinctiveness but 100% of the other metric still get pretty high scores. Using the harmonic mean would give them a score closer to the lower score, I think.
-
-According to \citet{wieling2010hierarchical}, the values of the second right singular vector are a good substitute for the above metrics.
+We additionally re-rank correspondences
+with the same importance score
+such that more frequent correspondences rank higher.
 
 \newpage
 \section{Results}
@@ -530,6 +644,8 @@ $\geq$80\% imp for non-singleton clusters:
 
 
 svd how many components. svd vs no svd
+
+high representativeness score for all doculects?
 
 
 \newpage
@@ -576,6 +692,7 @@ Regularity: How often does this correspondence occur compared to the original so
 
 investigate further the influence of data selection/preprocessing/properties on bsgc performance
 
+\newpage
 \bibliographystyle{chicago}
 \bibliography{lib}
 \end{document}
