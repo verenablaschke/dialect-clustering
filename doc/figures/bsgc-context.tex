@@ -5,48 +5,58 @@
 \begin{document}
 \begin{forest}
 for tree={
-  parent anchor=south, 
-  child anchor=north,
-  align=center
+  grow=west,
+  reversed, 
+  anchor=base east,
+  parent anchor=west, 
+  child anchor=east,
 }
 [
     [$\emptyset$ $>$ \textglotstop / \# \_
         [t $>$ s
             [
-                [Limburg]
-                [
-                    [
-                        [
-                            [Cologne]
-                            [
-                                [
-                                    [Feer]
-                                    [[Hard][Tuebingen]]
-                                ]
-                                [Luxembourg]
-                            ]
-                        ]
-                        [Ortisei]
-                    ]
-                    [Herrlisheim]
+                [Walser]
+                [t $>$ s / vow\_ % 77%
+                    [Biel][Graubuenden]
                 ]
             ]
-            [[Walser][Graubuenden]]
+            [
+                [Limburg]
+                [k $>$ k\textsuperscript{h} % 70%
+                    [Herrlisheim]
+                    
+                    [
+                        [Ortisei]
+                        [
+                            [Hard]
+                            [
+                                [Cologne]
+                                [
+                                    [[Luxembourg][Tuebingen]]
+                                    [Feer]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
         ]
-        [[Westerkwartier][Heligoland]]
+        [[Heligoland][Westerkwartier]]
     ]
     [s $>$ s / \_ T
-        [Grou]
         [
+            [k $>$ \textsubplus{k}
+                [Ostend]
+                [k $>$ \textsubplus{k} % 77%
+                    [Antwerp][Dutch Std BE]
+                ]
+            ]
             [
                 [Dutch Std NL]
                 [[Achterhoek][Veenkolonien]]
             ]
-            [
-                [[Antwerp][Dutch Std BE]]
-                [Ostend]
-            ]
         ]
+        [Grou]
     ]
 ]
 \end{forest}

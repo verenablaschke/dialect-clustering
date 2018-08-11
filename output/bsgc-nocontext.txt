@@ -1,297 +1,403 @@
 
-Herrlisheim
--------
-0 correspondences above the threshold (80% importance)
-
-and 8 more
-=====================================
-
 Dutch_Std_BE
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-and 11 more
+and 23 more
 =====================================
 
 Dutch_Std_NL
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-and 1 more
+and 7 more
 =====================================
 
 Walser
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
 and 6 more
 =====================================
 
 Antwerp
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-and 19 more
+and 10 more
 =====================================
 
 Tuebingen
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-and 6 more
+and 10 more
 =====================================
 
 Biel
 -------
-1 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-k > χ	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Biel: ['χʊə̟', 'mɪʊχ', 'χɑʊp', 'χnœɪ', 'χɑʊt', 'χɔːɾn', 'e̞i̞χə']
-
-and 14 more
-=====================================
-
-Veenkolonien
--------
-1 correspondences above the threshold (80% importance)
-
-oː > ɑʊ	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Veenkolonien: ['kɑʊ', 'blɑʊt', 'vɑʊɾə', 'χɑʊt', 's̺tɑʊlə']
-
-and 13 more
+and 8 more
 =====================================
 
 Ortisei
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
+
+and 11 more
+=====================================
+
+Veenkolonien
+-------
+0 correspondences above the threshold (70% importance)
 
 and 8 more
 =====================================
 
 Limburg
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-and 5 more
+and 4 more
 =====================================
 
 Achterhoek
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-and 9 more
+and 6 more
 =====================================
 
-Luxembourg
+Herrlisheim
 -------
-0 correspondences above the threshold (80% importance)
-
-and 8 more
-=====================================
-
-Cologne
--------
-0 correspondences above the threshold (80% importance)
-
-and 10 more
-=====================================
-
-Ostend
--------
-0 correspondences above the threshold (80% importance)
-
-and 10 more
-=====================================
-
-Hard
--------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
 and 1 more
 =====================================
 
+Graubuenden
+-------
+0 correspondences above the threshold (70% importance)
+
+and 13 more
+=====================================
+
+Cologne
+-------
+0 correspondences above the threshold (70% importance)
+
+and 1 more
+=====================================
+
+Hard
+-------
+0 correspondences above the threshold (70% importance)
+
+and 11 more
+=====================================
+
 Feer
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
 and 1 more
 =====================================
 
 Westerkwartier
 -------
-0 correspondences above the threshold (80% importance)
-
-and 12 more
-=====================================
-
-Graubuenden
--------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
 and 8 more
 =====================================
 
 Grou
 -------
-0 correspondences above the threshold (80% importance)
+1 correspondences above the threshold (70% importance)
 
-and 9 more
+∅ > j	100.00	(rep: 100.00, dist: 100.00)	(6 times)
+Grou: ['jɪs̺kə', 's̺jʌχ', 'rjœχt', 'fjäˑʊɾ̥', 'fjʌ̝χt͡siˑ', 'njʌʁʌn']
+
+and 7 more
+=====================================
+
+Luxembourg
+-------
+1 correspondences above the threshold (70% importance)
+
+e > ɨ̞	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Luxembourg: ['zɨ̞t͡s', 'mɨ̞lɪ̠ʃ', 'fɨ̞nəf', 'mɨ̞t']
+
+and 7 more
 =====================================
 
 Heligoland
 -------
-0 correspondences above the threshold (80% importance)
-
-and 4 more
-=====================================
-
-Hard, Herrlisheim
--------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
 and 9 more
 =====================================
 
-Antwerp, Dutch_Std_BE
+Ostend
 -------
-0 correspondences above the threshold (80% importance)
-
-and 30 more
-=====================================
-
-Biel, Graubuenden
--------
-0 correspondences above the threshold (80% importance)
-
-and 23 more
-=====================================
-
-Ortisei, Tuebingen
--------
-0 correspondences above the threshold (80% importance)
-
-and 14 more
-=====================================
-
-Heligoland, Luxembourg
--------
-0 correspondences above the threshold (80% importance)
-
-and 12 more
-=====================================
-
-Ostend, Veenkolonien
--------
-0 correspondences above the threshold (80% importance)
-
-and 24 more
-=====================================
-
-Achterhoek, Limburg
--------
-0 correspondences above the threshold (80% importance)
-
-and 14 more
-=====================================
-
-Cologne, Heligoland, Luxembourg
--------
-1 correspondences above the threshold (80% importance)
-
-r > ʀ	100.00	(rep: 100.00, dist: 100.00)	(13 times)
-Cologne: ['ʃtʊʀm', 'ʀɛ̝ˑn', 'dʀe̝ˑɪ', 'ʀɪŋ', 'ʀɛˑɪʃ']
-Heligoland: ['ʀoɒ', 'ʀäen', 'vä̠ʀm', 'ʀɛç']
-Luxembourg: ['ʀoːt', 'dʀaˑɪ', 'ʀiˑət͡s', 'dʀɪŋˑk']
-
-and 21 more
-=====================================
-
-Feer, Hard, Herrlisheim
--------
-0 correspondences above the threshold (80% importance)
-
-and 12 more
-=====================================
-
-Biel, Graubuenden, Walser
--------
-0 correspondences above the threshold (80% importance)
-
-and 29 more
-=====================================
-
-Dutch_Std_NL, Feer, Hard, Herrlisheim
--------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
 and 13 more
 =====================================
 
-Antwerp, Dutch_Std_BE, Ostend, Veenkolonien
+Biel, Walser
 -------
-1 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-b > f	85.71	(rep: 100.00, dist: 75.00)	(13 times)
-Antwerp: ['kaɫəf', 'lo̞əf', 'hɔˑft', 'o̞ːfəɾ̥']
-Dutch_Std_BE: ['kɑ̈ɫf', 'lɔːf', 'ho̞ːft']
-Ostend: ['kɔːf', 'lɔ̝ːf', 'o̞ːft']
-Veenkolonien: ['kʰa̠ˑɤf', 'lɒʊf', 'høʏft']
-
-and 53 more
+and 14 more
 =====================================
 
-Biel, Graubuenden, Ortisei, Tuebingen, Walser
+Antwerp, Dutch_Std_BE
 -------
-0 correspondences above the threshold (80% importance)
+1 correspondences above the threshold (70% importance)
 
-and 43 more
+a > aː	77.27	(rep: 100.00, dist: 62.96)	(6 times)
+Antwerp: ['aːs', 'β̞aːɾəm', 'sjaːɾəp']
+Dutch_Std_BE: ['çaːr̥t', 'naːxəɫ', 'v̥aːd̪ər̥']
+
+and 32 more
 =====================================
 
-Antwerp, Dutch_Std_BE, Ostend, Veenkolonien, Westerkwartier
+Dutch_Std_NL, Veenkolonien
 -------
-1 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-b > f	100.00	(rep: 100.00, dist: 100.00)	(17 times)
+and 15 more
+=====================================
+
+Ortisei, Tuebingen
+-------
+0 correspondences above the threshold (70% importance)
+
+and 21 more
+=====================================
+
+Herrlisheim, Luxembourg
+-------
+1 correspondences above the threshold (70% importance)
+
+k > ʃ	77.27	(rep: 100.00, dist: 62.96)	(6 times)
+Herrlisheim: ['mɪlɪʃ', 'ʔɪʃ', 'ʔäiʃ']
+Luxembourg: ['mɨ̞lɪ̠ʃ', 'ʔœ̈ʃ', 'ʔeːʃ']
+
+and 8 more
+=====================================
+
+Feer, Herrlisheim, Luxembourg
+-------
+0 correspondences above the threshold (70% importance)
+
+and 15 more
+=====================================
+
+Antwerp, Dutch_Std_BE, Grou
+-------
+0 correspondences above the threshold (70% importance)
+
+and 41 more
+=====================================
+
+Cologne, Feer, Herrlisheim, Luxembourg
+-------
+1 correspondences above the threshold (70% importance)
+
+k > ʃ	85.71	(rep: 75.00, dist: 100.00)	(9 times)
+Cologne: ['mɪləʃ', 'ʔiʃ', 'ʔɛ̝ˑɪʃ']
+Herrlisheim: ['mɪlɪʃ', 'ʔɪʃ', 'ʔäiʃ']
+Luxembourg: ['mɨ̞lɪ̠ʃ', 'ʔœ̈ʃ', 'ʔeːʃ']
+
+and 19 more
+=====================================
+
+Antwerp, Dutch_Std_BE, Dutch_Std_NL, Grou, Veenkolonien
+-------
+2 correspondences above the threshold (70% importance)
+
+ll > ɫ	76.52	(rep: 80.00, dist: 73.33)	(12 times)
+Antwerp: ['äɫ', 'wʌɫ', 'vɔɫ']
+Dutch_Std_BE: ['ɑ̈ɫ', 'βʌɫ', 'β̥ʌɫ']
+Dutch_Std_NL: ['ɑ̈ɫ', 'vʌ̝ɫ', 'v̥ʌɫ']
+Grou: ['ɒɫ', 'βʌ̝ɫə', 'fʌ̝ɫ']
+Veenkolonien: ['βʌɫ']
+
+a > aː	75.00	(rep: 60.00, dist: 100.00)	(9 times)
+Antwerp: ['aːs', 'β̞aːɾəm', 'sjaːɾəp']
+Dutch_Std_BE: ['çaːr̥t', 'naːxəɫ', 'v̥aːd̪ər̥']
+Dutch_Std_NL: ['naːm', 'naːkt', 'faːɾə']
+Veenkolonien: ['βaːm', 'aːχtə']
+
+and 54 more
+=====================================
+
+Cologne, Feer, Hard, Herrlisheim, Luxembourg
+-------
+1 correspondences above the threshold (70% importance)
+
+k > ʃ	75.00	(rep: 60.00, dist: 100.00)	(9 times)
+Cologne: ['mɪləʃ', 'ʔiʃ', 'ʔɛ̝ˑɪʃ']
+Herrlisheim: ['mɪlɪʃ', 'ʔɪʃ', 'ʔäiʃ']
+Luxembourg: ['mɨ̞lɪ̠ʃ', 'ʔœ̈ʃ', 'ʔeːʃ']
+
+and 42 more
+=====================================
+
+Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg
+-------
+0 correspondences above the threshold (70% importance)
+
+and 47 more
+=====================================
+
+Antwerp, Dutch_Std_BE, Dutch_Std_NL, Grou, Ostend, Veenkolonien
+-------
+0 correspondences above the threshold (70% importance)
+
+and 69 more
+=====================================
+
+Antwerp, Dutch_Std_BE, Dutch_Std_NL, Grou, Ostend, Veenkolonien, Westerkwartier
+-------
+3 correspondences above the threshold (70% importance)
+
+b > f	83.33	(rep: 71.43, dist: 100.00)	(17 times)
 Antwerp: ['kaɫəf', 'lo̞əf', 'hɔˑft', 'o̞ːfəɾ̥']
 Dutch_Std_BE: ['kɑ̈ɫf', 'lɔːf', 'ho̞ːft']
+Dutch_Std_NL: ['löʊf', 'hɒʊft']
+Grou: ['ɫɪiəf']
 Ostend: ['kɔːf', 'lɔ̝ːf', 'o̞ːft']
 Veenkolonien: ['kʰa̠ˑɤf', 'lɒʊf', 'høʏft']
 Westerkwartier: ['lɛifɹ̥̝̩', 'kʰɑ̝ɫf', 'lɑ̝of', 'hœftʰ']
 
-and 65 more
+ll > ɫ	83.33	(rep: 71.43, dist: 100.00)	(15 times)
+Antwerp: ['äɫ', 'wʌɫ', 'vɔɫ']
+Dutch_Std_BE: ['ɑ̈ɫ', 'βʌɫ', 'β̥ʌɫ']
+Dutch_Std_NL: ['ɑ̈ɫ', 'vʌ̝ɫ', 'v̥ʌɫ']
+Grou: ['ɒɫ', 'βʌ̝ɫə', 'fʌ̝ɫ']
+Veenkolonien: ['βʌɫ']
+Westerkwartier: ['ʔɑɫ', 'voˑɫ', 'foɫ']
+
+l > ɫ	72.86	(rep: 71.43, dist: 74.36)	(27 times)
+Antwerp: ['kaɫəf']
+Dutch_Std_BE: ['na̠ːɫt', 'kɑ̈ɫf', 'naːxəɫ']
+Dutch_Std_NL: ['naːɫt', 'ɫɑ̈ŋ', 'ɫɑ̈m', 'naˑχʌɫ', 'stu̞ːɫ']
+Grou: ['hɪ̞ɫəχ', 'nœ̈ɫə', 'ɫɛ̝ˑɪvr̩', 'mʌ̝ɫqə', 'kɪiəɫ', 'ɫäŋ', 'ɫɪiəf', 'ɫäːm', 'bɫoˑət', 'nɒˑɪɫ', 's̺tuˑəɫ']
+Veenkolonien: ['naːɫə', 'kʰɔːɫt', 'noˑʁəɫ']
+Westerkwartier: ['nɑ̟ɫtʰ', 'kʰɑ̝ɫf', 'zʏ̈ɫt͡s', 'kʰoɫtʰ', 'ʃd̥äɔɫ']
+
+and 74 more
 =====================================
 
-Achterhoek, Dutch_Std_NL, Feer, Hard, Herrlisheim, Limburg
+Biel, Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg, Walser
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-and 61 more
+and 75 more
 =====================================
 
-Achterhoek, Cologne, Dutch_Std_NL, Feer, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg
+Achterhoek, Biel, Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg, Walser
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
-and 83 more
+and 81 more
 =====================================
 
-Achterhoek, Biel, Cologne, Dutch_Std_NL, Feer, Graubuenden, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser
+Achterhoek, Biel, Cologne, Feer, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser
 -------
-2 correspondences above the threshold (80% importance)
+2 correspondences above the threshold (70% importance)
 
-r > ʁ	83.33	(rep: 71.43, dist: 100.00)	(56 times)
-Achterhoek: ['ʁo̞ːt', 'stʌʁəm', 'dʁeː', 'ʁɪŋ', 'dʁɪŋk', 'bʁʏˑʁ̞̩']
-Cologne: ['ʁoˑtʰ', 'βɛ̝ʁəm', 'jɒʁœ̃ˑ', 'dʁɪŋˑk', 'bʁoːdɒ']
-Dutch_Std_NL: ['ʁoːt', 'ʁe̞ɪχə', 'dʁiˑ', 'ʁɪŋ', 'ʁɛχt', 'dʁɪŋk']
-Hard: ['ʁeˑɐɡə', 'dʁyː', 'ʁɪŋ', 'dʁɪnk̟']
-Heligoland: ['s̠d̥ʊʁɤm', 'ʁɪŋ', 'ɡʁeːn', 'dʁɪŋk', 'bʁuɐ']
-Herrlisheim: ['ʁo̞ːtʰ', 'ʁäːjə', 'ʁɪŋ', 'ʁäːχt', 'ɡʁe̝ːn', 'kʰoʁən', 'bʁe̝ːdə̠χ']
-Limburg: ['ʁe̞ˑən', 'dʁɛˑɪ', 'ʁɪŋk']
-Luxembourg: ['nʊəʁdən', 'ʁeːn', 'ʁɐŋ', 'ɡʁɪŋ', 'bʁʊ̞dɐˑ']
-Ortisei: ['βɔ̈ʁt͡s', 'dʁäˑɪ', 'ʁɪ̝ŋk̟', 'ʁɛχt͡s', 'ɡʁiˑɛ̈n', 'hɔˑʁn̩', 'bʁʊədəχ', 'ʃɑ̈ʁf']
-Tuebingen: ['ʁɑ̟ˑɵ̠t', 'ʁe̞əɡə', 'dʁɛ̈iˑ', 'ʁɪŋ', 'ɡʁeˑə', 'dʁɪŋˑk', 'bʁʊədɔ̈']
+u > ʊ	79.38	(rep: 100.00, dist: 65.81)	(62 times)
+Achterhoek: ['tʰʊŋə', 'hʊŋʁ̞̩', 'dʊndʁ̞̩', 'jʊŋə', 'hʊnt', 'mʊnt', 'ɸʊɫ', 'hʊndəʁ̞t']
+Biel: ['t͡sʊŋˑə', 'hʊŋəz̠̥', 'jʊŋ', 'hʊnt', 'hʊn̪d̪ət']
+Cologne: ['t͡sʊŋ', 'hʊŋɒ', 'hʊniʃ', 'ʃtʊʀm', 'jʊŋ', 'hʊŋˑk', 'mʊŋɡ', 'hʊndɐt']
+Feer: ['sd̥ʊrʌm', 'hʊrn', 'kʰʊrn', 'hʊnɐ̞tʰ']
+Hard: ['t͡sʊŋə', 'hʊŋəʁ̞', 'jʊŋ', 'vʊlɛ̈', 'hʊndəʁ̞t']
+Herrlisheim: ['t͡sʊŋ', 'hʊŋəχ', 'ʃtʊʁ̞m̩', 'jʊŋ', 'hʊnt', 'mʊnt', 'vʊlə', 'fʊl', 'hʊndə̠χt']
+Limburg: ['tʊŋ', 'hʊŋəχ', 'dʊndəχ', 'jʊŋk', 'hʊŋk']
+Luxembourg: ['hʊŋʌ̞̈', 'hʊnəʃ', 'jʊŋk']
+Ortisei: ['t͡sʊŋɡɛ̝̈', 'hʊŋɡəχ', 'ʃtʊʁ̞m', 'jʊŋk', 'hʊnt͡s', 'mʊnt͡s', 'hʊndəχt']
+Tuebingen: ['hʊŋɔ̈', 'jʊŋ', 'fʊl', 'hʊndʁ̞̩t']
+Walser: ['t͡sʊŋɡə', 'hʊŋɡəɾ̥', 'jʊŋɡ', 'hʊndət']
 
-ll > l	83.33	(rep: 71.43, dist: 100.00)	(30 times)
+t > s	74.00	(rep: 72.73, dist: 75.31)	(53 times)
+Biel: ['ʔɪs', 'biːs', 'uːs', 'foəs', 'β̞ɒˑs', 'β̞iːs']
+Cologne: ['bɛ̝sɒ̝̈', 'ʔɛ̝s', 'biːs', 'ʔus', 'fʊs', 'βiːs']
+Hard: ['ʔi̞əs', 'biːs', 'ʔuːs', 'fʊˑɛ̈s', 'väːs', 'viːs']
+Herrlisheim: ['bɛ̝səχ', 'sɔls', 'ʔɪs', 'biˑs', 'ʔyˑs', 'ɸe̝ːs', 'βɒs', 'vis']
+Luxembourg: ['bɛ̞sʌ̞̈', 'iˑɛ̈s', 'bæ̈iˑs', 'ʔæ̈ˑʊs', 'fœ̈ʊˑs', 'væ̈iˑs']
+Ortisei: ['bɪsəχ', 'ʔɪ̝s', 'bäɪs', 'ʔaɵ̠s', 'fʊəs', 'β̞ɔ̞s', 'βäɪs']
+Tuebingen: ['bɛ̝sɔ̈', 'ʔiˑs', 'bɐ̟iˑs', 'ʔɐ̠uˑs', 'fuˑəs', 'βäːs', 'β̞ɛ̈iˑs']
+Walser: ['bɛ̝səɹ', 'ʔa̠s', 'biːs', 'ʔuˑs', 'ɸoˑɛ̈s', 'β̞äˑs', 'β̞iːs']
+
+and 100 more
+=====================================
+
+Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser
+-------
+4 correspondences above the threshold (70% importance)
+
+u > ʊ	89.36	(rep: 100.00, dist: 80.77)	(66 times)
+Achterhoek: ['tʰʊŋə', 'hʊŋʁ̞̩', 'dʊndʁ̞̩', 'jʊŋə', 'hʊnt', 'mʊnt', 'ɸʊɫ', 'hʊndəʁ̞t']
+Biel: ['t͡sʊŋˑə', 'hʊŋəz̠̥', 'jʊŋ', 'hʊnt', 'hʊn̪d̪ət']
+Cologne: ['t͡sʊŋ', 'hʊŋɒ', 'hʊniʃ', 'ʃtʊʀm', 'jʊŋ', 'hʊŋˑk', 'mʊŋɡ', 'hʊndɐt']
+Feer: ['sd̥ʊrʌm', 'hʊrn', 'kʰʊrn', 'hʊnɐ̞tʰ']
+Graubuenden: ['t͡sʊŋɡɐ', 'hʊŋɡr̩', 'jʊŋk̟', 'wʊlɐ']
+Hard: ['t͡sʊŋə', 'hʊŋəʁ̞', 'jʊŋ', 'vʊlɛ̈', 'hʊndəʁ̞t']
+Herrlisheim: ['t͡sʊŋ', 'hʊŋəχ', 'ʃtʊʁ̞m̩', 'jʊŋ', 'hʊnt', 'mʊnt', 'vʊlə', 'fʊl', 'hʊndə̠χt']
+Limburg: ['tʊŋ', 'hʊŋəχ', 'dʊndəχ', 'jʊŋk', 'hʊŋk']
+Luxembourg: ['hʊŋʌ̞̈', 'hʊnəʃ', 'jʊŋk']
+Ortisei: ['t͡sʊŋɡɛ̝̈', 'hʊŋɡəχ', 'ʃtʊʁ̞m', 'jʊŋk', 'hʊnt͡s', 'mʊnt͡s', 'hʊndəχt']
+Tuebingen: ['hʊŋɔ̈', 'jʊŋ', 'fʊl', 'hʊndʁ̞̩t']
+Walser: ['t͡sʊŋɡə', 'hʊŋɡəɾ̥', 'jʊŋɡ', 'hʊndət']
+
+t > s	85.71	(rep: 75.00, dist: 100.00)	(59 times)
+Biel: ['ʔɪs', 'biːs', 'uːs', 'foəs', 'β̞ɒˑs', 'β̞iːs']
+Cologne: ['bɛ̝sɒ̝̈', 'ʔɛ̝s', 'biːs', 'ʔus', 'fʊs', 'βiːs']
+Graubuenden: ['ʔi̞s', 'biːs', 'uːs', 'fʊɔ̈s', 'väs', 'βiːs']
+Hard: ['ʔi̞əs', 'biːs', 'ʔuːs', 'fʊˑɛ̈s', 'väːs', 'viːs']
+Herrlisheim: ['bɛ̝səχ', 'sɔls', 'ʔɪs', 'biˑs', 'ʔyˑs', 'ɸe̝ːs', 'βɒs', 'vis']
+Luxembourg: ['bɛ̞sʌ̞̈', 'iˑɛ̈s', 'bæ̈iˑs', 'ʔæ̈ˑʊs', 'fœ̈ʊˑs', 'væ̈iˑs']
+Ortisei: ['bɪsəχ', 'ʔɪ̝s', 'bäɪs', 'ʔaɵ̠s', 'fʊəs', 'β̞ɔ̞s', 'βäɪs']
+Tuebingen: ['bɛ̝sɔ̈', 'ʔiˑs', 'bɐ̟iˑs', 'ʔɐ̠uˑs', 'fuˑəs', 'βäːs', 'β̞ɛ̈iˑs']
+Walser: ['bɛ̝səɹ', 'ʔa̠s', 'biːs', 'ʔuˑs', 'ɸoˑɛ̈s', 'β̞äˑs', 'β̞iːs']
+
+t > t͡s	75.00	(rep: 75.00, dist: 75.00)	(71 times)
+Biel: ['haˑr̥t͡s', 't͡sɑ̟ːn', 'sɪt͡s', 't͡sʊŋˑə', 't͡säˑə', 'sɑ̈ʊt͡s', 't͡sa̠ˑɪə', 't͡sβœˑɪ']
+Cologne: ['hɛ̝t͡s', 't͡sa̠nˑt', 'zɛ̝t͡s', 't͡sʊŋ', 't͡seːn', 'za̠ːlt͡s', 't͡siˑ', 't͡sväˑɪ']
+Graubuenden: ['hɛrt͡s', 't͡sɑ̈ːn', 'sɪ̝t͡s', 't͡sʊŋɡɐ', 't͡seːn', 'sɑ̟ːlt͡s', 't͡seːbɐ', 't͡sväˑɪ']
+Hard: ['hɛ̝ˑʁ̞t͡s', 't͡sã̠ː', 't͡sʊŋə', 't͡sẽˑə̃', 'sa̠ːlt͡s', 't͡seːə', 't͡sβoˑɐ']
+Herrlisheim: ['häχt͡s', 't͡säːn', 'sɪt͡s', 't͡sʊŋ', 't͡sɛ̝ː', 't͡seː', 't͡svɛ̝ˑi']
+Luxembourg: ['he̞ɐt͡s', 't͡sänt', 'zɨ̞t͡s', 't͡sɔŋ', 't͡sɪŋ', 'zält͡s', 'ʀiˑət͡s', 't͡sɛi̞f', 't͡sveː']
+Ortisei: ['hɛχt͡s', 't͡sɑːn', 'sɪt͡s', 't͡sʊŋɡɛ̝̈', 't͡seːn', 'sɔ̞lt͡s', 'ʁɛχt͡s', 't͡sɛ̝ːχ', 't͡sβɔˑə']
+Tuebingen: ['hɛʁ̞t͡s', 't͡säː', 'si̞t͡s', 't͡suŋɡ', 't͡seˑə', 'säˑlt͡s', 't͡säɪə', 't͡sβɔˑe']
+Walser: ['haˑɹt͡s', 't͡sa̠nt', 't͡sʊŋɡə', 't͡sahə', 'sa̠ːlt͡s', 't͡seːbɐ', 't͡sβæˑɪ̝']
+
+ll > l	75.00	(rep: 75.00, dist: 75.00)	(27 times)
+Achterhoek: ['βʌlə']
+Biel: ['β̞ɵlə̟']
+Cologne: ['ʔa̠l', 'vʌl', 'fʌ̈l']
+Feer: ['ʔäːl', 'ʔo̞l', 'fɔl']
+Graubuenden: ['ʔa̠l', 'wʊlɐ', 'föl']
+Hard: ['ʔa̠ˑl', 'vʊlɛ̈', 'fʊ̞l']
+Herrlisheim: ['ʔɔl', 'vʊlə', 'fʊl']
+Limburg: ['äl', 'βøl']
+Luxembourg: ['ʔäl', 'vɔ̝̈l', 'fʊ̞l']
+Ortisei: ['ʔäl', 'βʌlɛ̝̈', 'fʌl']
+Tuebingen: ['ʔäˑl', 'wʊ̞lɛ̝̈', 'fʊl']
+Walser: ['ʔa̠l', 'β̞olə', 'ɸo̟lə']
+
+and 111 more
+=====================================
+
+Achterhoek, Biel, Cologne, Feer, Graubuenden, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser
+-------
+7 correspondences above the threshold (70% importance)
+
+ll > l	86.96	(rep: 76.92, dist: 100.00)	(30 times)
 Achterhoek: ['βʌlə']
 Biel: ['β̞ɵlə̟']
 Cologne: ['ʔa̠l', 'vʌl', 'fʌ̈l']
@@ -306,18 +412,47 @@ Ortisei: ['ʔäl', 'βʌlɛ̝̈', 'fʌl']
 Tuebingen: ['ʔäˑl', 'wʊ̞lɛ̝̈', 'fʊl']
 Walser: ['ʔa̠l', 'β̞olə', 'ɸo̟lə']
 
-and 124 more
-=====================================
+u > ʊ	84.57	(rep: 92.31, dist: 78.02)	(66 times)
+Achterhoek: ['tʰʊŋə', 'hʊŋʁ̞̩', 'dʊndʁ̞̩', 'jʊŋə', 'hʊnt', 'mʊnt', 'ɸʊɫ', 'hʊndəʁ̞t']
+Biel: ['t͡sʊŋˑə', 'hʊŋəz̠̥', 'jʊŋ', 'hʊnt', 'hʊn̪d̪ət']
+Cologne: ['t͡sʊŋ', 'hʊŋɒ', 'hʊniʃ', 'ʃtʊʀm', 'jʊŋ', 'hʊŋˑk', 'mʊŋɡ', 'hʊndɐt']
+Feer: ['sd̥ʊrʌm', 'hʊrn', 'kʰʊrn', 'hʊnɐ̞tʰ']
+Graubuenden: ['t͡sʊŋɡɐ', 'hʊŋɡr̩', 'jʊŋk̟', 'wʊlɐ']
+Hard: ['t͡sʊŋə', 'hʊŋəʁ̞', 'jʊŋ', 'vʊlɛ̈', 'hʊndəʁ̞t']
+Heligoland: ['s̠d̥ʊʁɤm']
+Herrlisheim: ['t͡sʊŋ', 'hʊŋəχ', 'ʃtʊʁ̞m̩', 'jʊŋ', 'hʊnt', 'mʊnt', 'vʊlə', 'fʊl', 'hʊndə̠χt']
+Limburg: ['tʊŋ', 'hʊŋəχ', 'dʊndəχ', 'jʊŋk', 'hʊŋk']
+Luxembourg: ['hʊŋʌ̞̈', 'hʊnəʃ', 'jʊŋk']
+Ortisei: ['t͡sʊŋɡɛ̝̈', 'hʊŋɡəχ', 'ʃtʊʁ̞m', 'jʊŋk', 'hʊnt͡s', 'mʊnt͡s', 'hʊndəχt']
+Tuebingen: ['hʊŋɔ̈', 'jʊŋ', 'fʊl', 'hʊndʁ̞̩t']
+Walser: ['t͡sʊŋɡə', 'hʊŋɡəɾ̥', 'jʊŋɡ', 'hʊndət']
 
-Achterhoek, Biel, Cologne, Dutch_Std_NL, Feer, Graubuenden, Grou, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Tuebingen, Walser
--------
-3 correspondences above the threshold (80% importance)
+t > s	81.82	(rep: 69.23, dist: 100.00)	(59 times)
+Biel: ['ʔɪs', 'biːs', 'uːs', 'foəs', 'β̞ɒˑs', 'β̞iːs']
+Cologne: ['bɛ̝sɒ̝̈', 'ʔɛ̝s', 'biːs', 'ʔus', 'fʊs', 'βiːs']
+Graubuenden: ['ʔi̞s', 'biːs', 'uːs', 'fʊɔ̈s', 'väs', 'βiːs']
+Hard: ['ʔi̞əs', 'biːs', 'ʔuːs', 'fʊˑɛ̈s', 'väːs', 'viːs']
+Herrlisheim: ['bɛ̝səχ', 'sɔls', 'ʔɪs', 'biˑs', 'ʔyˑs', 'ɸe̝ːs', 'βɒs', 'vis']
+Luxembourg: ['bɛ̞sʌ̞̈', 'iˑɛ̈s', 'bæ̈iˑs', 'ʔæ̈ˑʊs', 'fœ̈ʊˑs', 'væ̈iˑs']
+Ortisei: ['bɪsəχ', 'ʔɪ̝s', 'bäɪs', 'ʔaɵ̠s', 'fʊəs', 'β̞ɔ̞s', 'βäɪs']
+Tuebingen: ['bɛ̝sɔ̈', 'ʔiˑs', 'bɐ̟iˑs', 'ʔɐ̠uˑs', 'fuˑəs', 'βäːs', 'β̞ɛ̈iˑs']
+Walser: ['bɛ̝səɹ', 'ʔa̠s', 'biːs', 'ʔuˑs', 'ɸoˑɛ̈s', 'β̞äˑs', 'β̞iːs']
 
-ɡ > ɡ	80.00	(rep: 66.67, dist: 100.00)	(61 times)
+t > t͡s	70.31	(rep: 69.23, dist: 71.43)	(71 times)
+Biel: ['haˑr̥t͡s', 't͡sɑ̟ːn', 'sɪt͡s', 't͡sʊŋˑə', 't͡säˑə', 'sɑ̈ʊt͡s', 't͡sa̠ˑɪə', 't͡sβœˑɪ']
+Cologne: ['hɛ̝t͡s', 't͡sa̠nˑt', 'zɛ̝t͡s', 't͡sʊŋ', 't͡seːn', 'za̠ːlt͡s', 't͡siˑ', 't͡sväˑɪ']
+Graubuenden: ['hɛrt͡s', 't͡sɑ̈ːn', 'sɪ̝t͡s', 't͡sʊŋɡɐ', 't͡seːn', 'sɑ̟ːlt͡s', 't͡seːbɐ', 't͡sväˑɪ']
+Hard: ['hɛ̝ˑʁ̞t͡s', 't͡sã̠ː', 't͡sʊŋə', 't͡sẽˑə̃', 'sa̠ːlt͡s', 't͡seːə', 't͡sβoˑɐ']
+Herrlisheim: ['häχt͡s', 't͡säːn', 'sɪt͡s', 't͡sʊŋ', 't͡sɛ̝ː', 't͡seː', 't͡svɛ̝ˑi']
+Luxembourg: ['he̞ɐt͡s', 't͡sänt', 'zɨ̞t͡s', 't͡sɔŋ', 't͡sɪŋ', 'zält͡s', 'ʀiˑət͡s', 't͡sɛi̞f', 't͡sveː']
+Ortisei: ['hɛχt͡s', 't͡sɑːn', 'sɪt͡s', 't͡sʊŋɡɛ̝̈', 't͡seːn', 'sɔ̞lt͡s', 'ʁɛχt͡s', 't͡sɛ̝ːχ', 't͡sβɔˑə']
+Tuebingen: ['hɛʁ̞t͡s', 't͡säː', 'si̞t͡s', 't͡suŋɡ', 't͡seˑə', 'säˑlt͡s', 't͡säɪə', 't͡sβɔˑe']
+Walser: ['haˑɹt͡s', 't͡sa̠nt', 't͡sʊŋɡə', 't͡sahə', 'sa̠ːlt͡s', 't͡seːbɐ', 't͡sβæˑɪ̝']
+
+ɡ > ɡ	70.31	(rep: 69.23, dist: 71.43)	(58 times)
 Biel: ['ɡɾʏɛ̝̈n', 'ɡɒns', 'ɡɒˑrtə', 'ɡʊət']
 Feer: ['ɡʊ̞s', 'ɡʊt']
 Graubuenden: ['t͡sʊŋɡɐ', 'hʊŋɡr̩', 'rɛ̝ːɡɐ', 'ɡɾʏˑɛ̝̈n', 'ɡäns', 'ɡɑːrtə', 'nɑ̈ːɡl̩', 'ɡoɔ̈t']
-Grou: ['ɡɾiˑən', 'ɡoˑəs', 'ɡoˑət']
 Hard: ['ha̠ɪlɪɡ', 'ʁeˑɐɡə', 'ɡɾỹˑɛ̈̃', 'ɡa̠ns', 'ɡa̠ːʁ̞tə', 'na̠ːɡl̩', 'ɡoɛ̈t']
 Heligoland: ['ɡʁeːn', 'ɡuːs', 'ɡoä', 'ɡo̞ː']
 Herrlisheim: ['ɡʁe̝ːn', 'ɡɔns', 'ɡɔːχtə', 'ɡøˑət']
@@ -326,10 +461,9 @@ Ortisei: ['t͡sʊŋɡɛ̝̈', 'hʊŋɡəχ', 'ʁ̞eːɡn̩', 'ɡʁiˑɛ̈n', 'ɡ
 Tuebingen: ['t͡suŋɡ', 'ʁe̞əɡə', 'ɡʁeˑə', 'ɡäːs', 'ɡäɔ̈t̪ə', 'näːɡl̩', 'ɡuˑət']
 Walser: ['t͡sʊŋɡə', 'hʊŋɡəɾ̥', 'lɪŋɡ', 'ra̠ɡə', 'rɪŋɡ', 'ɡryˑɛ̈', 'jʊŋɡ', 'ɡa̠ns', 'ɡa̠ːɹ̝tə', 'na̠ːɡl̩', 'ɡoˑət']
 
-r > ʁ	80.00	(rep: 66.67, dist: 100.00)	(56 times)
+r > ʁ	70.31	(rep: 69.23, dist: 71.43)	(50 times)
 Achterhoek: ['ʁo̞ːt', 'stʌʁəm', 'dʁeː', 'ʁɪŋ', 'dʁɪŋk', 'bʁʏˑʁ̞̩']
 Cologne: ['ʁoˑtʰ', 'βɛ̝ʁəm', 'jɒʁœ̃ˑ', 'dʁɪŋˑk', 'bʁoːdɒ']
-Dutch_Std_NL: ['ʁoːt', 'ʁe̞ɪχə', 'dʁiˑ', 'ʁɪŋ', 'ʁɛχt', 'dʁɪŋk']
 Hard: ['ʁeˑɐɡə', 'dʁyː', 'ʁɪŋ', 'dʁɪnk̟']
 Heligoland: ['s̠d̥ʊʁɤm', 'ʁɪŋ', 'ɡʁeːn', 'dʁɪŋk', 'bʁuɐ']
 Herrlisheim: ['ʁo̞ːtʰ', 'ʁäːjə', 'ʁɪŋ', 'ʁäːχt', 'ɡʁe̝ːn', 'kʰoʁən', 'bʁe̝ːdə̠χ']
@@ -338,27 +472,25 @@ Luxembourg: ['nʊəʁdən', 'ʁeːn', 'ʁɐŋ', 'ɡʁɪŋ', 'bʁʊ̞dɐˑ']
 Ortisei: ['βɔ̈ʁt͡s', 'dʁäˑɪ', 'ʁɪ̝ŋk̟', 'ʁɛχt͡s', 'ɡʁiˑɛ̈n', 'hɔˑʁn̩', 'bʁʊədəχ', 'ʃɑ̈ʁf']
 Tuebingen: ['ʁɑ̟ˑɵ̠t', 'ʁe̞əɡə', 'dʁɛ̈iˑ', 'ʁɪŋ', 'ɡʁeˑə', 'dʁɪŋˑk', 'bʁʊədɔ̈']
 
-ll > l	80.00	(rep: 66.67, dist: 100.00)	(30 times)
-Achterhoek: ['βʌlə']
-Biel: ['β̞ɵlə̟']
-Cologne: ['ʔa̠l', 'vʌl', 'fʌ̈l']
-Feer: ['ʔäːl', 'ʔo̞l', 'fɔl']
-Graubuenden: ['ʔa̠l', 'wʊlɐ', 'föl']
-Hard: ['ʔa̠ˑl', 'vʊlɛ̈', 'fʊ̞l']
-Heligoland: ['ʔɑːl', 'ʔɔl', 'fo̞l']
-Herrlisheim: ['ʔɔl', 'vʊlə', 'fʊl']
-Limburg: ['äl', 'βøl']
-Luxembourg: ['ʔäl', 'vɔ̝̈l', 'fʊ̞l']
-Ortisei: ['ʔäl', 'βʌlɛ̝̈', 'fʌl']
-Tuebingen: ['ʔäˑl', 'wʊ̞lɛ̝̈', 'fʊl']
-Walser: ['ʔa̠l', 'β̞olə', 'ɸo̟lə']
+k > kʰ	70.31	(rep: 69.23, dist: 71.43)	(46 times)
+Achterhoek: ['kʰoˑɐn']
+Cologne: ['kʰoˑ', 'kʰaləf', 'kʰniˑ', 'kʰa̠ˑlt', 'kʰɔ̞ːn']
+Feer: ['kʰʏ', 'ʔe̝ːskʰ', 'kʰuələ', 'kʰnœ̝bʝɛ̝n', 'ʔɪkʰ', 'kʰuˑl', 'kʰʊrn']
+Graubuenden: ['kʰʊˑä', 'kʰäˑlp', 'kʰnyː', 'kʰɔ̝ːɾɐ']
+Hard: ['kʰʊˑɛ̈', 'kʰa̠ˑlp', 'kʰnyː', 'kʰa̠ːlt', 'kʰɔ̞ɐʁ̞n']
+Heligoland: ['kʰɪ', 'kʰälə̞fkʰən', 'kʰnæbean', 'ʔɪ̞kʰ', 'kʰuˑl', 'kʰuɐ', 'ʔeakʰɛ̽n']
+Herrlisheim: ['kʰyː', 'kʰɔlp', 'kʰɔlt', 'kʰoʁən']
+Luxembourg: ['kʰœ̈ʊˑ', 'kʰäləf', 'kʰnɛiˑ', 'kʰa̠ːl', 'kʰa̠ːχ']
+Ortisei: ['kʰuˑɛ̈', 'kʰɔlp', 'kʰɔlt͡s', 'kʰɔ̞ʁ̞n̩']
+Tuebingen: ['kʰuˑə', 'kʰäˑlp', 'kʰält', 'kʰɔ̞nˑ', 'kʰɛ̝k']
+Walser: ['kʰo̞ːɾə', 'kʰɛ̝k']
 
-and 132 more
+and 117 more
 =====================================
 
 Achterhoek, Antwerp, Biel, Cologne, Dutch_Std_BE, Dutch_Std_NL, Feer, Graubuenden, Grou, Hard, Heligoland, Herrlisheim, Limburg, Luxembourg, Ortisei, Ostend, Tuebingen, Veenkolonien, Walser, Westerkwartier
 -------
-0 correspondences above the threshold (80% importance)
+0 correspondences above the threshold (70% importance)
 
 and 201 more
 =====================================
@@ -367,9 +499,9 @@ and 201 more
 39 clusters
 ----
 18 clusters excl. singletons and the cluster including all doculects
-max. importance score: 100.00%
+max. importance score: 89.36%
 201 correspondences (total)
-10 correspondences >= the threshold (80% importance)
-2 correspondences >= 90% importance
-2 correspondences >= 95% importance
-2 correspondences == 100% importance
+24 correspondences >= the threshold (70% importance)
+0 correspondences >= 90% importance
+0 correspondences >= 95% importance
+0 correspondences == 100% importance

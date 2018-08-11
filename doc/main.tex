@@ -11,7 +11,7 @@
 \usepackage{standalone} % import figures
 \usepackage{changepage} % adjust text width
 \usepackage{parskip} % proper paragraphs, no indentation
-\usepackage{showframe} % TODO remove
+% \usepackage{showframe} % TODO remove
 \usepackage[margin=3cm]{geometry}
 
 % \linespread{1.25}
@@ -613,73 +613,60 @@ such that more frequent correspondences rank higher.
 \newpage
 \section{Results}
 
-\begin{figure}
-    \begin{adjustwidth}{-0.6cm}{-0.5cm}
-    \centering
-    \includestandalone[height=0.28\textheight]{figures/tfidf-nocontext}
-    \hspace{-5mm}
-    \includestandalone[height=0.28\textheight]{figures/tfidf-context}
-    \end{adjustwidth}
-    \caption{TFIDF with (right) and without (left) context information, highest-rating correspondence per non-singleton cluster (with $\geq$80\% importance score). truncated svd: right}
-    \label{fig:tfidf-nocontext}
-\end{figure}
-
-\begin{figure}
-  \includestandalone[width=\textwidth]{figures/bsgc-nocontext}
-  \caption{BSGC without context information and highest-rating correspondence per non-singleton cluster (with $\geq$80\% importance score)}
-  \label{fig:bsgc-nocontext}
-\end{figure}
-
-\begin{figure}
-  \includestandalone[width=\textwidth]{figures/bsgc-context}
-  \caption{BSGC context and highest-rating correspondence per non-singleton cluster (with $\geq$80\% importance score)}
-  \label{fig:bsgc-context}
-\end{figure}
-
 \subsection{TFIDF}
 
 context:
 excl. singletons and the cluster including all doculects
 max. importance score: 100.00\%
 376 correspondences (total)
-225 correspondences >= the threshold (80\% importance)
-25 correspondences >= 90\% importance
+279 correspondences >= the threshold (70\% importance)
+27 correspondences >= 90\% importance
 19 correspondences >= 95\% importance
 19 correspondences == 100\% importance
 
-correspondences with 100\% importance:
+no context:
+excl. singletons and the cluster including all doculects
+max. importance score: 100.00\%
+201 correspondences (total)
+126 correspondences >= the threshold (70\% importance)
+9 correspondences >= 90\% importance
+7 correspondences >= 95\% importance
+6 correspondences == 100\% importance
 
+\begin{figure}
+    % \centering
+    % \begin{adjustwidth}{-0.6cm}{-0.5cm}
+    % height=0.28\textheight
+    \includestandalone[height=0.4\textheight]{figures/tfidf-nocontext}
+    % \hspace{-5mm}
+    \includestandalone[height=0.4\textheight]{figures/tfidf-context}
+    % \end{adjustwidth}
+    \caption{TFIDF with (top) and without (bottom) context information, highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
+    \label{fig:tfidf-dendrograms}
+\end{figure}
 
 \begin{table}[h]
 \begin{tabular}{llrrrrc}
 \hline
-Cluster & Sound correspondence & Imp & Rep & Dist & Count & No context\\ \hline
+Cluster & Sound corres. & Imp & Rep & Dist & Count \\ \hline
 
-Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6 & x\\[2mm] % fɛ̝ʃ, fæʃt
+Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6 \\[2mm] % fɛ̝ʃ, fæʃt
 
-Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10 & x\\
+Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10 \\
     & a $>$ \textopeno / \_cons & 100 & 100 & 100 & 10 \\[2mm] % kʰɔlt, kʰɔlt͡s
     
-Heligoland, Westerkwartier & t $>$ \textsubring{d} & 100 & 100 & 100 & 8 & only nocontext \\[2mm]
-
 Antwerp, Dutch Std BE & u $>$ \textlowering{o}\textlengthmark & 100 & 100 & 100 & 8 \\
     & u $>$ \textopeno{} / cons\_ & 100 & 100 & 100 & 7\\
     & e $>$ \textlengthmark & 100 & 100 & 100 & 7\\
     & u $>$ \textopeno{} / \_cons & 100 & 100 & 100 & 6\\[2mm]
     
-Antwerp, Dutch Std BE, & f $>$ v & 100 & 100 & 100 & 15 & x\\
-Ostend & k $>$ \textsubplus{k} & 100 & 100 & 100 & 13 & x\\
+Antwerp, Dutch Std BE, Ostend & f $>$ v & 100 & 100 & 100 & 15\\
+& k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\
     & f $>$ v / \#\_ & 100 & 100 & 100 & 12\\[2mm]
     
 Feer, Heligoland & d $>$ $\emptyset$ / cons\_ & 100 & 100 & 100 & 8\\[2mm]
 
-Biel, Graubuenden, & e $>$ y\textlengthmark & 100 & 100 & 100 & 13 & x\\
-Hard, Walser & & & & & \\[2mm]
-
-Herrlisheim, Ortisei, Hard, & t $>$ s & 90 & 82 & 100 & 59 & only nocontext\\
-Biel, Graubuenden, Walser, & & & & & \\
-Limburg, Feer, Tuebingen, & & & & & \\
-Cologne, Luxembourg & & & & & \\[2mm]
+Biel, Graubuenden, Hard, Walser & e $>$ y\textlengthmark & 100 & 100 & 100 & 13\\[2mm]
 
 Herrlisheim, Ortisei, Tuebingen, & t $>$ s & 100 & 100 & 100 & 59\\
 Cologne, Luxembourg, Hard, & s $>$ \textesh{} / \_cons & 100 & 100 & 100 & 44\\
@@ -688,12 +675,6 @@ Biel, Graubuenden, Walser & t $>$ s / \_\# & 100 & 100 & 100 & 34\\
     & t $>$ \texttoptiebar{ts} & 90 & 100 & 82 & 71\\
     & t $>$ \texttoptiebar{ts} / \#\_ & 90 & 100 & 82 & 45\\[2mm]
     
-Heligoland, Westerkwartier, & $\emptyset$ $>$ \textglotstop{} & 96 & 92 & 100 & 169 & only nocontext\\
-Herrlisheim, Ortisei, Hard, & s $>$ \textesh & 92 & 85 & 100 & 107 & only nocontext\\
-Biel, Graubuenden, Walser, & & & & & \\
-Limburg, Feer, Tuebingen, & & & & & \\
-Cologne, Luxembourg & & & & & \\[2mm]
-
 Westerkwartier, Feer, Heligoland, & $\emptyset$ $>$ \textglotstop{} / \#\_ & 100 & 100 & 100 & 169\\
 Herrlisheim, Ortisei, Tuebingen, & $\emptyset$ $>$ \textglotstop{} & 100 & 100 & 100 & 169\\
 Cologne, Luxembourg, Hard, & t $>$ \texttoptiebar{ts} & 91 & 83 & 100 & 76\\
@@ -702,29 +683,79 @@ Biel Graubuenden, Walser & k $>$ k\textsuperscript{h} & 91 & 83 & 100 & 52\\
     & k $>$ k\textsuperscript{h} / \#\_ & 91 & 83 & 100 & 46\\
     & ll $>$ l & 91 & 83 & 100 & 30\\[2mm]
 
-Grou, Dutch Std NL, Limburg, & k $>$ k / \#\_ & 100 & 100 & 100 & 40\\
-Osten, Antweerp, Dutch Std BE, &  t $>$ t / \_\# & 100 & 100 & 100 & 37\\
-Achterhoek, Veenkolonien & & & & &\\\hline
+Grou, Dutch Std NL, Limburg, Ostend, Antwerp, & k $>$ k / \#\_ & 100 & 100 & 100 & 40\\
+Dutch Std BE, Achterhoek, Veenkolonien &  t $>$ t / \_\# & 100 & 100 & 100 & 37\\\hline
 \end{tabular}
 \caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
-Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.}
+Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
+context
+}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{llrrrrc}
+\hline
+Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
+
+Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6\\[2mm] % fɛ̝ʃ, fæʃt
+
+Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10\\[2mm] % kʰɔlt, kʰɔlt͡s
+    
+Heligoland, Westerkwartier & t $>$ \textsubring{d} & 100 & 100 & 100 & 8\\[2mm]
+
+Antwerp, Dutch Std BE, Ostend & f $>$ v & 100 & 100 & 100 & 15\\
+& k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\[2mm]
+    
+Biel, Graubuenden, & e $>$ y\textlengthmark & 100 & 100 & 100 & 13\\
+Hard, Walser & & & & & \\[2mm]
+
+Herrlisheim, Ortisei, Hard, Biel, Graubuenden, & t $>$ s & 90 & 82 & 100 & 59\\
+Walser, Limburg, Feer, Tuebingen, Cologne, Luxembourg & & & & & \\[2mm]
+
+Heligoland, Westerkwartier, Herrlisheim, Ortisei, Hard, & $\emptyset$ $>$ \textglotstop{} & 96 & 92 & 100 & 169\\
+Biel, Graubuenden, Walser, Limburg, Feer, Tuebingen, & s $>$ \textesh & 92 & 85 & 100 & 107\\
+Cologne, Luxembourg & & & & & \\\hline
+\end{tabular}
+\caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
+Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
+nocontext}
 \end{table}
 
 
 
 \subsection{BSGC}
 
-highest-ranked sound correspondences
-(+ example words?)
-% TODO update!
+\begin{figure}
+  \centering
+  \includestandalone[height=0.35\textheight]{figures/bsgc-context}
+  
+  \vspace{2em}
+  
+  \includestandalone[height=0.35\textheight]{figures/bsgc-nocontext}
+  \caption{BSGC with (top) and without (bottom) context information and highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
+  \label{fig:bsgc-trees}
+\end{figure}
 
-bsgc-context: $\geq$90\% imp for non-singleton clusters:
+context
+excl. singletons and the cluster including all doculects
+max. importance score: 100.00\%
+376 correspondences (total)
+31 correspondences >= the threshold (70\% importance)
+4 correspondences >= 90\% importance
+2 correspondences >= 95\% importance
+1 correspondences == 100\% importance
 
-bsgc-nocontext: highest (non-singleton) score: 88.00  (rep: 78.57, dist: 100.00), one singleton with a corres of 100\%
-$\geq$80\% imp for non-singleton clusters:
+nocontext
+excl. singletons and the cluster including all doculects
+max. importance score: 89.36\%
+201 correspondences (total)
+24 correspondences >= the threshold (70\% importance)
+0 correspondences >= 90\% importance
+0 correspondences >= 95\% importance
+0 correspondences == 100\% importance
 
 
-svd how many components. svd vs no svd
+% svd how many components. svd vs no svd
 
 high representativeness score for all doculects?
 
@@ -741,7 +772,7 @@ comparison with sound shifts (e.g. High German consonant shift)
 
 \subsection{(grouping dialects by) sound shifts}
 
-BSGC mostly picks up on s $>$ \textesh
+do the groups/criteria match the ones introduced earlier?
 
 \subsection{effect of context information}
 

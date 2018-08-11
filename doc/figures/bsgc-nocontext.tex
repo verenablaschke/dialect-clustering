@@ -5,51 +5,57 @@
 \begin{document}
 \begin{forest}
 for tree={
-  parent anchor=south, 
-  child anchor=north,
-  align=center
+  grow=west,
+  reversed, 
+  anchor=base east,
+  parent anchor=west, 
+  child anchor=east,
 }
 [
     [ll $>$ l
         [u $>$ \textupsilon
-            [
+            [Graubuenden]
+            [u $>$ \textupsilon
+                [[Ortisei][Tuebingen]]
                 [
                     [
+                        [[Biel][Walser]]
                         [
-                            [Luxembourg]
-                            [
-                                [Cologne]
-                                [
-                                    [Feer]
+                            [k $>$ \textesh
+                                [Hard]
+                                [k $>$ \textesh
+                                    [Cologne]
                                     [
-                                        [Hard]
-                                        [[Herrlisheim][Limburg]]
+                                        [k $>$ \textesh
+                                            [Herrlisheim][Luxembourg]
+                                        ]
+                                        [Feer]
                                     ]
                                 ]
                             ]
+                            [Limburg]
                         ]
-                        [[Biel][Walser]]
                     ]
                     [Achterhoek]
                 ]
-                [[Ortisei][Tuebingen]]
             ]
-            [Graubuenden]
         ]
         [Heligoland]
     ]
     [b $>$ f
-        [Westerkwartier]
         [
             [Ostend]
-            [
+            [ll > \textltilde
                 [[Dutch Std NL][Veenkolonien]]
                 [
+                    [a $>$ a\textlengthmark
+                        [Antwerp][Dutch Std BE]
+                    ]
                     [Grou]
-                    [[Antwerp][Dutch Std BE]]
                 ]
             ]
         ]
+        [Westerkwartier]
     ]
 ]
 \end{forest}
