@@ -347,7 +347,7 @@ Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{t
 No context & k $>$ k\textsuperscript{h} & a $>$ \textopeno & l $>$ l & d $>$ \texttoptiebar{ts} & a $>$ $\emptyset$ & z $>$ $\emptyset$ \rule{0pt}{4mm}\\[3mm]
 
 Simple & k $>$ k\textsuperscript{h} / \#\_ & a $>$ \textopeno / cons\_ & l $>$ l / vow\_ & d $>$ \texttoptiebar{ts} / cons\_ & a $>$ $\emptyset$ / cons\_ & \\
-context & k $>$ k\textsuperscript{h} / \_V & a $>$ \textopeno{} / \_C & l $>$ l / \_C & & & z $>$ $\emptyset$ / \_\# \\[3mm]
+context & k $>$ k\textsuperscript{h} / \_vow & a $>$ \textopeno{} / \_cons & l $>$ l / \_cons & & & z $>$ $\emptyset$ / \_\# \\[3mm]
 
 Sound class- &  & a $>$ \textopeno / K\_ &  l $>$ l / A\_ & d $>$ \texttoptiebar{ts} / L\_ & & \\
 based context & & a $>$ \textopeno{} / \_L & & & & \\
@@ -357,6 +357,8 @@ based context & & a $>$ \textopeno{} / \_L & & & & \\
 \caption{Proto-Germanic--Ortisei German sound correspondences extracted from the aligned entries for the concept ``cold''.}
 \label{tab:corres}
 \end{table}
+
+% 'N', 'cons', 'K', 'M', 'L', 'B', 'E', 'A', '#', 'W', 'S', 'H', 'J', 'vowel', 'Y', 'U', 'G', 'I', 'P', 'T', 'R'
 
 
 \subsection{Clustering}
@@ -613,25 +615,34 @@ such that more frequent correspondences rank higher.
 \newpage
 \section{Results}
 
+Applying the aforementioned methods yields
+four arrangements of the data into hierarchical partitions,
+two for the TFIDF method and two for the graph clustering method.
+
 \subsection{TFIDF}
 
-context:
-excl. singletons and the cluster including all doculects
-max. importance score: 100.00\%
-376 correspondences (total)
-279 correspondences >= the threshold (70\% importance)
-27 correspondences >= 90\% importance
-19 correspondences >= 95\% importance
-19 correspondences == 100\% importance
+Figure~\ref{fig:tfidf-dendrograms} shows the dendrograms
+created by the TFIDF method for sound correspondences
+including and excluding contextual information.
 
-no context:
-excl. singletons and the cluster including all doculects
-max. importance score: 100.00\%
-201 correspondences (total)
-126 correspondences >= the threshold (70\% importance)
-9 correspondences >= 90\% importance
-7 correspondences >= 95\% importance
-6 correspondences == 100\% importance
+% context:
+% excl. singletons and the cluster including all doculects
+% max. importance score: 100.00%
+% 665 correspondences (total)
+% 430 correspondences >= the threshold (70% importance)
+% 33 correspondences >= 90% importance
+% 24 correspondences >= 95% importance
+% 24 correspondences == 100% importance
+
+% no context:
+% excl. singletons and the cluster including all doculects
+% max. importance score: 100.00%
+% 201 correspondences (total)
+% 126 correspondences >= the threshold (70% importance)
+% 9 correspondences >= 90% importance
+% 7 correspondences >= 95% importance
+% 6 correspondences == 100% importance
+
 
 \begin{figure}
     % \centering
@@ -736,23 +747,44 @@ nocontext}
   \label{fig:bsgc-trees}
 \end{figure}
 
-context
-excl. singletons and the cluster including all doculects
-max. importance score: 100.00\%
-376 correspondences (total)
-31 correspondences >= the threshold (70\% importance)
-4 correspondences >= 90\% importance
-2 correspondences >= 95\% importance
-1 correspondences == 100\% importance
+% CONTEXT
+% excl. singletons and the cluster including all doculects
+% max. importance score: 100.00%
+% 665 correspondences (total)
+% 63 correspondences >= the threshold (70% importance)
+% 9 correspondences >= 90% importance
+% 3 correspondences >= 95% importance
+% 2 correspondences == 100% importance
 
-nocontext
-excl. singletons and the cluster including all doculects
-max. importance score: 89.36\%
-201 correspondences (total)
-24 correspondences >= the threshold (70\% importance)
-0 correspondences >= 90\% importance
-0 correspondences >= 95\% importance
-0 correspondences == 100\% importance
+% NO CONTEXT
+% excl. singletons and the cluster including all doculects
+% max. importance score: 100.00%
+% 201 correspondences (total)
+% 22 correspondences >= the threshold (70% importance)
+% 1 correspondences >= 90% importance
+% 1 correspondences >= 95% importance
+% 1 correspondences == 100% importance
+
+
+\begin{table}[h]
+\begin{tabular}{llrrrrc}
+\hline
+Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
+
+Antwerp, Dutch Std BE, Ostend & k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\[2mm]
+
+Biel, Cologne, Feer, Graubuenden, Hard, Herrlisheim, & t $>$ s & 90 & 82 & 100 & 59\\
+Limburg, Luxembourg, Ortisei, Tuebingen, Walser &  t $>$ s / \_\#& 90 & 82 & 100 & 34\\[2mm]
+
+Biel, Cologne, Feer, Graubuenden, Hard, Heligoland, & $\emptyset$ $>$ \textglotstop{} / \#\_ & 96 & 92 & 100 & 169\\
+Herrlisheim, Limburg, Luxembourg, Ortisei, 
+Tuebingen, Walser, Westerkwartier
+
+\end{tabular}
+\caption{BSGC: sound correspondences with an importance score of 90\% or higher.
+Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
+nocontext}
+\end{table}
 
 
 % svd how many components. svd vs no svd
