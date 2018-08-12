@@ -1,7 +1,7 @@
 import numpy as np
 
 
-THRESHOLD = 80
+THRESHOLD = 70
 
 
 def tuple2corres(tup):
@@ -58,7 +58,7 @@ def print_clusters(filename, A_original, clusters, doculect2int, corres2int,
         fo.write(msg)
         fo2.write(msg)
         ds = [doculect2int[doc] for doc in c]
-        if len(ds) > 1 and len(ds) < len(doculects):
+        if 1 < len(ds) < len(doculects):
             n_nonsingleton_notall += 1
         fs = []
         n_above_threshold = 0
@@ -66,18 +66,20 @@ def print_clusters(filename, A_original, clusters, doculect2int, corres2int,
             for f in features:
                 rep, dist, imp, abs_n = score(A_original, corres2int[f], ds)
                 fs.append((imp, rep, dist, abs_n, f))
-                if imp >= THRESHOLD:
+                if imp >= THRESHOLD - 0.0001:
                     n_above_threshold += 1
-                    importance_scores.append(imp)
+                    if 1 < len(ds) < len(doculects):
+                        importance_scores.append(imp)
         else:
             for f in all_correspondences:
                 rep, dist, imp, abs_n = score(A_original,
                                               corres2int[f], ds)
                 if imp > 0 or (rep > 0.8 and len(ds) == len(doculects)):
                     fs.append((imp, rep, dist, abs_n, f))
-                    if imp >= THRESHOLD:
+                    if imp >= THRESHOLD - 0.0001:
                         n_above_threshold += 1
-                        importance_scores.append(imp)
+                        if 1 < len(ds) < len(doculects):
+                            importance_scores.append(imp)
         n_above_threshold_total += n_above_threshold
         fs = sorted(fs, reverse=True)
         msg = "-------\n" \
@@ -93,7 +95,7 @@ def print_clusters(filename, A_original, clusters, doculect2int, corres2int,
             if (not cont) and (not wrote_more):
                 fo.write("and {} more\n".format(len(fs) - j))
                 wrote_more = True
-                if not features:
+            if i < THRESHOLD and not features:
                     break
             if cont:
                 fo.write(msg)
@@ -121,6 +123,7 @@ def print_clusters(filename, A_original, clusters, doculect2int, corres2int,
         fo.write("=====================================\n")
         fo2.write("=====================================\n")
     fo.write("\n\n{} clusters\n".format(len(clusters)))
+    fo.write("----\n")
     fo.write("{} clusters excl. singletons "
              "and the cluster including all doculects\n"
              .format(n_nonsingleton_notall))
@@ -130,12 +133,13 @@ def print_clusters(filename, A_original, clusters, doculect2int, corres2int,
     fo.write("{} correspondences (total)\n".format(len(corres2int)))
     fo.write("{} correspondences >= the threshold ({}% importance)\n"
              .format(n_above_threshold_total, THRESHOLD))
-    # Assuming the threshold isn't changed to anything above 90%.
-    fo.write("{} correspondences >= 90% importance\n"
-             .format(len(np.where(importance_scores >= 90)[0])))
-    fo.write("{} correspondences >= 95% importance\n"
-             .format(len(np.where(importance_scores >= 95)[0])))
+    if THRESHOLD < 90:
+        fo.write("{} correspondences >= 90% importance\n"
+                 .format(len(np.where(importance_scores >= 89.9999)[0])))
+    if THRESHOLD < 95:
+        fo.write("{} correspondences >= 95% importance\n"
+                 .format(len(np.where(importance_scores >= 94.9999)[0])))
     fo.write("{} correspondences == 100% importance\n"
-             .format(len(np.where(importance_scores >= 99.99999)[0])))
+             .format(len(np.where(importance_scores >= 99.9999)[0])))
     fo.close()
     fo2.close()
