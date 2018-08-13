@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage{hyperref}
+\usepackage{multirow}
 \usepackage{tipa} % IPA
 \usepackage{amsmath} % formulae
 \usepackage{mathtools} % displaystyle in formulae with cases
@@ -107,7 +108,10 @@ clustering dialects and determining relevant features
 
 historical sound correspondences
 
-% \citet{kondrak2009identication}
+% \citet{kondrak2009identification}
+% https://pdfs.semanticscholar.org/d2ea/1dbe1a81f60f99dab04dffc957622b8cb9f2.pdf
+% https://www.clips.uantwerpen.be/~gillis/pdf/20040107.9620.cslfinal.pdf
+% https://www.aclweb.org/anthology/J/J96/J96-4003.pdf
 
 % --- on BSGC ---
 
@@ -127,10 +131,15 @@ introduced as a method for dialect clustering in \citet{wieling2011bipartite}
 
 \subsection{Continental West Germanic Doculects}
 
+even West Germanic as its own Germanic branch is contested, though generally accepted (\citet{voyles1971problem}; \citet[pp. 7-8]{harbert2007germanic}; \citet{ringe2012cladistic}) % \citet[p. 404]{krogh1996stellung}
+
 similarities not only because of genetic relatedness but also--enabled by the geographic proximity--mutual influences
 cf. \citet[p. 8]{harbert2007germanic}
 
 \citet[pp. 72-80]{nielsen1989germanic} gives an overview of the history of attempting to divide the West Germanic dialects into subgroups with the associated criteria (phonological, morphological, lexical, and/or extra-linguistic) and criticisms.
+
+more recently(?), also interactions between dialects and standard languages \citep{coetsem1992interaction}
+\citet{kremer1990einfuehrung}: in Germany and the Netherlands (but not in Switzerland), dialects tend to become closer to the standard languages (state/standard language borders as dialect borders). Low German dialects tend to be replaced however. In Non-Germanic regions (France, Belgium): also replaced
 
 sound changes that characterize some but not all CWG variants:
 
@@ -161,48 +170,103 @@ sound changes that characterize some but not all CWG variants:
 \subsubsection{North Sea Germanic vs. Other}
 \citet{stiles2013pan-west} posits that the most significant division of West Germanic varieties is the split into Ingv\ae{}onic (that is, North Sea Germanic) varieties and non-Ingv\ae{}onic varieties.
 
-\subsubsection{German dialect groups by affricates}
-\citet[pp. 182-199]{goblirsch2005lautverschiebungen}:
+Ingv\ae{}onic: Frisian, English, and ``to a certain extend, Old Saxon''.
+
+The distinct properties of the Ingv\ae{}onic subgroup
+concern mostly inflection and pronouns (\citet{stiles2013pan-west}; \citet[pp. 7-8]{harbert2007germanic}),
+although \citet{stiles2013pan-west} also lists some phonological characteristics:
+``backing of long and short *\textit{a} before nasals[...]; fronting of long and short *\textit{a}; and palatalization of velar consonants''
+
+see also the map based on harbert 2007
+
+
+
+\subsubsection{The High German sound shift}
+
+\citep[p. 47]{harbert2007germanic}
+The voiceless (aspirated) Germanic stops (/*p, *t, *k/)
+underwent lenition and shifted into affricates or fricatives.
+Generally, these stops developed into fricatives in postvocal positions,
+and into affricates in word-inital or postconsonantal positions,
+and /*t/ changed more commonly than /p*/, which changed more commonly than /*k/.
+South has more changes than North, muddy middle areas, see also Goblirsch's discussion
+
+\citep[p. 48]{harbert2007germanic}
+The voiced Germanic stops (/*b, *d, *g/) on the other hand
+developed into their voiceless (and aspirated) counterparts.
+
+\citeauthor{goblirsch2005lautverschiebungen} introduces
+two related ways of categorizing German(ic) data based on obstruent features:
+a four-way grouping of German dialects
+based on in how far they have realized the High German sound shift \citeyearpar[pp. 182-199]{goblirsch2005lautverschiebungen},
+and a five-way categorization of Germanic dialects
+based on their obstruent features \citeyearpar[pp. TODO]{goblirsch2005lautverschiebungen}.
+
+based on these two categorizations:
 
 \begin{itemize}
-  \item HG consonant shift: voiceless plosives to affricates 
-  \begin{itemize}
-    \item Suedoberdeutsch (Suedbairisch, Suedmittelbairisch, Suedalemannisch, parts of Mittelalemannisch): pf, ts, kx
-    Ortisei
-    \item Nordoberdeutsch (Nordbairisch, Mittelbairisch, Nordalemannisch, parts of Mittelalemannisch, Ostfraenkisch, Suedrheinfraenkisch).
-    similar to Std German wrt the HGCS
-    p, t - pf, ts; kV - aspirated
-    \item Suedmitteldeutsch (Moselfraenkisch, Rheinfraenkisch, parts of Thueringisch, parts of Obersaechsisch, Schlesisch)
-    \item Nordmitteldeutsch (Ripuarian, Nordhessisch, Nordthueringisch, Nordobersaechsisch):
-    Vp, Vt, Vk - Vf, Vs, Vx; t - ts
-    Cologne
-  \end{itemize}
+  \item pf, ts, kx
+  \item pf, ts
+  \item ts
+  \item --
 \end{itemize}
 
-Biel, Hard, Graubuenden, Tuebingen, Walser - N/S Alemannic?
+% \begin{itemize}
+%   \item HG consonant shift: voiceless plosives to affricates 
+%   \begin{itemize}
+%     \item Suedoberdeutsch (Suedbairisch, Suedmittelbairisch, Suedalemannisch, parts of Mittelalemannisch): pf, ts, kx
+%     Ortisei
+%     \item Nordoberdeutsch (Nordbairisch, Mittelbairisch, Nordalemannisch, parts of Mittelalemannisch, Ostfraenkisch, Suedrheinfraenkisch).
+%     similar to Std German wrt the HGCS
+%     p, t - pf, ts; kV - aspirated
+%     \item Suedmitteldeutsch (Moselfraenkisch, Rheinfraenkisch, parts of Thueringisch, parts of Obersaechsisch, Schlesisch)
+%     \item Nordmitteldeutsch (Ripuarian, Nordhessisch, Nordthueringisch, Nordobersaechsisch):
+%     Vp, Vt, Vk - Vf, Vs, Vx; t - ts
+%     Cologne
+%   \end{itemize}
+% \end{itemize}
+% the ts, pf ts, pf ts kx distinction also appears in Harbert p. 48
 
-Herrlisheim?
+% Biel, Hard, Graubuenden, Tuebingen, Walser - N/S Alemannic?
 
-Luxembourg?
+% Herrlisheim?
 
-not affected by HGCS: Dutch, Low German, Frisian
+% Luxembourg?
 
-\subsubsection{Germanic varieties by obstruent systems}
-\citet[pp. 215-235]{goblirsch2005lautverschiebungen}: "Typology of modern Germanic obstruent systems", from least to most innovative
+% not affected by HGCS: Dutch, Low German, Frisian
 
-\begin{itemize}
-  \item aspirationless:
-  East Swedisch; Dutch, S Low German, Nordenglisch, Scots(, Frisian); Normitteldeutsch
-  no consistent sound shift
-  \item general:
-  Swedish, Norwegian; English, Low German, NE Dutch
-  \item voiceless:
-  E Danish, S Swedish, SW Norwegian; North Frisian; Suedmitteldeutsche Dialekte ohne Lenisierung
-  \item length:
-  Oberdeutsche Dialekte ohne Lenisierung
-  \item aspiration:
-  Danish; N Low German; High German dialects with lenition
-\end{itemize}
+% \subsubsection{Germanic varieties by obstruent systems}
+% \citet[pp. 215-235]{goblirsch2005lautverschiebungen}: "Typology of modern Germanic obstruent systems", from least to most innovative
+
+% considers whether obstruents are plosives (vs. affricates, fricatives), 
+
+% \begin{itemize}
+%   \item aspirationless:
+%   (continental) Dutch, S Low German (Südwestfälisch, Südostfälisch), W Frisian, certain Central German dialects (incl. Ripuarian)
+%   Dutch: Dutch Std NL, Dutch Std BE, Ostend, Antwerp, Limburg
+%   S Low German: ???
+%   W Frisian: Grou
+%   Ripuarian: Cologne--but Cologne does have aspiration in our data
+%   two series of plosives distinguished by voicing; one series of fricatives (217)
+%   North Germanic: gemination
+%   no (consistent) sound shift
+%   occlusion, voice, length
+%   \item general:
+%   Low German, NE Dutch
+%   partial sound shift
+%   occlusion, voice, length (NG), aspiration
+%   WG: simplified the geminates
+%   CWG: final devoicing
+%   aspiration
+%   \item voiceless:
+%   North Frisian; Suedmitteldeutsche Dialekte ohne Lenisierung
+%   complete 2nd sc, but no lenition
+%   occlusion, aspiration, length (NG)
+%   \item length:
+%   Oberdeutsche Dialekte ohne Lenisierung
+%   \item aspiration:
+%   Danish; N Low German; High German dialects with lenition
+% \end{itemize}
 
 
 \newpage
@@ -296,7 +360,7 @@ These are simple segment-to-segment correspondences.
 We (separately) add information about the
 left and right single-segment context,
 stating whether the context is a
-word boundary (\#), gap ($\emptyset$), consonant, or vowel. 
+word boundary, consonant, or vowel. 
 This can only be performed when the context in question is of
 the same type for both Proto-Germanic and the modern doculect.
 
@@ -358,8 +422,37 @@ based context & & a $>$ \textopeno{} / \_L & & & & \\
 \label{tab:corres}
 \end{table}
 
-% 'N', 'cons', 'K', 'M', 'L', 'B', 'E', 'A', '#', 'W', 'S', 'H', 'J', 'vowel', 'Y', 'U', 'G', 'I', 'P', 'T', 'R'
-
+\begin{table}[]
+\begin{tabular}{llll}
+Context type & Abbrev. & Exlanation & IPA characters\\\hline
+\multirow{3}{*}{Simple context} & \# & word boundaries & \\
+    & cons & consonants & \\
+    & vow & vowels & \\[2mm]
+\multirow{18}{*}{\begin{tabular}[c]{@{}l@{}}Sound class-\\ based context\end{tabular}}
+    & A & unrounded back vowels          & a, \textscripta \\
+    & B & labial/labiodental fricatives  & f, \texttoptiebar{pf}, v, \textphi, \textbeta\\
+    & C & dental/alveolar affricates     & \texttoptiebar{dz}, \texttoptiebar{ts}, \texttoptiebar{t\textesh}\\ % not as context
+    & D & dental fricatives              & \dh, \texttheta\\ % not as context
+    & E & unrounded mid vowels           & e, \ae, \textturna, \textschwa, \textepsilon, \textrevepsilon, \textturnv \\
+    & G & velar/uvual fricatives         & x, \textchi, \textgamma \\ % gamma not used as context
+    & H & laryngeals                     & h, \texthth, \textglotstop \\ % only h used as context
+    & I & unrounded close vowels         & i, \i \\
+    & J & palatal approximants           & j \\
+    & K & velar/uvular plosives          & k, \texttoptiebar{kx}, q, \textg \\
+    & L & lateral approximants           & l, \textltilde, \textscl \\
+    & M & labial nasals                  & m, \textltailm \\ % only m as context
+    & N & (non-labial) nasals            & n, \ng, \textltailm, \textscn \\
+    & O & rounded back vowels            & \textturnscripta\\ % not as context
+    & P & labial plosives                & b, p \\
+    & R & trills/taps/flaps              & r, \textturnr, \textfishhookr, \textscr, \textinvscr \\
+    & S & sibilant fricatives            & s, z, \c{c}, \textesh, \textyogh, \textctj \\ % ctj not as context
+    & T & dental/alveolar plosives       & t, d, \textrtailt \\
+    & U & rounded mid vowels             & o, \o, \oe, \textopeno, \textbaro, \textscoelig \\ % scoelig not as context
+    & W & labial approximants/fricatives & w \\
+    & Y & rounded front vowels           & u, y, \textupsilon, \textscy\\\hline
+\end{tabular}
+\end{table}
+% diacritics, diphthongs
 
 \subsection{Clustering}
 
@@ -603,7 +696,7 @@ cases with negative distinctiveness values:
 \begin{dcases}
 \frac{
 2 * \operatorname{rep}(cluster_i, corres_j) * \operatorname{dist}(cluster_i, corres_j)}
-{\operatorname{rep}(cluster_i, corres_j) + \operatorname{dist}(cluster_i, corres_j)}, & \text{if dist}(cluster_i, corres_j) \geq 0\\
+{\operatorname{rep}(cluster_i, corres_j) + \operatorname{dist}(cluster_i, corres_j)}, & \text{if dist}(cluster_i, corres_j) > 0\\
 0, & \text{otherwise}.
 \end{dcases}
 \end{equation*}
@@ -624,25 +717,18 @@ two for the TFIDF method and two for the graph clustering method.
 Figure~\ref{fig:tfidf-dendrograms} shows the dendrograms
 created by the TFIDF method for sound correspondences
 including and excluding contextual information.
+Of the 18 intermediary clusters
+(i.e. clusters that are neither singletons nor contain all doculects),
+13 are associated with a sound correspondence with an importance score of at least 70\% for the context-less run,
+and 17 for the run with additional contextual information. 
 
-% context:
-% excl. singletons and the cluster including all doculects
-% max. importance score: 100.00%
-% 665 correspondences (total)
-% 430 correspondences >= the threshold (70% importance)
-% 33 correspondences >= 90% importance
-% 24 correspondences >= 95% importance
-% 24 correspondences == 100% importance
-
-% no context:
-% excl. singletons and the cluster including all doculects
-% max. importance score: 100.00%
-% 201 correspondences (total)
-% 126 correspondences >= the threshold (70% importance)
-% 9 correspondences >= 90% importance
-% 7 correspondences >= 95% importance
-% 6 correspondences == 100% importance
-
+In total, 201 sound correspondence were used for the run without contextual information,
+of which 6 have importance scores of 100\% for intermediary clusters.
+For the run with contextual information,
+24 sound correspondences (of 665 total) reach 100\% importance for intermediary clusters.
+Tables~\ref{tab:tfidf-nocontext-corres} and \ref{tab:tfidf-context-corres}
+show the highest-rank sound correspondences (importance score $\geq$ 90\%)
+for the context-less and context information run, respectively.
 
 \begin{figure}
     % \centering
@@ -652,55 +738,61 @@ including and excluding contextual information.
     % \hspace{-5mm}
     \includestandalone[height=0.4\textheight]{figures/tfidf-context}
     % \end{adjustwidth}
-    \caption{TFIDF with (top) and without (bottom) context information, highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
+    \caption{TFIDF with no (top) and additional (bottom) context information, highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
     \label{fig:tfidf-dendrograms}
 \end{figure}
 
 \begin{table}[h]
-\begin{tabular}{llrrrrc}
+\begin{tabular}{p{7cm}p{2.5cm}rrrrc}
 \hline
 Cluster & Sound corres. & Imp & Rep & Dist & Count \\ \hline
 
-Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6 \\[2mm] % fɛ̝ʃ, fæʃt
+Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6 \\
+    & x $>$ \textesh / vow\_ & 100 & 100 & 100 & 6 \\ [2mm]
+
+Graubuenden, Walser & a $>$ \textsubbar{a}\texthalflength{} / cons\_ & 100 & 100 & 100 & 7\\[2mm]
+
+Antwerp, Ostend & x $>$ $\emptyset$ / \_vow & 100 & 100 & 100 & 17\\
+    & r $>$ \textsubbar{s} & 100 & 100 & 100 & 11\\
+    & r $>$ \textsubbar{s} / vow\_ & 100 & 100 & 100 & 10\\
+    & k $>$ \textsubplus{k} / vow\_ & 100 & 100 & 100 & 6\\[2mm]
 
 Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10 \\
-    & a $>$ \textopeno / \_cons & 100 & 100 & 100 & 10 \\[2mm] % kʰɔlt, kʰɔlt͡s
-    
-Antwerp, Dutch Std BE & u $>$ \textlowering{o}\textlengthmark & 100 & 100 & 100 & 8 \\
-    & u $>$ \textopeno{} / cons\_ & 100 & 100 & 100 & 7\\
-    & e $>$ \textlengthmark & 100 & 100 & 100 & 7\\
-    & u $>$ \textopeno{} / \_cons & 100 & 100 & 100 & 6\\[2mm]
-    
+    & a $>$ \textopeno / \_cons & 100 & 100 & 100 & 10 \\
+    & a $>$ \textopeno / cons\_ & 100 & 100 & 100 & 9 \\
+    & r $>$ \textchi / \_cons & 100 & 100 & 100 & 9 \\[2mm]
+
 Antwerp, Dutch Std BE, Ostend & f $>$ v & 100 & 100 & 100 & 15\\
-& k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\
+    & f $>$ v / \_vow & 100 & 100 & 100 & 13\\
+    & k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\
     & f $>$ v / \#\_ & 100 & 100 & 100 & 12\\[2mm]
-    
-Feer, Heligoland & d $>$ $\emptyset$ / cons\_ & 100 & 100 & 100 & 8\\[2mm]
 
-Biel, Graubuenden, Hard, Walser & e $>$ y\textlengthmark & 100 & 100 & 100 & 13\\[2mm]
+Feer, Heligoland & d $>$ $\emptyset$ / cons\_ & 100 & 100 & 100 & 10\\
+    & d $>$ $\emptyset$ / N\_ & 100 & 100 & 100 & 8\\
+    & s $>$ s / \_K & 100 & 100 & 100 & 8\\[2mm]
 
-Herrlisheim, Ortisei, Tuebingen, & t $>$ s & 100 & 100 & 100 & 59\\
-Cologne, Luxembourg, Hard, & s $>$ \textesh{} / \_cons & 100 & 100 & 100 & 44\\
-Biel, Graubuenden, Walser & t $>$ s / \_\# & 100 & 100 & 100 & 34\\
-    & s $>$ \textesh{} / \_T & 94 & 89 & 100 & 33\\
-    & t $>$ \texttoptiebar{ts} & 90 & 100 & 82 & 71\\
-    & t $>$ \texttoptiebar{ts} / \#\_ & 90 & 100 & 82 & 45\\[2mm]
-    
-Westerkwartier, Feer, Heligoland, & $\emptyset$ $>$ \textglotstop{} / \#\_ & 100 & 100 & 100 & 169\\
-Herrlisheim, Ortisei, Tuebingen, & $\emptyset$ $>$ \textglotstop{} & 100 & 100 & 100 & 169\\
-Cologne, Luxembourg, Hard, & t $>$ \texttoptiebar{ts} & 91 & 83 & 100 & 76\\
-Biel Graubuenden, Walser & k $>$ k\textsuperscript{h} & 91 & 83 & 100 & 52\\
+Tuebingen, Cologne, Luxembourg, & $\emptyset$ $>$ \textglotstop{} / \#\_ & 100 & 100 & 100 & 169\\
+Westerkwartier, Feer, Heligoland, Biel, & $\emptyset$ $>$ \textglotstop{} / \_vow & 100 & 100 & 100 & 169\\
+Graubuenden, Walser, Hard, & $\emptyset$ $>$ \textglotstop{} & 100 & 100 & 100 & 169\\
+Herrlisheim, Ortisei & t $>$ \texttoptiebar{ts} & 91 & 83 & 100 & 76\\
+    & k $>$ k\textsuperscript{h} & 91 & 83 & 100 & 52\\
     & t $>$ \texttoptiebar{ts} / \#\_ & 91 & 83 & 100 & 49\\
     & k $>$ k\textsuperscript{h} / \#\_ & 91 & 83 & 100 & 46\\
-    & ll $>$ l & 91 & 83 & 100 & 30\\[2mm]
+    & t $>$ \texttoptiebar{ts} / \_vow & 91 & 83 & 100 & 40\\
+    & k $>$ k\textsuperscript{h} / \_vow & 91 & 83 & 100 & 38\\
+    & r $>$ $\emptyset$ / \_vow & 91 & 83 & 100 & 30\\
+    & ll $>$ l & 91 & 83 & 100 & 30\\
+    & ll $>$ l / vow\_& 91 & 83 & 100 & 30\\[2mm]
 
-Grou, Dutch Std NL, Limburg, Ostend, Antwerp, & k $>$ k / \#\_ & 100 & 100 & 100 & 40\\
-Dutch Std BE, Achterhoek, Veenkolonien &  t $>$ t / \_\# & 100 & 100 & 100 & 37\\\hline
+Grou, Dutch Std NL, Dutch Std BE, & k $>$ k / \#\_ & 100 & 100 & 100 & 40\\
+Antwerp, Ostend, Limburg, & t $>$ t / \_\# & 100 & 100 & 100 & 37\\
+Achterhoek, Veenkolonien & k $>$ k / \_vow & 100 & 100 & 100 & 31\\\hline
 \end{tabular}
 \caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
 Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
 context
 }
+\label{tab:tfidf-context-corres}
 \end{table}
 
 \begin{table}[h]
@@ -708,17 +800,16 @@ context
 \hline
 Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
 
-Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6\\[2mm] % fɛ̝ʃ, fæʃt
+Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6\\[2mm]
 
-Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10\\[2mm] % kʰɔlt, kʰɔlt͡s
-    
+Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10\\[2mm]
+
 Heligoland, Westerkwartier & t $>$ \textsubring{d} & 100 & 100 & 100 & 8\\[2mm]
 
 Antwerp, Dutch Std BE, Ostend & f $>$ v & 100 & 100 & 100 & 15\\
 & k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\[2mm]
-    
-Biel, Graubuenden, & e $>$ y\textlengthmark & 100 & 100 & 100 & 13\\
-Hard, Walser & & & & & \\[2mm]
+
+Biel, Graubuenden, Hard, Walser & e $>$ y\textlengthmark & 100 & 100 & 100 & 13\\[2mm]
 
 Herrlisheim, Ortisei, Hard, Biel, Graubuenden, & t $>$ s & 90 & 82 & 100 & 59\\
 Walser, Limburg, Feer, Tuebingen, Cologne, Luxembourg & & & & & \\[2mm]
@@ -730,6 +821,7 @@ Cologne, Luxembourg & & & & & \\\hline
 \caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
 Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
 nocontext}
+\label{tab:tfidf-nocontext-corres}
 \end{table}
 
 
@@ -771,21 +863,38 @@ nocontext}
 \hline
 Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
 
-Antwerp, Dutch Std BE, Ostend & k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\[2mm]
+Heligoland, Westerkwartier & t $>$ t\textsuperscript{h} / vow\_ & 100 & 100 & 100 & 14\\[2mm]
+
+Antwerp, Dutch Std BE & e $>$ e\textlengthmark & 100 & 100 & 100 & 7\\[2mm]
 
 Biel, Cologne, Feer, Graubuenden, Hard, Herrlisheim, & t $>$ s & 90 & 82 & 100 & 59\\
-Limburg, Luxembourg, Ortisei, Tuebingen, Walser &  t $>$ s / \_\#& 90 & 82 & 100 & 34\\[2mm]
+Limburg, Luxembourg, Ortisei, Tuebingen, Walser &  t $>$ s / vow\_ & 90 & 82 & 100 & 58\\
+&  t $>$ s / \_\# & 90 & 82 & 100 & 34\\[2mm]
 
-Biel, Cologne, Feer, Graubuenden, Hard, Heligoland, & $\emptyset$ $>$ \textglotstop{} / \#\_ & 96 & 92 & 100 & 169\\
-Herrlisheim, Limburg, Luxembourg, Ortisei, 
-Tuebingen, Walser, Westerkwartier
+Biel, Cologne, Feer, Graubuenden, Hard, Heligoland, Herrlisheim, & $\emptyset$ $>$ \textglotstop{} / \_vow & 96 & 92 & 100 & 169\\
+Limburg, Luxembourg, Ortisei, 
+Tuebingen, Walser, Westerkwartier & s $>$ \textesh & 92 & 85 & 100 & 107\\
+ & s $>$ \textesh / \#\_ & 92 & 85 & 100 & 63\\
+ & s $>$ \textesh / \_cons & 92 & 85 & 100 & 60\\\hline
+\end{tabular}
+\caption{BSGC: sound correspondences with an importance score of 90\% or higher.
+Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
+context}
+\label{tab:bsgc-context-corres}
+\end{table}
 
+\begin{table}[h]
+\begin{tabular}{llrrrrc}
+\hline
+Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
+
+Antwerp, Dutch Std BE & e $>$ e\textlengthmark & 100 & 100 & 100 & 7\\\hline
 \end{tabular}
 \caption{BSGC: sound correspondences with an importance score of 90\% or higher.
 Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
 nocontext}
+\label{tab:bsgc-nocontext-corres}
 \end{table}
-
 
 % svd how many components. svd vs no svd
 
@@ -797,12 +906,24 @@ high representativeness score for all doculects?
 
 % -- specific ---
 
-\subsection{Comparison with Glottolog tree}
+\subsection{Comparisons to proposed groupings/structures}
+\subsubsection{Comparison with Glottolog tree}
 comparison with language ancestry data from \citet{hammarstrom2018glottolog}
 
-comparison with sound shifts (e.g. High German consonant shift)
+\subsubsection{Ingv\ae{}onic vs. Non-Ingv\ae{}onic}
+gold standard based on \citet{stiles2013pan-west}:
+\begin{itemize}
+\item
+Ingv\ae{}onic:
+Achterhoek, Feer, Grou, Heligoland, Veenkolonien, Westerkwartier
+\item
+Non-Ingv\ae{}onic:
+the rest
+\end{itemize}
 
-\subsection{(grouping dialects by) sound shifts}
+\subsubsection{obstruent systems}
+
+\subsubsection{(grouping dialects by) sound shifts}
 
 do the groups/criteria match the ones introduced earlier?
 
