@@ -4,6 +4,7 @@
 \usepackage{natbib}
 \usepackage{hyperref}
 \usepackage{multirow}
+\usepackage{graphicx} % including the map
 \usepackage{tipa} % IPA
 \usepackage{amsmath} % formulae
 \usepackage{mathtools} % displaystyle in formulae with cases
@@ -274,15 +275,29 @@ based on these two categorizations:
 
 continental European West Germanic dialects (CWG) and standard languages
 
-\citet{heggarty2018sound} compiled IPA transcriptions of word lists in a range of Germanic doculects for his Sound Comparisons project.
-From this database, we used 110 cognate sets from 20 modern CWG doculects and a reconstruction of Proto-Germanic.
-For the phonetic alignment step (see section~\ref{s:alignments}), we used 14 additional doculects that are Germanic but not continental West Germanic. 
+\citet{heggarty2018sound} compiled IPA transcriptions of word lists
+in a range of Germanic doculects for his Sound Comparisons project.
+From this database,
+we used 110 cognate sets from 20 modern CWG doculects
+and a reconstructed version of Proto-Germanic.
+Figure~\ref{fig:map} shows the locations of the places
+where the modern doculects were recorded.
+For the phonetic alignment step (see section~\ref{s:alignments}),
+we used 14 additional doculects that are Germanic but not continental West Germanic. 
 To control for transciber bias, we only worked with doculects that shared the same transcriptor, Warren Maguire.
 We excluded one CWG doculect that covered only 35 concepts. % Schaeddel (Frisian)
 The Proto-Germanic data cover all 110 concepts; each of the modern doculects covers at least 103 concepts, and each concept is covered by at least 17 modern doculects.
 In total, we have 2181 sequence alignments between Proto-Germanic and modern CWG doculects.
 
 note on inflected forms
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/map.pdf}
+\caption{Map of the places where the modern doculects were recorded}
+\label{fig:map}
+\end{figure}
+
 
 \newpage
 \section{Methods}

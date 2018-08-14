@@ -1,7 +1,7 @@
 import numpy as np
 import pickle
 
-DIST_MULTIPLIER_X = 10
+DIST_MULTIPLIER_X = 15
 DIST_MULTIPLIER_Y = 0.5
 
 
@@ -22,8 +22,10 @@ def transform(Z, labels, f):
 
     # Leaf nodes.
     f.write("\\documentclass{standalone}\n")
-    f.write("\\usepackage{tikz}\n")
+    f.write("\\usepackage{tikz, tipa}\n")
     f.write("\\begin{document}\n")
+    f.write("\\tikzset{corres/.style={fill=white, right=6mm, above=1mm,"
+            "inner sep=0pt}}\n")
     # f.write("\\tikzset{doc/.append style={prefix after command={\\pgfextra"
     #         "{\\tikzset{every label/.style={rotate=-45}}}}}}\n") # TODO
     f.write("\\begin{tikzpicture}\n")
@@ -31,7 +33,7 @@ def transform(Z, labels, f):
     for l in labels:
         i = label2cluster[l]
         # f.write("\\node[doc, label=right:{}] ({}) at ({}, 0) {{}};\n" # TODO
-        f.write("\\node[doc, label=left:{}] ({}) at (0, {}) {{}};\n"
+        f.write("\\node[label=left:{}] ({}) at (0, {}) {{}};\n"
                 .format(l, i, cluster2xcoord[i] * DIST_MULTIPLIER_Y))
 
     # Branches.
@@ -53,7 +55,7 @@ def transform(Z, labels, f):
 
     # Y axis.
     max_dist = round(dist) + 1
-    f.write("\n% Y axis.\n")
+    f.write("\n% X axis.\n")
     f.write("\\draw[->] (0,0) -- node"
             # "[label={[rotate=90, label distance=1cm]90:Distance}]{{}} " +
             # "(0, {});\n".format(max_dist)) # TODO
@@ -69,35 +71,35 @@ def transform(Z, labels, f):
     f.write("\\end{document}\n")
 
 
-with open('output/dendrogram-nocontext.pickle', 'rb') as f:
+with open('output/dendrogram-context.pickle', 'rb') as f:
     Z = pickle.load(f)
 labels = [
+    'Ortisei',
+    'Herrlisheim',
+    'Hard',
+
     'Walser',
     'Graubuenden',
     'Biel',
-    'Hard',
 
-    'Luxembourg',
-    'Cologne',
     'Tuebingen',
-    'Feer',
+    'Cologne',
+    'Luxembourg',
 
     'Westerkwartier',
+    'Feer',
     'Heligoland',
 
-    'Ortisei',
-    'Herrlisheim',
-
-    'Veenkolonien',
-    'Achterhoek',
-
-    'Limburg',
     'Ostend',
     'Antwerp',
     'Dutch_Std_BE',
 
+    'Veenkolonien',
+    'Achterhoek',
+    'Limburg',
+
     'Dutch_Std_NL',
     'Grou',
 ]
-with open('doc/figures/tfidf-nocontext-horizontal.tex', 'w') as f: # TODO
+with open('doc/figures/tfidf-context.tex', 'w') as f:  # TODO
     transform(Z, labels, f)
