@@ -73,7 +73,7 @@ Eberhard Karls Universität Tübingen
 \vspace{1em}
 August 2018}
 \end{center}
-  
+    
 \end{titlepage}
 
 
@@ -83,6 +83,7 @@ August 2018}
 % TODO abstract
 \newpage
 \tableofcontents
+\newpage
 \listoftables
 \listoffigures
 \newpage
@@ -130,34 +131,112 @@ introduced as a method for dialect clustering in \citet{wieling2011bipartite}
 
 % These algorithms and related ones were investigated by \citet{kluger2003spectral} for their use in bioinformatics as well (co-clustering genes and phenotypes).
 
-\subsection{Continental West Germanic Doculects}
+This thesis is structured as follows:
+We begin by introducing the data in section~\ref{sec:data}.
+Then, in section~\ref{sec:cwg},
+we give a brief introduction to continental West Germanic doculects,
+proposed groupings of doculects belonging to that group of doculects
+and the problems associated with doing this.
+In section~\ref{sec:methods}, we explain our methodology for
+aligning the data and extracting sound correspondences,
+and then for the two approaches to clustering the data that we employ,
+and explain how we rank the sound correspondences.
+We present the results in section~\ref{sec:results}
+and discuss them in section~\ref{sec:discussion}.
 
-even West Germanic as its own Germanic branch is contested, though generally accepted (\citet{voyles1971problem}; \citet[pp. 7-8]{harbert2007germanic}; \citet{ringe2012cladistic}) % \citet[p. 404]{krogh1996stellung}
+\newpage
+\section{Data}
+\label{sec:data}
 
-similarities not only because of genetic relatedness but also--enabled by the geographic proximity--mutual influences
-cf. \citet[p. 8]{harbert2007germanic}
+We work with phonetically transcribed data from
+continental European West Germanic (herafter: CWG) dialects and standard languages
+(hereafter referred to as doculects).
+The data we work with are taken from the Sound Comparisons project
+lead by \citet{heggarty2018sound}, who compiled IPA transcriptions of word lists
+in a range of Germanic doculects.
 
-\citet[pp. 72-80]{nielsen1989germanic} gives an overview of the history of attempting to divide the West Germanic dialects into subgroups with the associated criteria (phonological, morphological, lexical, and/or extra-linguistic) and criticisms.
+From this database,
+we used 110 cognate sets from 20 modern CWG doculects
+and a reconstructed version of Proto-Germanic.
+\footnote{
+The Sound Comparisons project does not state
+the theoretical basis for the Proto-Germanic reconstruction.
+}
+Of the modern doculects, two are identified as standard languages
+in the database (Dutch spoken in the Netherlands and Belgium
+\footnote{
+Hereafter referred to as ``Std. Dutch (NL)'' and ``Std. Dutch (BE)'', respectively.
+}),
+the rest as local vernaculars.
+The modern doculects are from locations in the
+Netherlands, Belgium, Luxembourg, (along the Western border of) Germany,
+France (Alsace), Switzerland, Liechtenstein, Austria (Lake Constance), and Italy (South Tyrol).
+Figure~\ref{fig:map} provides an overview of these locations.
+For the phonetic alignment step (see section~\ref{subsec:msa}),
+we used 14 additional doculects that are Germanic but not continental West Germanic. 
+To control for transciber bias, we only worked with doculects that shared the same transcriptor, Warren Maguire.
 
-more recently(?), also interactions between dialects and standard languages \citep{coetsem1992interaction}
-\citet{kremer1990einfuehrung}: in Germany and the Netherlands (but not in Switzerland), dialects tend to become closer to the standard languages (state/standard language borders as dialect borders). Low German dialects tend to be replaced however. In Non-Germanic regions (France, Belgium): also replaced
+We excluded one CWG doculect that covered only 35 concepts. % Schaeddel (Frisian)
+The Proto-Germanic data cover all 110 concepts; each of the modern doculects covers at least 103 concepts, and each concept is covered by at least 17 modern doculects.
+In total, we have 2181 sequence alignments between Proto-Germanic and modern CWG doculects.
 
-sound changes that characterize some but not all CWG variants:
+note on inflected forms
 
-- High German consonant shift
-  - some notes. try \citet[pp. 47-48]{harbert2007germanic} or Beekes
-  - \citet[p. 15]{harbert2007germanic}: mostly in Alpine German, partially in Franconian, not in Low German
-
-
-\begin{figure}
+\begin{figure}[h]
 \centering
-\includestandalone[width=\textwidth]{figures/harbert}
-\caption{Harbert 2007: somewhat taking into account the convergence of certain Germanic varieties due to mutual influence (tree + waves?)}
-\label{fig:cwg_harbert}
+\includegraphics[width=0.85\textwidth]{figures/map.pdf}
+\caption{Locations of the modern continental West Germanic doculects we worked with.}
+\label{fig:map}
 \end{figure}
 
 
-\begin{figure}
+\newpage
+\section{Continental West Germanic}
+\label{sec:cwg}
+
+Grouping the CWG doculects provides a challenge
+that has been taken up many times, with different results.
+
+Even the classification of West Germanic
+as its own branch of Germanic is controversal,
+though generally accepted
+(c.f. \citet{voyles1971problem}; \citet[pp. 7-8]{harbert2007germanic}; \citet{ringe2012cladistic}). % \citet[p. 404]{krogh1996stellung}
+
+Within the CWG dialect continuum, it gets even more complicated and contested.
+CWG doculects are very similar to one another and closely related.
+These similarities do not only exist because of genetic relatedness
+but also--enabled by the geographic proximity--mutual influences
+\citep[p. 8]{harbert2007germanic}.
+This position is also reflected in Figure~\ref{fig:cwg_harbert},
+which shows a proposed division of CWG doculects
+into three main groups: North Sea Germanic (including Frisian and Low German),
+Franconian (including Dutch and High Franconian),
+and Alpine Germanic (including Alemannic and Bavarian).
+It presents High German as the result of the convergence
+of High Franconian, Alemannic and Bavarian.
+
+\begin{figure}[b]
+\centering
+\includestandalone[width=\textwidth]{figures/harbert}
+\caption{
+The internal structure of continental West Germanic
+based on \citet[p. 8]{harbert2007germanic}.
+}
+\label{fig:cwg_harbert}
+\end{figure}
+
+%TODO Heggarty splits waves
+
+\citet{hammarstroem2018glottolog}, whose language catalogue
+contains strictly hierarchical categorizations, % TODO source??
+gives an entirely tree-like classification of the CWG doculects,
+as shown in Figure~\ref{fig:glottolog}.
+This classification is based on the work by \citet{stiles2013pan-west}
+and, as the previous figure, \citet{harbert2007germanic}.
+We include it here since the output of the clustering methods
+is also strictly hierarchical.
+
+\begin{figure}[h]
 \begin{adjustwidth}{-3cm}{-3cm}
 \centering
 \scalebox{0.8}{
@@ -165,10 +244,32 @@ sound changes that characterize some but not all CWG variants:
 }
 \end{adjustwidth}
 % \includestandalone[width=\textwidth]{figures/glottolog}
-\caption{Glottolog 3.2 for the doculects we used}
+\caption
+[
+The full classification tree (up to West Germanic) for the modern doculects we used,
+as defined by \citet{hammarstroem2018glottolog}.
+]
+{
+The full classification tree (up to West Germanic) for the modern doculects we used,
+as defined by \citet{hammarstroem2018glottolog}.
+The names of the modern doculects are dispayed in italics.
+}
+\label{fig:glottolog}
 \end{figure}
 
-\subsubsection{North Sea Germanic vs. Other}
+\citet[pp. 72-80]{nielsen1989germanic} gives an overview of the history of attempting to divide the West Germanic dialects into subgroups with the associated criteria (phonological, morphological, lexical, and/or extra-linguistic) and criticisms.
+
+On the other hand, more recently, % TODO than what?
+interactions between dialects and standard languages
+have influenced the dialect landscape
+\citep{coetsem1992interaction}.
+\citet{kremer1990einfuehrung} found that in Germany and in the Netherlands
+(but not in Switzerland), dialects tend to become closer to the standard languages,
+with the result of state or standard language borders tending to act as dialect borders.
+(They also found that Low German dialects tend and CWG spoken in Non-Germanic (e.g. francophone) regions tend to be replaced by the standard language instead.)
+
+\subsection{North Sea Germanic vs. Other}
+
 \citet{stiles2013pan-west} posits that the most significant division of West Germanic varieties is the split into Ingv\ae{}onic (that is, North Sea Germanic) varieties and non-Ingv\ae{}onic varieties.
 
 Ingv\ae{}onic: Frisian, English, and ``to a certain extend, Old Saxon''.
@@ -180,130 +281,67 @@ although \citet{stiles2013pan-west} also lists some phonological characteristics
 
 see also the map based on harbert 2007
 
+\subsection{The High German sound shift}
 
 
-\subsubsection{The High German sound shift}
+The High German sound shift is well-covered by the literature
+(see e.g. \citep[pp. 47--48]{harbert2007germanic}; \cite[pp. 62--64]{koenig2015dtv}).
 
-\citep[p. 47]{harbert2007germanic}
+% \citep[p. 47]{harbert2007germanic}
 The voiceless (aspirated) Germanic stops (/*p, *t, *k/)
 underwent lenition and shifted into affricates or fricatives.
 Generally, these stops developed into fricatives in postvocal positions,
 and into affricates in word-inital or postconsonantal positions,
-and /*t/ changed more commonly than /p*/, which changed more commonly than /*k/.
-South has more changes than North, muddy middle areas, see also Goblirsch's discussion
-
-\citep[p. 48]{harbert2007germanic}
-The voiced Germanic stops (/*b, *d, *g/) on the other hand
+and /*t/ changed more commonly than /*p/,
+which in turn changed more commonly than /*k/.
+% \citep[p. 48]{harbert2007germanic}
+To balance this out,
+the voiced Germanic stops (/*b, *d, *g/) on the other hand
 developed into their voiceless (and aspirated) counterparts.
+Generally, these changes are pronounced
+in the Southern CWG area, and did not take place in the North
+\cite{noble1983modern}. % TODO goblirsch's discussion
+In between, there are many doculects
+that only partially realized the High German sound shift,
+with some of the changes only applying to individual, non-loanword words
+\citet[p. 63]{koenig2015dtv}.
 
-\citeauthor{goblirsch2005lautverschiebungen} introduces
-two related ways of categorizing German(ic) data based on obstruent features:
-a four-way grouping of German dialects
-based on in how far they have realized the High German sound shift \citeyearpar[pp. 182-199]{goblirsch2005lautverschiebungen},
-and a five-way categorization of Germanic dialects
-based on their obstruent features \citeyearpar[pp. TODO]{goblirsch2005lautverschiebungen}.
+Benrath line, Speyer line, Rheinischer Faecher % TODO cite dtv atlas \
 
-based on these two categorizations:
-
+% TODO sources
 \begin{itemize}
-  \item pf, ts, kx
-  \item pf, ts
-  \item ts
-  \item --
+\item
+Upper German dialects
+that exhibit lenition for all three voiceless stops almost completely
+(except for somtimes /*k/ $>$ /(k)x/).
+(/*p, *t, *k/ $>$ /(p)f, t(s), k(x)/).
+Biel, Graubuenden, Walser, Hard, Ortisei
+Tuebingen, Herrlisheim
+
+\item
+Central German dialects
+partial development of the High German sound shift
+Cologne, Luxembourg
+
+\item
+Low German, Dutch, and Frisian dialects,
+which were not influenced by the High German sound shift.
+Achterhoek, Veenkolonien, Westerkwartier
+Dutch Std NL, Dutch Std BE, Ostend, Antwerp, Limburg  
+Grou, Feer, Heligoland
 \end{itemize}
 
-% \begin{itemize}
-%   \item HG consonant shift: voiceless plosives to affricates 
-%   \begin{itemize}
-%     \item Suedoberdeutsch (Suedbairisch, Suedmittelbairisch, Suedalemannisch, parts of Mittelalemannisch): pf, ts, kx
-%     Ortisei
-%     \item Nordoberdeutsch (Nordbairisch, Mittelbairisch, Nordalemannisch, parts of Mittelalemannisch, Ostfraenkisch, Suedrheinfraenkisch).
-%     similar to Std German wrt the HGCS
-%     p, t - pf, ts; kV - aspirated
-%     \item Suedmitteldeutsch (Moselfraenkisch, Rheinfraenkisch, parts of Thueringisch, parts of Obersaechsisch, Schlesisch)
-%     \item Nordmitteldeutsch (Ripuarian, Nordhessisch, Nordthueringisch, Nordobersaechsisch):
-%     Vp, Vt, Vk - Vf, Vs, Vx; t - ts
-%     Cologne
-%   \end{itemize}
-% \end{itemize}
-% the ts, pf ts, pf ts kx distinction also appears in Harbert p. 48
-
-% Biel, Hard, Graubuenden, Tuebingen, Walser - N/S Alemannic?
-
-% Herrlisheim?
-
-% Luxembourg?
-
-% not affected by HGCS: Dutch, Low German, Frisian
-
-% \subsubsection{Germanic varieties by obstruent systems}
-% \citet[pp. 215-235]{goblirsch2005lautverschiebungen}: "Typology of modern Germanic obstruent systems", from least to most innovative
-
-% considers whether obstruents are plosives (vs. affricates, fricatives), 
-
-% \begin{itemize}
-%   \item aspirationless:
-%   (continental) Dutch, S Low German (Südwestfälisch, Südostfälisch), W Frisian, certain Central German dialects (incl. Ripuarian)
-%   Dutch: Dutch Std NL, Dutch Std BE, Ostend, Antwerp, Limburg
-%   S Low German: ???
-%   W Frisian: Grou
-%   Ripuarian: Cologne--but Cologne does have aspiration in our data
-%   two series of plosives distinguished by voicing; one series of fricatives (217)
-%   North Germanic: gemination
-%   no (consistent) sound shift
-%   occlusion, voice, length
-%   \item general:
-%   Low German, NE Dutch
-%   partial sound shift
-%   occlusion, voice, length (NG), aspiration
-%   WG: simplified the geminates
-%   CWG: final devoicing
-%   aspiration
-%   \item voiceless:
-%   North Frisian; Suedmitteldeutsche Dialekte ohne Lenisierung
-%   complete 2nd sc, but no lenition
-%   occlusion, aspiration, length (NG)
-%   \item length:
-%   Oberdeutsche Dialekte ohne Lenisierung
-%   \item aspiration:
-%   Danish; N Low German; High German dialects with lenition
-% \end{itemize}
-
-
-\newpage
-\section{Data}
-
-continental European West Germanic dialects (CWG) and standard languages
-
-\citet{heggarty2018sound} compiled IPA transcriptions of word lists
-in a range of Germanic doculects for his Sound Comparisons project.
-From this database,
-we used 110 cognate sets from 20 modern CWG doculects
-and a reconstructed version of Proto-Germanic.
-Figure~\ref{fig:map} shows the locations of the places
-where the modern doculects were recorded.
-For the phonetic alignment step (see section~\ref{s:alignments}),
-we used 14 additional doculects that are Germanic but not continental West Germanic. 
-To control for transciber bias, we only worked with doculects that shared the same transcriptor, Warren Maguire.
-We excluded one CWG doculect that covered only 35 concepts. % Schaeddel (Frisian)
-The Proto-Germanic data cover all 110 concepts; each of the modern doculects covers at least 103 concepts, and each concept is covered by at least 17 modern doculects.
-In total, we have 2181 sequence alignments between Proto-Germanic and modern CWG doculects.
-
-note on inflected forms
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{figures/map.pdf}
-\caption{Map of the places where the modern doculects were recorded}
-\label{fig:map}
-\end{figure}
-
+This also matches the grouping by \citet{heggarty2018sound}
+(who only additionally split up the last group into
+Low German on the one hand,
+and Frisian, Dutch, and Flamish on the other.)
 
 \newpage
 \section{Methods}
+\label{sec:methods}
 
 \subsection{Multiple Sequence Alignment}
-\label{s:alignments}
+\label{subsec:msa}
 
 In order to extract sound correspondences, we need to align the sound sequences corresponding to each concept first.
 We carry out alignment based on data from all the investigated doculects at once using multiple sequence alignment.
@@ -358,6 +396,7 @@ Westerkwartier & k\textsuperscript{h}   & o    & \textltilde   & t\textsuperscri
 \end{table}
 
 \subsection{Sound Correspondence Extraction}
+\label{subsec:corres}
 
 After performing sound segment-wise alignment,
 we extract sound correspondences between each
@@ -388,11 +427,17 @@ which discern between fifteen consonant groups and sixteen vowel groups.
 We do not include information on word boundaries or gaps here,
 as it would be identical to the word boundary- or gap-related information
 included in the correspondences with simple contextual information.
+% TODO mention cases where SCA was useful in other applications
 
 \end{itemize}
 
 % TODO check montemagni. also ref them here
-
+Table~\ref{tab:context} provides an overview
+of the different context types, as found in the data.
+IPA characters with diacritics are classified
+like their diacritic-less counterparts,
+and diphthongs/triphthongs are classified
+according to the first character in the sequence.
 Table~\ref{tab:corres} shows the sound correspondences
 that can be inferred for the aligned segments
 from Proto-Germanic and Ortisei German for the alignment
@@ -413,6 +458,40 @@ to reduce the effect misalignments can have.
 After extracting the sound correspondences for
 all modern doculects, we have a doculect-by-correspondence
 matrix storing the absolute frequencies of the sound correspondences.
+
+\begin{table}[]
+\begin{tabular}{llll}
+Context type & Abbrev. & Definition & Corresponding IPA characters in our data\\\hline
+\multirow{3}{*}{Simple context} & \# & word boundaries & \\
+    & cons & consonants & \\
+    & vow & vowels & \\[3mm]
+
+\multirow{18}{*}{\begin{tabular}[c]{@{}l@{}}Sound class-\\ based context\end{tabular}}
+    & A & unrounded open vowels          & a, \textscripta \\ % reported as 'unrounded *back* vowels' in List2012 
+    & B & labial/labiodental fricatives  & f, \texttoptiebar{pf}, v, \textphi, \textbeta\\
+    & C & dental/alveolar affricates     & \texttoptiebar{dz}, \texttoptiebar{ts}, \texttoptiebar{t\textesh}\\ % not as context
+    & D & dental fricatives              & \dh, \texttheta\\ % not as context
+    & E & unrounded mid vowels           & e, \ae, \textturna, \textschwa, \textepsilon, \textrevepsilon, \textturnv \\
+    & G & velar/uvual fricatives         & x, \textchi, \textgamma \\ % gamma not used as context
+    & H & laryngeals                     & h, \texthth, \textglotstop \\ % only h used as context
+    & I & unrounded close vowels         & i, \i \\
+    & J & palatal approximants           & j \\
+    & K & velar/uvular plosives/affricates & k, \texttoptiebar{kx}, q, \textg \\
+    & L & lateral approximants           & l, \textltilde, \textscl \\
+    & M & labial nasals                  & m, \textltailm \\ % only m as context
+    & N & (non-labial) nasals            & n, \ng, \textltailm, \textscn \\
+    & O & rounded open vowels            & \textturnscripta\\ % not as context, % reported as 'rounded *back* vowels' in List2012 
+    & P & labial plosives                & b, p \\
+    & R & trills/taps/flaps              & r, \textturnr, \textfishhookr, \textscr, \textinvscr \\
+    & S & sibilant fricatives            & s, z, \c{c}, \textesh, \textyogh, \textctj \\ % ctj not as context
+    & T & dental/alveolar plosives       & t, d, \textrtailt \\
+    & U & rounded mid vowels             & o, \o, \oe, \textopeno, \textbaro, \textscoelig \\ % scoelig not as context
+    & W & labial approximants/fricatives & w \\
+    & Y & rounded close vowels           & u, y, \textupsilon, \textscy\\\hline % reported as 'rounded *front* vowels' in List2012 
+\end{tabular}
+\caption{Context representations}
+\label{tab:context}
+\end{table}
 
 \begin{table}[h]
 \begin{center}
@@ -437,39 +516,9 @@ based context & & a $>$ \textopeno{} / \_L & & & & \\
 \label{tab:corres}
 \end{table}
 
-\begin{table}[]
-\begin{tabular}{llll}
-Context type & Abbrev. & Exlanation & IPA characters\\\hline
-\multirow{3}{*}{Simple context} & \# & word boundaries & \\
-    & cons & consonants & \\
-    & vow & vowels & \\[2mm]
-\multirow{18}{*}{\begin{tabular}[c]{@{}l@{}}Sound class-\\ based context\end{tabular}}
-    & A & unrounded back vowels          & a, \textscripta \\
-    & B & labial/labiodental fricatives  & f, \texttoptiebar{pf}, v, \textphi, \textbeta\\
-    & C & dental/alveolar affricates     & \texttoptiebar{dz}, \texttoptiebar{ts}, \texttoptiebar{t\textesh}\\ % not as context
-    & D & dental fricatives              & \dh, \texttheta\\ % not as context
-    & E & unrounded mid vowels           & e, \ae, \textturna, \textschwa, \textepsilon, \textrevepsilon, \textturnv \\
-    & G & velar/uvual fricatives         & x, \textchi, \textgamma \\ % gamma not used as context
-    & H & laryngeals                     & h, \texthth, \textglotstop \\ % only h used as context
-    & I & unrounded close vowels         & i, \i \\
-    & J & palatal approximants           & j \\
-    & K & velar/uvular plosives          & k, \texttoptiebar{kx}, q, \textg \\
-    & L & lateral approximants           & l, \textltilde, \textscl \\
-    & M & labial nasals                  & m, \textltailm \\ % only m as context
-    & N & (non-labial) nasals            & n, \ng, \textltailm, \textscn \\
-    & O & rounded back vowels            & \textturnscripta\\ % not as context
-    & P & labial plosives                & b, p \\
-    & R & trills/taps/flaps              & r, \textturnr, \textfishhookr, \textscr, \textinvscr \\
-    & S & sibilant fricatives            & s, z, \c{c}, \textesh, \textyogh, \textctj \\ % ctj not as context
-    & T & dental/alveolar plosives       & t, d, \textrtailt \\
-    & U & rounded mid vowels             & o, \o, \oe, \textopeno, \textbaro, \textscoelig \\ % scoelig not as context
-    & W & labial approximants/fricatives & w \\
-    & Y & rounded front vowels           & u, y, \textupsilon, \textscy\\\hline
-\end{tabular}
-\end{table}
-% diacritics, diphthongs
 
 \subsection{Clustering}
+\label{subsec:clustering}
 
 We implemented two approaches to custering the data.
 Both clustering approaches follow a similar structure:
@@ -482,6 +531,7 @@ the context-less sound correspondences,
 and once with all context types.
 
 \subsubsection{TF-IDF and UPGMA}
+\label{subsubsec:tfidf}
 
 We first transform the frequencies
 in the doculect-by-correspondence tally matrix
@@ -548,6 +598,7 @@ for analyzing dialect distances by \citet{heeringa2004measuring}.
 
 
 \subsubsection{Bipartite Spectral Graph Co-clustering}
+\label{subsubsec:bsgc}
 
 For the other clustering method, we use the approach
 introduced by \citet{dhillon2001co-clustering}.
@@ -632,6 +683,7 @@ the cluster elements again.
 % TODO do parts of this belong in the results section??
 
 \subsection{Ranking sound correspondences by importance}
+\label{subsec:ranking}
 
 When all doculects have been assigned to this hierarchical cluster structure,
 we rank the sound correspondences associated with each cluster.
@@ -722,6 +774,7 @@ such that more frequent correspondences rank higher.
 
 \newpage
 \section{Results}
+\label{sec:results}
 
 Applying the aforementioned methods yields
 four arrangements of the data into hierarchical partitions,
@@ -918,12 +971,13 @@ high representativeness score for all doculects?
 
 \newpage
 \section{Discussion}
+\label{sec:discussion}
 
 % -- specific ---
 
 \subsection{Comparisons to proposed groupings/structures}
 \subsubsection{Comparison with Glottolog tree}
-comparison with language ancestry data from \citet{hammarstrom2018glottolog}
+comparison with language ancestry data from \citet{hammarstroem2018glottolog}
 
 \subsubsection{Ingv\ae{}onic vs. Non-Ingv\ae{}onic}
 gold standard based on \citet{stiles2013pan-west}:
@@ -971,6 +1025,10 @@ more abstract sound correspondence rules (incl. context) to model sound changes 
 Regularity: How often does this correspondence occur compared to the original sound? similar to \citet{prokic2013combining}. also like bigram MLE
 
 investigate further the influence of data selection/preprocessing/properties on bsgc performance
+
+sound classes too specific/wrong kind of specificity?
+
+fuzzy clustering
 
 \newpage
 \bibliographystyle{chicago}

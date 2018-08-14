@@ -2,14 +2,14 @@ library(rworldmap)
 library(extrafont)
 loadfonts()
 
-pdf("../doc/figures/map.pdf", family="CM Roman", width=6.5, height=6.5)
+pdf("../doc/figures/map.pdf", family="CM Roman", width=10.1, height=9.3)
 map <- getMap(resolution="low")
-doculects<-read.csv("coordinates.csv", header=T)
+doculects<-read.csv("coordinates.csv", header=T, encoding = "UTF-8")
 plot(map,
-     xlim = c(3, 13),
-     ylim = c(45.5, 56.5),
+     xlim = c(2.1, 12.2),
+     ylim = c(46, 55.3),
      asp=NA)
-points(x = doculects$longitude, doculects$latitude, col = "red", pch=17, cex=1.5)
+points(x = doculects$longitude, doculects$latitude, col = "red", pch=17, cex=1.7)
 
 # https://stackoverflow.com/questions/25631216/r-is-there-any-way-to-put-border-shadow-or-buffer-around-text-labels-en-r-plot
 # https://github.com/cran/TeachingDemos/blob/master/R/shadowtext.R
@@ -27,6 +27,6 @@ shadowtext <- function(x, y=NULL, labels, col='black', bg='white',
 }
 
 
-shadowtext(doculects$longitude, doculects$latitude, doculects$doculect, pos=doculects$pos, offset=0.5)
+shadowtext(doculects$longitude, doculects$latitude, doculects$doculect, pos=doculects$pos, offset=0.5, cex=1.4)
 dev.off()
 embed_fonts("../doc/figures/map.pdf")
