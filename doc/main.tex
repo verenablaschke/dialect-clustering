@@ -5,6 +5,7 @@
 \usepackage{hyperref}
 \usepackage{multirow}
 \usepackage{graphicx} % including the map
+\usepackage[section]{placeins} % don't let the graphics/tables move past sections
 \usepackage{tipa} % IPA
 \usepackage{amsmath} % formulae
 \usepackage{mathtools} % displaystyle in formulae with cases
@@ -13,10 +14,8 @@
 \usepackage{standalone} % import figures
 \usepackage{changepage} % adjust text width
 \usepackage{parskip} % proper paragraphs, no indentation
-% \usepackage{showframe} % TODO remove
+\usepackage{showframe} % TODO remove
 \usepackage[margin=3cm]{geometry}
-
-% \linespread{1.25}
 
 \title{Clustering Dialect Varieties Based on Historical Sound Correspondences}
 \author{Verena Blaschke}
@@ -45,7 +44,7 @@ Clustering Dialect Varieties Based on Historical Sound Correspondences
 {\large
 \textit{Author}\\
 Verena Blaschke}\\
-\href{mailto:verena.blaschke@student.uni-tuebingen.de}{\textit{verena.blaschke@student.uni-tuebingen.de}}\\
+\href{mailto:verena.blaschke@student.uni-T\"{u}bingen.de}{\textit{verena.blaschke@student.uni-T\"{u}bingen.de}}\\
 \end{flushleft}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
@@ -53,7 +52,7 @@ Verena Blaschke}\\
 {\large
 \textit{Supervisor}\\
 Dr. Çağrı Çöltekin}\\
-\href{mailto:ccoltekin@sfs.uni-tuebingen.de}{\textit{ccoltekin@sfs.uni-tuebingen.de}}\\
+\href{mailto:ccoltekin@sfs.uni-T\"{u}bingen.de}{\textit{ccoltekin@sfs.uni-T\"{u}bingen.de}}\\
 \end{flushright}
 \end{minipage}\\
 
@@ -184,7 +183,7 @@ note on inflected forms
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.85\textwidth]{figures/map.pdf}
+\includegraphics[width=\textwidth]{figures/map.pdf}
 \caption{Locations of the modern continental West Germanic doculects we worked with.}
 \label{fig:map}
 \end{figure}
@@ -389,6 +388,12 @@ of the boundary (or transition zone) between Low and Central German
 We base the following classification of
 the CWG doculects we worked with
 on a map by \citet[pp. 230-231]{koenig2015dtv}:
+\footnote{
+% TODO refine or remove
+Central German is delimited % TODO word choice
+to the North (Low German) with an isogloss bundle containing
+'ik/ich, maken/machen, Dorp/Dorf'...
+}
 
 \begin{itemize}
 \item
@@ -403,12 +408,12 @@ Cologne, Luxembourg.
 
 \item
 \textbf{Upper German:}
-Tuebingen, Herrlisheim,
-Biel, Graubuenden, Walser, Hard, Ortisei.
+T\"{u}bingen, Herrlisheim,
+Biel, Graub\"{u}nden, Walser, Hard, Ortisei.
 \end{itemize}
 
 This division matches the intra-database grouping by \citet{heggarty2018sound}
-(who only additionally split up the last group into
+(who additionally split up the last group into
 Low German on the one hand,
 and Frisian, Dutch, and Flamish on the other).
 
@@ -874,27 +879,24 @@ Tables~\ref{tab:tfidf-nocontext-corres} and \ref{tab:tfidf-context-corres}
 show the highest-rank sound correspondences (importance score $\geq$ 90\%)
 for the context-less and context information run, respectively.
 
-\begin{figure}
+\begin{figure}[h]
     % \centering
-    % \begin{adjustwidth}{-0.6cm}{-0.5cm}
-    % height=0.28\textheight
-    \includestandalone[height=0.4\textheight]{figures/tfidf-nocontext}
-    % \hspace{-5mm}
-    \includestandalone[height=0.4\textheight]{figures/tfidf-context}
-    % \end{adjustwidth}
+    \includestandalone[height=0.46\textheight]{figures/tfidf-nocontext}
+    \includestandalone[height=0.46\textheight]{figures/tfidf-context}
     \caption{TFIDF with no (top) and additional (bottom) context information, highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
     \label{fig:tfidf-dendrograms}
 \end{figure}
 
 \begin{table}[h]
-\begin{tabular}{p{7cm}p{2.5cm}rrrrc}
+\centering
+\begin{tabular}{p{6.5cm}p{2.4cm}rrrrc}
 \hline
 Cluster & Sound corres. & Imp & Rep & Dist & Count \\ \hline
 
 Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6 \\
     & x $>$ \textesh / vow\_ & 100 & 100 & 100 & 6 \\ [2mm]
 
-Graubuenden, Walser & a $>$ \textsubbar{a}\texthalflength{} / cons\_ & 100 & 100 & 100 & 7\\[2mm]
+Graub\"{u}nden, Walser & a $>$ \textsubbar{a}\texthalflength{} / cons\_ & 100 & 100 & 100 & 7\\[2mm]
 
 Antwerp, Ostend & x $>$ $\emptyset$ / \_vow & 100 & 100 & 100 & 17\\
     & r $>$ \textsubbar{s} & 100 & 100 & 100 & 11\\
@@ -906,7 +908,7 @@ Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10 \\
     & a $>$ \textopeno / cons\_ & 100 & 100 & 100 & 9 \\
     & r $>$ \textchi / \_cons & 100 & 100 & 100 & 9 \\[2mm]
 
-Antwerp, Dutch Std BE, Ostend & f $>$ v & 100 & 100 & 100 & 15\\
+Antwerp, Std. Dutch (BE), Ostend & f $>$ v & 100 & 100 & 100 & 15\\
     & f $>$ v / \_vow & 100 & 100 & 100 & 13\\
     & k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\
     & f $>$ v / \#\_ & 100 & 100 & 100 & 12\\[2mm]
@@ -915,9 +917,9 @@ Feer, Heligoland & d $>$ $\emptyset$ / cons\_ & 100 & 100 & 100 & 10\\
     & d $>$ $\emptyset$ / N\_ & 100 & 100 & 100 & 8\\
     & s $>$ s / \_K & 100 & 100 & 100 & 8\\[2mm]
 
-Tuebingen, Cologne, Luxembourg, & $\emptyset$ $>$ \textglotstop{} / \#\_ & 100 & 100 & 100 & 169\\
-Westerkwartier, Feer, Heligoland, Biel, & $\emptyset$ $>$ \textglotstop{} / \_vow & 100 & 100 & 100 & 169\\
-Graubuenden, Walser, Hard, & $\emptyset$ $>$ \textglotstop{} & 100 & 100 & 100 & 169\\
+T\"{u}bingen, Cologne, Luxembourg, & $\emptyset$ $>$ \textglotstop{} & 100 & 100 & 100 & 169\\
+Westerkwartier, Feer, Heligoland, Biel, & $\emptyset$ $>$ \textglotstop{} / \#\_ & 100 & 100 & 100 & 169\\
+Graub\"{u}nden, Walser, Hard, & $\emptyset$ $>$ \textglotstop{} / \_vow & 100 & 100 & 100 & 169\\
 Herrlisheim, Ortisei & t $>$ \texttoptiebar{ts} & 91 & 83 & 100 & 76\\
     & k $>$ k\textsuperscript{h} & 91 & 83 & 100 & 52\\
     & t $>$ \texttoptiebar{ts} / \#\_ & 91 & 83 & 100 & 49\\
@@ -928,9 +930,9 @@ Herrlisheim, Ortisei & t $>$ \texttoptiebar{ts} & 91 & 83 & 100 & 76\\
     & ll $>$ l & 91 & 83 & 100 & 30\\
     & ll $>$ l / vow\_& 91 & 83 & 100 & 30\\[2mm]
 
-Grou, Dutch Std NL, Dutch Std BE, & k $>$ k / \#\_ & 100 & 100 & 100 & 40\\
+Grou, Std. Dutch (NL), Std. Dutch (BE), & k $>$ k / \#\_ & 100 & 100 & 100 & 40\\
 Antwerp, Ostend, Limburg, & t $>$ t / \_\# & 100 & 100 & 100 & 37\\
-Achterhoek, Veenkolonien & k $>$ k / \_vow & 100 & 100 & 100 & 31\\\hline
+Achterhoek, Veenkoloni\"{e}n & k $>$ k / \_vow & 100 & 100 & 100 & 31\\\hline
 \end{tabular}
 \caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
 Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
@@ -940,7 +942,8 @@ context
 \end{table}
 
 \begin{table}[h]
-\begin{tabular}{llrrrrc}
+\centering
+\begin{tabular}{p{6.5cm}p{2.4cm}rrrrc}
 \hline
 Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
 
@@ -950,16 +953,16 @@ Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10\\[2mm]
 
 Heligoland, Westerkwartier & t $>$ \textsubring{d} & 100 & 100 & 100 & 8\\[2mm]
 
-Antwerp, Dutch Std BE, Ostend & f $>$ v & 100 & 100 & 100 & 15\\
+Antwerp, Std. Dutch (BE), Ostend & f $>$ v & 100 & 100 & 100 & 15\\
 & k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\[2mm]
 
-Biel, Graubuenden, Hard, Walser & e $>$ y\textlengthmark & 100 & 100 & 100 & 13\\[2mm]
+Biel, Graub\"{u}nden, Hard, Walser & e $>$ y\textlengthmark & 100 & 100 & 100 & 13\\[2mm]
 
-Herrlisheim, Ortisei, Hard, Biel, Graubuenden, & t $>$ s & 90 & 82 & 100 & 59\\
-Walser, Limburg, Feer, Tuebingen, Cologne, Luxembourg & & & & & \\[2mm]
+Herrlisheim, Ortisei, Hard, Biel, Graub\"{u}nden, & t $>$ s & 90 & 82 & 100 & 59\\
+Walser, Limburg, Feer, T\"{u}bingen, Cologne, Luxembourg & & & & & \\[2mm]
 
 Heligoland, Westerkwartier, Herrlisheim, Ortisei, Hard, & $\emptyset$ $>$ \textglotstop{} & 96 & 92 & 100 & 169\\
-Biel, Graubuenden, Walser, Limburg, Feer, Tuebingen, & s $>$ \textesh & 92 & 85 & 100 & 107\\
+Biel, Graub\"{u}nden, Walser, Limburg, Feer, T\"{u}bingen, & s $>$ \textesh & 92 & 85 & 100 & 107\\
 Cologne, Luxembourg & & & & & \\\hline
 \end{tabular}
 \caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
@@ -972,52 +975,54 @@ nocontext}
 
 \subsection{BSGC}
 
-\begin{figure}
+The results for the graph clustering method are
+displayed in Figure~\ref{fig:bsgc-trees}.
+Again, the doculects are in structures of 18 intermediary clusters.
+Of these, 6 are contain at least one sound correspondence
+with an importance rating of 70\% or above for the context-less run,
+and 10 for the run with additional context information.
+
+Of the 201 sound correspondences for the context-less run,
+1 has an importance score of 100\% for an intermediary cluster
+(see Table~\ref{tab:bsgc-nocontext-corres});
+for the run with context information, 2 out of 665 correspondences reach this score.
+There are no sound correspondences with importance scores of at least 90\%
+for intermediary clusters for the run without context information,
+but Figure~\ref{tab:bsgc-context-corres} provides an overview of
+all 9 sound correspondences for which this applies
+in the run with context information.
+
+\begin{figure}[h]
   \centering
-  \includestandalone[height=0.35\textheight]{figures/bsgc-context}
-  
+%   \includestandalone[height=0.35\textheight]{figures/bsgc-nocontext}
+  \includestandalone[width=0.85\textwidth]{figures/bsgc-nocontext}
+
   \vspace{2em}
   
-  \includestandalone[height=0.35\textheight]{figures/bsgc-nocontext}
-  \caption{BSGC with (top) and without (bottom) context information and highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
+%   \includestandalone[height=0.35\textheight]{figures/bsgc-context}
+  \includestandalone[width=\textwidth]{figures/bsgc-context}
+  \caption{BSGC with no (top) and additional (bottom) context information and highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
   \label{fig:bsgc-trees}
 \end{figure}
 
-% CONTEXT
-% excl. singletons and the cluster including all doculects
-% max. importance score: 100.00%
-% 665 correspondences (total)
-% 63 correspondences >= the threshold (70% importance)
-% 9 correspondences >= 90% importance
-% 3 correspondences >= 95% importance
-% 2 correspondences == 100% importance
-
-% NO CONTEXT
-% excl. singletons and the cluster including all doculects
-% max. importance score: 100.00%
-% 201 correspondences (total)
-% 22 correspondences >= the threshold (70% importance)
-% 1 correspondences >= 90% importance
-% 1 correspondences >= 95% importance
-% 1 correspondences == 100% importance
-
 
 \begin{table}[h]
-\begin{tabular}{llrrrrc}
+\centering
+\begin{tabular}{p{6.5cm}p{2.4cm}rrrrc}
 \hline
 Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
 
 Heligoland, Westerkwartier & t $>$ t\textsuperscript{h} / vow\_ & 100 & 100 & 100 & 14\\[2mm]
 
-Antwerp, Dutch Std BE & e $>$ e\textlengthmark & 100 & 100 & 100 & 7\\[2mm]
+Antwerp, Std. Dutch (BE) & e $>$ e\textlengthmark & 100 & 100 & 100 & 7\\[2mm]
 
-Biel, Cologne, Feer, Graubuenden, Hard, Herrlisheim, & t $>$ s & 90 & 82 & 100 & 59\\
-Limburg, Luxembourg, Ortisei, Tuebingen, Walser &  t $>$ s / vow\_ & 90 & 82 & 100 & 58\\
+Biel, Cologne, Feer, Graub\"{u}nden, Hard, Herrlisheim, & t $>$ s & 90 & 82 & 100 & 59\\
+Limburg, Luxembourg, Ortisei, T\"{u}bingen, Walser &  t $>$ s / vow\_ & 90 & 82 & 100 & 58\\
 &  t $>$ s / \_\# & 90 & 82 & 100 & 34\\[2mm]
 
-Biel, Cologne, Feer, Graubuenden, Hard, Heligoland, Herrlisheim, & $\emptyset$ $>$ \textglotstop{} / \_vow & 96 & 92 & 100 & 169\\
+Biel, Cologne, Feer, Graub\"{u}nden, Hard, Heligoland, Herrlisheim, & $\emptyset$ $>$ \textglotstop{} / \_vow & 96 & 92 & 100 & 169\\
 Limburg, Luxembourg, Ortisei, 
-Tuebingen, Walser, Westerkwartier & s $>$ \textesh & 92 & 85 & 100 & 107\\
+T\"{u}bingen, Walser, Westerkwartier & s $>$ \textesh & 92 & 85 & 100 & 107\\
  & s $>$ \textesh / \#\_ & 92 & 85 & 100 & 63\\
  & s $>$ \textesh / \_cons & 92 & 85 & 100 & 60\\\hline
 \end{tabular}
@@ -1028,11 +1033,12 @@ context}
 \end{table}
 
 \begin{table}[h]
-\begin{tabular}{llrrrrc}
+\centering
+\begin{tabular}{p{6.5cm}p{2.4cm}rrrrc}
 \hline
 Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
 
-Antwerp, Dutch Std BE & e $>$ e\textlengthmark & 100 & 100 & 100 & 7\\\hline
+Antwerp, Std. Dutch (BE) & e $>$ e\textlengthmark & 100 & 100 & 100 & 7\\\hline
 \end{tabular}
 \caption{BSGC: sound correspondences with an importance score of 90\% or higher.
 Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.

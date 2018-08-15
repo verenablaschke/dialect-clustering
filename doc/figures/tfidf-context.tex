@@ -87,27 +87,26 @@
 % Sound correspondences.
 \node[corres] at (20) {x $>$ \textesh};
 \node[corres] at (21) {n $>$ n\texthalflength};
-\node[corres] at (22) {a $>$ \textsubbar{a}\texthalflength{} / cons\_};
-\node[corres] at (23) {x $>$ $\emptyset$ / \_vow};
-\node[corres] at (24) {a $>$ \textopeno / \_cons};
+\node[corres, right=6mm, below=2mm] at (22) {a $>$ \textsubbar{a}\texthalflength{} / cons\_};
+\node[corres, right=6mm, below=1mm] at (23) {x $>$ $\emptyset$ / \_vow};
+\node[corres, right=4.5mm, above=0mm] at (24) {a $>$ \textopeno / \_cons};
 % \node[corres] at (25) {};
 \node[corres] at (26) {f $>$ v};
-\node[corres] at (27) {d $>$ $\emptyset$ / cons\_};
-\node[corres] at (28) {t $>$ t\textsuperscript{h} / vow\_};
-\node[corres] at (29) {e $>$ y\textlengthmark / cons\_};
-\node[corres] at (30) {u $>$ o\texthalflength\textturna / cons\_};
-\node[corres] at (31) {r $>$ $\emptyset$  / \_\#};
-\node[corres] at (32) {r $>$ \textlowering{\textinvscr} / \_cons};
-\node[corres] at (33) {t $>$ t / \#\_};
-\node[corres] at (34) {e $>$ y\textlengthmark / cons\_};
-\node[corres] at (35) {$\emptyset$ $>$ \textglotstop{} / \#\_};
-\node[corres] at (36) {k $>$ k / \#\_};
-\node[corres] at (37) {k $>$ k / \#\_};
- % TODO adjust label positions
+\node[corres, right=6mm, above=0mm] at (27) {d $>$ $\emptyset$ / cons\_};
+\node[corres, right=6mm, below=-3mm] at (28) {t $>$ t\textsuperscript{h} / vow\_};
+\node[corres, right=6mm, above=0mm] at (29) {e $>$ y\textlengthmark / cons\_};
+\node[corres, left=2mm, below=-2.7mm] at (30) {u $>$ o\texthalflength\textturna{} / cons\_};
+\node[corres, right=4mm, above=0mm] at (31) {r $>$ $\emptyset$  / \_\#};
+\node[corres, right=6mm, above=0mm] at (32) {r $>$ \textlowering{\textinvscr} / \_cons};
+\node[corres, right=6mm, above=0mm] at (33) {t $>$ t / \#\_};
+\node[corres, right=6mm, above=0mm] at (34) {e $>$ y\textlengthmark{} / cons\_};
+\node[corres, right=4mm, above=0mm] at (35) {$\emptyset$ $>$ \textglotstop{} / \#\_};
+\node[corres, right=4.5mm, above=0mm] at (36) {k $>$ k / \#\_};
+\node[corres, right=4mm, above=0mm] at (37) {k $>$ k / \#\_};
 
 
 % X axis.
-\draw[->] (0,0) -- node[label={[label distance=-1.3cm]Average osine distance}]{{}} (12.0, 0);
+\draw[->] (0,0) -- node[label={[label distance=-1.3cm]Average cosine distance}]{{}} (12.0, 0);
 \draw (0.0, 1pt) -- (0.0, -3pt) node[label={[label distance=-7mm]0.00}] {};
 \draw (1.5, 1pt) -- (1.5, -3pt) node[label={[label distance=-7mm]0.10}] {};
 \draw (3.0, 1pt) -- (3.0, -3pt) node[label={[label distance=-7mm]0.20}] {};
