@@ -9,7 +9,7 @@
 \usepackage{amsmath} % formulae
 \usepackage{mathtools} % displaystyle in formulae with cases
 \usepackage{forest} % (non-dendrogram) trees
-\usetikzlibrary{decorations.pathreplacing} % draw braces in tikz figure
+\usetikzlibrary{decorations.pathreplacing} % draw braces in tikz figures
 \usepackage{standalone} % import figures
 \usepackage{changepage} % adjust text width
 \usepackage{parskip} % proper paragraphs, no indentation
@@ -144,7 +144,7 @@ and explain how we rank the sound correspondences.
 We present the results in section~\ref{sec:results}
 and discuss them in section~\ref{sec:discussion}.
 
-\newpage
+% \newpage
 \section{Data}
 \label{sec:data}
 
@@ -190,7 +190,7 @@ note on inflected forms
 \end{figure}
 
 
-\newpage
+% \newpage
 \section{Continental West Germanic}
 \label{sec:cwg}
 
@@ -268,75 +268,151 @@ have influenced the dialect landscape
 with the result of state or standard language borders tending to act as dialect borders.
 (They also found that Low German dialects tend and CWG spoken in Non-Germanic (e.g. francophone) regions tend to be replaced by the standard language instead.)
 
-\subsection{North Sea Germanic vs. Other}
+\subsection{North Sea Germanic}
 
-\citet{stiles2013pan-west} posits that the most significant division of West Germanic varieties is the split into Ingv\ae{}onic (that is, North Sea Germanic) varieties and non-Ingv\ae{}onic varieties.
+\citet{stiles2013pan-west} posits that
+the most significant division of West Germanic varieties is
+the split into Ingv\ae{}onic (that is, North Sea Germanic) varieties
+and non-Ingv\ae{}onic varieties.
+This split is also supported by, e.g., \citet[p. 7]{harbert2007germanic}, \citet[pp. 117--123]{sonderegger1979grundzuege}, and \cite{auwera2017germanic}.
+What is more complicated is the definition of which doculects Ingv\ae{}onic consists of:
+% \citet{stiles2013pan-west} defines this group
+% as Frisian, English, and ``to a certain extend, Old Saxon'' (i.e., Low German),
+% whereas \citet[pp. 7, 17]{harbert2007germanic} defines it
+% as Frisian, English, and Old Saxon,
+% while noting that Dutch has also been influenced by the Ingv\ae{}onic languages.
+% \citet[pp. 71, 117--123]{sonderegger1979grundzuege} classifies Ingv\ae{}onic
+% as Frisian, English, Low German, and (having become a part of this group more recently) Dutch,
+% while \citet{auwera2017germanic} define Ingv\ae{}onic as Frisian, English, and Dutch.
+\begin{itemize}
+\item 
+\citet{stiles2013pan-west} defines this group
+as Frisian, English, and ``to a certain extend, Old Saxon'' (i.e., Low German),
 
-Ingv\ae{}onic: Frisian, English, and ``to a certain extend, Old Saxon''.
+\item
+\citet[pp. 7, 17]{harbert2007germanic} defines it
+as Frisian, English, and Old Saxon,
+while noting that Dutch has also been influenced by the Ingv\ae{}onic languages,
+
+\item
+\citet[pp. 71, 117--123]{sonderegger1979grundzuege} classifies Ingv\ae{}onic
+as Frisian, English, Low German, and (having become a part of this group more recently) Dutch, % TODO elaborate on 'more recently'
+
+\item
+\Citet{auwera2017germanic} define Ingv\ae{}onic as Frisian, English, and Dutch.
+\end{itemize}
 
 The distinct properties of the Ingv\ae{}onic subgroup
-concern mostly inflection and pronouns (\citet{stiles2013pan-west}; \citet[pp. 7-8]{harbert2007germanic}),
+concern mostly inflection and pronouns
+(\citet{stiles2013pan-west}; \citet[pp. 7-8]{harbert2007germanic}),
 although \citet{stiles2013pan-west} also lists some phonological characteristics:
-``backing of long and short *\textit{a} before nasals[...]; fronting of long and short *\textit{a}; and palatalization of velar consonants''
+``backing of long and short *\textit{a} before nasals[...];
+fronting of long and short *\textit{a};
+and palatalization of velar consonants''.
 
-see also the map based on harbert 2007
+Following the categorization by \citet{harbert2007germanic}, % TODO reason
+we can divide the modern doculects from our dataset as follows:
 
-\subsection{The High German sound shift}
+\begin{itemize}
+\item 
+\textbf{Ingv\ae{}onic:}
+Feer, Heligoland, Grou,
+Westerkwartier, Veenkoloni\"{e}n, Achterhoek
 
+\item
+\textbf{Non-Ingv\ae{}onic:}
+Std. Dutch (NL), Std. Dutch (BE), Ostend, Antwerp, Limburg,
+Herrlisheim, Luxembourg, Cologne,
+Ortisei, T\"{u}bingen, Walser, Biel, Hard, Graub\"{u}nden.
+\end{itemize}
 
-The High German sound shift is well-covered by the literature
-(see e.g. \citep[pp. 47--48]{harbert2007germanic}; \cite[pp. 62--64]{koenig2015dtv}).
+\subsection{Results of the High German Sound Shift}
 
-% \citep[p. 47]{harbert2007germanic}
+A very important development for the CWG doculects,
+especially High German, is the High German sound shift.
+\footnote{
+The term \textit{High German sound shift} has been used both
+to only describe the High German consonant shift,
+and to describe the consonant shift and sound shifts concerning
+the High German vowel system.
+We use it here with the former meaning.
+}
+Summarizing \citet[pp. 47--48]{harbert2007germanic}
+and \citet[pp. 62--64]{koenig2015dtv},
+we can outline the High German sound shift as follows:
+
 The voiceless (aspirated) Germanic stops (/*p, *t, *k/)
 underwent lenition and shifted into affricates or fricatives.
-Generally, these stops developed into fricatives in postvocal positions,
+(Typically, these stops developed into fricatives in postvocal positions,
 and into affricates in word-inital or postconsonantal positions,
 and /*t/ changed more commonly than /*p/,
-which in turn changed more commonly than /*k/.
-% \citep[p. 48]{harbert2007germanic}
+which in turn changed more commonly than /*k/.)
 To balance this out,
 the voiced Germanic stops (/*b, *d, *g/) on the other hand
 developed into their voiceless (and aspirated) counterparts.
+
 Generally, these changes are pronounced
 in the Southern CWG area, and did not take place in the North
-\cite{noble1983modern}. % TODO goblirsch's discussion
+\cite[p. 33]{noble1983modern}.
+\footnote{
+It is therefore generally assumed that the locations
+from which these changes spread are in the Southern CWG area,
+although there are also some controversies surrounding this
+\citep[pp. 155--181]{goblirsch2005lautverschiebungen}.
+}.
 In between, there are many doculects
 that only partially realized the High German sound shift,
-with some of the changes only applying to individual, non-loanword words
+with some of the changes only applying to individual words
 \citet[p. 63]{koenig2015dtv}.
 
-Benrath line, Speyer line, Rheinischer Faecher % TODO cite dtv atlas \
+Based on this, there is a common split
+of CWG doculects spoken in Germany into three groups:
+Upper German doculects, which exhibit lenition for
+all three voiceless stops almost completely
+(except for sometimes /*k/ $>$ /(k)x/),
+Central German doculects, which show a
+partial development of the High German sound shift,
+and Low German doculects,
+which were not influenced by the High German sound shift
+\citep[pp. 33, 55]{noble1983modern}.
 
-% TODO sources
+This division is performed based on
+the presence or absence of this shift in individual words.
+The pronunciation boundaries (isoglosses) for such words
+sometimes appear tightly bundled together,
+although such bundles can also fan out such that a region
+contains a continuum of very subtle dialect differences,
+as is the case with the so-called Rhenish Fan at the Western part
+of the boundary (or transition zone) between Low and Central German
+\citep[pp. 63, 138, 141]{koenig2015dtv}.
+
+We base the following classification of
+the CWG doculects we worked with
+on a map by \citet[pp. 230-231]{koenig2015dtv}:
+
 \begin{itemize}
 \item
-Upper German dialects
-that exhibit lenition for all three voiceless stops almost completely
-(except for somtimes /*k/ $>$ /(k)x/).
-(/*p, *t, *k/ $>$ /(p)f, t(s), k(x)/).
-Biel, Graubuenden, Walser, Hard, Ortisei
-Tuebingen, Herrlisheim
+\textbf{Low German, Dutch, and Frisian:}
+Westerkwartier, Veenkoloni\"{e}n, Achterhoek,
+Feer, Heligoland, Grou,
+Std. Dutch (NL), Std. Dutch (BE), Ostend, Antwerp, Limburg.
 
 \item
-Central German dialects
-partial development of the High German sound shift
-Cologne, Luxembourg
+\textbf{Central German:}
+Cologne, Luxembourg.
 
 \item
-Low German, Dutch, and Frisian dialects,
-which were not influenced by the High German sound shift.
-Achterhoek, Veenkolonien, Westerkwartier
-Dutch Std NL, Dutch Std BE, Ostend, Antwerp, Limburg  
-Grou, Feer, Heligoland
+\textbf{Upper German:}
+Tuebingen, Herrlisheim,
+Biel, Graubuenden, Walser, Hard, Ortisei.
 \end{itemize}
 
-This also matches the grouping by \citet{heggarty2018sound}
+This division matches the intra-database grouping by \citet{heggarty2018sound}
 (who only additionally split up the last group into
 Low German on the one hand,
-and Frisian, Dutch, and Flamish on the other.)
+and Frisian, Dutch, and Flamish on the other).
 
-\newpage
+% \newpage
 \section{Methods}
 \label{sec:methods}
 
@@ -772,7 +848,7 @@ We additionally re-rank correspondences
 with the same importance score
 such that more frequent correspondences rank higher.
 
-\newpage
+% \newpage
 \section{Results}
 \label{sec:results}
 
@@ -969,7 +1045,7 @@ nocontext}
 high representativeness score for all doculects?
 
 
-\newpage
+% \newpage
 \section{Discussion}
 \label{sec:discussion}
 
@@ -979,20 +1055,9 @@ high representativeness score for all doculects?
 \subsubsection{Comparison with Glottolog tree}
 comparison with language ancestry data from \citet{hammarstroem2018glottolog}
 
-\subsubsection{Ingv\ae{}onic vs. Non-Ingv\ae{}onic}
-gold standard based on \citet{stiles2013pan-west}:
-\begin{itemize}
-\item
-Ingv\ae{}onic:
-Achterhoek, Feer, Grou, Heligoland, Veenkolonien, Westerkwartier
-\item
-Non-Ingv\ae{}onic:
-the rest
-\end{itemize}
+\subsubsection{North Sea Germanic}
 
-\subsubsection{obstruent systems}
-
-\subsubsection{(grouping dialects by) sound shifts}
+\subsubsection{Results of the High German Sound Shift}
 
 do the groups/criteria match the ones introduced earlier?
 
@@ -1030,7 +1095,7 @@ sound classes too specific/wrong kind of specificity?
 
 fuzzy clustering
 
-\newpage
+% \newpage
 \bibliographystyle{chicago}
 \bibliography{lib}
 \end{document}
