@@ -3,8 +3,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage{hyperref}
-\usepackage{multirow}
-\usepackage{graphicx} % including the map
+\usepackage{multirow} % context example table
+\usepackage{graphicx} % include the map
+\usepackage[dvipsnames]{xcolor} % colour-code the groups (has to come before tikz)
+\usepackage[geometry]{ifsym} % shape-code the groups
 \usepackage[section]{placeins} % don't let the graphics/tables move past sections
 \usepackage{tipa} % IPA
 \usepackage{amsmath} % formulae
@@ -171,6 +173,8 @@ The modern doculects are from locations in the
 Netherlands, Belgium, Luxembourg, (along the Western border of) Germany,
 France (Alsace), Switzerland, Liechtenstein, Austria (Lake Constance), and Italy (South Tyrol).
 Figure~\ref{fig:map} provides an overview of these locations.
+The legend is explained in section~\ref{sec:cwg}.
+
 For the phonetic alignment step (see section~\ref{subsec:msa}),
 we used 14 additional doculects that are Germanic but not continental West Germanic. 
 To control for transciber bias, we only worked with doculects that shared the same transcriptor, Warren Maguire.
@@ -325,6 +329,11 @@ Herrlisheim, Luxembourg, Cologne,
 Ortisei, T\"{u}bingen, Walser, Biel, Hard, Graub\"{u}nden.
 \end{itemize}
 
+In Figure~\ref{fig:map}, the Ingv\ae{}onic doculects
+are marked with blue, non-solid circles.
+A split similar to the one proposed by \citet{sonderegger1979grundzuege}
+is part of the following section.
+
 \subsection{Results of the High German Sound Shift}
 
 A very important development for the CWG doculects,
@@ -412,7 +421,11 @@ T\"{u}bingen, Herrlisheim,
 Biel, Graub\"{u}nden, Walser, Hard, Ortisei.
 \end{itemize}
 
-This division matches the intra-database grouping by \citet{heggarty2018sound}
+Figure~\ref{fig:map} shows this division:
+Low German, Dutch and Frisian are marked with (solid green and non-solid blue) circles,
+Central German with yellow squares, and Upper German with red triangles.
+
+This division also matches the intra-database grouping by \citet{heggarty2018sound}
 (who additionally split up the last group into
 Low German on the one hand,
 and Frisian, Dutch, and Flamish on the other).
@@ -424,10 +437,17 @@ and Frisian, Dutch, and Flamish on the other).
 \subsection{Multiple Sequence Alignment}
 \label{subsec:msa}
 
-In order to extract sound correspondences, we need to align the sound sequences corresponding to each concept first.
-We carry out alignment based on data from all the investigated doculects at once using multiple sequence alignment.
-Using multiple sequence alignment instead of carrying out pairwise alignments between the modern data and the reference data makes it possible to carry out the alignment based on patterns found in commonalities between the modern doculects as well.
-Because of this, we use all of the Germanic data we extracted from the Sound Comparisons project instead of only the CWG doculects and Proto-Germanic.
+In order to extract sound correspondences,
+we need to align the sound sequences corresponding to each concept first.
+We carry out alignment based on data from
+all the investigated doculects at once using multiple sequence alignment.
+Using multiple sequence alignment instead of carrying out
+pairwise alignments between the modern data and the reference data
+makes it possible to carry out the alignment
+based on patterns found in commonalities between the modern doculects as well.
+Because of this, we use all of the Germanic data
+we extracted from the Sound Comparisons project
+instead of only the CWG doculects and Proto-Germanic.
 
 We use a library-based version \citep{notredame2000t-coffee:} of the progressive multiple sequence alignment method \citep{thompson1994clustal}.
 For each concept:
@@ -436,6 +456,17 @@ For each concept:
 \item
 Divide the phonetic representation of each word into an array of sound segments.
 These sound segments are typically single IPA tokens (including diacritics), but we use multi-token segments for affricates, diph- and triphthongs, and geminates.
+\footnote{
+Allowing multi-token segments is different from
+the method employed by, e.g., \citet{wieling2010hierarchical}.
+They neither allowed multi-token segments nor did they add contextual information
+(see \ref{subsec:corres}),
+but they remark on a common alignment $\emptyset$:[\textesh],
+which commonly appears after [t]:[t].
+We opt instead to interpret affricates as single segments with
+the result of correspondences such as [t]:[\texttoptiebar{t\textesh}].
+
+}
 
 \item
 Create alignments for all possible binary sequence combinations.
@@ -881,8 +912,8 @@ for the context-less and context information run, respectively.
 
 \begin{figure}[h]
     % \centering
-    \includestandalone[height=0.46\textheight]{figures/tfidf-nocontext}
-    \includestandalone[height=0.46\textheight]{figures/tfidf-context}
+    \includestandalone[height=0.45\textheight]{figures/tfidf-nocontext}
+    \includestandalone[height=0.45\textheight]{figures/tfidf-context}
     \caption{TFIDF with no (top) and additional (bottom) context information, highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
     \label{fig:tfidf-dendrograms}
 \end{figure}
@@ -1023,8 +1054,8 @@ Limburg, Luxembourg, Ortisei, T\"{u}bingen, Walser &  t $>$ s / vow\_ & 90 & 82 
 Biel, Cologne, Feer, Graub\"{u}nden, Hard, Heligoland, Herrlisheim, & $\emptyset$ $>$ \textglotstop{} / \_vow & 96 & 92 & 100 & 169\\
 Limburg, Luxembourg, Ortisei, 
 T\"{u}bingen, Walser, Westerkwartier & s $>$ \textesh & 92 & 85 & 100 & 107\\
- & s $>$ \textesh / \#\_ & 92 & 85 & 100 & 63\\
- & s $>$ \textesh / \_cons & 92 & 85 & 100 & 60\\\hline
+ & s $>$ \textesh{} / \#\_ & 92 & 85 & 100 & 63\\
+ & s $>$ \textesh{} / \_cons & 92 & 85 & 100 & 60\\\hline
 \end{tabular}
 \caption{BSGC: sound correspondences with an importance score of 90\% or higher.
 Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
@@ -1046,10 +1077,82 @@ nocontext}
 \label{tab:bsgc-nocontext-corres}
 \end{table}
 
-% svd how many components. svd vs no svd
-
+% TODO 
 high representativeness score for all doculects?
 
+\subsection{Comparisons to Continental West Germanic Groupings}
+
+For all methods, the first (in the figures: rightmost) split
+creates one group containing only Dutch, Low German, and Frisian doculects,
+and one group containing a mixture of mostly doculects from other groups
+as well as some doculects belonging to the aforementioned groups.
+
+commonalities between method results
+
+% \subsubsection{Comparison with Glottolog tree}
+% comparison with language ancestry data from \citet{hammarstroem2018glottolog}
+
+\subsubsection{North Sea Germanic}
+
+For all approaches, the Ingv\ae{}onic doculects
+are distributed across several not directly connected subclusters.
+These are, by method, (from least to most connected):
+
+\begin{itemize}
+\item
+BSGC (no context):
+None of the Ingv\ae{}onic doculects share a cluster
+with only other Ingv\ae{}onic doculects.
+% Three of them
+
+\item
+BSCG (with context):
+Westerkwartier and Heligoland are clustered together.
+
+\item
+TFIDF (no context):
+Achterhoek and Veenkoloni\"{e}n form a cluster,
+as do Heligoland and Westerkwartier.
+
+\item
+TFIDF (with context):
+Achterhoek and Veenkoloni\"{e}n also form a cluster.
+Feer, Heligoland and Westerkwartier form another cluster.
+\end{itemize}
+
+\subsubsection{Results of the High German Sound Shift}
+
+For both BSGC runs, the results can be compared to the consonant shift-based grouping as follows:
+Of the Low German/Dutch/Frisian doculects are in
+one of the two major subclusters % 7
+(which contains no Central or Upper German samples),
+although four of them are distributed throughout the other major subcluster.
+(For the run without context information,
+the samples in the latter group are not directly clustered together,
+but for the run with additional context information,
+two of them (Westerkwartier and Heligoland) are.)
+The Central German doculects from Cologne and Luxembourg
+are not directly clustered together; the smallest cluster they share
+is with four other doculects.
+Of the Upper German doculects,
+Walser and Biel are directly clustered together,
+as are T\"{u}bingen and Ortisei.
+The other three Upper German samples are distributed throughout
+the second major subcluster.
+
+By contrast, the results of the TFIDF runs fit
+the grouping based on the High German sound shift more closely.
+Again, most of the samples from the Low German/Dutch/Frisian group
+constitute one of the two major clusters.
+The remaining samples from this class are clustered together
+to different degrees in the different runs:
+For the context-less run,
+Heligoland and Westerkwartier are directly grouped together,
+but the remaining two doculects (Feer and Limburg) are not.
+For the run with context information on the other hand,
+there are only three doculects outside the major cluster
+(Heligoland, Feer, Westerkwartier),
+and they are all grouped together.
 
 % \newpage
 \section{Discussion}
@@ -1057,19 +1160,13 @@ high representativeness score for all doculects?
 
 % -- specific ---
 
-\subsection{Comparisons to proposed groupings/structures}
-\subsubsection{Comparison with Glottolog tree}
-comparison with language ancestry data from \citet{hammarstroem2018glottolog}
-
-\subsubsection{North Sea Germanic}
-
-\subsubsection{Results of the High German Sound Shift}
-
 do the groups/criteria match the ones introduced earlier?
 
 \subsection{effect of context information}
 
-really helps for BSGC: higher importance values! (more values $\geq$80, scores $\geq$90 at all)
+(a couple of) higher importance values for BSGC
+
+most of the high-ranking correspondences with contextual information use simple contexts
 
 \subsection{co-clustering}
 How beneficial is co-clustering really? Why not just cluster the doculects (after TF-IDF maybe) and then apply the sound correspondence metrics? It seems like the benefit of co-clustering is mainly that $v_2$ can be used for ranking the correspondences, although this doesn't seem to be very popular among the authors who used bipartite spectral graph clustering for dialect data...
@@ -1081,9 +1178,6 @@ why does bsgc not work that well here despite it working quite nicely for wielin
 
 wrongly assigned sound correspondences (k means initialization?)
 
-comparison to the results discussed in \citet{wieling2011bipartite}
-They remark on a common alignment [-]:[\textesh], which commonly appears after [t]:[t]. Interpreting affricates as single segments with the result of correspondences such as [t]:[\t{t\textesh}], or using another approach to include contextual information seems more satisfying to me.
-
 % --- more general ---
 
 All of the comparisons here are phonetic (and might possibly include some morphological information in some cases) and on a word level, but we are ignoring lexical, syntactical, morphological, etc. information in this analysis.
@@ -1093,13 +1187,19 @@ data is from a relatively large region though
 
 more abstract sound correspondence rules (incl. context) to model sound changes more generally (nasalization, lenition)
 
-Regularity: How often does this correspondence occur compared to the original sound? similar to \citet{prokic2013combining}. also like bigram MLE
+Regularity: How often does this correspondence occur compared to the original sound? similar to \citet{prokic2013combining}. also like bigram MLE, transition probabilities
 
 investigate further the influence of data selection/preprocessing/properties on bsgc performance
 
 sound classes too specific/wrong kind of specificity?
 
 fuzzy clustering
+
+more simple context system
+
+some doculects were clustered together despite not sharing any (high-ranking) correspondences (as a cluster) -- random pairwise commonalities?
+
+we do not (cannot) take into account consecutive changes
 
 % \newpage
 \bibliographystyle{chicago}

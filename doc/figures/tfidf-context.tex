@@ -1,29 +1,36 @@
 \documentclass{standalone}
+\usepackage[dvipsnames]{xcolor} % has to come before tikz
 \usepackage{tikz, tipa}
+\usepackage[geometry]{ifsym}
 \begin{document}
+% TODO make the hues match those of the map
+\def\upper{\color{red}\FilledBigTriangleUp}
+\def\central{\color{Dandelion}\FilledBigSquare}
+\def\dutch{\color{ForestGreen}\FilledBigCircle}
+\def\ingv{\color{Blue}\BigCircle}
 \tikzset{corres/.style={fill=white, right=6mm, above=1mm,inner sep=0pt}}
 \begin{tikzpicture}
 % Doculects by singleton cluster number (alphabetical index).
-\node[label=left:Ortisei] (14) at (0, 0.5) {};
-\node[label=left:Herrlisheim] (11) at (0, 1.0) {};
-\node[label=left:Hard] (9) at (0, 1.5) {};
-\node[label=left:Walser] (18) at (0, 2.0) {};
-\node[label=left:Graub\"{u}nden] (7) at (0, 2.5) {};
-\node[label=left:Biel] (2) at (0, 3.0) {};
-\node[label=left:T\"{u}bingen] (16) at (0, 3.5) {};
-\node[label=left:Cologne] (3) at (0, 4.0) {};
-\node[label=left:Luxembourg] (13) at (0, 4.5) {};
-\node[label=left:Westerkwartier] (19) at (0, 5.0) {};
-\node[label=left:Feer] (6) at (0, 5.5) {};
-\node[label=left:Heligoland] (10) at (0, 6.0) {};
-\node[label=left:Ostend] (15) at (0, 6.5) {};
-\node[label=left:Antwerp] (1) at (0, 7.0) {};
-\node[label=left:Std. Dutch (BE)] (4) at (0, 7.5) {};
-\node[label=left:Veenkoloni\"{e}n] (17) at (0, 8.0) {};
-\node[label=left:Achterhoek] (0) at (0, 8.5) {};
-\node[label=left:Limburg] (12) at (0, 9.0) {};
-\node[label=left:Std. Dutch (NL)] (5) at (0, 9.5) {};
-\node[label=left:Grou] (8) at (0, 10.0) {};
+\node[label=left:Ortisei \upper](14) at (0, 0.5) {};
+\node[label=left:Herrlisheim \upper] (11) at (0, 1.0) {};
+\node[label=left:Hard \upper] (9) at (0, 1.5) {};
+\node[label=left:Walser \upper] (18) at (0, 2.0) {};
+\node[label=left:Graub\"{u}nden \upper] (7) at (0, 2.5) {};
+\node[label=left:Biel \upper] (2) at (0, 3.0) {};
+\node[label=left:T\"{u}bingen \upper] (16) at (0, 3.5) {};
+\node[label=left:Cologne \central] (3) at (0, 4.0) {};
+\node[label=left:Luxembourg \central] (13) at (0, 4.5) {};
+\node[label=left:Westerkwartier \ingv] (19) at (0, 5.0) {};
+\node[label=left:Feer \ingv] (6) at (0, 5.5) {};
+\node[label=left:Heligoland \ingv] (10) at (0, 6.0) {};
+\node[label=left:Ostend \dutch] (15) at (0, 6.5) {};
+\node[label=left:Antwerp \dutch] (1) at (0, 7.0) {};
+\node[label=left:Std. Dutch (BE) \dutch] (4) at (0, 7.5) {};
+\node[label=left:Veenkoloni\"{e}n \ingv] (17) at (0, 8.0) {};
+\node[label=left:Achterhoek \ingv] (0) at (0, 8.5) {};
+\node[label=left:Limburg \dutch] (12) at (0, 9.0) {};
+\node[label=left:Std. Dutch (NL) \dutch] (5) at (0, 9.5) {};
+\node[label=left:Grou \ingv] (8) at (0, 10.0) {};
 
 % Clusters from Z.
 \node (20) at (4.600251109974757,4.25) {};

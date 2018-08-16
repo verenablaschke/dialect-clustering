@@ -1,8 +1,15 @@
 \documentclass{standalone}
 \usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor} % has to come before tikz
+\usepackage[geometry]{ifsym}
 \usepackage{forest}
 \usepackage{tipa}
 \begin{document}
+% TODO make the hues match those of the map
+\def\upper{\color{red}\FilledBigTriangleUp}
+\def\central{\color{Dandelion}\FilledBigSquare}
+\def\dutch{\color{ForestGreen}\FilledBigCircle}
+\def\ingv{\color{Blue}\BigCircle}
 \begin{forest}
 for tree={
   grow=west,
@@ -14,46 +21,46 @@ for tree={
 [
     [ll $>$ l
         [t $>$ s
-            [Graub\"{u}nden]
+            [Graub\"{u}nden \upper]
             [t $>$ s
-                [[Ortisei][T\"{u}bingen]]
+                [[Ortisei \upper][T\"{u}bingen \upper]]
                 [
                     [
-                        [[Biel][Walser]]
+                        [[Biel \upper][Walser \upper]]
                         [
-                            [Luxembourg]
+                            [Luxembourg \central]
                             [
-                                [Cologne]
+                                [Cologne \central]
                                 [
                                     [
-                                        [Hard]
-                                        [[Herrlisheim][Luxembourg]]
+                                        [Hard \upper]
+                                        [[Herrlisheim \upper][Limburg \dutch]]
                                     ]
-                                    [Feer]
+                                    [Feer \ingv]
                                 ]
                             ]
                         ]
                     ]
-                    [Achterhoek]
+                    [Achterhoek \ingv]
                 ]
             ]
         ]
-        [Heligoland]
+        [Heligoland \ingv]
     ]
     [b $>$ f
         [
-            [Ostend]
+            [Ostend \dutch]
             [ll > \textltilde
-                [[Std. Dutch (NL)][Veenkoloni\"{e}n]]
+                [[Std. Dutch (NL) \dutch][Veenkoloni\"{e}n \ingv]]
                 [
                     [e $>$ e\textlengthmark
-                        [Antwerp][Std. Dutch (BE)]
+                        [Antwerp \dutch][Std. Dutch (BE) \dutch]
                     ]
-                    [Grou]
+                    [Grou \ingv]
                 ]
             ]
         ]
-        [Westerkwartier]
+        [Westerkwartier \ingv]
     ]
 ]
 \end{forest}
