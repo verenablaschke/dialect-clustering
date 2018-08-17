@@ -168,6 +168,10 @@ and a reconstructed version of Proto-Germanic.
 \footnote{
 The Sound Comparisons project does not state
 the theoretical basis for the Proto-Germanic reconstruction.
+According to the project website,
+the reconstruction probably is close to
+a variant of the language spoken in around 500 BCE
+in Southern Scandinavia.
 }
 Of the modern doculects, two are identified as standard languages
 in the database (Dutch spoken in the Netherlands and Belgium
@@ -183,7 +187,15 @@ The legend is explained in section~\ref{sec:cwg}.
 
 For the phonetic alignment step (see section~\ref{subsec:msa}),
 we used 14 additional doculects that are Germanic but not continental West Germanic. 
-To control for transciber bias, we only worked with doculects that shared the same transcriptor, Warren Maguire.
+To control for transciber bias,
+we only worked with doculects that share the same transcriptor,
+Warren Maguire.
+The transcriptions of the modern doculect data
+are narrow transcriptions;
+that of the Proto-Germanic reconstruction appears to be broader.
+\footnote{
+For instance, the Proto-Germanic data include no suprasegmentals.
+}
 
 We excluded one CWG doculect that covered only 35 concepts. % Schaeddel (Frisian)
 The Proto-Germanic data cover all 110 concepts; each of the modern doculects covers at least 103 concepts, and each concept is covered by at least 17 modern doculects.
@@ -355,7 +367,12 @@ Summarizing \citet[pp. 47--48]{harbert2007germanic}
 and \citet[pp. 62--64]{koenig2015dtv},
 we can outline the High German sound shift as follows:
 
-The voiceless (aspirated) Germanic stops (/*p, *t, *k/)
+The voiceless (aspirated)
+\footnote{
+Aspiration is not marked in the reconstructed version of Proto-Germanic
+we worked with.
+}
+Germanic stops (/*p, *t, *k/)
 underwent lenition and shifted into affricates or fricatives.
 (Typically, these stops developed into fricatives in postvocal positions,
 and into affricates in word-inital or postconsonantal positions,
@@ -367,7 +384,7 @@ developed into their voiceless (and aspirated) counterparts.
 
 Generally, these changes are pronounced
 in the Southern CWG area, and did not take place in the North
-\cite[p. 33]{noble1983modern}.
+\cite[p. 33]{noble1983modern}
 \footnote{
 It is therefore generally assumed that the locations
 from which these changes spread are in the Southern CWG area,
@@ -1230,6 +1247,25 @@ there are only three doculects outside the major cluster
 (Heligoland, Feer, Westerkwartier),
 and they are all grouped together.
 
+The outcomes of the High German sound shift or lack thereof
+are also visible in some of the highest-ranked sound correspondences.
+
+The sound correspondence rules with 100\% importance scores
+for the Dutch/Ingv\ae{}onic cluster (TFIDF-context)
+all reflect some of the unvoiced stops remaining unchanged:
+k $>$ k / \#\_, t $>$ t / \_\#, k $>$ k / \_vow.
+
+Conversely, the predominantly Upper German clusters
+have high-ranked correspondences demonstrating lenition:
+t $>$ \texttoptiebar{ts}, t $>$ \texttoptiebar{ts} / \#\_,
+t $>$ \texttoptiebar{ts} / \_vow (TFIDF-context),
+t $>$ s (TFIDF-nocontext, BSGC).
+None of the sound correspondences with high importance values
+describe the affrication or spirantization of /*k/ or /*p/
+for any of the clustering approaches,
+although it has to be noted that with the given data,
+none of the sound correspondences based on /*p/
+occurred often enough to actually be used for clustering.
 
 \subsection{Context Information}
 
@@ -1251,18 +1287,12 @@ the more detailed sound classes.
 Additionally, word boundary-based correspondences are also very common
 among the high-ranking sound correspondences.
 
-\subsection{Important Sound Correspondences}
-
 % \newpage
 \section{Discussion}
 \label{sec:discussion}
 
-% -- specific ---
-
 do the groups/criteria match the ones introduced earlier?
 
-
-\subsection{co-clustering}
 How beneficial is co-clustering really? Why not just cluster the doculects (after TF-IDF maybe) and then apply the sound correspondence metrics? It seems like the benefit of co-clustering is mainly that $v_2$ can be used for ranking the correspondences, although this doesn't seem to be very popular among the authors who used bipartite spectral graph clustering for dialect data...
 
 why does bsgc not work that well here despite it working quite nicely for wieling, montemagni, ...?
@@ -1290,10 +1320,14 @@ sound classes too specific/wrong kind of specificity?
 fuzzy clustering
 
 more simple context system
+this system cannot pick up on related changes with slightly different outcomes,
+e.g. k $>$ \texttoptiebar{kx}, k $>$ x, k $>$ \textchi
 
 some doculects were clustered together despite not sharing any (high-ranking) correspondences (as a cluster) -- random pairwise commonalities?
 
 we do not (cannot) take into account consecutive changes
+
+putting some of the other correspondences into context
 
 % \newpage
 \bibliographystyle{chicago}
