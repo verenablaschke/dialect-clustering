@@ -3,8 +3,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage{hyperref}
+\usepackage{wrapfig} % place figure to the left
 \usepackage{multirow} % context example table
 \usepackage{graphicx} % include the map
+\usepackage[outline]{contour} % contour place names in the cosine similarity figure
 \usepackage[dvipsnames]{xcolor} % colour-code the groups (has to come before tikz)
 \usepackage[geometry]{ifsym} % shape-code the groups
 \usepackage[section]{placeins} % don't let the graphics/tables move past sections
@@ -80,7 +82,7 @@ Eberhard Karls Universität Tübingen
 \vspace{1em}
 August 2018}
 \end{center}
-    
+	
 \end{titlepage}
 
 
@@ -515,16 +517,7 @@ Table~\ref{tab:msa} shows an excerpt from the multiple sequence alignment for th
 
 \begin{table}[h]
 \begin{center}
-\begin{tabular}{l|llllll}
-\hline
-Doculect       & \multicolumn{6}{l}{Sound segments} \\ \hline
-Proto-Germanic  & k    & a    & l   & d    & a  & z  \\
-Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{ts}  & -  & - \\ 
-Biel           & \textchi    & \textscripta\textupsilon   & -   & t    & -  & -  \\
-Walser         & x    & a\textlengthmark    & l   & t    & -  & -  \\
-Luxembourg     & k\textsuperscript{h}   & a\textlengthmark   & l   & -    & -  & -  \\
-Westerkwartier & k\textsuperscript{h}   & o    & \textltilde   & t\textsuperscript{h}   & -  & -  \\ \hline
-\end{tabular}
+\input{tables/msa}
 \end{center}
 \caption{An excerpt from the aligned sequence table for the concept ``cold''.}
 \label{tab:msa}
@@ -598,102 +591,16 @@ all modern doculects, we have a doculect-by-correspondence
 matrix storing the absolute frequencies of the sound correspondences.
 
 \begin{table}[]
-\begin{tabular}{llll}
-Context type & Abbrev. & Definition & Corresponding IPA characters in our data\\\hline
-Word boundary & \# & word boundaries & \\[3mm]
-
-\multirow{2}{*}{Simple context} & cons & consonants & \\
-    & vow & vowels & \\[3mm]
-
-\multirow{18}{*}{\begin{tabular}[c]{@{}l@{}}Sound class-\\ based context\end{tabular}}
-    & A & unrounded open vowels          & a, \textscripta \\ % reported as 'unrounded *back* vowels' in List2012 
-    & B & labial/labiodental fricatives  & f, \texttoptiebar{pf}, v, \textphi, \textbeta\\
-    & C & dental/alveolar affricates     & \texttoptiebar{dz}, \texttoptiebar{ts}, \texttoptiebar{t\textesh}\\ % not as context
-    & D & dental fricatives              & \dh, \texttheta\\ % not as context
-    & E & unrounded mid vowels           & e, \ae, \textturna, \textschwa, \textepsilon, \textrevepsilon, \textturnv \\
-    & G & velar/uvual fricatives         & x, \textchi, \textgamma \\ % gamma not used as context
-    & H & laryngeals                     & h, \texthth, \textglotstop \\ % only h used as context
-    & I & unrounded close vowels         & i, \i \\
-    & J & palatal approximants           & j \\
-    & K & velar/uvular plosives/affricates & k, \texttoptiebar{kx}, q, \textg \\
-    & L & lateral approximants           & l, \textltilde, \textscl \\
-    & M & labial nasals                  & m, \textltailm \\ % only m as context
-    & N & (non-labial) nasals            & n, \ng, \textltailm, \textscn \\
-    & O & rounded open vowels            & \textturnscripta\\ % not as context, % reported as 'rounded *back* vowels' in List2012 
-    & P & labial plosives                & b, p \\
-    & R & trills/taps/flaps              & r, \textturnr, \textfishhookr, \textscr, \textinvscr \\
-    & S & sibilant fricatives            & s, z, \c{c}, \textesh, \textyogh, \textctj \\ % ctj not as context
-    & T & dental/alveolar plosives       & t, d, \textrtailt \\
-    & U & rounded mid vowels             & o, \o, \oe, \textopeno, \textbaro, \textscoelig \\ % scoelig not as context
-    & W & labial approximants/fricatives & w \\
-    & Y & rounded close vowels           & u, y, \textupsilon, \textscy\\\hline % reported as 'rounded *front* vowels' in List2012 
-\end{tabular}
+\input{tables/context}
 \caption{Context representations}
 \label{tab:context}
 \end{table}
 
 \begin{table}[h]
-\begin{center}
-% \begin{tabular}{l|llllll}
-% \hline
-%       & \multicolumn{6}{l}{Sound segments and inferred correspondences} \\ \hline
-
-% Proto-Germ.  & k    & a    & l   & d    & a  & z  \\
-% Ortisei        & k\textsuperscript{h}   & \textopeno    & l   & \texttoptiebar{ts}  & -  & - \rule[-2mm]{0pt}{0pt}\\\hline
-
-% No context & k $>$ k\textsuperscript{h} & a $>$ \textopeno & l $>$ l & d $>$ \texttoptiebar{ts} & a $>$ $\emptyset$ & z $>$ $\emptyset$ \rule{0pt}{4mm}\\[3mm]
-
-% Simple & k $>$ k\textsuperscript{h} / \#\_ & a $>$ \textopeno / cons\_ & l $>$ l / vow\_ & d $>$ \texttoptiebar{ts} / cons\_ & a $>$ $\emptyset$ / cons\_ & \\
-% context & k $>$ k\textsuperscript{h} / \_vow & a $>$ \textopeno{} / \_cons & l $>$ l / \_cons & & & z $>$ $\emptyset$ / \_\# \\[3mm]
-
-% Sound class- &  & a $>$ \textopeno / K\_ &  l $>$ l / A\_ & d $>$ \texttoptiebar{ts} / L\_ & & \\
-% based context & & a $>$ \textopeno{} / \_L & & & & \\
-% \hline
-% \end{tabular}
-
-\begin{tabular}{ll|p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
-\hline
-Pr.-Gmc. & Ortisei & No context & Simple c. & Sound class... & Boundary\\\hline
-k & k\textsuperscript{h}
-    & k $>$ k\textsuperscript{h}
-    & k $>$ k\textsuperscript{h} / \_vow
-    &
-    & k $>$ k\textsuperscript{h} / \#\_\\[2mm]
-a & \textopeno
-    & a $>$ \textopeno
-    & a $>$ \textopeno / cons\_
-    & a $>$ \textopeno / K\_
-    & \\
-& &
-    & a $>$ \textopeno{} / \_con
-    & a $>$ \textopeno{} / \_L
-    & \\[2mm]
-l & l
-    & l $>$ l
-    & l $>$ l / vow\_
-    & l $>$ l / A\_
-    & \\
-& &
-    & l $>$ l / \_cons    
-    &
-    & \\[2mm]
-d & \texttoptiebar{ts}
-    & d $>$ \texttoptiebar{ts}
-    & d $>$ \texttoptiebar{ts} / cons\_
-    & d $>$ \texttoptiebar{ts} / L\_
-    & \\[2mm]
-a &
-    & a $>$ $\emptyset$
-    & a $>$ $\emptyset$ / cons\_
-    & & \\[2mm]
-z &
-    & z $>$ $\emptyset$
-    & 
-    &
-    & z $>$ $\emptyset$ / \_\# \\\hline
-\end{tabular}
-\end{center}
-\caption{Proto-Germanic--Ortisei German sound correspondences extracted from the aligned entries for the concept ``cold''.}
+\input{tables/corres}
+\caption{
+Proto-Germanic--Ortisei German sound correspondences
+extracted from the aligned entries for the concept ``cold''.}
 \label{tab:corres}
 \end{table}
 
@@ -981,15 +888,7 @@ including and excluding contextual information.
 Of the 18 intermediary clusters
 (i.e. clusters that are neither singletons nor contain all doculects),
 13 are associated with a sound correspondence with an importance score of at least 70\% for the context-less run,
-and 17 for the run with additional contextual information. 
-
-In total, 201 sound correspondence were used for the run without contextual information,
-of which 6 have importance scores of 100\% for intermediary clusters.
-For the run with contextual information,
-24 sound correspondences (of 665 total) reach 100\% importance for intermediary clusters.
-Tables~\ref{tab:tfidf-nocontext-corres} and \ref{tab:tfidf-context-corres}
-show the highest-rank sound correspondences (importance score $\geq$ 90\%)
-for the context-less and context information run, respectively.
+and 17 for the run with additional contextual information.
 
 \begin{figure}[h]
 % \centering
@@ -1006,53 +905,39 @@ for the context-less and context information run, respectively.
 \label{fig:tfidf-dendrograms}
 \end{figure}
 
+The cosine similarity table that the dendrogram
+for the run with context information is based on
+is visualized as a map in Figure~\ref{fig:cosine}.
+It is described more closely in TODO.
+
+% \begin{wrapfigure}{l}{0.4\textwidth}
+% \includestandalone[width=\linewidth]{figures/cosine}
+% \caption{Caption1}
+% \label{fig:cosine}
+% \end{wrapfigure}
+\begin{figure}[h]
+\centering
+\includestandalone[width=0.6\textwidth]{figures/cosine}
+\caption
+{Cosine similarities between the doculects (TFIDF-context)}
+{
+Cosine similarities between the doculects (TFIDF-context).
+Lines that are bolder and darker represent greater cosine similarity scores.
+}
+\label{fig:cosine}
+\end{figure}
+
+In total, 201 sound correspondence were used for the run without contextual information,
+of which 6 have importance scores of 100\% for intermediary clusters.
+For the run with contextual information,
+24 sound correspondences (of 665 total) reach 100\% importance for intermediary clusters.
+Tables~\ref{tab:tfidf-nocontext-corres} and \ref{tab:tfidf-context-corres}
+show the highest-rank sound correspondences (importance score $\geq$ 90\%)
+for the context-less and context information run, respectively.
+
 \begin{table}[h]
 \centering
-\begin{tabular}{p{6.5cm}p{2.4cm}rrrrc}
-\hline
-Cluster & Sound corres. & Imp & Rep & Dist & Count \\ \hline
-
-Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6 \\
-    & x $>$ \textesh / vow\_ & 100 & 100 & 100 & 6 \\ [2mm]
-
-Walser, Graub\"{u}nden & a $>$ \textsubbar{a}\texthalflength{} / cons\_ & 100 & 100 & 100 & 7\\[2mm]
-
-Ostend, Antwerp & x $>$ $\emptyset$ / \_vow & 100 & 100 & 100 & 17\\
-    & r $>$ \textsubbar{s} & 100 & 100 & 100 & 11\\
-    & r $>$ \textsubbar{s} / vow\_ & 100 & 100 & 100 & 10\\
-    & k $>$ \textsubplus{k} / vow\_ & 100 & 100 & 100 & 6\\[2mm]
-
-Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10 \\
-    & a $>$ \textopeno / \_cons & 100 & 100 & 100 & 10 \\
-    & a $>$ \textopeno / cons\_ & 100 & 100 & 100 & 9 \\
-    & r $>$ \textchi / \_cons & 100 & 100 & 100 & 9 \\[2mm]
-
-Ostend, Antwerp, Std. Dutch (BE) & f $>$ v & 100 & 100 & 100 & 15\\
-    & f $>$ v / \_vow & 100 & 100 & 100 & 13\\
-    & k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\
-    & f $>$ v / \#\_ & 100 & 100 & 100 & 12\\[2mm]
-
-Feer, Heligoland & d $>$ $\emptyset$ / cons\_ & 100 & 100 & 100 & 10\\
-    & d $>$ $\emptyset$ / N\_ & 100 & 100 & 100 & 8\\
-    & s $>$ s / \_K & 100 & 100 & 100 & 8\\[2mm]
-
-Feer, Heligoland, Westerkwartier, & $\emptyset$ $>$ \textglotstop{} & 100 & 100 & 100 & 169\\
-Cologne, Luxembourg, Herrlisheim, & $\emptyset$ $>$ \textglotstop{} / \#\_ & 100 & 100 & 100 & 169\\
-T\"{u}bingen, Hard, Biel, & $\emptyset$ $>$ \textglotstop{} / \_vow & 100 & 100 & 100 & 169\\
-Graub\"{u}nden, Walser, Ortisei & t $>$ \texttoptiebar{ts} & 91 & 83 & 100 & 76\\
-    & k $>$ k\textsuperscript{h} & 91 & 83 & 100 & 52\\
-    & t $>$ \texttoptiebar{ts} / \#\_ & 91 & 83 & 100 & 49\\
-    & k $>$ k\textsuperscript{h} / \#\_ & 91 & 83 & 100 & 46\\
-    & t $>$ \texttoptiebar{ts} / \_vow & 91 & 83 & 100 & 40\\
-    & k $>$ k\textsuperscript{h} / \_vow & 91 & 83 & 100 & 38\\
-    & r $>$ $\emptyset$ / \_vow & 91 & 83 & 100 & 30\\
-    & ll $>$ l & 91 & 83 & 100 & 30\\
-    & ll $>$ l / vow\_& 91 & 83 & 100 & 30\\[2mm]
-
-Veenkoloni\"{e}n, Grou, Achterhoek, & k $>$ k / \#\_ & 100 & 100 & 100 & 40\\
-Std. Dutch (NL), Ostend, Antwerp, & t $>$ t / \_\# & 100 & 100 & 100 & 37\\
-Std. Dutch (BE), Limburg & k $>$ k / \_vow & 100 & 100 & 100 & 31\\\hline
-\end{tabular}
+\input{tables/tfidf-context-corres}
 \caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
 Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
 context
@@ -1062,30 +947,7 @@ context
 
 \begin{table}[h]
 \centering
-\begin{tabular}{p{6.5cm}p{2.4cm}rrrrc}
-\hline
-Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
-
-Cologne, Luxembourg & x $>$ \textesh & 100 & 100 & 100 & 6\\[2mm]
-
-Herrlisheim, Ortisei & a $>$ \textopeno & 100 & 100 & 100 & 10\\[2mm]
-
-Heligoland, Westerkwartier & t $>$ \textsubring{d} & 100 & 100 & 100 & 8\\[2mm]
-
-Ostend, Antwerp, Std. Dutch (BE) & f $>$ v & 100 & 100 & 100 & 15\\
-& k $>$ \textsubplus{k} & 100 & 100 & 100 & 13\\[2mm]
-
-Hard, Biel, Walser, Graub\"{u}nden & e $>$ y\textlengthmark & 100 & 100 & 100 & 13\\[2mm]
-
-Feer, Cologne, Limburg, Luxembourg, & t $>$ s & 90 & 82 & 100 & 59\\
-Herrlisheim, T\"{u}bingen, Hard, Biel, & & & & & \\
-Walser, Graub\"{u}nden, Ortisei & & & & & \\[2mm]
-
-Feer, Heligoland, Westerkwartier, & $\emptyset$ $>$ \textglotstop{} & 96 & 92 & 100 & 169\\
-Cologne, Limburg, Luxembourg, & s $>$ \textesh & 92 & 85 & 100 & 107\\
-Herrlisheim, T\"{u}bingen, Hard, Biel, & & & & & \\
-Walser, Graub\"{u}nden, Ortisei & & & & & \\\hline
-\end{tabular}
+\input{tables/tfidf-nocontext-corres}
 \caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
 Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
 nocontext}
@@ -1127,23 +989,7 @@ in the run with context information.
 
 \begin{table}[h]
 \centering
-\begin{tabular}{p{6.5cm}p{2.4cm}rrrrc}
-\hline
-Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
-
-Heligoland, Westerkwartier & t $>$ t\textsuperscript{h} / vow\_ & 100 & 100 & 100 & 14\\[2mm]
-
-Antwerp, Std. Dutch (BE) & e $>$ e\textlengthmark & 100 & 100 & 100 & 7\\[2mm]
-
-Feer, Cologne, Limburg, Luxembourg, & t $>$ s & 90 & 82 & 100 & 59\\
-Herrlisheim, T\"{u}bingen, Hard, Biel, &  t $>$ s / vow\_ & 90 & 82 & 100 & 58\\
-Walser, Graub\"{u}nden, Ortisei &  t $>$ s / \_\# & 90 & 82 & 100 & 34\\[2mm]
-
-Feer, Heligoland, Westerkwartier, & $\emptyset$ $>$ \textglotstop{} / \_vow & 96 & 92 & 100 & 169\\
-Cologne, Limburg, Luxembourg, & s $>$ \textesh & 92 & 85 & 100 & 107\\
-Herrlisheim, T\"{u}bingen, Hard, & s $>$ \textesh{} / \#\_ & 92 & 85 & 100 & 63\\
-Biel, Walser, Graub\"{u}nden, Ortisei & s $>$ \textesh{} / \_cons & 92 & 85 & 100 & 60\\\hline
-\end{tabular}
+\input{tables/bsgc-context-corres}
 \caption{BSGC: sound correspondences with an importance score of 90\% or higher.
 Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
 context}
@@ -1152,12 +998,7 @@ context}
 
 \begin{table}[h]
 \centering
-\begin{tabular}{p{6.5cm}p{2.4cm}rrrrc}
-\hline
-Cluster & Sound corres. & Imp & Rep & Dist & Count\\ \hline
-
-Antwerp, Std. Dutch (BE) & e $>$ e\textlengthmark & 100 & 100 & 100 & 7\\\hline
-\end{tabular}
+\input{tables/bsgc-nocontext-corres}
 \caption{BSGC: sound correspondences with an importance score of 90\% or higher.
 Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
 nocontext}
@@ -1267,9 +1108,37 @@ although it has to be noted that with the given data,
 none of the sound correspondences based on /*p/
 occurred often enough to actually be used for clustering.
 
+\subsubsection{Close Doculects Outside these Groupings}
+
+In this section, we consider the results from
+the TFIDF run with contextual information more closely,
+i.e. the method whose results match the aforementioned
+groupings the most.
+
+% In addition to showcasing the results that are
+% also presented in Figure~\ref{fig:tfidf-dendrograms},
+% some of which are discussed in the preceding sections,
+
+The Central German doculects spoken in Cologne and Luxembourg
+are also similar to the Upper German doculect of T\"{u}bingen.
+All three of these doculects are spoken in one relatively distinct % TODO adj
+region.
+The doculects of Limburg and Herrlisheim,
+which are also geographically close,
+do not have high cosine similarity values to these doculects however.
+All three of them are however also similar to the Feer and Heligoland doculects.
+
+(Ostend, Antwerp, Std. Dutch (BE)), (Ostend, Veenkoloni\"{e}n)
+
+Ortisei, Herrlisheim
+
+(Walser, Biel, Graub\"{u}nden), (Walser, Graub\"{u}nden, T\"{u}bingen), (Walser, Hard)
+-- shows continuum???
+
+
 \subsection{Context Information}
 
-As shown in the two preceding subsections,
+As shown in the preceding subsections,
 the runs with context information yield results
 that are overall closer to the proposed groupings
 than the runs without additional information.
@@ -1328,6 +1197,8 @@ some doculects were clustered together despite not sharing any (high-ranking) co
 we do not (cannot) take into account consecutive changes
 
 putting some of the other correspondences into context
+
+more data. more doculects (also from Eastern/middle Germany), but more importantly more words. cover more correspondences
 
 % \newpage
 \bibliographystyle{chicago}
