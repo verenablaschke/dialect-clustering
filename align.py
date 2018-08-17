@@ -4,6 +4,9 @@ from read_data import get_samples
 from collections import Counter
 
 contexts = set()
+lang2inventory = {}
+
+
 def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
                   reference_doculect='ProtoGermanic',
                   alignment_type='lib', alignment_mode='global',
@@ -51,6 +54,7 @@ def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
     if corres2lang2word is None:
         corres2lang2word = {}
     for i in range(1, len(labels_cwg)):
+        d = labels_cwg[i]
         corres_i = Counter()
         cur = ['#'] + msa_cwg[i] + ['#']
 
@@ -61,6 +65,10 @@ def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
             if ref_i == cur_i == '-':
                 # Ignore gap-gap alignments.
                 continue
+            try:
+                lang2inventory[d].add(cur_i)
+            except KeyError:
+                lang2inventory[d] = {cur_i}
             if no_context:
                 corres_i.update([(ref_i, cur_i)])
 
@@ -77,42 +85,45 @@ def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
                     # a phonological rule (i.e. the context is the same in both
                     # the reference and modern doculect).
                     left = None
-                offset = 2
+                offset = 1
                 while left == '-':
                     # If the context is a gap for both doculects, get the
                     # nearest left context that is not a gap for at least one
                     # of the doculects.
+                    offset += 1
                     left = seg2class(ref[c - offset], sca=use_sca)
                     if left != seg2class(cur[c - offset], sca=use_sca):
                         left = None
-                    offset += 1
                 if use_sca and left in ['#', '-']:
                     # Don't add sound class-independent context
                     # information (-> word boundaries) twice.
                     left = None
+                if left:
+                    # contexts.add((left, ref[c - offset]))
+                    # contexts.add((left, cur[c - offset]))
+                    corres_i.update([(ref_i, cur_i, "{} _".format(left))])
                 right = seg2class(ref[c + 1], sca=use_sca)
                 if right != seg2class(cur[c + 1], sca=use_sca):
                     right = None
-                offset = 2
+                offset = 1
                 while right == '-':
                     # If the context is a gap for both doculects, get the
                     # nearest right context that is not a gap for at least one
                     # of the doculects.
+                    offset += 1
                     right = seg2class(ref[c + offset], sca=use_sca)
                     if right != seg2class(cur[c + offset], sca=use_sca):
                         right = None
-                    offset += 1
                 if use_sca and right in ['#', '-']:
                     # Don't add sound class-independent context
                     # information (-> word boundaries) twice.
                     right = None
-                if left:
-                    corres_i.update([(ref_i, cur_i, "{} _".format(left))])
                 if right:
+                    # contexts.add((right, ref[c + offset]))
+                    # contexts.add((right, cur[c + offset]))
                     corres_i.update([(ref_i, cur_i, "_ {}".format(right))])
         # End character-level correspondence extraction.
 
-        d = labels_cwg[i]
         corres[d] = corres_i
         for c in corres_i:
             try:
@@ -131,6 +142,7 @@ def seg2class(segment, sca=False):
     if segment in ['#', '-']:
         return segment
     if sca:
+        contexts.add((token2class(segment, 'sca'), segment))
         return token2class(segment, 'sca')
     cl = token2class(segment, 'dolgo')
     return 'vowel' if cl == 'V' else 'cons'
@@ -168,7 +180,23 @@ def align(reference_doculect='ProtoGermanic',
             except KeyError:
                 correspondences[doculect] = tallies
     f.close()
-    # print(sorted(contexts))
+
+    with open('output/context.txt', 'w', encoding='utf8') as f:
+        last_context = None
+        for context in sorted(contexts):
+            if context[0] != last_context:
+                f.write("\n{}\t".format(context[0]))
+                last_context = context[0]
+            f.write("{}, ".format(context[1]))
+        f.write("\n")
+
+    with open('output/inventories.txt', 'w', encoding='utf8') as f:
+        for doculect, inv in lang2inventory.items():
+            f.write("{}\n".format(doculect))
+            for i in sorted(inv):
+                f.write("{}\t".format(i))
+            f.write("\n\n")
+        f.write("\n")
 
     with open('output/corres.txt', 'w', encoding='utf8') as f:
         all_correspondences_old = all_correspondences.keys()
@@ -192,12 +220,22 @@ def align(reference_doculect='ProtoGermanic',
                 print()
 
     all_correspondences = sorted(all_correspondences.keys())
-    try:
-        # In case there are any null-to-null alignments because of a larger
-        # set of doculects being used for the alignment than for the tallies.
-        all_correspondences.remove(('-', '-'))
-    except ValueError:
-        pass
+    n_simple, n_cv, n_sc, n_bound = 0, 0, 0, 0
+    for c in all_correspondences:
+        if len(c) == 2:
+            n_simple += 1
+        elif '#' in c[2]:
+            n_bound += 1
+        elif 'cons' in c[2] or 'vowel' in c[2]:
+            n_cv += 1
+        else:
+            n_sc += 1
+    print("Sound correspondences:")
+    print("{} without context".format(n_simple))
+    print("{} with C/V context".format(n_cv))
+    print("{} with SC context".format(n_sc))
+    print("{} with # context\n".format(n_bound))
+
     if verbose > 2:
         print(corres2lang2word)
     return (correspondences, all_correspondences,
