@@ -4,6 +4,8 @@
 \begin{document}
 \contourlength{0.2em}
 \begin{tikzpicture}[scale=2.5, dot/.style={draw=white, circle, minimum size=8pt, fill=red}, doculect/.style={inner sep=1em}]
+
+% Establish doculect coordinates.
 \node (Antwerp) at (3.08, 51.21667) {};
 \node (Feer) at (5.949999999999999, 54.71666999999999) {};
 \node (Herrlisheim) at (5.5347599999999995, 48.730059999999995) {};
@@ -24,6 +26,8 @@
 \node (Cologne) at (4.876669, 50.95) {};
 \node (Ostend) at (2.0416689999999997, 51.23333) {};
 \node (Limburg) at (4.241419, 50.8925) {};
+
+% Draw similarity lines.
 \draw[line width=0.0mm, color=black!60!blue!0](Grou.center) -- (Hard.center);
 \draw[line width=0.017181631643409863mm, color=black!60!blue!1](Grou.center) -- (Herrlisheim.center);
 \draw[line width=0.058757848119694575mm, color=black!60!blue!4](Grou.center) -- (Ortisei.center);
@@ -214,45 +218,47 @@
 \draw[line width=1.1975176667356227mm, color=black!60!blue!92](Luxembourg.center) -- (Tuebingen.center);
 \draw[line width=1.2584925369920634mm, color=black!60!blue!96](Cologne.center) -- (Luxembourg.center);
 \draw[line width=1.3mm, color=black!60!blue!100](Feer.center) -- (Heligoland.center);
+
+% Mark the locations with circles and labels.
 \node[dot] at (Antwerp.center) {};
-\node[doculect, right] at (Antwerp.center) {\contour{white}{\Large Antwerp}};
+\node[doculect, right] at (Antwerp.center) {\contour{white}{\LARGE Antwerp}};
 \node[dot] at (Feer.center) {};
-\node[doculect, right] at (Feer.center) {\contour{white}{\Large Feer}};
+\node[doculect, right] at (Feer.center) {\contour{white}{\LARGE Feer}};
 \node[dot] at (Herrlisheim.center) {};
-\node[doculect, left] at (Herrlisheim.center) {\contour{white}{\Large Herrlisheim}};
+\node[doculect, left] at (Herrlisheim.center) {\contour{white}{\LARGE Herrlisheim}};
 \node[dot] at (Grou.center) {};
-\node[doculect, left] at (Grou.center) {\contour{white}{\Large Grou}};
+\node[doculect, left] at (Grou.center) {\contour{white}{\LARGE Grou}};
 \node[dot] at (Achterhoek.center) {};
-\node[doculect, right] at (Achterhoek.center) {\contour{white}{\Large Achterhoek}};
+\node[doculect, below] at (Achterhoek.center) {\contour{white}{\LARGE Achterhoek}};
 \node[dot] at (Walser.center) {};
-\node[doculect, right] at (Walser.center) {\contour{white}{\Large Walser}};
+\node[doculect, right] at (Walser.center) {\contour{white}{\LARGE Walser}};
 \node[dot] at (Ortisei.center) {};
-\node[doculect, right] at (Ortisei.center) {\contour{white}{\Large Ortisei}};
+\node[doculect, right] at (Ortisei.center) {\contour{white}{\LARGE Ortisei}};
 \node[dot] at (Luxembourg.center) {};
-\node[doculect, below] at (Luxembourg.center) {\contour{white}{\Large Luxembourg}};
+\node[doculect, left] at (Luxembourg.center) {\contour{white}{\LARGE Luxembourg}};
 \node[dot] at (Biel.center) {};
-\node[doculect, below] at (Biel.center) {\contour{white}{\Large Biel}};
+\node[doculect, below] at (Biel.center) {\contour{white}{\LARGE Biel}};
 \node[dot] at (Graubuenden.center) {};
-\node[doculect, below] at (Graubuenden.center) {\contour{white}{\Large Graub\"{u}nden}};
+\node[doculect, below] at (Graubuenden.center) {\contour{white}{\LARGE Graub\"{u}nden}};
 \node[dot] at (StdDutchNL.center) {};
-\node[doculect, left] at (StdDutchNL.center) {\contour{white}{\Large Std. Dutch (NL)}};
+\node[doculect, left] at (StdDutchNL.center) {\contour{white}{\LARGE Std. Dutch (NL)}};
 \node[dot] at (Westerkwartier.center) {};
-\node[doculect, above] at (Westerkwartier.center) {\contour{white}{\Large Westerkwartier}};
+\node[doculect, above] at (Westerkwartier.center) {\contour{white}{\LARGE Westerkwartier}};
 \node[dot] at (Hard.center) {};
-\node[doculect, left] at (Hard.center) {\contour{white}{\Large Hard}};
+\node[doculect, right] at (Hard.center) {\contour{white}{\LARGE Hard}};
 \node[dot] at (Veenkolonien.center) {};
-\node[doculect, right] at (Veenkolonien.center) {\contour{white}{\Large Veenkoloni\"{e}n}};
+\node[doculect, right] at (Veenkolonien.center) {\contour{white}{\LARGE Veenkoloni\"{e}n}};
 \node[dot] at (StdDutchBE.center) {};
-\node[doculect, below] at (StdDutchBE.center) {\contour{white}{\Large Std. Dutch (BE)}};
+\node[doculect, left] at (StdDutchBE.center) {\contour{white}{\LARGE Std. Dutch (BE)}};
 \node[dot] at (Heligoland.center) {};
-\node[doculect, left] at (Heligoland.center) {\contour{white}{\Large Heligoland}};
+\node[doculect, left] at (Heligoland.center) {\contour{white}{\LARGE Heligoland}};
 \node[dot] at (Tuebingen.center) {};
-\node[doculect, right] at (Tuebingen.center) {\contour{white}{\Large T\"{u}bingen}};
+\node[doculect, right] at (Tuebingen.center) {\contour{white}{\LARGE T\"{u}bingen}};
 \node[dot] at (Cologne.center) {};
-\node[doculect, right] at (Cologne.center) {\contour{white}{\Large Cologne}};
+\node[doculect, right] at (Cologne.center) {\contour{white}{\LARGE Cologne}};
 \node[dot] at (Ostend.center) {};
-\node[doculect, below] at (Ostend.center) {\contour{white}{\Large Ostend}};
+\node[doculect, above] at (Ostend.center) {\contour{white}{\LARGE Ostend}};
 \node[dot] at (Limburg.center) {};
-\node[doculect, below] at (Limburg.center) {\contour{white}{\Large Limburg}};
+\node[doculect, below] at (Limburg.center) {\contour{white}{\LARGE Limburg}};
 \end{tikzpicture}
 \end{document}

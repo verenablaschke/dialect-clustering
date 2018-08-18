@@ -85,10 +85,9 @@ August 2018}
 	
 \end{titlepage}
 
-
-
-
 \pagenumbering{gobble}
+% \newpage
+% \section*{Abstract}
 % TODO abstract
 \newpage
 \tableofcontents
@@ -105,16 +104,9 @@ August 2018}
 
 % --- on clustering dialects and determining relevant features ---
 
+dialectometry: computational and statistical methods for dialectology
+
 clustering dialects and determining relevant features
-
-\citet{prokic2012detecting}
-
-
-\citet{heggarty2010splits} created a NeighborNet for Germanic languages, based on pronunciation differences between modern varieties. 
-~conclude~ that this works because the pronunciation differences implicitly include information on sound changes that were not shared by all varieties
-
-\citet{prokic2013combining}: judging regularity of correspondences via contingency table
-
 % --- on historical sound correspondences ---
 
 historical sound correspondences
@@ -123,22 +115,6 @@ historical sound correspondences
 % https://pdfs.semanticscholar.org/d2ea/1dbe1a81f60f99dab04dffc957622b8cb9f2.pdf
 % https://www.clips.uantwerpen.be/~gillis/pdf/20040107.9620.cslfinal.pdf
 % https://www.aclweb.org/anthology/J/J96/J96-4003.pdf
-
-% --- on BSGC ---
-
-Bipartite spectral graph co-clustering
-
-introduced in \citet{dhillon2001co-clustering}
-
-introduced as a method for dialect clustering in \citet{wieling2011bipartite}
-
-\citet{wieling2013analyzing} applied this method for clustering British English dialects and compared the results to clusters obtained via PCA
- 
-\citet{montemagni2013synchronic} applied this method to Tuscan dialects and used left and right contexts for the sound segments
-
-\citet{zha2001bipartite} introduced a similar (the same??) method as Dhillon at the same time, in another journal
-
-% These algorithms and related ones were investigated by \citet{kluger2003spectral} for their use in bioinformatics as well (co-clustering genes and phenotypes).
 
 This thesis is structured as follows:
 We begin by introducing the data in section~\ref{sec:data}.
@@ -152,6 +128,50 @@ and then for the two approaches to clustering the data that we employ,
 and explain how we rank the sound correspondences.
 We present the results in section~\ref{sec:results}
 and discuss them in section~\ref{sec:discussion}.
+
+\subsection{Related Work}
+
+In the past decades, there have been many advances in the field of dialectometry.
+For a thorough overview, see \citet{wieling2015advances}.
+
+\citet{prokic2012detecting} also create
+a doculect-by-doculect distance matrix % based on Levenshtein dist
+and perform hierarchical clustering on it,
+although they use another linkage method.
+This is similar to the work by \citet{prokic2007identifying},
+wherein they separately perform an aggregate analysis of the
+data via an unspecified clustering method based on a Levenshtein
+doculect-by-doculect distance matrix
+is compared to individual analyses of recurring sound correspondences
+between the doculects.
+\citet{prokic2013combining} explore more closely how
+to automatically judge the regularity of sound correspondences
+for investigating dialect transitions in the geographical spread.
+
+\citet{heggarty2010splits} applied the NeighborNet method \citep{bryant2004neighbornet}
+to Germanic languages, based on pronunciation differences between modern varieties.
+
+\citet{proell2013detecting} applied fuzzy clustering on the basis of lexical variation
+to capture gradual changes between dialect groups.
+
+\citeauthor{wieling2011bipartite} (\citeyear{wieling2009bipartite}; \citeyear{wieling2011bipartite})
+employed a method for simultaneously clustering doculects and
+sound correspondences: bipartite spectral graph co-clustering,
+a method that was originally introduced for data mining \citep{dhillon2001co-clustering, zha2001bipartite},
+but that has also been used in bioinformatics \citep{kluger2003spectral}.
+\citeauthor{wieling2011bipartite}
+(\citeyear{wieling2009bipartite}; \citeyear{wieling2011bipartite})
+used this method based on sound correspondences between doculects
+spoken in the Netherlands.
+
+A hierarchical version of this co-clustering method
+was used by \citet{wieling2010hierarchical} for
+doculects spoken in the Netherlands,
+and \citet{wieling2013analyzing} applied this method for
+clustering British English dialects.
+\citet{montemagni2013synchronic} applied this method to Tuscan dialects,
+and supplemented the sound correspondences with information
+on the phonetic contexts of the sound segments in the correspondences.
 
 % \newpage
 \section{Data}
@@ -230,12 +250,17 @@ CWG doculects are very similar to one another and closely related.
 These similarities do not only exist because of genetic relatedness
 but also--enabled by the geographic proximity--mutual influences
 \citep[p. 8]{harbert2007germanic}.
-This position is also reflected in Figure~\ref{fig:cwg_harbert},
+As \citet{heggarty2010splits} describe models for intra-family variation,
+there are two major models:
+the tree-like, hierarchical `splits' model,
+and the `wave' model, which corresponds more closely to a dialect continuum.
+
+A combination of the two is reflected in Figure~\ref{fig:cwg_harbert},
 which shows a proposed division of CWG doculects
 into three main groups: North Sea Germanic (including Frisian and Low German),
 Franconian (including Dutch and High Franconian),
-and Alpine Germanic (including Alemannic and Bavarian).
-It presents High German as the result of the convergence
+and Alpine Germanic (including Alemannic and Bavarian),
+and presents High German as the result of the convergence
 of High Franconian, Alemannic and Bavarian.
 
 \begin{figure}[b]
@@ -249,10 +274,14 @@ based on \citet[p. 8]{harbert2007germanic}.
 \end{figure}
 
 %TODO Heggarty splits waves
+\citet{heggarty2010splits}, who have inspected the same data
+that we work with, describe their results as
+``a progressive dialect continuum [...] incrementally proceeding in fairly close step
+with geography.''
 
-\citet{hammarstroem2018glottolog}, whose language catalogue
-contains strictly hierarchical categorizations, % TODO source??
-gives an entirely tree-like classification of the CWG doculects,
+Alternatively, \citet{hammarstroem2018glottolog},
+whose language catalogue contains strictly hierarchical categorizations, % TODO source??
+give an entirely tree-like classification of the CWG doculects,
 as shown in Figure~\ref{fig:glottolog}.
 This classification is based on the work by \citet{stiles2013pan-west}
 and, as the previous figure, \citet{harbert2007germanic}.
@@ -679,11 +708,16 @@ binary combination of row vectors from the doculect-by-correspondence matrix:
 \end{equation*}
 
 We then convert this distance matrix into a dendrogram,
-using the UPGMA method introduced by \citet{sokal1958statistical},
-as UPGMA was found to be preferable to other
+using the UPGMA
+(Unweighted Pair Group Method using Arithmetic Averages)
+method introduced by \citet{sokal1958statistical}.
+UPGMA was found to be preferable to other
 distance matrix-based hierarchical clustering methods
-for analyzing dialect distances by \citet{heeringa2004measuring}.
+for analyzing dialect distances by \citet{heeringa2004measuring},
+and among one of several suited clustering methods for dialectometry
+by \citet{prokic2008recognizing}.
 
+TODO: explain UPGMA
 
 \subsubsection{Bipartite Spectral Graph Co-clustering}
 \label{subsubsec:bsgc}
@@ -907,25 +941,9 @@ and 17 for the run with additional contextual information.
 
 The cosine similarity table that the dendrogram
 for the run with context information is based on
-is visualized as a map in Figure~\ref{fig:cosine}.
-It is described more closely in TODO.
-
-% \begin{wrapfigure}{l}{0.4\textwidth}
-% \includestandalone[width=\linewidth]{figures/cosine}
-% \caption{Caption1}
-% \label{fig:cosine}
-% \end{wrapfigure}
-\begin{figure}[h]
-\centering
-\includestandalone[width=0.6\textwidth]{figures/cosine}
-\caption
-{Cosine similarities between the doculects (TFIDF-context)}
-{
-Cosine similarities between the doculects (TFIDF-context).
-Lines that are bolder and darker represent greater cosine similarity scores.
-}
-\label{fig:cosine}
-\end{figure}
+is described in TODO.
+% is visualized as a map in Figure~\ref{fig:cosine}.
+% It is described more closely in TODO.
 
 In total, 201 sound correspondence were used for the run without contextual information,
 of which 6 have importance scores of 100\% for intermediary clusters.
@@ -1110,31 +1128,68 @@ occurred often enough to actually be used for clustering.
 
 \subsubsection{Close Doculects Outside these Groupings}
 
+% \begin{wrapfigure}{l}{0.4\textwidth}
+% \includestandalone[width=\linewidth]{figures/cosine}
+% \end{wrapfigure}
+\begin{figure}[h]
+% \centering
+% \includestandalone[width=0.6\textwidth]{figures/cosine}
+\includestandalone[width=0.55\textwidth]{figures/cosine}
+\hspace{-4em}
+\includestandalone[width=0.55\textwidth]{figures/cosine2}
+\caption
+{Cosine similarities between the doculects (TFIDF-context)}
+{
+Cosine similarities between the doculects (TFIDF-context).
+Lines that are bolder and darker represent greater cosine similarity scores.
+The graphic on the left includes all pairwise similarity scores;
+the one on the right only includes the highest 10\% of cosine similarity scores.
+}
+\label{fig:cosine}
+\end{figure}
+
 In this section, we consider the results from
 the TFIDF run with contextual information more closely,
 i.e. the method whose results match the aforementioned
 groupings the most.
+The cosine similarity matrix that is the basis for the UPGMA method
+is visualized in Figure~\ref{fig:cosine}.
 
 % In addition to showcasing the results that are
 % also presented in Figure~\ref{fig:tfidf-dendrograms},
 % some of which are discussed in the preceding sections,
 
-The Central German doculects spoken in Cologne and Luxembourg
-are also similar to the Upper German doculect of T\"{u}bingen.
-All three of these doculects are spoken in one relatively distinct % TODO adj
-region.
-The doculects of Limburg and Herrlisheim,
-which are also geographically close,
-do not have high cosine similarity values to these doculects however.
-All three of them are however also similar to the Feer and Heligoland doculects.
+The pairwise cosine similarity values showcased in this figure
+show geographically close as well as geographically distant connections
+with high similarity scores,
+some of which are less apparent after the hierarchical clustering step.
 
-(Ostend, Antwerp, Std. Dutch (BE)), (Ostend, Veenkoloni\"{e}n)
+Proceding from (North) West to (South) East on the map,
+we get the following connections:
 
-Ortisei, Herrlisheim
+Among the doculects spoken in Belgium and the Netherlands,
+there is a tight cluster of Belgian doculects (Ostend, Antwerp, Std. Dutch BE)
+which are connected to the Veenkoloni\"{e}n doculect via Ostend,
+which is in turn very similar to that spoken in Achterhoek.
 
-(Walser, Biel, Graub\"{u}nden), (Walser, Graub\"{u}nden, T\"{u}bingen), (Walser, Hard)
--- shows continuum???
+The doculect spoken in Westerkwartier is very dissimilar to
+the doculects which are its direct neighbours (Grou and Veenkoloni\"{e}n),
+but it forms a tight cluster with Heligoland and Feer.
 
+Heligoland and Feer however are also very similar to Luxembourgish.
+Luxembourg, Feer and T\"{u}bingen form a tight cluster,
+as do Luxembourg, T\"{u}bingen and Cologne.
+The doculects from Limburg and Herrlisheim,
+both of which are geographically close to the latter three doculects,
+have low cosine similarity values to them.
+
+T\"{u}bingen, Graub\"{u}nden and Walser form another
+triangle cluster with high pairwise cosine similarity scores.
+Walser is also very similar to the Hard doculect,
+which is only moderately similar to the other two doculects.
+
+Lastly, the doculects spoken in Herrlisheim and Ortisei
+show high cosine similarity.
 
 \subsection{Context Information}
 
@@ -1160,8 +1215,16 @@ among the high-ranking sound correspondences.
 \section{Discussion}
 \label{sec:discussion}
 
+\subsection{Clusters}
 do the groups/criteria match the ones introduced earlier?
 
+fuzzy clustering
+
+To what extend does clustering dialects and/or applying a hierarchical model to dialect data make sense? (tree vs. web, `vertical' changes vs. `horizontal' influences)
+data is from a relatively large region though
+
+
+\subsection{BSGC}
 How beneficial is co-clustering really? Why not just cluster the doculects (after TF-IDF maybe) and then apply the sound correspondence metrics? It seems like the benefit of co-clustering is mainly that $v_2$ can be used for ranking the correspondences, although this doesn't seem to be very popular among the authors who used bipartite spectral graph clustering for dialect data...
 
 why does bsgc not work that well here despite it working quite nicely for wieling, montemagni, ...?
@@ -1171,22 +1234,19 @@ why does bsgc not work that well here despite it working quite nicely for wielin
 
 wrongly assigned sound correspondences (k means initialization?)
 
-% --- more general ---
+investigate further the influence of data selection/preprocessing/properties on bsgc performance
+
+smaller subclusters not stable across re-runs
+
+\subsection{Sound Correspondences}
 
 All of the comparisons here are phonetic (and might possibly include some morphological information in some cases) and on a word level, but we are ignoring lexical, syntactical, morphological, etc. information in this analysis.
 
-To what extend does clustering dialects and/or applying a hierarchical model to dialect data make sense? (tree vs. web, `vertical' changes vs. `horizontal' influences)
-data is from a relatively large region though
-
 more abstract sound correspondence rules (incl. context) to model sound changes more generally (nasalization, lenition)
 
-Regularity: How often does this correspondence occur compared to the original sound? similar to \citet{prokic2013combining}. also like bigram MLE, transition probabilities
-
-investigate further the influence of data selection/preprocessing/properties on bsgc performance
+Regularity: How often does this correspondence occur compared to the original sound? similar to \citet{prokic2007identifying, prokic2013combining}. also like bigram MLE, transition probabilities
 
 sound classes too specific/wrong kind of specificity?
-
-fuzzy clustering
 
 more simple context system
 this system cannot pick up on related changes with slightly different outcomes,
