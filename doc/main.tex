@@ -82,7 +82,7 @@ Eberhard Karls Universität Tübingen
 \vspace{1em}
 August 2018}
 \end{center}
-	
+    
 \end{titlepage}
 
 \pagenumbering{gobble}
@@ -991,6 +991,11 @@ but Figure~\ref{tab:bsgc-context-corres} provides an overview of
 all 9 sound correspondences for which this applies
 in the run with context information.
 
+It should be noted that the results concerning
+the smaller subclusters were
+(due to the random k-means initialization) not stable
+across runs, although the general results are similar.
+
 \begin{figure}[h]
   \centering
 %   \includestandalone[height=0.35\textheight]{figures/bsgc-nocontext}
@@ -1003,7 +1008,6 @@ in the run with context information.
   \caption{BSGC with no (top) and additional (bottom) context information and highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
   \label{fig:bsgc-trees}
 \end{figure}
-
 
 \begin{table}[h]
 \centering
@@ -1022,9 +1026,6 @@ Importance, representativeness, and distinctiveness scores are percentages and r
 nocontext}
 \label{tab:bsgc-nocontext-corres}
 \end{table}
-
-% TODO 
-high representativeness score for all doculects?
 
 \subsection{Comparisons to Continental West Germanic Groupings}
 
@@ -1164,7 +1165,7 @@ show geographically close as well as geographically distant connections
 with high similarity scores,
 some of which are less apparent after the hierarchical clustering step.
 
-Proceding from (North) West to (South) East on the map,
+Proceeding from (North) West to (South) East on the map,
 we get the following connections:
 
 Among the doculects spoken in Belgium and the Netherlands,
@@ -1215,55 +1216,133 @@ among the high-ranking sound correspondences.
 \section{Discussion}
 \label{sec:discussion}
 
+TODO recap?
+
 \subsection{Clusters}
-do the groups/criteria match the ones introduced earlier?
+The clusters formed by the different approaches
+match the groupings from the literature to different degrees.
+The TFIDF runs show these patterns more strongly than the BSGC runs,
+and the TFIDF-context run follows it the most closely.
 
-fuzzy clustering
+However, even in the TFIDF-context run,
+we see some unexpected results,
+such as several Frisian/Low German doculects
+being clustered with a group of Central/Upper German doculects
+instead of the large Frisian/Low German/Dutch group.
 
-To what extend does clustering dialects and/or applying a hierarchical model to dialect data make sense? (tree vs. web, `vertical' changes vs. `horizontal' influences)
-data is from a relatively large region though
+In addition, inspecting the cosine similarity values
+for the TFIDF-context run, we can observe a pattern
+that shows both some isolated subgroups, as well as
+a more net-like pattern of connections
+reflecting more gradual changes.
 
+In light of this, it would be interesting
+to investigate these pairwise changes further,
+perhaps following the fuzzy dialect clustering approaches
+by \citet{proell2013detecting}, which are better suited to model
+wave-like developments of language variation.
+
+It would also be interesting to run clustering
+methods (fuzzy or not) on a larger amount of data,
+both in terms of the number of doculects
+(adding places that are geographically located
+in between some of the doculects we worked with,
+and adding doculects from German-speaking places that
+were not at all included in this analysis, such as
+locations in Germany not situated near the Western border),
+and in terms of entries per doculect
+(to capture a greater variety of sound correspondences).
+Unfortunately, at this point we are not aware of
+a digital database compiled by a single transcriber that
+would allow us to do that.
+
+% some doculects were clustered together despite not sharing any (high-ranking) correspondences (as a cluster) -- random pairwise commonalities?
 
 \subsection{BSGC}
-How beneficial is co-clustering really? Why not just cluster the doculects (after TF-IDF maybe) and then apply the sound correspondence metrics? It seems like the benefit of co-clustering is mainly that $v_2$ can be used for ranking the correspondences, although this doesn't seem to be very popular among the authors who used bipartite spectral graph clustering for dialect data...
 
-why does bsgc not work that well here despite it working quite nicely for wieling, montemagni, ...?
-- number of samples
-- doculects/language family ("tighter")
-- narrowness of transcription
+As mentioned before, the co-clustering approach
+does not match the groupings described in the literature very well
+compared to the much simpler TFIDF approach.
 
-wrongly assigned sound correspondences (k means initialization?)
+One of the issues seems to be
+sound correspondences that get assigned to the wrong clusters
+in that they do not occur in any of the doculects in the cluster
+they were assigned to.
+In such cases, we automatically assign them to the appropriate
+other cluster to avoid linear algebra problems.
+However, it is possible that such an unfitting
+cluster assignment also happens with other samples
+that are close to the k-means decision boundary,
+ending up in clusters where they describe the doculects
+not as well as they would have described doculects from the other cluster.
+In such cases, early misclassifications cannot be corrected.
 
-investigate further the influence of data selection/preprocessing/properties on bsgc performance
+In the future, it would be interesting to
+explore if alternate approaches to normalizing the data
+would mitigate this problem.
 
-smaller subclusters not stable across re-runs
+However, BSGC yielded good results for \citeauthor{wieling2011bipartite}
+(\citeyear{wieling2009bipartite}; \citeyear{wieling2010hierarchical}; \citeyear{wieling2011bipartite}),
+\citet{wieling2013analyzing} and \citet{montemagni2013synchronic}.
+There are several differences between their data and ours.
+First, all of these experiments used a larger number
+of doculects and concepts.
+Additionally, the doculects they used are
+generally from smaller geographic areas.
+Moreover, all of them used modern reference dialects.
+The transcriptions they worked with might also have been broader,
+potentially allowing for sound correspondences that are similar,
+but (due to the narrowness of transcription) slightly different,
+to become identical and thus more common.
+
+It would be interesting to investigate further the influence of
+data selection and preprocessing on BSGC performance.
 
 \subsection{Sound Correspondences}
 
-All of the comparisons here are phonetic (and might possibly include some morphological information in some cases) and on a word level, but we are ignoring lexical, syntactical, morphological, etc. information in this analysis.
+The sound correspondences helped the TFIDF model
+to match the literature more closely.
+However, most of the high-ranking sound correspondences
+do not involve the more detailed sound class model.
+It is possible that the sound classes are too specific
+for the data at hand or have the wrong kind of specificity,
+being thus not well-suited for capturing generalizations of the data.
 
-more abstract sound correspondence rules (incl. context) to model sound changes more generally (nasalization, lenition)
+A solution to this would be using a more simple context system.
+Alternatively, it would also be possible to model sound correspondence
+rules in a more abstract way to model sound changes
+as specifically or generally as appropriate.
 
-Regularity: How often does this correspondence occur compared to the original sound? similar to \citet{prokic2007identifying, prokic2013combining}. also like bigram MLE, transition probabilities
+% we do not (cannot) take into account consecutive changes
 
-sound classes too specific/wrong kind of specificity?
+The current system cannot pick up on related changes
+with slightly different outcomes, such as different
+ways that Proto-Germanic /*k/ has been turned into
+an affricate or fricative in Swiss German doculects:
+/*k/ $>$ [\texttoptiebar{kx}], /*k/ $>$ [x], /*k/ $>$ [\textchi].
+Again, a way of describing these sound changes more abstractly
+might make it possible to consider these sound changes more
+similarly while clustering doculects.
 
-more simple context system
-this system cannot pick up on related changes with slightly different outcomes,
-e.g. k $>$ \texttoptiebar{kx}, k $>$ x, k $>$ \textchi
+In future experiments, it might be worthwhile to additionally rank
+the sound correspondences by how regular they are,
+by comparing how often a given sound shift happened
+to a specific sound in a specific context
+to how often another sound shift (or no sound shift) took place,
+in a similar way to \citet{prokic2007identifying} and \citet{prokic2013combining},
+or similarly to transition probabilities in bigram models.
 
-some doculects were clustered together despite not sharing any (high-ranking) correspondences (as a cluster) -- random pairwise commonalities?
+All of the comparisons between Proto-Germanic and the modern doculects
+here are phonetic
+% (and might possibly include some morphological information in some cases)
+and on a word level, but we are ignoring
+lexical, syntactical, morphological, etc. information in this analysis.
 
-we do not (cannot) take into account consecutive changes
+\subsection{Conclusion} % or section
 
-putting some of the other correspondences into context
-
-more data. more doculects (also from Eastern/middle Germany), but more importantly more words. cover more correspondences
+TODO
 
 % \newpage
 \bibliographystyle{chicago}
 \bibliography{lib}
 \end{document}
-
-% NOTES
-% intros to SVD, k-means, tf-idf, alignments?
