@@ -18,7 +18,7 @@
 \usepackage{standalone} % import figures
 \usepackage{changepage} % adjust text width
 \usepackage{parskip} % proper paragraphs, no indentation
-\usepackage{showframe} % TODO remove
+\usepackage{showframe, todonotes} % TODO remove
 \usepackage[margin=3cm]{geometry}
 
 % TODO make the hues match those of the map
@@ -82,20 +82,22 @@ Eberhard Karls Universität Tübingen
 \vspace{1em}
 August 2018}
 \end{center}
-    
+	
 \end{titlepage}
 
 \pagenumbering{gobble}
-% \newpage
-% \section*{Abstract}
-% TODO abstract
+\newpage
+\section*{Abstract}
+\todo[inline]{TODO :)}
+
+\vspace{2em}
+\todo[inline]{Eigenständigkeits- bzw. Antiplagiatserklärung}
 \newpage
 \tableofcontents
 \newpage
 \listoftables
 \listoffigures
 \newpage
-% TODO Eigenständigkeits- bzw. Antiplagiatserklärung  
 
 \pagenumbering{arabic}
 
@@ -134,30 +136,40 @@ and discuss them in section~\ref{sec:discussion}.
 In the past decades, there have been many advances in the field of dialectometry.
 For a thorough overview, see \citet{wieling2015advances}.
 
-\citet{prokic2012detecting} also create
-a doculect-by-doculect distance matrix % based on Levenshtein dist
-and perform hierarchical clustering on it,
-although they use another linkage method.
-This is similar to the work by \citet{prokic2007identifying},
-wherein they separately perform an aggregate analysis of the
-data via an unspecified clustering method based on a Levenshtein
-doculect-by-doculect distance matrix
-is compared to individual analyses of recurring sound correspondences
+\citet{prokic2012detecting} perform hierarchical clustering
+on Bulgarian dialects based on phonetic distances.
+One of our clustering approaches is similar to this,
+although we use different methods measuring the distance between a pair of dialects
+and for transforming the distance values into a hierarchical structure.
+This is also similar to the work by \citet{prokic2007identifying},
+wherein she performs an aggregate analysis of the
+data via an unspecified clustering method based on a
+doculect-by-doculect matrix storing phonetic distance values,
+which she compares to individual analyses of recurring sound correspondences
 between the doculects.
-\citet{prokic2013combining} explore more closely how
+The latter analyses are in turn related to the work by
+\citet{prokic2013combining} who explore more closely how
 to automatically judge the regularity of sound correspondences
 for investigating dialect transitions in the geographical spread.
 
-\citet{heggarty2010splits} applied the NeighborNet method \citep{bryant2004neighbornet}
-to Germanic languages, based on pronunciation differences between modern varieties.
+\citet{heggarty2010splits} worked with modern varieties of Germanic languages.
+They applied the NeighborNet method \citep{bryant2004neighbornet}
+based on pronunciation differences to represent the data as a
+web-like phylogenetic network.
 
-\citet{proell2013detecting} applied fuzzy clustering on the basis of lexical variation
+\citet{proell2013detecting} also investigated a clustering method
+that does not use strict hierarchies or categories by
+applying fuzzy clustering on the basis of lexical variation
 to capture gradual changes between dialect groups.
 
 \citeauthor{wieling2011bipartite} (\citeyear{wieling2009bipartite}; \citeyear{wieling2011bipartite})
-employed a method for simultaneously clustering doculects and
-sound correspondences: bipartite spectral graph co-clustering,
-a method that was originally introduced for data mining \citep{dhillon2001co-clustering, zha2001bipartite},
+examined the relation between dialect groups and
+the phonetic properties that categorize them.
+They extracted sound correspondences between dialects
+and a reference dialect and used a method for simultaneously clustering 
+\todo{Clear that them = the sound correspondences?}
+them and the dialects: bipartite spectral graph co-clustering.
+This method was originally introduced for data mining \citep{dhillon2001co-clustering, zha2001bipartite},
 but that has also been used in bioinformatics \citep{kluger2003spectral}.
 \citeauthor{wieling2011bipartite}
 (\citeyear{wieling2009bipartite}; \citeyear{wieling2011bipartite})
@@ -178,10 +190,13 @@ on the phonetic contexts of the sound segments in the correspondences.
 \label{sec:data}
 
 We work with phonetically transcribed data from
-continental European West Germanic (herafter: CWG) dialects and standard languages
-(hereafter referred to as doculects).
-The data we work with are taken from the Sound Comparisons project
-lead by \citet{heggarty2018sound}, who compiled IPA transcriptions of word lists
+continental European West Germanic (henceforth: CWG)
+dialects and standard languages
+(hereafter collectively referred to as doculects).
+The data we work with are taken from the Sound Comparisons project,
+an extension of the Languages and Origins in Europe project \citep{renfrew2009languages}
+lead by \citet{heggarty2018sound},
+who compiled IPA transcriptions of word lists
 in a range of Germanic doculects.
 
 From this database,
@@ -191,25 +206,29 @@ and a reconstructed version of Proto-Germanic.
 The Sound Comparisons project does not state
 the theoretical basis for the Proto-Germanic reconstruction.
 According to the project website,
-the reconstruction probably is close to
+the reconstruction might be close to
 a variant of the language spoken in around 500 BCE
 in Southern Scandinavia.
 }
 Of the modern doculects, two are identified as standard languages
 in the database (Dutch spoken in the Netherlands and Belgium
 \footnote{
-Hereafter referred to as ``Std. Dutch (NL)'' and ``Std. Dutch (BE)'', respectively.
+Hereafter referred to as \textit{Std. Dutch (NL)}
+and \textit{Std. Dutch (BE)}, respectively.
 }),
 the rest as local vernaculars.
 The modern doculects are from locations in the
 Netherlands, Belgium, Luxembourg, (along the Western border of) Germany,
-France (Alsace), Switzerland, Liechtenstein, Austria (Lake Constance), and Italy (South Tyrol).
+France (Alsace), Switzerland, Liechtenstein, Austria (Voralberg), and Italy (South Tyrol).
 Figure~\ref{fig:map} provides an overview of these locations.
+\todo{TODO: Make the yellow a bit darker, the green a bit lighter.}
 The legend is explained in section~\ref{sec:cwg}.
 
 For the phonetic alignment step (see section~\ref{subsec:msa}),
 we used 14 additional doculects that are Germanic but not continental West Germanic. 
 To control for transciber bias,
+i.e. the effect of slightly different transcriptions
+of identical sounds by different transcribers,
 we only worked with doculects that share the same transcriptor,
 Warren Maguire.
 The transcriptions of the modern doculect data
@@ -219,11 +238,18 @@ that of the Proto-Germanic reconstruction appears to be broader.
 For instance, the Proto-Germanic data include no suprasegmentals.
 }
 
+The concepts are often represented in root forms
+of the words to mitigate the overrepresentation
+of certain affixes \citep{renfrew2009languages}.
+\footnote{
+For instance, verbs are represented in their imperative forms
+rather than the infinitive.
+}
+
 We excluded one CWG doculect that covered only 35 concepts. % Schaeddel (Frisian)
 The Proto-Germanic data cover all 110 concepts; each of the modern doculects covers at least 103 concepts, and each concept is covered by at least 17 modern doculects.
-In total, we have 2181 sequence alignments between Proto-Germanic and modern CWG doculects.
+In total, we have 2181 word alignments between Proto-Germanic and modern CWG doculects.
 
-note on inflected forms
 
 \begin{figure}[h]
 \centering
@@ -237,28 +263,50 @@ note on inflected forms
 \section{Continental West Germanic}
 \label{sec:cwg}
 
-Grouping the CWG doculects provides a challenge
+The CWG doculects include several standard languages
+(standard variaties of Dutch spoken in Belgium and the Netherlands,
+Luxembourgish, standard varieties of German in
+Germany, Austria, Switzerland and Liechtenstein)
+as well as many regiolects and dialects.
+Establishing subgroups within this collection of doculects provides a challenge
 that has been taken up many times, with different results.
-
 Even the classification of West Germanic
 as its own branch of Germanic is controversal,
 though generally accepted
-(c.f. \citet{voyles1971problem}; \citet[pp. 7-8]{harbert2007germanic}; \citet{ringe2012cladistic}). % \citet[p. 404]{krogh1996stellung}
+(c.f. \citet{voyles1971problem}; \citet[pp. 7-8]{harbert2007germanic}; \citet{ringe2012cladistic}).
 
-Within the CWG dialect continuum, it gets even more complicated and contested.
-CWG doculects are very similar to one another and closely related.
+Within the CWG group, it gets even more complicated and contested.
+\citet[pp. 72-80]{nielsen1989germanic} gives an overview of the history of attempting to divide the West Germanic dialects into subgroups with the associated criteria (phonological, morphological, lexical, and/or extra-linguistic) and criticisms.
+
+Much of the challenge of grouping CWG doculects stems from
+them being very similar to one another and closely related.
 These similarities do not only exist because of genetic relatedness
 but also--enabled by the geographic proximity--mutual influences
 \citep[p. 8]{harbert2007germanic}.
-As \citet{heggarty2010splits} describe models for intra-family variation,
-there are two major models:
-the tree-like, hierarchical `splits' model,
-and the `wave' model, which corresponds more closely to a dialect continuum.
 
-A combination of the two is reflected in Figure~\ref{fig:cwg_harbert},
+On the other hand,
+\todo{More recently than what?}
+more recently,
+interactions between dialects and standard languages
+have influenced the dialect landscape
+\citep{coetsem1992interaction}.
+\citet{kremer1990einfuehrung} found that in Germany and in the Netherlands
+(but not in Switzerland), dialects tend to become closer to the standard languages,
+with the result of state or standard language borders tending to act as dialect borders.
+(They also found that Low German dialects and CWG spoken in
+Non-Germanic regions tend to be replaced by the prevailing standard language instead.)
+
+\citet{heggarty2010splits} describe models for intra-family variation,
+most importantly two major models:
+the tree-like, hierarchical \textit{splits} model,
+and the \textit{waves} model, which corresponds more closely to a dialect continuum.
+
+A combination of the two is reflected in
+\todo{TODO: More space above `High German'}
+Figure~\ref{fig:cwg_harbert},
 which shows a proposed division of CWG doculects
 into three main groups: North Sea Germanic (including Frisian and Low German),
-Franconian (including Dutch and High Franconian),
+Franconian (including Dutch and High Franconian)
 and Alpine Germanic (including Alemannic and Bavarian),
 and presents High German as the result of the convergence
 of High Franconian, Alemannic and Bavarian.
@@ -273,14 +321,15 @@ based on \citet[p. 8]{harbert2007germanic}.
 \label{fig:cwg_harbert}
 \end{figure}
 
-%TODO Heggarty splits waves
 \citet{heggarty2010splits}, who have inspected the same data
 that we work with, describe their results as
 ``a progressive dialect continuum [...] incrementally proceeding in fairly close step
 with geography.''
 
 Alternatively, \citet{hammarstroem2018glottolog},
-whose language catalogue contains strictly hierarchical categorizations, % TODO source??
+whose language catalogue Glottolog contains
+\todo{TODO double check}
+strictly hierarchical categorizations,
 give an entirely tree-like classification of the CWG doculects,
 as shown in Figure~\ref{fig:glottolog}.
 This classification is based on the work by \citet{stiles2013pan-west}
@@ -309,24 +358,13 @@ The names of the modern doculects are dispayed in italics.
 \label{fig:glottolog}
 \end{figure}
 
-\citet[pp. 72-80]{nielsen1989germanic} gives an overview of the history of attempting to divide the West Germanic dialects into subgroups with the associated criteria (phonological, morphological, lexical, and/or extra-linguistic) and criticisms.
-
-On the other hand, more recently, % TODO than what?
-interactions between dialects and standard languages
-have influenced the dialect landscape
-\citep{coetsem1992interaction}.
-\citet{kremer1990einfuehrung} found that in Germany and in the Netherlands
-(but not in Switzerland), dialects tend to become closer to the standard languages,
-with the result of state or standard language borders tending to act as dialect borders.
-(They also found that Low German dialects tend and CWG spoken in Non-Germanic (e.g. francophone) regions tend to be replaced by the standard language instead.)
-
 \subsection{North Sea Germanic}
 
 \citet{stiles2013pan-west} posits that
 the most significant division of West Germanic varieties is
 the split into Ingv\ae{}onic (that is, North Sea Germanic) varieties
 and non-Ingv\ae{}onic varieties.
-This split is also supported by, e.g., \citet[p. 7]{harbert2007germanic}, \citet[pp. 117--123]{sonderegger1979grundzuege}, and \cite{auwera2017germanic}.
+This split is also supported by, e.g., \citet[p. 7]{harbert2007germanic}, \citet[pp. 117--123]{sonderegger1979grundzuege} and \cite{auwera2017germanic}.
 What is more complicated is the definition of which doculects Ingv\ae{}onic consists of:
 % \citet{stiles2013pan-west} defines this group
 % as Frisian, English, and ``to a certain extend, Old Saxon'' (i.e., Low German),
@@ -342,8 +380,8 @@ What is more complicated is the definition of which doculects Ingv\ae{}onic cons
 as Frisian, English, and ``to a certain extend, Old Saxon'' (i.e., Low German),
 
 \item
-\citet[pp. 7, 17]{harbert2007germanic} defines it
-as Frisian, English, and Old Saxon,
+\citet[pp. 7--8, 17]{harbert2007germanic} defines it
+as Frisian, English, and Low German,
 while noting that Dutch has also been influenced by the Ingv\ae{}onic languages,
 
 \item
@@ -362,8 +400,11 @@ although \citet{stiles2013pan-west} also lists some phonological characteristics
 fronting of long and short *\textit{a};
 and palatalization of velar consonants''.
 
-Following the categorization by \citet{harbert2007germanic}, % TODO reason
-we can divide the modern doculects from our dataset as follows:
+We follow the categorization by \citet{harbert2007germanic}, 
+as it reconciles most of the aforementioned classification options.
+A split similar to the one proposed by \citet{sonderegger1979grundzuege}
+is part of the following section.
+We thus divide the modern doculects from our dataset as follows:
 
 \begin{itemize}
 \item 
@@ -379,19 +420,17 @@ Ortisei, T\"{u}bingen, Walser, Biel, Hard, Graub\"{u}nden.
 \end{itemize}
 
 In Figure~\ref{fig:map}, the Ingv\ae{}onic doculects
-are marked with blue, non-solid circles.
-A split similar to the one proposed by \citet{sonderegger1979grundzuege}
-is part of the following section.
+are marked with blue-rimmed, non-solid circles.
 
 \subsection{Results of the High German Sound Shift}
 
-A very important development for the CWG doculects,
+A very important development for some of the CWG doculects,
 especially High German, is the High German sound shift.
 \footnote{
 The term \textit{High German sound shift} has been used both
-to only describe the High German consonant shift,
-and to describe the consonant shift and sound shifts concerning
-the High German vowel system.
+to describe the High German consonant shift,
+and to describe the consonant shift as well as
+sound shifts concerning the High German vowel system.
 We use it here with the former meaning.
 }
 Summarizing \citet[pp. 47--48]{harbert2007germanic}
@@ -413,7 +452,7 @@ To balance this out,
 the voiced Germanic stops (/*b, *d, *g/) on the other hand
 developed into their voiceless (and aspirated) counterparts.
 
-Generally, these changes are pronounced
+Generally, these changes are more pronounced
 in the Southern CWG area, and did not take place in the North
 \cite[p. 33]{noble1983modern}
 \footnote{
@@ -425,12 +464,12 @@ although there are also some controversies surrounding this
 In between, there are many doculects
 that only partially realized the High German sound shift,
 with some of the changes only applying to individual words
-\citet[p. 63]{koenig2015dtv}.
+\citep[p. 63]{koenig2015dtv}.
 
-Based on this, there is a common split
+Based on this, there is a common division
 of CWG doculects spoken in Germany into three groups:
-Upper German doculects, which exhibit lenition for
-all three voiceless stops almost completely
+Upper German doculects, which almost completely
+exhibit lenition for all three voiceless stops
 (except for sometimes /*k/ $>$ /(k)x/),
 Central German doculects, which show a
 partial development of the High German sound shift,
@@ -439,7 +478,7 @@ which were not influenced by the High German sound shift
 \citep[pp. 33, 55]{noble1983modern}.
 
 This division is performed based on
-the presence or absence of this shift in individual words.
+the presence or absence of this shift in individual words \citep[p. 63]{koenig2015dtv}.
 The pronunciation boundaries (isoglosses) for such words
 sometimes appear tightly bundled together,
 although such bundles can also fan out such that a region
@@ -451,8 +490,8 @@ of the boundary (or transition zone) between Low and Central German
 We base the following classification of
 the CWG doculects we worked with
 on a map by \citet[pp. 230-231]{koenig2015dtv}:
+\todo{refine or remove this footnote}
 \footnote{
-% TODO refine or remove
 Central German is delimited % TODO word choice
 to the North (Low German) with an isogloss bundle containing
 'ik/ich, maken/machen, Dorp/Dorf'...
@@ -463,26 +502,26 @@ to the North (Low German) with an isogloss bundle containing
 \textbf{Low German, Dutch, and Frisian:}
 Westerkwartier, Veenkoloni\"{e}n, Achterhoek,
 Feer, Heligoland, Grou,
-Std. Dutch (NL), Std. Dutch (BE), Ostend, Antwerp, Limburg.
+Std. Dutch (NL), Std. Dutch (BE), Ostend, Antwerp and Limburg.
 
 \item
 \textbf{Central German:}
-Cologne, Luxembourg.
+Cologne and Luxembourg.
 
 \item
 \textbf{Upper German:}
 T\"{u}bingen, Herrlisheim,
-Biel, Graub\"{u}nden, Walser, Hard, Ortisei.
+Biel, Graub\"{u}nden, Walser, Hard and Ortisei.
 \end{itemize}
 
 Figure~\ref{fig:map} shows this division:
-Low German, Dutch and Frisian are marked with (solid green and non-solid blue) circles,
-Central German with yellow squares, and Upper German with red triangles.
+Low German, Dutch and Frisian are marked with %(solid green and non-solid blue)
+circles, Central German with yellow squares and Upper German with red triangles.
 
 This division also matches the intra-database grouping by \citet{heggarty2018sound}
 (who additionally split up the last group into
 Low German on the one hand,
-and Frisian, Dutch, and Flamish on the other).
+and Frisian, Dutch and Flemish on the other).
 
 % \newpage
 \section{Methods}
@@ -492,29 +531,32 @@ and Frisian, Dutch, and Flamish on the other).
 \label{subsec:msa}
 
 In order to extract sound correspondences,
-we need to align the sound sequences corresponding to each concept first.
+we first need to align the sound sequences corresponding to each concept.
 We carry out alignment based on data from
 all the investigated doculects at once using multiple sequence alignment.
-Using multiple sequence alignment instead of carrying out
-pairwise alignments between the modern data and the reference data
-makes it possible to carry out the alignment
-based on patterns found in commonalities between the modern doculects as well.
-Because of this, we use all of the Germanic data
+
+Doing this instead of performing pairwise alignment between
+the Proto-Germanic and the modern data makes in possible
+to--in addition to using patterns found in doculect-specific
+sound correspondences--base the alignment on commonalities
+between the modern doculects.
+Because of this, we use all of the modern Germanic data
 we extracted from the Sound Comparisons project
-instead of only the CWG doculects and Proto-Germanic.
+instead of only the CWG doculects.
 
 We use a library-based version \citep{notredame2000t-coffee:} of the progressive multiple sequence alignment method \citep{thompson1994clustal}.
 For each concept:
 
 \begin{enumerate}
 \item
-Divide the phonetic representation of each word into an array of sound segments.
-These sound segments are typically single IPA tokens (including diacritics), but we use multi-token segments for affricates, diph- and triphthongs, and geminates.
+We divide the phonetic representation of each word into an array of sound segments.
+These sound segments are typically single IPA tokens (including diacritics),
+but we use multi-token segments for affricates, diph- and triphthongs and geminates.
 \footnote{
-Allowing multi-token segments is different from
+Allowing multi-token segments differs from
 the method employed by, e.g., \citet{wieling2010hierarchical}.
 They neither allowed multi-token segments nor did they add contextual information
-(see \ref{subsec:corres}),
+(see section~\ref{subsec:corres}),
 but they remark on a common alignment $\emptyset$:[\textesh],
 which commonly appears after [t]:[t].
 We opt instead to interpret affricates as single segments with
@@ -523,26 +565,34 @@ the result of correspondences such as [t]:[\texttoptiebar{t\textesh}].
 }
 
 \item
-Create alignments for all possible binary sequence combinations.
+We then generate alignments for all possible pairwise combinations
+of (modern or historical) doculects.
 These alignments are created using the algorithm from \citet{needleman1970general},
 with a scoring scheme based on the sound classes introduced by \citet{list2012sca}.
-All segment alignments from this step are stored in a library,
+\footnote{
+This scoring scheme is elaborated upon in section~\ref{subsec:corres}.
+}
+All segment alignments from this step are stored in a so-called \textit{library},
 each associated with a weight reflecting its relative frequency.
 % TODO. in how far does it reflect probable sound class changes in the LingPy implementation (vs. relative frequency)
 
 \item
+\todo{??? TODO rephrase this.}
 Use the binary calculations to create a distance matrix between the sequences.
-Convert the distance matrix into a tree using the UPGMA method \citep{sokal1958statistical}.
+We convert the distance matrix into a tree using the UPGMA method \citep{sokal1958statistical}.
+\footnote{This method is explained in section~\ref{subsubsec:upgma}.}
 
 \item 
 Progressing from the tips of the tree to the root,
-consecutively join the alignments meeting at branchings,
+we consecutively join the alignments meeting at branchings
+based on the library created in the first step.,
 until (at the root) all alignments have been consolidated into one alignment table.
-Alignments are merged using the library created in the first step.
 \end{enumerate}
 
 We use the LingPy library for Python \citep{list2018lingpy} to perform these steps.
-Table~\ref{tab:msa} shows an excerpt from the multiple sequence alignment for the concept ``cold''.
+\todo{TODO change the table so it goes North to South}
+Table~\ref{tab:msa}
+shows an excerpt from the multiple sequence alignment for the concept ``cold''.
 
 \begin{table}[h]
 \begin{center}
@@ -556,9 +606,10 @@ Table~\ref{tab:msa} shows an excerpt from the multiple sequence alignment for th
 \label{subsec:corres}
 
 After performing sound segment-wise alignment,
-we extract sound correspondences between each
-modern doculect and Proto-Germanic from the alignment table.
+we extract sound correspondences between
+Proto-Germanic and each modern doculect from the alignment tables for all concepts.
 We use straightforward segment-to-segment correspondences
+\todo{TODO: Compare to Montemagni et al., also ref them here}
 as well as correspondences that include contextual information:
 
 \begin{itemize}
@@ -578,26 +629,29 @@ the same type for both Proto-Germanic and the modern doculect.
 \textbf{Sound class-based context}:
 This is similar to the previous category,
 but we give more fine-grained information about consonants and vowels.
+\todo{TODO mention cases where SCA was useful in other applications}
 We use the sound classes introduced by \citet{list2012sca},
-which discern between fifteen consonant groups and sixteen vowel groups.
-We do not include information on word boundaries or gaps here,
-as it would be identical to the word boundary- or gap-related information
-included in the correspondences with simple contextual information.
-% TODO mention cases where SCA was useful in other applications
+which discern between fifteen consonant groups and
+\todo{TODO double-check}
+sixteen vowel groups.
 
 \item
-\textbf{Word boundary-based context}:
-This category applies when the context is a word boundary.
+\textbf{Word boundaries}:
+When the (left or right) context is a word boundary,
+we add information about this.
 
 \end{itemize}
 
-% TODO check montemagni. also ref them here
+\todo{TODO: Fix the header, caption.}
 Table~\ref{tab:context} provides an overview
-of the different context types, as found in the data.
+of the different context types,
+with the corresponding IPA characters found in our data
+in the case of \citeauthor{list2012sca}'s sound classes.
 IPA characters with diacritics are classified
 like their diacritic-less counterparts,
-and diphthongs/triphthongs are classified
+and diphthongs and triphthongs are classified
 according to the first character in the sequence.
+\todo{TODO: Fix the header}
 Table~\ref{tab:corres} shows the sound correspondences
 that can be inferred for the aligned segments
 from Proto-Germanic and Ortisei German for the alignment
@@ -608,7 +662,7 @@ as they do not contain information on correspondences
 between Proto-Germanic and the modern doculect in question,
 only about an inserted sound segment in one or more other doculects.
 Furthermore, we treat insertions and deletions
-that LingPy flags as swaps (metathesis) as normal insertions/deletions,
+that LingPy flags as swaps (metathesis) as normal insertions or deletions,
 as such cases only happen for 3 of the 111 concepts.
 
 For each doculect, we ignore sound correspondences
@@ -641,14 +695,13 @@ We implemented two approaches to custering the data.
 Both clustering approaches follow a similar structure:
 we first normalize the doculect-by-correspondence tally matrix
 to adjust feature frequencies by how informative they are,
-% dimensionality reduction,
 then we perform hierarchical clustering.
 Each approach is carried out once with only
 the context-less sound correspondences,
 and once with all context types.
 
 \subsubsection{TF-IDF and UPGMA}
-\label{subsubsec:tfidf}
+\label{subsubsec:upgma}
 
 We first transform the frequencies
 in the doculect-by-correspondence tally matrix
@@ -692,13 +745,11 @@ where it is calculated as
 + 1).
 \end{equation*}
 
-% We then apply truncated singular vector decomposition (preserve a large enough number of components to explain at least 85\% of the variance)
-% remove noise
-
 We create a doculect-by-doculect distance matrix
 with distances bounded between $0$ (identical) and $1$ (maximally different)
 by calculating the cosine distances between each
-binary combination of row vectors from the doculect-by-correspondence matrix:
+binary combination of row vectors from the doculect-by-correspondence matrix
+(where $doculect_i$ and $doculect_j$ refer to the $i$th and $j$th row vectors, respectively):
 
 \begin{equation*}
 \operatorname{cosine\_distance}(doculect_i,doculect_j) =
@@ -708,16 +759,18 @@ binary combination of row vectors from the doculect-by-correspondence matrix:
 \end{equation*}
 
 We then convert this distance matrix into a dendrogram,
-using the UPGMA
-(Unweighted Pair Group Method using Arithmetic Averages)
-method introduced by \citet{sokal1958statistical}.
+using the
+\todo{TODO: explain how UPGMA works}
+Unweighted Pair Group Method using Arithmetic Averages
+(UPGMA) method introduced by \citet{sokal1958statistical}.
 UPGMA was found to be preferable to other
 distance matrix-based hierarchical clustering methods
 for analyzing dialect distances by \citet{heeringa2004measuring},
 and among one of several suited clustering methods for dialectometry
 by \citet{prokic2008recognizing}.
 
-TODO: explain UPGMA
+Henceforth, we refer to the results of this approach
+as \textit{UPGMA-context} and \textit{UPGMA-nocontext}.
 
 \subsubsection{Bipartite Spectral Graph Co-clustering}
 \label{subsubsec:bsgc}
@@ -740,7 +793,7 @@ This method works as follows:
 We begin with normalizing the binary co-occurrence matrix
 $A^{m \times n}$ ($m$ = number of doculects, $n$ = number of sound correspondences).
 First, we create two diagonal matrices
-$D_1^{m \times m}$ and $D_2^{n x n}$ that, respectively,
+$D_1^{m \times m}$ and $D_2^{n \times n}$ that, respectively,
 contain the row sums or column sums of $A$.
 We use these diagonal matrices to reduce
 the importance of doculects (or correspondences)
