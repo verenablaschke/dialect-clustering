@@ -9,16 +9,18 @@
 \usepackage[dvipsnames]{xcolor} % colour-code the groups (has to come before tikz)
 \usepackage[geometry]{ifsym} % shape-code the groups
 \usepackage[section]{placeins} % don't let the graphics/tables move past sections
+\usepackage{float}
 \usepackage{tipa} % IPA
 \usepackage{amsmath} % formulae
-\usepackage{mathtools} % displaystyle in formulae with cases
+\usepackage{mathtools} % display style in formulae with branching cases
 \usepackage{forest} % (non-dendrogram) trees
 \usetikzlibrary{decorations.pathreplacing} % draw braces in tikz figures
 \usepackage{standalone} % import figures
 \usepackage{changepage} % adjust text width
 \usepackage{parskip} % proper paragraphs, no indentation
-\usepackage{showframe, todonotes} % TODO remove
-\usepackage[margin=3cm]{geometry}
+\usepackage{showframe} % TODO remove
+\usepackage{todonotes} % TODO remove
+% \usepackage[margin=3cm]{geometry}
 
 % TODO make the hues match those of the map
 \def\upper{\color{red}\FilledBigTriangleUp}
@@ -81,7 +83,7 @@ Eberhard Karls Universität Tübingen
 \vspace{1em}
 August 2018}
 \end{center}
-    
+	
 \end{titlepage}
 
 \pagenumbering{gobble}
@@ -100,40 +102,50 @@ August 2018}
 
 \pagenumbering{arabic}
 
-
 \section{Introduction}
 
-% --- on clustering dialects and determining relevant features ---
+Language variation and change has long been a focus of linguistics.
+The analyses necessary for determining
+systematic similarities and differences between language varieties
+had to originally be exclusively performed by hand,
+but with the advances of computational methods,
+it has become possible to carry out quantitative analyses more easily.
+One field concerned with such analyses is \textit{dialectometry},
+which focuses on computational and statistical methods for dialectology.
 
-dialectometry: computational and statistical methods for dialectology
+The advantage of applying quantitative methods to dialectology
+is that the statistical models can work using all of the feature
+information of the data that they are given, evaluating for
+each feature how well it does or does not describe similarities or differences in the data.
 
-clustering dialects and determining relevant features
-% --- on historical sound correspondences ---
-
-historical sound correspondences
-
-% \citet{kondrak2009identification}
-% https://pdfs.semanticscholar.org/d2ea/1dbe1a81f60f99dab04dffc957622b8cb9f2.pdf
-% https://www.clips.uantwerpen.be/~gillis/pdf/20040107.9620.cslfinal.pdf
-% https://www.aclweb.org/anthology/J/J96/J96-4003.pdf
+In this thesis, we examine a set of West Germanic language varieties
+currently spoken in continental Europe.
+We compare them by investigating how they have changed phonologically
+since a shared ancestral stage of Germanic from around 2500 years ago.
+Our goal is to automatically assign a cluster structure to the
+modern language varieties that reflects shared sound changes
+within each cluster and differences between sound shifts between different clusters.
 
 This thesis is structured as follows:
-We begin by introducing the data in section~\ref{sec:data}.
+In the following subsection, we present the
+dialectometrical approaches that influenced our work.
+Then we begin by introducing the data in section~\ref{sec:data}.
 Then, in section~\ref{sec:cwg},
 we give a brief introduction to continental West Germanic doculects,
-proposed groupings of doculects belonging to that group of doculects
+proposed ways of grouping doculects belonging to that group of doculects
 and the problems associated with doing this.
 In section~\ref{sec:methods}, we explain our methodology for
 aligning the data and extracting sound correspondences,
 and then for the two approaches to clustering the data that we employ,
 and explain how we rank the sound correspondences.
 We present the results in section~\ref{sec:results}
-and discuss them in section~\ref{sec:discussion}.
+and discuss them in section~\ref{sec:discussion},
+before concluding the thesis in section~\ref{sec:conclusion}.
 
 \subsection{Related Work}
 
 In the past decades, there have been many advances in the field of dialectometry.
-For a thorough overview, see \citet{wieling2015advances}.
+For thorough overviews, see \citet{nerbonne2009data} and \citet{wieling2015advances}.
 
 \citet{prokic2012detecting} perform hierarchical clustering
 on Bulgarian dialects based on phonetic distances.
@@ -183,6 +195,11 @@ clustering British English dialects.
 \citet{montemagni2013synchronic} applied this method to Tuscan dialects,
 and supplemented the sound correspondences with information
 on the phonetic contexts of the sound segments in the correspondences.
+
+Our usage of phonetic context information is also
+influenced by the work of \citet{wettig2012using}
+who used context-sensitive sound correspondence rules
+for aligning phonetically transcribed data from related languages.
 
 % \newpage
 \section{Data}
@@ -336,8 +353,8 @@ and, as the previous figure, \citet{harbert2007germanic}.
 We include it here since the output of the clustering methods
 is also strictly hierarchical.
 
-\begin{figure}[h]
-\begin{adjustwidth}{-3cm}{-3cm}
+\begin{figure}[H]
+\begin{adjustwidth}{-10cm}{-10cm}
 \centering
 \scalebox{0.8}{
 \input{figures/glottolog}
@@ -540,7 +557,6 @@ scikit-learn \citep{pedregosa2011scikit-learn} and LingPy \citep{list2018lingpy}
 \subsection{Multiple Sequence Alignment}
 \label{subsec:msa}
 
-
 We carry out alignment based on data from
 all the investigated doculects at once using multiple sequence alignment.
 Doing this instead of performing pairwise alignment between
@@ -617,7 +633,7 @@ After performing sound segment-wise alignment,
 we extract sound correspondences between
 Proto-Germanic and each modern doculect from the alignment tables for all concepts.
 We use straightforward segment-to-segment correspondences
-\todo{TODO: Compare to Montemagni et al., also ref them here}
+\todo{TODO: Compare to Montemagni et al., also ref them here. Note similarity to the phonological rewrite rules by Chomsky and Halle 1968}
 as well as correspondences that include contextual information:
 
 \begin{itemize}
@@ -1025,6 +1041,7 @@ and rounded to the nearest integer.
 }
 \label{tab:tfidf-nocontext-corres}
 \end{table}
+\FloatBarrier
 
 \subsection{Bipartite Spectral Graph Clustering}
 
@@ -1076,8 +1093,9 @@ and rounded to the nearest integer.
 }
 \label{tab:bsgc-context-corres}
 \end{table}
+\FloatBarrier
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \input{tables/bsgc-nocontext-corres}
 \caption
@@ -1206,10 +1224,12 @@ was the most resistant to change during the High German sound shift.
 \label{subsubsec:cosine}
 
 \begin{figure}[h]
-% \centering
-\includestandalone[width=0.55\textwidth]{figures/cosine}
-\hspace{-4em}
-\includestandalone[width=0.55\textwidth]{figures/cosine2}
+\begin{adjustwidth}{-3cm}{-3cm}
+\centering
+\includestandalone[width=0.75\textwidth]{figures/cosine}
+\hspace{-7em}
+\includestandalone[width=0.75\textwidth]{figures/cosine2}
+\end{adjustwidth}
 \caption
 [Cosine similarities between the doculects (UPGMA-context)]
 {
@@ -1409,7 +1429,8 @@ here are phonetic
 and on a word level, but we are ignoring
 lexical, syntactical, morphological, etc. information in this analysis.
 
-\section{Conclusion} % or section
+\section{Conclusion}
+\label{sec:conclusion}
 
 In this thesis, we have implemented two methods
 for clustering doculects on the basis of shared
