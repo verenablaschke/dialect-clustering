@@ -3,7 +3,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage{hyperref}
-\usepackage{wrapfig} % place figure to the left
 \usepackage{multirow} % context example table
 \usepackage{graphicx} % include the map
 \usepackage[outline]{contour} % contour place names in the cosine similarity figure
@@ -54,7 +53,7 @@ Clustering Dialect Varieties Based on Historical Sound Correspondences
 {\large
 \textit{Author}\\
 Verena Blaschke}\\
-\href{mailto:verena.blaschke@student.uni-T\"{u}bingen.de}{\textit{verena.blaschke@student.uni-T\"{u}bingen.de}}\\
+\href{mailto:verena.blaschke@student.uni-tuebingen.de}{\textit{verena.blaschke@student.uni-tuebingen.de}}\\
 \end{flushleft}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
@@ -62,7 +61,7 @@ Verena Blaschke}\\
 {\large
 \textit{Supervisor}\\
 Dr. Çağrı Çöltekin}\\
-\href{mailto:ccoltekin@sfs.uni-T\"{u}bingen.de}{\textit{ccoltekin@sfs.uni-T\"{u}bingen.de}}\\
+\href{mailto:ccoltekin@sfs.uni-tuebingen.de}{\textit{ccoltekin@sfs.uni-tuebingen.de}}\\
 \end{flushright}
 \end{minipage}\\
 
@@ -82,7 +81,7 @@ Eberhard Karls Universität Tübingen
 \vspace{1em}
 August 2018}
 \end{center}
-	
+    
 \end{titlepage}
 
 \pagenumbering{gobble}
@@ -527,14 +526,23 @@ and Frisian, Dutch and Flemish on the other).
 \section{Methods}
 \label{sec:methods}
 
+In section~\ref{subsec:msa}, we describe how we align
+the the phonetic transcriptions from our data.
+From the aligned data, we extract sound correspondences
+(section~\ref{subsec:corres}), which we then use for
+two different clustering methods (section~\ref{subsec:clustering}).
+
+We implemented these methods in Python
+making use of several libraries for statistical analyses:
+NumPy \citep{oliphant2006guide}, SciPy \citep{jones2001scipy},
+scikit-learn \citep{pedregosa2011scikit-learn} and LingPy \citep{list2018lingpy}.
+
 \subsection{Multiple Sequence Alignment}
 \label{subsec:msa}
 
-In order to extract sound correspondences,
-we first need to align the sound sequences corresponding to each concept.
+
 We carry out alignment based on data from
 all the investigated doculects at once using multiple sequence alignment.
-
 Doing this instead of performing pairwise alignment between
 the Proto-Germanic and the modern data makes in possible
 to--in addition to using patterns found in doculect-specific
@@ -705,9 +713,8 @@ and once with all context types.
 
 We first transform the frequencies
 in the doculect-by-correspondence tally matrix
+\todo{Sources for tfidf?}
 by applying TF-IDF weighting.
-
-% TODO sources for tfidf?
 
 Term frequency (TF) measures the relative frequency
 of each sound correspondence within a doculect:
@@ -732,7 +739,7 @@ log(
 
 To combine term frequency and inverse document frequency
 and transform the tally matrix, 
-we use the implementation in the Python library scikit-learn
+we use the implementation from the Python library scikit-learn
 \citep{pedregosa2011scikit-learn},
 where it is calculated as
 
@@ -789,7 +796,6 @@ This method works as follows:
 
 \begin{enumerate}
 \item 
-% Given a (binary) co-occurrence matrix $A^{m \times n}$ ($m$ = number of doculects, $n$ = number of sound correspondences), normalize this matrix.
 We begin with normalizing the binary co-occurrence matrix
 $A^{m \times n}$ ($m$ = number of doculects, $n$ = number of sound correspondences).
 First, we create two diagonal matrices
@@ -808,6 +814,7 @@ A_n = D_1^{-\frac{1}{2}} \times A \times D_2^{-\frac{1}{2}}.
 \end{equation*}
 
 \item
+\todo{Briefly explain SVD? Source for (truncated) SVD?}
 We perform singular value decomposition on $A_n$
 to obtain the left and right singular vectors $u_i$ and $v_i$.
 We ignore the singular vectors belonging
@@ -815,35 +822,24 @@ to the largest singular value as they do not contain
 information relevant for partitioning the data \citep{kluger2003spectral},
 and work with the second singular vectors ($u_2$, $v_2$) instead.
 We calculate the vector $Z^{(m + n) \times 1}$ such that
-% \begin{equation*}
-% Z = 
-% \begin{cases}
-% D_1^{-\frac{1}{2}} \times u_2, & \text{for the first } m \text{ entries}\\
-% D_2^{-\frac{1}{2}} \times v_2, & \text{for the last } n \text{ entries}
-% \end{cases}
-% \end{equation*}
+its first $m$ entries contain information about the doculects
+and the following $n$ entries about the sound correspondences:
 \begin{align*}
 Z_{[0, m]} = D_1^{-\frac{1}{2}} \times u_2\\
 Z_{[m, m+n]} = D_2^{-\frac{1}{2}} \times v_2
 .
 \end{align*}
-% TODO make this understandable
-
-% We calculate $D_1^{-\frac{1}{2}} \times u_2$
-% and $D_2^{-\frac{1}{2}} \times v_2$,
-% and concatenate them to the vector $Z$. 
 
 \item
+\todo{Explain k-means? Source?}
 We perform k-means clustering on $Z$ with $k = 2$.
 
 \item
 For each cluster that contains at least two doculects,
 we create the binary co-occurrence matrix $A$ describing
 the doculects and sound correspondences in this cluster,
-and repeat steps 1--3.
+and repeat all steps.
 \end{enumerate}
-
-% TODO sources for svd, kmeans nec?
 
 If a cluster produced in step 3 contains
 sound correspondences that are not exhibited
@@ -851,19 +847,21 @@ by any of the doculects in this cluster,
 we assign this correspondence to the other cluster.
 This only happens rarely, and in these cases the corresponding
 value in $Z$ is near the k-means decision boundary.
-We need to change the cluster identity in such cases,
+We need to change the cluster identity in such situations,
 as it would otherwise not be possible to normalize
 the cluster's co-occurrence matrix when partitioning
 the cluster elements again.
-% TODO do parts of this belong in the results section??
 
-\subsection{Ranking sound correspondences by importance}
+The results from this method are hereafter referred to
+as \textit{UPGMA-context} and \textit{UPGMA-nocontext}.
+
+\subsection{Ranking Sound Correspondences by Importance}
 \label{subsec:ranking}
 
 When all doculects have been assigned to this hierarchical cluster structure,
 we rank the sound correspondences associated with each cluster.
-In the case of the TF-IDF method, these are
-the sound correspondences exhibited by each cluster's doculects;
+In the case of the UPGMA method, these are
+all sound correspondences exhibited by each cluster's doculects;
 for the graph clustering method,
 these are the sound correspondences that are in the same cluster.
 
@@ -888,7 +886,7 @@ and $1$ (all doculects in the cluster do).
 Distinctiveness indicates how often a given sound correspondence
 occurs in a given cluster compared to other clusters. 
 This requires two additional measures:
-relative occurrence,hich indicates the proportion
+relative occurrence, which indicates the proportion
 of doculects exhibiting the sound correspondence
 that is in the given clusters,
 and relative size, which gives the number of doculects 
@@ -914,9 +912,9 @@ These two concepts are combined to determine the distinctiveness score:
 \end{equation*}
 
 Distinctiveness has an upper bound of
-$1$ (the sound correspondence only occurs in the given cluster),
+$1$ (a given sound correspondence only occurs in a given cluster),
 but no lower bound.
-A value of $0$ indicates that the sound correspondence
+A value of $0$ means that the sound correspondence
 has the same relative frequency within the cluster
 as among the total set of doculects.
 Negative values indicate that the sound correspondence
@@ -951,11 +949,6 @@ such that more frequent correspondences rank higher.
 \section{Results}
 \label{sec:results}
 
-% Sound correspondences:
-% 201 without context
-% 292 with C/V context
-% 111 with SC context
-% 61 with # context
 The sound correspondence extraction for our data
 yields 201 correspondences without context information,
 292 with simple context information,
@@ -965,12 +958,12 @@ and 62 with word boundary information.
 Using these sound correspondences for
 applying the aforementioned methods results in
 four arrangements of the data into hierarchical partitions,
-two for the TFIDF method and two for the graph clustering method.
+two for the UPGMA method and two for the graph clustering method.
 
 \subsection{TFIDF and UPGMA}
 
 Figure~\ref{fig:tfidf-dendrograms} shows the dendrograms
-created by the TFIDF method for sound correspondences
+created by the UPGMA method for sound correspondences
 including and excluding contextual information.
 Of the 18 intermediary clusters
 (i.e. clusters that are neither singletons nor contain all doculects),
@@ -988,15 +981,17 @@ and 17 for the run with additional contextual information.
 {\central} Central German \hspace{1em}
 {\upper} Upper German
 \end{center}
-\caption{TFIDF with no (top) and additional (bottom) context information, highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
+\caption
+[UPGMA with no (top) and additional (bottom) context information]
+{UPGMA with no (top) and additional (bottom) context information,
+as well as the highest-ranking correspondence per non-singleton cluster
+(with $\geq$70\% importance).}
 \label{fig:tfidf-dendrograms}
 \end{figure}
 
 The cosine similarity table that the dendrogram
 for the run with context information is based on
-is described in TODO.
-% is visualized as a map in Figure~\ref{fig:cosine}.
-% It is described more closely in TODO.
+is described in section~\ref{subsubsec:cosine}.
 
 In total, 201 sound correspondence were used for the run without contextual information,
 of which 6 have importance scores of 100\% for intermediary clusters.
@@ -1004,14 +999,16 @@ For the run with contextual information,
 24 sound correspondences (of 665 total) reach 100\% importance for intermediary clusters.
 Tables~\ref{tab:tfidf-nocontext-corres} and \ref{tab:tfidf-context-corres}
 show the highest-rank sound correspondences (importance score $\geq$ 90\%)
-for the context-less and context information run, respectively.
+for UPGMA-nocontext and UPGMA-context, respectively.
 
 \begin{table}[h]
 \centering
 \input{tables/tfidf-context-corres}
-\caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
-Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
-context
+\caption
+[Sound correspondences with an importance score of 90\% or higher for UPGMA-context]
+{Sound correspondences with an importance score of 90\% or higher for UPGMA-context.
+Importance, representativeness, and distinctiveness scores are percentages
+and rounded to the nearest integer.
 }
 \label{tab:tfidf-context-corres}
 \end{table}
@@ -1019,9 +1016,11 @@ context
 \begin{table}[h]
 \centering
 \input{tables/tfidf-nocontext-corres}
-\caption{TFIDF: sound correspondences with an importance score of 90\% or higher.
-Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
-nocontext}
+[Sound correspondences with an importance score of 90\% or higher for UPGMA-nocontext]
+{Sound correspondences with an importance score of 90\% or higher for UPGMA-nocontext.
+Importance, representativeness, and distinctiveness scores are percentages
+and rounded to the nearest integer.
+}
 \label{tab:tfidf-nocontext-corres}
 \end{table}
 
@@ -1029,63 +1028,71 @@ nocontext}
 
 The results for the graph clustering method are
 displayed in Figure~\ref{fig:bsgc-trees}.
-Again, the doculects are in structures of 18 intermediary clusters.
-Of these, 6 are contain at least one sound correspondence
+Again, the doculects are sorted into 18 intermediary clusters.
+Of these, 6 contain at least one sound correspondence
 with an importance rating of 70\% or above for the context-less run,
 and 10 for the run with additional context information.
 
-Of the 201 sound correspondences for the context-less run,
+Of the 201 sound correspondences for BSGC-nocontext,
 1 has an importance score of 100\% for an intermediary cluster
 (see Table~\ref{tab:bsgc-nocontext-corres});
 for the run with context information, 2 out of 665 correspondences reach this score.
-There are no sound correspondences with importance scores of at least 90\%
-for intermediary clusters for the run without context information,
-but Figure~\ref{tab:bsgc-context-corres} provides an overview of
-all 9 sound correspondences for which this applies
-in the run with context information.
+For the latter run, a total of 9 sound correspondences
+reach importance scores of at least 90\%
+for intermediary clusters, as shown in Table~\ref{tab:bsgc-context-corres}.
 
 It should be noted that the results concerning
 the smaller subclusters were
 (due to the random k-means initialization) not stable
-across runs, although the general results are similar.
+across runs, although the overall results have stayed similar.
 
 \begin{figure}[h]
-  \centering
-%   \includestandalone[height=0.35\textheight]{figures/bsgc-nocontext}
-  \includestandalone[width=0.85\textwidth]{figures/bsgc-nocontext}
+\centering
+% \includestandalone[height=0.35\textheight]{figures/bsgc-nocontext}
+\includestandalone[width=0.85\textwidth]{figures/bsgc-nocontext}
 
-  \vspace{2em}
-  
-%   \includestandalone[height=0.35\textheight]{figures/bsgc-context}
-  \includestandalone[width=\textwidth]{figures/bsgc-context}
-  \caption{BSGC with no (top) and additional (bottom) context information and highest-rating correspondence per non-singleton cluster (with $\geq$70\% importance score)}
-  \label{fig:bsgc-trees}
+\vspace{2em}
+ 
+% \includestandalone[height=0.35\textheight]{figures/bsgc-context}
+\includestandalone[width=\textwidth]{figures/bsgc-context}
+\caption
+[BSGC with no (top) and additional (bottom) context information]
+{BSGC with no (top) and additional (bottom) context information,
+as well as the highest-ranking correspondence per non-singleton cluster
+(with $\geq$70\% importance).}
+\label{fig:bsgc-trees}
 \end{figure}
 
 \begin{table}[h]
 \centering
 \input{tables/bsgc-context-corres}
-\caption{BSGC: sound correspondences with an importance score of 90\% or higher.
-Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
-context}
+[Sound correspondences with an importance score of 90\% or higher for BSGC-context]
+{Sound correspondences with an importance score of 90\% or higher for BSGC-context.
+Importance, representativeness, and distinctiveness scores are percentages
+and rounded to the nearest integer.
+}
 \label{tab:bsgc-context-corres}
 \end{table}
 
 \begin{table}[h]
 \centering
 \input{tables/bsgc-nocontext-corres}
-\caption{BSGC: sound correspondences with an importance score of 90\% or higher.
-Importance, representativeness, and distinctiveness scores are percentages and rounded to the nearest integer.
-nocontext}
+[Sound correspondences with an importance score of 90\% or higher for BSGC-nocontext]
+{Sound correspondences with an importance score of 90\% or higher for BSGC-nocontext.
+Importance, representativeness, and distinctiveness scores are percentages
+and rounded to the nearest integer.
+}
 \label{tab:bsgc-nocontext-corres}
 \end{table}
 
 \subsection{Comparisons to Continental West Germanic Groupings}
 
 For all methods, the first (in the figures: rightmost) split
-creates one group containing only Dutch, Low German, and Frisian doculects,
+creates one group containing only Dutch, Low German and Frisian doculects,
 and one group containing a mixture of mostly doculects from other groups
 as well as some doculects belonging to the aforementioned groups.
+We refer to the former group as the Northern cluster and to the
+latter as the Southern cluster.
 
 % \subsubsection{Comparison with Glottolog tree}
 % comparison with language ancestry data from \citet{hammarstroem2018glottolog}
@@ -1093,50 +1100,49 @@ as well as some doculects belonging to the aforementioned groups.
 \subsubsection{North Sea Germanic}
 
 For all approaches, the Ingv\ae{}onic doculects
-are distributed across several not directly connected subclusters.
+are distributed across several not directly connected clusters.
 These are, by method, (from least to most connected):
 
 \begin{itemize}
 \item
-BSGC (no context):
+BSGC-nocontext:
 None of the Ingv\ae{}onic doculects share a cluster
 with only other Ingv\ae{}onic doculects.
 % Three of them
 
 \item
-BSCG (with context):
+BSCG-context:
 Westerkwartier and Heligoland are clustered together.
 
 \item
-TFIDF (no context):
+TFIDF-nocontext:
 Achterhoek and Veenkoloni\"{e}n form a cluster,
 as do Heligoland and Westerkwartier.
 
 \item
-TFIDF (with context):
+TFIDF-context:
 Achterhoek and Veenkoloni\"{e}n also form a cluster.
 Feer, Heligoland and Westerkwartier form another cluster.
 \end{itemize}
 
 All results include several Ingv\ae{}onic doculects
-in the predominantly Upper German cluster
+in the Southern cluster
 (this is expanded upon in the following subsection).
-In all cases, these `aberrant' % TODO better word
-samples include both samples categorized as `Northern Frisian'
+In all cases, these
+samples include both doculects categorized as \textit{Northern Frisian}
 in Glottolog \citep{hammarstroem2018glottolog}: Feer and Heligoland.
 
 
 \subsubsection{Results of the High German Sound Shift}
 
 For both BSGC runs, the results can be compared to the consonant shift-based grouping as follows:
-Of the Low German/Dutch/Frisian doculects are in
-one of the two major subclusters % 7
-(which contains no Central or Upper German samples),
-although four of them are distributed throughout the other major subcluster.
+The majority of the Low German/Dutch/Frisian doculects are in
+the Northern cluster,
+although four of them are distributed throughout the Southern cluster.
 (For the run without context information,
 the samples in the latter group are not directly clustered together,
-but for the run with additional context information,
-two of them (Westerkwartier and Heligoland) are.)
+but for BSGC-context,
+two of them are (Westerkwartier and Heligoland).)
 The Central German doculects from Cologne and Luxembourg
 are not directly clustered together; the smallest cluster they share
 is with four other doculects.
@@ -1146,33 +1152,39 @@ as are T\"{u}bingen and Ortisei.
 The other three Upper German samples are distributed throughout
 the second major subcluster.
 
-By contrast, the results of the TFIDF runs fit
+By contrast, the results of the UPGMA runs fit
 the grouping based on the High German sound shift more closely.
 Again, most of the samples from the Low German/Dutch/Frisian group
-constitute one of the two major clusters.
+constitute the Northern cluster.
 The remaining samples from this class are clustered together
 to different degrees in the different runs:
 For the context-less run,
 Heligoland and Westerkwartier are directly grouped together,
 but the remaining two doculects (Feer and Limburg) are not.
 For the run with context information on the other hand,
-there are only three doculects outside the major cluster
+there are only three doculects outside the Northern cluster
 (Heligoland, Feer, Westerkwartier),
 and they are all grouped together.
+
+Both Central German doculects are directly clustered together
+for both UPGMA runs. In addition, for both runs, one of the
+Upper German doculects (T\"{u}bingen) is grouped with the
+Central German samples; the rest form their own cluster.
 
 The outcomes of the High German sound shift or lack thereof
 are also visible in some of the highest-ranked sound correspondences.
 
-The sound correspondence rules with 100\% importance scores
-for the Dutch/Ingv\ae{}onic cluster (TFIDF-context)
-all reflect some of the unvoiced stops remaining unchanged:
-k $>$ k / \#\_, t $>$ t / \_\#, k $>$ k / \_vow.
+In case of the UPGMA-context run,
+the sound correspondence rules with 100\% importance scores
+for the Northern cluster
+all reflect some of the unvoiced stops not being weakened:
+/*k/~$>$~[k]~/~\#\_, /*t/~$>$~[t]~/~\_\#, /*k/~$>$~[k]~/~\_\textit{vow}.
 
 Conversely, the predominantly Upper German clusters
 have high-ranked correspondences demonstrating lenition:
-t $>$ \texttoptiebar{ts}, t $>$ \texttoptiebar{ts} / \#\_,
-t $>$ \texttoptiebar{ts} / \_vow (TFIDF-context),
-t $>$ s (TFIDF-nocontext, BSGC).
+/*t/~$>$~[\texttoptiebar{ts}], /*t/~$>$~[\texttoptiebar{ts}]~/~\#\_,
+/*t/~$>$~[\texttoptiebar{ts}]~/~\_\textit{vow} (UPGMA-context)
+and /*t/~$>$~[s] (UPGMA-nocontext, BSGC).
 None of the sound correspondences with high importance values
 describe the affrication or spirantization of /*k/ or /*p/
 for any of the clustering approaches,
@@ -1180,21 +1192,24 @@ although it has to be noted that with the given data,
 none of the sound correspondences based on /*p/
 occurred often enough to actually be used for clustering.
 
-\subsubsection{Close Doculects Outside these Groupings}
+Nevertheless, the sound correspondence /*k/~$>$~[k\textsuperscript{h}]
+(on its own or prevocally) also has high importance scores
+for the Southern group.
+However, his still matches the assertion that /*k/
+was the most resistant to change during the High German sound shift.
 
-% \begin{wrapfigure}{l}{0.4\textwidth}
-% \includestandalone[width=\linewidth]{figures/cosine}
-% \end{wrapfigure}
+\subsubsection{Close Doculects Outside these Groupings}
+\label{subsubsec:cosine}
+
 \begin{figure}[h]
 % \centering
-% \includestandalone[width=0.6\textwidth]{figures/cosine}
 \includestandalone[width=0.55\textwidth]{figures/cosine}
 \hspace{-4em}
 \includestandalone[width=0.55\textwidth]{figures/cosine2}
 \caption
-{Cosine similarities between the doculects (TFIDF-context)}
+[Cosine similarities between the doculects (UPGMA-context)]
 {
-Cosine similarities between the doculects (TFIDF-context).
+Cosine similarities between the doculects (UPGMA-context).
 Lines that are bolder and darker represent greater cosine similarity scores.
 The graphic on the left includes all pairwise similarity scores;
 the one on the right only includes the highest 10\% of cosine similarity scores.
@@ -1203,15 +1218,11 @@ the one on the right only includes the highest 10\% of cosine similarity scores.
 \end{figure}
 
 In this section, we consider the results from
-the TFIDF run with contextual information more closely,
-i.e. the method whose results match the aforementioned
-groupings the most.
-The cosine similarity matrix that is the basis for the UPGMA method
-is visualized in Figure~\ref{fig:cosine}.
-
-% In addition to showcasing the results that are
-% also presented in Figure~\ref{fig:tfidf-dendrograms},
-% some of which are discussed in the preceding sections,
+the UPGMA-context run more closely,
+since it is the method whose results match the
+groupings in the literature the most.
+The cosine similarity matrix that is the basis for the
+hierarchical clustering step is visualized in Figure~\ref{fig:cosine}.
 
 The pairwise cosine similarity values showcased in this figure
 show geographically close as well as geographically distant connections
@@ -1222,7 +1233,7 @@ Proceeding from (North) West to (South) East on the map,
 we get the following connections:
 
 Among the doculects spoken in Belgium and the Netherlands,
-there is a tight cluster of Belgian doculects (Ostend, Antwerp, Std. Dutch BE)
+there is a tight cluster of Belgian doculects (Ostend, Antwerp, Std. Dutch (BE))
 which are connected to the Veenkoloni\"{e}n doculect via Ostend,
 which is in turn very similar to that spoken in Achterhoek.
 
@@ -1231,11 +1242,12 @@ the doculects which are its direct neighbours (Grou and Veenkoloni\"{e}n),
 but it forms a tight cluster with Heligoland and Feer.
 
 Heligoland and Feer however are also very similar to Luxembourgish.
-Luxembourg, Feer and T\"{u}bingen form a tight cluster,
-as do Luxembourg, T\"{u}bingen and Cologne.
-The doculects from Limburg and Herrlisheim,
-both of which are geographically close to the latter three doculects,
-have low cosine similarity values to them.
+Luxembourg, Feer and T\"{u}bingen are directly connected,
+as are Luxembourg, T\"{u}bingen and Cologne.
+However, there are low cosine similarity scores between
+the latter three doculects and
+the doculects from Limburg and Herrlisheim,
+both of which are geographically close to this group.
 
 T\"{u}bingen, Graub\"{u}nden and Walser form another
 triangle cluster with high pairwise cosine similarity scores.
@@ -1257,7 +1269,7 @@ higher proportions of the clusters are associated with
 sound correspondences (of $\geq$ 70\% importance):
 6/18 versus 10/18 for the graph clustering approach
 (without and with context information, respectively),
-and 13/18 versus 17/18 for the TFIDF method.
+and 13/18 versus 17/18 for UPGMA-context and UPGMA-nocontext.
 
 Most of the high-ranking sound correspondences
 use the vowel/consonant distinction instead of
@@ -1274,8 +1286,8 @@ TODO recap?
 \subsection{Clusters}
 The clusters formed by the different approaches
 match the groupings from the literature to different degrees.
-The TFIDF runs show these patterns more strongly than the BSGC runs,
-and the TFIDF-context run follows it the most closely.
+The UPGMA runs show these patterns more strongly than the BSGC runs,
+and the UPGMA-context run follows it the most closely.
 
 However, even in the TFIDF-context run,
 we see some unexpected results,
@@ -1284,7 +1296,7 @@ being clustered with a group of Central/Upper German doculects
 instead of the large Frisian/Low German/Dutch group.
 
 In addition, inspecting the cosine similarity values
-for the TFIDF-context run, we can observe a pattern
+for UPGMA-context, we can observe a pattern
 that shows both some isolated subgroups, as well as
 a more net-like pattern of connections
 reflecting more gradual changes.
@@ -1295,6 +1307,7 @@ perhaps following the fuzzy dialect clustering approaches
 by \citet{proell2013detecting}, which are better suited to model
 wave-like developments of language variation.
 
+\todo{synonyms for ``it would be interesting''}
 It would also be interesting to run clustering
 methods (fuzzy or not) on a larger amount of data,
 both in terms of the number of doculects
@@ -1315,8 +1328,9 @@ would allow us to do that.
 
 As mentioned before, the co-clustering approach
 does not match the groupings described in the literature very well
-compared to the much simpler TFIDF approach.
+compared to the simpler UPGMA approach.
 
+\todo{TODO revise this paragraph}
 One of the issues seems to be
 sound correspondences that get assigned to the wrong clusters
 in that they do not occur in any of the doculects in the cluster
@@ -1344,16 +1358,17 @@ Additionally, the doculects they used are
 generally from smaller geographic areas.
 Moreover, all of them used modern reference dialects.
 The transcriptions they worked with might also have been broader,
-potentially allowing for sound correspondences that are similar,
+potentially allowing for sound correspondences that are similar in our data,
 but (due to the narrowness of transcription) slightly different,
 to become identical and thus more common.
 
+\todo{synonyms for ``it would be interesting''}
 It would be interesting to investigate further the influence of
 data selection and preprocessing on BSGC performance.
 
 \subsection{Sound Correspondences}
 
-The sound correspondences helped the TFIDF model
+The sound correspondences helped the UPGMA model
 to match the literature more closely.
 However, most of the high-ranking sound correspondences
 do not involve the more detailed sound class model.
@@ -1377,6 +1392,7 @@ Again, a way of describing these sound changes more abstractly
 might make it possible to consider these sound changes more
 similarly while clustering doculects.
 
+\todo{TODO revise this paragraph}
 In future experiments, it might be worthwhile to additionally rank
 the sound correspondences by how regular they are,
 by comparing how often a given sound shift happened
