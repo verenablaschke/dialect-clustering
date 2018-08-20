@@ -962,6 +962,7 @@ two for the UPGMA method and two for the graph clustering method.
 
 \subsection{TFIDF and UPGMA}
 
+\todo{TODO: Fix the sound corres labels}
 Figure~\ref{fig:tfidf-dendrograms} shows the dendrograms
 created by the UPGMA method for sound correspondences
 including and excluding contextual information.
@@ -1016,6 +1017,7 @@ and rounded to the nearest integer.
 \begin{table}[h]
 \centering
 \input{tables/tfidf-nocontext-corres}
+\caption
 [Sound correspondences with an importance score of 90\% or higher for UPGMA-nocontext]
 {Sound correspondences with an importance score of 90\% or higher for UPGMA-nocontext.
 Importance, representativeness, and distinctiveness scores are percentages
@@ -1066,6 +1068,7 @@ as well as the highest-ranking correspondence per non-singleton cluster
 \begin{table}[h]
 \centering
 \input{tables/bsgc-context-corres}
+\caption
 [Sound correspondences with an importance score of 90\% or higher for BSGC-context]
 {Sound correspondences with an importance score of 90\% or higher for BSGC-context.
 Importance, representativeness, and distinctiveness scores are percentages
@@ -1077,6 +1080,7 @@ and rounded to the nearest integer.
 \begin{table}[h]
 \centering
 \input{tables/bsgc-nocontext-corres}
+\caption
 [Sound correspondences with an importance score of 90\% or higher for BSGC-nocontext]
 {Sound correspondences with an importance score of 90\% or higher for BSGC-nocontext.
 Importance, representativeness, and distinctiveness scores are percentages
@@ -1281,8 +1285,6 @@ among the high-ranking sound correspondences.
 \section{Discussion}
 \label{sec:discussion}
 
-TODO recap?
-
 \subsection{Clusters}
 The clusters formed by the different approaches
 match the groupings from the literature to different degrees.
@@ -1407,9 +1409,34 @@ here are phonetic
 and on a word level, but we are ignoring
 lexical, syntactical, morphological, etc. information in this analysis.
 
-\subsection{Conclusion} % or section
+\section{Conclusion} % or section
 
-TODO
+In this thesis, we have implemented two methods
+for clustering doculects on the basis of shared
+historical sound correspondences,
+and compared to results to common (although not uncontroversial)
+groupings of the doculects we worked with.
+
+We showed that, compared to the graph co-clustering method (BSGC),
+the agglomerative clustering approach (UPGMA)
+yielded results that are closer to the groupings in the literature
+and are associated with more sound correspondences that
+describe the subclusters well.
+
+Additionally, we examined the effect of adding information about
+the phonetic context in which specific sound shifts take place,
+and showed that adding such information also resulted in
+clusters that match the literature more closely and that
+can more frequently be described with relevant sound correspondences.
+
+Further investigation is needed for exploring the
+differences in the results between the two clustering approaches.
+Moreover, we hope to examine how the representation of
+sound shifts can be improved to describe them in
+as much detail or abstraction as required for good clustering results.
+In addition, it would be worthwhile to pursue ways
+of combining these approaches with fuzzy clustering techniques
+to better capture transitions within dialect continua.
 
 % \newpage
 \bibliographystyle{chicago}
