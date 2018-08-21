@@ -5,11 +5,15 @@
 \usepackage{forest}
 \usepackage{tipa}
 \begin{document}
-% TODO make the hues match those of the map
-\def\upper{\color{red}\FilledBigTriangleUp}
-\def\central{\color{Dandelion}\FilledBigSquare}
-\def\dutch{\color{ForestGreen}\FilledBigCircle}
-\def\ingv{\color{Blue}\BigCircle}
+
+\definecolor{purple}{HTML}{520066}
+\definecolor{blue}{HTML}{31688e}
+\definecolor{green}{HTML}{35b779}
+\def\upper{\color{purple}\FilledBigTriangleUp}
+\def\central{\color{blue}\FilledBigSquare}
+\def\dutch{\color{green}\FilledBigCircle}
+\def\ingv{\color{green}\BigCircle}
+
 \begin{forest}
 for tree={
   grow=west,

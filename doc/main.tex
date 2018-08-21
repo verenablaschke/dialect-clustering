@@ -9,7 +9,7 @@
 \usepackage[dvipsnames]{xcolor} % colour-code the groups (has to come before tikz)
 \usepackage[geometry]{ifsym} % shape-code the groups
 \usepackage[section]{placeins} % don't let the graphics/tables move past sections
-\usepackage{float}
+\usepackage{float} % place figures where I want them
 \usepackage{tipa} % IPA
 \usepackage{amsmath} % formulae
 \usepackage{mathtools} % display style in formulae with branching cases
@@ -20,13 +20,15 @@
 \usepackage{parskip} % proper paragraphs, no indentation
 \usepackage{showframe} % TODO remove
 \usepackage{todonotes} % TODO remove
-% \usepackage[margin=3cm]{geometry}
 
-% TODO make the hues match those of the map
-\def\upper{\color{red}\FilledBigTriangleUp}
-\def\central{\color{Dandelion}\FilledBigSquare}
-\def\dutch{\color{ForestGreen}\FilledBigCircle}
-\def\ingv{\color{Blue}\BigCircle}
+% For the map keys.
+\definecolor{purple}{HTML}{520066}
+\definecolor{midblue}{HTML}{31688e}
+\definecolor{green}{HTML}{35b779}
+\def\upper{\color{purple}\FilledBigTriangleUp}
+\def\central{\color{midblue}\FilledBigSquare}
+\def\dutch{\color{green}\FilledBigCircle}
+\def\ingv{\color{green}\BigCircle}
 
 \title{Clustering Dialect Varieties Based on Historical Sound Correspondences}
 \author{Verena Blaschke}
@@ -44,21 +46,26 @@
 
 \hrule
 \vspace{0.6cm}
-{\huge\bfseries
-Clustering Dialect Varieties Based on Historical Sound Correspondences
+{\bfseries\huge
+Clustering Dialect Varieties
+
+Based on
+
+\vspace{4mm}
+Historical Sound Correspondences
 }\\[0.7cm] 
 \hrule
 \vspace*{.05\textheight}
  
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.49\textwidth}
 \begin{flushleft} 
 {\large
 \textit{Author}\\
 Verena Blaschke}\\
-\href{mailto:verena.blaschke@student.uni-tuebingen.de}{\textit{verena.blaschke@student.uni-tuebingen.de}}\\
+\href{mailto:verena.blaschke@student.uni-tuebingen.de}{\textit{verena.blaschke@student.\\uni-tuebingen.de}}\\
 \end{flushleft}
 \end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.49\textwidth}
 \begin{flushright}
 {\large
 \textit{Supervisor}\\
@@ -88,11 +95,24 @@ August 2018}
 
 \pagenumbering{gobble}
 \newpage
-\section*{Abstract}
-\todo[inline]{TODO :)}
 
-\vspace{2em}
+\section*{Abstract}
+While information on historical sound shifts
+plays an important role for examining
+the relationships between related language varieties,
+it has rarely been used for computational dialectology.
+This thesis explores the performance of two clustering
+approaches on sound correspondences between Proto-Germanic
+and modern continental West Germanic languages and dialects.
+Our experiments suggest that the results of agglomerative clustering
+match common dialect groupings more closely
+than the results of divisive bipartite spectral graph co-clustering.
+We also observe that adding phonetic context information
+to the sound correspondences yields clusters
+that can more frequently be described by representative and distinctive
+sound correspondences.
 \todo[inline]{Eigenständigkeits- bzw. Antiplagiatserklärung}
+
 \newpage
 \tableofcontents
 \newpage
@@ -114,7 +134,7 @@ One field concerned with such analyses is \textit{dialectometry},
 which focuses on computational and statistical methods for dialectology.
 
 The advantage of applying quantitative methods to dialectology
-is that the statistical models can work using all of the feature
+is that the statistical models can work using all the feature
 information of the data that they are given, evaluating for
 each feature how well it does or does not describe similarities or differences in the data.
 
@@ -130,7 +150,7 @@ This thesis is structured as follows:
 In the following subsection, we present the
 dialectometrical approaches that influenced our work.
 Then we begin by introducing the data in section~\ref{sec:data}.
-Then, in section~\ref{sec:cwg},
+Next, in section~\ref{sec:cwg},
 we give a brief introduction to continental West Germanic doculects,
 proposed ways of grouping doculects belonging to that group of doculects
 and the problems associated with doing this.
@@ -237,7 +257,6 @@ The modern doculects are from locations in the
 Netherlands, Belgium, Luxembourg, (along the Western border of) Germany,
 France (Alsace), Switzerland, Liechtenstein, Austria (Voralberg), and Italy (South Tyrol).
 Figure~\ref{fig:map} provides an overview of these locations.
-\todo{TODO: Make the yellow a bit darker, the green a bit lighter.}
 The legend is explained in section~\ref{sec:cwg}.
 
 For the phonetic alignment step (see section~\ref{subsec:msa}),
@@ -280,14 +299,14 @@ In total, we have 2181 word alignments between Proto-Germanic and modern CWG doc
 \label{sec:cwg}
 
 The CWG doculects include several standard languages
-(standard variaties of Dutch spoken in Belgium and the Netherlands,
+(standard varieties of Dutch spoken in Belgium and the Netherlands,
 Luxembourgish, standard varieties of German in
 Germany, Austria, Switzerland and Liechtenstein)
 as well as many regiolects and dialects.
 Establishing subgroups within this collection of doculects provides a challenge
 that has been taken up many times, with different results.
 Even the classification of West Germanic
-as its own branch of Germanic is controversal,
+as its own branch of Germanic is controversial,
 though generally accepted
 (c.f. \citet{voyles1971problem}; \citet[pp. 7-8]{harbert2007germanic}; \citet{ringe2012cladistic}).
 
@@ -300,26 +319,23 @@ These similarities do not only exist because of genetic relatedness
 but also--enabled by the geographic proximity--mutual influences
 \citep[p. 8]{harbert2007germanic}.
 
-On the other hand,
-\todo{More recently than what?}
-more recently,
+On the other hand, 
 interactions between dialects and standard languages
-have influenced the dialect landscape
+have also influenced the dialect landscape
 \citep{coetsem1992interaction}.
 \citet{kremer1990einfuehrung} found that in Germany and in the Netherlands
 (but not in Switzerland), dialects tend to become closer to the standard languages,
 with the result of state or standard language borders tending to act as dialect borders.
-(They also found that Low German dialects and CWG spoken in
-Non-Germanic regions tend to be replaced by the prevailing standard language instead.)
+\footnote{
+They also found that Low German dialects and CWG spoken in
+Non-Germanic regions tend to be replaced by the prevailing standard language instead.}
 
 \citet{heggarty2010splits} describe models for intra-family variation,
 most importantly two major models:
 the tree-like, hierarchical \textit{splits} model,
 and the \textit{waves} model, which corresponds more closely to a dialect continuum.
 
-A combination of the two is reflected in
-\todo{TODO: More space above `High German'}
-Figure~\ref{fig:cwg_harbert},
+A combination of the two is reflected in Figure~\ref{fig:cwg_harbert},
 which shows a proposed division of CWG doculects
 into three main groups: North Sea Germanic (including Frisian and Low German),
 Franconian (including Dutch and High Franconian)
@@ -327,13 +343,14 @@ and Alpine Germanic (including Alemannic and Bavarian),
 and presents High German as the result of the convergence
 of High Franconian, Alemannic and Bavarian.
 
-\begin{figure}[b]
+\begin{figure}[H]
 \centering
 \includestandalone[width=\textwidth]{figures/harbert}
-\caption{
-The internal structure of continental West Germanic
-based on \citet[p. 8]{harbert2007germanic}.
-}
+\caption
+[The internal structure of continental West Germanic
+based on \citet{harbert2007germanic}]
+{The internal structure of continental West Germanic
+based on \citet[p. 8]{harbert2007germanic}.}
 \label{fig:cwg_harbert}
 \end{figure}
 
@@ -343,9 +360,7 @@ that we work with, describe their results as
 with geography.''
 
 Alternatively, \citet{hammarstroem2018glottolog},
-whose language catalogue Glottolog contains
-\todo{TODO double check}
-strictly hierarchical categorizations,
+whose language catalogue Glottolog contains strictly hierarchical categorizations,
 give an entirely tree-like classification of the CWG doculects,
 as shown in Figure~\ref{fig:glottolog}.
 This classification is based on the work by \citet{stiles2013pan-west}
@@ -436,7 +451,7 @@ Ortisei, T\"{u}bingen, Walser, Biel, Hard, Graub\"{u}nden.
 \end{itemize}
 
 In Figure~\ref{fig:map}, the Ingv\ae{}onic doculects
-are marked with blue-rimmed, non-solid circles.
+are marked with green-rimmed, non-solid circles.
 
 \subsection{Results of the High German Sound Shift}
 
@@ -531,8 +546,8 @@ Biel, Graub\"{u}nden, Walser, Hard and Ortisei.
 \end{itemize}
 
 Figure~\ref{fig:map} shows this division:
-Low German, Dutch and Frisian are marked with %(solid green and non-solid blue)
-circles, Central German with yellow squares and Upper German with red triangles.
+Low German, Dutch and Frisian are marked with circles,
+Central German with blue squares and Upper German with purple triangles.
 
 This division also matches the intra-database grouping by \citet{heggarty2018sound}
 (who additionally split up the last group into
@@ -544,7 +559,7 @@ and Frisian, Dutch and Flemish on the other).
 \label{sec:methods}
 
 In section~\ref{subsec:msa}, we describe how we align
-the the phonetic transcriptions from our data.
+the phonetic transcriptions from our data.
 From the aligned data, we extract sound correspondences
 (section~\ref{subsec:corres}), which we then use for
 two different clustering methods (section~\ref{subsec:clustering}).
@@ -699,7 +714,12 @@ matrix storing the absolute frequencies of the sound correspondences.
 
 \begin{table}[]
 \input{tables/context}
-\caption{Context representations}
+\caption
+[Context representations by context type]
+{Context representations by context type.
+For the sound class-based context information
+\citep{list2012sca}, the corresponding IPA characters
+appearing in our data are included.}
 \label{tab:context}
 \end{table}
 
@@ -724,16 +744,15 @@ Each approach is carried out once with only
 the context-less sound correspondences,
 and once with all context types.
 
-\subsubsection{TF-IDF and UPGMA}
+\subsubsection{Agglomerative Clustering}
 \label{subsubsec:upgma}
 
 We first transform the frequencies
 in the doculect-by-correspondence tally matrix
-\todo{Sources for tfidf?}
 by applying TF-IDF weighting.
 
 Term frequency (TF) measures the relative frequency
-of each sound correspondence within a doculect:
+of each sound correspondence within a doculect \citep{luhn1957statistical}:
 
 \begin{equation*}
 \operatorname{tf}(doculect_i, corres_j) =
@@ -743,7 +762,7 @@ of each sound correspondence within a doculect:
 
 while inverse document frequency (IDF)
 considers how many doculects cover a given
-sound correspondence:
+sound correspondence \citep{spaerck1972statistical}:
 
 \begin{equation*}
 \operatorname{idf}(corres_j) =
@@ -821,7 +840,7 @@ We use these diagonal matrices to reduce
 the importance of doculects (or correspondences)
 that co-occur with a large number
 of sound correspondences (or doculects).
-Thus we create the normalized matrix $A_n$
+Thus, we create the normalized matrix $A_n$
 by dividing each entry in $A$ by
 the square root of the sum of its row's entries
 and by the square root of the sum of its column's entries:
@@ -976,9 +995,8 @@ applying the aforementioned methods results in
 four arrangements of the data into hierarchical partitions,
 two for the UPGMA method and two for the graph clustering method.
 
-\subsection{TFIDF and UPGMA}
+\subsection{Agglomerative Clustering}
 
-\todo{TODO: Fix the sound corres labels}
 Figure~\ref{fig:tfidf-dendrograms} shows the dendrograms
 created by the UPGMA method for sound correspondences
 including and excluding contextual information.
@@ -989,8 +1007,12 @@ and 17 for the run with additional contextual information.
 
 \begin{figure}[h]
 % \centering
-\includestandalone[height=0.45\textheight]{figures/tfidf-nocontext}
-\includestandalone[height=0.45\textheight]{figures/tfidf-context}
+\begin{adjustwidth}{-1cm}{1cm}
+% Importing the dendrograms as PDFs instead of via standalone
+% because the latter messes up the placement of the sound corres labels.
+\includegraphics[height=0.45\textheight]{figures/tfidf-nocontext.pdf}\\
+\includegraphics[height=0.45\textheight]{figures/tfidf-context.pdf}
+\end{adjustwidth}
 \vspace{0.3em}
 \begin{center}
 {\ingv} Ingv\ae{}onic \hspace{1em}
@@ -1066,14 +1088,20 @@ the smaller subclusters were
 across runs, although the overall results have stayed similar.
 
 \begin{figure}[h]
+\begin{adjustwidth}{-1cm}{0cm}
 \centering
-% \includestandalone[height=0.35\textheight]{figures/bsgc-nocontext}
-\includestandalone[width=0.85\textwidth]{figures/bsgc-nocontext}
-
+\includestandalone[height=0.42\textheight]{figures/bsgc-nocontext}\\
 \vspace{2em}
- 
-% \includestandalone[height=0.35\textheight]{figures/bsgc-context}
-\includestandalone[width=\textwidth]{figures/bsgc-context}
+\includestandalone[height=0.42\textheight]{figures/bsgc-context}
+\end{adjustwidth}
+
+\vspace{0.3em}
+\begin{center}
+{\ingv} Ingv\ae{}onic \hspace{1em}
+{\dutch} Dutch \hspace{1em}
+{\central} Central German \hspace{1em}
+{\upper} Upper German
+\end{center}
 \caption
 [BSGC with no (top) and additional (bottom) context information]
 {BSGC with no (top) and additional (bottom) context information,
@@ -1346,7 +1374,7 @@ would allow us to do that.
 
 % some doculects were clustered together despite not sharing any (high-ranking) correspondences (as a cluster) -- random pairwise commonalities?
 
-\subsection{BSGC}
+\subsection{Bipartite Spectral Graph Co-clustering}
 
 As mentioned before, the co-clustering approach
 does not match the groupings described in the literature very well

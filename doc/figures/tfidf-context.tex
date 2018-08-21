@@ -3,11 +3,15 @@
 \usepackage{tikz, tipa}
 \usepackage[geometry]{ifsym}
 \begin{document}
-% TODO make the hues match those of the map
-\def\upper{\color{red}\FilledBigTriangleUp}
-\def\central{\color{Dandelion}\FilledBigSquare}
-\def\dutch{\color{ForestGreen}\FilledBigCircle}
-\def\ingv{\color{Blue}\BigCircle}
+
+\definecolor{purple}{HTML}{520066}
+\definecolor{blue}{HTML}{31688e}
+\definecolor{green}{HTML}{35b779}
+\def\upper{\color{purple}\FilledBigTriangleUp}
+\def\central{\color{blue}\FilledBigSquare}
+\def\dutch{\color{green}\FilledBigCircle}
+\def\ingv{\color{green}\BigCircle}
+
 \tikzset{corres/.style={fill=white, right=6mm, above=1mm,inner sep=0pt}}
 \begin{tikzpicture}
 % Doculects by singleton cluster number (alphabetical index).
@@ -110,6 +114,24 @@
 \node[corres, right=4mm, above=0mm] at (35) {$\emptyset$ $>$ \textglotstop{} / \#\_};
 \node[corres, right=4mm, above=0mm] at (36) {k $>$ k / \#\_};
 \node[corres, right=4mm, above=0mm] at (37) {k $>$ k / \#\_};
+% \node[corres] at (20) {x $>$ \textesh};
+% \node[corres] at (21) {n $>$ n\texthalflength};
+% \node[corres] at (22) {a $>$ \textsubbar{a}\texthalflength{} / cons\_};
+% \node[corres] at (23) {x $>$ $\emptyset$ / \_vow};
+% \node[corres] at (24) {a $>$ \textopeno / \_cons};
+% % \node[corres] at (25) {};
+% \node[corres] at (26) {f $>$ v};
+% \node[corres] at (27) {d $>$ $\emptyset$ / cons\_};
+% \node[corres] at (28) {t $>$ t\textsuperscript{h} / vow\_};
+% \node[corres] at (29) {e $>$ y\textlengthmark / cons\_};
+% \node[corres] at (30) {u $>$ o\texthalflength\textturna{} / cons\_};
+% \node[corres] at (31) {r $>$ $\emptyset$  / \_\#};
+% \node[corres] at (32) {r $>$ \textlowering{\textinvscr} / \_cons};
+% \node[corres] at (33) {t $>$ t / \#\_};
+% \node[corres] at (34) {e $>$ y\textlengthmark{} / cons\_};
+% \node[corres] at (35) {$\emptyset$ $>$ \textglotstop{} / \#\_};
+% \node[corres] at (36) {k $>$ k / \#\_};
+% \node[corres] at (37) {k $>$ k / \#\_};
 
 
 % X axis.

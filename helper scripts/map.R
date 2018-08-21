@@ -9,9 +9,9 @@ plot(map,
      xlim = c(2.1, 12.2),
      ylim = c(46, 55.3),
      asp=NA)
-cols = c('goldenrod2', 'forestgreen', 'blue', 'red')
+cols = c('#31688e', '#35b779', '#35b779', '#520066')
 shapes = c(15, 16, 21, 17)
-points(x = doculects$longitude, doculects$latitude, col=cols[doculects$type], pch=shapes[doculects$type], bg='aliceblue', cex=1.7)
+points(x = doculects$longitude, doculects$latitude, col=cols[doculects$type], pch=shapes[doculects$type], bg='#fafcf4', cex=1.7)
 
 # https://stackoverflow.com/questions/25631216/r-is-there-any-way-to-put-border-shadow-or-buffer-around-text-labels-en-r-plot
 # https://github.com/cran/TeachingDemos/blob/master/R/shadowtext.R
