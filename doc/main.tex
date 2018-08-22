@@ -12,6 +12,7 @@
 \usepackage{float} % place figures where I want them
 \usepackage{tipa} % IPA
 \usepackage{amsmath} % formulae
+\usepackage{dsfont} % real numbers symbol
 \usepackage{mathtools} % display style in formulae with branching cases
 \usepackage{forest} % (non-dendrogram) trees
 \usetikzlibrary{decorations.pathreplacing} % draw braces in tikz figures
@@ -29,6 +30,9 @@
 \def\central{\color{midblue}\FilledBigSquare}
 \def\dutch{\color{green}\FilledBigCircle}
 \def\ingv{\color{green}\BigCircle}
+
+% For specifying matrix dimensions.
+\newcommand{\R}{\mathds{R}}
 
 \title{Clustering Dialect Varieties Based on Historical Sound Correspondences}
 \author{Verena Blaschke}
@@ -90,7 +94,7 @@ Eberhard Karls Universität Tübingen
 \vspace{1em}
 August 2018}
 \end{center}
-	
+    
 \end{titlepage}
 
 \pagenumbering{gobble}
@@ -125,7 +129,7 @@ sound correspondences.
 \section{Introduction}
 
 Language variation and change has long been a focus of linguistics.
-The analyses necessary for determining
+The\linebreak analyses necessary for determining
 systematic similarities and differences between language varieties
 had to originally be exclusively performed by hand,
 but with the advances of computational methods,
@@ -166,6 +170,7 @@ before concluding the thesis in section~\ref{sec:conclusion}.
 
 In the past decades, there have been many advances in the field of dialectometry.
 For thorough overviews, see \citet{nerbonne2009data} and \citet{wieling2015advances}.
+The following works are especially relevant in the context of this thesis.
 
 \citet{prokic2012detecting} perform hierarchical clustering
 on Bulgarian dialects based on phonetic distances.
@@ -198,10 +203,9 @@ examined the relation between dialect groups and
 the phonetic properties that categorize them.
 They extracted sound correspondences between dialects
 and a reference dialect and used a method for simultaneously clustering 
-\todo{Clear that them = the sound correspondences?}
-them and the dialects: bipartite spectral graph co-clustering.
+sound correspondences and dialects: bipartite spectral graph co-clustering.
 This method was originally introduced for data mining \citep{dhillon2001co-clustering, zha2001bipartite},
-but that has also been used in bioinformatics \citep{kluger2003spectral}.
+but it has also been used in bioinformatics \citep{kluger2003spectral}.
 \citeauthor{wieling2011bipartite}
 (\citeyear{wieling2009bipartite}; \citeyear{wieling2011bipartite})
 used this method based on sound correspondences between doculects
@@ -221,7 +225,6 @@ influenced by the work of \citet{wettig2012using}
 who used context-sensitive sound correspondence rules
 for aligning phonetically transcribed data from related languages.
 
-% \newpage
 \section{Data}
 \label{sec:data}
 
@@ -382,7 +385,7 @@ The full classification tree (up to West Germanic) for the modern doculects we u
 as defined by \citet{hammarstroem2018glottolog}.
 ]
 {
-The full classification tree (up to West Germanic) for the modern doculects we used,
+The full classification tree (up to West Germanic) for the modern doculects we used
 as defined by \citet{hammarstroem2018glottolog}.
 The names of the modern doculects are dispayed in italics.
 }
@@ -396,28 +399,21 @@ the most significant division of West Germanic varieties is
 the split into Ingv\ae{}onic (that is, North Sea Germanic) varieties
 and non-Ingv\ae{}onic varieties.
 This split is also supported by, e.g., \citet[p. 7]{harbert2007germanic}, \citet[pp. 117--123]{sonderegger1979grundzuege} and \cite{auwera2017germanic}.
-What is more complicated is the definition of which doculects Ingv\ae{}onic consists of:
-% \citet{stiles2013pan-west} defines this group
-% as Frisian, English, and ``to a certain extend, Old Saxon'' (i.e., Low German),
-% whereas \citet[pp. 7, 17]{harbert2007germanic} defines it
-% as Frisian, English, and Old Saxon,
-% while noting that Dutch has also been influenced by the Ingv\ae{}onic languages.
-% \citet[pp. 71, 117--123]{sonderegger1979grundzuege} classifies Ingv\ae{}onic
-% as Frisian, English, Low German, and (having become a part of this group more recently) Dutch,
-% while \citet{auwera2017germanic} define Ingv\ae{}onic as Frisian, English, and Dutch.
+What is more complicated is defining which doculects are Ingv\ae{}onic:
 \begin{itemize}
 \item 
 \citet{stiles2013pan-west} defines this group
-as Frisian, English, and ``to a certain extend, Old Saxon'' (i.e., Low German),
+as Frisian, English, and ``to a certain extend, Old Saxon'' (i.e., Low German).
 
 \item
 \citet[pp. 7--8, 17]{harbert2007germanic} defines it
 as Frisian, English, and Low German,
-while noting that Dutch has also been influenced by the Ingv\ae{}onic languages,
+while noting that Dutch has also been influenced by the Ingv\ae{}onic languages.
 
 \item
+\todo{elaborate on 'more recently'}
 \citet[pp. 71, 117--123]{sonderegger1979grundzuege} classifies Ingv\ae{}onic
-as Frisian, English, Low German, and (having become a part of this group more recently) Dutch, % TODO elaborate on 'more recently'
+as Frisian, English, Low German, and (having become a part of this group more recently) Dutch.
 
 \item
 \Citet{auwera2017germanic} define Ingv\ae{}onic as Frisian, English, and Dutch.
@@ -584,7 +580,7 @@ scikit-learn \citep{pedregosa2011scikit-learn} and LingPy \citep{list2018lingpy}
 We carry out alignment based on data from
 all the investigated doculects at once using multiple sequence alignment.
 Doing this instead of performing pairwise alignment between
-the Proto-Germanic and the modern data makes in possible
+the Proto-Germanic and the modern data makes it possible
 to\textemdash{}in addition to using patterns found in doculect-specific
 sound correspondences\textemdash{}base the alignment on commonalities
 between the modern doculects.
@@ -815,7 +811,6 @@ binary combination of row vectors from the doculect-by-correspondence matrix
 .
 \end{equation*}
 
-\todo{Compare defs from scikit-learn, Heeringa}
 We then convert this distance matrix into a dendrogram using the
 Unweighted Pair Group Method using Arithmetic Averages
 (UPGMA) method introduced by \citet{sokal1958statistical}:
@@ -826,13 +821,12 @@ Each doculect forms a singleton cluster.
 
 \item
 The most similar two clusters are merged into a new cluster.
-The distance between this new cluster $B$ and any given cluster $D$
-is
+The distance between this new cluster $B$ and any given cluster $C$ is
 \begin{equation*}
-\operatorname{dist}(A, B) = \frac
-{
+\operatorname{dist}(B, C) =
 \sum_{x \in B}
 \sum_{y \in C}
+\frac{
 \operatorname{cosine\_distance}(x, y)
 }
 {
@@ -859,7 +853,7 @@ as \textit{UPGMA-context} and \textit{UPGMA-nocontext}.
 For the other clustering method, we use the approach
 introduced by \citet{dhillon2001co-clustering}.
 We follow \citeauthor*{wieling2009bipartite} who introduced
-this method to dialectometry for flat clustering \citeyearpar{wieling2009bipartite} and hierarchical clustering \citeyearpar{wieling2010hierarchical}.
+this method to dialectometry for flat clustering (\citeyear{wieling2009bipartite}; \citeyear{wieling2011bipartite}) and hierarchical clustering \citeyearpar{wieling2010hierarchical}.
 
 For this approach, we use a binary version of the
 doculect-by-correspondence tally matrix that only
@@ -871,9 +865,9 @@ This method works as follows:
 \begin{enumerate}
 \item 
 We begin with normalizing the binary co-occurrence matrix
-$A^{m \times n}$ ($m$ = number of doculects, $n$ = number of sound correspondences).
+$A \in \R^{m \times n}$ ($m$~=~number of doculects, $n$~=~number of sound correspondences).
 First, we create two diagonal matrices
-$D_1^{m \times m}$ and $D_2^{n \times n}$ that, respectively,
+$D_1  \in \R^{m \times m}$ and $D_2 \in \R^{n \times n}$ that, respectively,
 contain the row sums or column sums of $A$.
 We use these diagonal matrices to reduce
 the importance of doculects (or correspondences)
@@ -888,14 +882,21 @@ A_n = D_1^{-\frac{1}{2}} \times A \times D_2^{-\frac{1}{2}}.
 \end{equation*}
 
 \item
-\todo{Briefly explain SVD? Source for (truncated) SVD?}
-We perform singular value decomposition on $A_n$
-to obtain the left and right singular vectors $u_i$ and $v_i$.
+We perform singular value decomposition on $A_n$,
+that is, we decompose $A_n$ into the product of three matrices such that
+$A_n = U\Sigma{}V^T$
+($U~\in~\R^{m \times m}$,
+$\Sigma{}~\in~\R_{\geq 0}^{m \times n}$ is a diagonal matrix with values in descending order,
+$V~\in~\R^{n \times n})$
+to obtain the left and right singular vectors $u_i$ and $v_i$
+(columns of $U$ and $V$, respectively).
+% We perform singular value decomposition on $A_n$
+% to obtain the left and right singular vectors $u_i$ and $v_i$.
 We ignore the singular vectors belonging
 to the largest singular value as they do not contain
 information relevant for partitioning the data \citep{kluger2003spectral},
 and work with the second singular vectors ($u_2$, $v_2$) instead.
-We calculate the vector $Z^{(m + n) \times 1}$ such that
+We calculate the vector $Z \in \R^{(m + n) \times 1}$ such that
 its first $m$ entries contain information about the doculects
 and the following $n$ entries about the sound correspondences:
 \begin{align*}
@@ -905,8 +906,9 @@ Z_{[m, m+n]} = D_2^{-\frac{1}{2}} \times v_2
 \end{align*}
 
 \item
-\todo{Explain k-means? Source?}
-We perform k-means clustering on $Z$ with $k = 2$.
+We perform k-means clustering on $Z$ with $k = 2$.%
+\footnote{%
+We use the k-means++ algorithm \citep{arthur2007kmeanspp} for semi-arbitrarily picking the initial cluster centres.}
 
 \item
 For each cluster that contains at least two doculects,
@@ -1017,7 +1019,7 @@ cases with negative distinctiveness values:
 
 We additionally re-rank correspondences
 with the same importance score
-such that more frequent correspondences rank higher.
+so that more frequent correspondences rank higher.
 
 % \newpage
 \section{Results}
@@ -1284,7 +1286,7 @@ occurred often enough to actually be used for clustering.
 Nevertheless, the sound correspondence /*k/~$>$~[k\textsuperscript{h}]
 (on its own or prevocally) also has high importance scores
 for the Southern group.
-However, his still matches the assertion that /*k/
+However, this still matches the assertion that /*k/
 was the most resistant to change during the High German sound shift.
 
 \subsubsection{Close Doculects Outside these Groupings}
@@ -1397,7 +1399,8 @@ by \citet{proell2013detecting}, which are better suited to model
 wave-like developments of language variation.
 
 \todo{synonyms for ``it would be interesting''}
-It would also be interesting to run clustering
+% It would also be interesting to run clustering
+A further approach would be to run clustering
 methods (fuzzy or not) on a larger amount of data,
 both in terms of the number of doculects
 (adding places that are geographically located
@@ -1502,7 +1505,7 @@ lexical, syntactical, morphological, etc. information in this analysis.
 In this thesis, we have implemented two methods
 for clustering doculects on the basis of shared
 historical sound correspondences,
-and compared to results to common (although not uncontroversial)
+and compared the results to common (although not uncontroversial)
 groupings of the doculects we worked with.
 
 We showed that, compared to the graph co-clustering method (BSGC),
