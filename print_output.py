@@ -1,3 +1,5 @@
+# Calculate the sound correspondence ranks and print the clusters.
+
 import numpy as np
 
 
@@ -5,10 +7,6 @@ THRESHOLD = 70
 
 
 def tuple2corres(tup):
-    # (('V', 'r'), ('-', 'ʁ'))
-    # -> Vr > ∅ʁ
-    # hist = ''.join(tup[0])
-    # cur = ''.join(tup[1])
     s = '{} > {}'.format(tup[0], tup[1])
     try:
         s += ' / {}'.format(tup[2])
@@ -18,6 +16,7 @@ def tuple2corres(tup):
 
 
 def score(A, corres, cluster_docs):
+    # See Wieling and Nerbonne (2009, 2010, 2011).
     cluster_size = len(cluster_docs)
     if cluster_size == 0:
         return 0, 0, 0, 0, 0

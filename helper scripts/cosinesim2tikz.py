@@ -1,3 +1,7 @@
+# Transform a cosine similarity matrix into a tikz (LaTeX) figure
+# where the samples are represented as geographic locations and the
+# similarity scores are lines connecting the locations.
+
 import pickle
 import csv
 
@@ -67,8 +71,6 @@ with open('doc/figures/cosine2.tex', 'w', encoding='utf8') as f:
         for j in range(i + 1, n):
             # normalize similarity score
             d = (sim[i, j] - min_sim) / (max_sim - min_sim)
-            # if d < 0.75:
-            #     continue
             line = "\\draw[line width={}mm, color=black!60!blue!{}]" \
                    "({}.center) -- ({}.center);\n" \
                    .format(d * 1.3, int(100 * d),

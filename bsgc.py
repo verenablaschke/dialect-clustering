@@ -1,3 +1,5 @@
+# Perform bipartite spectral graph co-clustering.
+
 """
 Based on the algorithm by Dhillon (2001) (dhillon2001co-clustering),
 as introduced for dialect clustering by Wieling and Nerbonne (2009, 2010, 2011)

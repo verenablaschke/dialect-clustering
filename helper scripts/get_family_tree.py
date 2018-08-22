@@ -1,3 +1,6 @@
+# Get the hierarchical language family information from Glottolog
+# for the Sound Comparisons doculects.
+
 import csv
 
 DOCULECT_INFO = 'data/soundcomparisons/glottolog/glottolog_codes.csv'

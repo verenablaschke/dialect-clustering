@@ -1,3 +1,5 @@
+# Coverage statistics (doculects and concepts).
+
 from collections import Counter
 from read_data import clean_transcription
 import numpy as np

@@ -1,3 +1,6 @@
+# Transform a SciPy linkage matrix into a tikz (LaTeX) figure representing
+# the clusters as a dendrogram.
+
 import numpy as np
 import pickle
 

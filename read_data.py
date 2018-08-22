@@ -1,3 +1,5 @@
+# Retrieve IPA transcriptions by concept from the Sound Comparisons files.
+
 import logging
 import numpy as np
 import os
@@ -35,25 +37,6 @@ def clean_transcription(word):
     return word
 
 
-# TODO del
-def simplify_transcription(word):
-    to_remove = ['̝',  # raised
-                 '̞',  # lowered
-                 '̽',  # mid-centralized
-                 '̈',  # centralized
-                 '̟',  # advanced
-                 '̠',  # retracted
-                 '̺',  # apical
-                 '̥',  # voiceless
-                 'ˑ',  # half-long
-                 '̩'  # syllabic
-                 ]
-    word = clean_transcription(word)
-    # for c in to_remove:
-    #     word = word.replace(c, '')
-    return word
-
-
 def get_samples_soundcomparisons(directory, entries):
     doculects = set()
     for root, dirs, files in os.walk(directory):
@@ -78,7 +61,7 @@ def parse_file(filename, entries):
     words = df['Phonetic'].values
     noncognate = df['NotCognateWithMainWordInThisFamily2'].values
     for concept, w, n in zip(concepts, words, noncognate):
-        word = simplify_transcription(w)
+        word = clean_transcription(w)
         if word == 'Array':
             # Erroneous entry in Veenkolonien.csv.
             continue

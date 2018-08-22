@@ -1,3 +1,6 @@
+# Align IPA transcriptions from all doculects
+# and extract sound correspondences.
+
 from lingpy.align.multiple import Multiple
 from lingpy.sequence.sound_classes import token2class
 from read_data import get_samples
@@ -79,6 +82,7 @@ def align_concept(doculects, doculects_cwg, f, corres2lang2word=None,
                 sca_models.append(True)
 
             for use_sca in sca_models:
+                # (NOTE: This could be made less redundant.)
                 left = seg2class(ref[c - 1], sca=use_sca)
                 if left != seg2class(cur[c - 1], sca=use_sca):
                     # Use context information only if it can be made to form
@@ -230,11 +234,13 @@ def align(reference_doculect='ProtoGermanic',
             n_cv += 1
         else:
             n_sc += 1
-    print("Sound correspondences:")
-    print("{} without context".format(n_simple))
-    print("{} with C/V context".format(n_cv))
-    print("{} with SC context".format(n_sc))
-    print("{} with # context\n".format(n_bound))
+    with open('output/corres_overview.txt', 'w', encoding='utf8') as f:
+        f.write("Sound correspondences:\n")
+        f.write("{} without context\n".format(n_simple))
+        f.write("{} with C/V context\n".format(n_cv))
+        f.write("{} with SC context\n".format(n_sc))
+        f.write("{} with # context\n\n".format(n_bound))
+        f.write("{}\n".format(all_correspondences))
 
     if verbose > 2:
         print(corres2lang2word)
@@ -243,4 +249,5 @@ def align(reference_doculect='ProtoGermanic',
 
 
 if __name__ == "__main__":
-    align(verbose=1, context_cv=True, context_sc=True)
+    align(no_context=True, context_cv=True, context_sc=True, min_count=3,
+          alignment_type='lib', alignment_mode='global', verbose=1)

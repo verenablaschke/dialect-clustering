@@ -1,3 +1,5 @@
+# Retrieve the doculect coordinates from the Sound Comparisons files.
+
 import csv
 import os
 import pandas as pd

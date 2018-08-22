@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+
+# Construct the doculect-by-sound correspondence matrix.
+# Perform agglomerative clustering.
+# NOTE: This is the main program in this repo. It calls all other relevant
+# scripts for preprocessing the data, performing graph co-clustering,
+# and saving the results.
+
 from align import align
 from bsgc import bsgc_hierarchical
 from print_output import print_clusters
@@ -47,8 +54,9 @@ def construct_A(all_correspondences, correspondences, doculects,
     return A, A_original, corres2int, all_corres
 
 
-def hierarchical(A, doculects, context, svd):
+def agglomerative(A, doculects, context):
     # Cluster via UPGMA and cosine similarity.
+    A = TfidfTransformer().fit_transform(A)
     dist = 1 - cosine_similarity(A)
     Z = linkage(dist, method='average')
     fig, ax = plt.subplots()
@@ -57,7 +65,7 @@ def hierarchical(A, doculects, context, svd):
         labels=doculects,
         orientation='right',
         leaf_font_size=12.)
-    fig.savefig('output/dendrogram-{}{}.pdf'.format(context, svd),
+    fig.savefig('output/dendrogram-{}.pdf'.format(context),
                 bbox_inches='tight')
 
     # Update cluster IDs.
@@ -65,35 +73,15 @@ def hierarchical(A, doculects, context, svd):
     cluster_ids = np.arange(n_samples, n_samples + Z.shape[0]) \
                     .reshape(-1, 1)
     Z = np.hstack((Z, cluster_ids))
-    with open('output/dendrogram-{}{}.pickle'.format(context, svd), 'wb') as f:
+    with open('output/dendrogram-{}.pickle'.format(context), 'wb') as f:
         pickle.dump(Z, f)
+    with open('output/cosinesim-{}.pickle'.format(context), 'wb') as f:
+        pickle.dump(cosine_similarity(A), f)
     cluster2docs = {i: [d] for i, d in enumerate(doculects)}
     for row in Z:
         cluster2docs[row[-1]] = cluster2docs[row[0]] + cluster2docs[row[1]]
     clusters_and_doculects = [docs for _, docs in cluster2docs.items()]
     return clusters_and_doculects
-
-
-def tfidf_hierarchical(A, doculects, context, svd=False):
-    # TF-IDF
-    A = TfidfTransformer().fit_transform(A)
-
-    if svd:
-        # Truncated SVD
-        n_components = A.shape[0] if A.shape[0] < A.shape[1] else A.shape[1]
-        svd = TruncatedSVD(n_components=n_components, random_state=123).fit(A)
-        for i, v in enumerate(np.cumsum(svd.explained_variance_ratio_)):
-            if v >= 0.85:
-                n_components = i + 1
-                break
-        A = TruncatedSVD(n_components=n_components, random_state=123) \
-            .fit_transform(A)
-        print("Truncated A to {} compontents "
-              "which explain {:4.2f}% of the variance".format(n_components,
-                                                              v * 100))
-
-    svd = '-svd' if svd else ''
-    return hierarchical(A, doculects, context, svd)
 
 
 if __name__ == "__main__":
@@ -109,13 +97,9 @@ if __name__ == "__main__":
                                                         correspondences,
                                                         doculects)
     print("Creating dendrogram.")
-    clusters = tfidf_hierarchical(A, doculects, context='context')
+    clusters = agglomerative(A, doculects, context='context')
     print("Scoring.")
     print_clusters("output/tfidf-context.txt", A_original,
-                   clusters, doculect2int, corres2int,
-                   corres2lang2word, doculects, all_corres)
-    clusters = tfidf_hierarchical(A, doculects, context='context', svd=True)
-    print_clusters("output/tfidf-context-svd.txt", A_original,
                    clusters, doculect2int, corres2int,
                    corres2lang2word, doculects, all_corres)
 
@@ -124,13 +108,9 @@ if __name__ == "__main__":
                                                         correspondences,
                                                         doculects)
     print("Creating dendrogram.")
-    clusters = tfidf_hierarchical(A, doculects, context='nocontext')
+    clusters = agglomerative(A, doculects, context='nocontext')
     print("Scoring.")
     print_clusters("output/tfidf-nocontext.txt", A_original,
-                   clusters, doculect2int, corres2int,
-                   corres2lang2word, doculects, all_corres)
-    clusters = tfidf_hierarchical(A, doculects, context='nocontext', svd=True)
-    print_clusters("output/tfidf-nocontext-svd.txt", A_original,
                    clusters, doculect2int, corres2int,
                    corres2lang2word, doculects, all_corres)
 
