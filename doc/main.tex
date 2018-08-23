@@ -20,8 +20,6 @@
 \usepackage{standalone} % import figures
 \usepackage{changepage} % adjust text width
 \usepackage{parskip} % proper paragraphs, no indentation
-\usepackage{showframe} % TODO remove
-\usepackage{todonotes} % TODO remove
 
 % For the map keys.
 \definecolor{purple}{HTML}{520066}
@@ -116,7 +114,6 @@ We also observe that adding phonetic context information
 to the sound correspondences yields clusters
 that can more frequently be described by representative and distinctive
 sound correspondences.
-\todo[inline]{Eigenständigkeits- bzw. Antiplagiatserklärung}
 
 \newpage
 \tableofcontents
@@ -1416,7 +1413,7 @@ for instance following the fuzzy dialect clustering approaches
 by \citet{proell2013detecting}, which are better suited to model
 wave-like developments of language variation.
 
-Another promising follow-up investigation would be to run
+A promising approach would be to run
 clustering methods (fuzzy or not) on a larger amount of data.
 This should be both in terms of the number of doculects
 to gain a more representative depiction of the CWG doculect landscape
@@ -1437,19 +1434,17 @@ As mentioned before, the co-clustering approach
 does not match the groupings described in the literature very well
 compared to the simpler UPGMA approach.
 
-\todo{TODO revise this paragraph}
-One of the issues seems to be
-sound correspondences that get assigned to the wrong clusters
-in that they do not occur in any of the doculects in the cluster
-they were assigned to.
+In our experiments, one issue with BSGC is that some
+sound correspondences get assigned to the wrong clusters
+in that they do not actually co-occur with any of the
+doculects in their assigned clusters.
 In such cases, we automatically assign them to the appropriate
 other cluster to avoid linear algebra problems.
 However, it is possible that such an unfitting
 cluster assignment also happens with other samples
 that are close to the k-means decision boundary,
-ending up in clusters where they describe the doculects
-not as well as they would have described doculects from the other cluster.
-In such cases, early misclassifications cannot be corrected.
+ending up in a cluster where they describe the doculects
+not as well as they would have in the other cluster.
 
 In the future, it would be interesting to
 explore if alternate approaches to normalizing the data
@@ -1469,8 +1464,8 @@ potentially allowing for sound correspondences that are similar in our data,
 but (due to the narrowness of transcription) slightly different,
 to become identical and thus more common.
 
-\todo{synonyms for ``it would be interesting''}
-It would be interesting to investigate further the influence of
+Another follow-up investigation would be to
+further investigate the influence of
 data selection and preprocessing on BSGC performance.
 
 \subsection{Sound Correspondences}
@@ -1499,21 +1494,20 @@ Again, a way of describing these sound changes more abstractly
 might make it possible to consider these sound changes more
 similarly while clustering doculects.
 
-\todo{TODO revise this paragraph}
-In future experiments, it might be worthwhile to additionally rank
-the sound correspondences by how regular they are,
-by comparing how often a given sound shift happened
-to a specific sound in a specific context
-to how often another sound shift (or no sound shift) took place,
-in a similar way to \citet{prokic2007identifying} and \citet{prokic2013combining},
-or similarly to transition probabilities in bigram models.
+In future experiments, it might be worthwhile to rank
+sound correspondences also by how regular they are,
+i.e. how often a given sound shifted into a specific sound
+compared to how often another sound shift (or no sound shift) took place.
+This could be done in a similar fashion to the approaches by
+\citet{prokic2007identifying} and \citet{prokic2013combining}.
 
-\todo{TODO revise this paragraph}
-All of the comparisons between Proto-Germanic and the modern doculects
-here are phonetic
+In this thesis, all of the comparisons between Proto-Germanic
+and modern CWG doculects are phonological
 % (and might possibly include some morphological information in some cases)
-and on a word level, but we are ignoring
-lexical, syntactical, morphological, etc. information in this analysis.
+and on a word level.
+Investigating the effect of additionally incorporating
+morphological, lexical and syntactical information
+would be interesting for further research.
 
 \section{Conclusion}
 \label{sec:conclusion}
