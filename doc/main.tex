@@ -4,6 +4,7 @@
 \usepackage{natbib}
 \usepackage{hyperref}
 \usepackage{multirow} % context example table
+\usepackage{array} % fixed-width columns with left alignment
 \usepackage{graphicx} % include the map
 \usepackage[outline]{contour} % contour place names in the cosine similarity figure
 \usepackage[dvipsnames]{xcolor} % colour-code the groups (has to come before tikz)
@@ -128,7 +129,7 @@ sound correspondences.
 
 \section{Introduction}
 
-Language variation and change has long been a focus of linguistics.
+Language variation and change have long been a focus of linguistics.
 The\linebreak analyses necessary for determining
 systematic similarities and differences between language varieties
 had to originally be exclusively performed by hand,
@@ -137,10 +138,11 @@ it has become possible to carry out quantitative analyses more easily.
 One field concerned with such analyses is \textit{dialectometry},
 which focuses on computational and statistical methods for dialectology.
 
-The advantage of applying quantitative methods to dialectology
-is that the statistical models can work using all the feature
-information of the data that they are given, evaluating for
-each feature how well it does or does not describe similarities or differences in the data.
+Applying quantitative methods to dialectology gives the advantage
+that statistical models can work using all the feature
+information of the data that they are given,
+quickly evaluating for each feature how well it does or does not
+describe similarities or differences in the data.
 
 In this thesis, we examine a set of West Germanic language varieties
 currently spoken in continental Europe.
@@ -155,13 +157,13 @@ In the following subsection, we present the
 dialectometrical approaches that influenced our work.
 Then we begin by introducing the data in section~\ref{sec:data}.
 Next, in section~\ref{sec:cwg},
-we give a brief introduction to continental West Germanic doculects,
-proposed ways of grouping doculects belonging to that group of doculects
+we give a brief introduction to continental West Germanic languages and dialects,
+as well as proposed ways of sorting them into groups
 and the problems associated with doing this.
 In section~\ref{sec:methods}, we explain our methodology for
 aligning the data and extracting sound correspondences,
-and then for the two approaches to clustering the data that we employ,
-and explain how we rank the sound correspondences.
+and for two approaches to clustering the data that we employ,
+and then explain how we rank the sound correspondences.
 We present the results in section~\ref{sec:results}
 and discuss them in section~\ref{sec:discussion},
 before concluding the thesis in section~\ref{sec:conclusion}.
@@ -174,15 +176,16 @@ The following works are especially relevant in the context of this thesis.
 
 \citet{prokic2012detecting} perform hierarchical clustering
 on Bulgarian dialects based on phonetic distances.
-One of our clustering approaches is similar to this,
-although we use different methods measuring the distance between a pair of dialects
-and for transforming the distance values into a hierarchical structure.
-This is also similar to the work by \citet{prokic2007identifying},
+% One of our clustering approaches is similar to this,
+% although we use different methods measuring the distance between a pair of dialects
+% and for transforming the distance values into a hierarchical structure.
+This is %also
+similar to the work by \citet{prokic2007identifying},
 wherein she performs an aggregate analysis of the
 data via an unspecified clustering method based on a
-doculect-by-doculect matrix storing phonetic distance values,
+dialect-by-dialect matrix storing phonetic distance values,
 which she compares to individual analyses of recurring sound correspondences
-between the doculects.
+between the dialects.
 The latter analyses are in turn related to the work by
 \citet{prokic2013combining} who explore more closely how
 to automatically judge the regularity of sound correspondences
@@ -202,18 +205,20 @@ to capture gradual changes between dialect groups.
 examined the relation between dialect groups and
 the phonetic properties that categorize them.
 They extracted sound correspondences between dialects
-and a reference dialect and used a method for simultaneously clustering 
-sound correspondences and dialects: bipartite spectral graph co-clustering.
-This method was originally introduced for data mining \citep{dhillon2001co-clustering, zha2001bipartite},
+and a reference dialect.
+They used bipartite spectral graph co-clustering
+for simultaneously clustering sound correspondences and dialects.
+This method was originally introduced for data mining
+\citep{dhillon2001co-clustering, zha2001bipartite},
 but it has also been used in bioinformatics \citep{kluger2003spectral}.
 \citeauthor{wieling2011bipartite}
 (\citeyear{wieling2009bipartite}; \citeyear{wieling2011bipartite})
-used this method based on sound correspondences between doculects
+used this method based on sound correspondences between dialects
 spoken in the Netherlands.
 
 A hierarchical version of this co-clustering method
 was used by \citet{wieling2010hierarchical} for
-doculects spoken in the Netherlands,
+dialects spoken in the Netherlands,
 and \citet{wieling2013analyzing} applied this method for
 clustering British English dialects.
 \citet{montemagni2013synchronic} applied this method to Tuscan dialects,
@@ -284,7 +289,7 @@ For instance, verbs are represented in their imperative forms
 rather than the infinitive.
 }
 
-We excluded one CWG doculect that covered only 35 concepts. % Schaeddel (Frisian)
+We excluded one CWG doculect that covered only 35 concepts (i.e. cognate sets). % Schaeddel (Frisian)
 The Proto-Germanic data cover all 110 concepts; each of the modern doculects covers at least 103 concepts, and each concept is covered by at least 17 modern doculects.
 In total, we have 2181 word alignments between Proto-Germanic and modern CWG doculects.
 
@@ -314,7 +319,7 @@ though generally accepted
 (c.f. \citet{voyles1971problem}; \citet[pp. 7-8]{harbert2007germanic}; \citet{ringe2012cladistic}).
 
 Within the CWG group, it gets even more complicated and contested.
-\citet[pp. 72-80]{nielsen1989germanic} gives an overview of the history of attempting to divide the West Germanic dialects into subgroups with the associated criteria (phonological, morphological, lexical, and/or extra-linguistic) and criticisms.
+\citet[pp. 72-80]{nielsen1989germanic} gives an overview of the history of attempts to divide the West Germanic dialects into subgroups with the associated criteria (phonological, morphological, lexical, and/or extra-linguistic) and criticisms.
 
 Much of the challenge of grouping CWG doculects stems from
 them being very similar to one another and closely related.
@@ -411,9 +416,9 @@ as Frisian, English, and Low German,
 while noting that Dutch has also been influenced by the Ingv\ae{}onic languages.
 
 \item
-\todo{elaborate on 'more recently'}
+% \todo{elaborate on 'more recently'}
 \citet[pp. 71, 117--123]{sonderegger1979grundzuege} classifies Ingv\ae{}onic
-as Frisian, English, Low German, and (having become a part of this group more recently) Dutch.
+as Frisian, English, Low German and (having become a part of this group more recently) Dutch.
 
 \item
 \Citet{auwera2017germanic} define Ingv\ae{}onic as Frisian, English, and Dutch.
@@ -524,7 +529,7 @@ containing words exhibiting
 the absence (Low German) or presence (Central German)
 of affrication or spirantization for
 /p/ (e.g. \textit{schlapen}/\textit{schlafen} `sleep'),
-/t/ (e.g. \textit{Tid}/\textit{Zeit} `time',
+/t/ (e.g. \textit{Tid}/\textit{Zeit} `time',\linebreak
 \textit{Water}/\textit{Wasser} `water') and
 /k/ (e.g. \textit{maken}/\textit{machen} `make').
 The isogloss bundle serving as boundary between
@@ -555,7 +560,7 @@ Low German, Dutch and Frisian are marked with circles,
 Central German with blue squares and Upper German with purple triangles.
 
 This division also matches the intra-database grouping by \citet{heggarty2018sound}
-(who additionally split up the last group into
+(who additionally split up the first group into
 Low German on the one hand,
 and Frisian, Dutch and Flemish on the other).
 
@@ -580,9 +585,8 @@ scikit-learn \citep{pedregosa2011scikit-learn} and LingPy \citep{list2018lingpy}
 We carry out alignment based on data from
 all the investigated doculects at once using multiple sequence alignment.
 Doing this instead of performing pairwise alignment between
-the Proto-Germanic and the modern data makes it possible
-to\textemdash{}in addition to using patterns found in doculect-specific
-sound correspondences\textemdash{}base the alignment on commonalities
+the Proto-Germanic and the modern data makes it possible\textemdash{}in addition to using patterns found in doculect-specific
+sound correspondences\textemdash{}to base the alignment on commonalities
 between the modern doculects.
 Because of this, we use all of the modern Germanic data
 we extracted from the Sound Comparisons project
@@ -602,7 +606,7 @@ the method employed by, e.g., \citet{wieling2010hierarchical}.
 They neither allowed multi-token segments nor did they add contextual information
 (see section~\ref{subsec:corres}),
 but they remark on a common alignment $\emptyset$:[\textesh],
-which commonly appears after [t]:[t].
+which frequently appears after [t]:[t].
 We opt instead to interpret affricates as single segments with
 the result of correspondences such as [t]:[\texttoptiebar{t\textesh}].
 }
@@ -671,7 +675,6 @@ the same type for both Proto-Germanic and the modern doculect.
 \textbf{Sound class-based context}:
 This is similar to the previous category,
 but we give more fine-grained information about consonants and vowels.
-\todo{TODO mention cases where SCA was useful in other applications}
 We use the sound classes introduced by \citet{list2012sca},
 which discern between fifteen consonant groups and six vowel groups.
 
@@ -734,7 +737,7 @@ that LingPy flags as swaps (metathesis) as normal insertions or deletions,
 as such cases only happen for 3 of the 111 concepts.
 
 For each doculect, we ignore sound correspondences
-that occurless than three times across all concepts
+that occur fewer than three times across all concepts
 to reduce the effect misalignments can have. 
 
 After extracting the sound correspondences for
@@ -748,7 +751,7 @@ matrix storing the absolute frequencies of the sound correspondences.
 
 We implemented two approaches to custering the data.
 Both clustering approaches follow a similar structure:
-we first normalize the doculect-by-correspondence tally matrix
+we first normalize the doculect-by-correspon-dence tally matrix
 to adjust feature frequencies by how informative they are,
 then we perform hierarchical clustering.
 Each approach is carried out once with only
@@ -757,6 +760,13 @@ and once with all context types.
 
 \subsubsection{Agglomerative Clustering}
 \label{subsubsec:upgma}
+
+This approach is similar to
+a method used by \citet{prokic2012detecting}
+in that it involves agglomerative clustering.
+However, we use different procedures for measuring
+distances between pairs of doculects and
+for transforming the distance values into a hierarchical structure.
 
 We first transform the frequencies
 in the doculect-by-correspondence tally matrix
@@ -832,6 +842,7 @@ The distance between this new cluster $B$ and any given cluster $C$ is
 {
 |B| \times |C|
 }
+.
 \end{equation*}
 
 \item
@@ -873,7 +884,7 @@ We use these diagonal matrices to reduce
 the importance of doculects (or correspondences)
 that co-occur with a large number
 of sound correspondences (or doculects).
-Thus, we create the normalized matrix $A_n$
+Accordingly, we create the normalized matrix $A_n$
 by dividing each entry in $A$ by
 the square root of the sum of its row's entries
 and by the square root of the sum of its column's entries:
@@ -886,12 +897,11 @@ We perform singular value decomposition on $A_n$,
 that is, we decompose $A_n$ into the product of three matrices such that
 $A_n = U\Sigma{}V^T$
 ($U~\in~\R^{m \times m}$,
-$\Sigma{}~\in~\R_{\geq 0}^{m \times n}$ is a diagonal matrix with values in descending order,
+$\Sigma{}~\in~\R_{\geq 0}^{m \times n}$ is a 
+diagonal matrix with values in descending order,
 $V~\in~\R^{n \times n})$
 to obtain the left and right singular vectors $u_i$ and $v_i$
 (columns of $U$ and $V$, respectively).
-% We perform singular value decomposition on $A_n$
-% to obtain the left and right singular vectors $u_i$ and $v_i$.
 We ignore the singular vectors belonging
 to the largest singular value as they do not contain
 information relevant for partitioning the data \citep{kluger2003spectral},
@@ -968,6 +978,7 @@ that is in the given clusters,
 and relative size, which gives the number of doculects 
 in the cluster relative to the number of all examined modern doculects:
 
+\begin{adjustwidth}{-1cm}{-1cm}
 \begin{align*}
 \operatorname{relative\_occurrence}(cluster_i, corres_j) &= 
 \frac{\text{number of doculects in } cluster_i \text{ with }  corres_j}
@@ -977,15 +988,18 @@ in the cluster relative to the number of all examined modern doculects:
 {\text{total number of doculects}}
 .
 \end{align*}
+\end{adjustwidth}
 
 These two concepts are combined to determine the distinctiveness score:
 
+\begin{adjustwidth}{-1cm}{-1cm}
 \begin{equation*}
 \operatorname{dist}(cluster_i, corres_j) = 
 \frac{\operatorname{relative\_occurrence}(cluster_i, corres_j) - \operatorname{relative\_size}(cluster_i)}
 {1 - \operatorname{relative\_size}(cluster_i)}
 .
 \end{equation*}
+\end{adjustwidth}
 
 Distinctiveness has an upper bound of
 $1$ (a given sound correspondence only occurs in a given cluster),
@@ -1007,6 +1021,7 @@ but the distinctiveness value is very low (or vice versa).
 We also assign an importance score of $0$ to
 cases with negative distinctiveness values:
 
+\begin{adjustwidth}{-3cm}{-3cm}
 \begin{equation*}
 \operatorname{imp}(cluster_i, corres_j) = 
 \begin{dcases}
@@ -1016,6 +1031,7 @@ cases with negative distinctiveness values:
 0, & \text{otherwise}.
 \end{dcases}
 \end{equation*}
+\end{adjustwidth}
 
 We additionally re-rank correspondences
 with the same importance score
@@ -1048,7 +1064,7 @@ and 17 for the run with additional contextual information.
 
 \begin{figure}[h]
 % \centering
-\begin{adjustwidth}{-1cm}{1cm}
+\begin{adjustwidth}{-1cm}{-1cm}
 % Importing the dendrograms as PDFs instead of via standalone
 % because the latter messes up the placement of the sound corres labels.
 \includegraphics[height=0.45\textheight]{figures/tfidf-nocontext.pdf}\\
@@ -1082,20 +1098,10 @@ show the highest-rank sound correspondences (importance score $\geq$ 90\%)
 for UPGMA-nocontext and UPGMA-context, respectively.
 
 \begin{table}[h]
-\centering
-\input{tables/tfidf-context-corres}
-\caption
-[Sound correspondences with an importance score of 90\% or higher for UPGMA-context]
-{Sound correspondences with an importance score of 90\% or higher for UPGMA-context.
-Importance, representativeness, and distinctiveness scores are percentages
-and rounded to the nearest integer.
-}
-\label{tab:tfidf-context-corres}
-\end{table}
-
-\begin{table}[h]
+\begin{adjustwidth}{-1cm}{-1cm}
 \centering
 \input{tables/tfidf-nocontext-corres}
+\end{adjustwidth}
 \caption
 [Sound correspondences with an importance score of 90\% or higher for UPGMA-nocontext]
 {Sound correspondences with an importance score of 90\% or higher for UPGMA-nocontext.
@@ -1103,6 +1109,20 @@ Importance, representativeness, and distinctiveness scores are percentages
 and rounded to the nearest integer.
 }
 \label{tab:tfidf-nocontext-corres}
+\end{table}
+
+\begin{table}[h]
+\begin{adjustwidth}{-1cm}{-1cm}
+\centering
+\input{tables/tfidf-context-corres}
+\end{adjustwidth}
+\caption
+[Sound correspondences with an importance score of 90\% or higher for UPGMA-context]
+{Sound correspondences with an importance score of 90\% or higher for UPGMA-context.
+Importance, representativeness, and distinctiveness scores are percentages
+and rounded to the nearest integer.
+}
+\label{tab:tfidf-context-corres}
 \end{table}
 \FloatBarrier
 
@@ -1116,27 +1136,45 @@ with an importance rating of 70\% or above for the context-less run,
 and 10 for the run with additional context information.
 
 Of the 201 sound correspondences for BSGC-nocontext,
-1 has an importance score of 100\% for an intermediary cluster
-(see Table~\ref{tab:bsgc-nocontext-corres});
+1 has an importance score of 100\% for an intermediary cluster;
+% (see Table~\ref{tab:bsgc-nocontext-corres});
 for the run with context information, 2 out of 665 correspondences reach this score.
 For the latter run, a total of 9 sound correspondences
 reach importance scores of at least 90\%
-for intermediary clusters, as shown in Table~\ref{tab:bsgc-context-corres}.
+for intermediary clusters, as shown in Table~\ref{tab:bsgc-corres}.
 
 It should be noted that the results concerning
 the smaller subclusters were
 (due to the random k-means initialization) not stable
 across runs, although the overall results have stayed similar.
 
+\begin{table}[h]
+\begin{adjustwidth}{-1cm}{-1cm}
+\centering
+\input{tables/bsgc-nocontext-corres}\\
+\vspace{1.5em}
+\input{tables/bsgc-context-corres}
+\end{adjustwidth}
+\caption
+[Sound correspondences with an importance score
+of 90\% or higher for BSGC-nocontext and BSGC-context]
+{Sound correspondences with an importance score
+of 90\% or higher for BSGC-nocontext (top) and BSGC-context (bottom).
+Importance, representativeness, and distinctiveness scores are percentages
+and rounded to the nearest integer.
+}
+\label{tab:bsgc-corres}
+\end{table}
+
 \begin{figure}[h]
-\begin{adjustwidth}{-1cm}{0cm}
+\begin{adjustwidth}{-1.5cm}{-1cm}
 \centering
 \includestandalone[height=0.42\textheight]{figures/bsgc-nocontext}\\
-\vspace{2em}
-\includestandalone[height=0.42\textheight]{figures/bsgc-context}
+\vspace{1.5em}
+\includestandalone[height=0.45\textheight]{figures/bsgc-context}
 \end{adjustwidth}
 
-\vspace{0.3em}
+\vspace{0.5em}
 \begin{center}
 {\ingv} Ingv\ae{}onic \hspace{1em}
 {\dutch} Dutch \hspace{1em}
@@ -1151,31 +1189,6 @@ as well as the highest-ranking correspondence per non-singleton cluster
 \label{fig:bsgc-trees}
 \end{figure}
 
-\begin{table}[h]
-\centering
-\input{tables/bsgc-context-corres}
-\caption
-[Sound correspondences with an importance score of 90\% or higher for BSGC-context]
-{Sound correspondences with an importance score of 90\% or higher for BSGC-context.
-Importance, representativeness, and distinctiveness scores are percentages
-and rounded to the nearest integer.
-}
-\label{tab:bsgc-context-corres}
-\end{table}
-\FloatBarrier
-
-\begin{table}[H]
-\centering
-\input{tables/bsgc-nocontext-corres}
-\caption
-[Sound correspondences with an importance score of 90\% or higher for BSGC-nocontext]
-{Sound correspondences with an importance score of 90\% or higher for BSGC-nocontext.
-Importance, representativeness, and distinctiveness scores are percentages
-and rounded to the nearest integer.
-}
-\label{tab:bsgc-nocontext-corres}
-\end{table}
-
 \subsection{Comparisons to Continental West Germanic Groupings}
 
 For all methods, the first (in the figures: rightmost) split
@@ -1185,6 +1198,7 @@ as well as some doculects belonging to the aforementioned groups.
 We refer to the former group as the Northern cluster and to the
 latter as the Southern cluster.
 
+\FloatBarrier
 % \subsubsection{Comparison with Glottolog tree}
 % comparison with language ancestry data from \citet{hammarstroem2018glottolog}
 
@@ -1217,12 +1231,15 @@ Feer, Heligoland and Westerkwartier form another cluster.
 \end{itemize}
 
 All results include several Ingv\ae{}onic doculects
-in the Southern cluster
-(this is expanded upon in the following subsection).
+in the Southern cluster (this is expanded upon in the following subsection).
 In all cases, these
 samples include both doculects categorized as \textit{Northern Frisian}
 in Glottolog \citep{hammarstroem2018glottolog}: Feer and Heligoland.
 
+The phonological characteristics of Ingv\ae{}onic doculects
+as detailed by \citet{stiles2013pan-west}
+(changes to /*\textscripta{}/, palatalization of /*k/ and /*g/)
+are not reflected in any of the results.
 
 \subsubsection{Results of the High German Sound Shift}
 
@@ -1272,8 +1289,8 @@ all reflect some of the unvoiced stops not being weakened:
 /*k/~$>$~[k]~/~\#\_, /*t/~$>$~[t]~/~\_\#, /*k/~$>$~[k]~/~\_\textit{vow}.
 
 Conversely, the predominantly Upper German clusters
-have high-ranked correspondences demonstrating lenition:
-/*t/~$>$~[\texttoptiebar{ts}], /*t/~$>$~[\texttoptiebar{ts}]~/~\#\_,
+have high-ranked\linebreak correspondences demonstrating lenition:
+/*t/~$>$~[\texttoptiebar{ts}], /*t/~$>$~[\texttoptiebar{ts}]~/~\#\_,\linebreak
 /*t/~$>$~[\texttoptiebar{ts}]~/~\_\textit{vow} (UPGMA-context)
 and /*t/~$>$~[s] (UPGMA-nocontext, BSGC).
 None of the sound correspondences with high importance values
@@ -1291,24 +1308,6 @@ was the most resistant to change during the High German sound shift.
 
 \subsubsection{Close Doculects Outside these Groupings}
 \label{subsubsec:cosine}
-
-\begin{figure}[h]
-\begin{adjustwidth}{-3cm}{-3cm}
-\centering
-\includestandalone[width=0.75\textwidth]{figures/cosine}
-\hspace{-7em}
-\includestandalone[width=0.75\textwidth]{figures/cosine2}
-\end{adjustwidth}
-\caption
-[Cosine similarities between the doculects (UPGMA-context)]
-{
-Cosine similarities between the doculects (UPGMA-context).
-Lines that are bolder and darker represent greater cosine similarity scores.
-The graphic on the left includes all pairwise similarity scores;
-the one on the right only includes the highest 10\% of cosine similarity scores.
-}
-\label{fig:cosine}
-\end{figure}
 
 In this section, we consider the results from
 the UPGMA-context run more closely,
@@ -1334,7 +1333,7 @@ The doculect spoken in Westerkwartier is very dissimilar to
 the doculects which are its direct neighbours (Grou and Veenkoloni\"{e}n),
 but it forms a tight cluster with Heligoland and Feer.
 
-Heligoland and Feer however are also very similar to Luxembourgish.
+Heligoland and Feer however are also very similar to the Luxembourg doculect.
 Luxembourg, Feer and T\"{u}bingen are directly connected,
 as are Luxembourg, T\"{u}bingen and Cologne.
 However, there are low cosine similarity scores between
@@ -1349,6 +1348,25 @@ which is only moderately similar to the other two doculects.
 
 Lastly, the doculects spoken in Herrlisheim and Ortisei
 show high cosine similarity.
+
+\begin{figure}[h]
+\begin{adjustwidth}{-3cm}{-3cm}
+\centering
+\includestandalone[width=0.75\textwidth]{figures/cosine}
+\hspace{-7em}
+\includestandalone[width=0.75\textwidth]{figures/cosine2}
+\end{adjustwidth}
+\caption
+[Cosine similarities between the doculects (UPGMA-context)]
+{
+Cosine similarities between the doculects (UPGMA-context).
+Lines that are bolder and darker represent greater cosine similarity scores.
+The graphic on the left includes all pairwise similarity scores;
+the one on the right only includes the highest 10\% of cosine similarity scores.
+}
+\label{fig:cosine}
+\end{figure}
+
 
 \subsection{Context Information}
 
@@ -1394,27 +1412,24 @@ reflecting more gradual changes.
 
 In light of this, it would be interesting
 to investigate these pairwise changes further,
-perhaps following the fuzzy dialect clustering approaches
+for instance following the fuzzy dialect clustering approaches
 by \citet{proell2013detecting}, which are better suited to model
 wave-like developments of language variation.
 
-\todo{synonyms for ``it would be interesting''}
-% It would also be interesting to run clustering
-A further approach would be to run clustering
-methods (fuzzy or not) on a larger amount of data,
-both in terms of the number of doculects
+Another promising follow-up investigation would be to run
+clustering methods (fuzzy or not) on a larger amount of data.
+This should be both in terms of the number of doculects
+to gain a more representative depiction of the CWG doculect landscape
 (adding places that are geographically located
 in between some of the doculects we worked with,
 and adding doculects from German-speaking places that
 were not at all included in this analysis, such as
-locations in Germany not situated near the Western border),
+locations in Germany not situated near the Western border)
 and in terms of entries per doculect
 (to capture a greater variety of sound correspondences).
 Unfortunately, at this point we are not aware of
 a digital database compiled by a single transcriber that
 would allow us to do that.
-
-% some doculects were clustered together despite not sharing any (high-ranking) correspondences (as a cluster) -- random pairwise commonalities?
 
 \subsection{Bipartite Spectral Graph Co-clustering}
 
@@ -1479,7 +1494,7 @@ The current system cannot pick up on related changes
 with slightly different outcomes, such as different
 ways that Proto-Germanic /*k/ has been turned into
 an affricate or fricative in Swiss German doculects:
-/*k/ $>$ [\texttoptiebar{kx}], /*k/ $>$ [x], /*k/ $>$ [\textchi].
+/*k/~$>$~[\texttoptiebar{kx}], /*k/~$>$~[x], /*k/~$>$~[\textchi].
 Again, a way of describing these sound changes more abstractly
 might make it possible to consider these sound changes more
 similarly while clustering doculects.
@@ -1493,6 +1508,7 @@ to how often another sound shift (or no sound shift) took place,
 in a similar way to \citet{prokic2007identifying} and \citet{prokic2013combining},
 or similarly to transition probabilities in bigram models.
 
+\todo{TODO revise this paragraph}
 All of the comparisons between Proto-Germanic and the modern doculects
 here are phonetic
 % (and might possibly include some morphological information in some cases)
