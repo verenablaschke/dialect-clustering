@@ -1094,8 +1094,8 @@ as well as the highest-ranking correspondence per non-singleton cluster
 \label{fig:tfidf-dendrograms}
 \end{figure}
 
-The cosine similarity table that the dendrogram
-for the run with context information is based on
+The cosine similarity table which is
+the basis for the UPGMA-context dendrogram
 is described in section~\ref{subsubsec:cosine}.
 
 In total, 201 sound correspondence were used for the run without contextual information,
@@ -1103,7 +1103,7 @@ of which 6 have importance scores of 100\% for intermediary clusters.
 For the run with contextual information,
 24 sound correspondences (of 665 total) reach 100\% importance for intermediary clusters.
 Tables~\ref{tab:tfidf-nocontext-corres} and \ref{tab:tfidf-context-corres}
-show the highest-rank sound correspondences (importance score $\geq$ 90\%)
+show the highest-ranking sound correspondences (importance score $\geq$ 90\%)
 for UPGMA-nocontext and UPGMA-context, respectively.
 
 \begin{table}[h]
@@ -1145,15 +1145,16 @@ with an importance rating of 70\% or above for the context-less run,
 and 10 for the run with additional context information.
 
 Of the 201 sound correspondences for BSGC-nocontext,
-1 has an importance score of 100\% for an intermediary cluster;
-% (see Table~\ref{tab:bsgc-nocontext-corres});
-for the run with context information, 2 out of 665 correspondences reach this score.
-For the latter run, a total of 9 sound correspondences
-reach importance scores of at least 90\%
-for intermediary clusters, as shown in Table~\ref{tab:bsgc-corres}.
+1 has an importance score of 100\% for an intermediary cluster
+(the only sound correspondence with an importance value $\geq$ 90\%).
+For the intermediary clusters of BSGC-context, 2 out of 665 correspondences reach
+an importance score of 100\% and
+a total of 9 sound correspondences
+reach at least 90\%.
+Table~\ref{tab:bsgc-corres} presents these high-ranking
+sound correspondences for both BSGC runs.
 
-It should be noted that the results concerning
-the smaller subclusters were
+It should be noted that the results concerning smaller subclusters are
 (due to the random k-means initialization) not stable
 across runs, although the overall results have stayed similar.
 
@@ -1202,8 +1203,9 @@ as well as the highest-ranking correspondence per non-singleton cluster
 
 For all methods, the first (in the figures: rightmost) split
 creates one group containing only Dutch, Low German and Frisian doculects,
-and one group containing a mixture of mostly doculects from other groups
-as well as some doculects belonging to the aforementioned groups.
+and one group containing a mixture of 
+a few doculects belonging to the aforementioned categories as well as
+mostly Central or Upper German doculects.
 We refer to the former group as the Northern cluster and to the
 latter as the Southern cluster.
 
@@ -1256,9 +1258,9 @@ For both BSGC runs, the results can be compared to the consonant shift-based gro
 The majority of the Low German/Dutch/Frisian doculects are in
 the Northern cluster,
 although four of them are distributed throughout the Southern cluster.
-(For the run without context information,
+(In BSGC-nocontext,
 the samples in the latter group are not directly clustered together,
-but for BSGC-context,
+but in BSGC-context,
 two of them are (Westerkwartier and Heligoland).)
 The Central German doculects from Cologne and Luxembourg
 are not directly clustered together; the smallest cluster they share
@@ -1267,7 +1269,7 @@ Of the Upper German doculects,
 Walser and Biel are directly clustered together,
 as are T\"{u}bingen and Ortisei.
 The other three Upper German samples are distributed throughout
-the second major subcluster.
+the Southern cluster.
 
 By contrast, the results of the UPGMA runs fit
 the grouping based on the High German sound shift more closely.
@@ -1275,10 +1277,10 @@ Again, most of the samples from the Low German/Dutch/Frisian group
 constitute the Northern cluster.
 The remaining samples from this class are clustered together
 to different degrees in the different runs:
-For the context-less run,
+In UPGMA-nocontext,
 Heligoland and Westerkwartier are directly grouped together,
 but the remaining two doculects (Feer and Limburg) are not.
-For the run with context information on the other hand,
+In UPGMA-context on the other hand,
 there are only three doculects outside the Northern cluster
 (Heligoland, Feer, Westerkwartier),
 and they are all grouped together.
@@ -1293,7 +1295,7 @@ are also visible in some of the highest-ranked sound correspondences.
 
 In case of the UPGMA-context run,
 the sound correspondence rules with 100\% importance scores
-for the Northern cluster
+for (subclusters within) the Northern cluster
 all reflect some of the unvoiced stops not being weakened:
 /*k/~$>$~[k]~/~\#\_, /*t/~$>$~[t]~/~\_\#, /*k/~$>$~[k]~/~\_\textit{vow}.
 
@@ -1342,7 +1344,7 @@ The doculect spoken in Westerkwartier is very dissimilar to
 the doculects which are its direct neighbours (Grou and Veenkoloni\"{e}n),
 but it forms a tight cluster with Heligoland and Feer.
 
-Heligoland and Feer however are also very similar to the Luxembourg doculect.
+Heligoland and Feer are also very similar to the Luxembourg doculect.
 Luxembourg, Feer and T\"{u}bingen are directly connected,
 as are Luxembourg, T\"{u}bingen and Cologne.
 However, there are low cosine similarity scores between
@@ -1353,10 +1355,12 @@ both of which are geographically close to this group.
 T\"{u}bingen, Graub\"{u}nden and Walser form another
 triangle cluster with high pairwise cosine similarity scores.
 Walser is also very similar to the Hard doculect,
-which is only moderately similar to the other two doculects.
+which is only moderately similar to the samples
+from T\"{u}bingen and Graub\"{u}nden.
 
 Lastly, the doculects spoken in Herrlisheim and Ortisei
-show high cosine similarity.
+show high cosine similarity to one another but not to their
+geographic neighbours.
 
 \begin{figure}[h]
 \begin{adjustwidth}{-3cm}{-3cm}
@@ -1369,7 +1373,8 @@ show high cosine similarity.
 [Cosine similarities between the doculects (UPGMA-context)]
 {
 Cosine similarities between the doculects (UPGMA-context).
-Lines that are bolder and darker represent greater cosine similarity scores.
+Lines that are bolder and darker represent greater cosine similarity scores
+(i.e. lower cosine distances).
 The graphic on the left includes all pairwise similarity scores;
 the one on the right only includes the highest 10\% of cosine similarity scores.
 }
@@ -1389,7 +1394,7 @@ higher proportions of the clusters are associated with
 sound correspondences (of $\geq$ 70\% importance):
 6/18 versus 10/18 for the graph clustering approach
 (without and with context information, respectively),
-and 13/18 versus 17/18 for UPGMA-context and UPGMA-nocontext.
+and 13/18 versus 17/18 for UPGMA-nocontext and UPGMA-context.
 
 Most of the high-ranking sound correspondences
 use the vowel/consonant distinction instead of
@@ -1405,22 +1410,28 @@ among the high-ranking sound correspondences.
 The clusters formed by the different approaches
 match the groupings from the literature to different degrees.
 The UPGMA runs show these patterns more strongly than the BSGC runs,
-and the UPGMA-context run follows it the most closely.
+and UPGMA-context follows it the most closely.
 
-However, even in the TFIDF-context run,
+However, even in UPGMA-context,
 we see some unexpected results,
 such as several Frisian/Low German doculects
 being clustered with a group of Central/Upper German doculects
 instead of the large Frisian/Low German/Dutch group.
 
-In addition, inspecting the cosine similarity values
+Overall, we can also observe that the results reflect
+the High German sound shift-based groupings more
+strongly than the (Non-)Ingv\ae{}onic distinction,
+unless we (re-)define Ingv\ae{}onic to include Dutch as well,
+as \citet{sonderegger1979grundzuege} does.
+
+Inspecting the cosine similarity values
 for UPGMA-context, we can observe a pattern
-that shows both some isolated subgroups, as well as
+that shows both some isolated subgroups and
 a more net-like pattern of connections
 reflecting more gradual changes.
-
-In light of this, it would be interesting
-to investigate these pairwise changes further,
+These latter pattern matches the observations
+by \citet{heggarty2010splits} for the same dataset.
+It would be interesting to investigate these gradual changes further,
 for instance following the fuzzy dialect clustering approaches
 by \citet{proell2013detecting}, which are better suited to model
 wave-like developments of language variation.
@@ -1431,12 +1442,20 @@ This should be both in terms of the number of doculects
 to gain a more representative depiction of the CWG doculect landscape
 (adding places that are geographically located
 in between some of the doculects we worked with,
-and adding doculects from German-speaking places that
-were not at all included in this analysis, such as
-locations in Germany not situated near the Western border)
-and in terms of entries per doculect
+and adding doculects from CWG-speaking places that
+were not at all included in this analysis,
+such as more locations in Germany)%
+\footnote{%
+Adding more doculects spoken near the Dutch border
+would make it possible to investigate the tendency for
+standard language borders to act as dialect borders.
+In addition, incorporating data from central or eastern
+Germany would noticeably increase the diversity of CWG doculects
+covered in such an investigation.
+}
+and in terms of concepts per doculect
 (to capture a greater variety of sound correspondences).
-Unfortunately, at this point we are not aware of
+Unfortunately, we are not aware of
 a digital database compiled by a single transcriber that
 would allow us to do that.
 
@@ -1454,9 +1473,11 @@ In such cases, we automatically assign them to the appropriate
 other cluster to avoid linear algebra problems.
 However, it is possible that such an unfitting
 cluster assignment also happens with other samples
-that are close to the k-means decision boundary,
-ending up in a cluster where they describe the doculects
-not as well as they would have in the other cluster.
+% that are close to the k-means decision boundary,
+% ending up in a cluster where they describe the doculects
+% not as well as they would have in the other cluster.
+that get sorted into the cluster whose
+doculects they not describe as well as the other cluster's.
 
 In the future, it would be interesting to
 explore if alternate approaches to normalizing the data
@@ -1476,40 +1497,39 @@ potentially allowing for sound correspondences that are similar in our data,
 but (due to the narrowness of transcription) slightly different,
 to become identical and thus more common.
 
-Another follow-up investigation would be to
-further investigate the influence of
+Another follow-up investigation would be to investigate the influence of
 data selection and preprocessing on BSGC performance.
 
 \subsection{Sound Correspondences}
 
-The sound correspondences helped the UPGMA model
-to match the literature more closely.
+Adding context information to the sound correspondences
+helps the UPGMA model to match the groupings in the literature more closely.
 However, most of the high-ranking sound correspondences
 do not involve the more detailed sound class model.
-It is possible that the sound classes are too specific
+It is possible that these sound classes are too specific
 for the data at hand or have the wrong kind of specificity,
 being thus not well-suited for capturing generalizations of the data.
 
 A solution to this would be using a more simple context system.
-Alternatively, it would also be possible to model sound correspondence
-rules in a more abstract way to model sound changes
-as specifically or generally as appropriate.
-
-% we do not (cannot) take into account consecutive changes
+Additionally, it would also be possible to 
+use more sound segment and context representations with
+varying degrees of superficiality or abstractness 
+to model sound changes as specifically or generally as appropriate
+for each resulting cluster.
 
 The current system cannot pick up on related changes
 with slightly different outcomes, such as different
-ways that Proto-Germanic /*k/ has been turned into
+ways that Proto-Germanic /*k/ has developed into
 an affricate or fricative in Swiss German doculects:
 /*k/~$>$~[\texttoptiebar{kx}], /*k/~$>$~[x], /*k/~$>$~[\textchi].
 Again, a way of describing these sound changes more abstractly
-might make it possible to consider these sound changes more
-similarly while clustering doculects.
+might make it possible to consider the similarity of
+these sound changes while clustering doculects.
 
 In future experiments, it might be worthwhile to rank
 sound correspondences also by how regular they are,
 i.e. how often a given sound shifted into a specific sound
-compared to how often another sound shift (or no sound shift) took place.
+compared to how often another sound shift (or no sound shift) took place instead.
 This could be done in a similar fashion to the approaches by
 \citet{prokic2007identifying} and \citet{prokic2013combining}.
 
@@ -1532,8 +1552,8 @@ groupings of the doculects we worked with.
 
 We showed that, compared to the graph co-clustering method (BSGC),
 the agglomerative clustering approach (UPGMA)
-yielded results that are closer to the groupings in the literature
-and are associated with more sound correspondences that
+yielded results that are more similar to the groupings in the literature
+and are associated more frequently sound correspondences that
 describe the subclusters well.
 
 Additionally, we examined the effect of adding information about
