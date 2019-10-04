@@ -13,6 +13,7 @@ to explore how historical sound shifts are associated with the resulting cluster
 
 Details on this are in my Bachelor's thesis, which can be found
 [here](https://github.com/verenablaschke/dialect-clustering/blob/master/doc/Verena-Blaschke_BA-Thesis.pdf).
+A [summary](https://github.com/verenablaschke/dialect-clustering/blob/master/doc/Verena-Blaschke_BA-Thesis_Summary.pdf) is also available. 
 
 ### Abstract
 
@@ -30,3 +31,7 @@ We also observe that adding phonetic context information
 to the sound correspondences yields clusters
 that are more frequently associated with representative and distinctive
 sound correspondences).
+
+### Errata
+
+The last sentence of section 4.3.2 _Bipartite Spectral Graph Co-clustering_ (p. 13) should read "The results from this method are hereafter referred to as ___BSGC__-context_ and ___BSGC__-nocontext_."
