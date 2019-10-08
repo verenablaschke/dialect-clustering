@@ -1,0 +1,17 @@
+% https://tex.stackexchange.com/questions/140221/rectangles-around-cells-in-table
+\tikzstyle{every picture}+=[remember picture,baseline]
+\tikzstyle{every node}+=[anchor=base,
+minimum width=0cm,align=left,text depth=0ex,outer sep=0cm]
+\tikzstyle{every path}+=[thick, rounded corners]
+
+\begin{tabular}{l|llllll}
+\hline
+Dialect       & \multicolumn{6}{l}{Sound segments} \\ \hline
+Proto-Germanic  & \tabnode{k}    & a    & l   & d    & a  & z  \\
+Walser         & \tabnode{x}    & a\textlengthmark    & l   & t    & -  & -  \\
+Biel           & \tabnode{\textchi}    & \textscripta\textupsilon   & -   & t    & -  & -  \\
+Luxembourg     & \tabnode{k\textsuperscript{h}}   & a\textlengthmark   & l   & -    & -  & -  \\
+Westerkwartier & \tabnode{k\textsuperscript{h}}   & o    & \textltilde   & t\textsuperscript{h}   & -  & -  \\
+...&&&&&&\\
+\hline
+\end{tabular}

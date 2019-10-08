@@ -1,0 +1,87 @@
+\documentclass{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{forest}
+\begin{document}
+\begin{forest}
+short/.style={l sep=1mm},
+for tree={
+  parent anchor=south, 
+  child anchor=north,
+  align=center, % necessary for intra-node linebreaks
+  l sep=1.7cm, % level
+  s sep=0.5cm, % sibling
+%   inner sep=0.2mm
+}
+[West Germanic
+  [North Sea Germanic
+    [Anglo-Frisian, short
+    [Frisian
+        [Western\\Frisian\\\textit{Grou}]
+        [Northern\\Frisian
+            [Ferring\\\textit{Feer}]
+            [Helgoland\\\textit{Heligoland}]
+        ]
+    ]
+    ] 
+    [Alts\"{a}chsisch\\{[Old Saxon]}, short
+    [Middle-Modern\\Low German, short
+    [Low German
+        [Achter-\\hoeks\\\textit{Achterhoek}]
+        [Ost-\\friesisch-\\Groning-\\isch, short 
+        [Gronings
+            [Veen-\\kolonials\\\textit{Veen-}\\\textit{koloni\"{e}n}]
+            [Wester-\\wolds\\\textit{Wester-}\\\textit{kwartier}]
+        ]
+        ]
+    ]
+    ]
+    ]
+  ]
+  [Franconian
+    [Low Franconian, short
+    [Macro-Dutch, short
+    [Modern Dutch
+        [Dutch\\\textit{Std.}\\\textit{Dutch}\\\textit{(NL)}]
+        [Vlaams\\\textit{Std. Dutch}\\\textit{(BE)}
+            [Ost-\\vlaams\\\textit{Ostend}]
+            [Antwerps\\\textit{Antwerp}]
+            [Limburgs\\\textit{Limburg}]
+        ]
+    ]
+    ]
+    ]
+    [High Franconian
+        [German, short
+        [Alsatian\\\textit{Herrlisheim}]
+        ]
+        [Middle\\Franconian
+            [Luxem-\\bourgish\\\textit{Luxembourg}]
+            [Ripuarian, short
+            [Kölsch\\\textit{Cologne}]
+            ]
+        ]
+    ]
+  ]
+    [High German, short
+    [Middle-Modern\\High German, short
+    [Modern\\High German, short
+    [Alpine Germanic
+    [Alemannic
+        [Swiss\\German
+            [Basel\\\textit{Biel}]
+            [Low\\Alemannic\\\textit{Hard}]
+            [Grau-\\benden-\\Grisons\\\textit{Graub\"{u}nden}]
+        ]
+        [Swabian\\\textit{T\"{u}}-\\\textit{bingen}]
+        [Walser\\\textit{Walser}]
+    ]
+    [Bayerisch\\{[Bavarian]}
+    [Cimbrian\\\textit{Ortisei}]
+    ]
+  ]
+  ]
+  ]
+  ]
+]
+\end{forest}
+\end{document}
