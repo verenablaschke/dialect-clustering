@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11111121802,Rossendale,53.68333,-2.25,10,one,,ainaz,,wɒn,,,0
 11111121802,Rossendale,53.68333,-2.25,20,two,,twou,,tʰʊuˑ,,,0
 11111121802,Rossendale,53.68333,-2.25,30,three,,threjez,,θɾɪiˑ,,,0
@@ -20,7 +20,6 @@
 11111121802,Rossendale,53.68333,-2.25,7510,young,,jungaz,,jʊŋɡ,,,0
 11111121802,Rossendale,53.68333,-2.25,7980,new,,neujaz,,nʊuˑ,,,0
 11111121802,Rossendale,53.68333,-2.25,7670,naked,,nakwadaz,,ˈne̞ːkɪd,,,0
-11111121802,Rossendale,53.68333,-2.25,7650,quick,,kwikwaz,,kʰwɪk,,,0
 11111121802,Rossendale,53.68333,-2.25,7660,fast,,fastaz,,fa̠st,,,0
 11111121802,Rossendale,53.68333,-2.25,7710,good,,godaz,,ɡʊd,,,0
 11111121802,Rossendale,53.68333,-2.25,7910,warm,,warmaz,,wɔːɹm,,,0
@@ -32,7 +31,6 @@
 11111121802,Rossendale,53.68333,-2.25,2010,head,,xaubadan,,ɛd,,,0
 11111121802,Rossendale,53.68333,-2.25,2110,eye,,augon,,äˑe,,,0
 11111121802,Rossendale,53.68333,-2.25,2130,ear,,auzon,,iˑɚ,,,0
-11111121802,Rossendale,53.68333,-2.25,2140,tear,,taxruz,,tʰiˑɚ,,,0
 11111121802,Rossendale,53.68333,-2.25,2210,mouth,,munthaz,,maʊθ,,,0
 11111121802,Rossendale,53.68333,-2.25,2230,tongue,,tungon,,tʰɒŋɡ,,,0
 11111121802,Rossendale,53.68333,-2.25,2240,tooth,,tanthz,,tʰʊuθ,,,0
@@ -86,7 +84,6 @@
 11111121802,Rossendale,53.68333,-2.25,6570,stool,,stolaz,,stʊuˑɫ,,,0
 11111121802,Rossendale,53.68333,-2.25,6580,bath,,bathan,,ba̠θ,,,0
 11111121802,Rossendale,53.68333,-2.25,6600,thing,,thengaz,,θɪŋɡ,,,0
-11111121802,Rossendale,53.68333,-2.25,1440,top,,tuppaz,,tʰɒp,,,0
 11111121802,Rossendale,53.68333,-2.25,6630,needle,,nethlo,,ˈnɪidə̆ɫ,,,0
 11111121802,Rossendale,53.68333,-2.25,6640,ring,,xrengaz,,ɹɪŋɡ,,,0
 11111121802,Rossendale,53.68333,-2.25,8000,is,,esti,,ɪz,,,0
@@ -98,7 +95,6 @@
 11111121802,Rossendale,53.68333,-2.25,9620,open,,upanaz,,ˈo̞ːpən,,,0
 11111121802,Rossendale,53.68333,-2.25,8120,sit,,setjanan,,sɪt,,,0
 11111121802,Rossendale,53.68333,-2.25,8720,wash,,waskanan,,wɒʃ,,,0
-11111121802,Rossendale,53.68333,-2.25,8940,fight,,fextanan,,fäˑɪt,,,0
 11111121802,Rossendale,53.68333,-2.25,8990,swear,,swarjanan,,swɛˑɚ,,,0
 11111121802,Rossendale,53.68333,-2.25,1010,I,,eka,,äˑe,,,0
 11111121802,Rossendale,53.68333,-2.25,1210,what,,xwat,,wɒt,,,0

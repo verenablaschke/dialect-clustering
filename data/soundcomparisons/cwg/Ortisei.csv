@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,10,one,,ainaz,,ʔɔˑəns,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,20,two,,twou,,tsβɔˑə,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,30,three,,threjez,,dʁäˑɪ,,,0
@@ -20,7 +20,6 @@
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,7510,young,,jungaz,,jʊŋk,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,7980,new,,neujaz,,näɪ,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,7670,naked,,nakwadaz,,nɔkts,,,0
-11161250509,"South Tyrol: Ortisei",46.56667,11.66667,7650,quick,,kwikwaz,,..,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,7660,fast,,fastaz,,fɪʃt,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,7710,good,,godaz,,ɡʊɛ̈ts,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,7910,warm,,warmaz,,βɑ̈ʁ̞m,,,0
@@ -32,7 +31,6 @@
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,2010,head,,xaubadan,,ha̠ʊpt,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,2110,eye,,augon,,ˈʔa̠ʊɡɛ̝̈,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,2130,ear,,auzon,,ʔoːχ,,,0
-11161250509,"South Tyrol: Ortisei",46.56667,11.66667,2140,tear,,taxruz,,tʁ̥ɛ̝ːnə,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,2210,mouth,,munthaz,,mʊnts,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,2230,tongue,,tungon,,ˈtsʊŋɡɛ̝̈,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,2240,tooth,,tanthz,,tsɑːn,,,0
@@ -86,19 +84,17 @@
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,6570,stool,,stolaz,,ʃtʊɛl,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,6580,bath,,bathan,,bɔ̝ːts,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,6600,thing,,thengaz,,dɪŋk,,,0
-11161250509,"South Tyrol: Ortisei",46.56667,11.66667,1440,top,,tuppaz,,..,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,6630,needle,,nethlo,,ˈnɔ̝ːdl̩,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,6640,ring,,xrengaz,,ʁɪ̝ŋk̟,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8000,is,,esti,,ʔiʃ,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8310,eat,,etanan,,ʔɪ̝s,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8330,bite,,bitanan,,bäɪs,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8320,drink,,drenkanan,,tʁ̥ɪ̝ŋk̟,,,0
-11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8510,see,,sexwanan,,ʃäɵ̠,,,0
-11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8520,hear,,xauzjanan,,hɛ̝ːχ,,,0
+11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8510,see,,sexwanan,,ʃäɵ̠,,,1
+11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8520,hear,,xauzjanan,,hɛ̝ːχ,,,1
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,9620,open,,upanaz,,ˈʔofn̩,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8120,sit,,setjanan,,sɪts,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8720,wash,,waskanan,,βäʃ,,,0
-11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8940,fight,,fextanan,,fɛçt,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,8990,swear,,swarjanan,,ʃβøːχ,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,1010,I,,eka,,ʔiː,,,0
 11161250509,"South Tyrol: Ortisei",46.56667,11.66667,1210,what,,xwat,,β̞ɔ̞s,,,0

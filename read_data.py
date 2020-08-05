@@ -55,16 +55,18 @@ def parse_file(filename, entries):
     if ('\\') in filename:
         filename = filename.split('\\')[-1]
     doculect = filename[:-4]
+    # TODO del
+    print(filename, df.columns)
     df['Phonetic'].replace('nan', np.nan, inplace=True)
     df.dropna(subset=['Phonetic'], inplace=True)
     concepts = df['WordModernName1'].values
     words = df['Phonetic'].values
-    noncognate = df['NotCognateWithMainWordInThisFamily2'].values
+    noncognate = df['NotCognateWithMainWordInThisFamily'].values
     for concept, w, n in zip(concepts, words, noncognate):
         word = clean_transcription(w)
-        if word == 'Array':
-            # Erroneous entry in Veenkolonien.csv.
-            continue
+        # if word == 'Array':
+        #     # Erroneous entry in Veenkolonien.csv.
+        #     continue
         if len(word) == 0:
             logger.info('{} has an empty entry for {} (skipped)'
                         .format(doculect, concept))

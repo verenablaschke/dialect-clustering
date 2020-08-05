@@ -1,13 +1,13 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,10,one,,ainaz,,ʔɑin,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,20,two,,twou,,tʰvɛi,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,30,three,,threjez,,dɾaɛ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,40,four,,fedworez,,fiˑɾ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,50,five,,fenfe,,fiˑf,,,0
-11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,60,six,,sexs,,z̥)ɛˑs̠ʲ,,,0
+11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,60,six,,sexs,,z̥ɛˑs̠ʲ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,70,seven,,sebun,,ˈs̠ʲø̞ːbⁿm̩,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,80,eight,,axtou,,ʔaχtʰ,,,0
-11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,90,nine,,newun,,ˈnegⁿŋ̩,,,0
+11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,90,nine,,newun,,ˈneɡⁿŋ̩,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,100,ten,,texun,,tsĩn,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,200,hundred,,xundaradan,,ˈhundə̠tʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,7820,all,,allaz,,ʔɑɫ,,,0
@@ -19,7 +19,7 @@
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,7840,full,,fullaz,,foɫ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,7510,young,,jungaz,,jɒŋ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,7980,new,,neujaz,,næi,,,0
-11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,7670,naked,,nakwadaz,,nog̥tʰ,,,0
+11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,7670,naked,,nakwadaz,,noɡ̥tʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,7660,fast,,fastaz,,fastʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,7710,good,,godaz,,xutʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,7910,warm,,warmaz,,væam,,,0
@@ -31,7 +31,6 @@
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,2010,head,,xaubadan,,hœftʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,2110,eye,,augon,,ʔɔuχ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,2130,ear,,auzon,,ʔoɔɹ̝,,,0
-11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,2140,tear,,taxruz,,tʰɹ̝õː,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,2210,mouth,,munthaz,,mɔ̝̃ntʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,2230,tongue,,tungon,,tsɒŋ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,2240,tooth,,tanthz,,tsãnts,,,0
@@ -67,7 +66,7 @@
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6260,leaf,,lauban,,lɑ̝of,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6270,thorn,,thurnuz,,doˑɤn,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6290,oak,,aikz,,ˈʔækoˌbɔ̟um,,,0
-11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,5810,rain,,regnan,,ˈreigⁿŋ̩,,,0
+11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,5810,rain,,regnan,,ˈreiɡⁿŋ̩,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,5910,storm,,sturmaz,,ʃd̥øœ̽m,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,5920,thunder,,thunraz,,ˈdɶnaɹ̝̥,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,5820,snow,,snaigwaz,,ʃæe,,,0
@@ -78,12 +77,10 @@
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6150,honey,,hunagan,,ˈhɶnɶx,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6040,salt,,saltan,,zʏ̈ɫts,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6510,house,,xusan,,hys̠ʲ,,,0
-11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6560,home,,xaimaz,,,,,
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6550,oven,,ufnaz,,ˈʔɔobⁿm̩,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6570,stool,,stolaz,,ʃd̥äɔɫ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6580,bath,,bathan,,batʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6600,thing,,thengaz,,deːŋ,,,0
-11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,1440,top,,tuppaz,,tʰɔpʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6630,needle,,nethlo,,nɑ̟ɫtʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,6640,ring,,xrengaz,,rẽˑŋ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,8000,is,,esti,,ʔeʃ,,,0
@@ -95,7 +92,6 @@
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,9620,open,,upanaz,,ˈʔɔupⁿm̩,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,8120,sit,,setjanan,,ʒ̥etʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,8720,wash,,waskanan,,vaʃ,,,0
-11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,8940,fight,,fextanan,,fɛæχtʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,8990,swear,,swarjanan,,ʒveˑæɹ̝̥,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,1010,I,,eka,,ʔɪkʰ,,,0
 11141110309,"‘Low Saxon’: Westerkwartier",53.16444,6.3887,1210,what,,xwat,,va̠tʰ,,,0

@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11002000000,Proto-Germanic,56.21281,12.04376,10,one,,ainaz,,ainaz,ainaz,,0
 11002000000,Proto-Germanic,56.21281,12.04376,20,two,,twou,,twoːu,twō(u),,0
 11002000000,Proto-Germanic,56.21281,12.04376,30,three,,threjez,,θrejez,þrejez,,0
@@ -20,7 +20,6 @@
 11002000000,Proto-Germanic,56.21281,12.04376,7510,young,,jungaz,,junɡaz,jungaz,,0
 11002000000,Proto-Germanic,56.21281,12.04376,7980,new,,neujaz,,neujaz,neujaz,,0
 11002000000,Proto-Germanic,56.21281,12.04376,7670,naked,,nakwadaz,,nakwadaz,nakwadaz²,,0
-11002000000,Proto-Germanic,56.21281,12.04376,7650,quick,,kwikwaz,,kwikwaz,kwikwaz,,0
 11002000000,Proto-Germanic,56.21281,12.04376,7660,fast,,fastaz,,fastaz,fastaz,,0
 11002000000,Proto-Germanic,56.21281,12.04376,7710,good,,godaz,,ɡoːdaz,gōdaz,,0
 11002000000,Proto-Germanic,56.21281,12.04376,7910,warm,,warmaz,,warmaz,warmaz,,0
@@ -32,7 +31,6 @@
 11002000000,Proto-Germanic,56.21281,12.04376,2010,head,,xaubadan,,xaubadan,xaubadan²,,0
 11002000000,Proto-Germanic,56.21281,12.04376,2110,eye,,augon,,auɡoːn,augōn,,0
 11002000000,Proto-Germanic,56.21281,12.04376,2130,ear,,auzon,,auzoːn,auzōn,,0
-11002000000,Proto-Germanic,56.21281,12.04376,2140,tear,,taxruz,,taxru,taxru(z),,0
 11002000000,Proto-Germanic,56.21281,12.04376,2210,mouth,,munthaz,,munθaz,munþaz,,0
 11002000000,Proto-Germanic,56.21281,12.04376,2230,tongue,,tungon,,tunɡoːn,tungōn,,0
 11002000000,Proto-Germanic,56.21281,12.04376,2240,tooth,,tanthz,,tanθz,tanþz,,0
@@ -86,7 +84,6 @@
 11002000000,Proto-Germanic,56.21281,12.04376,6570,stool,,stolaz,,stoːlaz,stōlaz,,0
 11002000000,Proto-Germanic,56.21281,12.04376,6580,bath,,bathan,,baθan,baþan,,0
 11002000000,Proto-Germanic,56.21281,12.04376,6600,thing,,thengaz,,θenɡaz,þengaz,,0
-11002000000,Proto-Germanic,56.21281,12.04376,1440,top,,tuppaz,,tuppaz,tuppaz,,0
 11002000000,Proto-Germanic,56.21281,12.04376,6630,needle,,nethlo,,neːθloː,nēþlō,,0
 11002000000,Proto-Germanic,56.21281,12.04376,6640,ring,,xrengaz,,xrenɡaz,xrengaz,,0
 11002000000,Proto-Germanic,56.21281,12.04376,8000,is,,esti,,esti,esti,,0
@@ -98,7 +95,6 @@
 11002000000,Proto-Germanic,56.21281,12.04376,9620,open,,upanaz,,upanaz,upanaz²,,0
 11002000000,Proto-Germanic,56.21281,12.04376,8120,sit,,setjanan,,seti,seti!,,0
 11002000000,Proto-Germanic,56.21281,12.04376,8720,wash,,waskanan,,wask,wask!,,0
-11002000000,Proto-Germanic,56.21281,12.04376,8940,fight,,fextanan,,fext,fext!,,0
 11002000000,Proto-Germanic,56.21281,12.04376,8990,swear,,swarjanan,,swari,swari!,,0
 11002000000,Proto-Germanic,56.21281,12.04376,1010,I,,eka,,eka,eka,,0
 11002000000,Proto-Germanic,56.21281,12.04376,1210,what,,xwat,,xwat,xwat,,0

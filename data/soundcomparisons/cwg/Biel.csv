@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11161160309,"Switz.: Biel",47.15,7.24,10,one,,ainaz,,ɛ̝ɪs,,,0
 11161160309,"Switz.: Biel",47.15,7.24,20,two,,twou,,tsβœˑɪ,,,0
 11161160309,"Switz.: Biel",47.15,7.24,30,three,,threjez,,tɾyː,,,0
@@ -20,7 +20,6 @@
 11161160309,"Switz.: Biel",47.15,7.24,7510,young,,jungaz,,jʊŋ,,,0
 11161160309,"Switz.: Biel",47.15,7.24,7980,new,,neujaz,,nœɪ,,,0
 11161160309,"Switz.: Biel",47.15,7.24,7670,naked,,nakwadaz,,nɒkχt,,,0
-11161160309,"Switz.: Biel",47.15,7.24,7650,quick,,kwikwaz,,kxɛ̝kχ,,,0
 11161160309,"Switz.: Biel",47.15,7.24,7660,fast,,fastaz,,fɛ̝ʃt,,,0
 11161160309,"Switz.: Biel",47.15,7.24,7710,good,,godaz,,ɡʊət,,,0
 11161160309,"Switz.: Biel",47.15,7.24,7910,warm,,warmaz,,βäːrm,,,0
@@ -32,8 +31,7 @@
 11161160309,"Switz.: Biel",47.15,7.24,2010,head,,xaubadan,,hɔ̞opt,,,0
 11161160309,"Switz.: Biel",47.15,7.24,2110,eye,,augon,,ɔ̞ok,,,0
 11161160309,"Switz.: Biel",47.15,7.24,2130,ear,,auzon,,ɔːr̥,,,0
-11161160309,"Switz.: Biel",47.15,7.24,2140,tear,,taxruz,,ˈt̪r̥äːnə,,,0
-11161160309,"Switz.: Biel",47.15,7.24,2210,mouth,,munthaz,,mu̞ː,,,0
+11161160309,"Switz.: Biel",47.15,7.24,2210,mouth,,munthaz,,mu̞ː,,,1
 11161160309,"Switz.: Biel",47.15,7.24,2230,tongue,,tungon,,ˈtsʊŋˑə,,,0
 11161160309,"Switz.: Biel",47.15,7.24,2240,tooth,,tanthz,,tsɑ̟ːn,,,0
 11161160309,"Switz.: Biel",47.15,7.24,2310,hand,,xanduz,,hɒˑŋ,,,0
@@ -86,7 +84,6 @@
 11161160309,"Switz.: Biel",47.15,7.24,6570,stool,,stolaz,,ʃtʊɛ̈ʊ,,,0
 11161160309,"Switz.: Biel",47.15,7.24,6580,bath,,bathan,,bɑːt,,,0
 11161160309,"Switz.: Biel",47.15,7.24,6600,thing,,thengaz,,dɪŋ,,,0
-11161160309,"Switz.: Biel",47.15,7.24,1440,top,,tuppaz,,..,,,0
 11161160309,"Switz.: Biel",47.15,7.24,6630,needle,,nethlo,,ˈn̪ɑːdʊ,,,0
 11161160309,"Switz.: Biel",47.15,7.24,6640,ring,,xrengaz,,rɪŋ,,,0
 11161160309,"Switz.: Biel",47.15,7.24,8000,is,,esti,,ʔɪˑʃ,,,0
@@ -94,11 +91,10 @@
 11161160309,"Switz.: Biel",47.15,7.24,8330,bite,,bitanan,,biːs,,,0
 11161160309,"Switz.: Biel",47.15,7.24,8320,drink,,drenkanan,,drɪŋkχ,,,0
 11161160309,"Switz.: Biel",47.15,7.24,8510,see,,sexwanan,,..,,,0
-11161160309,"Switz.: Biel",47.15,7.24,8520,hear,,xauzjanan,,..,,,0
+11161160309,"Switz.: Biel",47.15,7.24,8520,hear,,xauzjanan,,lo̞ːs,,,1
 11161160309,"Switz.: Biel",47.15,7.24,9620,open,,upanaz,,ˈʔɔ̝fˑə,,,0
 11161160309,"Switz.: Biel",47.15,7.24,8120,sit,,setjanan,,sɪts,,,0
 11161160309,"Switz.: Biel",47.15,7.24,8720,wash,,waskanan,,β̞aʃ,,,0
-11161160309,"Switz.: Biel",47.15,7.24,8940,fight,,fextanan,,fa̠χt,,,0
 11161160309,"Switz.: Biel",47.15,7.24,8990,swear,,swarjanan,,ʃβ̞œːr̥,,,0
 11161160309,"Switz.: Biel",47.15,7.24,1010,I,,eka,,ʔi̞ːk̟,,,0
 11161160309,"Switz.: Biel",47.15,7.24,1210,what,,xwat,,β̞ɒˑs,,,0

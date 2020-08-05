@@ -1,7 +1,7 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11111310301,Tyrone,54.60296,-7.0941,10,one,,ainaz,,wɑ̈ːn,,,0
 11111310301,Tyrone,54.60296,-7.0941,20,two,,twou,,tʰʉː,,,0
-11111310301,Tyrone,54.60296,-7.0941,30,three,,threjez,,θɾiː,,,0
+11111310301,Tyrone,54.60296,-7.0941,30,three,,threjez,,sɾiː,,,0
 11111310301,Tyrone,54.60296,-7.0941,40,four,,fedworez,,fo̝ŭɚ,,,0
 11111310301,Tyrone,54.60296,-7.0941,50,five,,fenfe,,fäˑev,,,0
 11111310301,Tyrone,54.60296,-7.0941,60,six,,sexs,,s̺ɪ̠k̟s̺,,,0
@@ -11,7 +11,7 @@
 11111310301,Tyrone,54.60296,-7.0941,100,ten,,texun,,tʰɛˑən,,,0
 11111310301,Tyrone,54.60296,-7.0941,200,hundred,,xundaradan,,ˈhɔ̝̈n̪ɚd̠,,,0
 11111310301,Tyrone,54.60296,-7.0941,7820,all,,allaz,,ɑ̈ːl,,,0
-11111310301,Tyrone,54.60296,-7.0941,7020,white,,xwitaz,,ıʍɜ̟̆ıĭtı,,,0
+11111310301,Tyrone,54.60296,-7.0941,7020,white,,xwitaz,,ʍɜ̟ĭtʰ,,,0
 11111310301,Tyrone,54.60296,-7.0941,7030,red,,raudaz,,ɹə̝d,,,0
 11111310301,Tyrone,54.60296,-7.0941,7040,green,,groniz,,ɡɹin,,,0
 11111310301,Tyrone,54.60296,-7.0941,7210,long,,langaz,,lɔ̞ːŋ,,,0
@@ -20,7 +20,6 @@
 11111310301,Tyrone,54.60296,-7.0941,7510,young,,jungaz,,jɔ̝̈ŋ,,,0
 11111310301,Tyrone,54.60296,-7.0941,7980,new,,neujaz,,njʉː,,,0
 11111310301,Tyrone,54.60296,-7.0941,7670,naked,,nakwadaz,,ˈnëˑk̟ət,,,0
-11111310301,Tyrone,54.60296,-7.0941,7650,quick,,kwikwaz,,kʰwɪ̠c,,,0
 11111310301,Tyrone,54.60296,-7.0941,7660,fast,,fastaz,,fɑ̈ːs̺t,,,0
 11111310301,Tyrone,54.60296,-7.0941,7710,good,,godaz,,ɡʉd,,,0
 11111310301,Tyrone,54.60296,-7.0941,7910,warm,,warmaz,,ˈwäɹəm,,,0
@@ -32,7 +31,6 @@
 11111310301,Tyrone,54.60296,-7.0941,2010,head,,xaubadan,,hɛˑəd,,,0
 11111310301,Tyrone,54.60296,-7.0941,2110,eye,,augon,,ɜ̟iˑ,,,0
 11111310301,Tyrone,54.60296,-7.0941,2130,ear,,auzon,,iˑɚ,,,0
-11111310301,Tyrone,54.60296,-7.0941,2140,tear,,taxruz,,tʰiˑɚ,,,0
 11111310301,Tyrone,54.60296,-7.0941,2210,mouth,,munthaz,,mɜ̆ʉ̞̆θ,,,0
 11111310301,Tyrone,54.60296,-7.0941,2230,tongue,,tungon,,tʰɔ̝̈ŋ,,,0
 11111310301,Tyrone,54.60296,-7.0941,2240,tooth,,tanthz,,tʰʉθ,,,0
@@ -72,7 +70,7 @@
 11111310301,Tyrone,54.60296,-7.0941,5910,storm,,sturmaz,,s̺tɔ̞ˑɚm,,,0
 11111310301,Tyrone,54.60296,-7.0941,5920,thunder,,thunraz,,ˈθɔ̝̈n̪ɚ,,,0
 11111310301,Tyrone,54.60296,-7.0941,5820,snow,,snaigwaz,,s̺nö̞ˑu,,,0
-11111310301,Tyrone,54.60296,-7.0941,5830,ice,,isaz,,ıɜ̟̆ıĭs̺ı,,,0
+11111310301,Tyrone,54.60296,-7.0941,5830,ice,,isaz,,ɜ̟ĭs̺,,,0
 11111310301,Tyrone,54.60296,-7.0941,5850,wind,,wendaz,,wɜ̟ˑiˑn,,,0
 11111310301,Tyrone,54.60296,-7.0941,6000,hunger,,xungruz,,ˈhɔ̝̈ŋɚ,,,0
 11111310301,Tyrone,54.60296,-7.0941,6050,milk,,melkaz,,mɪ̠lʲc,,,0
@@ -86,7 +84,6 @@
 11111310301,Tyrone,54.60296,-7.0941,6570,stool,,stolaz,,s̺tʉl,,,0
 11111310301,Tyrone,54.60296,-7.0941,6580,bath,,bathan,,bɑ̈ːθ,,,0
 11111310301,Tyrone,54.60296,-7.0941,6600,thing,,thengaz,,θɪ̠ŋ̟,,,0
-11111310301,Tyrone,54.60296,-7.0941,1440,top,,tuppaz,,tʰäp,,,0
 11111310301,Tyrone,54.60296,-7.0941,6630,needle,,nethlo,,ˈnidl̩,,,0
 11111310301,Tyrone,54.60296,-7.0941,6640,ring,,xrengaz,,ɹɪ̠ŋ,,,0
 11111310301,Tyrone,54.60296,-7.0941,8000,is,,esti,,ə̝z,,,0
@@ -98,7 +95,6 @@
 11111310301,Tyrone,54.60296,-7.0941,9620,open,,upanaz,,ˈo̝pə̆n,,,0
 11111310301,Tyrone,54.60296,-7.0941,8120,sit,,setjanan,,s̺ə̝t,,,0
 11111310301,Tyrone,54.60296,-7.0941,8720,wash,,waskanan,,wäˑɪʃ,,,0
-11111310301,Tyrone,54.60296,-7.0941,8940,fight,,fextanan,,fɜ̟̆ĭt,,,0
 11111310301,Tyrone,54.60296,-7.0941,8990,swear,,swarjanan,,s̺wɛˑɚ,,,0
 11111310301,Tyrone,54.60296,-7.0941,1010,I,,eka,,äˑe,,,0
 11111310301,Tyrone,54.60296,-7.0941,1210,what,,xwat,,ʍät,,,0
@@ -107,5 +103,5 @@
 11111310301,Tyrone,54.60296,-7.0941,1460,over,,uberi,,ˈo̝vɚ,,,0
 11111310301,Tyrone,54.60296,-7.0941,1470,mid,,medjaz,,mə̝d,,,0
 11111310301,Tyrone,54.60296,-7.0941,5010,day,,dagaz,,deː,,,0
-11111310301,Tyrone,54.60296,-7.0941,5020,night,,naxtz,,ınɜ̟̆ıĭtı,,,0
+11111310301,Tyrone,54.60296,-7.0941,5020,night,,naxtz,,nɜ̟ĭtʰ,,,0
 11111310301,Tyrone,54.60296,-7.0941,510,year,,jeran,,jiˑɚ,,,0

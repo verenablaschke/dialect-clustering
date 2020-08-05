@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11241330109,Stavanger,58.96442,5.72626,10,one,,ainaz,,æˑi̞ˑn,én,,0
 11241330109,Stavanger,58.96442,5.72626,20,two,,twou,,tʰu̞ː,to,,0
 11241330109,Stavanger,58.96442,5.72626,30,three,,threjez,,tχiː,tre,,0
@@ -20,7 +20,6 @@
 11241330109,Stavanger,58.96442,5.72626,7510,young,,jungaz,,ʊŋ̟,ung,,0
 11241330109,Stavanger,58.96442,5.72626,7980,new,,neujaz,,nyː,ny,,0
 11241330109,Stavanger,58.96442,5.72626,7670,naked,,nakwadaz,,ˈnɑ̟ːkɪn,naken,,0
-11241330109,Stavanger,58.96442,5.72626,7650,quick,,kwikwaz,,kʰvɪʰk̟,kvikk,,0
 11241330109,Stavanger,58.96442,5.72626,7660,fast,,fastaz,,fässt,fast,,0
 11241330109,Stavanger,58.96442,5.72626,7710,good,,godaz,,ɡoː,god,,0
 11241330109,Stavanger,58.96442,5.72626,7910,warm,,warmaz,,väˑʁ̞m̩,varm,,0
@@ -32,7 +31,6 @@
 11241330109,Stavanger,58.96442,5.72626,2010,head,,xaubadan,,ˈhoːdə,hode,,0
 11241330109,Stavanger,58.96442,5.72626,2110,eye,,augon,,ˈø̞ɪjə,øye,,0
 11241330109,Stavanger,58.96442,5.72626,2130,ear,,auzon,,ˈø̞ːʁə,øre,,0
-11241330109,Stavanger,58.96442,5.72626,2140,tear,,taxruz,,tʰo̞ːʁ̞ə,tåre,,0
 11241330109,Stavanger,58.96442,5.72626,2210,mouth,,munthaz,,mʊnˑ,munn,,0
 11241330109,Stavanger,58.96442,5.72626,2230,tongue,,tungon,,ˈtʰʊŋə,tunge,,0
 11241330109,Stavanger,58.96442,5.72626,2240,tooth,,tanthz,,tʰänˑ,tann,,0
@@ -43,7 +41,7 @@
 11241330109,Stavanger,58.96442,5.72626,2610,blood,,blodan,,blo̝ː,blod,,0
 11241330109,Stavanger,58.96442,5.72626,2620,bone,,bainan,,bɛˑiˑn,bein,,0
 11241330109,Stavanger,58.96442,5.72626,2640,nail,,naglaz,,ˈnɛkˑɪl,negl,,0
-11241330109,Stavanger,58.96442,5.72626,2810,heart,,xerton,,ˈjɛχχtə,hjerte,,0
+11241330109,Stavanger,58.96442,5.72626,2810,heart,,xerton,,ˈjɛχːtə,hjerte,,0
 11241330109,Stavanger,58.96442,5.72626,2840,liver,,libaro,,ˈlɛ̝ːvə,lever,,0
 11241330109,Stavanger,58.96442,5.72626,4310,mother,,moder,,mo̝ːχ,mor,,0
 11241330109,Stavanger,58.96442,5.72626,4320,father,,fader,,fɑ̈ːχ,far,,0
@@ -86,19 +84,17 @@
 11241330109,Stavanger,58.96442,5.72626,6570,stool,,stolaz,,stu̞ːl,stol,,0
 11241330109,Stavanger,58.96442,5.72626,6580,bath,,bathan,,bäˑɑ̈t,bad,,0
 11241330109,Stavanger,58.96442,5.72626,6600,thing,,thengaz,,tʰɪŋ,ting,,0
-11241330109,Stavanger,58.96442,5.72626,1440,top,,tuppaz,,tʰɒʰpp,topp,,0
 11241330109,Stavanger,58.96442,5.72626,6630,needle,,nethlo,,nɔ̝ːl,nål,,0
 11241330109,Stavanger,58.96442,5.72626,6640,ring,,xrengaz,,ʁɪŋ,ring,,0
 11241330109,Stavanger,58.96442,5.72626,8000,is,,esti,,e̞ˑə,er,,0
 11241330109,Stavanger,58.96442,5.72626,8310,eat,,etanan,,ˈeˑət,et!,,0
 11241330109,Stavanger,58.96442,5.72626,8330,bite,,bitanan,,ˈbiːt,bit!,,0
-11241330109,Stavanger,58.96442,5.72626,8320,drink,,drenkanan,,ˈdʁ̞ɪʰk̟k̟,drikk!,,0
+11241330109,Stavanger,58.96442,5.72626,8320,drink,,drenkanan,,ˈdʁ̞ɪʰk̟ː,drikk!,,0
 11241330109,Stavanger,58.96442,5.72626,8510,see,,sexwanan,,sjø̞ː,se!,,0
 11241330109,Stavanger,58.96442,5.72626,8520,hear,,xauzjanan,,hø̞ːχ,hør!,,0
 11241330109,Stavanger,58.96442,5.72626,9620,open,,upanaz,,ˈo̞əpən,åpen,,0
 11241330109,Stavanger,58.96442,5.72626,8120,sit,,setjanan,,sɪʰt,sitt!,,0
 11241330109,Stavanger,58.96442,5.72626,8720,wash,,waskanan,,vässk̟,vask!,,0
-11241330109,Stavanger,58.96442,5.72626,8940,fight,,fextanan,,fɛk̟t,fekt!,,0
 11241330109,Stavanger,58.96442,5.72626,8990,swear,,swarjanan,,svɛˑʁk̟,sverg!,,0
 11241330109,Stavanger,58.96442,5.72626,1010,I,,eka,,e̞ːk̟,jeg,,0
 11241330109,Stavanger,58.96442,5.72626,1210,what,,xwat,,kʰɑ̈ː,hva,,0

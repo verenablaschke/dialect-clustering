@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11251610109,Skåne,55.61,13.02,10,one,,ainaz,,æɪn,,,0
 11251610109,Skåne,55.61,13.02,20,two,,twou,,tʰv̥ɛʊ,,,0
 11251610109,Skåne,55.61,13.02,30,three,,threjez,,tʰʁ̥ɛɪ,,,0
@@ -17,10 +17,10 @@
 11251610109,Skåne,55.61,13.02,7210,long,,langaz,,lo̞ŋ,,,0
 11251610109,Skåne,55.61,13.02,7410,sharp,,skarpaz,,skaχpʰ,,,0
 11251610109,Skåne,55.61,13.02,7840,full,,fullaz,,fʉ̰ˑl̥,,,0
-11251610109,Skåne,55.61,13.02,7510,young,,jungaz,,Array,,,0
+11251610109,Skåne,55.61,13.02,7510,young,,jungaz,,ʉ̞ŋ̟,,,0
+11251610109,Skåne,55.61,13.02,7510,young,,jungaz,,ʏŋn̩,,,0
 11251610109,Skåne,55.61,13.02,7980,new,,neujaz,,nøʏ,,,0
 11251610109,Skåne,55.61,13.02,7670,naked,,nakwadaz,,,,,0
-11251610109,Skåne,55.61,13.02,7650,quick,,kwikwaz,,kvɪk̟ʰ,,,0
 11251610109,Skåne,55.61,13.02,7660,fast,,fastaz,,fastʰ,,,0
 11251610109,Skåne,55.61,13.02,7710,good,,godaz,,ɡøʉˑ,,,0
 11251610109,Skåne,55.61,13.02,7910,warm,,warmaz,,vaˑʁ̞m,,,0
@@ -32,7 +32,6 @@
 11251610109,Skåne,55.61,13.02,2010,head,,xaubadan,,høʊə,,,0
 11251610109,Skåne,55.61,13.02,2110,eye,,augon,,œəɡ̟ɐ,,,0
 11251610109,Skåne,55.61,13.02,2130,ear,,auzon,,œːʁɐ,,,0
-11251610109,Skåne,55.61,13.02,2140,tear,,taxruz,,tœʊʁ̥,,,0
 11251610109,Skåne,55.61,13.02,2210,mouth,,munthaz,,mø̈ʉn,,,0
 11251610109,Skåne,55.61,13.02,2230,tongue,,tungon,,tʰø̈ʏŋjɐ,,,0
 11251610109,Skåne,55.61,13.02,2240,tooth,,tanthz,,tʰän,,,0
@@ -70,7 +69,8 @@
 11251610109,Skåne,55.61,13.02,6290,oak,,aikz,,ɪˑəɡ̟,,,0
 11251610109,Skåne,55.61,13.02,5810,rain,,regnan,,ʁ̞aɪn,,,0
 11251610109,Skåne,55.61,13.02,5910,storm,,sturmaz,,stɔʁ̞ə̆m,,,0
-11251610109,Skåne,55.61,13.02,5920,thunder,,thunraz,,Array,,,0
+11251610109,Skåne,55.61,13.02,5920,thunder,,thunraz,,tʰoːdən,,,0
+11251610109,Skåne,55.61,13.02,5920,thunder,,thunraz,,ʔosk̟ɐ,,,0
 11251610109,Skåne,55.61,13.02,5820,snow,,snaigwaz,,snœð̞,,,0
 11251610109,Skåne,55.61,13.02,5830,ice,,isaz,,ɪis,,,0
 11251610109,Skåne,55.61,13.02,5850,wind,,wendaz,,vɪ̝ŋ̟,,,0
@@ -86,7 +86,6 @@
 11251610109,Skåne,55.61,13.02,6570,stool,,stolaz,,stø̈ʉl,,,0
 11251610109,Skåne,55.61,13.02,6580,bath,,bathan,,bɒɔ̰ˑd̥,,,0
 11251610109,Skåne,55.61,13.02,6600,thing,,thengaz,,tʰɪŋ,,,0
-11251610109,Skåne,55.61,13.02,1440,top,,tuppaz,,tʰø̈ʉpʰ,,,0
 11251610109,Skåne,55.61,13.02,6630,needle,,nethlo,,nɐʉl̥,,,0
 11251610109,Skåne,55.61,13.02,6640,ring,,xrengaz,,ʁ̞ɪ̝ŋ,,,0
 11251610109,Skåne,55.61,13.02,8000,is,,esti,,ɪiˑ,,,0
@@ -98,13 +97,13 @@
 11251610109,Skåne,55.61,13.02,9620,open,,upanaz,,,,,0
 11251610109,Skåne,55.61,13.02,8120,sit,,setjanan,,si̞t,,,0
 11251610109,Skåne,55.61,13.02,8720,wash,,waskanan,,vask̟a,,,0
-11251610109,Skåne,55.61,13.02,8940,fight,,fextanan,,faɪtɐ,,,0
 11251610109,Skåne,55.61,13.02,8990,swear,,swarjanan,,svɛːʁ̞̥,,,0
 11251610109,Skåne,55.61,13.02,1010,I,,eka,,jaʊ,,,0
 11251610109,Skåne,55.61,13.02,1210,what,,xwat,,va,,,0
 11251610109,Skåne,55.61,13.02,1410,in,,eni,,ʔɪiˑ,,,0
 11251610109,Skåne,55.61,13.02,1430,out,,ut,,etʰ,,,0
-11251610109,Skåne,55.61,13.02,1460,over,,uberi,,Array,,,0
+11251610109,Skåne,55.61,13.02,1460,over,,uberi,,ʏˑd,,,0
+11251610109,Skåne,55.61,13.02,1460,over,,uberi,,œːvʁ̩̥,,,0
 11251610109,Skåne,55.61,13.02,1470,mid,,medjaz,,mɪʰtʰ,,,0
 11251610109,Skåne,55.61,13.02,5010,day,,dagaz,,dɒʊ,,,0
 11251610109,Skåne,55.61,13.02,5020,night,,naxtz,,naʰtʰ,,,0

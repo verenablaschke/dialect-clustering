@@ -1,8 +1,8 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11211000008,Icelandic,64.13333,-21.93333,10,one,,ainaz,,ˈɛ̝tn̥̩,einn,,0
 11211000008,Icelandic,64.13333,-21.93333,20,two,,twou,,tʰvœ̝ː,tvö,,0
 11211000008,Icelandic,64.13333,-21.93333,30,three,,threjez,,θɾɪuˑ,þrjú,,0
-11211000008,Icelandic,64.13333,-21.93333,40,four,,fedworez,,fjœ̝ːɾ,fjögur,,0
+11211000008,Icelandic,64.13333,-21.93333,40,four,,fedworez,,ˈfjœ̝ːˠʊɾ̥,fjögur,,0
 11211000008,Icelandic,64.13333,-21.93333,50,five,,fenfe,,fɪmˑ,fimm,,0
 11211000008,Icelandic,64.13333,-21.93333,60,six,,sexs,,sɛ̞ks,sex,,0
 11211000008,Icelandic,64.13333,-21.93333,70,seven,,sebun,,sjœː,sjö,,0
@@ -20,7 +20,6 @@
 11211000008,Icelandic,64.13333,-21.93333,7510,young,,jungaz,,ʊŋˑk,ung|ur,,0
 11211000008,Icelandic,64.13333,-21.93333,7980,new,,neujaz,,niː,ný|r,,0
 11211000008,Icelandic,64.13333,-21.93333,7670,naked,,nakwadaz,,ˈnäːcɪn,nakinn,,0
-11211000008,Icelandic,64.13333,-21.93333,7650,quick,,kwikwaz,,kʰveːk,kvik|ur,,0
 11211000008,Icelandic,64.13333,-21.93333,7660,fast,,fastaz,,fäst,fast|ur,,0
 11211000008,Icelandic,64.13333,-21.93333,7710,good,,godaz,,ɡɔˑʊð,góð|ur,,0
 11211000008,Icelandic,64.13333,-21.93333,7910,warm,,warmaz,,värm,varm|ur,,0
@@ -32,7 +31,6 @@
 11211000008,Icelandic,64.13333,-21.93333,2010,head,,xaubadan,,ˈhøːvəθ,höfuð,,0
 11211000008,Icelandic,64.13333,-21.93333,2110,eye,,augon,,ˈɛˑʏɣä,auga,,0
 11211000008,Icelandic,64.13333,-21.93333,2130,ear,,auzon,,ˈɛ̝ˑɪrä,eyra,,0
-11211000008,Icelandic,64.13333,-21.93333,2140,tear,,taxruz,,tʰäˑʊr̥,tár,,0
 11211000008,Icelandic,64.13333,-21.93333,2210,mouth,,munthaz,,mʏ̠n,munn|ur,,0
 11211000008,Icelandic,64.13333,-21.93333,2230,tongue,,tungon,,ˈtʰʊŋˑkä,tunga,,0
 11211000008,Icelandic,64.13333,-21.93333,2240,tooth,,tanthz,,tʰœn,tönn,,0
@@ -44,11 +42,11 @@
 11211000008,Icelandic,64.13333,-21.93333,2620,bone,,bainan,,bɛ̝ˑɪn,bein,,0
 11211000008,Icelandic,64.13333,-21.93333,2640,nail,,naglaz,,ˈnɒkɬ̩,nögl,,0
 11211000008,Icelandic,64.13333,-21.93333,2810,heart,,xerton,,ˈhjäs̠tä,hjarta,,0
-11211000008,Icelandic,64.13333,-21.93333,2840,liver,,libaro,,ˈleːvʊs̠,lifur,,0
+11211000008,Icelandic,64.13333,-21.93333,2840,liver,,libaro,,ˈleːvʊr̥,lifur,,0
 11211000008,Icelandic,64.13333,-21.93333,4310,mother,,moder,,ˈmɔʊðɪr̥,móðir,,0
-11211000008,Icelandic,64.13333,-21.93333,4320,father,,fader,,ˈfäːðɪs̠,faðir,,0
-11211000008,Icelandic,64.13333,-21.93333,4410,daughter,,duxter,,ˈdɔʰtɪz̠,dóttir,,0
-11211000008,Icelandic,64.13333,-21.93333,4330,brother,,brother,,ˈbɾoːðɪs̠,bróðir,,0
+11211000008,Icelandic,64.13333,-21.93333,4320,father,,fader,,ˈfäːðɪr̥,faðir,,0
+11211000008,Icelandic,64.13333,-21.93333,4410,daughter,,duxter,,ˈdɔʰtɪɾ̥,dóttir,,0
+11211000008,Icelandic,64.13333,-21.93333,4330,brother,,brother,,ˈbɾoːðɪr̥,bróðir,,0
 11211000008,Icelandic,64.13333,-21.93333,4100,name,,namon,,ˈnäpm̥̩,nafn,,0
 11211000008,Icelandic,64.13333,-21.93333,4110,word,,wurdan,,ɔrθ,orð,,0
 11211000008,Icelandic,64.13333,-21.93333,3120,hound,,xundaz,,hʏ̠nt,hund|ur,,0
@@ -74,7 +72,7 @@
 11211000008,Icelandic,64.13333,-21.93333,5820,snow,,snaigwaz,,snjɔʊ,snjó|r,,0
 11211000008,Icelandic,64.13333,-21.93333,5830,ice,,isaz,,iːs,ís,,0
 11211000008,Icelandic,64.13333,-21.93333,5850,wind,,wendaz,,vɪnˑt,vind|ur,,0
-11211000008,Icelandic,64.13333,-21.93333,6000,hunger,,xungruz,,hʊŋˑk,hungur,,0
+11211000008,Icelandic,64.13333,-21.93333,6000,hunger,,xungruz,,hʊŋˑˈkʊɾ̥,hungur,,0
 11211000008,Icelandic,64.13333,-21.93333,6050,milk,,melkaz,,mjɔɬk,mjólk,,0
 11211000008,Icelandic,64.13333,-21.93333,6150,honey,,hunagan,,ˈhøːnäŋk,hunang,,0
 11211000008,Icelandic,64.13333,-21.93333,6040,salt,,saltan,,säɬˑt,salt,,0
@@ -86,7 +84,6 @@
 11211000008,Icelandic,64.13333,-21.93333,6570,stool,,stolaz,,ˈstɔtɬ̩,stóll,,0
 11211000008,Icelandic,64.13333,-21.93333,6580,bath,,bathan,,bäːθ,bað,,0
 11211000008,Icelandic,64.13333,-21.93333,6600,thing,,thengaz,,θɪŋˑk,þing,,0
-11211000008,Icelandic,64.13333,-21.93333,1440,top,,tuppaz,,tʰɔʰp,topp|ur,,0
 11211000008,Icelandic,64.13333,-21.93333,6630,needle,,nethlo,,näˑʊɬ,nál,,0
 11211000008,Icelandic,64.13333,-21.93333,6640,ring,,xrengaz,,rɪŋk,hring|ur,,0
 11211000008,Icelandic,64.13333,-21.93333,8000,is,,esti,,ɛ̝ːr̥,er,,0
@@ -98,13 +95,12 @@
 11211000008,Icelandic,64.13333,-21.93333,9620,open,,upanaz,,ˈo̞ˑəpʰɪn,opinn,,0
 11211000008,Icelandic,64.13333,-21.93333,8120,sit,,setjanan,,ˈseːtjä,sitja,,0
 11211000008,Icelandic,64.13333,-21.93333,8720,wash,,waskanan,,ˈväskä,vaska,,0
-11211000008,Icelandic,64.13333,-21.93333,8940,fight,,fextanan,,ˈfɪxˑtä,fikta,,0
 11211000008,Icelandic,64.13333,-21.93333,8990,swear,,swarjanan,,ˈsvɛrjä,sverja,,0
 11211000008,Icelandic,64.13333,-21.93333,1010,I,,eka,,jɛːx̟,ég,,0
 11211000008,Icelandic,64.13333,-21.93333,1210,what,,xwat,,kʰväːθ,hvað,,0
 11211000008,Icelandic,64.13333,-21.93333,1410,in,,eni,,iː,í,,0
 11211000008,Icelandic,64.13333,-21.93333,1430,out,,ut,,uːt,út,,0
-11211000008,Icelandic,64.13333,-21.93333,1460,over,,uberi,,ˈeːvɪs̠,yfir,,0
+11211000008,Icelandic,64.13333,-21.93333,1460,over,,uberi,,ˈeːvɪɾ̥,yfir,,0
 11211000008,Icelandic,64.13333,-21.93333,1470,mid,,medjaz,,mɪʰt,mitt,,0
 11211000008,Icelandic,64.13333,-21.93333,5010,day,,dagaz,,däːx,dag|ur,,0
 11211000008,Icelandic,64.13333,-21.93333,5020,night,,naxtz,,nɔʊʰt,nátt,,0

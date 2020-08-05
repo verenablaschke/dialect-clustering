@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11151110309,"Franc. C.: Cologne",50.95,6.96667,10,one,,ainaz,,ʔe̝ɪŋə,eine,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,20,two,,twou,,tsväˑɪ,zwei,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,30,three,,threjez,,dʀe̝ˑɪ,drei,,0
@@ -10,21 +10,20 @@
 11151110309,"Franc. C.: Cologne",50.95,6.96667,90,nine,,newun,,nʏŋ,nüng,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,100,ten,,texun,,tseːn,zehn,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,200,hundred,,xundaradan,,ˈhʊndɐt,hundert,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,7820,all,,allaz,,ʔa̠l,all,,0
+11151110309,"Franc. C.: Cologne",50.95,6.96667,7820,all,,allaz,,ʔa̠ɫ,all,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7020,white,,xwitaz,,βiːs,wieß,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7030,red,,raudaz,,ʁoˑtʰ,rud,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7040,green,,groniz,,jɒˈʁœ̃ˑ,grön,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7210,long,,langaz,,laŋ,lang,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7410,sharp,,skarpaz,,ˈʃɛ̝ʁ̞əp,schärp,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,7840,full,,fullaz,,fʌ̈l,voll,,0
+11151110309,"Franc. C.: Cologne",50.95,6.96667,7840,full,,fullaz,,fʌ̈ɫ,voll,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7510,young,,jungaz,,jʊŋ,jung,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7980,new,,neujaz,,nœʏ,neu,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7670,naked,,nakwadaz,,na̠k,nack,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,7650,quick,,kwikwaz,,..,,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7660,fast,,fastaz,,fa̠s,fass,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7710,good,,godaz,,joːt,god,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7910,warm,,warmaz,,ˈβɛ̝ʁəm,wärm,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,7920,cold,,kaldaz,,kʰa̠ˑlt,kald,,0
+11151110309,"Franc. C.: Cologne",50.95,6.96667,7920,cold,,kaldaz,,kʰa̠ˑɫt,kald,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7560,sore,,sairaz,,..,,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7680,holy,,xailagaz,,ˈhɛ̝lɪʃ,hellig,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,7700,better,,batizon,,ˈbɛ̝sɒ̝̈,besser,,0
@@ -32,7 +31,6 @@
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2010,head,,xaubadan,,hɔʊp,Haup,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2110,eye,,augon,,ʔɔʊχ,Aug,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2130,ear,,auzon,,ʔoɐ,Uhr/Ohr,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,2140,tear,,taxruz,,tʁ̥ɔ̞ˑn,Tron,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2210,mouth,,munthaz,,mʊŋɡ,Mungk,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2230,tongue,,tungon,,tsʊŋ,Zung,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2240,tooth,,tanthz,,tsa̠nˑt,Zant,,0
@@ -42,7 +40,7 @@
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2540,toe,,taixwon,,tsiˑ,Zih,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2610,blood,,blodan,,bloˑt,Blod,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2620,bone,,bainan,,be̞ˑɪn,Bein,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,2640,nail,,naglaz,,ne̞əl,Nähl,,0
+11151110309,"Franc. C.: Cologne",50.95,6.96667,2640,nail,,naglaz,,ne̞əɫ,Nähl,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2810,heart,,xerton,,hɛ̝ts,Hätz,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,2840,liver,,libaro,,ˈlɪvɒ,Levver,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,4310,mother,,moder,,ˈmʊtˑɒ,Mutter,,0
@@ -59,7 +57,7 @@
 11151110309,"Franc. C.: Cologne",50.95,6.96667,3340,calf,,kalbaz,,ˈkʰaləf,Kalv,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,3240,fish,,fiskaz,,fɪʃ,Fesch,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,3820,horn,,xurnan,,hɔ̞ːn,Hoon,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,3900,wool,,wullo,,vʌl,Woll,,0
+11151110309,"Franc. C.: Cologne",50.95,6.96667,3900,wool,,wullo,,vʌɫ,Woll,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,5120,moon,,menon,,mɔ̞̃ˑt,Mond,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,5260,north,,nurthaz,,nɔ̞χt,"Nord ",,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,5510,stone,,stainaz,,ʃte̞ɪn,Stein,,0
@@ -77,17 +75,16 @@
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6000,hunger,,xungruz,,ˈhʊŋɒ,Hunger,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6050,milk,,melkaz,,ˈmɪləʃ,Milch,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6150,honey,,hunagan,,ˈhʊniʃ,Hunnig,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,6040,salt,,saltan,,za̠ːlts,Salz,,0
+11151110309,"Franc. C.: Cologne",50.95,6.96667,6040,salt,,saltan,,za̠ːɫts,Salz,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6070,corn,,kurnan,,kʰɔ̞ːn,Koon,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6510,house,,xusan,,huːs,Huus,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6560,home,,xaimaz,,hɛ̝ˑɪm,Heim,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6540,yard,,gardaz,,ˈjaːdə,Gaade,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6550,oven,,ufnaz,,ˈʔɔ̈və,ovve,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,6570,stool,,stolaz,,ʃtoːl,Stohl,,0
+11151110309,"Franc. C.: Cologne",50.95,6.96667,6570,stool,,stolaz,,ʃtoːɫ,Stohl,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6580,bath,,bathan,,ba̠t,Badd,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6600,thing,,thengaz,,dɪŋ,Ding,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,1440,top,,tuppaz,,..,Döppe,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,6630,needle,,nethlo,,ˈnɔ̞ːdl̩,Nodel/Nol,,0
+11151110309,"Franc. C.: Cologne",50.95,6.96667,6630,needle,,nethlo,,ˈnɔ̞ːdɫ̩,Nodel/Nol,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,6640,ring,,xrengaz,,ʀɪŋ,Ring,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,8000,is,,esti,,ʔɪs,en,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,8310,eat,,etanan,,ʔɛ̝s,es,,0
@@ -98,7 +95,6 @@
 11151110309,"Franc. C.: Cologne",50.95,6.96667,9620,open,,upanaz,,ˈʔɔ̞fə,offe,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,8120,sit,,setjanan,,zɛ̝ts,setz!,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,8720,wash,,waskanan,,β̞ɛ̝ʃ,wäsch!,,0
-11151110309,"Franc. C.: Cologne",50.95,6.96667,8940,fight,,fextanan,,fɛ̝ʃ,fech!,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,8990,swear,,swarjanan,,ʃβøˑɐ,schwör!,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,1010,I,,eka,,ʔiʃ,ich,,0
 11151110309,"Franc. C.: Cologne",50.95,6.96667,1210,what,,xwat,,βät,wat?,,0

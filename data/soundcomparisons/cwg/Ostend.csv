@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,10,one,,ainaz,,ɛːn,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,20,two,,twou,,tʰβɛː,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,30,three,,threjez,,dɾiˑə,,,0
@@ -20,19 +20,17 @@
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7510,young,,jungaz,,jʊŋk,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7980,new,,neujaz,,ˈniːβ̞ə,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7670,naked,,nakwadaz,,na̠kt,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7650,quick,,kwikwaz,,kβ̞ɪk̟,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7660,fast,,fastaz,,ˈvɑ̈stə,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7710,good,,godaz,,hoət,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7910,warm,,warmaz,,βɑ̈rm,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7920,cold,,kaldaz,,kut,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7560,sore,,sairaz,,zɛːs̠,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7680,holy,,xailagaz,,ˈɛləç,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7700,better,,batizon,,"ˈbeˑtr̩ ̥",,,0
+11131220209,"‘Flemish’: Ostend",51.23333,2.91667,7700,better,,batizon,,ˈbeˑtr̥̩,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,810,right,,rextaz,,raht,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,2010,head,,xaubadan,,o̞ːft,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,2110,eye,,augon,,ˈo̞ˑχə,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,2130,ear,,auzon,,ˈɔ̝ːɾə,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,2140,tear,,taxruz,,Array,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,2210,mouth,,munthaz,,mʊnt,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,2230,tongue,,tungon,,ˈtʊŋə,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,2240,tooth,,tanthz,,tɑ̈nt,,,0
@@ -45,8 +43,8 @@
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,2640,nail,,naglaz,,ˈna̠ːχə,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,2810,heart,,xerton,,ˈa̝rtə,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,2840,liver,,libaro,,ˈleːvəs̠,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,4310,mother,,moder,,"ˈmoːdr̩ ̥",,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,4320,father,,fader,,"ˈfɔ̞ːd̪r̩ ̥",,,0
+11131220209,"‘Flemish’: Ostend",51.23333,2.91667,4310,mother,,moder,,ˈmoːdr̥̩,,,0
+11131220209,"‘Flemish’: Ostend",51.23333,2.91667,4320,father,,fader,,ˈfɔ̞ːd̪r̥̩,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,4410,daughter,,duxter,,ˈdɔ̞χtəs̠,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,4330,brother,,brother,,ˈbɾu̞ːɾə,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,4100,name,,namon,,ˈnäːmə,,,0
@@ -70,23 +68,22 @@
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6290,oak,,aikz,,ɛ̝ːk̟,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,5810,rain,,regnan,,ˈɾe̝ːhə̃,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,5910,storm,,sturmaz,,stɔɾm,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,5920,thunder,,thunraz,,"ˈdœndr̩ ̥",,,0
+11131220209,"‘Flemish’: Ostend",51.23333,2.91667,5920,thunder,,thunraz,,ˈdœndr̥̩,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,5820,snow,,snaigwaz,,snɛˑʊ,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,5830,ice,,isaz,,is,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,5850,wind,,wendaz,,βɪnt,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6000,hunger,,xungruz,,"ˈʊŋr̩ ̥",,,0
+11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6000,hunger,,xungruz,,ˈʊŋr̥̩,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6050,milk,,melkaz,,ma̠ˑɔ̈k̟,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6150,honey,,hunagan,,..,,,0
+11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6150,honey,,hunagan,,zɛːm,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6040,salt,,saltan,,zut,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6070,corn,,kurnan,,ˈkɔ̝ːrn̩,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6510,house,,xusan,,ʉ̟s,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6560,home,,xaimaz,,heːm,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6540,yard,,gardaz,,ɣɑ̈ːs̠̆t,,,0
+11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6540,yard,,gardaz,,ɣɑ̈ːɾ̥t,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6550,oven,,ufnaz,,ˈɔ̝ːvn̩,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6570,stool,,stolaz,,stuˑəl,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6580,bath,,bathan,,bɑ̝̈t,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6600,thing,,thengaz,,dɪŋk̟,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,1440,top,,tuppaz,,tɔp,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6630,needle,,nethlo,,ˈnɑ̈ˑɔ̈dɫ̩,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,6640,ring,,xrengaz,,rɪŋk̟,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,8000,is,,esti,,ɛs,,,0
@@ -98,12 +95,11 @@
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,9620,open,,upanaz,,ˈɔ̝ːpm̩,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,8120,sit,,setjanan,,zɛt,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,8720,wash,,waskanan,,β̞ɑ̈s,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,8940,fight,,fextanan,,fa̝ht,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,8990,swear,,swarjanan,,sβaːs̠,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,1010,I,,eka,,ɛ̝k̟,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,1210,what,,xwat,,ˈβ̞ɑ̈də,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,1410,in,,eni,,ɪn,,,0
-11131220209,"‘Flemish’: Ostend",51.23333,2.91667,1430,out,,ut,,"ʉ̟ ̞t",,,0
+11131220209,"‘Flemish’: Ostend",51.23333,2.91667,1430,out,,ut,,ʉ̝̟t,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,1460,over,,uberi,,ˈo̞ːvr̩,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,1470,mid,,medjaz,,ˈmɛdn̩,,,0
 11131220209,"‘Flemish’: Ostend",51.23333,2.91667,5010,day,,dagaz,,däχ,,,0

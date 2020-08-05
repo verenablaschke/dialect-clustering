@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11121320209,"Fris. N.: Feer",54.71667,8.5,10,one,,ainaz,,ʔiæ̝n,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,20,two,,twou,,tʰäo,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,30,three,,threjez,,tri̞,,,0
@@ -7,7 +7,7 @@
 11121320209,"Fris. N.: Feer",54.71667,8.5,60,six,,sexs,,se̝ːks,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,70,seven,,sebun,,ˈsøːvn̩,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,80,eight,,axtou,,ʔä̠χt,,,0
-11121320209,"Fris. N.: Feer",54.71667,8.5,90,nine,,newun,,ˈnjygⁿŋ̩,,,0
+11121320209,"Fris. N.: Feer",54.71667,8.5,90,nine,,newun,,ˈnjyɡⁿŋ̩,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,100,ten,,texun,,tʰʲiːn,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,200,hundred,,xundaradan,,hʊnɐ̞tʰ,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,7820,all,,allaz,,ʔäːl,,,0
@@ -15,13 +15,13 @@
 11121320209,"Fris. N.: Feer",54.71667,8.5,7030,red,,raudaz,,ruət,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,7040,green,,groniz,,dreːn,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,7210,long,,langaz,,lʊŋ,,,0
-11121320209,"Fris. N.: Feer",54.71667,8.5,7410,sharp,,skarpaz,,ˈsg̥arap,,,0
+11121320209,"Fris. N.: Feer",54.71667,8.5,7410,sharp,,skarpaz,,ˈsɡ̥arap,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,7840,full,,fullaz,,fɔl,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,7510,young,,jungaz,,jɒŋ,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,7980,new,,neujaz,,nai,,,0
-11121320209,"Fris. N.: Feer",54.71667,8.5,7670,naked,,nakwadaz,,ˈnäːgət,,,0
+11121320209,"Fris. N.: Feer",54.71667,8.5,7670,naked,,nakwadaz,,ˈnäːɡət,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,7660,fast,,fastaz,,feːst,,,0
-11121320209,"Fris. N.: Feer",54.71667,8.5,7710,good,,godaz,,gʊt,,,0
+11121320209,"Fris. N.: Feer",54.71667,8.5,7710,good,,godaz,,ɡʊt,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,7910,warm,,warmaz,,ˈväram,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,7920,cold,,kaldaz,,kʰuˑl,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,7560,sore,,sairaz,,sië,,,0
@@ -31,7 +31,6 @@
 11121320209,"Fris. N.: Feer",54.71667,8.5,2010,head,,xaubadan,,ho̝ːt,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,2110,eye,,augon,,ʔu̟ːk,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,2130,ear,,auzon,,ʔuʌ,,,0
-11121320209,"Fris. N.: Feer",54.71667,8.5,2140,tear,,taxruz,,tʰuʌ,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,2210,mouth,,munthaz,,mœ̞s,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,2230,tongue,,tungon,,tʰɒ̃ŋ,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,2240,tooth,,tanthz,,tʰʊ̞s,,,0
@@ -52,7 +51,7 @@
 11121320209,"Fris. N.: Feer",54.71667,8.5,4110,word,,wurdan,,voʌtʰ,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,3120,hound,,xundaz,,hy̟ɲ,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,3150,mouse,,musz,,mʏ̈s,,,0
-11121320209,"Fris. N.: Feer",54.71667,8.5,3230,goose,,gansz,,gʊ̞s,,,0
+11121320209,"Fris. N.: Feer",54.71667,8.5,3230,goose,,gansz,,ɡʊ̞s,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,3310,cow,,kowz,,kʰʏ,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,3320,lamb,,lambaz,,lom,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,3340,calf,,kalbaz,,ˈkʰuələ,,,0
@@ -80,7 +79,7 @@
 11121320209,"Fris. N.: Feer",54.71667,8.5,6070,corn,,kurnan,,kʰʊrn,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,6510,house,,xusan,,hʏs,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,6560,home,,xaimaz,,ˈʔaran,,,1
-11121320209,"Fris. N.: Feer",54.71667,8.5,6540,yard,,gardaz,,g̥uɤt,,,0
+11121320209,"Fris. N.: Feer",54.71667,8.5,6540,yard,,gardaz,,ɡ̥uɤt,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,6550,oven,,ufnaz,,ʔõŋkʰ,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,6570,stool,,stolaz,,sd̥uːl,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,6580,bath,,bathan,,,,,0
@@ -96,7 +95,6 @@
 11121320209,"Fris. N.: Feer",54.71667,8.5,9620,open,,upanaz,,ˈʔeːb̥ⁿm̩,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,8120,sit,,setjanan,,sat,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,8720,wash,,waskanan,,ˈvaske,,,0
-11121320209,"Fris. N.: Feer",54.71667,8.5,8940,fight,,fextanan,,fɛçt,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,8990,swear,,swarjanan,,sv̥ea,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,1010,I,,eka,,ʔɪkʰ,,,0
 11121320209,"Fris. N.: Feer",54.71667,8.5,1210,what,,xwat,,vät,,,0

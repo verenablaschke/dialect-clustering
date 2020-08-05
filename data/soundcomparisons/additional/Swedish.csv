@@ -1,9 +1,9 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11251350109,Swedish,59.33,18.07,10,one,,ainaz,,ɛn,"en, ett",,0
 11251350109,Swedish,59.33,18.07,20,two,,twou,,tʰvoː,två,,0
 11251350109,Swedish,59.33,18.07,30,three,,threjez,,tɾi̞ˑ,tre,,0
 11251350109,Swedish,59.33,18.07,40,four,,fedworez,,ˈfyːɾä,fyra,,0
-11251350109,Swedish,59.33,18.07,50,five,,fenfe,,fɛm,fem,,0
+11251350109,Swedish,59.33,18.07,50,five,,fenfe,,fɛ̃m,fem,,0
 11251350109,Swedish,59.33,18.07,60,six,,sexs,,sɛks,sex,,0
 11251350109,Swedish,59.33,18.07,70,seven,,sebun,,x̟ʉˑ,sju,,0
 11251350109,Swedish,59.33,18.07,80,eight,,axtou,,ˈɔttä,åtta,,0
@@ -20,7 +20,6 @@
 11251350109,Swedish,59.33,18.07,7510,young,,jungaz,,ɵŋ,ung,,0
 11251350109,Swedish,59.33,18.07,7980,new,,neujaz,,nyː,ny,,0
 11251350109,Swedish,59.33,18.07,7670,naked,,nakwadaz,,ˈnɒ̝ːk̟ɛ̈n,naken,,0
-11251350109,Swedish,59.33,18.07,7650,quick,,kwikwaz,,k̟ʰvɪk̟,kvick,,0
 11251350109,Swedish,59.33,18.07,7660,fast,,fastaz,,fässt,fast,,0
 11251350109,Swedish,59.33,18.07,7710,good,,godaz,,ɡʊ̞̆ot,god,,0
 11251350109,Swedish,59.33,18.07,7910,warm,,warmaz,,va̠ˑrm,varm,,0
@@ -32,7 +31,6 @@
 11251350109,Swedish,59.33,18.07,2010,head,,xaubadan,,ˈhʉːvʉd,huvud,,0
 11251350109,Swedish,59.33,18.07,2110,eye,,augon,,ˈœːɡ̟ə̟,öga,,0
 11251350109,Swedish,59.33,18.07,2130,ear,,auzon,,ˈɔ̈ːɾə,öra,,0
-11251350109,Swedish,59.33,18.07,2140,tear,,taxruz,,tʰoˑəɾ,tår,,0
 11251350109,Swedish,59.33,18.07,2210,mouth,,munthaz,,mɵˑn,mun,,0
 11251350109,Swedish,59.33,18.07,2230,tongue,,tungon,,ˈtʰʊŋ̟ə̟,tunga,,0
 11251350109,Swedish,59.33,18.07,2240,tooth,,tanthz,,tʰɑ̈ˑnd,tand,,0
@@ -86,25 +84,23 @@
 11251350109,Swedish,59.33,18.07,6570,stool,,stolaz,,stu̞l,stol,,0
 11251350109,Swedish,59.33,18.07,6580,bath,,bathan,,bɒːd,bad,,0
 11251350109,Swedish,59.33,18.07,6600,thing,,thengaz,,tʰi̞ŋ,ting,,0
-11251350109,Swedish,59.33,18.07,1440,top,,tuppaz,,tɔpp,topp,,0
 11251350109,Swedish,59.33,18.07,6630,needle,,nethlo,,noˑəl,nål,,0
 11251350109,Swedish,59.33,18.07,6640,ring,,xrengaz,,rɪŋ,ring,,0
 11251350109,Swedish,59.33,18.07,8000,is,,esti,,a̠ːɾ,är,,0
 11251350109,Swedish,59.33,18.07,8310,eat,,etanan,,ɛˑət,ät!,,0
 11251350109,Swedish,59.33,18.07,8330,bite,,bitanan,,biːt,bit!,,0
-11251350109,Swedish,59.33,18.07,8320,drink,,drenkanan,,dɾɪ̝k̟k̟,drick!,,0
+11251350109,Swedish,59.33,18.07,8320,drink,,drenkanan,,dɾɪ̝k̟ː,drick!,,0
 11251350109,Swedish,59.33,18.07,8510,see,,sexwanan,,x̟œː,se!,,0
 11251350109,Swedish,59.33,18.07,8520,hear,,xauzjanan,,hɔ̈ːr,hör!,,0
 11251350109,Swedish,59.33,18.07,9620,open,,upanaz,,ˈœppɛn,öppen,,0
 11251350109,Swedish,59.33,18.07,8120,sit,,setjanan,,sɪ̝tt,sitt!,,0
 11251350109,Swedish,59.33,18.07,8720,wash,,waskanan,,ˈvässk̟ə̟,vaska!,,0
-11251350109,Swedish,59.33,18.07,8940,fight,,fextanan,,ˈfɛk̟tä,fäkta!,,0
 11251350109,Swedish,59.33,18.07,8990,swear,,swarjanan,,sva̠ːr,svär!,,0
 11251350109,Swedish,59.33,18.07,1010,I,,eka,,jɔːɡ,jag,,0
 11251350109,Swedish,59.33,18.07,1210,what,,xwat,,vɔːd,vad,,0
 11251350109,Swedish,59.33,18.07,1410,in,,eni,,iː,i,,0
 11251350109,Swedish,59.33,18.07,1430,out,,ut,,ʏ̠t,ut,,0
-11251350109,Swedish,59.33,18.07,1460,over,,uberi,,ˈœːvə,över,,0
+11251350109,Swedish,59.33,18.07,1460,over,,uberi,,ˈœːvəɾ̥,över,,0
 11251350109,Swedish,59.33,18.07,1470,mid,,medjaz,,mɪtt,mitt,,0
 11251350109,Swedish,59.33,18.07,5010,day,,dagaz,,dɔ̞ːɡ,dag,,0
 11251350109,Swedish,59.33,18.07,5020,night,,naxtz,,nätt,natt,,0

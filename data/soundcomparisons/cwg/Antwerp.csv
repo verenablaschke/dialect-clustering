@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,10,one,,ainaz,,iən,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,20,two,,twou,,tʰveə,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,30,three,,threjez,,dɾa̠ː,,,0
@@ -20,11 +20,10 @@
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7510,young,,jungaz,,jʊ̞ŋ,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7980,new,,neujaz,,nif,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7670,naked,,nakwadaz,,näkt,,,0
-11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7650,quick,,kwikwaz,,kβ̞ɪ̝k̟,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7660,fast,,fastaz,,fast,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7710,good,,godaz,,xu̞ː,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7910,warm,,warmaz,,ˈβ̞aːɾəm,,,0
-11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7920,cold,,kaldaz,,"kɔ̞ ̟ːt",,,0
+11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7920,cold,,kaldaz,,kɔ̞ːt,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7560,sore,,sairaz,,ze̝ˑər̥,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7680,holy,,xailagaz,,ˈaˑɪ̞lɪç,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,7700,better,,batizon,,ˈb̬ɛ̝ˑtʰəs̠,,,0
@@ -32,7 +31,6 @@
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,2010,head,,xaubadan,,hɔˑft,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,2110,eye,,augon,,o̞əx,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,2130,ear,,auzon,,o̞ːr̥,,,0
-11131220609,"‘Flemish’: Antwerp",51.21667,4.4,2140,tear,,taxruz,,tʰɾa̠ˑn,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,2210,mouth,,munthaz,,mɔnt,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,2230,tongue,,tungon,,tʌŋ,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,2240,tooth,,tanthz,,ta̠nt,,,0
@@ -86,7 +84,6 @@
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,6570,stool,,stolaz,,stu̞ː,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,6580,bath,,bathan,,ba̠t,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,6600,thing,,thengaz,,dɪŋ,,,0
-11131220609,"‘Flemish’: Antwerp",51.21667,4.4,1440,top,,tuppaz,,tɔp,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,6630,needle,,nethlo,,nɑ̟ɫ̥t,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,6640,ring,,xrengaz,,rɪ̝ŋ,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,8000,is,,esti,,ɪs,,,0
@@ -98,7 +95,6 @@
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,9620,open,,upanaz,,ˈo̞ˑpə,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,8120,sit,,setjanan,,zɪ̝t,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,8720,wash,,waskanan,,β̞a̠s,,,0
-11131220609,"‘Flemish’: Antwerp",51.21667,4.4,8940,fight,,fextanan,,fɛçt,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,8990,swear,,swarjanan,,dzvɛ̝ːs̠,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,1010,I,,eka,,ik̟,,,0
 11131220609,"‘Flemish’: Antwerp",51.21667,4.4,1210,what,,xwat,,β̞at,,,0

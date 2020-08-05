@@ -1,7 +1,8 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,10,one,,ainaz,,ʔɛːns,eins,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,20,two,,twou,,tsvɛ̝ˑi,zwei,,0
-11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,30,three,,threjez,,Array,drei,,0
+11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,30,three,,threjez,,tχɛ̝ˑi,drei,,0
+11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,30,three,,threjez,,tʁɛ̝ˑi,drei,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,40,four,,fedworez,,fiˑəχ,vier,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,50,five,,fenfe,,ˈfɪnə̠ɸ,fenef,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,60,six,,sexs,,sɪks,sechs,,0
@@ -20,7 +21,6 @@
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,7510,young,,jungaz,,jʊŋ,jùng,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,7980,new,,neujaz,,nɛ̝ˑi,nej,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,7670,naked,,nakwadaz,,ˈnɔkətʰ,nàcket,,0
-11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,7650,quick,,kwikwaz,,..,,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,7660,fast,,fastaz,,fɛ̝ʃt,fescht,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,7710,good,,godaz,,ɡøˑət,güet,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,7910,warm,,warmaz,,vɔːʁ̞m,wàrm,,0
@@ -32,7 +32,6 @@
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2010,head,,xaubadan,,hœˑʏpt,Häupt,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2110,eye,,augon,,ˈʔœʏjə,Auw,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2130,ear,,auzon,,ʔoːχ,Ohr,,0
-11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2140,tear,,taxruz,,ˈtʁäːnə,Träne,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2210,mouth,,munthaz,,mʊnt,Mül,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2230,tongue,,tungon,,tsʊŋ,Zùng,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2240,tooth,,tanthz,,tsäːn,Zahn,,0
@@ -44,7 +43,8 @@
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2620,bone,,bainan,,bäˑin,Bei(n),,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2640,nail,,naglaz,,ˈnäːjəl,Najel,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2810,heart,,xerton,,häχts,Herz,,0
-11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2840,liver,,libaro,,Array,Lewer,,0
+11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2840,liver,,libaro,,ˈle̝ːvə̠χ,Lewer,,0
+11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,2840,liver,,libaro,,ˈläβə̠χ,Lewer,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,4310,mother,,moder,,ˈmøˑətə̠χ,Müeder,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,4320,father,,fader,,ˈfɒtə̠χ,Vàter,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,4410,daughter,,duxter,,ˈdo̞ːχtə̠χ,Tochter,,0
@@ -86,7 +86,6 @@
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,6570,stool,,stolaz,,ʃtøːl,Stüehl,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,6580,bath,,bathan,,bɔːt,Bàd,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,6600,thing,,thengaz,,dɪŋ,Ding,,0
-11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,1440,top,,tuppaz,,..,Topf,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,6630,needle,,nethlo,,ˈnäːdl̩,Nodel,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,6640,ring,,xrengaz,,ʁɪŋ,Ring,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,8000,is,,esti,,ʔɪs,ìsch,,0
@@ -98,7 +97,6 @@
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,9620,open,,upanaz,,ˈʔofə,offe,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,8120,sit,,setjanan,,sɪts,sitz!,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,8720,wash,,waskanan,,väʃ,wasch!,,0
-11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,8940,fight,,fextanan,,..,,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,8990,swear,,swarjanan,,ʃvœːχ,schweer!,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,1010,I,,eka,,ʔɪʃ,ìch,,0
 11161140139,"Alsace N.: Herrlisheim",48.73006,7.9068,1210,what,,xwat,,βɒs,wàs?,,0

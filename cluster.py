@@ -10,7 +10,6 @@ from align import align
 from bsgc import bsgc_hierarchical
 from print_output import print_clusters
 from scipy.cluster.hierarchy import dendrogram, linkage
-from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import matplotlib.pyplot as plt

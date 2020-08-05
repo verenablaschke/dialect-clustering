@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11111110102,RP,51.75195,-1.25778,10,one,,ainaz,,wɐ̠n,,,0
 11111110102,RP,51.75195,-1.25778,20,two,,twou,,tʰʊuˑ,,,0
 11111110102,RP,51.75195,-1.25778,30,three,,threjez,,θɹɪiˑ,,,0
@@ -20,7 +20,6 @@
 11111110102,RP,51.75195,-1.25778,7510,young,,jungaz,,jɐ̠ŋ,,,0
 11111110102,RP,51.75195,-1.25778,7980,new,,neujaz,,njʊuˑ,,,0
 11111110102,RP,51.75195,-1.25778,7670,naked,,nakwadaz,,ˈne̞ɪkɪd,,,0
-11111110102,RP,51.75195,-1.25778,7650,quick,,kwikwaz,,kʰwɪkʰ,,,0
 11111110102,RP,51.75195,-1.25778,7660,fast,,fastaz,,fɑːst,,,0
 11111110102,RP,51.75195,-1.25778,7710,good,,godaz,,ɡʊd,,,0
 11111110102,RP,51.75195,-1.25778,7910,warm,,warmaz,,wɔːm,,,0
@@ -32,7 +31,6 @@
 11111110102,RP,51.75195,-1.25778,2010,head,,xaubadan,,hɛd,,,0
 11111110102,RP,51.75195,-1.25778,2110,eye,,augon,,äˑɪ,,,0
 11111110102,RP,51.75195,-1.25778,2130,ear,,auzon,,ɪ̞ˑə,,,0
-11111110102,RP,51.75195,-1.25778,2140,tear,,taxruz,,tʰɪ̞ˑə,,,0
 11111110102,RP,51.75195,-1.25778,2210,mouth,,munthaz,,maʊθ,,,0
 11111110102,RP,51.75195,-1.25778,2230,tongue,,tungon,,tʰɐ̠ŋ,,,0
 11111110102,RP,51.75195,-1.25778,2240,tooth,,tanthz,,tʰuˑθ,,,0
@@ -86,7 +84,6 @@
 11111110102,RP,51.75195,-1.25778,6570,stool,,stolaz,,stʊuˑɫ,,,0
 11111110102,RP,51.75195,-1.25778,6580,bath,,bathan,,bɑːθ,,,0
 11111110102,RP,51.75195,-1.25778,6600,thing,,thengaz,,θɪŋ,,,0
-11111110102,RP,51.75195,-1.25778,1440,top,,tuppaz,,tʰɔ̞p,,,0
 11111110102,RP,51.75195,-1.25778,6630,needle,,nethlo,,ˈniˑdɫ̩,,,0
 11111110102,RP,51.75195,-1.25778,6640,ring,,xrengaz,,ɹɪŋ,,,0
 11111110102,RP,51.75195,-1.25778,8000,is,,esti,,ɪz,,,0
@@ -98,7 +95,6 @@
 11111110102,RP,51.75195,-1.25778,9620,open,,upanaz,,ˈəʊpə̆n,,,0
 11111110102,RP,51.75195,-1.25778,8120,sit,,setjanan,,sɪtʰ,,,0
 11111110102,RP,51.75195,-1.25778,8720,wash,,waskanan,,wɔ̞ʃ,,,0
-11111110102,RP,51.75195,-1.25778,8940,fight,,fextanan,,fäɪtʰ,,,0
 11111110102,RP,51.75195,-1.25778,8990,swear,,swarjanan,,swɛ̝ˑə,,,0
 11111110102,RP,51.75195,-1.25778,1010,I,,eka,,äˑɪ,,,0
 11111110102,RP,51.75195,-1.25778,1210,what,,xwat,,wɔ̞tʰ,,,0

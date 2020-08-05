@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11111120401,Tyneside,54.9875,-1.45833,10,one,,ainaz,,wɔ̝̈n,,,0
 11111120401,Tyneside,54.9875,-1.45833,20,two,,twou,,tʰə̝uˑ,,,0
 11111120401,Tyneside,54.9875,-1.45833,30,three,,threjez,,θɾɪiˑ,,,0
@@ -12,7 +12,7 @@
 11111120401,Tyneside,54.9875,-1.45833,200,hundred,,xundaradan,,ˈhɔ̝̈ndɹəd,,,0
 11111120401,Tyneside,54.9875,-1.45833,7820,all,,allaz,,äːl,,,0
 11111120401,Tyneside,54.9875,-1.45833,7020,white,,xwitaz,,wɛ̈itʰ,,,0
-11111120401,Tyneside,54.9875,-1.45833,7030,red,,raudaz,,ɹiːd,,,0
+11111120401,Tyneside,54.9875,-1.45833,7030,red,,raudaz,,ɹɛd,,,0
 11111120401,Tyneside,54.9875,-1.45833,7040,green,,groniz,,ɡɹiːn,,,0
 11111120401,Tyneside,54.9875,-1.45833,7210,long,,langaz,,läŋ,,,0
 11111120401,Tyneside,54.9875,-1.45833,7410,sharp,,skarpaz,,ʃɑˑpʰ,,,0
@@ -20,7 +20,6 @@
 11111120401,Tyneside,54.9875,-1.45833,7510,young,,jungaz,,jʊ̞ŋ,,,0
 11111120401,Tyneside,54.9875,-1.45833,7980,new,,neujaz,,njə̝uˑ,,,0
 11111120401,Tyneside,54.9875,-1.45833,7670,naked,,nakwadaz,,ˈneˑkʔ͡əd,,,0
-11111120401,Tyneside,54.9875,-1.45833,7650,quick,,kwikwaz,,kʰwɪkʰ,,,0
 11111120401,Tyneside,54.9875,-1.45833,7660,fast,,fastaz,,fästʰ,,,0
 11111120401,Tyneside,54.9875,-1.45833,7710,good,,godaz,,ɡʊ̞d,,,0
 11111120401,Tyneside,54.9875,-1.45833,7910,warm,,warmaz,,wäːm,,,0
@@ -32,7 +31,6 @@
 11111120401,Tyneside,54.9875,-1.45833,2010,head,,xaubadan,,hiːd,,,0
 11111120401,Tyneside,54.9875,-1.45833,2110,eye,,augon,,äˑɪ,,,0
 11111120401,Tyneside,54.9875,-1.45833,2130,ear,,auzon,,iɐ,,,0
-11111120401,Tyneside,54.9875,-1.45833,2140,tear,,taxruz,,tʰiɐ,,,0
 11111120401,Tyneside,54.9875,-1.45833,2210,mouth,,munthaz,,mu̞θ,,,0
 11111120401,Tyneside,54.9875,-1.45833,2230,tongue,,tungon,,tʰʊ̞ŋ,,,0
 11111120401,Tyneside,54.9875,-1.45833,2240,tooth,,tanthz,,tʰu̞θ,,,0
@@ -86,7 +84,6 @@
 11111120401,Tyneside,54.9875,-1.45833,6570,stool,,stolaz,,stu̞ːl,,,0
 11111120401,Tyneside,54.9875,-1.45833,6580,bath,,bathan,,bäθ,,,0
 11111120401,Tyneside,54.9875,-1.45833,6600,thing,,thengaz,,θɪŋ,,,0
-11111120401,Tyneside,54.9875,-1.45833,1440,top,,tuppaz,,tʰɒpʰ,,,0
 11111120401,Tyneside,54.9875,-1.45833,6630,needle,,nethlo,,ˈniːdl̩,,,0
 11111120401,Tyneside,54.9875,-1.45833,6640,ring,,xrengaz,,ɹɪŋ,,,0
 11111120401,Tyneside,54.9875,-1.45833,8000,is,,esti,,ɪˑz,,,0
@@ -98,7 +95,6 @@
 11111120401,Tyneside,54.9875,-1.45833,9620,open,,upanaz,,ˈɒpʔ͡ə̆n,,,0
 11111120401,Tyneside,54.9875,-1.45833,8120,sit,,setjanan,,sɪtʰ,,,0
 11111120401,Tyneside,54.9875,-1.45833,8720,wash,,waskanan,,wɛʃ,,,0
-11111120401,Tyneside,54.9875,-1.45833,8940,fight,,fextanan,,fɛ̈itʰ,,,0
 11111120401,Tyneside,54.9875,-1.45833,8990,swear,,swarjanan,,swɛɐ,,,0
 11111120401,Tyneside,54.9875,-1.45833,1010,I,,eka,,äˑɪ,,,0
 11111120401,Tyneside,54.9875,-1.45833,1210,what,,xwat,,watʰ,,,0

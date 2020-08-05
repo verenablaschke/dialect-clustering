@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11111450301,"N. Carolina",35.3,-79,10,one,,ainaz,,wɜ̠ːn,,,0
 11111450301,"N. Carolina",35.3,-79,20,two,,twou,,tʰʉ̟ː,,,0
 11111450301,"N. Carolina",35.3,-79,30,three,,threjez,,θɹɪ̠ˑiˑ,,,0
@@ -20,7 +20,6 @@
 11111450301,"N. Carolina",35.3,-79,7510,young,,jungaz,,jœ̈ːŋ,,,0
 11111450301,"N. Carolina",35.3,-79,7980,new,,neujaz,,nɵ̜ˑÿˑ,,,0
 11111450301,"N. Carolina",35.3,-79,7670,naked,,nakwadaz,,ˈnɛ̞ˑɪkɪd,,,0
-11111450301,"N. Carolina",35.3,-79,7650,quick,,kwikwaz,,kʰwɪˑk,,,0
 11111450301,"N. Carolina",35.3,-79,7660,fast,,fastaz,,fɛ̞ĕəst,,,0
 11111450301,"N. Carolina",35.3,-79,7710,good,,godaz,,ɡø̈ːd,,,0
 11111450301,"N. Carolina",35.3,-79,7910,warm,,warmaz,,wɔːɹm,,,0
@@ -32,7 +31,6 @@
 11111450301,"N. Carolina",35.3,-79,2010,head,,xaubadan,,heɪ̆əd,,,0
 11111450301,"N. Carolina",35.3,-79,2110,eye,,augon,,a̠ː,,,0
 11111450301,"N. Carolina",35.3,-79,2130,ear,,auzon,,iˑɹ̩,,,0
-11111450301,"N. Carolina",35.3,-79,2140,tear,,taxruz,,tʰiˑɹ̩,,,0
 11111450301,"N. Carolina",35.3,-79,2210,mouth,,munthaz,,mæ̝ɛ̝öθ,,,0
 11111450301,"N. Carolina",35.3,-79,2230,tongue,,tungon,,tʰɜ̟ːŋ,,,0
 11111450301,"N. Carolina",35.3,-79,2240,tooth,,tanthz,,tʰɵ̟ÿˑθ,,,0
@@ -86,7 +84,6 @@
 11111450301,"N. Carolina",35.3,-79,6570,stool,,stolaz,,stɵ̟uˑ,,,0
 11111450301,"N. Carolina",35.3,-79,6580,bath,,bathan,,bɛĕəθ,,,0
 11111450301,"N. Carolina",35.3,-79,6600,thing,,thengaz,,θɪ̈ˑɪˑŋ,,,0
-11111450301,"N. Carolina",35.3,-79,1440,top,,tuppaz,,tʰɑ̟ːp,,,0
 11111450301,"N. Carolina",35.3,-79,6630,needle,,nethlo,,ˈnɪ̠idɤ,,,0
 11111450301,"N. Carolina",35.3,-79,6640,ring,,xrengaz,,ɹɪːŋ,,,0
 11111450301,"N. Carolina",35.3,-79,8000,is,,esti,,ɪĭəz,,,0
@@ -98,7 +95,6 @@
 11111450301,"N. Carolina",35.3,-79,9620,open,,upanaz,,ˈœ̈ˑÿpɪn,,,0
 11111450301,"N. Carolina",35.3,-79,8120,sit,,setjanan,,sɪ̠ɪ̝ət,,,0
 11111450301,"N. Carolina",35.3,-79,8720,wash,,waskanan,,wɑ̟ːʃ,,,0
-11111450301,"N. Carolina",35.3,-79,8940,fight,,fextanan,,fäˑɪt,,,0
 11111450301,"N. Carolina",35.3,-79,8990,swear,,swarjanan,,swɛeɹ̩,,,0
 11111450301,"N. Carolina",35.3,-79,1010,I,,eka,,äː,,,0
 11111450301,"N. Carolina",35.3,-79,1210,what,,xwat,,wɑ̟ːt,,,0

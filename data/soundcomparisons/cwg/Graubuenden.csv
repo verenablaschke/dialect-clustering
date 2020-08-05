@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11161180509,"Switz.: Graubünden",46.70013,9.45365,10,one,,ainaz,,äɪnts,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,20,two,,twou,,tsväˑɪ,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,30,three,,threjez,,dɾeiˑ,,,0
@@ -20,7 +20,6 @@
 11161180509,"Switz.: Graubünden",46.70013,9.45365,7510,young,,jungaz,,jʊŋk̟,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,7980,new,,neujaz,,nœˑʏ,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,7670,naked,,nakwadaz,,näˑkt,,,0
-11161180509,"Switz.: Graubünden",46.70013,9.45365,7650,quick,,kwikwaz,,k̟ʰɛ̝k̟,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,7660,fast,,fastaz,,fɛ̝ʃt,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,7710,good,,godaz,,ɡoɔ̈t,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,7910,warm,,warmaz,,βäːrm,,,0
@@ -32,8 +31,7 @@
 11161180509,"Switz.: Graubünden",46.70013,9.45365,2010,head,,xaubadan,,häʊpt,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,2110,eye,,augon,,äok,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,2130,ear,,auzon,,ɔ̝ːr,,,0
-11161180509,"Switz.: Graubünden",46.70013,9.45365,2140,tear,,taxruz,,ˈtɾɛ̝ːnɐ,,,0
-11161180509,"Switz.: Graubünden",46.70013,9.45365,2210,mouth,,munthaz,,muːl,,,0
+11161180509,"Switz.: Graubünden",46.70013,9.45365,2210,mouth,,munthaz,,muːl,,,1
 11161180509,"Switz.: Graubünden",46.70013,9.45365,2230,tongue,,tungon,,ˈtsʊŋɡɐ,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,2240,tooth,,tanthz,,tsɑ̈ːn,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,2310,hand,,xanduz,,häˑnt,,,0
@@ -76,7 +74,8 @@
 11161180509,"Switz.: Graubünden",46.70013,9.45365,5850,wind,,wendaz,,βi̞ˑnt,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,6000,hunger,,xungruz,,ˈhʊŋɡr̩,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,6050,milk,,melkaz,,mɪ̝lχ,,,0
-11161180509,"Switz.: Graubünden",46.70013,9.45365,6150,honey,,hunagan,,Array,,,0
+11161180509,"Switz.: Graubünden",46.70013,9.45365,6150,honey,,hunagan,,ˈho̞ˑni̞k̟,,,0
+11161180509,"Switz.: Graubünden",46.70013,9.45365,6150,honey,,hunagan,,ho̞ˑŋk̟,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,6040,salt,,saltan,,sɑ̟ːlts,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,6070,corn,,kurnan,,kʰɔ̝ːɾɐ,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,6510,house,,xusan,,huːs,,,0
@@ -86,19 +85,18 @@
 11161180509,"Switz.: Graubünden",46.70013,9.45365,6570,stool,,stolaz,,ʃtuˑɛ̝̈l,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,6580,bath,,bathan,,bɑːt,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,6600,thing,,thengaz,,dɪ̝ˑŋk̟,,,0
-11161180509,"Switz.: Graubünden",46.70013,9.45365,1440,top,,tuppaz,,..,,,0
-11161180509,"Switz.: Graubünden",46.70013,9.45365,6630,needle,,nethlo,,Array,,,0
+11161180509,"Switz.: Graubünden",46.70013,9.45365,6630,needle,,nethlo,,ˈnɑːdl̩,,,0
+11161180509,"Switz.: Graubünden",46.70013,9.45365,6630,needle,,nethlo,,ˈnɑˑtlə,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,6640,ring,,xrengaz,,ri̞ˑŋk̟,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,8000,is,,esti,,ʔi̞ʃ,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,8310,eat,,etanan,,ʔi̞s,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,8330,bite,,bitanan,,biːs,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,8320,drink,,drenkanan,,dɾɪŋk̟ʰ,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,8510,see,,sexwanan,,..,,,0
-11161180509,"Switz.: Graubünden",46.70013,9.45365,8520,hear,,xauzjanan,,..,,,0
+11161180509,"Switz.: Graubünden",46.70013,9.45365,8520,hear,,xauzjanan,,loːs,,,1
 11161180509,"Switz.: Graubünden",46.70013,9.45365,9620,open,,upanaz,,ˈʔo̞ˑfə,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,8120,sit,,setjanan,,sɪ̝ts,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,8720,wash,,waskanan,,βäʃ,,,0
-11161180509,"Switz.: Graubünden",46.70013,9.45365,8940,fight,,fextanan,,ˈfɛ̝ˑχt,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,8990,swear,,swarjanan,,ʃβœːɾ̥,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,1010,I,,eka,,ʔiː,,,0
 11161180509,"Switz.: Graubünden",46.70013,9.45365,1210,what,,xwat,,väs,,,0

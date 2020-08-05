@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11161120409,"Swabia: Tübingen",48.5229,9.0521,10,one,,ainaz,,ʔɔɪs,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,20,two,,twou,,tsβɔˑe,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,30,three,,threjez,,dʁɛ̈iˑ,,,0
@@ -11,6 +11,7 @@
 11161120409,"Swabia: Tübingen",48.5229,9.0521,100,ten,,texun,,tseˑə,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,200,hundred,,xundaradan,,ˈhʊndʁ̞̩t,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,7820,all,,allaz,,ʔäˑl,,,0
+11161120409,"Swabia: Tübingen",48.5229,9.0521,7820,all,,allaz,,ʔɛlə,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,7020,white,,xwitaz,,β̞ɛ̈iˑs,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,7030,red,,raudaz,,ʁɑ̟ˑɵ̠t,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,7040,green,,groniz,,ɡʁeˑə,,,0
@@ -20,7 +21,6 @@
 11161120409,"Swabia: Tübingen",48.5229,9.0521,7510,young,,jungaz,,jʊŋ,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,7980,new,,neujaz,,nuˑiˑ,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,7670,naked,,nakwadaz,,ˈnäkət,,,0
-11161120409,"Swabia: Tübingen",48.5229,9.0521,7650,quick,,kwikwaz,,kʰɛ̝k,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,7660,fast,,fastaz,,fɪʃt,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,7710,good,,godaz,,ɡuˑət,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,7910,warm,,warmaz,,βäˑɔ̈m,,,0
@@ -32,7 +32,6 @@
 11161120409,"Swabia: Tübingen",48.5229,9.0521,2010,head,,xaubadan,,hɑ̟ɵ̠pt,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,2110,eye,,augon,,ʔɑ̟ʊk,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,2130,ear,,auzon,,ʔɑ̟ʊɔ̈,,,0
-11161120409,"Swabia: Tübingen",48.5229,9.0521,2140,tear,,taxruz,,ˈtʁe̞ːnə,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,2210,mouth,,munthaz,,munˑt,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,2230,tongue,,tungon,,tsuŋɡ,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,2240,tooth,,tanthz,,tsäː,,,0
@@ -86,7 +85,6 @@
 11161120409,"Swabia: Tübingen",48.5229,9.0521,6570,stool,,stolaz,,ʃtuˑəl,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,6580,bath,,bathan,,bäːt,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,6600,thing,,thengaz,,dɪŋ,,,0
-11161120409,"Swabia: Tübingen",48.5229,9.0521,1440,top,,tuppaz,,..,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,6630,needle,,nethlo,,ˈnɔ̞ːdl̩,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,6640,ring,,xrengaz,,ʁɪŋ,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,8000,is,,esti,,ʔi̞ʃ,,,0
@@ -98,7 +96,6 @@
 11161120409,"Swabia: Tübingen",48.5229,9.0521,9620,open,,upanaz,,ˈʔo̞fə,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,8120,sit,,setjanan,,si̞ts,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,8720,wash,,waskanan,,βäʃ,,,0
-11161120409,"Swabia: Tübingen",48.5229,9.0521,8940,fight,,fextanan,,fɛ̝x̟t,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,8990,swear,,swarjanan,,ʃβøʁ̞̩,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,1010,I,,eka,,ʔiç,,,0
 11161120409,"Swabia: Tübingen",48.5229,9.0521,1210,what,,xwat,,βäːs,,,0

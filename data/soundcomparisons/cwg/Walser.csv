@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11161180809,"Liecht.: Walser",47.12,9.53,10,one,,ainaz,,ʔæˑɪ̝s,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,20,two,,twou,,tsβæˑɪ̝,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,30,three,,threjez,,dɾyː,,,0
@@ -18,9 +18,8 @@
 11161180809,"Liecht.: Walser",47.12,9.53,7410,sharp,,skarpaz,,ʃa̠ˑɹɸ,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,7840,full,,fullaz,,ˈɸo̟lə,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,7510,young,,jungaz,,jʊŋɡ,,,0
-11161180809,"Liecht.: Walser",47.12,9.53,7980,new,,neujaz,,"nɜ̹ ̟ˑʏ",,,0
+11161180809,"Liecht.: Walser",47.12,9.53,7980,new,,neujaz,,nɜ̟ˑʏ,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,7670,naked,,nakwadaz,,ˈna̠ˑkɪ̝k,,,0
-11161180809,"Liecht.: Walser",47.12,9.53,7650,quick,,kwikwaz,,kʰɛ̝k,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,7660,fast,,fastaz,,fɛ̝ʃt,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,7710,good,,godaz,,ɡoˑət,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,7910,warm,,warmaz,,ˈβaːɾəm,,,0
@@ -32,7 +31,6 @@
 11161180809,"Liecht.: Walser",47.12,9.53,2010,head,,xaubadan,,hɑö̞pt,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,2110,eye,,augon,,ʔɑʊk,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,2130,ear,,auzon,,ʔo̞ːɹ̝̥,,,0
-11161180809,"Liecht.: Walser",47.12,9.53,2140,tear,,taxruz,,dɾa̠ːnə,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,2210,mouth,,munthaz,,..,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,2230,tongue,,tungon,,ˈtsʊŋɡə,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,2240,tooth,,tanthz,,tsa̠nt,,,0
@@ -45,7 +43,7 @@
 11161180809,"Liecht.: Walser",47.12,9.53,2640,nail,,naglaz,,ˈna̠ːɡl̩,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,2810,heart,,xerton,,haˑɹts,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,2840,liver,,libaro,,ˈlabəɾə,,,0
-11161180809,"Liecht.: Walser",47.12,9.53,4310,mother,,moder,,ˈma̠ˑma̠,,,0
+11161180809,"Liecht.: Walser",47.12,9.53,4310,mother,,moder,,ˈma̠ˑma̠,,,1
 11161180809,"Liecht.: Walser",47.12,9.53,4320,father,,fader,,ˈta̠ta̠,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,4410,daughter,,duxter,,ˈdɔxtɛ̈ɾ̥,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,4330,brother,,brother,,ˈbɾʊɔ̈dɛ̈ɾ̥,,,0
@@ -73,7 +71,7 @@
 11161180809,"Liecht.: Walser",47.12,9.53,5920,thunder,,thunraz,,ˈdɔ̝nɛ̈ɾ̥,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,5820,snow,,snaigwaz,,ʃneː,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,5830,ice,,isaz,,ʔiːʃ,,,0
-11161180809,"Liecht.: Walser",47.12,9.53,5850,wind,,wendaz,,..,,,0
+11161180809,"Liecht.: Walser",47.12,9.53,5850,wind,,wendaz,,lʊft,,,1
 11161180809,"Liecht.: Walser",47.12,9.53,6000,hunger,,xungruz,,ˈhʊŋɡəɾ̥,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,6050,milk,,melkaz,,mi̞lx̟,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,6150,honey,,hunagan,,ˈho̞ːnɪɡ,,,0
@@ -86,7 +84,6 @@
 11161180809,"Liecht.: Walser",47.12,9.53,6570,stool,,stolaz,,ʃtuˑəl,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,6580,bath,,bathan,,ba̠ːt,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,6600,thing,,thengaz,,dɪ̝ŋɡ,,,0
-11161180809,"Liecht.: Walser",47.12,9.53,1440,top,,tuppaz,,..,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,6630,needle,,nethlo,,ˈna̠ːdlə,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,6640,ring,,xrengaz,,rɪŋɡ,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,8000,is,,esti,,ʔiʃt,,,0
@@ -98,7 +95,6 @@
 11161180809,"Liecht.: Walser",47.12,9.53,9620,open,,upanaz,,ˈʔo̞ɸə,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,8120,sit,,setjanan,,..,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,8720,wash,,waskanan,,ˈβa̠ʃ,,,0
-11161180809,"Liecht.: Walser",47.12,9.53,8940,fight,,fextanan,,..,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,8990,swear,,swarjanan,,ˈʃβøːɾɐ,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,1010,I,,eka,,ʔiː,,,0
 11161180809,"Liecht.: Walser",47.12,9.53,1210,what,,xwat,,β̞äˑs,,,0

@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11111121502,Liverpool,53.4,-3,10,one,,ainaz,,wɒn,,,0
 11111121502,Liverpool,53.4,-3,20,two,,twou,,tθ̠͡ʰʉː,,,0
 11111121502,Liverpool,53.4,-3,30,three,,threjez,,θɾiː,,,0
@@ -20,7 +20,6 @@
 11111121502,Liverpool,53.4,-3,7510,young,,jungaz,,jʊŋɡ,,,0
 11111121502,Liverpool,53.4,-3,7980,new,,neujaz,,njʉː,,,0
 11111121502,Liverpool,53.4,-3,7670,naked,,nakwadaz,,ˈneɪkəð̠,,,0
-11111121502,Liverpool,53.4,-3,7650,quick,,kwikwaz,,kʰwɪk,,,0
 11111121502,Liverpool,53.4,-3,7660,fast,,fastaz,,fast,,,0
 11111121502,Liverpool,53.4,-3,7710,good,,godaz,,ɡʊð̠,,,0
 11111121502,Liverpool,53.4,-3,7910,warm,,warmaz,,wɔːm,,,0
@@ -32,7 +31,6 @@
 11111121502,Liverpool,53.4,-3,2010,head,,xaubadan,,hɛð̠,,,0
 11111121502,Liverpool,53.4,-3,2110,eye,,augon,,aˑɪ,,,0
 11111121502,Liverpool,53.4,-3,2130,ear,,auzon,,iˑə,,,0
-11111121502,Liverpool,53.4,-3,2140,tear,,taxruz,,tθ̠͡ʰiˑə,,,0
 11111121502,Liverpool,53.4,-3,2210,mouth,,munthaz,,maʊθ,,,0
 11111121502,Liverpool,53.4,-3,2230,tongue,,tungon,,tθ̠͡ʰʊŋɡ,,,0
 11111121502,Liverpool,53.4,-3,2240,tooth,,tanthz,,tθ̠͡ʰʉˑθ,,,0
@@ -86,7 +84,6 @@
 11111121502,Liverpool,53.4,-3,6570,stool,,stolaz,,stʉːɫ,,,0
 11111121502,Liverpool,53.4,-3,6580,bath,,bathan,,baθ,,,0
 11111121502,Liverpool,53.4,-3,6600,thing,,thengaz,,θɪŋɡ,,,0
-11111121502,Liverpool,53.4,-3,1440,top,,tuppaz,,tθ̠͡ʰɒp,,,0
 11111121502,Liverpool,53.4,-3,6630,needle,,nethlo,,ˈniˑdɫ̩,,,0
 11111121502,Liverpool,53.4,-3,6640,ring,,xrengaz,,ɹɪŋɡ,,,0
 11111121502,Liverpool,53.4,-3,8000,is,,esti,,ɪz,,,0
@@ -98,7 +95,6 @@
 11111121502,Liverpool,53.4,-3,9620,open,,upanaz,,ˈɛʉpə̆n,,,0
 11111121502,Liverpool,53.4,-3,8120,sit,,setjanan,,sɪθ̠,,,0
 11111121502,Liverpool,53.4,-3,8720,wash,,waskanan,,wɒʃ,,,0
-11111121502,Liverpool,53.4,-3,8940,fight,,fextanan,,faɪθ̠,,,0
 11111121502,Liverpool,53.4,-3,8990,swear,,swarjanan,,swɛː,,,0
 11111121502,Liverpool,53.4,-3,1010,I,,eka,,aˑɪ,,,0
 11111121502,Liverpool,53.4,-3,1210,what,,xwat,,wɒθ̠,,,0

@@ -1,4 +1,4 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,10,one,,ainaz,,ʔeːnt,eent,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,20,two,,twou,,tsveː,zwee,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,30,three,,threjez,,dʀaˑɪ,dräi,,0
@@ -12,7 +12,7 @@
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,200,hundred,,xundaradan,,ˈhɔnɐt,honnert,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7820,all,,allaz,,ʔäl,all,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7020,white,,xwitaz,,væ̈iˑs,wäiss,,0
-11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7030,red,,raudaz,,ʀoːt,rout,,0
+11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7030,red,,raudaz,,ʀœ̈ʊˑt,rout,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7040,green,,groniz,,ɡʁɪŋ,gréng,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7210,long,,langaz,,la̠ːŋ,laang,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7410,sharp,,skarpaz,,ʃa̠ːf,schaarf,,0
@@ -20,7 +20,6 @@
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7510,young,,jungaz,,jʊŋk,jonk,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7980,new,,neujaz,,nɑ̟ˑɪ,nei,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7670,naked,,nakwadaz,,..,plakeg,,0
-11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7650,quick,,kwikwaz,,..,,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7660,fast,,fastaz,,fɛ̞st,fest,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7710,good,,godaz,,ɡʊt,gutt,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,7910,warm,,warmaz,,va̠ːm,waarm,,0
@@ -32,7 +31,6 @@
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,2010,head,,xaubadan,,ha̠ːpt,Haapt,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,2110,eye,,augon,,ʔa̠ː,A,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,2130,ear,,auzon,,ʔœ̈ʊɑ̈,Ouer,,0
-11151120109,"Franc. C.: Luxemburg",49.6,6.11667,2140,tear,,taxruz,,tʰʀɛɪn,Tréin,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,2210,mouth,,munthaz,,mɔnt,Mond,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,2230,tongue,,tungon,,tsɔŋ,Zong,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,2240,tooth,,tanthz,,tsänt,Zant,,0
@@ -45,7 +43,7 @@
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,2640,nail,,naglaz,,noːl,Nol,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,2810,heart,,xerton,,he̞ɐts,Häerz,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,2840,liver,,libaro,,ˈlɪəvʌ̞̈,Liewer,,0
-11151120109,"Franc. C.: Luxemburg",49.6,6.11667,4310,mother,,moder,,mäm,Mamm,,0
+11151120109,"Franc. C.: Luxemburg",49.6,6.11667,4310,mother,,moder,,mäm,Mamm,,1
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,4320,father,,fader,,päp,Papp,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,4410,daughter,,duxter,,ˈdʊɪʃtɐ,Duechter,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,4330,brother,,brother,,ˈbʁʊ̞dɐˑ,Brudder,,0
@@ -58,14 +56,15 @@
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,3320,lamb,,lambaz,,läm,Lamm,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,3340,calf,,kalbaz,,ˈkʰäləf,Kallef,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,3240,fish,,fiskaz,,fəʃ,Fësch,,0
-11151120109,"Franc. C.: Luxemburg",49.6,6.11667,3820,horn,,xurnan,,Array,Har,,0
+11151120109,"Franc. C.: Luxemburg",49.6,6.11667,3820,horn,,xurnan,,ha̠ːχ,Har,,0
+11151120109,"Franc. C.: Luxemburg",49.6,6.11667,3820,horn,,xurnan,,hʊˑə,Har,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,3900,wool,,wullo,,vɔ̝̈l,Woll,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,5120,moon,,menon,,mɔ̟nt,Mound,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,5260,north,,nurthaz,,ˈnʊəʁdən,Norden,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,5510,stone,,stainaz,,steːn,Steen,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,5430,ash,,askon,,ʔäks,Äschen,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,5520,earth,,ertho,,ʔeˑɐt,Buedem,,0
-11151120109,"Franc. C.: Luxemburg",49.6,6.11667,6260,leaf,,lauban,,..,Laf,,0
+11151120109,"Franc. C.: Luxemburg",49.6,6.11667,6260,leaf,,lauban,,blʲeda,Laf,,1
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,6270,thorn,,thurnuz,,dɔ̞ɐˑ,Dar,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,6290,oak,,aikz,,ʔeːʃ,Eech,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,5810,rain,,regnan,,ʁeːn,Reen,,0
@@ -86,19 +85,17 @@
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,6570,stool,,stolaz,,ʃtʊl,Stull,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,6580,bath,,bathan,,bʊɛ̈t,Bad,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,6600,thing,,thengaz,,ˈdɪŋən,Déngen,,0
-11151120109,"Franc. C.: Luxemburg",49.6,6.11667,1440,top,,tuppaz,,..,Dëppen,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,6630,needle,,nethlo,,nʊl,Nol,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,6640,ring,,xrengaz,,ʁɐŋ,Rank,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8000,is,,esti,,ɐs,ass,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8310,eat,,etanan,,iˑɛ̈s,iess!,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8330,bite,,bitanan,,bæ̈iˑs,bäiss!,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8320,drink,,drenkanan,,dʀɪŋˑk,drénk!,,0
-11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8510,see,,sexwanan,,..,kuck!,,0
-11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8520,hear,,xauzjanan,,,héier!,,0
+11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8510,see,,sexwanan,,kɯk,kuck!,,0
+11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8520,hear,,xauzjanan,,läʊstʌ̞̈,héier!,,1
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,9620,open,,upanaz,,ˈʔʊ̞pən,oppen,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8120,sit,,setjanan,,zɨ̞ts,sëtz!,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8720,wash,,waskanan,,væʃ,wäsch!,,0
-11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8940,fight,,fextanan,,fæʃt,fecht!,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,8990,swear,,swarjanan,,ʃviˑɛ̈,schwier!,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,1010,I,,eka,,ʔœ̈ʃ,ech,,0
 11151120109,"Franc. C.: Luxemburg",49.6,6.11667,1210,what,,xwat,,va̠ːt,wat?,,0

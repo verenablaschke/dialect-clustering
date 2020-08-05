@@ -1,5 +1,6 @@
-﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily2
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,10,one,,ainaz,,Array,,,0
+﻿LanguageId,LanguageName,Latitude,Longitude,WordId,WordModernName1,WordModernName2,WordProtoName1,WordProtoName2,Phonetic,SpellingAltv1,SpellingAltv2,NotCognateWithMainWordInThisFamily
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,10,one,,ainaz,,eːn,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,10,one,,ainaz,,eːnə,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,20,two,,twou,,tβɛ̝ˑɪ,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,30,three,,threjez,,dʁeː,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,40,four,,fedworez,,ˈfiˑəʁ̞ə,,,0
@@ -20,7 +21,6 @@
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,7510,young,,jungaz,,ˈjʊŋə,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,7980,new,,neujaz,,niː,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,7670,naked,,nakwadaz,,ˈna̠ːkənt,,,0
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,7650,quick,,kwikwaz,,..,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,7660,fast,,fastaz,,ˈɸa̠stə,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,7710,good,,godaz,,χo̞ːt,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,7910,warm,,warmaz,,ˈβa̠ɾəm,,,0
@@ -32,7 +32,6 @@
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,2010,head,,xaubadan,,høːs,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,2110,eye,,augon,,ˈoːʁə,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,2130,ear,,auzon,,oˑɐ,,,0
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,2140,tear,,taxruz,,tʰʁɔ̞ːn,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,2210,mouth,,munthaz,,mʊnt,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,2230,tongue,,tungon,,tʰʊŋə,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,2240,tooth,,tanthz,,tʰa̠nt,,,0
@@ -45,8 +44,10 @@
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,2640,nail,,naglaz,,ˈnɛ̝ːχɫ̩,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,2810,heart,,xerton,,ˈha̠tə,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,2840,liver,,libaro,,ˈlɛ̝ːβʁ̞̩,,,0
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,4310,mother,,moder,,Array,,,0
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,4320,father,,fader,,Array,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,4310,mother,,moder,,ˈmo̞ːdʁ̞̩,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,4310,mother,,moder,,mo̞ˑʊ,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,4320,father,,fader,,ˈβ̥a̠ːd̪ʁ̞̩,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,4320,father,,fader,,β̥a̠ː,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,4410,daughter,,duxter,,ˈdɒχtʁ̞̩,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,4330,brother,,brother,,bʁʏˑʁ̞̩,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,4100,name,,namon,,ˈna̠ːmə,,,0
@@ -68,7 +69,8 @@
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6260,leaf,,lauban,,..,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6270,thorn,,thurnuz,,doˑɐn,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6290,oak,,aikz,,ˈe̝ːkə,,,0
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,5810,rain,,regnan,,Array,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,5810,rain,,regnan,,ʁɛ̝ˑŋ,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,5810,rain,,regnan,,ʁ̞ɛ̝ːχn̩,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,5910,storm,,sturmaz,,ˈstʌʁəm,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,5920,thunder,,thunraz,,ˈdʊndʁ̞̩,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,5820,snow,,snaigwaz,,snɛ̝ˑɪ,,,0
@@ -77,7 +79,8 @@
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6000,hunger,,xungruz,,ˈhʊŋʁ̞̩,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6050,milk,,melkaz,,ˈmɛlək,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6150,honey,,hunagan,,ˈhɔ̞nʌχ,,,0
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6040,salt,,saltan,,Array,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6040,salt,,saltan,,zɔɫt,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6040,salt,,saltan,,zɔ̞ːt,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6070,corn,,kurnan,,kʰoˑɐn,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6510,house,,xusan,,hys,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6560,home,,xaimaz,,heːm,,,0
@@ -86,7 +89,6 @@
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6570,stool,,stolaz,,stɔ̝ːɫ,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6580,bath,,bathan,,ba̠t,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6600,thing,,thengaz,,dɪŋ,,,0
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,1440,top,,tuppaz,,tɔp,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6630,needle,,nethlo,,ˈnɔ̞ːɫdə,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,6640,ring,,xrengaz,,ʁɪŋ,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,8000,is,,esti,,ɪs̺,,,0
@@ -95,17 +97,19 @@
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,8320,drink,,drenkanan,,dʁɪŋk,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,8510,see,,sexwanan,,zɛ̝ˑɪ,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,8520,hear,,xauzjanan,,høˑɐ,,,0
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,9620,open,,upanaz,,Array,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,9620,open,,upanaz,,ˈɔ̞ˑpə,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,9620,open,,upanaz,,ˈɔ̞ˑpn̩,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,8120,sit,,setjanan,,zɪt,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,8720,wash,,waskanan,,βa̠s,,,0
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,8940,fight,,fextanan,,fɛχt,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,8990,swear,,swarjanan,,zβiˑɐ,,,0
-11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,1010,I,,eka,,Array,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,1010,I,,eka,,ɪk,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,1010,I,,eka,,ɪkə,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,1210,what,,xwat,,βa̠t,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,1410,in,,eni,,ɪn,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,1430,out,,ut,,yt,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,1460,over,,uberi,,ˈɔ̞ːβ̥ʁ̞̩,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,1470,mid,,medjaz,,ˈmɪdn̩,,,0
+11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,1470,mid,,medjaz,,,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,5010,day,,dagaz,,da̠χ,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,5020,night,,naxtz,,na̠χ,,,0
 11141160509,"‘Low Saxon’: Achterhoek",52.11667,6.51667,510,year,,jeran,,joˑɐ,,,0
