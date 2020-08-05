@@ -35,3 +35,13 @@ sound correspondences).
 ### Errata
 
 The last sentence of section 4.3.2 _Bipartite Spectral Graph Co-clustering_ (p. 13) should read "The results from this method are hereafter referred to as ___BSGC__-context_ and ___BSGC__-nocontext_."
+
+### Running the software
+
+To run the scripts on Windows, start `run.bat` which sets the scripts' IO encodings and a hash seed for python (to get consistent results across runs) and runs `cluster.py` (which calls the other python scripts as needed).
+
+On UNIX, run:
+```
+set pythonhashseed=123
+python3 cluster.py
+```
