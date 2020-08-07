@@ -1,6 +1,6 @@
 Filename,Sound Comparisons (short),Sound Comparisons (long),Code
 Biel,Switz.: Biel,Upper German: Alemannic (High): Switzerland: Biel,base1241
-Hard,Austria: Bodensee,Upper German: Alemannic (Low): Bodensee/Lake Constance: Hard,lowa1241
+Hard,Bodensee (A): Bregenz,Upper German: Alemannic (Low): Bodensee/Lake Constance: Bregenz: Hard,lake1259
 Graubuenden,Switz.: Graubünden,Upper German: Alemannic (Highest): Switzerland: Graubünden,grau1238
 Herrlisheim,Alsace N.: Herrlisheim,Upper German: Alemannic (Low): Alsace (north): Herrlisheim,alsa1241
 Ortisei,South Tyrol: Ortisei,Upper German: Austro-Bavarian: South Tyrol: Ortisei,cimb1238
@@ -12,8 +12,8 @@ Achterhoek,‘Low Saxon’: Achterhoek,Dutch Low Saxon: Achterhoek: Borculo,acht
 Dutch_Std_NL,Dutch: Std in NL,Dutch: standard pronunciation in the Netherlands,dutc1256
 Dutch_Std_BE,Dutch: Std in BE,Dutch: standard pronunciation in Belgium,vlaa1240
 Antwerp,‘Flemish’: Antwerp,‘Flemish’: Antwerp,antw1238
-Limburg,Limburgish,Limburgish: Eygelshoven,limb1265
-Ostend,‘Flemish’: Ostend,‘Flemish’: Ostend,oost1242
+Limburg,Limburgish,Limburgish: Eygelshoven,limb1263
+Ostend,‘Flemish’: Ostend,‘Flemish’: Ostend,oost1241
 Grou,Fris. W.: Grou,West Frisian: Grou [=Grouw],west2354
 Feer,Fris. N.: Feer,North Frisian: Feer [=Föhr],ferr1240
 Heligoland,Fris. N.: Heligoland,North Frisian: Halaglun [=Heligoland],helg1238

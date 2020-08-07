@@ -1,0 +1,260 @@
+Biel
+base1241 Basel German
+lowa1241 Low Alemannic
+swis1247 Central Alemannic
+sout3294 South Alemannic
+alem1243 Alemannic
+mode1258 Modern High German
+midd1349 Middle-Modern High German
+high1286 Upper German
+high1289 High German
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Hard
+lake1259 Lake Constance Alemannic
+lowa1241 Low Alemannic
+swis1247 Central Alemannic
+sout3294 South Alemannic
+alem1243 Alemannic
+mode1258 Modern High German
+midd1349 Middle-Modern High German
+high1286 Upper German
+high1289 High German
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Graubuenden
+grau1238 Graubenden-Grisons
+high1290 High Alemannic
+swis1247 Central Alemannic
+sout3294 South Alemannic
+alem1243 Alemannic
+mode1258 Modern High German
+midd1349 Middle-Modern High German
+high1286 Upper German
+high1289 High German
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Herrlisheim
+alsa1241 Alsatian
+lowa1241 Low Alemannic
+swis1247 Central Alemannic
+sout3294 South Alemannic
+alem1243 Alemannic
+mode1258 Modern High German
+midd1349 Middle-Modern High German
+high1286 Upper German
+high1289 High German
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Ortisei
+cimb1238 Cimbrian
+glob1242 Global South Bavarian
+baye1239 Bairisch
+mode1258 Modern High German
+midd1349 Middle-Modern High German
+high1286 Upper German
+high1289 High German
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Tuebingen
+swab1242 Swabian
+nort3310 North Alemannic
+alem1243 Alemannic
+mode1258 Modern High German
+midd1349 Middle-Modern High German
+high1286 Upper German
+high1289 High German
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Walser
+wals1238 Walser
+sout3294 South Alemannic
+alem1243 Alemannic
+mode1258 Modern High German
+midd1349 Middle-Modern High German
+high1286 Upper German
+high1289 High German
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Cologne
+kols1241 Kölsch
+ripu1236 Ripuarian
+midd1319 Middle Franconian
+high1287 West Middle German
+fran1268 Middle German
+high1289 High German
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Luxembourg
+luxe1241 Moselle Franconian
+midd1319 Middle Franconian
+high1287 West Middle German
+fran1268 Middle German
+high1289 High German
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Achterhoek
+acht1238 Achterhoeks
+west2356 Westphalic
+west2357 West Low German
+lowg1239 Low German
+midd1345 Middle-Modern Low German
+alts1234 Altsächsisch
+nort3175 North Sea Germanic
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Dutch_Std_NL
+dutc1256 Dutch
+glob1241 Global Dutch
+mode1257 Modern Dutch
+midd1347 Middle-Modern Dutch
+macr1270 Macro-Dutch
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Dutch_Std_BE
+vlaa1240 Western Flemish
+sout3292 Southwestern Dutch
+mode1257 Modern Dutch
+midd1347 Middle-Modern Dutch
+macr1270 Macro-Dutch
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Antwerp
+antw1238 Antwerps
+cent2353 Central Southern Dutch
+dutc1256 Dutch
+glob1241 Global Dutch
+mode1257 Modern Dutch
+midd1347 Middle-Modern Dutch
+macr1270 Macro-Dutch
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Limburg
+limb1263 Limburgan
+ripu1236 Ripuarian
+midd1319 Middle Franconian
+high1287 West Middle German
+fran1268 Middle German
+high1289 High German
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Ostend
+oost1241 Oost-Vlaams
+cent2353 Central Southern Dutch
+dutc1256 Dutch
+glob1241 Global Dutch
+mode1257 Modern Dutch
+midd1347 Middle-Modern Dutch
+macr1270 Macro-Dutch
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Grou
+west2354 Western Frisian
+west2902 Westlauwers-Terschelling Frisian
+mode1264 Modern West Frisian
+fris1239 Frisian
+angl1264 Anglo-Frisian
+nort3175 North Sea Germanic
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Feer
+ferr1240 Ferring
+fohr1234 Föhr-Amrum
+insu1255 Insular Northern Frisian
+nort2626 Northern Frisian
+fris1239 Frisian
+angl1264 Anglo-Frisian
+nort3175 North Sea Germanic
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Heligoland
+helg1238 Helgoland
+insu1255 Insular Northern Frisian
+nort2626 Northern Frisian
+fris1239 Frisian
+angl1264 Anglo-Frisian
+nort3175 North Sea Germanic
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Veenkolonien
+veen1238 Veenkoloniaals
+gron1242 Gronings
+ostf1234 North Low Saxon
+west2357 West Low German
+lowg1239 Low German
+midd1345 Middle-Modern Low German
+alts1234 Altsächsisch
+nort3175 North Sea Germanic
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
+Westerkwartier
+west2359 Westerwolds
+gron1242 Gronings
+ostf1234 North Low Saxon
+west2357 West Low German
+lowg1239 Low German
+midd1345 Middle-Modern Low German
+alts1234 Altsächsisch
+nort3175 North Sea Germanic
+west2793 West Germanic
+nort3152 Northwest Germanic
+germ1287 Germanic
+indo1319 Indo-European
+
