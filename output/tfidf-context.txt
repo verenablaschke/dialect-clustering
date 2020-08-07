@@ -1,97 +1,91 @@
 
 Achterhoek
 -------
-11 correspondences above the threshold (70% importance)
+13 correspondences above the threshold (70% importance)
 
-r > ʁ̞̩	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Achterhoek: ['lɛ̝ːβʁ̞̩', 'iˑʁ̞̩də', 'ɔ̞ːβ̥ʁ̞̩', 'dɒχtʁ̞̩']
+r > ʁ̞̩	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+Achterhoek: ['lɛ̝ːβʁ̞̩', 'dɒχtʁ̞̩', 'bʁʏˑʁ̞̩', 'iˑʁ̞̩də', 'ɔ̞ːβ̥ʁ̞̩']
 
 oː > o̞ː / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Achterhoek: ['ko̞ː', 'blo̞ːt', 'βo̞ːt', 'χo̞ːt']
+Achterhoek: ['χo̞ːt', 'βo̞ːt', 'blo̞ːt', 'ko̞ː']
 
 oː > o̞ː	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Achterhoek: ['ko̞ː', 'blo̞ːt', 'βo̞ːt', 'χo̞ːt']
+Achterhoek: ['χo̞ːt', 'βo̞ːt', 'blo̞ːt', 'ko̞ː']
+
+ɡ > ∅ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Achterhoek: ['la̠ŋə', 'jʊŋə', 'tʰʊŋə']
 
 z > ʁ̞̩	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Achterhoek: ['bɛtʁ̞̩', 'hʊŋʁ̞̩', 'dʊndʁ̞̩']
+Achterhoek: ['bɛtʁ̞̩', 'dʊndʁ̞̩', 'hʊŋʁ̞̩']
 
 uː > y	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Achterhoek: ['mys', 'hys', 'yt']
 
+r > ʁ̞ / _ E	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Achterhoek: ['fiˑəʁ̞ə', 'ʁ̞ɛ̈χ', 'ʁ̞ɛ̝ːχn̩']
+
 oː > o̞ː / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Achterhoek: ['blo̞ːt', 'βo̞ːt', 'χo̞ːt']
+Achterhoek: ['χo̞ːt', 'βo̞ːt', 'blo̞ːt']
 
 oː > o̞ː / _ T	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Achterhoek: ['blo̞ːt', 'βo̞ːt', 'χo̞ːt']
+Achterhoek: ['χo̞ːt', 'βo̞ːt', 'blo̞ːt']
 
 f > ɸ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Achterhoek: ['ɸa̠stə', 'ɸʊɫ', 'ɸɪʃ']
+Achterhoek: ['ɸʊɫ', 'ɸa̠stə', 'ɸɪʃ']
 
 f > ɸ / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Achterhoek: ['ɸa̠stə', 'ɸʊɫ', 'ɸɪʃ']
+Achterhoek: ['ɸʊɫ', 'ɸa̠stə', 'ɸɪʃ']
 
 a > a̠ / _ S	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Achterhoek: ['a̠s', 'ɸa̠stə', 'βa̠s']
+Achterhoek: ['ɸa̠stə', 'a̠s', 'βa̠s']
 
 a > a̠ / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Achterhoek: ['a̠s', 'a̠ɫ', 'a̠χtə']
+Achterhoek: ['a̠χtə', 'a̠ɫ', 'a̠s']
 
-and 118 more
+and 132 more
 =====================================
 
 Antwerp
 -------
-16 correspondences above the threshold (70% importance)
+12 correspondences above the threshold (70% importance)
 
 ɡ > ç	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Antwerp: ['aˑɪ̞lɪç', 'reːçɪn', 'çɾyˑn', 'çjans']
+Antwerp: ['çɾyˑn', 'çjans', 'reːçɪn', 'daç']
 
 z > s̠ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Antwerp: ['b̬ɛ̝ˑtʰəs̠', 'ʊ̞ŋəs̠', 'd̬ɔndəs̠', 'o̞əs̠']
+Antwerp: ['b̬ɛ̝ˑtʰəs̠', 'd̬ɔndəs̠', 'ʊ̞ŋəs̠', 'o̞əs̠']
 
 z > s̠	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Antwerp: ['b̬ɛ̝ˑtʰəs̠', 'ʊ̞ŋəs̠', 'd̬ɔndəs̠', 'o̞əs̠']
+Antwerp: ['b̬ɛ̝ˑtʰəs̠', 'd̬ɔndəs̠', 'ʊ̞ŋəs̠', 'o̞əs̠']
 
-x > ç / vowel _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['rɪçt', 'fɛçt', 'aɪçt']
-
-x > ç / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['rɪçt', 'fɛçt', 'aɪçt']
-
-x > ç / _ T	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['rɪçt', 'fɛçt', 'aɪçt']
-
-x > ç	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['rɪçt', 'fɛçt', 'aɪçt']
+r > s̠ / _ #	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Antwerp: ['mo̞ːd̪əs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠', 'bɾuːs̠']
 
 u > o̞ː / _ R	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['do̞ːɾə', 'o̞ːɾən', 'ko̞ːrə']
-
-r > s̠ / _ #	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['mo̞ːd̪əs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠']
+Antwerp: ['o̞ːɾən', 'do̞ːɾə', 'ko̞ːrə']
 
 r > s̠ / E _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Antwerp: ['mo̞ːd̪əs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠']
 
 oː > u̞ː / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['ku̞ː', 'xu̞ː', 'stu̞ː']
+Antwerp: ['xu̞ː', 'ku̞ː', 'stu̞ː']
 
 oː > u̞ː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['ku̞ː', 'xu̞ː', 'stu̞ː']
+Antwerp: ['xu̞ː', 'ku̞ː', 'stu̞ː']
 
 au > o̞ə / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['lo̞əf', 'o̞əs̠', 'o̞əx']
+Antwerp: ['o̞əx', 'o̞əs̠', 'lo̞əf']
 
 au > o̞ə	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['lo̞əf', 'o̞əs̠', 'o̞əx']
+Antwerp: ['o̞əx', 'o̞əs̠', 'lo̞əf']
 
 ai > eə / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['steən', 'teən', 'beən']
+Antwerp: ['teən', 'beən', 'steən']
 
 ai > eə	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Antwerp: ['steən', 'teən', 'beən']
+Antwerp: ['teən', 'beən', 'steən']
 
-and 131 more
+and 135 more
 =====================================
 
 Biel
@@ -99,57 +93,57 @@ Biel
 17 correspondences above the threshold (70% importance)
 
 k > χ	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Biel: ['χʊə̟', 'mɪʊχ', 'χɑʊp', 'χnœɪ', 'χɑʊt', 'χɔːɾn', 'e̞i̞χə']
+Biel: ['χɑʊt', 'χnœɪ', 'χʊə̟', 'χɑʊp', 'e̞i̞χə', 'mɪʊχ', 'χɔːɾn']
 
 r > ɾ̥ / E _	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Biel: ['moətˑəɾ̥', 'bɾuətəɾ̥', 'fätˑəɾ̥', 'ʏˑpəɾ̥', 'tɔχtəɾ̥']
+Biel: ['moətˑəɾ̥', 'fätˑəɾ̥', 'tɔχtəɾ̥', 'bɾuətəɾ̥', 'ʏˑpəɾ̥']
 
 k > χ / # _	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Biel: ['χʊə̟', 'χɑʊp', 'χnœɪ', 'χɑʊt', 'χɔːɾn']
+Biel: ['χɑʊt', 'χnœɪ', 'χʊə̟', 'χɑʊp', 'χɔːɾn']
 
 ɡ > k / vowel _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Biel: ['he̞i̞lɪk', 'z̠a̠kə', 'nɑ̈ˑku', 'ɔ̞ok']
+Biel: ['ɔ̞ok', 'nɑ̈ˑku', 'z̠a̠kə', 't̪ɒːk']
 
 r > ɾ̥ / _ #	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Biel: ['moətˑəɾ̥', 'bɾuətəɾ̥', 'fätˑəɾ̥', 'tɔχtəɾ̥']
+Biel: ['moətˑəɾ̥', 'fätˑəɾ̥', 'tɔχtəɾ̥', 'bɾuətəɾ̥']
 
 k > χ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Biel: ['χʊə̟', 'χɑʊp', 'χɑʊt', 'χɔːɾn']
+Biel: ['χɑʊt', 'χʊə̟', 'χɑʊp', 'χɔːɾn']
 
 b > p / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Biel: ['lapəɾə', 'seˑpə', 'pɛ̝ˑɪ', 'ʏˑpəɾ̥']
+Biel: ['seˑpə', 'pɛ̝ˑɪ', 'lapəɾə', 'ʏˑpəɾ̥']
 
 a > ɒˑ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Biel: ['hɒˑŋ', 'ɡɒˑrtə', 'β̞ɒˑs', 'ɒˑχt']
+Biel: ['ɒˑχt', 'hɒˑŋ', 'ɡɒˑrtə', 'β̞ɒˑs']
 
 a > ɒˑ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Biel: ['hɒˑŋ', 'ɡɒˑrtə', 'β̞ɒˑs', 'ɒˑχt']
+Biel: ['ɒˑχt', 'hɒˑŋ', 'ɡɒˑrtə', 'β̞ɒˑs']
 
 θ > t / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Biel: ['tɔːɾn', 'aːrtə', 'bɾuətəɾ̥']
+Biel: ['bɾuətəɾ̥', 'aːrtə', 'tɔːɾn']
 
 r > ɾ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Biel: ['ʃtʊˑɾm̩', 'tɔːɾn', 'ʃɑːɾf']
+Biel: ['ʃɑːɾf', 'tɔːɾn', 'ʃtʊˑɾm̩']
 
 oː > ə̟	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Biel: ['ʔa̠ʃə̟', 'nɒmə̟', 'β̞ɵlə̟']
+Biel: ['nɒmə̟', 'β̞ɵlə̟', 'ʔa̠ʃə̟']
 
 l > ∅ / A _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Biel: ['χɑʊp', 'sɑ̈ʊt͡s', 'χɑʊt']
+Biel: ['χɑʊt', 'χɑʊp', 'sɑ̈ʊt͡s']
 
 d > tˑ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Biel: ['moətˑəɾ̥', 'mɪtˑɪ', 'fätˑəɾ̥']
+Biel: ['moətˑəɾ̥', 'fätˑəɾ̥', 'mɪtˑɪ']
 
 d > tˑ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Biel: ['moətˑəɾ̥', 'mɪtˑɪ', 'fätˑəɾ̥']
+Biel: ['moətˑəɾ̥', 'fätˑəɾ̥', 'mɪtˑɪ']
 
 a > ɒˑ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Biel: ['hɒˑŋ', 'ɡɒˑrtə', 'β̞ɒˑs']
 
 a > ɒ / N _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Biel: ['nɒχt', 'nɒmə̟', 'nɒkχt']
+Biel: ['nɒkχt', 'nɒmə̟', 'nɒχt']
 
-and 119 more
+and 121 more
 =====================================
 
 Cologne
@@ -157,230 +151,221 @@ Cologne
 16 correspondences above the threshold (70% importance)
 
 u > ɔ̞ː / cons _	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Cologne: ['βɔ̞ːt', 'dɔ̞ːn', 'hɔ̞ːn', 'kʰɔ̞ːn', 'dɔ̞ːχtɒ']
+Cologne: ['dɔ̞ːχtɒ', 'βɔ̞ːt', 'hɔ̞ːn', 'dɔ̞ːn', 'kʰɔ̞ːn']
 
 u > ɔ̞ː	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Cologne: ['βɔ̞ːt', 'dɔ̞ːn', 'hɔ̞ːn', 'kʰɔ̞ːn', 'dɔ̞ːχtɒ']
-
-e > ɛ̝	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Cologne: ['hɛ̝t͡s', 'zɛ̝t͡s', 'ʔɛ̝s', 'fɛ̝ʃ', 'zɛ̝ks']
+Cologne: ['dɔ̞ːχtɒ', 'βɔ̞ːt', 'hɔ̞ːn', 'dɔ̞ːn', 'kʰɔ̞ːn']
 
 ɡ > j / # _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Cologne: ['jɒʁœ̃ˑ', 'jans', 'jaːdə', 'joːt']
+Cologne: ['jɒʁœ̃ˑ', 'joːt', 'jans', 'jaːdə']
 
 eː > ɒ / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Cologne: ['mʊtˑɒ', 'bʁoːdɒ', 'fätˑɒ', 'dɔ̞ːχtɒ']
+Cologne: ['mʊtˑɒ', 'fätˑɒ', 'dɔ̞ːχtɒ', 'bʁoːdɒ']
 
 eː > ɒ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Cologne: ['mʊtˑɒ', 'bʁoːdɒ', 'fätˑɒ', 'dɔ̞ːχtɒ']
+Cologne: ['mʊtˑɒ', 'fätˑɒ', 'dɔ̞ːχtɒ', 'bʁoːdɒ']
 
-e > ɛ̝ / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Cologne: ['hɛ̝t͡s', 'zɛ̝t͡s', 'fɛ̝ʃ', 'zɛ̝ks']
-
-e > ɛ̝ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Cologne: ['zɛ̝t͡s', 'ʔɛ̝s', 'fɛ̝ʃ', 'zɛ̝ks']
+e > ɛ̝	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Cologne: ['zɛ̝ks', 'hɛ̝t͡s', 'ʔɛ̝s', 'zɛ̝t͡s']
 
 ɡ > j / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Cologne: ['jans', 'jaːdə', 'joːt']
+Cologne: ['joːt', 'jans', 'jaːdə']
 
 r > ʀ / _ E	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Cologne: ['ʀɛ̝ˑn', 'dʀe̝ˑɪ', 'ʀɛˑɪʃ']
+Cologne: ['dʀe̝ˑɪ', 'ʀɛˑɪʃ', 'ʀɛ̝ˑn']
 
 oː > oː / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Cologne: ['joːt', 'bʁoːdɒ', 'ʃtoːl']
+Cologne: ['joːt', 'bʁoːdɒ', 'ʃtoːɫ']
 
 oː > oː / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Cologne: ['joːt', 'bʁoːdɒ', 'ʃtoːl']
+Cologne: ['joːt', 'bʁoːdɒ', 'ʃtoːɫ']
 
 oː > oː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Cologne: ['joːt', 'bʁoːdɒ', 'ʃtoːl']
+Cologne: ['joːt', 'bʁoːdɒ', 'ʃtoːɫ']
 
 n > nˑ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Cologne: ['t͡sa̠nˑt', 'ha̠nˑt', 'vɪnˑt']
+
+n > nˑ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Cologne: ['t͡sa̠nˑt', 'ha̠nˑt', 'vɪnˑt']
 
 eː > ɒ / T _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Cologne: ['mʊtˑɒ', 'fätˑɒ', 'dɔ̞ːχtɒ']
 
+e > ɛ̝ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Cologne: ['zɛ̝ks', 'hɛ̝t͡s', 'zɛ̝t͡s']
+
 a > ɛ̝ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Cologne: ['bɛ̝sɒ̝̈', 'βɛ̝ʁəm', 'β̞ɛ̝ʃ']
+Cologne: ['βɛ̝ʁəm', 'bɛ̝sɒ̝̈', 'β̞ɛ̝ʃ']
 
 and 116 more
 =====================================
 
 Dutch_Std_BE
 -------
-14 correspondences above the threshold (70% importance)
+12 correspondences above the threshold (70% importance)
 
 u > ʊ̞ / cons _	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Dutch_Std_BE: ['tʊ̞ŋ', 'hʊ̞ŋəɹ̝̥', 'jʊ̞ŋ', 'hʊ̞nt', 'mʊ̞nt']
+Dutch_Std_BE: ['jʊ̞ŋ', 'mʊ̞nt', 'tʊ̞ŋ', 'hʊ̞nt', 'hʊ̞ŋəɹ̝̥']
 
 u > ʊ̞ / _ N	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Dutch_Std_BE: ['tʊ̞ŋ', 'hʊ̞ŋəɹ̝̥', 'jʊ̞ŋ', 'hʊ̞nt', 'mʊ̞nt']
+Dutch_Std_BE: ['jʊ̞ŋ', 'mʊ̞nt', 'tʊ̞ŋ', 'hʊ̞nt', 'hʊ̞ŋəɹ̝̥']
 
 au > o̞ː / _ cons	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Dutch_Std_BE: ['ro̞ːt', 'ho̞ːɹ̝̥', 'ho̞ːft', 'o̞ːr', 'o̞ːx']
+Dutch_Std_BE: ['ro̞ːt', 'ho̞ːft', 'o̞ːx', 'o̞ːr', 'ho̞ːɹ̝̥']
 
 au > o̞ː	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Dutch_Std_BE: ['ro̞ːt', 'ho̞ːɹ̝̥', 'ho̞ːft', 'o̞ːr', 'o̞ːx']
+Dutch_Std_BE: ['ro̞ːt', 'ho̞ːft', 'o̞ːx', 'o̞ːr', 'ho̞ːɹ̝̥']
+
+ɡ > x / vowel _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Dutch_Std_BE: ['o̞ːx', 'naːxəɫ', 'da̠x']
 
 uː > æˑʏ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Dutch_Std_BE: ['mæˑʏs', 'hæˑʏs', 'æˑʏt']
 
-u > ɔ / T _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_BE: ['tɔp', 'stɔrm̩', 'dɔxtr̩']
-
 s > z / _ E	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_BE: ['zeː', 'zeːβn̩', 'zɛs']
+Dutch_Std_BE: ['zɛs', 'zeːβn̩', 'zeː']
 
 r > ɹ̝̥	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_BE: ['zβe̞ˑəɹ̝̥', 'ze̞ˑəɹ̝̥', 'viˑəɹ̝̥']
+Dutch_Std_BE: ['viˑəɹ̝̥', 'ze̞ˑəɹ̝̥', 'zβe̞ˑəɹ̝̥']
 
 e > iː / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_BE: ['kniː', 'tiːn', 'd̪ɾiː']
+Dutch_Std_BE: ['d̪ɾiː', 'tiːn', 'kniː']
 
 e > iː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_BE: ['kniː', 'tiːn', 'd̪ɾiː']
-
-b > β / vowel _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_BE: ['leːβər̥', 'zeːβn̩', 'oːβr̩']
-
-b > β	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_BE: ['leːβər̥', 'zeːβn̩', 'oːβr̩']
+Dutch_Std_BE: ['d̪ɾiː', 'tiːn', 'kniː']
 
 au > o̞ː / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_BE: ['ro̞ːt', 'ho̞ːɹ̝̥', 'ho̞ːft']
+Dutch_Std_BE: ['ro̞ːt', 'ho̞ːft', 'ho̞ːɹ̝̥']
 
 a > ∅ / R _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_BE: ['jaːɹ̝', 'ze̞ˑəɹ̝̥', 'hɔndɾ̩t']
+Dutch_Std_BE: ['hɔndɾ̩t', 'ze̞ˑəɹ̝̥', 'jaːɹ̝']
 
-and 135 more
+and 139 more
 =====================================
 
 Dutch_Std_NL
 -------
 17 correspondences above the threshold (70% importance)
 
+r > ɹ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(8 times)
+Dutch_Std_NL: ['ha̠ɹt', 'dɔχtəɹ', 'vɔˑɹt', 'nɔ̝ˑɹt', 'aˑɹdə', 'χaˑɹt', 'o̟ʊvəɹ', 'jaˑɹ']
+
 s > z̥ / # _	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Dutch_Std_NL: ['z̥ɪt', 'z̥iˑ', 'z̥aʊt', 'z̥veˑɹ̩', 'z̥e̞ɪv̥ə', 'z̥eˑɹ̩', 'z̥ɛs']
+Dutch_Std_NL: ['z̥ɛs', 'z̥e̞ɪv̥ə', 'z̥eˑʁ̞', 'z̥aʊt', 'z̥iˑ', 'z̥ɪt', 'z̥veˑɹ̩']
 
 s > z̥	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Dutch_Std_NL: ['z̥ɪt', 'z̥iˑ', 'z̥aʊt', 'z̥veˑɹ̩', 'z̥e̞ɪv̥ə', 'z̥eˑɹ̩', 'z̥ɛs']
+Dutch_Std_NL: ['z̥ɛs', 'z̥e̞ɪv̥ə', 'z̥eˑʁ̞', 'z̥aʊt', 'z̥iˑ', 'z̥ɪt', 'z̥veˑɹ̩']
 
 s > z̥ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(6 times)
-Dutch_Std_NL: ['z̥ɪt', 'z̥iˑ', 'z̥aʊt', 'z̥e̞ɪv̥ə', 'z̥eˑɹ̩', 'z̥ɛs']
+Dutch_Std_NL: ['z̥ɛs', 'z̥e̞ɪv̥ə', 'z̥eˑʁ̞', 'z̥aʊt', 'z̥iˑ', 'z̥ɪt']
 
 r > ɹ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Dutch_Std_NL: ['ha̠ɹt', 'nɔ̝ˑɹt', 'vɔˑɹt', 'χaˑɹt', 'aˑɹdə']
+Dutch_Std_NL: ['ha̠ɹt', 'vɔˑɹt', 'nɔ̝ˑɹt', 'aˑɹdə', 'χaˑɹt']
 
 e > iˑ / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Dutch_Std_NL: ['kʰniˑ', 'z̥iˑ', 'tʰiˑn', 'dʁiˑ']
+Dutch_Std_NL: ['dʁiˑ', 'tʰiˑn', 'kʰniˑ', 'z̥iˑ']
 
 e > iˑ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Dutch_Std_NL: ['kʰniˑ', 'z̥iˑ', 'tʰiˑn', 'dʁiˑ']
+Dutch_Std_NL: ['dʁiˑ', 'tʰiˑn', 'kʰniˑ', 'z̥iˑ']
 
 a > ɑ̈ / _ N	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Dutch_Std_NL: ['tʰɑ̈nt', 'hɑ̈nt', 'ɫɑ̈ŋ', 'χɑ̈ns']
-
-w > v / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_NL: ['z̥veˑɹ̩', 'tʰve̞ˑɪ', 'kvik']
+Dutch_Std_NL: ['ɫɑ̈ŋ', 'tʰɑ̈nt', 'hɑ̈nt', 'χɑ̈ns']
 
 r > ɹ / _ T	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Dutch_Std_NL: ['ha̠ɹt', 'vɔˑɹt', 'χaˑɹt']
 
 oː > u̞ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_NL: ['χʁ̞u̞n', 'fu̞t', 'χu̞t']
+Dutch_Std_NL: ['χʁ̞u̞n', 'χu̞t', 'fu̞t']
 
 oː > u̞ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_NL: ['χʁ̞u̞n', 'fu̞t', 'χu̞t']
+Dutch_Std_NL: ['χʁ̞u̞n', 'χu̞t', 'fu̞t']
 
 oː > u̞	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_NL: ['χʁ̞u̞n', 'fu̞t', 'χu̞t']
+Dutch_Std_NL: ['χʁ̞u̞n', 'χu̞t', 'fu̞t']
 
 e > e̞ɪ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_NL: ['ʁe̞ɪχə', 'z̥e̞ɪv̥ə', 'ne̞ɪχə']
+Dutch_Std_NL: ['z̥e̞ɪv̥ə', 'ne̞ɪχə', 'ʁe̞ɪχə']
 
 e > e̞ɪ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_NL: ['ʁe̞ɪχə', 'z̥e̞ɪv̥ə', 'ne̞ɪχə']
+Dutch_Std_NL: ['z̥e̞ɪv̥ə', 'ne̞ɪχə', 'ʁe̞ɪχə']
 
 e > e̞ɪ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_NL: ['ʁe̞ɪχə', 'z̥e̞ɪv̥ə', 'ne̞ɪχə']
+Dutch_Std_NL: ['z̥e̞ɪv̥ə', 'ne̞ɪχə', 'ʁe̞ɪχə']
 
 ai > e̞ˑɪ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_NL: ['e̞ˑɪn', 'ste̞ˑɪn', 'tʰe̞ˑɪn']
+Dutch_Std_NL: ['e̞ˑɪn', 'tʰe̞ˑɪn', 'ste̞ˑɪn']
 
 a > ɑ̈ / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Dutch_Std_NL: ['ɑ̈s', 'ɑ̈ɫ', 'ɑ̈χt']
+Dutch_Std_NL: ['ɑ̈χt', 'ɑ̈ɫ', 'ɑ̈s']
 
-and 109 more
+and 120 more
 =====================================
 
 Feer
 -------
-6 correspondences above the threshold (70% importance)
-
-r > r / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Feer: ['tri̞', 'dreːn', 'draŋk', 'brʊlə']
-
-w > v / _ A	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Feer: ['väram', 'vät', 'vaske']
+5 correspondences above the threshold (70% importance)
 
 u > ʊ / _ R	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Feer: ['sd̥ʊrʌm', 'hʊrn', 'kʰʊrn']
+Feer: ['hʊrn', 'sd̥ʊrʌm', 'kʰʊrn']
 
 r > r / Y _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Feer: ['sd̥ʊrʌm', 'hʊrn', 'kʰʊrn']
+Feer: ['hʊrn', 'sd̥ʊrʌm', 'kʰʊrn']
+
+n > ∅ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Feer: ['fiːf', 'mœ̞s', 'tʰʊ̞s']
 
 e > a / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Feer: ['sat', 'ʔas', 'draŋk']
+Feer: ['ʔas', 'draŋk', 'sat']
 
 e > a	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Feer: ['sat', 'ʔas', 'draŋk']
+Feer: ['ʔas', 'draŋk', 'sat']
 
-and 89 more
+and 96 more
 =====================================
 
 Graubuenden
 -------
 21 correspondences above the threshold (70% importance)
 
-r > r̩	100.00	(rep: 100.00, dist: 100.00)	(6 times)
-Graubuenden: ['hʊŋɡr̩', 'moɔ̈tr̩', 'brʊɔ̈dr̩', 'fa̠ˑtˑr̩', 'ʏˑbr̩', 'dɔˑχtr̩']
+r > r̩	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+Graubuenden: ['moɔ̈tr̩', 'fa̠ˑtˑr̩', 'dɔˑχtr̩', 'brʊɔ̈dr̩', 'ʏˑbr̩']
+
+ɡ > k̟ / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Graubuenden: ['läŋk̟', 'jʊŋk̟', 'dɪ̝ˑŋk̟', 'ri̞ˑŋk̟']
+
+ɡ > k̟ / N _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Graubuenden: ['läŋk̟', 'jʊŋk̟', 'dɪ̝ˑŋk̟', 'ri̞ˑŋk̟']
+
+ɡ > k̟	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Graubuenden: ['läŋk̟', 'jʊŋk̟', 'dɪ̝ˑŋk̟', 'ri̞ˑŋk̟']
 
 r > r̩ / _ #	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Graubuenden: ['moɔ̈tr̩', 'brʊɔ̈dr̩', 'fa̠ˑtˑr̩', 'dɔˑχtr̩']
+Graubuenden: ['moɔ̈tr̩', 'fa̠ˑtˑr̩', 'dɔˑχtr̩', 'brʊɔ̈dr̩']
 
-eː > ∅ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Graubuenden: ['moɔ̈tr̩', 'brʊɔ̈dr̩', 'fa̠ˑtˑr̩', 'dɔˑχtr̩']
+eː > ∅ / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Graubuenden: ['moɔ̈tr̩', 'fa̠ˑtˑr̩', 'dɔˑχtr̩', 'brʊɔ̈dr̩']
 
-eː > ∅ / _ R	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Graubuenden: ['moɔ̈tr̩', 'brʊɔ̈dr̩', 'fa̠ˑtˑr̩', 'dɔˑχtr̩']
+a > äˑ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Graubuenden: ['ʔäˑχt', 'näˑkt', 'häˑnt', 'kʰäˑlp']
 
-ɡ > ɡ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['hʊŋɡr̩', 'ɡɾʏˑɛ̝̈n', 'nɑ̈ːɡl̩']
-
-ɡ > k̟ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['läŋk̟', 'ri̞ˑŋk̟', 'jʊŋk̟']
-
-ɡ > k̟ / N _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['läŋk̟', 'ri̞ˑŋk̟', 'jʊŋk̟']
-
-ɡ > k̟	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['läŋk̟', 'ri̞ˑŋk̟', 'jʊŋk̟']
+a > äˑ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Graubuenden: ['ʔäˑχt', 'näˑkt', 'häˑnt', 'kʰäˑlp']
 
 u > ɔˑ / _ R	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['nɔˑrd', 'βɔˑrt', 'dɔˑrn']
+Graubuenden: ['βɔˑrt', 'nɔˑrd', 'dɔˑrn']
 
 r > r / A _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['βäːrm', 'ɡɑːrtə', 'ʃa̟ˑrf']
+Graubuenden: ['ʃa̟ˑrf', 'βäːrm', 'ɡɑːrtə']
 
 oː > ʊɔ̈ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['blʊɔ̈t', 'fʊɔ̈s', 'brʊɔ̈dr̩']
+Graubuenden: ['fʊɔ̈s', 'blʊɔ̈t', 'brʊɔ̈dr̩']
 
 oː > ʊɔ̈ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['blʊɔ̈t', 'fʊɔ̈s', 'brʊɔ̈dr̩']
+Graubuenden: ['fʊɔ̈s', 'blʊɔ̈t', 'brʊɔ̈dr̩']
 
 oː > ʊɔ̈	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['blʊɔ̈t', 'fʊɔ̈s', 'brʊɔ̈dr̩']
+Graubuenden: ['fʊɔ̈s', 'blʊɔ̈t', 'brʊɔ̈dr̩']
 
 oː > ɐ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Graubuenden: ['t͡sʊŋɡɐ', 'na̠ˑmɐ', 'wʊlɐ']
@@ -389,7 +374,7 @@ oː > ɐ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Graubuenden: ['t͡sʊŋɡɐ', 'na̠ˑmɐ', 'wʊlɐ']
 
 m > m / A _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['läm', 'na̠ˑmɐ', 'häˑɪm']
+Graubuenden: ['na̠ˑmɐ', 'läm', 'häˑɪm']
 
 eː > ∅ / T _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Graubuenden: ['moɔ̈tr̩', 'fa̠ˑtˑr̩', 'dɔˑχtr̩']
@@ -404,85 +389,91 @@ a > ɑː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Graubuenden: ['qʰɑːlt', 'ɡɑːrtə', 'bɑːt']
 
 a > äˑ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Graubuenden: ['häˑnt', 'kʰäˑlp', 'näˑkt']
+Graubuenden: ['näˑkt', 'häˑnt', 'kʰäˑlp']
 
-and 130 more
+and 133 more
 =====================================
 
 Grou
 -------
-23 correspondences above the threshold (70% importance)
+25 correspondences above the threshold (70% importance)
+
+s > s̺	100.00	(rep: 100.00, dist: 100.00)	(19 times)
+Grou: ['s̺ɒˑɪs̺', 's̺õ̞w̃ə̃n', 's̺kɛrp', 'fɛˑəs̺t', 's̺iˑər̥', 'fɪs̺k', 's̺tiˑən', 'jɪs̺kə', 's̺tβ̞äɾəm', 's̺niˑə', 's̺ɔ̞ːt', 'hu̞ːs̺', 's̺tuˑəɫ', 'ɪs̺', 's̺jʌχ', 's̺ɪt', 'βɒs̺kiə', 's̺β̞är']
+
+s > s̺ / # _	100.00	(rep: 100.00, dist: 100.00)	(12 times)
+Grou: ['s̺ɒˑɪs̺', 's̺õ̞w̃ə̃n', 's̺kɛrp', 's̺iˑər̥', 's̺tiˑən', 's̺tβ̞äɾəm', 's̺niˑə', 's̺ɔ̞ːt', 's̺tuˑəɫ', 's̺jʌχ', 's̺ɪt', 's̺β̞är']
+
+s > s̺ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(10 times)
+Grou: ['s̺kɛrp', 'fɛˑəs̺t', 'fɪs̺k', 's̺tiˑən', 'jɪs̺kə', 's̺tβ̞äɾəm', 's̺niˑə', 's̺tuˑəɫ', 'βɒs̺kiə', 's̺β̞är']
 
 l > ɫ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Grou: ['hɪ̞ɫəχ', 'nœ̈ɫə', 'ɫɛ̝ˑɪvr̩', 'ɫäŋ', 'ɫɪiəf', 'ɫäːm', 'bɫoˑət']
+Grou: ['ɫäŋ', 'hɪ̞ɫəχ', 'bɫoˑət', 'ɫɛ̝ˑɪvr̩', 'ɫäːm', 'nœ̈ɫə', 'ɫɪiəf']
 
 ai > iˑə	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Grou: ['iˑən', 's̺tiˑən', 's̺niˑə', 'hiˑəm', 'tiˑən', 's̺iˑər̥', 'biˑən']
+Grou: ['iˑən', 's̺iˑər̥', 'tiˑən', 'biˑən', 's̺tiˑən', 's̺niˑə', 'hiˑəm']
+
+s > s̺ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(6 times)
+Grou: ['fɛˑəs̺t', 'fɪs̺k', 'jɪs̺kə', 'hu̞ːs̺', 'ɪs̺', 'βɒs̺kiə']
 
 ai > iˑə / cons _	100.00	(rep: 100.00, dist: 100.00)	(6 times)
-Grou: ['s̺tiˑən', 's̺niˑə', 'hiˑəm', 'tiˑən', 's̺iˑər̥', 'biˑən']
-
-∅ > j / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(6 times)
-Grou: ['jɪs̺kə', 's̺jʌχ', 'rjœχt', 'fjäˑʊɾ̥', 'fjʌ̝χt͡siˑ', 'njʌʁʌn']
-
-∅ > j	100.00	(rep: 100.00, dist: 100.00)	(6 times)
-Grou: ['jɪs̺kə', 's̺jʌχ', 'rjœχt', 'fjäˑʊɾ̥', 'fjʌ̝χt͡siˑ', 'njʌʁʌn']
+Grou: ['s̺iˑər̥', 'tiˑən', 'biˑən', 's̺tiˑən', 's̺niˑə', 'hiˑəm']
 
 s > s̺ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Grou: ['s̺ɪt', 's̺ɔ̞ːt', 's̺õ̞w̃ə̃n', 's̺iˑər̥', 's̺ɒˑɪs̺']
+Grou: ['s̺ɒˑɪs̺', 's̺õ̞w̃ə̃n', 's̺iˑər̥', 's̺ɔ̞ːt', 's̺ɪt']
 
-∅ > j / cons _	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Grou: ['s̺jʌχ', 'rjœχt', 'fjäˑʊɾ̥', 'fjʌ̝χt͡siˑ', 'njʌʁʌn']
+∅ > j / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+Grou: ['fjäˑʊɾ̥', 'njʌʁʌn', 'rjœχt', 'jɪs̺kə', 's̺jʌχ']
+
+∅ > j	100.00	(rep: 100.00, dist: 100.00)	(5 times)
+Grou: ['fjäˑʊɾ̥', 'njʌʁʌn', 'rjœχt', 'jɪs̺kə', 's̺jʌχ']
 
 s > s̺ / _ T	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Grou: ['s̺tβ̞äɾəm', 's̺tiˑən', 'fɛˑəs̺t', 's̺tuˑəɫ']
+Grou: ['fɛˑəs̺t', 's̺tiˑən', 's̺tβ̞äɾəm', 's̺tuˑəɫ']
 
 s > s̺ / _ K	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Grou: ['jɪs̺kə', 'βɒs̺kiə', 'fɪs̺k', 's̺kɛrp']
+Grou: ['s̺kɛrp', 'fɪs̺k', 'jɪs̺kə', 'βɒs̺kiə']
 
 oː > oˑə / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Grou: ['bɫoˑət', 'moˑər̥', 'foˑət', 'ɡoˑət']
-
-oː > oˑə / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Grou: ['bɫoˑət', 'moˑər̥', 'foˑət', 'ɡoˑət']
+Grou: ['ɡoˑət', 'foˑət', 'bɫoˑət', 'moˑər̥']
 
 oː > oˑə	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Grou: ['bɫoˑət', 'moˑər̥', 'foˑət', 'ɡoˑət']
+Grou: ['ɡoˑət', 'foˑət', 'bɫoˑət', 'moˑər̥']
 
 l > ɫ / # _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Grou: ['ɫɛ̝ˑɪvr̩', 'ɫäŋ', 'ɫɪiəf', 'ɫäːm']
+Grou: ['ɫäŋ', 'ɫɛ̝ˑɪvr̩', 'ɫäːm', 'ɫɪiəf']
 
 k > k / S _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Grou: ['jɪs̺kə', 'βɒs̺kiə', 'fɪs̺k', 's̺kɛrp']
+Grou: ['s̺kɛrp', 'fɪs̺k', 'jɪs̺kə', 'βɒs̺kiə']
 
 ai > iˑə / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Grou: ['iˑən', 's̺tiˑən', 'hiˑəm', 's̺iˑər̥']
+Grou: ['iˑən', 's̺iˑər̥', 's̺tiˑən', 'hiˑəm']
+
+∅ > j / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Grou: ['fjäˑʊɾ̥', 'njʌʁʌn', 'rjœχt', 's̺jʌχ']
 
 θ > t / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Grou: ['tʌŋr̩', 'tɾɛɪjə', 'tβ̞änə']
+Grou: ['tɾɛɪjə', 'tβ̞änə', 'tʌŋr̩']
 
 z > r̩	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Grou: ['bɛtr̩', 'hʌŋr̩', 'tʌŋr̩']
-
-w > β̞ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Grou: ['s̺β̞är', 'tβ̞äː', 'kβ̞ɪk']
+Grou: ['bɛtr̩', 'tʌŋr̩', 'hʌŋr̩']
 
 u > ʌ̝ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Grou: ['jʌ̝ŋ', 'βʌ̝ɫə', 'fʌ̝ɫ']
+Grou: ['fʌ̝ɫ', 'jʌ̝ŋ', 'βʌ̝ɫə']
 
 u > ʌ̝ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Grou: ['jʌ̝ŋ', 'βʌ̝ɫə', 'fʌ̝ɫ']
+Grou: ['fʌ̝ɫ', 'jʌ̝ŋ', 'βʌ̝ɫə']
 
 u > ʌ̝	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Grou: ['jʌ̝ŋ', 'βʌ̝ɫə', 'fʌ̝ɫ']
+Grou: ['fʌ̝ɫ', 'jʌ̝ŋ', 'βʌ̝ɫə']
+
+oː > oˑə / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Grou: ['ɡoˑət', 'foˑət', 'bɫoˑət']
 
 oː > oˑə / _ T	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Grou: ['bɫoˑət', 'foˑət', 'ɡoˑət']
+Grou: ['ɡoˑət', 'foˑət', 'bɫoˑət']
 
-∅ > j / _ E	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Grou: ['s̺jʌχ', 'fjʌ̝χt͡siˑ', 'njʌʁʌn']
-
-and 96 more
+and 94 more
 =====================================
 
 Hard
@@ -490,123 +481,99 @@ Hard
 11 correspondences above the threshold (70% importance)
 
 r > ʁ̞ / E _	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Hard: ['hɛ̝ˑʁ̞t͡s', 'mʊətəʁ̞', 'ʔɛ̝ˑʁ̞dɛ̝̈', 'bʁ̞ʏˑədəʁ̞', 'faˑtˑəʁ̞', 'ʏ̠ˑbəʁ̞', 'dɔxtəʁ̞']
+Hard: ['hɛ̝ˑʁ̞t͡s', 'mʊətəʁ̞', 'faˑtˑəʁ̞', 'tɔxtəʁ̞', 'bʁ̞ʏˑədəʁ̞', 'ʔɛ̝ˑʁ̞dɛ̝̈', 'ʏ̠ˑbəʁ̞']
 
 z > ʁ̞ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Hard: ['bɛ̝sˑəʁ̞', 'hʊŋəʁ̞', 'dɔ̞nəʁ̞', 'høːʁ̞', 'o̞ːʁ̞']
+Hard: ['bɛ̝sˑəʁ̞', 'o̞ːʁ̞', 'dɔ̞nəʁ̞', 'hʊŋəʁ̞', 'høːʁ̞']
 
 z > ʁ̞	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Hard: ['bɛ̝sˑəʁ̞', 'hʊŋəʁ̞', 'dɔ̞nəʁ̞', 'høːʁ̞', 'o̞ːʁ̞']
+Hard: ['bɛ̝sˑəʁ̞', 'o̞ːʁ̞', 'dɔ̞nəʁ̞', 'hʊŋəʁ̞', 'høːʁ̞']
 
 r > ʁ̞ / _ #	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Hard: ['mʊətəʁ̞', 'bʁ̞ʏˑədəʁ̞', 'faˑtˑəʁ̞', 'dɔxtəʁ̞']
+Hard: ['mʊətəʁ̞', 'faˑtˑəʁ̞', 'tɔxtəʁ̞', 'bʁ̞ʏˑədəʁ̞']
 
 u > ʊˑ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Hard: ['ʃtʊˑʁ̞m̩', 'hʊˑnd', 'mʊˑnt']
+Hard: ['mʊˑnt', 'hʊˑnd', 'ʃtʊˑʁ̞m̩']
 
 u > ʊˑ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Hard: ['ʃtʊˑʁ̞m̩', 'hʊˑnd', 'mʊˑnt']
+Hard: ['mʊˑnt', 'hʊˑnd', 'ʃtʊˑʁ̞m̩']
 
 u > ʊˑ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Hard: ['ʃtʊˑʁ̞m̩', 'hʊˑnd', 'mʊˑnt']
-
-u > ə / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Hard: ['dɔ̞rnə', 'tʁɛ̝ːnə', 'seˑbə']
+Hard: ['mʊˑnt', 'hʊˑnd', 'ʃtʊˑʁ̞m̩']
 
 r > ʁ̞ / A _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Hard: ['va̠ːʁ̞m', 'ɡa̠ːʁ̞tə', 'ʃa̠ːʁ̞f']
+Hard: ['ʃa̠ːʁ̞f', 'va̠ːʁ̞m', 'ɡa̠ːʁ̞tə']
+
+d > t / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Hard: ['tɔxtəʁ̞', 'tʁɪnk̟', 'ta̠ːɡ']
 
 a > a̠ː / _ R	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Hard: ['va̠ːʁ̞m', 'ɡa̠ːʁ̞tə', 'ʃa̠ːʁ̞f']
+Hard: ['ʃa̠ːʁ̞f', 'va̠ːʁ̞m', 'ɡa̠ːʁ̞tə']
 
 a > a̠ː / N _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Hard: ['na̠ːxt', 'na̠ːmə', 'na̠ːɡl̩']
+Hard: ['na̠ːɡl̩', 'na̠ːmə', 'na̠ːxt']
 
-and 125 more
+and 127 more
 =====================================
 
 Heligoland
 -------
-13 correspondences above the threshold (70% importance)
+6 correspondences above the threshold (70% importance)
 
 u > ɒ / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Heligoland: ['tʰɒŋ', 'hɒŋə', 'd̥ʒɒŋ', 'hɒnɐˑtʰ']
+Heligoland: ['hɒnɐˑtʰ', 'd̥ʒɒŋ', 'tʰɒŋ', 'hɒŋə']
 
 u > ɒ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Heligoland: ['tʰɒŋ', 'hɒŋə', 'd̥ʒɒŋ', 'hɒnɐˑtʰ']
+Heligoland: ['hɒnɐˑtʰ', 'd̥ʒɒŋ', 'tʰɒŋ', 'hɒŋə']
 
 u > ɒ / _ N	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Heligoland: ['tʰɒŋ', 'hɒŋə', 'd̥ʒɒŋ', 'hɒnɐˑtʰ']
+Heligoland: ['hɒnɐˑtʰ', 'd̥ʒɒŋ', 'tʰɒŋ', 'hɒŋə']
 
 u > ɒ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Heligoland: ['tʰɒŋ', 'hɒŋə', 'd̥ʒɒŋ', 'hɒnɐˑtʰ']
+Heligoland: ['hɒnɐˑtʰ', 'd̥ʒɒŋ', 'tʰɒŋ', 'hɒŋə']
 
 d > ∅ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Heligoland: ['ʀoɒ', 'blo̞ˑ', 'ɡo̞ː', 'fo̞ɐ']
-
-z > n / _ #	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Heligoland: ['kʰälə̞fkʰən', 'lämkʰən', 'ʔeakʰɛ̽n']
-
-z > n	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Heligoland: ['kʰälə̞fkʰən', 'lämkʰən', 'ʔeakʰɛ̽n']
+Heligoland: ['ʀoɒ', 'ɡo̞ː', 'blo̞ˑ', 'fo̞ɐ']
 
 r > ʀ / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Heligoland: ['ʀoɒ', 'ʀäen', 'ʀɛç']
+Heligoland: ['ʀoɒ', 'ʀɛç', 'ʀäen']
 
-r > ∅ / Y _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Heligoland: ['nuʌɖ̥', 'huɐn', 'kʰuɐ']
-
-n > n / _ E	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Heligoland: ['neɛ̽dˡl̩', 'kʰnæbean', 'neɐɡæn']
-
-∅ > β̞ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Heligoland: ['tʰβ̞ɑ̝ːn', 'tʰβ̞ä̠ːn', 'β̞ɑː']
-
-∅ > β̞ / _ A	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Heligoland: ['tʰβ̞ɑ̝ːn', 'tʰβ̞ä̠ːn', 'β̞ɑː']
-
-∅ > β̞	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Heligoland: ['tʰβ̞ɑ̝ːn', 'tʰβ̞ä̠ːn', 'β̞ɑː']
-
-and 86 more
+and 84 more
 =====================================
 
 Herrlisheim
 -------
-18 correspondences above the threshold (70% importance)
+16 correspondences above the threshold (70% importance)
 
 u > o / _ cons	100.00	(rep: 100.00, dist: 100.00)	(9 times)
-Herrlisheim: ['noχt', 'voχt', 'honik̟', 'donəχ', 'ʔofə', 'toʁ̞ən', 'hoʁ̞ən', 'ʔofə', 'kʰoʁən']
+Herrlisheim: ['voχt', 'hoʁ̞ən', 'noχt', 'toʁ̞ən', 'donəχ', 'honik̟', 'kʰoʁən', 'ʔofə', 'ʔofə']
 
 u > o	100.00	(rep: 100.00, dist: 100.00)	(9 times)
-Herrlisheim: ['noχt', 'voχt', 'honik̟', 'donəχ', 'ʔofə', 'toʁ̞ən', 'hoʁ̞ən', 'ʔofə', 'kʰoʁən']
+Herrlisheim: ['voχt', 'hoʁ̞ən', 'noχt', 'toʁ̞ən', 'donəχ', 'honik̟', 'kʰoʁən', 'ʔofə', 'ʔofə']
 
 u > o / cons _	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Herrlisheim: ['noχt', 'voχt', 'honik̟', 'donəχ', 'toʁ̞ən', 'hoʁ̞ən', 'kʰoʁən']
+Herrlisheim: ['voχt', 'hoʁ̞ən', 'noχt', 'toʁ̞ən', 'donəχ', 'honik̟', 'kʰoʁən']
 
 a > ɔː / _ cons	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Herrlisheim: ['nɔːχt', 'vɔːʁ̞m', 'ɡɔːχtə', 'bɔːt', 'ʔɔːχt']
+Herrlisheim: ['ʔɔːχt', 'vɔːʁ̞m', 'ɡɔːχtə', 'bɔːt', 'nɔːχt']
 
 eː > ə̠ / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Herrlisheim: ['møˑətə̠χ', 'bʁe̝ːdə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ']
+Herrlisheim: ['møˑətə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ', 'bʁe̝ːdə̠χ']
 
 eː > ə̠ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Herrlisheim: ['møˑətə̠χ', 'bʁe̝ːdə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ']
+Herrlisheim: ['møˑətə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ', 'bʁe̝ːdə̠χ']
 
 eː > ə̠	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Herrlisheim: ['møˑətə̠χ', 'bʁe̝ːdə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ']
+Herrlisheim: ['møˑətə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ', 'bʁe̝ːdə̠χ']
 
 a > ɔ / _ L	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Herrlisheim: ['kʰɔlp', 'sɔls', 'ʔɔl', 'kʰɔlt']
-
-θ > t / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Herrlisheim: ['noχt', 'mʊnt', 'ʔäχt']
+Herrlisheim: ['ʔɔl', 'kʰɔlt', 'kʰɔlp', 'sɔls']
 
 ɡ > j / vowel _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Herrlisheim: ['ʁäːjə', 'näːjəl', 'ʔœʏjə']
+Herrlisheim: ['ʔœʏjə', 'näːjəl', 'ʁäːjə']
 
 u > o / _ R	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Herrlisheim: ['toʁ̞ən', 'hoʁ̞ən', 'kʰoʁən']
+Herrlisheim: ['hoʁ̞ən', 'toʁ̞ən', 'kʰoʁən']
 
 oː > e̝ː / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Herrlisheim: ['ɡʁe̝ːn', 'ɸe̝ːs', 'bʁe̝ːdə̠χ']
@@ -620,42 +587,27 @@ Herrlisheim: ['ɡʁe̝ːn', 'ɸe̝ːs', 'bʁe̝ːdə̠χ']
 eː > ə̠ / T _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Herrlisheim: ['møˑətə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ']
 
-d > t / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Herrlisheim: ['møˑətə̠χ', 'ɡɔːχtə', 'fɒtə̠χ']
-
 d > t / U _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Herrlisheim: ['bløːt', 'møˑətə̠χ', 'ɡøˑət']
+Herrlisheim: ['ɡøˑət', 'bløːt', 'møˑətə̠χ']
 
 a > ɔ / K _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Herrlisheim: ['kʰɔlp', 'kʰɔlt', 'ɡɔns']
+Herrlisheim: ['kʰɔlt', 'ɡɔns', 'kʰɔlp']
 
-and 121 more
+and 131 more
 =====================================
 
 Limburg
 -------
-12 correspondences above the threshold (70% importance)
-
-r > ʁ̞ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Limburg: ['ʁ̞ʊət', 'ʁ̞ɛ̝ç', 'χʁ̞øˑn', 'dʁ̞ɪŋk', 'bʁ̞o̞ːχ']
-
-ɡ > k / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Limburg: ['la̟ˑŋk', 'ʁɪŋk', 'jʊŋk']
-
-ɡ > k / N _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Limburg: ['la̟ˑŋk', 'ʁɪŋk', 'jʊŋk']
-
-z > χ / _ #	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Limburg: ['hʊŋəχ', 'dʊndəχ', 'däːχ']
+7 correspondences above the threshold (70% importance)
 
 r > ʁ̞ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Limburg: ['χʁ̞øˑn', 'dʁ̞ɪŋk', 'bʁ̞o̞ːχ']
+Limburg: ['χʁ̞øˑn', 'bʁ̞o̞ːχ', 'dʁ̞ɪŋk']
 
 n > ŋ / A _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Limburg: ['täŋk', 'häŋk', 'la̟ˑŋk']
+Limburg: ['la̟ˑŋk', 'täŋk', 'häŋk']
 
 e > e̞ˑə	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Limburg: ['ʁe̞ˑən', 'e̞ˑət', 'e̞ˑət']
+Limburg: ['e̞ˑət', 'ʁe̞ˑən', 'e̞ˑət']
 
 d > k / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Limburg: ['häŋk', 'hʊŋk', 'β̞ɪŋk']
@@ -666,13 +618,10 @@ Limburg: ['häŋk', 'hʊŋk', 'β̞ɪŋk']
 d > k	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Limburg: ['häŋk', 'hʊŋk', 'β̞ɪŋk']
 
-d > d / vowel _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Limburg: ['mɔ̞dəχ', 'mɪdə', 'fädəχ']
-
 a > ä / _ N	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Limburg: ['täŋk', 'häŋk', 'x̟äns']
 
-and 119 more
+and 134 more
 =====================================
 
 Luxembourg
@@ -680,30 +629,30 @@ Luxembourg
 8 correspondences above the threshold (70% importance)
 
 e > ɨ̞ / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Luxembourg: ['zɨ̞t͡s', 'mɨ̞lɪ̠ʃ', 'fɨ̞nəf', 'mɨ̞t']
+Luxembourg: ['fɨ̞nəf', 'mɨ̞lɪ̠ʃ', 'zɨ̞t͡s', 'mɨ̞t']
 
 e > ɨ̞ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Luxembourg: ['zɨ̞t͡s', 'mɨ̞lɪ̠ʃ', 'fɨ̞nəf', 'mɨ̞t']
+Luxembourg: ['fɨ̞nəf', 'mɨ̞lɪ̠ʃ', 'zɨ̞t͡s', 'mɨ̞t']
 
 e > ɨ̞	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Luxembourg: ['zɨ̞t͡s', 'mɨ̞lɪ̠ʃ', 'fɨ̞nəf', 'mɨ̞t']
-
-x > ʃ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Luxembourg: ['nuɛ̈ʃt', 'fæʃt', 'dʊɪʃtɐ']
-
-x > ʃ / _ T	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Luxembourg: ['nuɛ̈ʃt', 'fæʃt', 'dʊɪʃtɐ']
+Luxembourg: ['fɨ̞nəf', 'mɨ̞lɪ̠ʃ', 'zɨ̞t͡s', 'mɨ̞t']
 
 u > ɔ / _ N	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Luxembourg: ['t͡sɔŋ', 'mɔnt', 'hɔnɐt']
+Luxembourg: ['hɔnɐt', 'mɔnt', 't͡sɔŋ']
+
+s > ∅ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Luxembourg: ['mæ̈ˑʊs', 'ɡæns', 'ʔäks']
+
+r > ∅ / Y _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Luxembourg: ['vʊˑɛ̈t', 'hʊˑə', 'ʃtʊɛ̈m']
 
 b > v / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Luxembourg: ['lɪəvʌ̞̈', 'ziːvən', 'ʔiväˑ']
+Luxembourg: ['ziːvən', 'lɪəvʌ̞̈', 'ʔiväˑ']
 
 a > ä / _ L	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Luxembourg: ['kʰäləf', 'zält͡s', 'ʔäl']
+Luxembourg: ['ʔäl', 'kʰäləf', 'zält͡s']
 
-and 116 more
+and 120 more
 =====================================
 
 Ortisei
@@ -711,57 +660,57 @@ Ortisei
 17 correspondences above the threshold (70% importance)
 
 d > t͡s	100.00	(rep: 100.00, dist: 100.00)	(8 times)
-Ortisei: ['hɒnt͡s', 'ʁ̞ɔ̞ːt͡s', 'βɔ̈ʁt͡s', 'bløət͡s', 'hʊnt͡s', 'kʰɔlt͡s', 'ɡʊɛ̈t͡s', 'nɔkt͡s']
+Ortisei: ['ʁ̞ɔ̞ːt͡s', 'nɔkt͡s', 'ɡʊɛ̈t͡s', 'kʰɔlt͡s', 'hɒnt͡s', 'bløət͡s', 'βɔ̈ʁt͡s', 'hʊnt͡s']
 
 a > ɔ̞ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Ortisei: ['lɔ̞ŋk', 'lɔ̞m', 'sɔ̞lt͡s', 'ɡɔ̞ns', 'ɡɔ̞χtn̩', 'β̞ɔ̞s', 'ʔɔ̞χt']
+Ortisei: ['ʔɔ̞χt', 'lɔ̞ŋk', 'ɡɔ̞ns', 'lɔ̞m', 'sɔ̞lt͡s', 'ɡɔ̞χtn̩', 'β̞ɔ̞s']
 
 a > ɔ̞	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Ortisei: ['lɔ̞ŋk', 'lɔ̞m', 'sɔ̞lt͡s', 'ɡɔ̞ns', 'ɡɔ̞χtn̩', 'β̞ɔ̞s', 'ʔɔ̞χt']
+Ortisei: ['ʔɔ̞χt', 'lɔ̞ŋk', 'ɡɔ̞ns', 'lɔ̞m', 'sɔ̞lt͡s', 'ɡɔ̞χtn̩', 'β̞ɔ̞s']
 
 a > ɔ̞ / cons _	100.00	(rep: 100.00, dist: 100.00)	(6 times)
-Ortisei: ['lɔ̞ŋk', 'lɔ̞m', 'sɔ̞lt͡s', 'ɡɔ̞ns', 'ɡɔ̞χtn̩', 'β̞ɔ̞s']
+Ortisei: ['lɔ̞ŋk', 'ɡɔ̞ns', 'lɔ̞m', 'sɔ̞lt͡s', 'ɡɔ̞χtn̩', 'β̞ɔ̞s']
 
 d > t͡s / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Ortisei: ['hɒnt͡s', 'βɔ̈ʁt͡s', 'hʊnt͡s', 'kʰɔlt͡s']
+Ortisei: ['kʰɔlt͡s', 'hɒnt͡s', 'βɔ̈ʁt͡s', 'hʊnt͡s']
 
 ai > äɪ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Ortisei: ['häɪlɪ̝k', 'häɪm', 'bäɪn', 'ʔäɪçɛ̈']
+Ortisei: ['häɪlɪ̝k', 'bäɪn', 'ʔäɪçɛ̈', 'häɪm']
 
 θ > t͡s	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['no̞χt͡s', 'bɔ̝ːt͡s', 'mʊnt͡s']
+Ortisei: ['mʊnt͡s', 'no̞χt͡s', 'bɔ̝ːt͡s']
 
 t > t͡s / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['hɛχt͡s', 'sɔ̞lt͡s', 'ʁɛχt͡s']
+Ortisei: ['ʁɛχt͡s', 'hɛχt͡s', 'sɔ̞lt͡s']
 
 r > ʁ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['βɔ̈ʁt͡s', 'hɔˑʁn̩', 'ʃɑ̈ʁf']
+Ortisei: ['ʃɑ̈ʁf', 'βɔ̈ʁt͡s', 'hɔˑʁn̩']
 
 oː > ʊə / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['mʊətəχ', 'fʊəs', 'bʁʊədəχ']
+Ortisei: ['fʊəs', 'mʊətəχ', 'bʁʊədəχ']
 
 oː > ʊə / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['mʊətəχ', 'fʊəs', 'bʁʊədəχ']
+Ortisei: ['fʊəs', 'mʊətəχ', 'bʁʊədəχ']
 
 oː > ʊə	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['mʊətəχ', 'fʊəs', 'bʁʊədəχ']
+Ortisei: ['fʊəs', 'mʊətəχ', 'bʁʊədəχ']
 
 oː > ɛ̝̈ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['t͡sʊŋɡɛ̝̈', 'βʌlɛ̝̈', 'ʔa̠ʊɡɛ̝̈']
+Ortisei: ['ʔa̠ʊɡɛ̝̈', 't͡sʊŋɡɛ̝̈', 'βʌlɛ̝̈']
 
 oː > ɛ̈	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['ʔäʃɛ̈', 'nɔ̞ˑmɛ̈', 'ʔɛʁ̞dɛ̈']
+Ortisei: ['nɔ̞ˑmɛ̈', 'ʔäʃɛ̈', 'ʔɛʁ̞dɛ̈']
 
 d > t͡s / vowel _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['ʁ̞ɔ̞ːt͡s', 'bløət͡s', 'ɡʊɛ̈t͡s']
+Ortisei: ['ʁ̞ɔ̞ːt͡s', 'ɡʊɛ̈t͡s', 'bløət͡s']
 
 ai > äɪ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['häɪlɪ̝k', 'häɪm', 'bäɪn']
+Ortisei: ['häɪlɪ̝k', 'bäɪn', 'häɪm']
 
 ai > äɪ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ortisei: ['häɪlɪ̝k', 'häɪm', 'ʔäɪçɛ̈']
+Ortisei: ['häɪlɪ̝k', 'ʔäɪçɛ̈', 'häɪm']
 
-and 130 more
+and 133 more
 =====================================
 
 Ostend
@@ -769,60 +718,60 @@ Ostend
 18 correspondences above the threshold (70% importance)
 
 x > ∅ / _ Y	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Ostend: ['ʊŋr̩̥', 'ʉ̟s', 'ʊnt', 'ʊndr̩t']
+Ostend: ['ʊndr̩t', 'ʊnt', 'ʊŋr̥̩', 'ʉ̟s']
 
 e > iˑə / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Ostend: ['kniˑə', 'tiˑənə', 'dɾiˑə', 'viˑəɾə']
+Ostend: ['dɾiˑə', 'viˑəɾə', 'tiˑənə', 'kniˑə']
 
 e > iˑə	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Ostend: ['kniˑə', 'tiˑənə', 'dɾiˑə', 'viˑəɾə']
+Ostend: ['dɾiˑə', 'viˑəɾə', 'tiˑənə', 'kniˑə']
 
 ai > ɛː	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Ostend: ['ɛːn', 'tɛːn', 'zɛːs̠', 'bɛːn']
+Ostend: ['ɛːn', 'zɛːs̠', 'tɛːn', 'bɛːn']
 
 ɡ > h	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['ɾe̝ːhə̃', 'hɾuənə', 'hoət']
+Ostend: ['hɾuənə', 'hoət', 'ɾe̝ːhə̃']
+
+z > r̥̩	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Ostend: ['beˑtr̥̩', 'dœndr̥̩', 'ʊŋr̥̩']
 
 u > ɔ̝ː / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['ɔ̝ːvn̩', 'ɔ̝ːpm̩', 'kɔ̝ːrn̩']
+Ostend: ['kɔ̝ːrn̩', 'ɔ̝ːvn̩', 'ɔ̝ːpm̩']
 
 u > ɔ̝ː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['ɔ̝ːvn̩', 'ɔ̝ːpm̩', 'kɔ̝ːrn̩']
+Ostend: ['kɔ̝ːrn̩', 'ɔ̝ːvn̩', 'ɔ̝ːpm̩']
 
 u > ɔː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['nɔːɾt', 'dɔːn', 'ɔːɾən']
+Ostend: ['ɔːɾən', 'nɔːɾt', 'dɔːn']
 
 u > œ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['dœndr̩̥', 'βœlə', 'v̥œl']
+Ostend: ['v̥œl', 'βœlə', 'dœndr̥̩']
 
 u > œ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['dœndr̩̥', 'βœlə', 'v̥œl']
+Ostend: ['v̥œl', 'βœlə', 'dœndr̥̩']
 
 u > œ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['dœndr̩̥', 'βœlə', 'v̥œl']
-
-r > r̩̥	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['ʊŋr̩̥', 'moːdr̩̥', 'fɔ̞ːd̪r̩̥']
+Ostend: ['v̥œl', 'βœlə', 'dœndr̥̩']
 
 oː > u̞ˑə / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['ku̞ˑə', 'blu̞ˑət', 'vu̞ˑət']
+Ostend: ['vu̞ˑət', 'blu̞ˑət', 'ku̞ˑə']
 
 oː > u̞ˑə	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['ku̞ˑə', 'blu̞ˑət', 'vu̞ˑət']
+Ostend: ['vu̞ˑət', 'blu̞ˑət', 'ku̞ˑə']
 
 e > ɛ / _ T	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['zɛt', 'ɛt', 'mɛdn̩']
+Ostend: ['ɛt', 'zɛt', 'mɛdn̩']
 
 au > ɔ̝ː / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['lɔ̝ːf', 'ɔ̝ːs̠', 'ɔ̝ːɾə']
+Ostend: ['ɔ̝ːɾə', 'ɔ̝ːs̠', 'lɔ̝ːf']
 
 au > ɔ̝ː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['lɔ̝ːf', 'ɔ̝ːs̠', 'ɔ̝ːɾə']
+Ostend: ['ɔ̝ːɾə', 'ɔ̝ːs̠', 'lɔ̝ːf']
 
 ai > ɛː / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Ostend: ['tɛːn', 'zɛːs̠', 'bɛːn']
+Ostend: ['zɛːs̠', 'tɛːn', 'bɛːn']
 
-and 116 more
+and 120 more
 =====================================
 
 Tuebingen
@@ -830,306 +779,287 @@ Tuebingen
 13 correspondences above the threshold (70% importance)
 
 oː > uˑə / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Tuebingen: ['kʰuˑə', 'fuˑəs', 'ɡuˑət', 'ʃtuˑəl']
+Tuebingen: ['ɡuˑət', 'fuˑəs', 'kʰuˑə', 'ʃtuˑəl']
 
 oː > uˑə	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Tuebingen: ['kʰuˑə', 'fuˑəs', 'ɡuˑət', 'ʃtuˑəl']
+Tuebingen: ['ɡuˑət', 'fuˑəs', 'kʰuˑə', 'ʃtuˑəl']
 
 eː > ɔ̈ / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Tuebingen: ['mʊətɔ̈', 'bʁʊədɔ̈', 'fätɔ̈', 'dɔ̝χtɔ̈']
+Tuebingen: ['mʊətɔ̈', 'fätɔ̈', 'dɔ̝χtɔ̈', 'bʁʊədɔ̈']
 
 eː > ɔ̈	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Tuebingen: ['mʊətɔ̈', 'bʁʊədɔ̈', 'fätɔ̈', 'dɔ̝χtɔ̈']
+Tuebingen: ['mʊətɔ̈', 'fätɔ̈', 'dɔ̝χtɔ̈', 'bʁʊədɔ̈']
+
+e > i̞ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Tuebingen: ['ʔi̞ʃ', 'si̞t͡s', 'ʔi̞n', 'mi̞tɛ̝̈']
 
 uː > ɐ̠uˑ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Tuebingen: ['mɐ̠uˑs', 'hɐ̠uˑs', 'ʔɐ̠uˑs']
 
 u > ɔ̞ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Tuebingen: ['dɔ̞nɔ̈χ', 'dɔ̞n', 'kʰɔ̞nˑ']
+Tuebingen: ['dɔ̞n', 'dɔ̞nɔ̈χ', 'kʰɔ̞nˑ']
 
 u > ɔ̞	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Tuebingen: ['dɔ̞nɔ̈χ', 'dɔ̞n', 'kʰɔ̞nˑ']
+Tuebingen: ['dɔ̞n', 'dɔ̞nɔ̈χ', 'kʰɔ̞nˑ']
 
 r > ∅ / A _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Tuebingen: ['βäˑɔ̈m', 'ɡäɔ̈t̪ə', 'ʃäˑɔ̈f']
+Tuebingen: ['ʃäˑɔ̈f', 'βäˑɔ̈m', 'ɡäɔ̈t̪ə']
 
 oː > uˑə / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Tuebingen: ['fuˑəs', 'ɡuˑət', 'ʃtuˑəl']
+Tuebingen: ['ɡuˑət', 'fuˑəs', 'ʃtuˑəl']
 
 k > ç	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Tuebingen: ['mɪli̞ç', 'ʔiç', 'ʔɔˑɪçɛ̝̈']
+Tuebingen: ['ʔɔˑɪçɛ̝̈', 'mɪli̞ç', 'ʔiç']
 
 eː > ɔ̈ / T _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
 Tuebingen: ['mʊətɔ̈', 'fätɔ̈', 'dɔ̝χtɔ̈']
 
-a > äˑ / _ L	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Tuebingen: ['kʰäˑlp', 'säˑlt͡s', 'ʔäˑl']
-
 a > äː / N _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Tuebingen: ['näːχt', 'näːmɛ̈', 'näːɡl̩']
+Tuebingen: ['näːɡl̩', 'näːmɛ̈', 'näːχt']
 
-and 119 more
+and 120 more
 =====================================
 
 Veenkolonien
 -------
-13 correspondences above the threshold (70% importance)
+5 correspondences above the threshold (70% importance)
 
-oː > ɑʊ / cons _	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Veenkolonien: ['kɑʊ', 'blɑʊt', 'vɑʊɾə', 'χɑʊt', 's̺tɑʊlə']
+θ > tʰ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Veenkolonien: ['mʊntʰ', 'nœətʰ', 'bätʰ']
 
-oː > ɑʊ	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Veenkolonien: ['kɑʊ', 'blɑʊt', 'vɑʊɾə', 'χɑʊt', 's̺tɑʊlə']
+ɡ > kʰ / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Veenkolonien: ['jʊŋkʰ', 'deŋkʰ', 'riŋkʰ']
 
-oː > ɑʊ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Veenkolonien: ['blɑʊt', 'vɑʊɾə', 'χɑʊt', 's̺tɑʊlə']
+ɡ > kʰ / N _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Veenkolonien: ['jʊŋkʰ', 'deŋkʰ', 'riŋkʰ']
 
-f > β / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Veenkolonien: ['βiːβə', 'βaːɾə', 'βo̞ˑd̪ɹ̩']
+ɡ > kʰ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Veenkolonien: ['jʊŋkʰ', 'deŋkʰ', 'riŋkʰ']
 
-f > β	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Veenkolonien: ['βiːβə', 'βaːɾə', 'βo̞ˑd̪ɹ̩']
+d > tʰ / N _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Veenkolonien: ['häntʰ', 'hʊntʰ', 'vɪntʰ']
 
-u > oˑ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Veenkolonien: ['oˑbm̩', 'koˑɾn̩', 'oˑvɹˠ̩']
-
-u > oˑ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Veenkolonien: ['oˑbm̩', 'koˑɾn̩', 'oˑvɹˠ̩']
-
-u > oː / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Veenkolonien: ['noːɹt', 'voːɹt', 'doːɾn̩']
-
-u > oː / _ R	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Veenkolonien: ['noːɹt', 'voːɹt', 'doːɾn̩']
-
-n > ∅ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Veenkolonien: ['læːɡ', 'βiːβə', 'mɔ̃ˑt']
-
-f > β / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Veenkolonien: ['βiːβə', 'βaːɾə', 'βo̞ˑd̪ɹ̩']
-
-e > ɛ̝ˑɪ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Veenkolonien: ['knɛ̝ˑɪ', 'zɛ̝ˑɪ', 'ɛ̝ˑɪt']
-
-∅ > ə / N _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Veenkolonien: ['tʰa̠nə', 'tʰinə', 'tʰɑʊnə']
-
-and 100 more
+and 113 more
 =====================================
 
 Walser
 -------
-13 correspondences above the threshold (70% importance)
+14 correspondences above the threshold (70% importance)
 
-ɡ > ɡ / cons _	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Walser: ['t͡sʊŋɡə', 'hʊŋɡəɾ̥', 'lɪŋɡ', 'rɪŋɡ', 'jʊŋɡ']
+ɡ > ɡ / cons _	100.00	(rep: 100.00, dist: 100.00)	(6 times)
+Walser: ['lɪŋɡ', 'jʊŋɡ', 't͡sʊŋɡə', 'hʊŋɡəɾ̥', 'dɪ̝ŋɡ', 'rɪŋɡ']
 
-ɡ > ɡ / N _	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Walser: ['t͡sʊŋɡə', 'hʊŋɡəɾ̥', 'lɪŋɡ', 'rɪŋɡ', 'jʊŋɡ']
+ɡ > ɡ / N _	100.00	(rep: 100.00, dist: 100.00)	(6 times)
+Walser: ['lɪŋɡ', 'jʊŋɡ', 't͡sʊŋɡə', 'hʊŋɡəɾ̥', 'dɪ̝ŋɡ', 'rɪŋɡ']
+
+u > oː / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Walser: ['hoːɾə', 'doːɾə', 'ʔoːɸə']
+
+u > oː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Walser: ['hoːɾə', 'doːɾə', 'ʔoːɸə']
 
 k > x / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['xu̞ˑɛ̈', 'xa̠ˑlp', 'xa̠ːlt']
+Walser: ['xa̠ːlt', 'xu̞ˑɛ̈', 'xa̠ˑlp']
 
 k > x / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['xu̞ˑɛ̈', 'xa̠ˑlp', 'xa̠ːlt']
+Walser: ['xa̠ːlt', 'xu̞ˑɛ̈', 'xa̠ˑlp']
 
 k > x	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['xu̞ˑɛ̈', 'xa̠ˑlp', 'xa̠ːlt']
+Walser: ['xa̠ːlt', 'xu̞ˑɛ̈', 'xa̠ˑlp']
 
 eː > a̠ː / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['na̠ːdlə', 'ja̠ːr̥', 'ma̠ːna̠']
+Walser: ['ma̠ːna̠', 'na̠ːdlə', 'ja̠ːr̥']
 
 eː > a̠ː / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['na̠ːdlə', 'ja̠ːr̥', 'ma̠ːna̠']
+Walser: ['ma̠ːna̠', 'na̠ːdlə', 'ja̠ːr̥']
 
 eː > a̠ː	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['na̠ːdlə', 'ja̠ːr̥', 'ma̠ːna̠']
-
-e > a̠ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['ra̠ɡə', 'ʔa̠s', 'ʔa̠rdə']
+Walser: ['ma̠ːna̠', 'na̠ːdlə', 'ja̠ːr̥']
 
 e > a̠	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['ra̠ɡə', 'ʔa̠s', 'ʔa̠rdə']
+Walser: ['ʔa̠rdə', 'ra̠ɡə', 'ʔa̠s']
 
 ai > æˑɪ̝	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['ʔæˑɪ̝s', 'ʃtæˑɪ̝', 'bæˑɪ̝']
+Walser: ['ʔæˑɪ̝s', 'bæˑɪ̝', 'ʃtæˑɪ̝']
 
 ai > æɪ̝ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['hæɪ̝lɪ̝k', 'hæɪ̝mət', 'ʔæɪ̝x̟ə']
+Walser: ['hæɪ̝lɪ̝k', 'ʔæɪ̝x̟ə', 'hæɪ̝mət']
 
 ai > æɪ̝	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Walser: ['hæɪ̝lɪ̝k', 'hæɪ̝mət', 'ʔæɪ̝x̟ə']
+Walser: ['hæɪ̝lɪ̝k', 'ʔæɪ̝x̟ə', 'hæɪ̝mət']
 
-and 124 more
+and 120 more
 =====================================
 
 Westerkwartier
 -------
-18 correspondences above the threshold (70% importance)
-
-t > tʰ / cons _	100.00	(rep: 100.00, dist: 100.00)	(5 times)
-Westerkwartier: ['na̟̞χtʰ', 'fastʰ', 'ɹ̝ɛaxtʰ', 'fɛæχtʰ', 'ʔaχtʰ']
-
-t > tʰ / G _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Westerkwartier: ['na̟̞χtʰ', 'ɹ̝ɛaxtʰ', 'fɛæχtʰ', 'ʔaχtʰ']
+15 correspondences above the threshold (70% importance)
 
 s > s̠ʲ	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Westerkwartier: ['hys̠ʲ', 's̠ʲø̞ːbⁿm̩', 'fɪs̠ʲ', 'z̥ɛˑs̠ʲ']
+Westerkwartier: ['z̥ɛˑs̠ʲ', 's̠ʲø̞ːbⁿm̩', 'fɪs̠ʲ', 'hys̠ʲ']
 
-d > tʰ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Westerkwartier: ['rɒotʰ', 'blʊutʰ', 'xutʰ', 'hundə̠tʰ']
-
-d > tʰ / cons _	100.00	(rep: 100.00, dist: 100.00)	(4 times)
-Westerkwartier: ['voˑɹtʰ', 'hɔ̃ntʰ', 'kʰoɫtʰ', 'vintʰ']
+r > ɹ̝	100.00	(rep: 100.00, dist: 100.00)	(4 times)
+Westerkwartier: ['ʒeˑɛɹ̝', 'ɹ̝ɛaxtʰ', 'bruɤɹ̝', 'joˑɹ̝']
 
 ɡ > x / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['xɣ̞ɶn', 'xa̠ns̠ʲ', 'xutʰ']
+Westerkwartier: ['xɣ̞ɶn', 'xutʰ', 'xa̠ns̠ʲ']
+
+t > tʰ / G _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Westerkwartier: ['ʔaχtʰ', 'ɹ̝ɛaxtʰ', 'na̟̞χtʰ']
 
 s > ʒ / # _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['ʒøɛχ', 'ʒveˑæɹ̝̥', 'ʒeˑɛɹ̝']
+Westerkwartier: ['ʒeˑɛɹ̝', 'ʒøɛχ', 'ʒveˑæɹ̝̥']
 
 s > ʒ	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['ʒøɛχ', 'ʒveˑæɹ̝̥', 'ʒeˑɛɹ̝']
-
-r > ɹ̝	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['joˑɹ̝', 'ɹ̝ɛaxtʰ', 'ʒeˑɛɹ̝']
-
-r > r / _ E	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['reiɡⁿŋ̩', 'rẽˑŋ', 'drẽŋkʰ']
+Westerkwartier: ['ʒeˑɛɹ̝', 'ʒøɛχ', 'ʒveˑæɹ̝̥']
 
 oː > u / cons _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['mukɐ̝', 'futʰ', 'xutʰ']
+Westerkwartier: ['xutʰ', 'futʰ', 'mukɐ̝']
 
 oː > u / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['mukɐ̝', 'futʰ', 'xutʰ']
+Westerkwartier: ['xutʰ', 'futʰ', 'mukɐ̝']
 
 oː > u	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['mukɐ̝', 'futʰ', 'xutʰ']
+Westerkwartier: ['xutʰ', 'futʰ', 'mukɐ̝']
+
+n > ŋ / E _	100.00	(rep: 100.00, dist: 100.00)	(3 times)
+Westerkwartier: ['deːŋ', 'rẽˑŋ', 'drẽŋkʰ']
 
 l > ɫ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['kʰɑ̝ɫf', 'zʏ̈ɫt͡s', 'kʰoɫtʰ']
+Westerkwartier: ['kʰoɫtʰ', 'kʰɑ̝ɫf', 'zʏ̈ɫt͡s']
 
 e > e / _ cons	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['ʒ̥etʰ', 'ʔeʃ', 'neɡⁿŋ̩']
+Westerkwartier: ['neɡⁿŋ̩', 'ʔeʃ', 'ʒ̥etʰ']
 
 e > e	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['ʒ̥etʰ', 'ʔeʃ', 'neɡⁿŋ̩']
+Westerkwartier: ['neɡⁿŋ̩', 'ʔeʃ', 'ʒ̥etʰ']
 
 a > a / _ S	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['ʔaʃ', 'fastʰ', 'vaʃ']
+Westerkwartier: ['fastʰ', 'ʔaʃ', 'vaʃ']
 
 ∅ > ʔ / _ E	100.00	(rep: 100.00, dist: 100.00)	(3 times)
-Westerkwartier: ['ʔeʃ', 'ʔæitʰ', 'ʔe̝ɛdæ']
+Westerkwartier: ['ʔe̝ɛdæ', 'ʔeʃ', 'ʔæitʰ']
 
-and 89 more
+and 96 more
+=====================================
+
+Veenkolonien, Westerkwartier
+-------
+13 correspondences above the threshold (70% importance)
+
+t > tʰ / cons _	100.00	(rep: 100.00, dist: 100.00)	(9 times)
+Veenkolonien: ['ʔäχtʰ', 'fäˑstʰ', 'ræˑçtʰ', 'zɔltʰ', 'na̠χtʰ']
+Westerkwartier: ['ʔaχtʰ', 'fastʰ', 'ɹ̝ɛaxtʰ', 'na̟̞χtʰ']
+
+d > tʰ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(8 times)
+Veenkolonien: ['hʊnʌtʰ', 'routʰ', 'ɡäo̝tʰ', 'bläu̞tʰ']
+Westerkwartier: ['hundə̠tʰ', 'rɒotʰ', 'xutʰ', 'blʊutʰ']
+
+d > tʰ / cons _	100.00	(rep: 100.00, dist: 100.00)	(8 times)
+Veenkolonien: ['kʰo̞ltʰ', 'häntʰ', 'hʊntʰ', 'vɪntʰ']
+Westerkwartier: ['kʰoɫtʰ', 'voˑɹtʰ', 'hɔ̃ntʰ', 'vintʰ']
+
+r > r / _ E	100.00	(rep: 100.00, dist: 100.00)	(6 times)
+Veenkolonien: ['drɛ̠i', 'ræˑçtʰ', 'dreŋkʰ']
+Westerkwartier: ['reiɡⁿŋ̩', 'rẽˑŋ', 'drẽŋkʰ']
+
+n > m̩	100.00	(rep: 100.00, dist: 100.00)	(6 times)
+Veenkolonien: ['søːbⁿm̩', 'ʔoˑbⁿm̩', 'ʔopⁿm̩']
+Westerkwartier: ['s̠ʲø̞ːbⁿm̩', 'ʔɔobⁿm̩', 'ʔɔupⁿm̩']
+
+d > tʰ	77.27	(rep: 100.00, dist: 62.96)	(21 times)
+Veenkolonien: ['hʊnʌtʰ', 'routʰ', 'nɔˑk̚tʰ', 'ɡäo̝tʰ', 'kʰo̞ltʰ', 'hɑoptʰ', 'häntʰ', 'bläu̞tʰ', 'voʌtʰ', 'hʊntʰ', 'vɪntʰ']
+Westerkwartier: ['hundə̠tʰ', 'rɒotʰ', 'noɡ̥tʰ', 'xutʰ', 'kʰoɫtʰ', 'hœftʰ', 'blʊutʰ', 'voˑɹtʰ', 'hɔ̃ntʰ', 'vintʰ']
+
+t > tʰ / vowel _	77.27	(rep: 100.00, dist: 62.96)	(15 times)
+Veenkolonien: ['vɪtʰ', 'betʰɐ', 'fɑutʰ', 'ʔeitʰ', 'bitʰ', 'zɪtʰ', 'v̥ätʰ', 'ʔutʰ']
+Westerkwartier: ['vetʰ', 'futʰ', 'ʔæitʰ', 'bitʰ', 'ʒ̥etʰ', 'va̠tʰ', 'ʔʏ̈tʰ']
+
+t > tʰ / _ #	77.27	(rep: 100.00, dist: 62.96)	(8 times)
+Veenkolonien: ['ʔeitʰ', 'bitʰ', 'v̥ätʰ', 'ʔutʰ']
+Westerkwartier: ['ʔæitʰ', 'bitʰ', 'va̠tʰ', 'ʔʏ̈tʰ']
+
+t > d̥ / _ vowel	77.27	(rep: 100.00, dist: 62.96)	(7 times)
+Veenkolonien: ['ʃd̥e̞in', 'ʃd̥øɤm', 'ʃd̥ä̠ol']
+Westerkwartier: ['bɛ̟ˑd̥ɐ', 'ʃd̥æin', 'ʃd̥øœ̽m', 'ʃd̥äɔɫ']
+
+t > d̥	77.27	(rep: 100.00, dist: 62.96)	(7 times)
+Veenkolonien: ['ʃd̥e̞in', 'ʃd̥øɤm', 'ʃd̥ä̠ol']
+Westerkwartier: ['bɛ̟ˑd̥ɐ', 'ʃd̥æin', 'ʃd̥øœ̽m', 'ʃd̥äɔɫ']
+
+and 121 more
 =====================================
 
 Cologne, Luxembourg
 -------
-5 correspondences above the threshold (70% importance)
-
-x > ʃ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(6 times)
-Cologne: ['zøʃ', 'ʀɛˑɪʃ', 'fɛ̝ʃ']
-Luxembourg: ['nuɛ̈ʃt', 'fæʃt', 'dʊɪʃtɐ']
-
-x > ʃ	100.00	(rep: 100.00, dist: 100.00)	(6 times)
-Cologne: ['zøʃ', 'ʀɛˑɪʃ', 'fɛ̝ʃ']
-Luxembourg: ['nuɛ̈ʃt', 'fæʃt', 'dʊɪʃtɐ']
+3 correspondences above the threshold (70% importance)
 
 r > ʀ	77.27	(rep: 100.00, dist: 62.96)	(9 times)
-Cologne: ['ʃtʊʀm', 'ʀɛ̝ˑn', 'dʀe̝ˑɪ', 'ʀɪŋ', 'ʀɛˑɪʃ']
-Luxembourg: ['ʀoːt', 'dʀaˑɪ', 'ʀiˑət͡s', 'dʀɪŋˑk']
+Cologne: ['dʀe̝ˑɪ', 'ʀɛˑɪʃ', 'ʀɛ̝ˑn', 'ʃtʊʀm', 'ʀɪŋ']
+Luxembourg: ['dʀaˑɪ', 'ʀœ̈ʊˑt', 'ʀiˑət͡s', 'dʀɪŋˑk']
 
 r > ʀ / _ vowel	77.27	(rep: 100.00, dist: 62.96)	(8 times)
-Cologne: ['ʀɛ̝ˑn', 'dʀe̝ˑɪ', 'ʀɪŋ', 'ʀɛˑɪʃ']
-Luxembourg: ['ʀoːt', 'dʀaˑɪ', 'ʀiˑət͡s', 'dʀɪŋˑk']
+Cologne: ['dʀe̝ˑɪ', 'ʀɛˑɪʃ', 'ʀɛ̝ˑn', 'ʀɪŋ']
+Luxembourg: ['dʀaˑɪ', 'ʀœ̈ʊˑt', 'ʀiˑət͡s', 'dʀɪŋˑk']
 
 k > ʃ	77.27	(rep: 100.00, dist: 62.96)	(6 times)
-Cologne: ['mɪləʃ', 'ʔiʃ', 'ʔɛ̝ˑɪʃ']
-Luxembourg: ['mɨ̞lɪ̠ʃ', 'ʔœ̈ʃ', 'ʔeːʃ']
+Cologne: ['ʔɛ̝ˑɪʃ', 'mɪləʃ', 'ʔiʃ']
+Luxembourg: ['ʔeːʃ', 'mɨ̞lɪ̠ʃ', 'ʔœ̈ʃ']
 
-and 146 more
+and 153 more
+=====================================
+
+Feer, Heligoland
+-------
+4 correspondences above the threshold (70% importance)
+
+s > s / _ K	100.00	(rep: 100.00, dist: 100.00)	(8 times)
+Feer: ['sɡ̥arap', 'fask', 'ʔe̝ːskʰ', 'vaske']
+Heligoland: ['sɡ̥äpʰ', 'fɛsk', 'ʔe̞asɡən', 'vɐsɡə']
+
+d > ∅ / N _	100.00	(rep: 100.00, dist: 100.00)	(8 times)
+Feer: ['hʊnɐ̞tʰ', 'hʊn', 'hy̟ɲ', 'viɲ']
+Heligoland: ['hɒnɐˑtʰ', 'hɔ̟n', 'hɪ̞n', 'vɪn']
+
+d > ∅ / cons _	77.27	(rep: 100.00, dist: 62.96)	(10 times)
+Feer: ['hʊnɐ̞tʰ', 'kʰuˑl', 'hʊn', 'hy̟ɲ', 'viɲ']
+Heligoland: ['hɒnɐˑtʰ', 'kʰuˑl', 'hɔ̟n', 'hɪ̞n', 'vɪn']
+
+k > k / cons _	77.27	(rep: 100.00, dist: 62.96)	(7 times)
+Feer: ['fask', 'muəlk', 'draŋk', 'vaske']
+Heligoland: ['fɛsk', 'mo̞lk', 'dʁɪŋk']
+
+and 98 more
 =====================================
 
 Tuebingen, Cologne, Luxembourg
 -------
-3 correspondences above the threshold (70% importance)
+1 correspondences above the threshold (70% importance)
 
 n > nˑ	80.00	(rep: 66.67, dist: 100.00)	(7 times)
-Tuebingen: ['hänˑt', 'hɒnˑ', 'munˑt', 'kʰɔ̞nˑ']
+Tuebingen: ['munˑt', 'hänˑt', 'hɒnˑ', 'kʰɔ̞nˑ']
 Cologne: ['t͡sa̠nˑt', 'ha̠nˑt', 'vɪnˑt']
 
-x > ʃ / vowel _	80.00	(rep: 66.67, dist: 100.00)	(6 times)
-Cologne: ['zøʃ', 'ʀɛˑɪʃ', 'fɛ̝ʃ']
-Luxembourg: ['nuɛ̈ʃt', 'fæʃt', 'dʊɪʃtɐ']
-
-x > ʃ	80.00	(rep: 66.67, dist: 100.00)	(6 times)
-Cologne: ['zøʃ', 'ʀɛˑɪʃ', 'fɛ̝ʃ']
-Luxembourg: ['nuɛ̈ʃt', 'fæʃt', 'dʊɪʃtɐ']
-
-and 178 more
+and 184 more
 =====================================
 
 Graubuenden, Walser
 -------
-4 correspondences above the threshold (70% importance)
+3 correspondences above the threshold (70% importance)
 
 a > a̠ˑ / cons _	100.00	(rep: 100.00, dist: 100.00)	(7 times)
-Graubuenden: ['na̠ˑχt', 'na̠ˑmɐ', 'fa̠ˑtˑr̩']
-Walser: ['ha̠ˑnt', 'xa̠ˑlp', 'na̠ˑma̠', 'na̠ˑkɪ̝k']
+Graubuenden: ['fa̠ˑtˑr̩', 'na̠ˑmɐ', 'na̠ˑχt']
+Walser: ['na̠ˑkɪ̝k', 'ha̠ˑnt', 'na̠ˑma̠', 'xa̠ˑlp']
 
 a > a̠ˑ / _ cons	77.27	(rep: 100.00, dist: 62.96)	(8 times)
-Graubuenden: ['na̠ˑχt', 'na̠ˑmɐ', 'fa̠ˑtˑr̩']
-Walser: ['ha̠ˑnt', 'xa̠ˑlp', 'na̠ˑma̠', 'ʃa̠ˑɹɸ', 'na̠ˑkɪ̝k']
+Graubuenden: ['fa̠ˑtˑr̩', 'na̠ˑmɐ', 'na̠ˑχt']
+Walser: ['ʃa̠ˑɹɸ', 'na̠ˑkɪ̝k', 'ha̠ˑnt', 'na̠ˑma̠', 'xa̠ˑlp']
 
 a > a̠ˑ	77.27	(rep: 100.00, dist: 62.96)	(8 times)
-Graubuenden: ['na̠ˑχt', 'na̠ˑmɐ', 'fa̠ˑtˑr̩']
-Walser: ['ha̠ˑnt', 'xa̠ˑlp', 'na̠ˑma̠', 'ʃa̠ˑɹɸ', 'na̠ˑkɪ̝k']
+Graubuenden: ['fa̠ˑtˑr̩', 'na̠ˑmɐ', 'na̠ˑχt']
+Walser: ['ʃa̠ˑɹɸ', 'na̠ˑkɪ̝k', 'ha̠ˑnt', 'na̠ˑma̠', 'xa̠ˑlp']
 
-w > ∅ / K _	77.27	(rep: 100.00, dist: 62.96)	(6 times)
-Graubuenden: ['k̟ʰɛ̝k̟', 'näˑkt']
-Walser: ['kʰɛ̝k', 'na̠ˑkɪ̝k']
-
-and 174 more
-=====================================
-
-Antwerp, Ostend
--------
-8 correspondences above the threshold (70% importance)
-
-x > ∅ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(17 times)
-Antwerp: ['aˑɪ̞lɪç', 'ʊ̞ŋəs̠', 'o̞əs̠', 'ɔɐs', 'ɐ̠ʊnt', 'o̞ːɾən', 'ʌndəs̠tʰ']
-Ostend: ['a̝rtə', 'ɛləç', 'ɑ̈nt', 'ʊŋr̩̥', 'ɔ̝ːs̠', 'ʉ̟s', 'ʊnt', 'ɔːɾən', 'o̞ːft', 'ʊndr̩t']
-
-r > s̠	100.00	(rep: 100.00, dist: 100.00)	(11 times)
-Antwerp: ['nɔs̠t', 'β̞ɔˑs̠t', 'd͡zvɛ̝ːs̠', 'mo̞ːd̪əs̠', 'viːs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠']
-Ostend: ['leːvəs̠', 'sβaːs̠', 'zɛːs̠', 'dɔ̞χtəs̠']
-
-r > s̠ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(10 times)
-Antwerp: ['nɔs̠t', 'β̞ɔˑs̠t', 'd͡zvɛ̝ːs̠', 'mo̞ːd̪əs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠']
-Ostend: ['leːvəs̠', 'sβaːs̠', 'zɛːs̠', 'dɔ̞χtəs̠']
-
-k > k̟ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(6 times)
-Antwerp: ['ik̟', 'kβ̞ɪ̝k̟', 'aˑɪk̟']
-Ostend: ['ɛ̝k̟', 'kβ̞ɪk̟', 'ɛ̝ːk̟']
-
-f > v	77.27	(rep: 100.00, dist: 62.96)	(12 times)
-Antwerp: ['o̞ːvə', 'vaːf', 'vɔɫ', 'viːs̠', 'vɪs']
-Ostend: ['vɑ̈stə', 'ɔ̝ːvn̩', 'vø̈və', 'vu̞ˑət', 'viˑəɾə', 'vɛs']
-
-k > k̟	77.27	(rep: 100.00, dist: 62.96)	(10 times)
-Antwerp: ['mɛlək̟', 'ik̟', 'dɾɪ̝ŋk̟', 'kβ̞ɪ̝k̟', 'aˑɪk̟']
-Ostend: ['ma̠ˑɔ̈k̟', 'ɛ̝k̟', 'dɾɪŋk̟', 'kβ̞ɪk̟', 'ɛ̝ːk̟']
-
-f > v / _ vowel	77.27	(rep: 100.00, dist: 62.96)	(10 times)
-Antwerp: ['vaːf', 'vɔɫ', 'viːs̠', 'vɪs']
-Ostend: ['vɑ̈stə', 'vø̈və', 'vu̞ˑət', 'viˑəɾə', 'vɛs']
-
-f > v / # _	77.27	(rep: 100.00, dist: 62.96)	(9 times)
-Antwerp: ['vaːf', 'vɔɫ', 'viːs̠', 'vɪs']
-Ostend: ['vɑ̈stə', 'vø̈və', 'vu̞ˑət', 'viˑəɾə', 'vɛs']
-
-and 169 more
+and 175 more
 =====================================
 
 Herrlisheim, Ortisei
@@ -1137,188 +1067,196 @@ Herrlisheim, Ortisei
 10 correspondences above the threshold (70% importance)
 
 a > ɔ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(10 times)
-Herrlisheim: ['kʰɔlp', 'sɔls', 'ʔɔl', 'kʰɔlt', 'ɡɔns', 'nɔkətʰ']
-Ortisei: ['kʰɔlp', 'nɔχt', 'kʰɔlt͡s', 'nɔkt͡s']
+Herrlisheim: ['ʔɔl', 'nɔkətʰ', 'kʰɔlt', 'ɡɔns', 'kʰɔlp', 'sɔls']
+Ortisei: ['nɔkt͡s', 'kʰɔlt͡s', 'kʰɔlp', 'nɔχt']
 
 a > ɔ	100.00	(rep: 100.00, dist: 100.00)	(10 times)
-Herrlisheim: ['kʰɔlp', 'sɔls', 'ʔɔl', 'kʰɔlt', 'ɡɔns', 'nɔkətʰ']
-Ortisei: ['kʰɔlp', 'nɔχt', 'kʰɔlt͡s', 'nɔkt͡s']
+Herrlisheim: ['ʔɔl', 'nɔkətʰ', 'kʰɔlt', 'ɡɔns', 'kʰɔlp', 'sɔls']
+Ortisei: ['nɔkt͡s', 'kʰɔlt͡s', 'kʰɔlp', 'nɔχt']
 
 r > χ / _ cons	100.00	(rep: 100.00, dist: 100.00)	(9 times)
-Herrlisheim: ['häχt͡s', 'noχt', 'voχt', 'ɡɔːχtə', 'ʔäχt', 'ʃɒ̝χf']
+Herrlisheim: ['ʃɒ̝χf', 'häχt͡s', 'voχt', 'noχt', 'ʔäχt', 'ɡɔːχtə']
 Ortisei: ['hɛχt͡s', 'no̞χt͡s', 'ɡɔ̞χtn̩']
 
 a > ɔ / cons _	100.00	(rep: 100.00, dist: 100.00)	(9 times)
-Herrlisheim: ['kʰɔlp', 'sɔls', 'kʰɔlt', 'ɡɔns', 'nɔkətʰ']
-Ortisei: ['kʰɔlp', 'nɔχt', 'kʰɔlt͡s', 'nɔkt͡s']
+Herrlisheim: ['nɔkətʰ', 'kʰɔlt', 'ɡɔns', 'kʰɔlp', 'sɔls']
+Ortisei: ['nɔkt͡s', 'kʰɔlt͡s', 'kʰɔlp', 'nɔχt']
 
-r > χ	77.27	(rep: 100.00, dist: 62.96)	(28 times)
-Herrlisheim: ['häχt͡s', 'noχt', 'voχt', 'joːχ', 'ʃvœːχ', 'møˑətə̠χ', 'ɡɔːχtə', 'ʔäχt', 'sɛ̝ːχ', 'bʁe̝ːdə̠χ', 'fiˑəχ', 'ʃɒ̝χf', 'fɒtə̠χ', 'ʔe̝βə̠χ', 'do̞ːχtə̠χ']
-Ortisei: ['hɛχt͡s', 'leːbəχ', 'no̞χt͡s', 'jɔːχ', 'ʃβøːχ', 'mʊətəχ', 'ɡɔ̞χtn̩', 'sɛ̝ːχ', 'bʁʊədəχ', 'fiˑəχ', 'fo̞ətəχ', 'ʔyːbəχ', 'dɔχtəχ']
+r > χ	77.27	(rep: 100.00, dist: 62.96)	(29 times)
+Herrlisheim: ['fiˑəχ', 'ʃɒ̝χf', 'sɛ̝ːχ', 'häχt͡s', 'läβə̠χ', 'møˑətə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ', 'bʁe̝ːdə̠χ', 'voχt', 'noχt', 'ʔäχt', 'ɡɔːχtə', 'ʃvœːχ', 'ʔe̝βə̠χ', 'joːχ']
+Ortisei: ['fiˑəχ', 'sɛ̝ːχ', 'hɛχt͡s', 'leːbəχ', 'mʊətəχ', 'fo̞ətəχ', 'dɔχtəχ', 'bʁʊədəχ', 'no̞χt͡s', 'ɡɔ̞χtn̩', 'ʃβøːχ', 'ʔyːbəχ', 'jɔːχ']
 
-r > χ / vowel _	77.27	(rep: 100.00, dist: 62.96)	(26 times)
-Herrlisheim: ['häχt͡s', 'noχt', 'voχt', 'joːχ', 'ʃvœːχ', 'møˑətə̠χ', 'ɡɔːχtə', 'ʔäχt', 'sɛ̝ːχ', 'bʁe̝ːdə̠χ', 'ʃɒ̝χf', 'fɒtə̠χ', 'ʔe̝βə̠χ', 'do̞ːχtə̠χ']
-Ortisei: ['hɛχt͡s', 'leːbəχ', 'no̞χt͡s', 'jɔːχ', 'ʃβøːχ', 'mʊətəχ', 'ɡɔ̞χtn̩', 'sɛ̝ːχ', 'bʁʊədəχ', 'fo̞ətəχ', 'ʔyːbəχ', 'dɔχtəχ']
+r > χ / vowel _	77.27	(rep: 100.00, dist: 62.96)	(27 times)
+Herrlisheim: ['ʃɒ̝χf', 'sɛ̝ːχ', 'häχt͡s', 'läβə̠χ', 'møˑətə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ', 'bʁe̝ːdə̠χ', 'voχt', 'noχt', 'ʔäχt', 'ɡɔːχtə', 'ʃvœːχ', 'ʔe̝βə̠χ', 'joːχ']
+Ortisei: ['sɛ̝ːχ', 'hɛχt͡s', 'leːbəχ', 'mʊətəχ', 'fo̞ətəχ', 'dɔχtəχ', 'bʁʊədəχ', 'no̞χt͡s', 'ɡɔ̞χtn̩', 'ʃβøːχ', 'ʔyːbəχ', 'jɔːχ']
 
 r > χ / E _	77.27	(rep: 100.00, dist: 62.96)	(11 times)
-Herrlisheim: ['møˑətə̠χ', 'bʁe̝ːdə̠χ', 'fɒtə̠χ', 'ʔe̝βə̠χ', 'do̞ːχtə̠χ']
-Ortisei: ['hɛχt͡s', 'mʊətəχ', 'bʁʊədəχ', 'fo̞ətəχ', 'ʔyːbəχ', 'dɔχtəχ']
+Herrlisheim: ['møˑətə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ', 'bʁe̝ːdə̠χ', 'ʔe̝βə̠χ']
+Ortisei: ['hɛχt͡s', 'mʊətəχ', 'fo̞ətəχ', 'dɔχtəχ', 'bʁʊədəχ', 'ʔyːbəχ']
 
-z > χ / vowel _	77.27	(rep: 100.00, dist: 62.96)	(10 times)
-Herrlisheim: ['bɛ̝səχ', 'hʊŋəχ', 'donəχ', 'he̝ːχ', 'ʔoːχ']
-Ortisei: ['bɪsəχ', 'hʊŋɡəχ', 'dɔ̈nəχ', 'hɛ̝ːχ', 'ʔoːχ']
+z > χ / vowel _	77.27	(rep: 100.00, dist: 62.96)	(9 times)
+Herrlisheim: ['bɛ̝səχ', 'ʔoːχ', 'donəχ', 'hʊŋəχ', 'he̝ːχ']
+Ortisei: ['bɪsəχ', 'ʔoːχ', 'dɔ̈nəχ', 'hʊŋɡəχ']
 
-z > χ	77.27	(rep: 100.00, dist: 62.96)	(10 times)
-Herrlisheim: ['bɛ̝səχ', 'hʊŋəχ', 'donəχ', 'he̝ːχ', 'ʔoːχ']
-Ortisei: ['bɪsəχ', 'hʊŋɡəχ', 'dɔ̈nəχ', 'hɛ̝ːχ', 'ʔoːχ']
+z > χ	77.27	(rep: 100.00, dist: 62.96)	(9 times)
+Herrlisheim: ['bɛ̝səχ', 'ʔoːχ', 'donəχ', 'hʊŋəχ', 'he̝ːχ']
+Ortisei: ['bɪsəχ', 'ʔoːχ', 'dɔ̈nəχ', 'hʊŋɡəχ']
 
 r > χ / _ #	77.27	(rep: 100.00, dist: 62.96)	(8 times)
-Herrlisheim: ['møˑətə̠χ', 'bʁe̝ːdə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ']
-Ortisei: ['mʊətəχ', 'bʁʊədəχ', 'fo̞ətəχ', 'dɔχtəχ']
+Herrlisheim: ['møˑətə̠χ', 'fɒtə̠χ', 'do̞ːχtə̠χ', 'bʁe̝ːdə̠χ']
+Ortisei: ['mʊətəχ', 'fo̞ətəχ', 'dɔχtəχ', 'bʁʊədəχ']
 
-and 169 more
+and 176 more
 =====================================
 
-Achterhoek, Veenkolonien
+Antwerp, Ostend
 -------
-0 correspondences above the threshold (70% importance)
+7 correspondences above the threshold (70% importance)
 
-and 147 more
+x > ∅ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(17 times)
+Antwerp: ['ʌndəs̠tʰ', 'aˑɪ̞lɪç', 'ɐ̠ʊnt', 'o̞ːɾən', 'ʊ̞ŋəs̠', 'ɔɐs', 'o̞əs̠']
+Ostend: ['ʊndr̩t', 'ɛləç', 'o̞ːft', 'ɑ̈nt', 'a̝rtə', 'ʊnt', 'ɔːɾən', 'ʊŋr̥̩', 'ʉ̟s', 'ɔ̝ːs̠']
+
+r > s̠	100.00	(rep: 100.00, dist: 100.00)	(12 times)
+Antwerp: ['viːs̠', 'mo̞ːd̪əs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠', 'bɾuːs̠', 'β̞ɔˑs̠t', 'nɔs̠t', 'd͡zvɛ̝ːs̠']
+Ostend: ['zɛːs̠', 'leːvəs̠', 'dɔ̞χtəs̠', 'sβaːs̠']
+
+r > s̠ / vowel _	100.00	(rep: 100.00, dist: 100.00)	(10 times)
+Antwerp: ['mo̞ːd̪əs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠', 'β̞ɔˑs̠t', 'nɔs̠t', 'd͡zvɛ̝ːs̠']
+Ostend: ['zɛːs̠', 'leːvəs̠', 'dɔ̞χtəs̠', 'sβaːs̠']
+
+k > k̟	100.00	(rep: 100.00, dist: 100.00)	(8 times)
+Antwerp: ['aˑɪk̟', 'mɛlək̟', 'dɾɪ̝ŋk̟', 'ik̟']
+Ostend: ['ɛ̝ːk̟', 'ma̠ˑɔ̈k̟', 'dɾɪŋk̟', 'ɛ̝k̟']
+
+f > v	77.27	(rep: 100.00, dist: 62.96)	(11 times)
+Antwerp: ['viːs̠', 'vaːf', 'vɔɫ', 'vɪs', 'o̞ːvə']
+Ostend: ['viˑəɾə', 'vø̈və', 'vɑ̈stə', 'vu̞ˑət', 'vɛs', 'ɔ̝ːvn̩']
+
+f > v / _ vowel	77.27	(rep: 100.00, dist: 62.96)	(9 times)
+Antwerp: ['viːs̠', 'vaːf', 'vɔɫ', 'vɪs']
+Ostend: ['viˑəɾə', 'vø̈və', 'vɑ̈stə', 'vu̞ˑət', 'vɛs']
+
+f > v / # _	77.27	(rep: 100.00, dist: 62.96)	(9 times)
+Antwerp: ['viːs̠', 'vaːf', 'vɔɫ', 'vɪs']
+Ostend: ['viˑəɾə', 'vø̈və', 'vɑ̈stə', 'vu̞ˑət', 'vɛs']
+
+and 174 more
 =====================================
 
 Dutch_Std_BE, Antwerp, Ostend
 -------
-15 correspondences above the threshold (70% importance)
+16 correspondences above the threshold (70% importance)
 
-f > v	100.00	(rep: 100.00, dist: 100.00)	(15 times)
-Dutch_Std_BE: ['vuˑt', 'viˑəɹ̝̥', 'vɪs']
-Antwerp: ['o̞ːvə', 'vaːf', 'vɔɫ', 'viːs̠', 'vɪs']
-Ostend: ['vɑ̈stə', 'ɔ̝ːvn̩', 'vø̈və', 'vu̞ˑət', 'viˑəɾə', 'vɛs']
+f > v	100.00	(rep: 100.00, dist: 100.00)	(14 times)
+Dutch_Std_BE: ['viˑəɹ̝̥', 'vuˑt', 'vɪs']
+Antwerp: ['viːs̠', 'vaːf', 'vɔɫ', 'vɪs', 'o̞ːvə']
+Ostend: ['viˑəɾə', 'vø̈və', 'vɑ̈stə', 'vu̞ˑət', 'vɛs', 'ɔ̝ːvn̩']
 
-k > k̟	100.00	(rep: 100.00, dist: 100.00)	(13 times)
-Dutch_Std_BE: ['d̪rɪŋk̟', 'kβ̞ik̟', 'ɛˑɪk̟']
-Antwerp: ['mɛlək̟', 'ik̟', 'dɾɪ̝ŋk̟', 'kβ̞ɪ̝k̟', 'aˑɪk̟']
-Ostend: ['ma̠ˑɔ̈k̟', 'ɛ̝k̟', 'dɾɪŋk̟', 'kβ̞ɪk̟', 'ɛ̝ːk̟']
-
-f > v / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(13 times)
-Dutch_Std_BE: ['vuˑt', 'viˑəɹ̝̥', 'vɪs']
-Antwerp: ['vaːf', 'vɔɫ', 'viːs̠', 'vɪs']
-Ostend: ['vɑ̈stə', 'vø̈və', 'vu̞ˑət', 'viˑəɾə', 'vɛs']
+f > v / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(12 times)
+Dutch_Std_BE: ['viˑəɹ̝̥', 'vuˑt', 'vɪs']
+Antwerp: ['viːs̠', 'vaːf', 'vɔɫ', 'vɪs']
+Ostend: ['viˑəɾə', 'vø̈və', 'vɑ̈stə', 'vu̞ˑət', 'vɛs']
 
 f > v / # _	100.00	(rep: 100.00, dist: 100.00)	(12 times)
-Dutch_Std_BE: ['vuˑt', 'viˑəɹ̝̥', 'vɪs']
-Antwerp: ['vaːf', 'vɔɫ', 'viːs̠', 'vɪs']
-Ostend: ['vɑ̈stə', 'vø̈və', 'vu̞ˑət', 'viˑəɾə', 'vɛs']
+Dutch_Std_BE: ['viˑəɹ̝̥', 'vuˑt', 'vɪs']
+Antwerp: ['viːs̠', 'vaːf', 'vɔɫ', 'vɪs']
+Ostend: ['viˑəɾə', 'vø̈və', 'vɑ̈stə', 'vu̞ˑət', 'vɛs']
+
+t > t / # _	82.76	(rep: 100.00, dist: 70.59)	(12 times)
+Dutch_Std_BE: ['tβ̞eː', 'tiːn', 'tʊ̞ŋ', 'ta̠nt', 'teːn']
+Antwerp: ['tʌŋ', 'ta̠nt', 'teən']
+Ostend: ['tiˑənə', 'tʊŋə', 'tɑ̈nt', 'tɛːn']
 
 x > ∅ / _ vowel	80.00	(rep: 66.67, dist: 100.00)	(17 times)
-Antwerp: ['aˑɪ̞lɪç', 'ʊ̞ŋəs̠', 'o̞əs̠', 'ɔɐs', 'ɐ̠ʊnt', 'o̞ːɾən', 'ʌndəs̠tʰ']
-Ostend: ['a̝rtə', 'ɛləç', 'ɑ̈nt', 'ʊŋr̩̥', 'ɔ̝ːs̠', 'ʉ̟s', 'ʊnt', 'ɔːɾən', 'o̞ːft', 'ʊndr̩t']
+Antwerp: ['ʌndəs̠tʰ', 'aˑɪ̞lɪç', 'ɐ̠ʊnt', 'o̞ːɾən', 'ʊ̞ŋəs̠', 'ɔɐs', 'o̞əs̠']
+Ostend: ['ʊndr̩t', 'ɛləç', 'o̞ːft', 'ɑ̈nt', 'a̝rtə', 'ʊnt', 'ɔːɾən', 'ʊŋr̥̩', 'ʉ̟s', 'ɔ̝ːs̠']
 
-r > s̠	80.00	(rep: 66.67, dist: 100.00)	(11 times)
-Antwerp: ['nɔs̠t', 'β̞ɔˑs̠t', 'd͡zvɛ̝ːs̠', 'mo̞ːd̪əs̠', 'viːs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠']
-Ostend: ['leːvəs̠', 'sβaːs̠', 'zɛːs̠', 'dɔ̞χtəs̠']
+r > s̠	80.00	(rep: 66.67, dist: 100.00)	(12 times)
+Antwerp: ['viːs̠', 'mo̞ːd̪əs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠', 'bɾuːs̠', 'β̞ɔˑs̠t', 'nɔs̠t', 'd͡zvɛ̝ːs̠']
+Ostend: ['zɛːs̠', 'leːvəs̠', 'dɔ̞χtəs̠', 'sβaːs̠']
 
 r > s̠ / vowel _	80.00	(rep: 66.67, dist: 100.00)	(10 times)
-Antwerp: ['nɔs̠t', 'β̞ɔˑs̠t', 'd͡zvɛ̝ːs̠', 'mo̞ːd̪əs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠']
-Ostend: ['leːvəs̠', 'sβaːs̠', 'zɛːs̠', 'dɔ̞χtəs̠']
+Antwerp: ['mo̞ːd̪əs̠', 'fɑ̟ːd̪əs̠', 'dɔxtəs̠', 'β̞ɔˑs̠t', 'nɔs̠t', 'd͡zvɛ̝ːs̠']
+Ostend: ['zɛːs̠', 'leːvəs̠', 'dɔ̞χtəs̠', 'sβaːs̠']
 
 u > o̞ː / _ cons	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Dutch_Std_BE: ['ho̞ːnɪŋ', 'o̞ːβn̩', 'ko̞ːɾən']
-Antwerp: ['o̞ːvə', 'do̞ːɾə', 'o̞ːɾən', 'ko̞ːrə', 'o̞ːfəɾ̥']
+Dutch_Std_BE: ['ho̞ːnɪŋ', 'ko̞ːɾən', 'o̞ːβn̩']
+Antwerp: ['o̞ːɾən', 'do̞ːɾə', 'ko̞ːrə', 'o̞ːvə', 'o̞ːfəɾ̥']
 Ostend: ['o̞ːvr̩']
 
 u > o̞ː	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Dutch_Std_BE: ['ho̞ːnɪŋ', 'o̞ːβn̩', 'ko̞ːɾən']
-Antwerp: ['o̞ːvə', 'do̞ːɾə', 'o̞ːɾən', 'ko̞ːrə', 'o̞ːfəɾ̥']
+Dutch_Std_BE: ['ho̞ːnɪŋ', 'ko̞ːɾən', 'o̞ːβn̩']
+Antwerp: ['o̞ːɾən', 'do̞ːɾə', 'ko̞ːrə', 'o̞ːvə', 'o̞ːfəɾ̥']
 Ostend: ['o̞ːvr̩']
 
-e > eː / cons _	80.00	(rep: 66.67, dist: 100.00)	(7 times)
-Dutch_Std_BE: ['zeː', 'reːʝn̩', 'zeːβn̩', 'neːʝn̩']
-Antwerp: ['reːçɪn', 'zeːv̥ə', 'neːʝə']
-Ostend: ['seːvn̩', 'neːhə̃']
+k > k̟	80.00	(rep: 66.67, dist: 100.00)	(8 times)
+Dutch_Std_BE: ['ɛˑɪk̟', 'd̪rɪŋk̟']
+Antwerp: ['aˑɪk̟', 'mɛlək̟', 'dɾɪ̝ŋk̟', 'ik̟']
+Ostend: ['ɛ̝ːk̟', 'ma̠ˑɔ̈k̟', 'dɾɪŋk̟', 'ɛ̝k̟']
 
-and 204 more
+and 203 more
 =====================================
 
-Feer, Heligoland
+Veenkolonien, Westerkwartier, Feer, Heligoland
 -------
-5 correspondences above the threshold (70% importance)
+9 correspondences above the threshold (70% importance)
 
-d > ∅ / cons _	100.00	(rep: 100.00, dist: 100.00)	(10 times)
-Feer: ['hʊn', 'hy̟ɲ', 'kʰuˑl', 'viɲ', 'hʊnɐ̞tʰ']
-Heligoland: ['hɔ̟n', 'hɪ̞n', 'kʰuˑl', 'vɪn', 'hɒnɐˑtʰ']
-
-s > s / _ K	100.00	(rep: 100.00, dist: 100.00)	(8 times)
-Feer: ['ʔe̝ːskʰ', 'vaske', 'fask', 'sɡ̥arap']
-Heligoland: ['ʔe̞asɡən', 'vɐsɡə', 'fɛsk', 'sɡ̥äpʰ']
-
-d > ∅ / N _	100.00	(rep: 100.00, dist: 100.00)	(8 times)
-Feer: ['hʊn', 'hy̟ɲ', 'viɲ', 'hʊnɐ̞tʰ']
-Heligoland: ['hɔ̟n', 'hɪ̞n', 'vɪn', 'hɒnɐˑtʰ']
-
-d > ∅	77.27	(rep: 100.00, dist: 62.96)	(17 times)
-Feer: ['hʊn', 'hy̟ɲ', 'kʰuˑl', 'viɲ', 'hʊnɐ̞tʰ']
-Heligoland: ['hɔ̟n', 'ʀoɒ', 'vø̠œ̠', 'blo̞ˑ', 'hɪ̞n', 'kʰuˑl', 'ɡoä', 'ɡo̞ː', 'hoɑ', 'vɪn', 'hɒnɐˑtʰ', 'fo̞ɐ']
-
-k > k / cons _	77.27	(rep: 100.00, dist: 62.96)	(7 times)
-Feer: ['muəlk', 'draŋk', 'vaske', 'fask']
-Heligoland: ['mo̞lk', 'dʁɪŋk', 'fɛsk']
-
-and 107 more
-=====================================
-
-Westerkwartier, Feer, Heligoland
--------
-10 correspondences above the threshold (70% importance)
-
-t > tʰ / vowel _	80.00	(rep: 66.67, dist: 100.00)	(14 times)
-Westerkwartier: ['ʒ̥etʰ', 'ʔæitʰ', 'bitʰ', 'ʔʏ̈tʰ', 'futʰ', 'va̠tʰ', 'vetʰ']
-Feer: ['ʔytʰ', 'fʊ̞tʰ']
-Heligoland: ['betʰɐ', 'ʔiˑtʰ', 'bɪtʰ', 'ʔʏtʰ', 'fʊtʰ', 'vätʰ', 'vɪtʰ']
-
-d > tʰ	80.00	(rep: 66.67, dist: 100.00)	(13 times)
-Westerkwartier: ['rɒotʰ', 'voˑɹtʰ', 'blʊutʰ', 'hɔ̃ntʰ', 'kʰoɫtʰ', 'xutʰ', 'hœftʰ', 'vintʰ', 'hundə̠tʰ', 'noɡ̥tʰ']
-Feer: ['voʌtʰ', 'blo̟tʰ', 'hʊnɐ̞tʰ']
+d > tʰ	85.71	(rep: 75.00, dist: 100.00)	(24 times)
+Veenkolonien: ['hʊnʌtʰ', 'routʰ', 'nɔˑk̚tʰ', 'ɡäo̝tʰ', 'kʰo̞ltʰ', 'hɑoptʰ', 'häntʰ', 'bläu̞tʰ', 'voʌtʰ', 'hʊntʰ', 'vɪntʰ']
+Westerkwartier: ['hundə̠tʰ', 'rɒotʰ', 'noɡ̥tʰ', 'xutʰ', 'kʰoɫtʰ', 'hœftʰ', 'blʊutʰ', 'voˑɹtʰ', 'hɔ̃ntʰ', 'vintʰ']
+Feer: ['hʊnɐ̞tʰ', 'blo̟tʰ', 'voʌtʰ']
 Heligoland: ['hɒnɐˑtʰ']
 
-d > ∅ / cons _	80.00	(rep: 66.67, dist: 100.00)	(10 times)
-Feer: ['hʊn', 'hy̟ɲ', 'kʰuˑl', 'viɲ', 'hʊnɐ̞tʰ']
-Heligoland: ['hɔ̟n', 'hɪ̞n', 'kʰuˑl', 'vɪn', 'hɒnɐˑtʰ']
+t > tʰ / vowel _	85.71	(rep: 75.00, dist: 100.00)	(22 times)
+Veenkolonien: ['vɪtʰ', 'betʰɐ', 'fɑutʰ', 'ʔeitʰ', 'bitʰ', 'zɪtʰ', 'v̥ätʰ', 'ʔutʰ']
+Westerkwartier: ['vetʰ', 'futʰ', 'ʔæitʰ', 'bitʰ', 'ʒ̥etʰ', 'va̠tʰ', 'ʔʏ̈tʰ']
+Feer: ['fʊ̞tʰ', 'ʔytʰ']
+Heligoland: ['vɪtʰ', 'betʰɐ', 'fʊtʰ', 'ʔiˑtʰ', 'bɪtʰ', 'vätʰ', 'ʔʏtʰ']
 
-t > tʰ / _ #	80.00	(rep: 66.67, dist: 100.00)	(9 times)
-Westerkwartier: ['ʔæitʰ', 'bitʰ', 'ʔʏ̈tʰ', 'va̠tʰ', 'fɛæχtʰ']
+t > tʰ / _ #	85.71	(rep: 75.00, dist: 100.00)	(12 times)
+Veenkolonien: ['ʔeitʰ', 'bitʰ', 'v̥ätʰ', 'ʔutʰ']
+Westerkwartier: ['ʔæitʰ', 'bitʰ', 'va̠tʰ', 'ʔʏ̈tʰ']
 Feer: ['ʔytʰ']
-Heligoland: ['ʔiˑtʰ', 'bɪtʰ', 'ʔʏtʰ', 'vätʰ']
+Heligoland: ['ʔiˑtʰ', 'bɪtʰ', 'vätʰ', 'ʔʏtʰ']
 
-t > d̥ / _ vowel	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Westerkwartier: ['bɛ̟ˑd̥ɐ', 'ʃd̥øœ̽m', 'ʃd̥æin', 'ʃd̥äɔɫ']
+t > d̥ / _ vowel	85.71	(rep: 75.00, dist: 100.00)	(11 times)
+Veenkolonien: ['ʃd̥e̞in', 'ʃd̥øɤm', 'ʃd̥ä̠ol']
+Westerkwartier: ['bɛ̟ˑd̥ɐ', 'ʃd̥æin', 'ʃd̥øœ̽m', 'ʃd̥äɔɫ']
 Feer: ['sd̥ʊrʌm', 'sd̥uːl']
-Heligoland: ['s̠d̥ʊʁɤm', 'ʃd̥eɐ̠', 'ʃd̥uːl', 'dɔχd̥ɐ']
+Heligoland: ['dɔχd̥ɐ', 'ʃd̥eɐ̠', 's̠d̥ʊʁɤm', 'ʃd̥uːl']
 
-t > d̥	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Westerkwartier: ['bɛ̟ˑd̥ɐ', 'ʃd̥øœ̽m', 'ʃd̥æin', 'ʃd̥äɔɫ']
+t > d̥	85.71	(rep: 75.00, dist: 100.00)	(11 times)
+Veenkolonien: ['ʃd̥e̞in', 'ʃd̥øɤm', 'ʃd̥ä̠ol']
+Westerkwartier: ['bɛ̟ˑd̥ɐ', 'ʃd̥æin', 'ʃd̥øœ̽m', 'ʃd̥äɔɫ']
 Feer: ['sd̥ʊrʌm', 'sd̥uːl']
-Heligoland: ['s̠d̥ʊʁɤm', 'ʃd̥eɐ̠', 'ʃd̥uːl', 'dɔχd̥ɐ']
+Heligoland: ['dɔχd̥ɐ', 'ʃd̥eɐ̠', 's̠d̥ʊʁɤm', 'ʃd̥uːl']
 
-s > s / _ K	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Feer: ['ʔe̝ːskʰ', 'vaske', 'fask', 'sɡ̥arap']
-Heligoland: ['ʔe̞asɡən', 'vɐsɡə', 'fɛsk', 'sɡ̥äpʰ']
-
-d > ∅ / N _	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Feer: ['hʊn', 'hy̟ɲ', 'viɲ', 'hʊnɐ̞tʰ']
-Heligoland: ['hɔ̟n', 'hɪ̞n', 'vɪn', 'hɒnɐˑtʰ']
-
-t > d̥ / cons _	80.00	(rep: 66.67, dist: 100.00)	(7 times)
-Westerkwartier: ['ʃd̥øœ̽m', 'ʃd̥æin', 'ʃd̥äɔɫ']
+t > d̥ / cons _	85.71	(rep: 75.00, dist: 100.00)	(10 times)
+Veenkolonien: ['ʃd̥e̞in', 'ʃd̥øɤm', 'ʃd̥ä̠ol']
+Westerkwartier: ['ʃd̥æin', 'ʃd̥øœ̽m', 'ʃd̥äɔɫ']
 Feer: ['sd̥ʊrʌm', 'sd̥uːl']
-Heligoland: ['s̠d̥ʊʁɤm', 'ʃd̥eɐ̠', 'ʃd̥uːl', 'dɔχd̥ɐ']
+Heligoland: ['dɔχd̥ɐ', 'ʃd̥eɐ̠', 's̠d̥ʊʁɤm', 'ʃd̥uːl']
 
-t > d̥ / S _	80.00	(rep: 66.67, dist: 100.00)	(6 times)
-Westerkwartier: ['ʃd̥øœ̽m', 'ʃd̥æin', 'ʃd̥äɔɫ']
+t > d̥ / S _	85.71	(rep: 75.00, dist: 100.00)	(9 times)
+Veenkolonien: ['ʃd̥e̞in', 'ʃd̥øɤm', 'ʃd̥ä̠ol']
+Westerkwartier: ['ʃd̥æin', 'ʃd̥øœ̽m', 'ʃd̥äɔɫ']
 Feer: ['sd̥ʊrʌm', 'sd̥uːl']
-Heligoland: ['s̠d̥ʊʁɤm', 'ʃd̥eɐ̠', 'ʃd̥uːl']
+Heligoland: ['ʃd̥eɐ̠', 's̠d̥ʊʁɤm', 'ʃd̥uːl']
 
-and 131 more
+n > n / _ E	85.71	(rep: 75.00, dist: 100.00)	(9 times)
+Veenkolonien: ['ne̝iɡⁿŋ̩', 'næˑi', 'kʰnɛ̠e̝']
+Westerkwartier: ['neɡⁿŋ̩', 'næi', 'kʰnɛˑe']
+Feer: ['neːdˡl̩']
+Heligoland: ['neɐɡæn', 'kʰnæbean', 'neɛ̽dˡl̩']
+
+r > ∅ / E _	71.74	(rep: 75.00, dist: 68.75)	(13 times)
+Veenkolonien: ['mɑo̝dɤ̟', 'fɔːdɤ', 'dɒχt̠ʌ', 'brɤjɤ̞', 'ʔee̽de̽', 'ʔøˑvʌ']
+Westerkwartier: ['mukɐ̝', 'foɤð̞ɐ', 'ʔe̝ɛdæ']
+Feer: ['p͡feˑdɐ', 'do:χtɐ', 'brʊlə', 'ʔeɛt']
+Heligoland: ['dɔχd̥ɐ', 'ʔoɒvɜ̠']
+
+and 126 more
 =====================================
 
 Biel, Graubuenden, Walser
@@ -1327,507 +1265,688 @@ Biel, Graubuenden, Walser
 
 e > yː / cons _	82.76	(rep: 100.00, dist: 70.59)	(9 times)
 Biel: ['tɾyː', 'fyːf', 'nyːn']
-Graubuenden: ['kʰnyː', 'fyːf', 'nyːn']
+Graubuenden: ['fyːf', 'nyːn', 'kʰnyː']
 Walser: ['dɾyː', 'fyːɸ', 'nyː']
 
 e > yː	82.76	(rep: 100.00, dist: 70.59)	(9 times)
 Biel: ['tɾyː', 'fyːf', 'nyːn']
-Graubuenden: ['kʰnyː', 'fyːf', 'nyːn']
+Graubuenden: ['fyːf', 'nyːn', 'kʰnyː']
 Walser: ['dɾyː', 'fyːɸ', 'nyː']
 
 u > ɔˑ / _ cons	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Biel: ['nɔˑr̥t', 'hɔˑnik', 'ʔɔˑfɛ̈', 'hɔˑrn']
-Graubuenden: ['nɔˑrd', 'βɔˑrt', 'dɔˑrn', 'dɔˑχtr̩']
+Biel: ['hɔˑrn', 'nɔˑr̥t', 'hɔˑnik', 'ʔɔˑfɛ̈']
+Graubuenden: ['dɔˑχtr̩', 'βɔˑrt', 'nɔˑrd', 'dɔˑrn']
 
 u > ɔˑ	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Biel: ['nɔˑr̥t', 'hɔˑnik', 'ʔɔˑfɛ̈', 'hɔˑrn']
-Graubuenden: ['nɔˑrd', 'βɔˑrt', 'dɔˑrn', 'dɔˑχtr̩']
+Biel: ['hɔˑrn', 'nɔˑr̥t', 'hɔˑnik', 'ʔɔˑfɛ̈']
+Graubuenden: ['dɔˑχtr̩', 'βɔˑrt', 'nɔˑrd', 'dɔˑrn']
 
 b > p / vowel _	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Biel: ['lapəɾə', 'lɑʊp', 'seˑpə', 'hɔ̞opt', 'ʏˑpəɾ̥']
-Graubuenden: ['la̠ʊp', 'häʊpt']
-Walser: ['läˑʊp', 'siːpə', 'hɑö̞pt']
+Biel: ['seˑpə', 'hɔ̞opt', 'lapəɾə', 'ʏˑpəɾ̥', 'lɑʊp']
+Graubuenden: ['häʊpt', 'la̠ʊp']
+Walser: ['siːpə', 'hɑö̞pt', 'läˑʊp']
 
 u > ɔˑ / cons _	80.00	(rep: 66.67, dist: 100.00)	(7 times)
-Biel: ['nɔˑr̥t', 'hɔˑnik', 'hɔˑrn']
-Graubuenden: ['nɔˑrd', 'βɔˑrt', 'dɔˑrn', 'dɔˑχtr̩']
+Biel: ['hɔˑrn', 'nɔˑr̥t', 'hɔˑnik']
+Graubuenden: ['dɔˑχtr̩', 'βɔˑrt', 'nɔˑrd', 'dɔˑrn']
 
 a > a̠ˑ / cons _	80.00	(rep: 66.67, dist: 100.00)	(7 times)
-Graubuenden: ['na̠ˑχt', 'na̠ˑmɐ', 'fa̠ˑtˑr̩']
-Walser: ['ha̠ˑnt', 'xa̠ˑlp', 'na̠ˑma̠', 'na̠ˑkɪ̝k']
+Graubuenden: ['fa̠ˑtˑr̩', 'na̠ˑmɐ', 'na̠ˑχt']
+Walser: ['na̠ˑkɪ̝k', 'ha̠ˑnt', 'na̠ˑma̠', 'xa̠ˑlp']
 
-and 195 more
+and 192 more
 =====================================
 
-Limburg, Achterhoek, Veenkolonien
+Tuebingen, Cologne, Luxembourg, Veenkolonien, Westerkwartier, Feer, Heligoland
 -------
 3 correspondences above the threshold (70% importance)
 
-u > oˑɐ / cons _	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Limburg: ['noˑɐt', 'doˑɐn', 'hoˑɐn', 'koˑɐʁ̞']
-Achterhoek: ['noˑɐt', 'βoˑɐt', 'doˑɐn', 'kʰoˑɐn']
+r > ∅ / _ #	83.33	(rep: 71.43, dist: 100.00)	(18 times)
+Tuebingen: ['mʊətɔ̈', 'fätɔ̈', 'dɔ̝χtɔ̈', 'bʁʊədɔ̈']
+Cologne: ['mʊtˑɒ', 'fätˑɒ', 'dɔ̞ːχtɒ', 'bʁoːdɒ']
+Luxembourg: ['dʊɪʃtɐ', 'bʁʊ̞dɐˑ']
+Veenkolonien: ['mɑo̝dɤ̟', 'fɔːdɤ', 'dɒχt̠ʌ', 'brɤjɤ̞']
+Westerkwartier: ['mukɐ̝', 'foɤð̞ɐ']
+Feer: ['p͡feˑdɐ', 'do:χtɐ', 'brʊlə']
+Heligoland: ['fo̞ɐ', 'dɔχd̥ɐ', 'bʁuɐ']
 
-u > oˑɐ	80.00	(rep: 66.67, dist: 100.00)	(8 times)
-Limburg: ['noˑɐt', 'doˑɐn', 'hoˑɐn', 'koˑɐʁ̞']
-Achterhoek: ['noˑɐt', 'βoˑɐt', 'doˑɐn', 'kʰoˑɐn']
+r > ∅ / E _	72.73	(rep: 57.14, dist: 100.00)	(17 times)
+Cologne: ['hɛ̝t͡s', 'ʔɛ̝ˑtʰ']
+Luxembourg: ['he̞ɐt͡s', 'dʊɪʃtɐ', 'bʁʊ̞dɐˑ', 'ʔeˑɐt']
+Veenkolonien: ['mɑo̝dɤ̟', 'fɔːdɤ', 'dɒχt̠ʌ', 'brɤjɤ̞', 'ʔee̽de̽', 'ʔøˑvʌ']
+Westerkwartier: ['mukɐ̝', 'foɤð̞ɐ', 'ʔe̝ɛdæ']
+Feer: ['p͡feˑdɐ', 'do:χtɐ', 'brʊlə', 'ʔeɛt']
+Heligoland: ['dɔχd̥ɐ', 'ʔoɒvɜ̠']
 
-r > ∅ / _ T	80.00	(rep: 66.67, dist: 100.00)	(6 times)
-Limburg: ['hɑ̈t', 'wɔ̞ət', 'çäːt']
+r > ∅ / vowel _	70.00	(rep: 100.00, dist: 53.85)	(96 times)
+Tuebingen: ['ʃäˑɔ̈f', 'βäˑɔ̈m', 'mʊətɔ̈', 'fätɔ̈', 'dɔ̝χtɔ̈', 'bʁʊədɔ̈', 'βɔˑt', 'hɒnˑ', 'nɔˑt', 'dɔ̞n', 'ʃtʊɔ̈m', 'kʰɔ̞nˑ', 'ɡäɔ̈t̪ə', 'ʔyːbɔ̈']
+Cologne: ['hɛ̝t͡s', 'lɪvɒ', 'mʊtˑɒ', 'fätˑɒ', 'dɔ̞ːχtɒ', 'bʁoːdɒ', 'βɔ̞ːt', 'hɔ̞ːn', 'ʔɛ̝ˑtʰ', 'dɔ̞ːn', 'kʰɔ̞ːn', 'jaːdə', 'ʃβøˑɐ', 'ʔʏvɒ', 'jɔ̞ˑ']
+Luxembourg: ['ʃa̠ːf', 'va̠ːm', 'zɛɪɐ', 'he̞ɐt͡s', 'lɪəvʌ̞̈', 'dʊɪʃtɐ', 'bʁʊ̞dɐˑ', 'vʊˑɛ̈t', 'hʊˑə', 'ʔeˑɐt', 'dɔ̞ɐˑ', 'ʃtʊɛ̈m', 'ʃviˑɛ̈', 'ʔiväˑ', 'joˑɐ']
+Veenkolonien: ['ʃxäːpʰ', 'väːm', 'zeɐ', 'häːtʰ', 'le̝v̞ʌ', 'mɑo̝dɤ̟', 'fɔːdɤ', 'dɒχt̠ʌ', 'brɤjɤ̞', 'voʌtʰ', 'hoʌn', 'nœətʰ', 'ʔee̽de̽', 'do̞ˑʌn', 'ʃd̥øɤm', 'kʰɤ̟œn', 'ɡoɔdⁿn', 'ʃvøɤ', 'ʔøˑvʌ', 'joɔ']
+Westerkwartier: ['ʃxaˑpʰ', 'væam', 'ha̠t͡s̠ʲ', 'mukɐ̝', 'foɤð̞ɐ', 'ʔe̝ɛdæ', 'doˑɤn', 'ʃd̥øœ̽m']
+Feer: ['sië', 'lʏvä̟', 'p͡feˑdɐ', 'do:χtɐ', 'brʊlə', 'voʌtʰ', 'noɤt', 'ʔeɛt', 'ɡ̥uɤt', 'sv̥ea', 'joɤ']
+Heligoland: ['sɡ̥äpʰ', 'seɐ̠', 'häːʈ', 'lʏ̈vä̝', 'dɔχd̥ɐ', 'vø̠œ̠', 'huɐn', 'ʔiɐ', 'kʰuɐ', 'ɡoä', 'sveɑ̝', 'ʔoɒvɜ̠', 'ʃoɐ̝']
+
+and 194 more
+=====================================
+
+Achterhoek, Limburg
+-------
+5 correspondences above the threshold (70% importance)
+
+u > oˑɐ / cons _	100.00	(rep: 100.00, dist: 100.00)	(8 times)
+Achterhoek: ['βoˑɐt', 'noˑɐt', 'doˑɐn', 'kʰoˑɐn']
+Limburg: ['hoˑɐn', 'noˑɐt', 'doˑɐn', 'koˑɐʁ̞']
+
+u > oˑɐ	100.00	(rep: 100.00, dist: 100.00)	(8 times)
+Achterhoek: ['βoˑɐt', 'noˑɐt', 'doˑɐn', 'kʰoˑɐn']
+Limburg: ['hoˑɐn', 'noˑɐt', 'doˑɐn', 'koˑɐʁ̞']
+
+r > ʁ̞ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(8 times)
+Achterhoek: ['fiˑəʁ̞ə', 'ʁ̞ɛ̈χ', 'ʁ̞ɛ̝ːχn̩']
+Limburg: ['ʁ̞ʊət', 'χʁ̞øˑn', 'ʁ̞ɛ̝ç', 'bʁ̞o̞ːχ', 'dʁ̞ɪŋk']
+
+r > ∅ / _ T	77.27	(rep: 100.00, dist: 62.96)	(6 times)
 Achterhoek: ['ha̠tə', 'βoˑɐt', 'χoˑɐt']
-Veenkolonien: ['hæːt']
+Limburg: ['hɑ̈t', 'wɔ̞ət', 'çäːt']
 
-and 182 more
+f > ɸ	77.27	(rep: 100.00, dist: 62.96)	(6 times)
+Achterhoek: ['ɸʊɫ', 'ɸa̠stə', 'ɸɪʃ']
+Limburg: ['ɸiˑəχ', 'ɸiːɸ']
+
+and 174 more
 =====================================
 
-Tuebingen, Cologne, Luxembourg, Westerkwartier, Feer, Heligoland
--------
-1 correspondences above the threshold (70% importance)
-
-r > ∅ / _ #	88.64	(rep: 100.00, dist: 79.59)	(22 times)
-Tuebingen: ['mʊətɔ̈', 'bʁʊədɔ̈', 'fätɔ̈', 'dɔ̝χtɔ̈']
-Cologne: ['mʊtˑɒ', 'bʁoːdɒ', 'fätˑɒ', 'dɔ̞ːχtɒ']
-Luxembourg: ['mäm', 'bʁʊ̞dɐˑ', 'päp', 'dʊɪʃtɐ']
-Westerkwartier: ['mukɐ̝', 'bruɤɹ̝', 'foɤð̞ɐ']
-Feer: ['brʊlə', 'p͡feˑdɐ', 'do:χtɐ']
-Heligoland: ['mɛm', 'bʁuɐ', 'fo̞ɐ', 'dɔχd̥ɐ']
-
-and 202 more
-=====================================
-
-Hard, Herrlisheim, Ortisei
--------
-6 correspondences above the threshold (70% importance)
-
-r > ʁ̞ / _ cons	80.00	(rep: 66.67, dist: 100.00)	(11 times)
-Hard: ['hɛ̝ˑʁ̞t͡s', 'nɔ̞ːʁ̞də', 'ʃtʊˑʁ̞m̩', 'va̠ːʁ̞m', 'ɡa̠ːʁ̞tə', 'ʔɛ̝ˑʁ̞dɛ̝̈', 'ʃa̠ːʁ̞f']
-Herrlisheim: ['ʃtʊʁ̞m̩', 'vɔːʁ̞m']
-Ortisei: ['ʃtʊʁ̞m', 'βɑ̈ʁ̞m', 'dɔʁ̞n̩', 'ʔɛʁ̞dɛ̈']
-
-a > ɔ / _ cons	80.00	(rep: 66.67, dist: 100.00)	(10 times)
-Herrlisheim: ['kʰɔlp', 'sɔls', 'ʔɔl', 'kʰɔlt', 'ɡɔns', 'nɔkətʰ']
-Ortisei: ['kʰɔlp', 'nɔχt', 'kʰɔlt͡s', 'nɔkt͡s']
-
-a > ɔ	80.00	(rep: 66.67, dist: 100.00)	(10 times)
-Herrlisheim: ['kʰɔlp', 'sɔls', 'ʔɔl', 'kʰɔlt', 'ɡɔns', 'nɔkətʰ']
-Ortisei: ['kʰɔlp', 'nɔχt', 'kʰɔlt͡s', 'nɔkt͡s']
-
-r > χ / _ cons	80.00	(rep: 66.67, dist: 100.00)	(9 times)
-Herrlisheim: ['häχt͡s', 'noχt', 'voχt', 'ɡɔːχtə', 'ʔäχt', 'ʃɒ̝χf']
-Ortisei: ['hɛχt͡s', 'no̞χt͡s', 'ɡɔ̞χtn̩']
-
-a > ɔ / cons _	80.00	(rep: 66.67, dist: 100.00)	(9 times)
-Herrlisheim: ['kʰɔlp', 'sɔls', 'kʰɔlt', 'ɡɔns', 'nɔkətʰ']
-Ortisei: ['kʰɔlp', 'nɔχt', 'kʰɔlt͡s', 'nɔkt͡s']
-
-ɡ > ɡ / vowel _	80.00	(rep: 66.67, dist: 100.00)	(6 times)
-Hard: ['ha̠ɪlɪɡ', 'ʁeˑɐɡə', 'na̠ːɡl̩']
-Ortisei: ['ʁ̞eːɡn̩', 'nɔ̝ːɡl̩', 'ʔa̠ʊɡɛ̝̈']
-
-and 193 more
-=====================================
-
-Dutch_Std_BE, Antwerp, Ostend, Limburg, Achterhoek, Veenkolonien
+Hard, Biel, Graubuenden, Walser
 -------
 7 correspondences above the threshold (70% importance)
 
-t > t / # _	79.60	(rep: 83.33, dist: 76.19)	(22 times)
-Dutch_Std_BE: ['ta̠nt', 'tʊ̞ŋ', 'tiːn', 'tɔp', 'tra̠ːn', 'teːn', 'tβ̞eː']
-Antwerp: ['ta̠nt', 'tʌŋ', 'tɔp', 'teən']
-Ostend: ['tɑ̈nt', 'tʊŋə', 'tiˑənə', 'tɔp', 'tɛːn']
-Limburg: ['täŋk', 'tʊŋ', 'tɔp']
-Achterhoek: ['tiːnə', 'tɔp', 'tβɛ̝ˑɪ']
-Veenkolonien: ['tɾoːnə', 'tβ̞ɛ̝ˑɪə']
+e > yː / cons _	100.00	(rep: 100.00, dist: 100.00)	(13 times)
+Hard: ['dʁyː', 'fyːɸ', 'nyː', 'kʰnyː']
+Biel: ['tɾyː', 'fyːf', 'nyːn']
+Graubuenden: ['fyːf', 'nyːn', 'kʰnyː']
+Walser: ['dɾyː', 'fyːɸ', 'nyː']
 
-s > z / # _	78.26	(rep: 100.00, dist: 64.29)	(34 times)
-Dutch_Std_BE: ['zɪt', 'zeː', 'za̠ʊt', 'zβe̞ˑəɹ̝̥', 'zeːβn̩', 'ze̞ˑəɹ̝̥', 'zɛs']
-Antwerp: ['zɪ̝t', 'zeˑə', 'zɔ̞ˑt', 'zeːv̥ə', 'ze̝ˑər̥', 'zɪs']
-Ostend: ['zɛt', 'zɛː', 'zut', 'zɛːs̠', 'zasə']
-Limburg: ['zɪt', 'ziˑə', 'zɔːt', 'ziˑəχ']
-Achterhoek: ['zɪt', 'zɛ̝ˑɪ', 'zβiˑɐ', 'zœːv̥n̩', 'zeˑɐ', 'zɛsə']
-Veenkolonien: ['zɛ̝ˑɪ', 'zɔːt', 'zβiˑə', 'zø̞bm̩', 'ziːɹ', 'zɛ̝ːz̺ə']
+e > yː	100.00	(rep: 100.00, dist: 100.00)	(13 times)
+Hard: ['dʁyː', 'fyːɸ', 'nyː', 'kʰnyː']
+Biel: ['tɾyː', 'fyːf', 'nyːn']
+Graubuenden: ['fyːf', 'nyːn', 'kʰnyː']
+Walser: ['dɾyː', 'fyːɸ', 'nyː']
 
-s > z	78.26	(rep: 100.00, dist: 64.29)	(34 times)
-Dutch_Std_BE: ['zɪt', 'zeː', 'za̠ʊt', 'zβe̞ˑəɹ̝̥', 'zeːβn̩', 'ze̞ˑəɹ̝̥', 'zɛs']
-Antwerp: ['zɪ̝t', 'zeˑə', 'zɔ̞ˑt', 'zeːv̥ə', 'ze̝ˑər̥', 'zɪs']
-Ostend: ['zɛt', 'zɛː', 'zut', 'zɛːs̠', 'zasə']
-Limburg: ['zɪt', 'ziˑə', 'zɔːt', 'ziˑəχ']
-Achterhoek: ['zɪt', 'zɛ̝ˑɪ', 'zβiˑɐ', 'zœːv̥n̩', 'zeˑɐ', 'zɛsə']
-Veenkolonien: ['zɛ̝ˑɪ', 'zɔːt', 'zβiˑə', 'zø̞bm̩', 'ziːɹ', 'zɛ̝ːz̺ə']
+a > a̠ˑ / _ cons	85.71	(rep: 75.00, dist: 100.00)	(11 times)
+Hard: ['ʔa̠ˑl', 'ha̠ˑnt', 'kʰa̠ˑlp']
+Graubuenden: ['fa̠ˑtˑr̩', 'na̠ˑmɐ', 'na̠ˑχt']
+Walser: ['ʃa̠ˑɹɸ', 'na̠ˑkɪ̝k', 'ha̠ˑnt', 'na̠ˑma̠', 'xa̠ˑlp']
 
-s > z / _ vowel	78.26	(rep: 100.00, dist: 64.29)	(31 times)
-Dutch_Std_BE: ['zɪt', 'zeː', 'za̠ʊt', 'zeːβn̩', 'ze̞ˑəɹ̝̥', 'zɛs']
-Antwerp: ['zɪ̝t', 'zeˑə', 'zɔ̞ˑt', 'zeːv̥ə', 'ze̝ˑər̥', 'zɪs']
-Ostend: ['zɛt', 'zɛː', 'zut', 'zɛːs̠', 'zasə']
-Limburg: ['zɪt', 'ziˑə', 'zɔːt', 'ziˑəχ']
-Achterhoek: ['zɪt', 'zɛ̝ˑɪ', 'zœːv̥n̩', 'zeˑɐ', 'zɛsə']
-Veenkolonien: ['zɛ̝ˑɪ', 'zɔːt', 'zø̞bm̩', 'ziːɹ', 'zɛ̝ːz̺ə']
+a > a̠ˑ	85.71	(rep: 75.00, dist: 100.00)	(11 times)
+Hard: ['ʔa̠ˑl', 'ha̠ˑnt', 'kʰa̠ˑlp']
+Graubuenden: ['fa̠ˑtˑr̩', 'na̠ˑmɐ', 'na̠ˑχt']
+Walser: ['ʃa̠ˑɹɸ', 'na̠ˑkɪ̝k', 'ha̠ˑnt', 'na̠ˑma̠', 'xa̠ˑlp']
 
-k > k / # _	78.26	(rep: 100.00, dist: 64.29)	(30 times)
-Dutch_Std_BE: ['ku̞ː', 'kɑ̈ɫf', 'kniː', 'käʊt', 'ko̞ːɾən', 'kβ̞ik̟']
-Antwerp: ['ku̞ː', 'kaɫəf', 'kniː', 'kɔ̞̟ːt', 'ko̞ːrə', 'kβ̞ɪ̝k̟']
-Ostend: ['ku̞ˑə', 'kɔːf', 'kniˑə', 'kut', 'kɔ̝ːrn̩', 'kβ̞ɪk̟']
-Limburg: ['kɒʊ', 'kɔːɸ', 'knɛɪ', 'kɔːt', 'koˑɐʁ̞']
-Achterhoek: ['ko̞ː', 'kɑləɸ', 'kneˑɪ', 'kɔɫt']
-Veenkolonien: ['kɑʊ', 'knɛ̝ˑɪ', 'koˑɾn̩']
+b > p	73.68	(rep: 100.00, dist: 58.33)	(17 times)
+Hard: ['ha̠ʊpt', 'kʰa̠ˑlp', 'loːp']
+Biel: ['seˑpə', 'hɔ̞opt', 'pɛ̝ˑɪ', 'lapəɾə', 'χɑʊp', 'ʏˑpəɾ̥', 'lɑʊp']
+Graubuenden: ['häʊpt', 'kʰäˑlp', 'la̠ʊp']
+Walser: ['siːpə', 'hɑö̞pt', 'xa̠ˑlp', 'läˑʊp']
 
-t > t / _ #	78.26	(rep: 100.00, dist: 64.29)	(28 times)
-Dutch_Std_BE: ['eˑɪt', 'bɛˑɪt', 'æˑʏt', 'β̞ɑ̈t', 'fɛçt']
-Antwerp: ['e̞ˑt', 'baːt', 'ɔ̞ɐt', 'β̞at', 'fɛçt']
-Ostend: ['ɛt', 'bi̞t', 'ʉ̟̞t', 'fa̝ht']
-Limburg: ['e̞ˑət', 'biːt', 'uːt', 'βɑ̈t']
-Achterhoek: ['ɛt', 'bit', 'yt', 'βa̠t', 'fɛχt']
-Veenkolonien: ['ɛ̝ˑɪt', 'biːt', 'yt', 'β̞a̠t', 'fɛˑχt']
+uː > uː	71.74	(rep: 75.00, dist: 68.75)	(9 times)
+Hard: ['muːs', 'huːs', 'ʔuːs']
+Biel: ['muːs', 'huːs', 'uːs']
+Graubuenden: ['muːs', 'huːs', 'uːs']
+Walser: ['muːs', 'huːs']
 
-k > k / _ vowel	78.26	(rep: 100.00, dist: 64.29)	(22 times)
-Dutch_Std_BE: ['ku̞ː', 'kɑ̈ɫf', 'käʊt', 'ko̞ːɾən']
-Antwerp: ['ku̞ː', 'kaɫəf', 'kɔ̞̟ːt', 'ko̞ːrə']
-Ostend: ['ku̞ˑə', 'kɔːf', 'kut', 'kɔ̝ːrn̩']
-Limburg: ['kɒʊ', 'kɔːɸ', 'kɔːt', 'koˑɐʁ̞']
-Achterhoek: ['ko̞ː', 'kɑləɸ', 'kɔɫt']
-Veenkolonien: ['kɑʊ', 'a̠ːs̺kə', 'koˑɾn̩']
+n > n / cons _	71.74	(rep: 75.00, dist: 68.75)	(9 times)
+Hard: ['kʰnyː', 'dɔ̞rnə', 'ʃneˑɪ']
+Biel: ['χnœɪ', 'tɔːɾn', 'ʃne̞ː']
+Graubuenden: ['kʰnyː', 'dɔˑrn', 'ʃne̝ː']
+Walser: ['ʃneː']
 
-and 273 more
+and 211 more
 =====================================
 
-Biel, Graubuenden, Walser, Hard, Herrlisheim, Ortisei
+Dutch_Std_NL, Dutch_Std_BE, Antwerp, Ostend
 -------
-4 correspondences above the threshold (70% importance)
+13 correspondences above the threshold (70% importance)
+
+b > f	85.71	(rep: 100.00, dist: 75.00)	(13 times)
+Dutch_Std_NL: ['hɒʊft', 'kɑ̈ɫəf', 'löʊf']
+Dutch_Std_BE: ['ho̞ːft', 'kɑ̈ɫf', 'lɔːf']
+Antwerp: ['hɔˑft', 'kaɫəf', 'o̞ːfəɾ̥', 'lo̞əf']
+Ostend: ['o̞ːft', 'kɔːf', 'lɔ̝ːf']
+
+θ > t / cons _	85.71	(rep: 100.00, dist: 75.00)	(12 times)
+Dutch_Std_NL: ['mʌnt', 'tʰɑ̈nt', 'nɔ̝ˑɹt']
+Dutch_Std_BE: ['mʊ̞nt', 'ta̠nt', 'nɔ̝ːr̥t']
+Antwerp: ['mɔnt', 'ta̠nt', 'nɔs̠t']
+Ostend: ['mʊnt', 'tɑ̈nt', 'nɔːɾt']
+
+s > s / A _	85.71	(rep: 100.00, dist: 75.00)	(12 times)
+Dutch_Std_NL: ['fɑ̈st', 'ɑ̈s', 'vɑ̈s']
+Dutch_Std_BE: ['βɑ̈st', 'ɑ̈s', 'β̞ɑ̈s']
+Antwerp: ['fast', 'a̠s', 'β̞a̠s']
+Ostend: ['vɑ̈stə', 'ɑ̈sə', 'β̞ɑ̈s']
+
+f > v	85.71	(rep: 75.00, dist: 100.00)	(14 times)
+Dutch_Std_NL: ['o̟ʊvə']
+Dutch_Std_BE: ['viˑəɹ̝̥', 'vuˑt', 'vɪs']
+Antwerp: ['viːs̠', 'vaːf', 'vɔɫ', 'vɪs', 'o̞ːvə']
+Ostend: ['viˑəɾə', 'vø̈və', 'vɑ̈stə', 'vu̞ˑət', 'vɛs', 'ɔ̝ːvn̩']
+
+f > v / _ vowel	85.71	(rep: 75.00, dist: 100.00)	(12 times)
+Dutch_Std_BE: ['viˑəɹ̝̥', 'vuˑt', 'vɪs']
+Antwerp: ['viːs̠', 'vaːf', 'vɔɫ', 'vɪs']
+Ostend: ['viˑəɾə', 'vø̈və', 'vɑ̈stə', 'vu̞ˑət', 'vɛs']
+
+f > v / # _	85.71	(rep: 75.00, dist: 100.00)	(12 times)
+Dutch_Std_BE: ['viˑəɹ̝̥', 'vuˑt', 'vɪs']
+Antwerp: ['viːs̠', 'vaːf', 'vɔɫ', 'vɪs']
+Ostend: ['viˑəɾə', 'vø̈və', 'vɑ̈stə', 'vu̞ˑət', 'vɛs']
+
+a > ɑ̈ / _ S	85.71	(rep: 75.00, dist: 100.00)	(9 times)
+Dutch_Std_NL: ['fɑ̈st', 'ɑ̈s', 'vɑ̈s']
+Dutch_Std_BE: ['βɑ̈st', 'ɑ̈s', 'β̞ɑ̈s']
+Ostend: ['vɑ̈stə', 'ɑ̈sə', 'β̞ɑ̈s']
+
+a > aː	85.71	(rep: 75.00, dist: 100.00)	(9 times)
+Dutch_Std_NL: ['naːkt', 'faːɾə', 'naːm']
+Dutch_Std_BE: ['naːxəɫ', 'v̥aːd̪ər̥', 'çaːr̥t']
+Antwerp: ['sjaːɾəp', 'β̞aːɾəm', 'aːs']
+Ostend: ['sβaːs̠']
+
+s > s / _ T	73.68	(rep: 100.00, dist: 58.33)	(16 times)
+Dutch_Std_NL: ['fɑ̈st', 'ste̞ˑɪn', 'stɔʁəm', 'stu̞ːɫ']
+Dutch_Std_BE: ['βɑ̈st', 'steːn', 'stɔrm̩', 'stuːl']
+Antwerp: ['fast', 'steən', 'stə̝ɾəm', 'stu̞ː']
+Ostend: ['vɑ̈stə', 'stɛ̝ːn', 'stɔɾm', 'stuˑəl']
+
+a > ɑ̈ / _ cons	71.74	(rep: 75.00, dist: 68.75)	(32 times)
+Dutch_Std_NL: ['ɑ̈χt', 'ɑ̈ɫ', 'ɫɑ̈ŋ', 'fɑ̈st', 'tʰɑ̈nt', 'hɑ̈nt', 'χɑ̈ns', 'ɫɑ̈m', 'kɑ̈ɫəf', 'ɑ̈s', 'bɑ̈t', 'vɑ̈s', 'vɑ̈t', 'dɑ̈χ', 'nɑ̈χt']
+Dutch_Std_BE: ['ɑ̈ɫ', 'βɑ̈st', 'lɑ̈m', 'kɑ̈ɫf', 'ɑ̈s', 'bɑ̈t', 'β̞ɑ̈s', 'β̞ɑ̈t']
+Ostend: ['ɑ̈χtə', 'vɑ̈stə', 'βɑ̈rm', 'tɑ̈nt', 'ɑ̈nt', 'lɑ̈m', 'ɑ̈sə', 'β̞ɑ̈s', 'β̞ɑ̈də']
+
+and 224 more
+=====================================
+
+Achterhoek, Limburg, Dutch_Std_NL, Dutch_Std_BE, Antwerp, Ostend
+-------
+11 correspondences above the threshold (70% importance)
+
+s > s / A _	90.91	(rep: 83.33, dist: 100.00)	(15 times)
+Achterhoek: ['ɸa̠stə', 'a̠s', 'βa̠s']
+Limburg: ['fäs']
+Dutch_Std_NL: ['fɑ̈st', 'ɑ̈s', 'vɑ̈s']
+Dutch_Std_BE: ['βɑ̈st', 'ɑ̈s', 'β̞ɑ̈s']
+Antwerp: ['fast', 'a̠s', 'β̞a̠s']
+Ostend: ['vɑ̈stə', 'ɑ̈sə', 'β̞ɑ̈s']
+
+k > k / # _	88.64	(rep: 100.00, dist: 79.59)	(28 times)
+Achterhoek: ['kɔɫt', 'kneˑɪ', 'ko̞ː', 'kɑləɸ']
+Limburg: ['kɔːt', 'knɛɪ', 'kɒʊ', 'kɔːɸ', 'koˑɐʁ̞']
+Dutch_Std_NL: ['kaʊt', 'ku̞ˑ', 'kɑ̈ɫəf', 'ko̞ˑʁ̞ə']
+Dutch_Std_BE: ['käʊt', 'kniː', 'ku̞ː', 'kɑ̈ɫf', 'ko̞ːɾən']
+Antwerp: ['kɔ̞ːt', 'kniː', 'ku̞ː', 'kaɫəf', 'ko̞ːrə']
+Ostend: ['kut', 'kniˑə', 'ku̞ˑə', 'kɔːf', 'kɔ̝ːrn̩']
+
+k > k / _ vowel	88.64	(rep: 100.00, dist: 79.59)	(24 times)
+Achterhoek: ['kɔɫt', 'ko̞ː', 'kɑləɸ', 'ɪkə']
+Limburg: ['kɔːt', 'kɒʊ', 'kɔːɸ', 'koˑɐʁ̞']
+Dutch_Std_NL: ['kaʊt', 'ku̞ˑ', 'kɑ̈ɫəf', 'ko̞ˑʁ̞ə']
+Dutch_Std_BE: ['käʊt', 'ku̞ː', 'kɑ̈ɫf', 'ko̞ːɾən']
+Antwerp: ['kɔ̞ːt', 'ku̞ː', 'kaɫəf', 'ko̞ːrə']
+Ostend: ['kut', 'ku̞ˑə', 'kɔːf', 'kɔ̝ːrn̩']
+
+t > t / _ #	88.64	(rep: 100.00, dist: 79.59)	(23 times)
+Achterhoek: ['ɛt', 'bit', 'βa̠t', 'yt']
+Limburg: ['e̞ˑət', 'biːt', 'βɑ̈t', 'uːt']
+Dutch_Std_NL: ['ɛ̝ɪt', 'bæɪt', 'vɑ̈t', 'æʏt']
+Dutch_Std_BE: ['eˑɪt', 'bɛˑɪt', 'β̞ɑ̈t', 'æˑʏt']
+Antwerp: ['e̞ˑt', 'baːt', 'β̞at', 'ɔ̞ɐt']
+Ostend: ['ɛt', 'bi̞t', 'ʉ̝̟t']
+
+a > ɑ̈ / _ cons	80.00	(rep: 66.67, dist: 100.00)	(36 times)
+Limburg: ['nɑ̈ks', 'lɑ̈m', 'bɑ̈t', 'βɑ̈t']
+Dutch_Std_NL: ['ɑ̈χt', 'ɑ̈ɫ', 'ɫɑ̈ŋ', 'fɑ̈st', 'tʰɑ̈nt', 'hɑ̈nt', 'χɑ̈ns', 'ɫɑ̈m', 'kɑ̈ɫəf', 'ɑ̈s', 'bɑ̈t', 'vɑ̈s', 'vɑ̈t', 'dɑ̈χ', 'nɑ̈χt']
+Dutch_Std_BE: ['ɑ̈ɫ', 'βɑ̈st', 'lɑ̈m', 'kɑ̈ɫf', 'ɑ̈s', 'bɑ̈t', 'β̞ɑ̈s', 'β̞ɑ̈t']
+Ostend: ['ɑ̈χtə', 'vɑ̈stə', 'βɑ̈rm', 'tɑ̈nt', 'ɑ̈nt', 'lɑ̈m', 'ɑ̈sə', 'β̞ɑ̈s', 'β̞ɑ̈də']
+
+a > ɑ̈	80.00	(rep: 66.67, dist: 100.00)	(36 times)
+Limburg: ['nɑ̈ks', 'lɑ̈m', 'bɑ̈t', 'βɑ̈t']
+Dutch_Std_NL: ['ɑ̈χt', 'ɑ̈ɫ', 'ɫɑ̈ŋ', 'fɑ̈st', 'tʰɑ̈nt', 'hɑ̈nt', 'χɑ̈ns', 'ɫɑ̈m', 'kɑ̈ɫəf', 'ɑ̈s', 'bɑ̈t', 'vɑ̈s', 'vɑ̈t', 'dɑ̈χ', 'nɑ̈χt']
+Dutch_Std_BE: ['ɑ̈ɫ', 'βɑ̈st', 'lɑ̈m', 'kɑ̈ɫf', 'ɑ̈s', 'bɑ̈t', 'β̞ɑ̈s', 'β̞ɑ̈t']
+Ostend: ['ɑ̈χtə', 'vɑ̈stə', 'βɑ̈rm', 'tɑ̈nt', 'ɑ̈nt', 'lɑ̈m', 'ɑ̈sə', 'β̞ɑ̈s', 'β̞ɑ̈də']
+
+a > ɑ̈ / cons _	80.00	(rep: 66.67, dist: 100.00)	(28 times)
+Limburg: ['nɑ̈ks', 'lɑ̈m', 'bɑ̈t', 'βɑ̈t']
+Dutch_Std_NL: ['ɫɑ̈ŋ', 'fɑ̈st', 'tʰɑ̈nt', 'hɑ̈nt', 'χɑ̈ns', 'ɫɑ̈m', 'kɑ̈ɫəf', 'bɑ̈t', 'vɑ̈s', 'vɑ̈t', 'dɑ̈χ', 'nɑ̈χt']
+Dutch_Std_BE: ['βɑ̈st', 'lɑ̈m', 'kɑ̈ɫf', 'bɑ̈t', 'β̞ɑ̈s', 'β̞ɑ̈t']
+Ostend: ['vɑ̈stə', 'βɑ̈rm', 'tɑ̈nt', 'lɑ̈m', 'β̞ɑ̈s', 'β̞ɑ̈də']
+
+∅ > ə / R _	80.00	(rep: 66.67, dist: 100.00)	(14 times)
+Achterhoek: ['sχa̠ɾəp', 'βa̠ɾəm', 'stʌʁəm']
+Limburg: ['ʃɛ̝ˑʁ̞əp', 'β̞ɛ̝ˑʁ̞əm', 'ʃtöʁ̞əm']
+Dutch_Std_NL: ['sχɛʁ̞əp', 'va̠ʁəm', 'faːɾə', 'dɔ̝ˑʁ̞ən', 'stɔʁəm']
+Antwerp: ['sjaːɾəp', 'β̞aːɾəm', 'stə̝ɾəm']
+
+e > ɪ / # _	80.00	(rep: 66.67, dist: 100.00)	(12 times)
+Achterhoek: ['ɪs̺', 'ɪkə', 'ɪn']
+Limburg: ['ɪs', 'ɪç', 'ɪn']
+Dutch_Std_NL: ['ɪs', 'ɪk', 'ɪn']
+Dutch_Std_BE: ['ɪs', 'ɪk', 'ɪn']
+Antwerp: ['ɪs']
+Ostend: ['ɪn']
+
+s > s / _ T	79.60	(rep: 83.33, dist: 76.19)	(20 times)
+Achterhoek: ['ɸa̠stə', 'steːn', 'stʌʁəm', 'stɔ̝ːɫ']
+Limburg: ['stɛ̝ˑi']
+Dutch_Std_NL: ['fɑ̈st', 'ste̞ˑɪn', 'stɔʁəm', 'stu̞ːɫ']
+Dutch_Std_BE: ['βɑ̈st', 'steːn', 'stɔrm̩', 'stuːl']
+Antwerp: ['fast', 'steən', 'stə̝ɾəm', 'stu̞ː']
+Ostend: ['vɑ̈stə', 'stɛ̝ːn', 'stɔɾm', 'stuˑəl']
+
+and 276 more
+=====================================
+
+Herrlisheim, Ortisei, Hard, Biel, Graubuenden, Walser
+-------
+5 correspondences above the threshold (70% importance)
+
+t > s / _ #	88.64	(rep: 100.00, dist: 79.59)	(18 times)
+Herrlisheim: ['biˑs', 'βɒs', 'ʔyˑs']
+Ortisei: ['bäɪs', 'β̞ɔ̞s', 'ʔaɵ̠s']
+Hard: ['biːs', 'väːs', 'ʔuːs']
+Biel: ['biːs', 'β̞ɒˑs', 'uːs']
+Graubuenden: ['biːs', 'väs', 'uːs']
+Walser: ['biːs', 'β̞äˑs', 'ʔuˑs']
 
 e > yː / cons _	80.00	(rep: 66.67, dist: 100.00)	(13 times)
+Hard: ['dʁyː', 'fyːɸ', 'nyː', 'kʰnyː']
 Biel: ['tɾyː', 'fyːf', 'nyːn']
-Graubuenden: ['kʰnyː', 'fyːf', 'nyːn']
+Graubuenden: ['fyːf', 'nyːn', 'kʰnyː']
 Walser: ['dɾyː', 'fyːɸ', 'nyː']
-Hard: ['kʰnyː', 'dʁyː', 'fyːɸ', 'nyː']
 
 e > yː	80.00	(rep: 66.67, dist: 100.00)	(13 times)
+Hard: ['dʁyː', 'fyːɸ', 'nyː', 'kʰnyː']
 Biel: ['tɾyː', 'fyːf', 'nyːn']
-Graubuenden: ['kʰnyː', 'fyːf', 'nyːn']
+Graubuenden: ['fyːf', 'nyːn', 'kʰnyː']
 Walser: ['dɾyː', 'fyːɸ', 'nyː']
-Hard: ['kʰnyː', 'dʁyː', 'fyːɸ', 'nyː']
 
 b > p	79.60	(rep: 83.33, dist: 76.19)	(20 times)
-Biel: ['lapəɾə', 'χɑʊp', 'lɑʊp', 'seˑpə', 'hɔ̞opt', 'pɛ̝ˑɪ', 'ʏˑpəɾ̥']
-Graubuenden: ['kʰäˑlp', 'la̠ʊp', 'häʊpt']
-Walser: ['xa̠ˑlp', 'läˑʊp', 'siːpə', 'hɑö̞pt']
-Hard: ['kʰa̠ˑlp', 'loːp', 'ha̠ʊpt']
-Herrlisheim: ['kʰɔlp', 'hœˑʏpt']
-Ortisei: ['kʰɔlp', 'la̠ːp', 'ha̠ʊpt']
+Herrlisheim: ['hœˑʏpt', 'kʰɔlp']
+Ortisei: ['ha̠ʊpt', 'kʰɔlp', 'la̠ːp']
+Hard: ['ha̠ʊpt', 'kʰa̠ˑlp', 'loːp']
+Biel: ['seˑpə', 'hɔ̞opt', 'pɛ̝ˑɪ', 'lapəɾə', 'χɑʊp', 'ʏˑpəɾ̥', 'lɑʊp']
+Graubuenden: ['häʊpt', 'kʰäˑlp', 'la̠ʊp']
+Walser: ['siːpə', 'hɑö̞pt', 'xa̠ˑlp', 'läˑʊp']
 
-l > l / _ cons	79.60	(rep: 83.33, dist: 76.19)	(19 times)
-Graubuenden: ['mɪ̝lχ', 'kʰäˑlp', 'sɑ̟ːlt͡s', 'qʰɑːlt']
-Walser: ['mi̞lx̟', 'xa̠ˑlp', 'sa̠ːlt͡s', 'xa̠ːlt']
-Hard: ['mɪ̝lx', 'kʰa̠ˑlp', 'sa̠ːlt͡s', 'kʰa̠ːlt']
-Herrlisheim: ['kʰɔlp', 'sɔls', 'kʰɔlt']
-Ortisei: ['mɪ̝lç', 'kʰɔlp', 'sɔ̞lt͡s', 'kʰɔlt͡s']
+a > ∅ / P _	78.26	(rep: 100.00, dist: 64.29)	(18 times)
+Herrlisheim: ['hœˑʏpt', 'kʰɔlp', 'läipʰ']
+Ortisei: ['ha̠ʊpt', 'kʰɔlp', 'la̠ːp']
+Hard: ['ha̠ʊpt', 'kʰa̠ˑlp', 'loːp']
+Biel: ['hɔ̞opt', 'χɑʊp', 'lɑʊp']
+Graubuenden: ['häʊpt', 'kʰäˑlp', 'la̠ʊp']
+Walser: ['hɑö̞pt', 'xa̠ˑlp', 'läˑʊp']
 
-and 266 more
+and 277 more
 =====================================
 
-Tuebingen, Cologne, Luxembourg, Westerkwartier, Feer, Heligoland, Biel, Graubuenden, Walser, Hard, Herrlisheim, Ortisei
+Tuebingen, Cologne, Luxembourg, Veenkolonien, Westerkwartier, Feer, Heligoland, Herrlisheim, Ortisei, Hard, Biel, Graubuenden, Walser
 -------
-24 correspondences above the threshold (70% importance)
+27 correspondences above the threshold (70% importance)
 
-∅ > ʔ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(169 times)
-Tuebingen: ['ʔäʃɛ̝̈', 'ʔɔɪs', 'ʔi̞ʃ', 'ʔiç', 'ʔi̞n', 'ʔiˑs', 'ʔɐ̠uˑs', 'ʔo̞ːfə', 'ʔäˑl', 'ʔo̞fə', 'ʔɛʁ̞dɛ̝̈', 'ʔäχt', 'ʔɔˑɪçɛ̝̈', 'ʔɑ̟ʊɔ̈', 'ʔɑ̟ʊk', 'ʔyːbɔ̈']
-Cologne: ['ʔɛ̝ʃ', 'ʔe̝ɪŋə', 'ʔɪs', 'ʔiʃ', 'ʔɪn', 'ʔɛ̝s', 'ʔus', 'ʔɔ̈və', 'ʔa̠l', 'ʔɔ̞fə', 'ʔɛ̝ˑtʰ', 'ʔa̠ːχ', 'ʔɛ̝ˑɪʃ', 'ʔoɐ', 'ʔɔʊχ', 'ʔʏvɒ']
-Luxembourg: ['ʔäks', 'ʔeːnt', 'ʔœ̈ʃ', 'ʔän', 'ʔæ̈ˑʊs', 'ʔʊɛ̈vən', 'ʔäl', 'ʔʊ̞pən', 'ʔeˑɐt', 'ʔa̠ːχt', 'ʔeːʃ', 'ʔœ̈ʊɑ̈', 'ʔa̠ː', 'ʔiväˑ']
-Westerkwartier: ['ʔaʃ', 'ʔɑin', 'ʔeʃ', 'ʔɪkʰ', 'ʔĩn', 'ʔæitʰ', 'ʔʏ̈tʰ', 'ʔɔobⁿm̩', 'ʔɑɫ', 'ʔɔupⁿm̩', 'ʔe̝ɛdæ', 'ʔaχtʰ', 'ʔækobɔ̟um', 'ʔoɔɹ̝', 'ʔɔuχ', 'ʔouvɾ̥̩ʰ']
-Feer: ['ʔe̝ːskʰ', 'ʔiæ̝n', 'ʔas', 'ʔɪkʰ', 'ʔo̝ːn', 'ʔiˑtç', 'ʔytʰ', 'ʔõŋkʰ', 'ʔäːl', 'ʔeːb̥ⁿm̩', 'ʔeɛt', 'ʔä̠χt', 'ʔikʰʲe', 'ʔuʌ', 'ʔu̟ːk', 'ʔäo̞ɑ̝']
-Heligoland: ['ʔe̞asɡən', 'ʔɛs', 'ʔɪ̞kʰ', 'ʔuːŋ', 'ʔiˑtʰ', 'ʔʏtʰ', 'ʔo̞ɑvən', 'ʔɑːl', 'ʔepʰən', 'ʔiɐ', 'ʔa̠χ', 'ʔeakʰɛ̽n', 'ʔo̞o̝', 'ʔoɒvɜ̠']
-Biel: ['ʔa̠ʃə̟', 'ʔɪˑʃ', 'ʔi̞ːk̟', 'ʔɪn', 'ʔɪs', 'ʔɔˑfɛ̈', 'ʔɔ̝fˑə']
-Graubuenden: ['ʔi̞ʃ', 'ʔiː', 'ʔɪ̝n', 'ʔi̞s', 'ʔo̞ːfə', 'ʔa̠l', 'ʔo̞ˑfə', 'ʔäˑχt', 'ʔäɪχə']
-Walser: ['ʔæʃə', 'ʔæˑɪ̝s', 'ʔiʃt', 'ʔiː', 'ʔa̠s', 'ʔuˑs', 'ʔoːɸə', 'ʔa̠l', 'ʔo̞ɸə', 'ʔa̠rdə', 'ʔäχt', 'ʔæɪ̝x̟ə', 'ʔo̞ːɹ̝̥', 'ʔɑʊk', 'ʔobər̥']
-Hard: ['ʔɛ̝ʃə', 'ʔõɛ̃s', 'ʔi̞ʃt', 'ʔiː', 'ʔi̞n', 'ʔi̞əs', 'ʔuːs', 'ʔo̞ːfə', 'ʔa̠ˑl', 'ʔo̞fˑə', 'ʔɛ̝ˑʁ̞dɛ̝̈', 'ʔa̠xt', 'ʔo̞ɐxə', 'ʔɔ̈ˑʊˑk']
-Herrlisheim: ['ʔäʃə', 'ʔɛːns', 'ʔɪs', 'ʔɪʃ', 'ʔɪn', 'ʔɪs', 'ʔyˑs', 'ʔofə', 'ʔɔl', 'ʔofə', 'ʔäχt', 'ʔɔːχt', 'ʔäiʃ', 'ʔoːχ', 'ʔœʏjə', 'ʔe̝βə̠χ']
-Ortisei: ['ʔäʃɛ̈', 'ʔɔˑəns', 'ʔiʃ', 'ʔiː', 'ʔɪ̝n', 'ʔɪ̝s', 'ʔaɵ̠s', 'ʔoˑfn̩', 'ʔäl', 'ʔofn̩', 'ʔɛʁ̞dɛ̈', 'ʔɔ̞χt', 'ʔäɪçɛ̈', 'ʔoːχ', 'ʔa̠ʊɡɛ̝̈', 'ʔyːbəχ']
+∅ > ʔ / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(185 times)
+Tuebingen: ['ʔɔɪs', 'ʔäχt', 'ʔɛlə', 'ʔɑ̟ʊk', 'ʔɑ̟ʊɔ̈', 'ʔäʃɛ̝̈', 'ʔɛʁ̞dɛ̝̈', 'ʔɔˑɪçɛ̝̈', 'ʔo̞ːfə', 'ʔi̞ʃ', 'ʔiˑs', 'ʔo̞fə', 'ʔiç', 'ʔi̞n', 'ʔɐ̠uˑs', 'ʔyːbɔ̈']
+Cologne: ['ʔe̝ɪŋə', 'ʔa̠ːχ', 'ʔa̠ɫ', 'ʔɔʊχ', 'ʔoɐ', 'ʔɛ̝ʃ', 'ʔɛ̝ˑtʰ', 'ʔɛ̝ˑɪʃ', 'ʔɔ̈və', 'ʔɪs', 'ʔɛ̝s', 'ʔɔ̞fə', 'ʔiʃ', 'ʔɪn', 'ʔus', 'ʔʏvɒ']
+Luxembourg: ['ʔeːnt', 'ʔa̠ːχt', 'ʔäl', 'ʔa̠ː', 'ʔœ̈ʊɑ̈', 'ʔäks', 'ʔeˑɐt', 'ʔeːʃ', 'ʔʊɛ̈vən', 'ʔʊ̞pən', 'ʔœ̈ʃ', 'ʔän', 'ʔæ̈ˑʊs', 'ʔiväˑ']
+Veenkolonien: ['ʔɛen', 'ʔäχtʰ', 'ʔäl', 'ʔo̝ːɡɵ', 'ʔo̝ːʌ', 'ʔäʃə', 'ʔee̽de̽', 'ʔe̞ikʰɪ̈', 'ʔoˑbⁿm̩', 'ʔɪs', 'ʔeitʰ', 'ʔopⁿm̩', 'ʔɪkʰ', 'ʔɪn', 'ʔutʰ', 'ʔøˑvʌ']
+Westerkwartier: ['ʔɑin', 'ʔaχtʰ', 'ʔɑɫ', 'ʔɔuχ', 'ʔoɔɹ̝', 'ʔaʃ', 'ʔe̝ɛdæ', 'ʔækobɔ̟um', 'ʔɔobⁿm̩', 'ʔeʃ', 'ʔæitʰ', 'ʔɔupⁿm̩', 'ʔɪkʰ', 'ʔĩn', 'ʔʏ̈tʰ', 'ʔouvɾ̥̩ʰ']
+Feer: ['ʔiæ̝n', 'ʔä̠χt', 'ʔäːl', 'ʔu̟ːk', 'ʔuʌ', 'ʔe̝ːskʰ', 'ʔeɛt', 'ʔikʰʲe', 'ʔõŋkʰ', 'ʔas', 'ʔiˑtç', 'ʔeːb̥ⁿm̩', 'ʔɪkʰ', 'ʔo̝ːn', 'ʔytʰ', 'ʔäo̞ɑ̝']
+Heligoland: ['ʔa̠χ', 'ʔɑːl', 'ʔo̞o̝', 'ʔe̞asɡən', 'ʔiɐ', 'ʔeakʰɛ̽n', 'ʔo̞ɑvən', 'ʔɛs', 'ʔiˑtʰ', 'ʔepʰən', 'ʔɪ̞kʰ', 'ʔuːŋ', 'ʔʏtʰ', 'ʔoɒvɜ̠']
+Herrlisheim: ['ʔɛːns', 'ʔɔːχt', 'ʔɔl', 'ʔœʏjə', 'ʔoːχ', 'ʔäʃə', 'ʔäχt', 'ʔäiʃ', 'ʔofə', 'ʔɪs', 'ʔɪs', 'ʔofə', 'ʔɪʃ', 'ʔɪn', 'ʔyˑs', 'ʔe̝βə̠χ']
+Ortisei: ['ʔɔˑəns', 'ʔɔ̞χt', 'ʔäl', 'ʔa̠ʊɡɛ̝̈', 'ʔoːχ', 'ʔäʃɛ̈', 'ʔɛʁ̞dɛ̈', 'ʔäɪçɛ̈', 'ʔoˑfn̩', 'ʔiʃ', 'ʔɪ̝s', 'ʔofn̩', 'ʔiː', 'ʔɪ̝n', 'ʔaɵ̠s', 'ʔyːbəχ']
+Hard: ['ʔõɛ̃s', 'ʔa̠xt', 'ʔa̠ˑl', 'ʔɔ̈ˑʊˑk', 'ʔɛ̝ʃə', 'ʔɛ̝ˑʁ̞dɛ̝̈', 'ʔo̞ɐxə', 'ʔo̞ːfə', 'ʔi̞ʃt', 'ʔi̞əs', 'ʔo̞fˑə', 'ʔiː', 'ʔi̞n', 'ʔuːs']
+Biel: ['ʔa̠ʃə̟', 'ʔɔˑfɛ̈', 'ʔɪˑʃ', 'ʔɪs', 'ʔɔ̝fˑə', 'ʔi̞ːk̟', 'ʔɪn']
+Graubuenden: ['ʔäˑχt', 'ʔa̠l', 'ʔäɪχə', 'ʔo̞ːfə', 'ʔi̞ʃ', 'ʔi̞s', 'ʔo̞ˑfə', 'ʔiː', 'ʔɪ̝n']
+Walser: ['ʔæˑɪ̝s', 'ʔäχt', 'ʔa̠l', 'ʔɑʊk', 'ʔo̞ːɹ̝̥', 'ʔæʃə', 'ʔa̠rdə', 'ʔæɪ̝x̟ə', 'ʔoːɸə', 'ʔiʃt', 'ʔa̠s', 'ʔo̞ɸə', 'ʔiː', 'ʔuˑs', 'ʔobər̥']
 
-∅ > ʔ / # _	100.00	(rep: 100.00, dist: 100.00)	(169 times)
-Tuebingen: ['ʔäʃɛ̝̈', 'ʔɔɪs', 'ʔi̞ʃ', 'ʔiç', 'ʔi̞n', 'ʔiˑs', 'ʔɐ̠uˑs', 'ʔo̞ːfə', 'ʔäˑl', 'ʔo̞fə', 'ʔɛʁ̞dɛ̝̈', 'ʔäχt', 'ʔɔˑɪçɛ̝̈', 'ʔɑ̟ʊɔ̈', 'ʔɑ̟ʊk', 'ʔyːbɔ̈']
-Cologne: ['ʔɛ̝ʃ', 'ʔe̝ɪŋə', 'ʔɪs', 'ʔiʃ', 'ʔɪn', 'ʔɛ̝s', 'ʔus', 'ʔɔ̈və', 'ʔa̠l', 'ʔɔ̞fə', 'ʔɛ̝ˑtʰ', 'ʔa̠ːχ', 'ʔɛ̝ˑɪʃ', 'ʔoɐ', 'ʔɔʊχ', 'ʔʏvɒ']
-Luxembourg: ['ʔäks', 'ʔeːnt', 'ʔœ̈ʃ', 'ʔän', 'ʔæ̈ˑʊs', 'ʔʊɛ̈vən', 'ʔäl', 'ʔʊ̞pən', 'ʔeˑɐt', 'ʔa̠ːχt', 'ʔeːʃ', 'ʔœ̈ʊɑ̈', 'ʔa̠ː', 'ʔiväˑ']
-Westerkwartier: ['ʔaʃ', 'ʔɑin', 'ʔeʃ', 'ʔɪkʰ', 'ʔĩn', 'ʔæitʰ', 'ʔʏ̈tʰ', 'ʔɔobⁿm̩', 'ʔɑɫ', 'ʔɔupⁿm̩', 'ʔe̝ɛdæ', 'ʔaχtʰ', 'ʔækobɔ̟um', 'ʔoɔɹ̝', 'ʔɔuχ', 'ʔouvɾ̥̩ʰ']
-Feer: ['ʔe̝ːskʰ', 'ʔiæ̝n', 'ʔas', 'ʔɪkʰ', 'ʔo̝ːn', 'ʔiˑtç', 'ʔytʰ', 'ʔõŋkʰ', 'ʔäːl', 'ʔeːb̥ⁿm̩', 'ʔeɛt', 'ʔä̠χt', 'ʔikʰʲe', 'ʔuʌ', 'ʔu̟ːk', 'ʔäo̞ɑ̝']
-Heligoland: ['ʔe̞asɡən', 'ʔɛs', 'ʔɪ̞kʰ', 'ʔuːŋ', 'ʔiˑtʰ', 'ʔʏtʰ', 'ʔo̞ɑvən', 'ʔɑːl', 'ʔepʰən', 'ʔiɐ', 'ʔa̠χ', 'ʔeakʰɛ̽n', 'ʔo̞o̝', 'ʔoɒvɜ̠']
-Biel: ['ʔa̠ʃə̟', 'ʔɪˑʃ', 'ʔi̞ːk̟', 'ʔɪn', 'ʔɪs', 'ʔɔˑfɛ̈', 'ʔɔ̝fˑə']
-Graubuenden: ['ʔi̞ʃ', 'ʔiː', 'ʔɪ̝n', 'ʔi̞s', 'ʔo̞ːfə', 'ʔa̠l', 'ʔo̞ˑfə', 'ʔäˑχt', 'ʔäɪχə']
-Walser: ['ʔæʃə', 'ʔæˑɪ̝s', 'ʔiʃt', 'ʔiː', 'ʔa̠s', 'ʔuˑs', 'ʔoːɸə', 'ʔa̠l', 'ʔo̞ɸə', 'ʔa̠rdə', 'ʔäχt', 'ʔæɪ̝x̟ə', 'ʔo̞ːɹ̝̥', 'ʔɑʊk', 'ʔobər̥']
-Hard: ['ʔɛ̝ʃə', 'ʔõɛ̃s', 'ʔi̞ʃt', 'ʔiː', 'ʔi̞n', 'ʔi̞əs', 'ʔuːs', 'ʔo̞ːfə', 'ʔa̠ˑl', 'ʔo̞fˑə', 'ʔɛ̝ˑʁ̞dɛ̝̈', 'ʔa̠xt', 'ʔo̞ɐxə', 'ʔɔ̈ˑʊˑk']
-Herrlisheim: ['ʔäʃə', 'ʔɛːns', 'ʔɪs', 'ʔɪʃ', 'ʔɪn', 'ʔɪs', 'ʔyˑs', 'ʔofə', 'ʔɔl', 'ʔofə', 'ʔäχt', 'ʔɔːχt', 'ʔäiʃ', 'ʔoːχ', 'ʔœʏjə', 'ʔe̝βə̠χ']
-Ortisei: ['ʔäʃɛ̈', 'ʔɔˑəns', 'ʔiʃ', 'ʔiː', 'ʔɪ̝n', 'ʔɪ̝s', 'ʔaɵ̠s', 'ʔoˑfn̩', 'ʔäl', 'ʔofn̩', 'ʔɛʁ̞dɛ̈', 'ʔɔ̞χt', 'ʔäɪçɛ̈', 'ʔoːχ', 'ʔa̠ʊɡɛ̝̈', 'ʔyːbəχ']
+∅ > ʔ / # _	100.00	(rep: 100.00, dist: 100.00)	(185 times)
+Tuebingen: ['ʔɔɪs', 'ʔäχt', 'ʔɛlə', 'ʔɑ̟ʊk', 'ʔɑ̟ʊɔ̈', 'ʔäʃɛ̝̈', 'ʔɛʁ̞dɛ̝̈', 'ʔɔˑɪçɛ̝̈', 'ʔo̞ːfə', 'ʔi̞ʃ', 'ʔiˑs', 'ʔo̞fə', 'ʔiç', 'ʔi̞n', 'ʔɐ̠uˑs', 'ʔyːbɔ̈']
+Cologne: ['ʔe̝ɪŋə', 'ʔa̠ːχ', 'ʔa̠ɫ', 'ʔɔʊχ', 'ʔoɐ', 'ʔɛ̝ʃ', 'ʔɛ̝ˑtʰ', 'ʔɛ̝ˑɪʃ', 'ʔɔ̈və', 'ʔɪs', 'ʔɛ̝s', 'ʔɔ̞fə', 'ʔiʃ', 'ʔɪn', 'ʔus', 'ʔʏvɒ']
+Luxembourg: ['ʔeːnt', 'ʔa̠ːχt', 'ʔäl', 'ʔa̠ː', 'ʔœ̈ʊɑ̈', 'ʔäks', 'ʔeˑɐt', 'ʔeːʃ', 'ʔʊɛ̈vən', 'ʔʊ̞pən', 'ʔœ̈ʃ', 'ʔän', 'ʔæ̈ˑʊs', 'ʔiväˑ']
+Veenkolonien: ['ʔɛen', 'ʔäχtʰ', 'ʔäl', 'ʔo̝ːɡɵ', 'ʔo̝ːʌ', 'ʔäʃə', 'ʔee̽de̽', 'ʔe̞ikʰɪ̈', 'ʔoˑbⁿm̩', 'ʔɪs', 'ʔeitʰ', 'ʔopⁿm̩', 'ʔɪkʰ', 'ʔɪn', 'ʔutʰ', 'ʔøˑvʌ']
+Westerkwartier: ['ʔɑin', 'ʔaχtʰ', 'ʔɑɫ', 'ʔɔuχ', 'ʔoɔɹ̝', 'ʔaʃ', 'ʔe̝ɛdæ', 'ʔækobɔ̟um', 'ʔɔobⁿm̩', 'ʔeʃ', 'ʔæitʰ', 'ʔɔupⁿm̩', 'ʔɪkʰ', 'ʔĩn', 'ʔʏ̈tʰ', 'ʔouvɾ̥̩ʰ']
+Feer: ['ʔiæ̝n', 'ʔä̠χt', 'ʔäːl', 'ʔu̟ːk', 'ʔuʌ', 'ʔe̝ːskʰ', 'ʔeɛt', 'ʔikʰʲe', 'ʔõŋkʰ', 'ʔas', 'ʔiˑtç', 'ʔeːb̥ⁿm̩', 'ʔɪkʰ', 'ʔo̝ːn', 'ʔytʰ', 'ʔäo̞ɑ̝']
+Heligoland: ['ʔa̠χ', 'ʔɑːl', 'ʔo̞o̝', 'ʔe̞asɡən', 'ʔiɐ', 'ʔeakʰɛ̽n', 'ʔo̞ɑvən', 'ʔɛs', 'ʔiˑtʰ', 'ʔepʰən', 'ʔɪ̞kʰ', 'ʔuːŋ', 'ʔʏtʰ', 'ʔoɒvɜ̠']
+Herrlisheim: ['ʔɛːns', 'ʔɔːχt', 'ʔɔl', 'ʔœʏjə', 'ʔoːχ', 'ʔäʃə', 'ʔäχt', 'ʔäiʃ', 'ʔofə', 'ʔɪs', 'ʔɪs', 'ʔofə', 'ʔɪʃ', 'ʔɪn', 'ʔyˑs', 'ʔe̝βə̠χ']
+Ortisei: ['ʔɔˑəns', 'ʔɔ̞χt', 'ʔäl', 'ʔa̠ʊɡɛ̝̈', 'ʔoːχ', 'ʔäʃɛ̈', 'ʔɛʁ̞dɛ̈', 'ʔäɪçɛ̈', 'ʔoˑfn̩', 'ʔiʃ', 'ʔɪ̝s', 'ʔofn̩', 'ʔiː', 'ʔɪ̝n', 'ʔaɵ̠s', 'ʔyːbəχ']
+Hard: ['ʔõɛ̃s', 'ʔa̠xt', 'ʔa̠ˑl', 'ʔɔ̈ˑʊˑk', 'ʔɛ̝ʃə', 'ʔɛ̝ˑʁ̞dɛ̝̈', 'ʔo̞ɐxə', 'ʔo̞ːfə', 'ʔi̞ʃt', 'ʔi̞əs', 'ʔo̞fˑə', 'ʔiː', 'ʔi̞n', 'ʔuːs']
+Biel: ['ʔa̠ʃə̟', 'ʔɔˑfɛ̈', 'ʔɪˑʃ', 'ʔɪs', 'ʔɔ̝fˑə', 'ʔi̞ːk̟', 'ʔɪn']
+Graubuenden: ['ʔäˑχt', 'ʔa̠l', 'ʔäɪχə', 'ʔo̞ːfə', 'ʔi̞ʃ', 'ʔi̞s', 'ʔo̞ˑfə', 'ʔiː', 'ʔɪ̝n']
+Walser: ['ʔæˑɪ̝s', 'ʔäχt', 'ʔa̠l', 'ʔɑʊk', 'ʔo̞ːɹ̝̥', 'ʔæʃə', 'ʔa̠rdə', 'ʔæɪ̝x̟ə', 'ʔoːɸə', 'ʔiʃt', 'ʔa̠s', 'ʔo̞ɸə', 'ʔiː', 'ʔuˑs', 'ʔobər̥']
 
-∅ > ʔ	100.00	(rep: 100.00, dist: 100.00)	(169 times)
-Tuebingen: ['ʔäʃɛ̝̈', 'ʔɔɪs', 'ʔi̞ʃ', 'ʔiç', 'ʔi̞n', 'ʔiˑs', 'ʔɐ̠uˑs', 'ʔo̞ːfə', 'ʔäˑl', 'ʔo̞fə', 'ʔɛʁ̞dɛ̝̈', 'ʔäχt', 'ʔɔˑɪçɛ̝̈', 'ʔɑ̟ʊɔ̈', 'ʔɑ̟ʊk', 'ʔyːbɔ̈']
-Cologne: ['ʔɛ̝ʃ', 'ʔe̝ɪŋə', 'ʔɪs', 'ʔiʃ', 'ʔɪn', 'ʔɛ̝s', 'ʔus', 'ʔɔ̈və', 'ʔa̠l', 'ʔɔ̞fə', 'ʔɛ̝ˑtʰ', 'ʔa̠ːχ', 'ʔɛ̝ˑɪʃ', 'ʔoɐ', 'ʔɔʊχ', 'ʔʏvɒ']
-Luxembourg: ['ʔäks', 'ʔeːnt', 'ʔœ̈ʃ', 'ʔän', 'ʔæ̈ˑʊs', 'ʔʊɛ̈vən', 'ʔäl', 'ʔʊ̞pən', 'ʔeˑɐt', 'ʔa̠ːχt', 'ʔeːʃ', 'ʔœ̈ʊɑ̈', 'ʔa̠ː', 'ʔiväˑ']
-Westerkwartier: ['ʔaʃ', 'ʔɑin', 'ʔeʃ', 'ʔɪkʰ', 'ʔĩn', 'ʔæitʰ', 'ʔʏ̈tʰ', 'ʔɔobⁿm̩', 'ʔɑɫ', 'ʔɔupⁿm̩', 'ʔe̝ɛdæ', 'ʔaχtʰ', 'ʔækobɔ̟um', 'ʔoɔɹ̝', 'ʔɔuχ', 'ʔouvɾ̥̩ʰ']
-Feer: ['ʔe̝ːskʰ', 'ʔiæ̝n', 'ʔas', 'ʔɪkʰ', 'ʔo̝ːn', 'ʔiˑtç', 'ʔytʰ', 'ʔõŋkʰ', 'ʔäːl', 'ʔeːb̥ⁿm̩', 'ʔeɛt', 'ʔä̠χt', 'ʔikʰʲe', 'ʔuʌ', 'ʔu̟ːk', 'ʔäo̞ɑ̝']
-Heligoland: ['ʔe̞asɡən', 'ʔɛs', 'ʔɪ̞kʰ', 'ʔuːŋ', 'ʔiˑtʰ', 'ʔʏtʰ', 'ʔo̞ɑvən', 'ʔɑːl', 'ʔepʰən', 'ʔiɐ', 'ʔa̠χ', 'ʔeakʰɛ̽n', 'ʔo̞o̝', 'ʔoɒvɜ̠']
-Biel: ['ʔa̠ʃə̟', 'ʔɪˑʃ', 'ʔi̞ːk̟', 'ʔɪn', 'ʔɪs', 'ʔɔˑfɛ̈', 'ʔɔ̝fˑə']
-Graubuenden: ['ʔi̞ʃ', 'ʔiː', 'ʔɪ̝n', 'ʔi̞s', 'ʔo̞ːfə', 'ʔa̠l', 'ʔo̞ˑfə', 'ʔäˑχt', 'ʔäɪχə']
-Walser: ['ʔæʃə', 'ʔæˑɪ̝s', 'ʔiʃt', 'ʔiː', 'ʔa̠s', 'ʔuˑs', 'ʔoːɸə', 'ʔa̠l', 'ʔo̞ɸə', 'ʔa̠rdə', 'ʔäχt', 'ʔæɪ̝x̟ə', 'ʔo̞ːɹ̝̥', 'ʔɑʊk', 'ʔobər̥']
-Hard: ['ʔɛ̝ʃə', 'ʔõɛ̃s', 'ʔi̞ʃt', 'ʔiː', 'ʔi̞n', 'ʔi̞əs', 'ʔuːs', 'ʔo̞ːfə', 'ʔa̠ˑl', 'ʔo̞fˑə', 'ʔɛ̝ˑʁ̞dɛ̝̈', 'ʔa̠xt', 'ʔo̞ɐxə', 'ʔɔ̈ˑʊˑk']
-Herrlisheim: ['ʔäʃə', 'ʔɛːns', 'ʔɪs', 'ʔɪʃ', 'ʔɪn', 'ʔɪs', 'ʔyˑs', 'ʔofə', 'ʔɔl', 'ʔofə', 'ʔäχt', 'ʔɔːχt', 'ʔäiʃ', 'ʔoːχ', 'ʔœʏjə', 'ʔe̝βə̠χ']
-Ortisei: ['ʔäʃɛ̈', 'ʔɔˑəns', 'ʔiʃ', 'ʔiː', 'ʔɪ̝n', 'ʔɪ̝s', 'ʔaɵ̠s', 'ʔoˑfn̩', 'ʔäl', 'ʔofn̩', 'ʔɛʁ̞dɛ̈', 'ʔɔ̞χt', 'ʔäɪçɛ̈', 'ʔoːχ', 'ʔa̠ʊɡɛ̝̈', 'ʔyːbəχ']
+∅ > ʔ	100.00	(rep: 100.00, dist: 100.00)	(185 times)
+Tuebingen: ['ʔɔɪs', 'ʔäχt', 'ʔɛlə', 'ʔɑ̟ʊk', 'ʔɑ̟ʊɔ̈', 'ʔäʃɛ̝̈', 'ʔɛʁ̞dɛ̝̈', 'ʔɔˑɪçɛ̝̈', 'ʔo̞ːfə', 'ʔi̞ʃ', 'ʔiˑs', 'ʔo̞fə', 'ʔiç', 'ʔi̞n', 'ʔɐ̠uˑs', 'ʔyːbɔ̈']
+Cologne: ['ʔe̝ɪŋə', 'ʔa̠ːχ', 'ʔa̠ɫ', 'ʔɔʊχ', 'ʔoɐ', 'ʔɛ̝ʃ', 'ʔɛ̝ˑtʰ', 'ʔɛ̝ˑɪʃ', 'ʔɔ̈və', 'ʔɪs', 'ʔɛ̝s', 'ʔɔ̞fə', 'ʔiʃ', 'ʔɪn', 'ʔus', 'ʔʏvɒ']
+Luxembourg: ['ʔeːnt', 'ʔa̠ːχt', 'ʔäl', 'ʔa̠ː', 'ʔœ̈ʊɑ̈', 'ʔäks', 'ʔeˑɐt', 'ʔeːʃ', 'ʔʊɛ̈vən', 'ʔʊ̞pən', 'ʔœ̈ʃ', 'ʔän', 'ʔæ̈ˑʊs', 'ʔiväˑ']
+Veenkolonien: ['ʔɛen', 'ʔäχtʰ', 'ʔäl', 'ʔo̝ːɡɵ', 'ʔo̝ːʌ', 'ʔäʃə', 'ʔee̽de̽', 'ʔe̞ikʰɪ̈', 'ʔoˑbⁿm̩', 'ʔɪs', 'ʔeitʰ', 'ʔopⁿm̩', 'ʔɪkʰ', 'ʔɪn', 'ʔutʰ', 'ʔøˑvʌ']
+Westerkwartier: ['ʔɑin', 'ʔaχtʰ', 'ʔɑɫ', 'ʔɔuχ', 'ʔoɔɹ̝', 'ʔaʃ', 'ʔe̝ɛdæ', 'ʔækobɔ̟um', 'ʔɔobⁿm̩', 'ʔeʃ', 'ʔæitʰ', 'ʔɔupⁿm̩', 'ʔɪkʰ', 'ʔĩn', 'ʔʏ̈tʰ', 'ʔouvɾ̥̩ʰ']
+Feer: ['ʔiæ̝n', 'ʔä̠χt', 'ʔäːl', 'ʔu̟ːk', 'ʔuʌ', 'ʔe̝ːskʰ', 'ʔeɛt', 'ʔikʰʲe', 'ʔõŋkʰ', 'ʔas', 'ʔiˑtç', 'ʔeːb̥ⁿm̩', 'ʔɪkʰ', 'ʔo̝ːn', 'ʔytʰ', 'ʔäo̞ɑ̝']
+Heligoland: ['ʔa̠χ', 'ʔɑːl', 'ʔo̞o̝', 'ʔe̞asɡən', 'ʔiɐ', 'ʔeakʰɛ̽n', 'ʔo̞ɑvən', 'ʔɛs', 'ʔiˑtʰ', 'ʔepʰən', 'ʔɪ̞kʰ', 'ʔuːŋ', 'ʔʏtʰ', 'ʔoɒvɜ̠']
+Herrlisheim: ['ʔɛːns', 'ʔɔːχt', 'ʔɔl', 'ʔœʏjə', 'ʔoːχ', 'ʔäʃə', 'ʔäχt', 'ʔäiʃ', 'ʔofə', 'ʔɪs', 'ʔɪs', 'ʔofə', 'ʔɪʃ', 'ʔɪn', 'ʔyˑs', 'ʔe̝βə̠χ']
+Ortisei: ['ʔɔˑəns', 'ʔɔ̞χt', 'ʔäl', 'ʔa̠ʊɡɛ̝̈', 'ʔoːχ', 'ʔäʃɛ̈', 'ʔɛʁ̞dɛ̈', 'ʔäɪçɛ̈', 'ʔoˑfn̩', 'ʔiʃ', 'ʔɪ̝s', 'ʔofn̩', 'ʔiː', 'ʔɪ̝n', 'ʔaɵ̠s', 'ʔyːbəχ']
+Hard: ['ʔõɛ̃s', 'ʔa̠xt', 'ʔa̠ˑl', 'ʔɔ̈ˑʊˑk', 'ʔɛ̝ʃə', 'ʔɛ̝ˑʁ̞dɛ̝̈', 'ʔo̞ɐxə', 'ʔo̞ːfə', 'ʔi̞ʃt', 'ʔi̞əs', 'ʔo̞fˑə', 'ʔiː', 'ʔi̞n', 'ʔuːs']
+Biel: ['ʔa̠ʃə̟', 'ʔɔˑfɛ̈', 'ʔɪˑʃ', 'ʔɪs', 'ʔɔ̝fˑə', 'ʔi̞ːk̟', 'ʔɪn']
+Graubuenden: ['ʔäˑχt', 'ʔa̠l', 'ʔäɪχə', 'ʔo̞ːfə', 'ʔi̞ʃ', 'ʔi̞s', 'ʔo̞ˑfə', 'ʔiː', 'ʔɪ̝n']
+Walser: ['ʔæˑɪ̝s', 'ʔäχt', 'ʔa̠l', 'ʔɑʊk', 'ʔo̞ːɹ̝̥', 'ʔæʃə', 'ʔa̠rdə', 'ʔæɪ̝x̟ə', 'ʔoːɸə', 'ʔiʃt', 'ʔa̠s', 'ʔo̞ɸə', 'ʔiː', 'ʔuˑs', 'ʔobər̥']
 
-t > t͡s	90.91	(rep: 83.33, dist: 100.00)	(76 times)
-Tuebingen: ['hɛʁ̞t͡s', 't͡säː', 'si̞t͡s', 't͡suŋɡ', 't͡seˑə', 'säˑlt͡s', 't͡säɪə', 't͡sβɔˑe']
-Cologne: ['hɛ̝t͡s', 't͡sa̠nˑt', 'zɛ̝t͡s', 't͡sʊŋ', 't͡seːn', 'za̠ːlt͡s', 't͡siˑ', 't͡sväˑɪ']
-Luxembourg: ['he̞ɐt͡s', 't͡sänt', 'zɨ̞t͡s', 't͡sɔŋ', 't͡sɪŋ', 'zält͡s', 'ʀiˑət͡s', 't͡sɛi̞f', 't͡sveː']
-Westerkwartier: ['t͡sãnt͡s', 't͡sɒŋ', 't͡sĩn', 'zʏ̈ɫt͡s', 't͡səũɴ']
-Biel: ['haˑr̥t͡s', 't͡sɑ̟ːn', 'sɪt͡s', 't͡sʊŋˑə', 't͡säˑə', 'sɑ̈ʊt͡s', 't͡sa̠ˑɪə', 't͡sβœˑɪ']
-Graubuenden: ['hɛrt͡s', 't͡sɑ̈ːn', 'sɪ̝t͡s', 't͡sʊŋɡɐ', 't͡seːn', 'sɑ̟ːlt͡s', 't͡seːbɐ', 't͡sväˑɪ']
-Walser: ['haˑɹt͡s', 't͡sa̠nt', 't͡sʊŋɡə', 't͡sahə', 'sa̠ːlt͡s', 't͡seːbɐ', 't͡sβæˑɪ̝']
-Hard: ['hɛ̝ˑʁ̞t͡s', 't͡sã̠ː', 't͡sʊŋə', 't͡sẽˑə̃', 'sa̠ːlt͡s', 't͡seːə', 't͡sβoˑɐ']
-Herrlisheim: ['häχt͡s', 't͡säːn', 'sɪt͡s', 't͡sʊŋ', 't͡sɛ̝ː', 't͡seː', 't͡svɛ̝ˑi']
-Ortisei: ['hɛχt͡s', 't͡sɑːn', 'sɪt͡s', 't͡sʊŋɡɛ̝̈', 't͡seːn', 'sɔ̞lt͡s', 'ʁɛχt͡s', 't͡sɛ̝ːχ', 't͡sβɔˑə']
+k > kʰ	91.67	(rep: 84.62, dist: 100.00)	(60 times)
+Tuebingen: ['kʰält', 'kʰuˑə', 'kʰäˑlp', 'kʰɔ̞nˑ']
+Cologne: ['kʰa̠ˑɫt', 'kʰniˑ', 'kʰoˑ', 'kʰaləf', 'kʰɔ̞ːn']
+Luxembourg: ['kʰa̠ːl', 'kʰnɛiˑ', 'kʰœ̈ʊˑ', 'kʰäləf', 'kʰa̠ːχ']
+Veenkolonien: ['kʰo̞ltʰ', 'kʰnɛ̠e̝', 'kʰäu̞', 'kʰälf', 'ʔe̞ikʰɪ̈', 'mɛlkʰ', 'kʰɤ̟œn', 'dreŋkʰ', 'ʔɪkʰ']
+Westerkwartier: ['kʰoɫtʰ', 'kʰnɛˑe', 'kʰaɔ', 'kʰɑ̝ɫf', 'drẽŋkʰ', 'ʔɪkʰ']
+Feer: ['kʰuˑl', 'kʰnœ̝bʝɛ̝n', 'kʰʏ', 'kʰuələ', 'ʔe̝ːskʰ', 'kʰʊrn', 'ʔɪkʰ']
+Heligoland: ['kʰuˑl', 'kʰnæbean', 'kʰɪ', 'kʰälə̞fkʰən', 'ʔeakʰɛ̽n', 'kʰuɐ', 'ʔɪ̞kʰ']
+Herrlisheim: ['kʰɔlt', 'kʰyː', 'kʰɔlp', 'kʰoʁən']
+Ortisei: ['kʰɔlt͡s', 'kʰuˑɛ̈', 'kʰɔlp', 'kʰɔ̞ʁ̞n̩']
+Hard: ['kʰa̠ːlt', 'kʰnyː', 'kʰʊˑɛ̈', 'kʰa̠ˑlp', 'kʰɔ̞ɐʁ̞n']
+Graubuenden: ['kʰnyː', 'kʰʊˑä', 'kʰäˑlp', 'kʰɔ̝ːɾɐ']
+Walser: ['kʰo̞ːɾə']
 
-k > kʰ	90.91	(rep: 83.33, dist: 100.00)	(52 times)
-Tuebingen: ['kʰuˑə', 'kʰäˑlp', 'kʰält', 'kʰɔ̞nˑ', 'kʰɛ̝k']
-Cologne: ['kʰoˑ', 'kʰaləf', 'kʰniˑ', 'kʰa̠ˑlt', 'kʰɔ̞ːn']
-Luxembourg: ['kʰœ̈ʊˑ', 'kʰäləf', 'kʰnɛiˑ', 'kʰa̠ːl', 'kʰa̠ːχ']
-Westerkwartier: ['kʰaɔ', 'kʰɑ̝ɫf', 'kʰnɛˑe', 'ʔɪkʰ', 'kʰoɫtʰ', 'drẽŋkʰ']
-Feer: ['kʰʏ', 'ʔe̝ːskʰ', 'kʰuələ', 'kʰnœ̝bʝɛ̝n', 'ʔɪkʰ', 'kʰuˑl', 'kʰʊrn']
-Heligoland: ['kʰɪ', 'kʰälə̞fkʰən', 'kʰnæbean', 'ʔɪ̞kʰ', 'kʰuˑl', 'kʰuɐ', 'ʔeakʰɛ̽n']
-Graubuenden: ['kʰʊˑä', 'kʰäˑlp', 'kʰnyː', 'kʰɔ̝ːɾɐ']
-Walser: ['kʰo̞ːɾə', 'kʰɛ̝k']
-Hard: ['kʰʊˑɛ̈', 'kʰa̠ˑlp', 'kʰnyː', 'kʰa̠ːlt', 'kʰɔ̞ɐʁ̞n']
-Herrlisheim: ['kʰyː', 'kʰɔlp', 'kʰɔlt', 'kʰoʁən']
-Ortisei: ['kʰuˑɛ̈', 'kʰɔlp', 'kʰɔlt͡s', 'kʰɔ̞ʁ̞n̩']
+k > kʰ / # _	91.67	(rep: 84.62, dist: 100.00)	(50 times)
+Tuebingen: ['kʰält', 'kʰuˑə', 'kʰäˑlp', 'kʰɔ̞nˑ']
+Cologne: ['kʰa̠ˑɫt', 'kʰniˑ', 'kʰoˑ', 'kʰaləf', 'kʰɔ̞ːn']
+Luxembourg: ['kʰa̠ːl', 'kʰnɛiˑ', 'kʰœ̈ʊˑ', 'kʰäləf', 'kʰa̠ːχ']
+Veenkolonien: ['kʰo̞ltʰ', 'kʰnɛ̠e̝', 'kʰäu̞', 'kʰälf', 'kʰɤ̟œn']
+Westerkwartier: ['kʰoɫtʰ', 'kʰnɛˑe', 'kʰaɔ', 'kʰɑ̝ɫf']
+Feer: ['kʰuˑl', 'kʰnœ̝bʝɛ̝n', 'kʰʏ', 'kʰuələ', 'kʰʊrn']
+Heligoland: ['kʰuˑl', 'kʰnæbean', 'kʰɪ', 'kʰälə̞fkʰən', 'kʰuɐ']
+Herrlisheim: ['kʰɔlt', 'kʰyː', 'kʰɔlp', 'kʰoʁən']
+Ortisei: ['kʰɔlt͡s', 'kʰuˑɛ̈', 'kʰɔlp', 'kʰɔ̞ʁ̞n̩']
+Hard: ['kʰa̠ːlt', 'kʰnyː', 'kʰʊˑɛ̈', 'kʰa̠ˑlp', 'kʰɔ̞ɐʁ̞n']
+Graubuenden: ['kʰnyː', 'kʰʊˑä', 'kʰäˑlp', 'kʰɔ̝ːɾɐ']
+Walser: ['kʰo̞ːɾə']
 
-t > t͡s / # _	90.91	(rep: 83.33, dist: 100.00)	(49 times)
-Tuebingen: ['t͡säː', 't͡suŋɡ', 't͡seˑə', 't͡säɪə', 't͡sβɔˑe']
-Cologne: ['t͡sa̠nˑt', 't͡sʊŋ', 't͡seːn', 't͡siˑ', 't͡sväˑɪ']
-Luxembourg: ['t͡sänt', 't͡sɔŋ', 't͡sɪŋ', 't͡sɛi̞f', 't͡sveː']
-Westerkwartier: ['t͡sãnt͡s', 't͡sɒŋ', 't͡sĩn', 't͡səũɴ']
-Biel: ['t͡sɑ̟ːn', 't͡sʊŋˑə', 't͡säˑə', 't͡sa̠ˑɪə', 't͡sβœˑɪ']
-Graubuenden: ['t͡sɑ̈ːn', 't͡sʊŋɡɐ', 't͡seːn', 't͡seːbɐ', 't͡sväˑɪ']
-Walser: ['t͡sa̠nt', 't͡sʊŋɡə', 't͡sahə', 't͡seːbɐ', 't͡sβæˑɪ̝']
-Hard: ['t͡sã̠ː', 't͡sʊŋə', 't͡sẽˑə̃', 't͡seːə', 't͡sβoˑɐ']
-Herrlisheim: ['t͡säːn', 't͡sʊŋ', 't͡sɛ̝ː', 't͡seː', 't͡svɛ̝ˑi']
-Ortisei: ['t͡sɑːn', 't͡sʊŋɡɛ̝̈', 't͡seːn', 't͡sɛ̝ːχ', 't͡sβɔˑə']
-
-k > kʰ / # _	90.91	(rep: 83.33, dist: 100.00)	(46 times)
-Tuebingen: ['kʰuˑə', 'kʰäˑlp', 'kʰält', 'kʰɔ̞nˑ', 'kʰɛ̝k']
-Cologne: ['kʰoˑ', 'kʰaləf', 'kʰniˑ', 'kʰa̠ˑlt', 'kʰɔ̞ːn']
-Luxembourg: ['kʰœ̈ʊˑ', 'kʰäləf', 'kʰnɛiˑ', 'kʰa̠ːl', 'kʰa̠ːχ']
-Westerkwartier: ['kʰaɔ', 'kʰɑ̝ɫf', 'kʰnɛˑe', 'kʰoɫtʰ']
-Feer: ['kʰʏ', 'kʰuələ', 'kʰnœ̝bʝɛ̝n', 'kʰuˑl', 'kʰʊrn']
-Heligoland: ['kʰɪ', 'kʰälə̞fkʰən', 'kʰnæbean', 'kʰuˑl', 'kʰuɐ']
-Graubuenden: ['kʰʊˑä', 'kʰäˑlp', 'kʰnyː', 'kʰɔ̝ːɾɐ']
-Walser: ['kʰo̞ːɾə', 'kʰɛ̝k']
-Hard: ['kʰʊˑɛ̈', 'kʰa̠ˑlp', 'kʰnyː', 'kʰa̠ːlt', 'kʰɔ̞ɐʁ̞n']
-Herrlisheim: ['kʰyː', 'kʰɔlp', 'kʰɔlt', 'kʰoʁən']
-Ortisei: ['kʰuˑɛ̈', 'kʰɔlp', 'kʰɔlt͡s', 'kʰɔ̞ʁ̞n̩']
-
-t > t͡s / _ vowel	90.91	(rep: 83.33, dist: 100.00)	(40 times)
-Tuebingen: ['t͡säː', 't͡suŋɡ', 't͡seˑə', 't͡säɪə']
-Cologne: ['t͡sa̠nˑt', 't͡sʊŋ', 't͡seːn', 't͡siˑ']
-Luxembourg: ['t͡sänt', 't͡sɔŋ', 't͡sɪŋ', 't͡sɛi̞f']
-Westerkwartier: ['t͡sãnt͡s', 't͡sɒŋ', 't͡sĩn', 't͡səũɴ']
-Biel: ['t͡sɑ̟ːn', 't͡sʊŋˑə', 't͡säˑə', 't͡sa̠ˑɪə']
-Graubuenden: ['t͡sɑ̈ːn', 't͡sʊŋɡɐ', 't͡seːn', 't͡seːbɐ']
-Walser: ['t͡sa̠nt', 't͡sʊŋɡə', 't͡sahə', 't͡seːbɐ']
-Hard: ['t͡sã̠ː', 't͡sʊŋə', 't͡sẽˑə̃', 't͡seːə']
-Herrlisheim: ['t͡säːn', 't͡sʊŋ', 't͡sɛ̝ː', 't͡seː']
-Ortisei: ['t͡sɑːn', 't͡sʊŋɡɛ̝̈', 't͡seːn', 't͡sɛ̝ːχ']
-
-k > kʰ / _ vowel	90.91	(rep: 83.33, dist: 100.00)	(38 times)
-Tuebingen: ['kʰuˑə', 'kʰäˑlp', 'kʰält', 'kʰɔ̞nˑ']
-Cologne: ['kʰoˑ', 'kʰaləf', 'kʰa̠ˑlt', 'kʰɔ̞ːn']
-Luxembourg: ['kʰœ̈ʊˑ', 'kʰäləf', 'kʰa̠ːl', 'kʰa̠ːχ']
-Westerkwartier: ['kʰaɔ', 'kʰɑ̝ɫf', 'kʰoɫtʰ']
-Feer: ['kʰʏ', 'kʰuələ', 'kʰuˑl', 'kʰʊrn']
-Heligoland: ['kʰɪ', 'kʰälə̞fkʰən', 'kʰuˑl', 'kʰuɐ']
+k > kʰ / _ vowel	91.67	(rep: 84.62, dist: 100.00)	(42 times)
+Tuebingen: ['kʰält', 'kʰuˑə', 'kʰäˑlp', 'kʰɔ̞nˑ']
+Cologne: ['kʰa̠ˑɫt', 'kʰoˑ', 'kʰaləf', 'kʰɔ̞ːn']
+Luxembourg: ['kʰa̠ːl', 'kʰœ̈ʊˑ', 'kʰäləf', 'kʰa̠ːχ']
+Veenkolonien: ['kʰo̞ltʰ', 'kʰäu̞', 'kʰälf', 'kʰɤ̟œn']
+Westerkwartier: ['kʰoɫtʰ', 'kʰaɔ', 'kʰɑ̝ɫf']
+Feer: ['kʰuˑl', 'kʰʏ', 'kʰuələ', 'kʰʊrn']
+Heligoland: ['kʰuˑl', 'kʰɪ', 'kʰälə̞fkʰən', 'kʰuɐ']
+Herrlisheim: ['kʰɔlt', 'kʰyː', 'kʰɔlp', 'kʰoʁən']
+Ortisei: ['kʰɔlt͡s', 'kʰuˑɛ̈', 'kʰɔlp', 'kʰɔ̞ʁ̞n̩']
+Hard: ['kʰa̠ːlt', 'kʰʊˑɛ̈', 'kʰa̠ˑlp', 'kʰɔ̞ɐʁ̞n']
 Graubuenden: ['kʰʊˑä', 'kʰäˑlp', 'kʰɔ̝ːɾɐ']
 Walser: ['kʰo̞ːɾə']
-Hard: ['kʰʊˑɛ̈', 'kʰa̠ˑlp', 'kʰa̠ːlt', 'kʰɔ̞ɐʁ̞n']
-Herrlisheim: ['kʰyː', 'kʰɔlp', 'kʰɔlt', 'kʰoʁən']
-Ortisei: ['kʰuˑɛ̈', 'kʰɔlp', 'kʰɔlt͡s', 'kʰɔ̞ʁ̞n̩']
 
-r > ∅ / _ vowel	90.91	(rep: 83.33, dist: 100.00)	(30 times)
-Tuebingen: ['hʊŋɔ̈', 'dɔ̞nɔ̈χ']
-Cologne: ['hʊŋɒ', 'donɒ', 'hʊndɐt']
-Luxembourg: ['hʊŋʌ̞̈', 'dɔ̝̈nʌ̞̈', 'hɔnɐt']
-Westerkwartier: ['ɦõ̞ŋʌɹ̝̥', 'dɶnaɹ̝̥', 'hundə̠tʰ']
-Feer: ['hɒ̃nəŋ', 'tʰɔnä', 'hʊnɐ̞tʰ']
-Heligoland: ['hɒŋə', 'tʰʏ̞̈nə', 'hɒnɐˑtʰ']
-Biel: ['hʊŋəz̠̥', 'dɔnˑəɾ̥', 'hʊn̪d̪ət']
-Graubuenden: ['hoˑndət']
-Walser: ['hʊŋɡəɾ̥', 'dɔ̝nɛ̈ɾ̥', 'hʊndət']
-Hard: ['hʊŋəʁ̞', 'dɔ̞nəʁ̞', 'hʊndəʁ̞t']
-Herrlisheim: ['hʊŋəχ', 'donəχ', 'hʊndə̠χt']
-Ortisei: ['hʊŋɡəχ', 'dɔ̈nəχ', 'hʊndəχt']
+t > t͡s	86.96	(rep: 76.92, dist: 100.00)	(76 times)
+Tuebingen: ['t͡sβɔˑe', 't͡seˑə', 't͡suŋɡ', 't͡säː', 't͡säɪə', 'hɛʁ̞t͡s', 'säˑlt͡s', 'si̞t͡s']
+Cologne: ['t͡sväˑɪ', 't͡seːn', 't͡sʊŋ', 't͡sa̠nˑt', 't͡siˑ', 'hɛ̝t͡s', 'za̠ːɫt͡s', 'zɛ̝t͡s']
+Luxembourg: ['t͡sveː', 't͡sɪŋ', 'ʀiˑət͡s', 't͡sɔŋ', 't͡sänt', 't͡sɛi̞f', 'he̞ɐt͡s', 'zält͡s', 'zɨ̞t͡s']
+Westerkwartier: ['t͡sĩn', 't͡sɒŋ', 't͡sãnt͡s', 't͡səũɴ', 'zʏ̈ɫt͡s']
+Herrlisheim: ['t͡svɛ̝ˑi', 't͡sɛ̝ː', 't͡sʊŋ', 't͡säːn', 't͡seː', 'häχt͡s', 'sɪt͡s']
+Ortisei: ['t͡sβɔˑə', 't͡seːn', 'ʁɛχt͡s', 't͡sʊŋɡɛ̝̈', 't͡sɑːn', 't͡sɛ̝ːχ', 'hɛχt͡s', 'sɔ̞lt͡s', 'sɪt͡s']
+Hard: ['t͡sβoˑɐ', 't͡sẽˑə̃', 't͡sʊŋə', 't͡sã̠ː', 't͡seːə', 'hɛ̝ˑʁ̞t͡s', 'sa̠ːlt͡s']
+Biel: ['t͡sβœˑɪ', 't͡säˑə', 't͡sʊŋˑə', 't͡sɑ̟ːn', 't͡sa̠ˑɪə', 'haˑr̥t͡s', 'sɑ̈ʊt͡s', 'sɪt͡s']
+Graubuenden: ['t͡sväˑɪ', 't͡seːn', 't͡sʊŋɡɐ', 't͡sɑ̈ːn', 't͡seːbɐ', 'hɛrt͡s', 'sɑ̟ːlt͡s', 'sɪ̝t͡s']
+Walser: ['t͡sβæˑɪ̝', 't͡sahə', 't͡sʊŋɡə', 't͡sa̠nt', 't͡seːbɐ', 'haˑɹt͡s', 'sa̠ːlt͡s']
 
-and 312 more
+t > t͡s / # _	86.96	(rep: 76.92, dist: 100.00)	(49 times)
+Tuebingen: ['t͡sβɔˑe', 't͡seˑə', 't͡suŋɡ', 't͡säː', 't͡säɪə']
+Cologne: ['t͡sväˑɪ', 't͡seːn', 't͡sʊŋ', 't͡sa̠nˑt', 't͡siˑ']
+Luxembourg: ['t͡sveː', 't͡sɪŋ', 't͡sɔŋ', 't͡sänt', 't͡sɛi̞f']
+Westerkwartier: ['t͡sĩn', 't͡sɒŋ', 't͡sãnt͡s', 't͡səũɴ']
+Herrlisheim: ['t͡svɛ̝ˑi', 't͡sɛ̝ː', 't͡sʊŋ', 't͡säːn', 't͡seː']
+Ortisei: ['t͡sβɔˑə', 't͡seːn', 't͡sʊŋɡɛ̝̈', 't͡sɑːn', 't͡sɛ̝ːχ']
+Hard: ['t͡sβoˑɐ', 't͡sẽˑə̃', 't͡sʊŋə', 't͡sã̠ː', 't͡seːə']
+Biel: ['t͡sβœˑɪ', 't͡säˑə', 't͡sʊŋˑə', 't͡sɑ̟ːn', 't͡sa̠ˑɪə']
+Graubuenden: ['t͡sväˑɪ', 't͡seːn', 't͡sʊŋɡɐ', 't͡sɑ̈ːn', 't͡seːbɐ']
+Walser: ['t͡sβæˑɪ̝', 't͡sahə', 't͡sʊŋɡə', 't͡sa̠nt', 't͡seːbɐ']
+
+s > ʃ / vowel _	86.96	(rep: 76.92, dist: 100.00)	(43 times)
+Tuebingen: ['fɪʃt', 'fiʃ', 'ʔäʃɛ̝̈', 'ʔi̞ʃ', 'βäʃ']
+Cologne: ['fɪʃ', 'ʔɛ̝ʃ', 'β̞ɛ̝ʃ']
+Luxembourg: ['fəʃ', 'væʃ']
+Veenkolonien: ['fɪʃ', 'ʔäʃə', 'v̥äʃ']
+Westerkwartier: ['ʔaʃ', 'ʔeʃ', 'vaʃ']
+Herrlisheim: ['fɛ̝ʃt', 'fɪʃ', 'ʔäʃə', 'väʃ']
+Ortisei: ['fɪʃt', 'fi̞ʃ', 'ʔäʃɛ̈', 'ʔiʃ', 'βäʃ']
+Hard: ['fɛ̝ʃt', 'fɪ̝ʃ', 'ʔɛ̝ʃə', 'ʔi̞ʃt', 'vɛ̝ˑʃ']
+Biel: ['fɛ̝ʃt', 'fɪʃ', 'ʔa̠ʃə̟', 'ʔɪˑʃ', 'β̞aʃ']
+Graubuenden: ['fɛ̝ʃt', 'fi̞ˑʃ', 'ɛ̝ˑʃə', 'ʔi̞ʃ', 'βäʃ']
+Walser: ['fɛ̝ʃt', 'fi̞ʃ', 'ʔæʃə', 'ʔiʃt', 'βa̠ʃ']
+
+t > t͡s / _ vowel	86.96	(rep: 76.92, dist: 100.00)	(40 times)
+Tuebingen: ['t͡seˑə', 't͡suŋɡ', 't͡säː', 't͡säɪə']
+Cologne: ['t͡seːn', 't͡sʊŋ', 't͡sa̠nˑt', 't͡siˑ']
+Luxembourg: ['t͡sɪŋ', 't͡sɔŋ', 't͡sänt', 't͡sɛi̞f']
+Westerkwartier: ['t͡sĩn', 't͡sɒŋ', 't͡sãnt͡s', 't͡səũɴ']
+Herrlisheim: ['t͡sɛ̝ː', 't͡sʊŋ', 't͡säːn', 't͡seː']
+Ortisei: ['t͡seːn', 't͡sʊŋɡɛ̝̈', 't͡sɑːn', 't͡sɛ̝ːχ']
+Hard: ['t͡sẽˑə̃', 't͡sʊŋə', 't͡sã̠ː', 't͡seːə']
+Biel: ['t͡säˑə', 't͡sʊŋˑə', 't͡sɑ̟ːn', 't͡sa̠ˑɪə']
+Graubuenden: ['t͡seːn', 't͡sʊŋɡɐ', 't͡sɑ̈ːn', 't͡seːbɐ']
+Walser: ['t͡sahə', 't͡sʊŋɡə', 't͡sa̠nt', 't͡seːbɐ']
+
+and 303 more
 =====================================
 
-Dutch_Std_NL, Dutch_Std_BE, Antwerp, Ostend, Limburg, Achterhoek, Veenkolonien
+Achterhoek, Limburg, Dutch_Std_NL, Dutch_Std_BE, Antwerp, Ostend, Tuebingen, Cologne, Luxembourg, Veenkolonien, Westerkwartier, Feer, Heligoland, Herrlisheim, Ortisei, Hard, Biel, Graubuenden, Walser
 -------
-16 correspondences above the threshold (70% importance)
+39 correspondences above the threshold (70% importance)
 
-k > k / # _	89.36	(rep: 100.00, dist: 80.77)	(34 times)
-Dutch_Std_NL: ['ku̞ˑ', 'kaʊt', 'ko̞ˑʁ̞ə', 'kvik']
-Dutch_Std_BE: ['ku̞ː', 'kɑ̈ɫf', 'kniː', 'käʊt', 'ko̞ːɾən', 'kβ̞ik̟']
-Antwerp: ['ku̞ː', 'kaɫəf', 'kniː', 'kɔ̞̟ːt', 'ko̞ːrə', 'kβ̞ɪ̝k̟']
-Ostend: ['ku̞ˑə', 'kɔːf', 'kniˑə', 'kut', 'kɔ̝ːrn̩', 'kβ̞ɪk̟']
-Limburg: ['kɒʊ', 'kɔːɸ', 'knɛɪ', 'kɔːt', 'koˑɐʁ̞']
-Achterhoek: ['ko̞ː', 'kɑləɸ', 'kneˑɪ', 'kɔɫt']
-Veenkolonien: ['kɑʊ', 'knɛ̝ˑɪ', 'koˑɾn̩']
+l > l	100.00	(rep: 100.00, dist: 100.00)	(174 times)
+Achterhoek: ['la̠ŋə', 'hɛ̝ˑɪləχ', 'blo̞ːt', 'lɛ̝ːβʁ̞̩', 'la̠m', 'kɑləɸ', 'mɛlək']
+Limburg: ['la̟ˑŋk', 'heːlɪç', 'blʊt', 'lɛˑɪβəχ', 'lɑ̈m', 'mɪlɪk̟', 'ʃtʊːl', 'nɔ̈lt']
+Dutch_Std_NL: ['hɛ̝ɪlʌ̈χ', 'blø̝̈t', 'lɛ̝ɪvəʁ̞', 'mɛlək', 'löʊf']
+Dutch_Std_BE: ['la̠ŋ', 'hɛɪləç', 'blut', 'leːβər̥', 'lɑ̈m', 'mɛlk', 'stuːl', 'lɔːf']
+Antwerp: ['laɪŋ', 'aˑɪ̞lɪç', 'bluːt', 'leˑv̥ər̥', 'la̠m', 'mɛlək̟', 'lo̞əf']
+Ostend: ['la̠ŋ', 'ɛləç', 'blu̞ˑət', 'leːvəs̠', 'lɑ̈m', 'stuˑəl', 'lɔ̝ːf']
+Tuebingen: ['läŋˑ', 'kʰält', 'häɪli̞ç', 'bluˑɔ̈t', 'le̞ːbɔ̈χ', 'la̠m', 'kʰäˑlp', 'mɪli̞ç', 'säˑlt͡s', 'ʃtuˑəl', 'lɑ̈ˑʊp']
+Cologne: ['laŋ', 'hɛ̝lɪʃ', 'bloˑt', 'lɪvɒ', 'la̠m', 'kʰaləf', 'mɪləʃ', 'lɔˑʊf']
+Luxembourg: ['la̠ːŋ', 'kʰa̠ːl', 'hɛləʃ', 'blʊ̈t͡s', 'noːl', 'lɪəvʌ̞̈', 'läm', 'kʰäləf', 'mɨ̞lɪ̠ʃ', 'zält͡s', 'ʃtʊl', 'nʊl']
+Veenkolonien: ['läːŋ', 'kʰo̞ltʰ', 'häeliç', 'bläu̞tʰ', 'le̝v̞ʌ', 'läm', 'kʰälf', 'mɛlkʰ', 'zɔltʰ', 'ʃd̥ä̠ol', 'lo̝ːf']
+Westerkwartier: ['laːŋ', 'hae̞lɛ̽χ', 'blʊutʰ', 'lɛifɹ̥̝̩', 'lɑ̟mɐ̰', 'lɑ̝of']
+Feer: ['lʊŋ', 'kʰuˑl', 'he̞likʰ', 'blo̟tʰ', 'lʏvä̟', 'lom', 'kʰuələ', 'muəlk', 'säːlt', 'sd̥uːl']
+Heligoland: ['lɔ̃ŋ', 'kʰuˑl', 'he̞lë', 'blo̞ˑ', 'noʏɘl', 'lʏ̈vä̝', 'lämkʰən', 'kʰälə̞fkʰən', 'mo̞lk', 'soɐ̠ltʰ', 'ʃd̥uːl']
+Herrlisheim: ['lɔ̈ŋ', 'kʰɔlt', 'häilik̟ʰ', 'bløːt', 'näːjəl', 'läβə̠χ', 'lɔ̈m', 'kʰɔlp', 'mɪlɪʃ', 'sɔls', 'ʃtøːl', 'läipʰ']
+Ortisei: ['lɔ̞ŋk', 'kʰɔlt͡s', 'häɪlɪ̝k', 'bløət͡s', 'leːbəχ', 'lɔ̞m', 'kʰɔlp', 'mɪ̝lç', 'sɔ̞lt͡s', 'ʃtʊɛl', 'la̠ːp']
+Hard: ['la̠ŋ', 'kʰa̠ːlt', 'ha̠ɪlɪɡ', 'blʊˑət', 'leˑəbəʁ̞', 'la̠m', 'kʰa̠ˑlp', 'mɪ̝lx', 'sa̠ːlt͡s', 'ʃtʊˑəl', 'loːp']
+Biel: ['laŋ', 'he̞i̞lɪk', 'blʊɛ̈t', 'lapəɾə', 'lɒm', 'lɑʊp']
+Graubuenden: ['läŋk̟', 'qʰɑːlt', 'ha̠ɪli̞k', 'blʊɔ̈t', 'lɛ̝ːbəɾə', 'läm', 'kʰäˑlp', 'mɪ̝lχ', 'sɑ̟ːlt͡s', 'ʃtuˑɛ̝̈l', 'nɑˑtlə', 'la̠ʊp']
+Walser: ['lɪŋɡ', 'xa̠ːlt', 'hæɪ̝lɪ̝k', 'bloˑɐt', 'labəɾə', 'xa̠ˑlp', 'mi̞lx̟', 'sa̠ːlt͡s', 'ʃtuˑəl', 'na̠ːdlə', 'läˑʊp']
 
-t > t / _ #	89.36	(rep: 100.00, dist: 80.77)	(33 times)
-Dutch_Std_NL: ['ɛ̝ɪt', 'bæɪt', 'æʏt', 'vɑ̈t', 'fɛχt']
-Dutch_Std_BE: ['eˑɪt', 'bɛˑɪt', 'æˑʏt', 'β̞ɑ̈t', 'fɛçt']
-Antwerp: ['e̞ˑt', 'baːt', 'ɔ̞ɐt', 'β̞at', 'fɛçt']
-Ostend: ['ɛt', 'bi̞t', 'ʉ̟̞t', 'fa̝ht']
-Limburg: ['e̞ˑət', 'biːt', 'uːt', 'βɑ̈t']
-Achterhoek: ['ɛt', 'bit', 'yt', 'βa̠t', 'fɛχt']
-Veenkolonien: ['ɛ̝ˑɪt', 'biːt', 'yt', 'β̞a̠t', 'fɛˑχt']
+l > l / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(108 times)
+Achterhoek: ['la̠ŋə', 'hɛ̝ˑɪləχ', 'blo̞ːt', 'lɛ̝ːβʁ̞̩', 'la̠m']
+Limburg: ['la̟ˑŋk', 'heːlɪç', 'blʊt', 'lɛˑɪβəχ', 'lɑ̈m']
+Dutch_Std_NL: ['hɛ̝ɪlʌ̈χ', 'blø̝̈t', 'lɛ̝ɪvəʁ̞', 'löʊf']
+Dutch_Std_BE: ['la̠ŋ', 'hɛɪləç', 'blut', 'leːβər̥', 'lɑ̈m', 'lɔːf']
+Antwerp: ['laɪŋ', 'aˑɪ̞lɪç', 'bluːt', 'leˑv̥ər̥', 'la̠m', 'lo̞əf']
+Ostend: ['la̠ŋ', 'ɛləç', 'blu̞ˑət', 'leːvəs̠', 'lɑ̈m', 'lɔ̝ːf']
+Tuebingen: ['läŋˑ', 'häɪli̞ç', 'bluˑɔ̈t', 'le̞ːbɔ̈χ', 'la̠m', 'lɑ̈ˑʊp']
+Cologne: ['laŋ', 'hɛ̝lɪʃ', 'bloˑt', 'lɪvɒ', 'la̠m', 'lɔˑʊf']
+Luxembourg: ['la̠ːŋ', 'hɛləʃ', 'blʊ̈t͡s', 'lɪəvʌ̞̈', 'läm']
+Veenkolonien: ['läːŋ', 'häeliç', 'bläu̞tʰ', 'le̝v̞ʌ', 'läm', 'lo̝ːf']
+Westerkwartier: ['laːŋ', 'hae̞lɛ̽χ', 'blʊutʰ', 'lɛifɹ̥̝̩', 'lɑ̟mɐ̰', 'lɑ̝of']
+Feer: ['lʊŋ', 'he̞likʰ', 'blo̟tʰ', 'lʏvä̟', 'lom']
+Heligoland: ['lɔ̃ŋ', 'he̞lë', 'blo̞ˑ', 'lʏ̈vä̝', 'lämkʰən']
+Herrlisheim: ['lɔ̈ŋ', 'häilik̟ʰ', 'bløːt', 'läβə̠χ', 'lɔ̈m', 'läipʰ']
+Ortisei: ['lɔ̞ŋk', 'häɪlɪ̝k', 'bløət͡s', 'leːbəχ', 'lɔ̞m', 'la̠ːp']
+Hard: ['la̠ŋ', 'ha̠ɪlɪɡ', 'blʊˑət', 'leˑəbəʁ̞', 'la̠m', 'loːp']
+Biel: ['laŋ', 'he̞i̞lɪk', 'blʊɛ̈t', 'lapəɾə', 'lɒm', 'lɑʊp']
+Graubuenden: ['läŋk̟', 'ha̠ɪli̞k', 'blʊɔ̈t', 'lɛ̝ːbəɾə', 'läm', 'nɑˑtlə', 'la̠ʊp']
+Walser: ['lɪŋɡ', 'hæɪ̝lɪ̝k', 'bloˑɐt', 'labəɾə', 'na̠ːdlə', 'läˑʊp']
 
-k > k / _ vowel	89.36	(rep: 100.00, dist: 80.77)	(25 times)
-Dutch_Std_NL: ['ku̞ˑ', 'kaʊt', 'ko̞ˑʁ̞ə']
-Dutch_Std_BE: ['ku̞ː', 'kɑ̈ɫf', 'käʊt', 'ko̞ːɾən']
-Antwerp: ['ku̞ː', 'kaɫəf', 'kɔ̞̟ːt', 'ko̞ːrə']
-Ostend: ['ku̞ˑə', 'kɔːf', 'kut', 'kɔ̝ːrn̩']
-Limburg: ['kɒʊ', 'kɔːɸ', 'kɔːt', 'koˑɐʁ̞']
-Achterhoek: ['ko̞ː', 'kɑləɸ', 'kɔɫt']
-Veenkolonien: ['kɑʊ', 'a̠ːs̺kə', 'koˑɾn̩']
+u > ∅	100.00	(rep: 100.00, dist: 100.00)	(80 times)
+Achterhoek: ['zœːv̥n̩', 'neːχn̩', 'tiːnə', 'ha̠nt', 'doˑɐn', 'hʊŋʁ̞̩']
+Limburg: ['ne̞ːɣ̟ə', 'tʰiə', 'häŋk', 'doˑɐn']
+Dutch_Std_NL: ['ne̞ɪχə', 'tʰiˑn', 'hɑ̈nt', 'dɔ̝ˑʁ̞ən']
+Dutch_Std_BE: ['zeːβn̩', 'neːʝn̩', 'tiːn', 'ha̠ntʰ', 'dɔːrn']
+Antwerp: ['neːʝə', 'tʰiˑn', 'ha̠nt']
+Ostend: ['seːvn̩', 'tiˑənə', 'ɑ̈nt', 'dɔːn', 'ʊŋr̥̩']
+Tuebingen: ['näˑe', 't͡seˑə', 'hänˑt', 'dɔ̞n']
+Cologne: ['nʏŋ', 't͡seːn', 'ha̠nˑt', 'dɔ̞ːn']
+Luxembourg: ['nɪŋ', 't͡sɪŋ', 'hänt', 'dɔ̞ɐˑ']
+Veenkolonien: ['søːbⁿm̩', 'ne̝iɡⁿŋ̩', 'tʰäˑɪn', 'häntʰ', 'do̞ˑʌn']
+Westerkwartier: ['s̠ʲø̞ːbⁿm̩', 'neɡⁿŋ̩', 't͡sĩn', 'hãnt͡s', 'doˑɤn']
+Feer: ['søːvn̩', 'njyɡⁿŋ̩', 'tʰʲiːn', 'hʊn']
+Heligoland: ['se̝ːbⁿm̩', 'tʰäe̞n', 'hɔ̟n']
+Herrlisheim: ['niːn', 't͡sɛ̝ː', 'hɒnt', 'toʁ̞ən']
+Ortisei: ['ziːbm̩', 'näˑɪn', 't͡seːn', 'hɒnt͡s', 'dɔʁ̞n̩']
+Hard: ['nyː', 't͡sẽˑə̃', 'ha̠ˑnt']
+Biel: ['nyːn', 't͡säˑə', 'hɒˑŋ', 'tɔːɾn']
+Graubuenden: ['nyːn', 't͡seːn', 'häˑnt', 'dɔˑrn', 'hʊŋɡr̩']
+Walser: ['nyː', 't͡sahə', 'ha̠ˑnt']
 
-s > s / A _	83.33	(rep: 71.43, dist: 100.00)	(15 times)
-Dutch_Std_NL: ['ɑ̈s', 'fɑ̈st', 'vɑ̈s']
-Dutch_Std_BE: ['ɑ̈s', 'βɑ̈st', 'β̞ɑ̈s']
-Antwerp: ['a̠s', 'fast', 'β̞a̠s']
-Ostend: ['ɑ̈sə', 'vɑ̈stə', 'β̞ɑ̈s']
-Limburg: ['fäs']
-Achterhoek: ['a̠s', 'ɸa̠stə', 'βa̠s']
-Veenkolonien: ['va̠stə']
+s > s	97.30	(rep: 94.74, dist: 100.00)	(157 times)
+Achterhoek: ['zɛsə', 'sχa̠ɾəp', 'ɸa̠stə', 'steːn', 'a̠s', 'stʌʁəm', 'snɛ̝ˑɪ', 'hys', 'stɔ̝ːɫ', 'βa̠s']
+Limburg: ['sɛˑs', 'fäs', 'stɛ̝ˑi', 'huːs', 'ɪs']
+Dutch_Std_NL: ['z̥ɛs', 'sχɛʁ̞əp', 'fɑ̈st', 'fɪs', 'ste̞ˑɪn', 'ɑ̈s', 'stɔʁəm', 'sneˑu̞ˑ', 'ha̠øs', 'stu̞ːɫ', 'ɪs', 'vɑ̈s']
+Dutch_Std_BE: ['zɛs', 'sçɛrp', 'βɑ̈st', 'vɪs', 'steːn', 'ɑ̈s', 'stɔrm̩', 'sneˑu', 'hæˑʏs', 'stuːl', 'ɪs', 'β̞ɑ̈s']
+Antwerp: ['zɪs', 'sjaːɾəp', 'fast', 'vɪs', 'steən', 'a̠s', 'stə̝ɾəm', 'sniə', 'ɔɐs', 'stu̞ː', 'ɪs', 'β̞a̠s']
+Ostend: ['zasə', 'seːvn̩', 'vɑ̈stə', 'vɛs', 'stɛ̝ːn', 'ɑ̈sə', 'stɔɾm', 'snɛˑʊ', 'ʉ̟s', 'stuˑəl', 'ɛs', 'β̞ɑ̈s', 'sβaːs̠']
+Tuebingen: ['sɪks', 'siːbə', 'säˑlt͡s', 'hɐ̠uˑs', 'seˑə', 'si̞t͡s']
+Cologne: ['zɛ̝ks', 'fa̠s', 'huːs', 'ʔɪs']
+Luxembourg: ['zɛks', 'fɛ̞st', 'steːn', 'hɛ̈ʊˑs', 'ɐs']
+Veenkolonien: ['z̥e̞ˑəs', 'søːbⁿm̩', 'fäˑstʰ', 'ʔɪs']
+Westerkwartier: ['fastʰ']
+Feer: ['se̝ːks', 'søːvn̩', 'sɡ̥arap', 'feːst', 'sië', 'fask', 'stiæn', 'ʔe̝ːskʰ', 'sd̥ʊrʌm', 'snæ', 'säːlt', 'hʏs', 'sd̥uːl', 'ʔas', 'sɛ', 'sat', 'vaske', 'sv̥ea']
+Heligoland: ['sœ̠s̪', 'se̝ːbⁿm̩', 'sɡ̥äpʰ', 'fäs', 'seɐ̠', 'fɛsk', 'ʔe̞asɡən', 'sne̞ː', 'soɐ̠ltʰ', 'hʏs', 'ʔɛs', 'vɐsɡə', 'sveɑ̝']
+Herrlisheim: ['sɪks', 'sɛ̝βə', 'sɛ̝ːχ', 'sɔls', 'hyˑs', 'ʔɪs', 'seː', 'sɪt͡s']
+Ortisei: ['sɪks', 'sɛ̝ːχ', 'sɔ̞lt͡s', 'haɵ̠s', 'sɪt͡s']
+Hard: ['sɪks', 'seˑbə', 'sa̠ːlt͡s', 'huːs']
+Biel: ['säχs', 'seˑpə', 'sɛːr̥', 'sɑ̈ʊt͡s', 'huːs', 'sɪt͡s']
+Graubuenden: ['seɪks', 'seːbɐ', 'sɛ̝ːɾ', 'sɑ̟ːlt͡s', 'huːs', 'sɪ̝t͡s']
+Walser: ['sæks', 'siːpə', 'sɛ̝ːɹ̝̥', 'sa̠ːlt͡s', 'huːs']
 
-t > t / vowel _	79.38	(rep: 100.00, dist: 65.81)	(51 times)
-Dutch_Std_NL: ['z̥ɪt', 'ɛ̝ɪt', 'bæɪt', 'æʏt', 'fu̞t', 'vɑ̈t', 'vɪt']
-Dutch_Std_BE: ['beˑtəɹ̝̥', 'zɪt', 'eˑɪt', 'bɛˑɪt', 'æˑʏt', 'vuˑt', 'β̞ɑ̈t', 'β̞ɪt']
-Antwerp: ['zɪ̝t', 'e̞ˑt', 'baːt', 'ɔ̞ɐt', 'fu̞ˑt', 'β̞at', 'β̞it']
-Ostend: ['beˑtr̩̥', 'zɛt', 'ɛt', 'bi̞t', 'ʉ̟̞t', 'vu̞ˑət', 'βɛt']
-Limburg: ['bɛ̝ːtəχ', 'zɪt', 'e̞ˑət', 'biːt', 'uːt', 'foːt', 'βɑ̈t', 'βɪət']
-Achterhoek: ['bɛtʁ̞̩', 'zɪt', 'ɛt', 'bit', 'yt', 'βo̞ːt', 'βa̠t', 'βɪt']
-Veenkolonien: ['z̺ɪˑt', 'ɛ̝ˑɪt', 'biːt', 'yt', 'β̞a̠t', 'βɒˑɪt']
+l > l / # _	97.30	(rep: 94.74, dist: 100.00)	(66 times)
+Achterhoek: ['la̠ŋə', 'lɛ̝ːβʁ̞̩', 'la̠m']
+Limburg: ['la̟ˑŋk', 'lɛˑɪβəχ', 'lɑ̈m']
+Dutch_Std_NL: ['lɛ̝ɪvəʁ̞', 'löʊf']
+Dutch_Std_BE: ['la̠ŋ', 'leːβər̥', 'lɑ̈m', 'lɔːf']
+Antwerp: ['laɪŋ', 'leˑv̥ər̥', 'la̠m', 'lo̞əf']
+Ostend: ['la̠ŋ', 'leːvəs̠', 'lɑ̈m', 'lɔ̝ːf']
+Tuebingen: ['läŋˑ', 'le̞ːbɔ̈χ', 'la̠m', 'lɑ̈ˑʊp']
+Cologne: ['laŋ', 'lɪvɒ', 'la̠m', 'lɔˑʊf']
+Luxembourg: ['la̠ːŋ', 'lɪəvʌ̞̈', 'läm']
+Veenkolonien: ['läːŋ', 'le̝v̞ʌ', 'läm', 'lo̝ːf']
+Westerkwartier: ['laːŋ', 'lɛifɹ̥̝̩', 'lɑ̟mɐ̰', 'lɑ̝of']
+Feer: ['lʊŋ', 'lʏvä̟', 'lom']
+Heligoland: ['lɔ̃ŋ', 'lʏ̈vä̝', 'lämkʰən']
+Herrlisheim: ['lɔ̈ŋ', 'läβə̠χ', 'lɔ̈m', 'läipʰ']
+Ortisei: ['lɔ̞ŋk', 'leːbəχ', 'lɔ̞m', 'la̠ːp']
+Hard: ['la̠ŋ', 'leˑəbəʁ̞', 'la̠m', 'loːp']
+Biel: ['laŋ', 'lapəɾə', 'lɒm', 'lɑʊp']
+Graubuenden: ['läŋk̟', 'lɛ̝ːbəɾə', 'läm', 'la̠ʊp']
+Walser: ['lɪŋɡ', 'labəɾə', 'läˑʊp']
 
-t > t / # _	72.86	(rep: 71.43, dist: 74.36)	(22 times)
-Dutch_Std_BE: ['ta̠nt', 'tʊ̞ŋ', 'tiːn', 'tɔp', 'tra̠ːn', 'teːn', 'tβ̞eː']
-Antwerp: ['ta̠nt', 'tʌŋ', 'tɔp', 'teən']
-Ostend: ['tɑ̈nt', 'tʊŋə', 'tiˑənə', 'tɔp', 'tɛːn']
-Limburg: ['täŋk', 'tʊŋ', 'tɔp']
-Achterhoek: ['tiːnə', 'tɔp', 'tβɛ̝ˑɪ']
-Veenkolonien: ['tɾoːnə', 'tβ̞ɛ̝ˑɪə']
+k > ∅	94.44	(rep: 89.47, dist: 100.00)	(64 times)
+Achterhoek: ['ɸɪʃ', 'a̠s', 'βa̠s']
+Limburg: ['ʃɛ̝ˑʁ̞əp', 'føʃ', 'ɛ̝ːʃ', 'βɔːχ']
+Dutch_Std_NL: ['fɪs', 'ɑ̈s', 'vɑ̈s']
+Dutch_Std_BE: ['vɪs', 'ɑ̈s', 'β̞ɑ̈s']
+Antwerp: ['vɪs', 'a̠s', 'β̞a̠s']
+Ostend: ['vɛs', 'ɑ̈sə', 'β̞ɑ̈s']
+Tuebingen: ['ʃäˑɔ̈f', 'fiʃ', 'ʔäʃɛ̝̈', 'βäʃ']
+Cologne: ['ʃɛ̝ʁ̞əp', 'fɪʃ', 'ʔɛ̝ʃ', 'β̞ɛ̝ʃ']
+Luxembourg: ['ʃa̠ːf', 'fəʃ', 'væʃ']
+Veenkolonien: ['fɪʃ', 'ʔäʃə', 'v̥äʃ']
+Westerkwartier: ['fɪs̠ʲ', 'ʔaʃ', 'vaʃ']
+Herrlisheim: ['ʃɒ̝χf', 'fɪʃ', 'ʔäʃə', 'väʃ']
+Ortisei: ['ʃɑ̈ʁf', 'fi̞ʃ', 'ʔäʃɛ̈', 'βäʃ', 'ʔiː']
+Hard: ['ʃa̠ːʁ̞f', 'fɪ̝ʃ', 'ʔɛ̝ʃə', 'vɛ̝ˑʃ', 'ʔiː']
+Biel: ['ʃɑːɾf', 'fɪʃ', 'ʔa̠ʃə̟', 'β̞aʃ']
+Graubuenden: ['ʃa̟ˑrf', 'fi̞ˑʃ', 'ɛ̝ˑʃə', 'βäʃ', 'ʔiː']
+Walser: ['ʃa̠ˑɹɸ', 'fi̞ʃ', 'ʔæʃə', 'βa̠ʃ', 'ʔiː']
 
-s > s / _ T	72.86	(rep: 71.43, dist: 74.36)	(19 times)
-Dutch_Std_NL: ['ste̞ˑɪn', 'fɑ̈st', 'stu̞ːɫ']
-Dutch_Std_BE: ['stɔrm̩', 'steːn', 'βɑ̈st', 'stuːl']
-Antwerp: ['stə̝ɾəm', 'steən', 'fast', 'stu̞ː']
-Ostend: ['stɔɾm', 'stɛ̝ːn', 'vɑ̈stə', 'stuˑəl']
-Limburg: ['stɛ̝ˑi']
-Achterhoek: ['stʌʁəm', 'steːn', 'ɸa̠stə', 'stɔ̝ːɫ']
-Veenkolonien: ['stœ̈ːɾəm', 'va̠stə']
+k > ∅ / cons _	94.44	(rep: 89.47, dist: 100.00)	(60 times)
+Achterhoek: ['ɸɪʃ', 'a̠s', 'βa̠s']
+Limburg: ['ʃɛ̝ˑʁ̞əp', 'føʃ', 'ɛ̝ːʃ', 'βɔːχ']
+Dutch_Std_NL: ['fɪs', 'ɑ̈s', 'vɑ̈s']
+Dutch_Std_BE: ['vɪs', 'ɑ̈s', 'β̞ɑ̈s']
+Antwerp: ['vɪs', 'a̠s', 'β̞a̠s']
+Ostend: ['vɛs', 'ɑ̈sə', 'β̞ɑ̈s']
+Tuebingen: ['ʃäˑɔ̈f', 'fiʃ', 'ʔäʃɛ̝̈', 'βäʃ']
+Cologne: ['ʃɛ̝ʁ̞əp', 'fɪʃ', 'ʔɛ̝ʃ', 'β̞ɛ̝ʃ']
+Luxembourg: ['ʃa̠ːf', 'fəʃ', 'væʃ']
+Veenkolonien: ['fɪʃ', 'ʔäʃə', 'v̥äʃ']
+Westerkwartier: ['fɪs̠ʲ', 'ʔaʃ', 'vaʃ']
+Herrlisheim: ['ʃɒ̝χf', 'fɪʃ', 'ʔäʃə', 'väʃ']
+Ortisei: ['ʃɑ̈ʁf', 'fi̞ʃ', 'ʔäʃɛ̈', 'βäʃ']
+Hard: ['ʃa̠ːʁ̞f', 'fɪ̝ʃ', 'ʔɛ̝ʃə', 'vɛ̝ˑʃ']
+Biel: ['ʃɑːɾf', 'fɪʃ', 'ʔa̠ʃə̟', 'β̞aʃ']
+Graubuenden: ['ʃa̟ˑrf', 'fi̞ˑʃ', 'ɛ̝ˑʃə', 'βäʃ']
+Walser: ['ʃa̠ˑɹɸ', 'fi̞ʃ', 'ʔæʃə', 'βa̠ʃ']
 
-a > ɑ̈	72.73	(rep: 57.14, dist: 100.00)	(35 times)
-Dutch_Std_NL: ['tʰɑ̈nt', 'hɑ̈nt', 'ɑ̈s', 'ɫɑ̈ŋ', 'ɫɑ̈m', 'nɑ̈χt', 'fɑ̈st', 'ɑ̈ɫ', 'dɑ̈χ', 'χɑ̈ns', 'vɑ̈t', 'bɑ̈t', 'vɑ̈s', 'ɑ̈χt']
-Dutch_Std_BE: ['ɑ̈s', 'kɑ̈ɫf', 'lɑ̈m', 'βɑ̈st', 'ɑ̈ɫ', 'β̞ɑ̈t', 'bɑ̈t', 'β̞ɑ̈s']
-Ostend: ['tɑ̈nt', 'ɑ̈nt', 'ɑ̈sə', 'lɑ̈m', 'vɑ̈stə', 'βɑ̈rm', 'β̞ɑ̈də', 'β̞ɑ̈s', 'ɑ̈χtə']
-Limburg: ['lɑ̈m', 'βɑ̈t', 'bɑ̈t', 'nɑ̈ks']
+k > ∅ / S _	94.44	(rep: 89.47, dist: 100.00)	(59 times)
+Achterhoek: ['ɸɪʃ', 'a̠s', 'βa̠s']
+Limburg: ['ʃɛ̝ˑʁ̞əp', 'føʃ', 'ɛ̝ːʃ']
+Dutch_Std_NL: ['fɪs', 'ɑ̈s', 'vɑ̈s']
+Dutch_Std_BE: ['vɪs', 'ɑ̈s', 'β̞ɑ̈s']
+Antwerp: ['vɪs', 'a̠s', 'β̞a̠s']
+Ostend: ['vɛs', 'ɑ̈sə', 'β̞ɑ̈s']
+Tuebingen: ['ʃäˑɔ̈f', 'fiʃ', 'ʔäʃɛ̝̈', 'βäʃ']
+Cologne: ['ʃɛ̝ʁ̞əp', 'fɪʃ', 'ʔɛ̝ʃ', 'β̞ɛ̝ʃ']
+Luxembourg: ['ʃa̠ːf', 'fəʃ', 'væʃ']
+Veenkolonien: ['fɪʃ', 'ʔäʃə', 'v̥äʃ']
+Westerkwartier: ['fɪs̠ʲ', 'ʔaʃ', 'vaʃ']
+Herrlisheim: ['ʃɒ̝χf', 'fɪʃ', 'ʔäʃə', 'väʃ']
+Ortisei: ['ʃɑ̈ʁf', 'fi̞ʃ', 'ʔäʃɛ̈', 'βäʃ']
+Hard: ['ʃa̠ːʁ̞f', 'fɪ̝ʃ', 'ʔɛ̝ʃə', 'vɛ̝ˑʃ']
+Biel: ['ʃɑːɾf', 'fɪʃ', 'ʔa̠ʃə̟', 'β̞aʃ']
+Graubuenden: ['ʃa̟ˑrf', 'fi̞ˑʃ', 'ɛ̝ˑʃə', 'βäʃ']
+Walser: ['ʃa̠ˑɹɸ', 'fi̞ʃ', 'ʔæʃə', 'βa̠ʃ']
 
-a > ɑ̈ / _ cons	72.73	(rep: 57.14, dist: 100.00)	(34 times)
-Dutch_Std_NL: ['tʰɑ̈nt', 'hɑ̈nt', 'ɑ̈s', 'ɫɑ̈ŋ', 'ɫɑ̈m', 'nɑ̈χt', 'fɑ̈st', 'ɑ̈ɫ', 'χɑ̈ns', 'vɑ̈t', 'bɑ̈t', 'vɑ̈s', 'ɑ̈χt']
-Dutch_Std_BE: ['ɑ̈s', 'kɑ̈ɫf', 'lɑ̈m', 'βɑ̈st', 'ɑ̈ɫ', 'β̞ɑ̈t', 'bɑ̈t', 'β̞ɑ̈s']
-Ostend: ['tɑ̈nt', 'ɑ̈nt', 'ɑ̈sə', 'lɑ̈m', 'vɑ̈stə', 'βɑ̈rm', 'β̞ɑ̈də', 'β̞ɑ̈s', 'ɑ̈χtə']
-Limburg: ['lɑ̈m', 'βɑ̈t', 'bɑ̈t', 'nɑ̈ks']
+w > ∅ / vowel _	94.44	(rep: 89.47, dist: 100.00)	(57 times)
+Achterhoek: ['fiˑəʁ̞ə', 'kneˑɪ', 'ko̞ː']
+Limburg: ['ɸiˑəχ', 'knɛɪ', 'kɒʊ']
+Dutch_Std_NL: ['fiˑəʁ̞', 'kʰniˑ', 'ku̞ˑ']
+Dutch_Std_BE: ['viˑəɹ̝̥', 'kniː', 'ku̞ː']
+Antwerp: ['viːs̠', 'kniː', 'ku̞ː']
+Ostend: ['viˑəɾə', 'kniˑə', 'ku̞ˑə']
+Tuebingen: ['fiˑɔ̈', 'näˑe', 'kniː', 'kʰuˑə']
+Cologne: ['fiˑə', 'nʏŋ', 'kʰniˑ', 'kʰoˑ']
+Luxembourg: ['fə̆ɪˑɜ̠', 'kʰnɛiˑ', 'kʰœ̈ʊˑ']
+Veenkolonien: ['fäiɔ', 'kʰnɛ̠e̝', 'kʰäu̞']
+Westerkwartier: ['fiˑɾ', 'kʰnɛˑe', 'kʰaɔ']
+Feer: ['fjä̝o̞ɔ̟', 'kʰʏ']
+Heligoland: ['ʃd̥ʲuɐ̠', 'kʰɪ']
+Herrlisheim: ['fiˑəχ', 'kniː', 'kʰyː']
+Ortisei: ['fiˑəχ', 'kniˑɛ̈', 'kʰuˑɛ̈']
+Hard: ['fiˑəʁ̞', 'nyː', 'kʰnyː', 'kʰʊˑɛ̈']
+Biel: ['fiˑəɾ̥', 'nyːn', 'χnœɪ', 'χʊə̟']
+Graubuenden: ['fiˑɛɾ', 'nyːn', 'kʰnyː', 'kʰʊˑä']
+Walser: ['fiˑəɹ̝', 'nyː', 'tʰənɜ̹ˑʏ', 'xu̞ˑɛ̈']
 
-a > ɑ̈ / cons _	72.73	(rep: 57.14, dist: 100.00)	(27 times)
-Dutch_Std_NL: ['tʰɑ̈nt', 'hɑ̈nt', 'ɫɑ̈ŋ', 'ɫɑ̈m', 'nɑ̈χt', 'fɑ̈st', 'dɑ̈χ', 'χɑ̈ns', 'vɑ̈t', 'bɑ̈t', 'vɑ̈s']
-Dutch_Std_BE: ['kɑ̈ɫf', 'lɑ̈m', 'βɑ̈st', 'β̞ɑ̈t', 'bɑ̈t', 'β̞ɑ̈s']
-Ostend: ['tɑ̈nt', 'lɑ̈m', 'vɑ̈stə', 'βɑ̈rm', 'β̞ɑ̈də', 'β̞ɑ̈s']
-Limburg: ['lɑ̈m', 'βɑ̈t', 'bɑ̈t', 'nɑ̈ks']
+θ > d	91.43	(rep: 84.21, dist: 100.00)	(91 times)
+Achterhoek: ['dʁeː', 'iˑʁ̞̩də', 'doˑɐn', 'dʊndʁ̞̩', 'dɪŋ']
+Limburg: ['dʁɛˑɪ', 'doˑɐn', 'dʊndəχ', 'dɪŋk̟']
+Dutch_Std_NL: ['dʁiˑ', 'aˑɹdə', 'dɔ̝ˑʁ̞ən', 'dʌndəʁ̞', 'dɪŋ']
+Dutch_Std_BE: ['aːrdə', 'dɔːrn', 'dʌ̞ndər̥', 'dɪŋ']
+Antwerp: ['dɾa̠ː', 'ɑːrdə', 'do̞ːɾə', 'dɪŋ']
+Ostend: ['dɾiˑə', 'a̝ːrdə', 'dɔːn', 'dœndr̥̩', 'dɪŋk̟', 'nɑ̈ˑɔ̈dɫ̩']
+Tuebingen: ['dʁɛ̈iˑ', 'bʁʊədɔ̈', 'ʔɛʁ̞dɛ̝̈', 'dɔ̞n', 'dɔ̞nɔ̈χ', 'dɪŋ', 'nɔ̞ːdl̩']
+Cologne: ['dʀe̝ˑɪ', 'bʁoːdɒ', 'dɔ̞ːn', 'donɒ', 'dɪŋ', 'nɔ̞ːdɫ̩']
+Luxembourg: ['dʀaˑɪ', 'bʁʊ̞dɐˑ', 'nʊəʁdən', 'dɔ̞ɐˑ', 'dɔ̝̈nʌ̞̈', 'dɪŋən']
+Veenkolonien: ['drɛ̠i', 'ʔee̽de̽', 'do̞ˑʌn', 'dʌ̝nɔ', 'deŋkʰ']
+Westerkwartier: ['dɾaɛ', 'ʔe̝ɛdæ', 'doˑɤn', 'dɶnaɹ̝̥', 'deːŋ']
+Heligoland: ['dɪŋ']
+Herrlisheim: ['bʁe̝ːdə̠χ', 'donəχ', 'dɪŋ', 'näːdl̩']
+Ortisei: ['dʁäˑɪ', 'bʁʊədəχ', 'ʔɛʁ̞dɛ̈', 'dɔʁ̞n̩', 'dɔ̈nəχ', 'dɪŋk', 'nɔ̝ːdl̩']
+Hard: ['dʁyː', 'bʁ̞ʏˑədəʁ̞', 'nɔ̞ːʁ̞də', 'ʔɛ̝ˑʁ̞dɛ̝̈', 'dɔ̞rnə', 'dɔ̞nəʁ̞', 'dɪ̝ŋ', 'nɔ̞ːdl̩']
+Biel: ['dɔnˑəɾ̥', 'dɪŋ']
+Graubuenden: ['dɾeiˑ', 'brʊɔ̈dr̩', 'nɔˑrd', 'ɛˑrdə', 'dɔˑrn', 'do̞nˑɾ̩', 'dɪ̝ˑŋk̟']
+Walser: ['dɾyː', 'bɾʊɔ̈dɛ̈ɾ̥', 'nɔ̞ɾdə', 'ʔa̠rdə', 'doːɾə', 'dɔ̝nɛ̈ɾ̥', 'dɪ̝ŋɡ', 'na̠ːdlə']
 
-and 274 more
+and 486 more
 =====================================
 
-Grou, Dutch_Std_NL, Dutch_Std_BE, Antwerp, Ostend, Limburg, Achterhoek, Veenkolonien
--------
-7 correspondences above the threshold (70% importance)
-
-k > k / # _	100.00	(rep: 100.00, dist: 100.00)	(40 times)
-Grou: ['kɒˑʊ', 'kɪiəɫ', 'knɪbɫ̩', 'kɔ̞ːt', 'kõˑə̃n', 'kβ̞ɪk']
-Dutch_Std_NL: ['ku̞ˑ', 'kaʊt', 'ko̞ˑʁ̞ə', 'kvik']
-Dutch_Std_BE: ['ku̞ː', 'kɑ̈ɫf', 'kniː', 'käʊt', 'ko̞ːɾən', 'kβ̞ik̟']
-Antwerp: ['ku̞ː', 'kaɫəf', 'kniː', 'kɔ̞̟ːt', 'ko̞ːrə', 'kβ̞ɪ̝k̟']
-Ostend: ['ku̞ˑə', 'kɔːf', 'kniˑə', 'kut', 'kɔ̝ːrn̩', 'kβ̞ɪk̟']
-Limburg: ['kɒʊ', 'kɔːɸ', 'knɛɪ', 'kɔːt', 'koˑɐʁ̞']
-Achterhoek: ['ko̞ː', 'kɑləɸ', 'kneˑɪ', 'kɔɫt']
-Veenkolonien: ['kɑʊ', 'knɛ̝ˑɪ', 'koˑɾn̩']
-
-t > t / _ #	100.00	(rep: 100.00, dist: 100.00)	(37 times)
-Grou: ['it', 'bit', 'yt', 'βɔt']
-Dutch_Std_NL: ['ɛ̝ɪt', 'bæɪt', 'æʏt', 'vɑ̈t', 'fɛχt']
-Dutch_Std_BE: ['eˑɪt', 'bɛˑɪt', 'æˑʏt', 'β̞ɑ̈t', 'fɛçt']
-Antwerp: ['e̞ˑt', 'baːt', 'ɔ̞ɐt', 'β̞at', 'fɛçt']
-Ostend: ['ɛt', 'bi̞t', 'ʉ̟̞t', 'fa̝ht']
-Limburg: ['e̞ˑət', 'biːt', 'uːt', 'βɑ̈t']
-Achterhoek: ['ɛt', 'bit', 'yt', 'βa̠t', 'fɛχt']
-Veenkolonien: ['ɛ̝ˑɪt', 'biːt', 'yt', 'β̞a̠t', 'fɛˑχt']
-
-k > k / _ vowel	100.00	(rep: 100.00, dist: 100.00)	(31 times)
-Grou: ['kɒˑʊ', 'jɪs̺kə', 'kɪiəɫ', 'kɔ̞ːt', 'kõˑə̃n', 's̺kɛrp']
-Dutch_Std_NL: ['ku̞ˑ', 'kaʊt', 'ko̞ˑʁ̞ə']
-Dutch_Std_BE: ['ku̞ː', 'kɑ̈ɫf', 'käʊt', 'ko̞ːɾən']
-Antwerp: ['ku̞ː', 'kaɫəf', 'kɔ̞̟ːt', 'ko̞ːrə']
-Ostend: ['ku̞ˑə', 'kɔːf', 'kut', 'kɔ̝ːrn̩']
-Limburg: ['kɒʊ', 'kɔːɸ', 'kɔːt', 'koˑɐʁ̞']
-Achterhoek: ['ko̞ː', 'kɑləɸ', 'kɔɫt']
-Veenkolonien: ['kɑʊ', 'a̠ːs̺kə', 'koˑɾn̩']
-
-t > t / vowel _	89.80	(rep: 100.00, dist: 81.48)	(59 times)
-Grou: ['bɛtr̩', 's̺ɪt', 'it', 'bit', 'yt', 'foˑət', 'βɔt', 'βit']
-Dutch_Std_NL: ['z̥ɪt', 'ɛ̝ɪt', 'bæɪt', 'æʏt', 'fu̞t', 'vɑ̈t', 'vɪt']
-Dutch_Std_BE: ['beˑtəɹ̝̥', 'zɪt', 'eˑɪt', 'bɛˑɪt', 'æˑʏt', 'vuˑt', 'β̞ɑ̈t', 'β̞ɪt']
-Antwerp: ['zɪ̝t', 'e̞ˑt', 'baːt', 'ɔ̞ɐt', 'fu̞ˑt', 'β̞at', 'β̞it']
-Ostend: ['beˑtr̩̥', 'zɛt', 'ɛt', 'bi̞t', 'ʉ̟̞t', 'vu̞ˑət', 'βɛt']
-Limburg: ['bɛ̝ːtəχ', 'zɪt', 'e̞ˑət', 'biːt', 'uːt', 'foːt', 'βɑ̈t', 'βɪət']
-Achterhoek: ['bɛtʁ̞̩', 'zɪt', 'ɛt', 'bit', 'yt', 'βo̞ːt', 'βa̠t', 'βɪt']
-Veenkolonien: ['z̺ɪˑt', 'ɛ̝ˑɪt', 'biːt', 'yt', 'β̞a̠t', 'βɒˑɪt']
-
-t > t / # _	85.71	(rep: 75.00, dist: 100.00)	(28 times)
-Grou: ['tinə', 'tɔŋə', 'tɔp', 'tɾiˑən', 'tiˑən', 'tβ̞äː']
-Dutch_Std_BE: ['ta̠nt', 'tʊ̞ŋ', 'tiːn', 'tɔp', 'tra̠ːn', 'teːn', 'tβ̞eː']
-Antwerp: ['ta̠nt', 'tʌŋ', 'tɔp', 'teən']
-Ostend: ['tɑ̈nt', 'tʊŋə', 'tiˑənə', 'tɔp', 'tɛːn']
-Limburg: ['täŋk', 'tʊŋ', 'tɔp']
-Achterhoek: ['tiːnə', 'tɔp', 'tβɛ̝ˑɪ']
-Veenkolonien: ['tɾoːnə', 'tβ̞ɛ̝ˑɪə']
-
-s > ∅	80.00	(rep: 100.00, dist: 66.67)	(24 times)
-Grou: ['iːs̺', 'mo̝ːs̺', 'ɡoˑəs']
-Dutch_Std_NL: ['ɛ̞ɪs', 'mæø̝̈s', 'χɑ̈ns']
-Dutch_Std_BE: ['ɛˑɪs', 'mæˑʏs', 'x̟a̠ns']
-Antwerp: ['aːs', 'mɔəs', 'çjans']
-Ostend: ['is', 'mʉs', 'χɑ̟̃zə']
-Limburg: ['iːs', 'muːs', 'x̟äns']
-Achterhoek: ['is', 'mys', 'χa̠ns']
-Veenkolonien: ['is̺', 'mo̝ːs̺', 'hänzə']
-
-s > s / A _	76.92	(rep: 62.50, dist: 100.00)	(15 times)
-Dutch_Std_NL: ['ɑ̈s', 'fɑ̈st', 'vɑ̈s']
-Dutch_Std_BE: ['ɑ̈s', 'βɑ̈st', 'β̞ɑ̈s']
-Antwerp: ['a̠s', 'fast', 'β̞a̠s']
-Ostend: ['ɑ̈sə', 'vɑ̈stə', 'β̞ɑ̈s']
-Limburg: ['fäs']
-Achterhoek: ['a̠s', 'ɸa̠stə', 'βa̠s']
-Veenkolonien: ['va̠stə']
-
-and 297 more
-=====================================
-
-Tuebingen, Cologne, Luxembourg, Westerkwartier, Feer, Heligoland, Biel, Graubuenden, Walser, Hard, Herrlisheim, Ortisei, Grou, Dutch_Std_NL, Dutch_Std_BE, Antwerp, Ostend, Limburg, Achterhoek, Veenkolonien
+Grou, Achterhoek, Limburg, Dutch_Std_NL, Dutch_Std_BE, Antwerp, Ostend, Tuebingen, Cologne, Luxembourg, Veenkolonien, Westerkwartier, Feer, Heligoland, Herrlisheim, Ortisei, Hard, Biel, Graubuenden, Walser
 -------
 0 correspondences above the threshold (70% importance)
 
-and 665 more
+and 642 more
 =====================================
 
 
@@ -1835,8 +1954,8 @@ and 665 more
 ----
 18 clusters excl. singletons and the cluster including all doculects
 max. importance score: 100.00%
-665 correspondences (total)
-430 correspondences >= the threshold (70% importance)
-33 correspondences >= 90% importance
-24 correspondences >= 95% importance
-24 correspondences == 100% importance
+642 correspondences (total)
+451 correspondences >= the threshold (70% importance)
+42 correspondences >= 90% importance
+32 correspondences >= 95% importance
+30 correspondences == 100% importance

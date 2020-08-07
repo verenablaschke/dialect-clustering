@@ -1,61 +1,61 @@
-Dutch_Std_BE
--	a	aː	ä	äʊ	a̠	a̠ʊ	a̠ː	b	d	d̪	eː	eˑ	eˑu	eˑɪ	e̞ˑə	f	h	i	iː	iˑu	iˑə	j	k	k̟	l	m	m̩	n	n̩	oː	oˑ	o̞ː	p	r	r̥	r̩	s	t	tʰ	u	uː	uˑ	u̞ː	v	v̥	x	x̟	z	æˑʏ	ç	ŋ	ɑ̈	ɔ	ɔː	ɔ̝ː	ɔ̞ː	ə	ɛ	ɛɪ	ɛˑɪ	ɛ̝ˑɪ	ɪ	ɫ	ɸ	ɹ̝	ɹ̝̥	ɾ	ɾ̩	ʊ̞	ʌ	ʌ̞	ʝ	β	β̞	β̥	
+Achterhoek
+-	a̠	a̠ː	b	d	eː	eˑɐ	eˑɪ	e̝ː	f	h	i	iː	iˑ	iˑɐ	iˑə	j	k	kʰ	l	m	n	n̩	oɐ	oː	oˑɐ	o̞ː	o̞ˑʊ	p	s	s̺	t	tʰ	v̥	y	z	øː	øˑɐ	ŋ	œː	ɑ	ɒ	ɔ	ɔ̝ː	ɔ̞	ɔ̞ː	ɔ̞ˑ	ə	ɛ	ɛ̈	ɛ̝ː	ɛ̝ˑɪ	ɪ	ɫ	ɫ̩	ɸ	ɾ	ʁ	ʁ̞	ʁ̞̩	ʃ	ʊ	ʌ	ʏˑ	β	β̥	χ	
 
 Antwerp
--	a	aɪ	aː	aˑɪ	aˑɪ̞	ä	a̠	a̠ː	a̠ˑ	b	b̬	d	d̪	d̬	d͡z	eə	eː	eˑ	eˑə	e̝ˑə	e̞ˑ	f	h	i	iə	iː	iˑ	i̞	j	k	k̟	l	m	n	oə	o̞ə	o̞ː	o̞ˑ	p	r	r̥	s	s̠	t	tʰ	uː	u̞ː	u̞ˑ	v	v̥	w	x	x̟	yˑ	z	ç	øː	ŋ	ɐ̠ʊ	ɑː	ɑ̈ː	ɑ̈ˑ	ɑ̟	ɑ̟ː	ɔ	ɔɐ	ɔə	ɔˑ	ɔ̞ɐ	ɔ̞ˑ	ɔ̞̟ː	ə	ə̝	ɛ	ɛ̝ː	ɛ̝ˑ	ɪ	ɪ̝	ɫ	ɫ̥	ɫ̩	ɾ	ɾ̥	ʊ̞	ʌ	ʝ	β̞	
+-	a	aɪ	aː	aˑɪ	aˑɪ̞	ä	a̠	a̠ː	b	b̬	d	d̪	d̬	d͡z	eə	eː	eˑ	eˑə	e̝ˑə	e̞ˑ	f	h	i	iə	iː	iˑ	i̞	j	k	k̟	l	m	n	oə	o̞ə	o̞ː	o̞ˑ	p	r	r̥	s	s̠	t	tʰ	uː	u̞ː	u̞ˑ	v	v̥	w	x	x̟	yˑ	z	ç	øː	ŋ	ɐ̠ʊ	ɑː	ɑ̈ː	ɑ̈ˑ	ɑ̟	ɑ̟ː	ɔ	ɔɐ	ɔə	ɔˑ	ɔ̞ɐ	ɔ̞ː	ɔ̞ˑ	ə	ə̝	ɛ	ɛ̝ː	ɛ̝ˑ	ɪ	ɪ̝	ɫ	ɫ̥	ɫ̩	ɾ	ɾ̥	ʊ̞	ʌ	ʝ	β̞	
 
-Veenkolonien
--	aː	ä	a̠	a̠ː	a̠ˑ	a̠ˑɤ	b	d	d̪	f	h	i	iː	iˑə	j	k	kʰ	l	m	m̩	n	n̩	n̪	oː	oˑ	oˑə	o̝	o̝ː	o̞ː	o̞ˑ	p	r	s	s̺	t	tʰ	t̪	v	y	z	z̺	æː	æ̃ː	øʏ	øː	øˑ	ø̞	ŋ	ŋ̩	œˑʏ̃	œ̈ː	ɑʊ	ɒ	ɒɪ	ɒʊ	ɒˑɪ	ɔ	ɔː	ɔ̃ˑ	ɔ̞	ɔ̞ˑɪ	ɔ̞ˑɪ̃	ə	ɛ	ɛɪ	ɛˑ	ɛˑɤ	ɛ̝	ɛ̝ɪ	ɛ̝ː	ɛ̝ˑɪ	ɛ̝ˑɪə	ɡ	ɪ	ɪˑ	ɫ	ɫ̩	ɹ	ɹˠ̩	ɹ̝	ɹ̩	ɾ	ʁ	ʁ̞	ʊː	ʊ̞	ʌ	ʏ	β	β̞	χ	
+Biel
+-	a	aː	aˑ	ä	äː	äˑə	a̠	a̠ˑ	a̠ˑɪə	b	d	d̪	eˑ	e̞i̞	e̞ɪ	e̞ː	f	fˑ	h	i	iː	iˑə	i̞ː	j	k	k̟	l	m	m̩	n	nˑ	n̪	oə	p	r	r̥	s	sˑ	t	tˑ	t̪	t͡s	u	uə	uː	yː	z̠	z̠̥	ŋ	ŋˑ	œɪ	œː	œˑɪ	ɑʊ	ɑː	ɑ̈ʊ	ɑ̈ː	ɑ̈ˑ	ɑ̟ː	ɒ	ɒː	ɒˑ	ɔ	ɔː	ɔˑ	ɔˑʊ	ɔ̝	ɔ̞o	ə	ə̟	ɛ	ɛː	ɛ̈	ɛ̝	ɛ̝ɪ	ɛ̝ˑɪ	ɡ	ɪ	ɪʊ	ɪˑ	ɵ	ɾ	ɾ̥	ʃ	ʊ	ʊə	ʊə̟	ʊɛ̈	ʊɛ̈ʊ	ʊˑ	ʏɛ̝̈	ʏˑ	ʔ	β	β̞	χ	
 
-Limburg
--	ä	äː	a̟ˑ	b	d	eː	eˑə	e̞ˑə	f	h	iː	iˑə	j	k	k̟	l	m	n	oː	oˑɐ	ö	o̞ː	o̞ˑ	õ̞̞ˑə	p	s	s̺	t	tʰ	uː	w	x	x̟	yˑə	z	ç	ø	øə	øˑ	ŋ	œ̈ɪ	ɑ̈	ɒʊ	ɒ̝ː	ɔ	ɔː	ɔˑ	ɔ̈	ɔ̞	ɔ̞ə	ɔ̞ː	ə	ɛi	ɛɪ	ɛˑ	ɛˑɪ	ɛ̝	ɛ̝ː	ɛ̝ˑ	ɛ̝ˑi	ɣ	ɪ	ɪə	ɫ̩	ɸ	ʁ	ʁ̞	ʃ	ʊ	ʊə	ʊː	ʊˑ	ʌ	β	β̞	χ	
+Cologne
+-	a	aː	ä	äː	äˑɪ	a̠	a̠ː	a̠ˑ	b	d	eː	e̝ɪ	e̝ˑɪ	e̞ə	e̞ɪ	e̞ˑɪ	f	h	i	iː	iˑ	iˑə	j	k	kʰ	l	m	n	nˑ	o	oɐ	oː	oˑ	p	s	t	tʰ	tˑ	t͡s	u	uː	v	z	ø	øˑɐ	ŋ	ŋˑ	œʏ	œ̃ˑ	ɐ	ɒ	ɒ̝̈	ɔʊ	ɔˑʊ	ɔ̈	ɔ̞	ɔ̞ː	ɔ̞ˑ	ɔ̞̃ˑ	ə	ɛˑɪ	ɛ̝	ɛ̝ˑ	ɛ̝ˑɪ	ɡ	ɪ	ɫ	ɫ̩	ʀ	ʁ	ʁ̞	ʃ	ʊ	ʌ	ʌ̈	ʏ	ʏˑɐ	ʔ	β	β̞	χ	
 
-Luxembourg
--	aˑɪ	ä	äˑ	a̠ː	b	d	eː	eˑɐ	e̝ː	e̞ɐ	f	h	i	iː	iˑə	iˑɛ̈	j	k	kʰ	l	m	n	oː	oˑɐ	p	s	t	tʰ	t͡s	uɛ̈	v	z	æ	æ̈iˑ	æ̈ˑʊ	ŋ	ŋˑ	œ̈	œ̈ʊɑ̈	œ̈ʊˑ	ɐ	ɐˑ	ɑ̟ˑɪ	ɔ	ɔ̝̈	ɔ̞ɐˑ	ɔ̟	ə	ə̆ɪˑɜ̠	ɛ	ɛiˑ	ɛi̞	ɛɪ	ɛɪɐ	ɛ̈ʊˑ	ɛ̞	ɡ	ɨ̞	ɪ	ɪə	ɪ̠	ɵ̟	ʀ	ʁ	ʃ	ʊ	ʊə	ʊɛ̈	ʊɪ	ʊˑɛ̈	ʊ̈	ʊ̞	ʌ̞̈	ʔ	χ	
+Dutch_Std_BE
+-	a	aː	ä	äʊ	a̠	a̠ʊ	a̠ː	b	d	d̪	eː	eˑ	eˑu	eˑɪ	e̞ˑə	f	h	iː	iˑu	iˑə	j	k	k̟	l	m	m̩	n	n̩	oː	oˑ	o̞ː	p	r	r̥	r̩	s	t	tʰ	u	uː	uˑ	u̞ː	v	v̥	x	x̟	z	æˑʏ	ç	ŋ	ɑ̈	ɔ	ɔː	ɔ̝ː	ɔ̞ː	ə	ɛ	ɛɪ	ɛˑɪ	ɛ̝ˑɪ	ɪ	ɫ	ɸ	ɹ̝	ɹ̝̥	ɾ	ɾ̩	ʊ̞	ʌ	ʌ̞	ʝ	β	β̞	β̥	
 
-Grou
--	ä	äː	äˑʊ	a̠	a̠ː	b	d	e	f	h	i	iə	iː	iˑ	iˑə	i̞	j	k	m	m̩	n	n̩	oˑ	oˑə	õˑə̃	õ̞ˑə̃	o̝ː	o̝ˑə	õ̞	p	q	r	r̥	r̩	s	s̺	t	t͡s	uˑə	ũ	u̞ː	ũ̞	v	w	w̃	y	ŋ	ŋ̩	œ	œ̈	ɒ	ɒˑɪ	ɒˑʊ	ɒ̃	ɔ	ɔ̞ː	ə	ə̃	ɛ	ɛɪ	ɛˑ	ɛˑi	ɛˑə	ɛ̝ˑɪ	ɡ	ɪ	ɪiə	ɪ̞	ɫ	ɫ̩	ɾ	ɾ̥	ʁ	ʊ	ʌ	ʌ̝	β	β̞	χ	
-
-Achterhoek
--	a̠	a̠ː	b	d	eː	eˑɐ	eˑɪ	e̝ː	f	h	i	iː	iˑ	iˑɐ	iˑə	j	k	kʰ	l	m	n	n̩	oɐ	oː	oˑɐ	o̞ː	p	s	s̺	t	tʰ	v̥	y	z	øː	øˑɐ	ŋ	œː	ɑ	ɒ	ɔ	ɔ̝ː	ɔ̞	ɔ̞ː	ə	ɛ	ɛ̈	ɛ̝ː	ɛ̝ˑɪ	ɪ	ɫ	ɫ̩	ɸ	ɾ	ʁ	ʁ̞	ʁ̞̩	ʃ	ʊ	ʌ	ʏˑ	β	β̥	χ	
-
-Graubuenden
--	ä	äo	äɪ	äʊ	äː	äˑ	äˑi̞	äˑɪ	a̟ˑ	a̠	a̠ɪ	a̠ʊ	a̠ˑ	b	d	eiˑ	eɪ	eː	e̝ː	e̞ˑ	f	h	iː	iˑɛ	i̞	i̞ˑ	j	k	kʰ	k̟	k̟ʰ	l	l̩	m	m̩	n	nˑ	oɔ̈	oˑ	ö	o̞	o̞ː	o̞ˑ	p	qʰ	r	r̩	s	sˑ	t	tˑ	t͡s	uː	uˑɛ̝̈	v	w	yː	ŋ	œː	œˑʏ	ɐ	ɑː	ɑ̈ː	ɑ̈ˑɒ	ɑ̟ː	ɔˑ	ɔ̝ː	ə	ɛ	ɛˑ	ɛ̝	ɛ̝ː	ɛ̝ˑ	ɡ	ɪ	ɪ̝	ɪ̝ˑ	ɾ	ɾ̥	ɾ̩	ʃ	ʊ	ʊɔ̈	ʊˑ	ʊˑä	ʏˑ	ʏˑɛ̝̈	ʔ	β	χ	
-
-Ostend
--	a	aː	ä	äː	a̝	a̝ː	a̠	a̠ː	a̠ˑɔ̈	b	d	d̪	eː	eˑ	e̝ː	f	h	i	iː	iˑə	i̞	j	k	k̟	l	m	m̩	n	n̩	oə	oː	o̞ː	o̞ˑ	p	r	r̥	r̩	r̩̥	s	s̠̆	s̠	t	tʰ	u	uə	uˑə	u̞ː	u̞ˑə	v	v̥	z	ç	ø̈	ŋ	œ	ɑ̈	ɑ̈ː	ɑ̈ˑö	ɑ̈ˑɔ̈	ɑ̝̈	ɑ̟̃	ɔ	ɔː	ɔˑ	ɔ̝ː	ɔ̞	ɔ̞ː	ə	ə̃	ɛ	ɛː	ɛˑʊ	ɛ̝	ɛ̝ː	ɣ	ɪ	ɫ̩	ɾ	ɾ̥	ʃ	ʉ	ʉ̟	ʉ̟̞	ʊ	β	β̞	χ	
-
-Heligoland
--	ä	äe	äe̞	äː	äˑ	ä̝	ä̠	ä̠e	ä̠ː	a̠	b	bⁿ	d	dˡ	d̥	d̥ʲ	dⁿ	e	ea	eä	ei̞	eæ	eɐ	eɐ̠	eɑ̝	eɛ̽	eː	ë	e̝ː	e̞	e̞a	e̞ː	f	h	iu	iɐ	iˑ	j	k	kʰ	l	l̩	m	m̩	n	n̩	oä	oɐ̝	oɐ̠	oɑ	oɒ	oʌ	oʏɘ	õ	o̞	o̞o̝	o̞ɐ	o̞ɑ	o̞ː	o̞ˑ	pʰ	s	sʲ	s̠	s̪	t	tʰ	uɐ	uɐ̠	uʌ	uː	uˑ	v	x	æ	ç	ø̠œ̠	ŋ	œ	œ̠	ɐ	ɐˑ	ɑo	ɑː	ɑ̝ː	ɒ	ɔ	ɔ̟	ɖ̥	ə	ə̞	ɛ	ɛˑ	ɛ̽	ɜ̠	ɡ	ɡ̥	ɤ	ɤ̈	ɪ	ɪ̞	ʀ	ʁ	ʃ	ʈ	ʊ	ʏ	ʏ̈	ʏ̞̈	ʒ	ʔ	β̞	χ	
+Dutch_Std_NL
+-	aʊ	aː	aˑ	a̠	a̠ø	b	d	eˑ	eˑu̞ˑ	e̞ɪ	e̞ˑɪ	f	h	iˑ	iˑu	iˑə	j	k	kʰ	l	m	n	nˑ	oː	oˑə	öʊ	o̞ˑ	o̟ʊ	p	s	t	tʰ	u̞	u̞ː	u̞ˑ	u̞ˑə	v	v̥	z̥	æø̝̈	æɪ	æʏ	ø̝̈	ŋ	ɑ̈	ɒʊ	ɔ	ɔˑ	ɔ̝ˑ	ə	ɛ	ɛ̝ɪ	ɛ̝ˑɪ	ɛ̞ɪ	ɛ̞ˑɪ	ɪ	ɫ	ɹ	ɹ̩	ɾ	ʁ	ʁ̞	ʊ	ʌ	ʌ̈	ʌ̝	χ	
 
 Feer
 -	a	ai	ä	äo	äo̞ɑ̝	äː	ä̝o̞ɔ̟	ä̟	ä̠	ä̠i	a̠ˑ	b	b̥ⁿ	d	dˡ	d̥	dⁿ	e	ea	eɛ	eː	eˑ	e̝ː	e̞	f	h	i	ië	iæ	iæ̝	iɛ̞	iː	iˑ	i̞	j	k	kʰ	kʰʲ	l	l̩	m	m̩	n	n̩	o	o:	oɤ	oʌ	õ	õː	o̝ː	o̞	o̟	p	p͡f	r	s	t	tʰ	tʰʲ	uə	uɤ	uʌ	uː	uˑ	u̟ː	v	v̥	y	y̟	æ	ç	øː	ø̃ː	ŋ	ŋ̩	œ	œ̝	œ̞	ɐ	ɐ̞	ɑ̟	ɒ	ɒ̃	ɔ	ɔ̞	ə	ɛ	ɛ̝	ɡ	ɡ̥	ɡⁿ	ɪ	ɲ	ʊ	ʊ̞	ʌ	ʏ	ʏ̈	ʔ	ʝ	χ	
 
-Westerkwartier
--	a	ae̞	aɔ	aɛ	aː	aˑ	ã	äɔ	a̟̞	a̠	b	bⁿ	d	d̥	dⁿ	e	ei	eː	eˑæ	eˑɛ	ẽ	ẽˑ	e̝ɛ	f	h	i	iˑ	ĩ	j	k	kʰ	l	m	m̩	n	n̩	o	ou	oɔ	oɤ	oː	oˑ	oˑə	oˑɤ	õː	õˑɤ	õ̞	pʰ	pⁿ	r	s	s̠ʲ	t	tʰ	t͡s	t͡s̠ʲ	t͡ʃ	u	uɤ	v	x	y	z	z̥	æ	æa	æe	æi	ð̞	øæ	øœ̽	øɛ	ø̞ː	ŋ	ŋ̩	œ	ɐ	ɐ̝	ɐ̰	ɑ	ɑi	ɑ̝	ɑ̝o	ɑ̟	ɒ	ɒo	ɔ	ɔo	ɔu	ɔ̃	ɔ̝̃	ɔ̝ˑ	ɔ̟u	əũ	ə̠	ɛa	ɛi	ɛĩ	ɛæ	ɛˑ	ɛˑe	ɛ̟ˑ	ɛ̽	ɡ̥	ɡⁿ	ɣ̞	ɦ	ɪ	ɫ	ɴ	ɶ	ɹ	ɹ̝	ɹ̝̥	ɹ̝̩	ɹ̥̝̩	ɾ	ɾ̥̩ʰ	ʃ	ʊu	ʌ	ʏ̈	ʒ	ʒ̥	ʔ	ʟ	χ	
+Graubuenden
+-	ä	äo	äɪ	äʊ	äː	äˑ	äˑi̞	äˑɪ	a̟ˑ	a̠	a̠ɪ	a̠ʊ	a̠ˑ	b	d	eiˑ	eɪ	eː	e̝ː	e̞ˑ	f	h	iː	iˑɛ	i̞	i̞ˑ	j	k	kʰ	k̟	k̟ʰ	l	l̩	m	m̩	n	nˑ	oɔ̈	oˑ	ö	o̞	o̞ː	o̞ˑ	p	qʰ	r	r̩	s	sˑ	t	tˑ	t͡s	uː	uˑɛ̝̈	v	w	yː	ŋ	œː	œˑʏ	ɐ	ɑː	ɑˑ	ɑ̈ː	ɑ̈ˑɒ	ɑ̟ː	ɔˑ	ɔ̝ː	ə	ɛ	ɛˑ	ɛ̝	ɛ̝ː	ɛ̝ˑ	ɡ	ɪ	ɪ̝	ɪ̝ˑ	ɾ	ɾ̥	ɾ̩	ʃ	ʊ	ʊɔ̈	ʊˑ	ʊˑä	ʏˑ	ʏˑɛ̝̈	ʔ	β	χ	
 
-Dutch_Std_NL
--	aʊ	aː	aˑ	a̠	a̠ø	a̠ː	b	d	eˑ	eˑu̞ˑ	e̞ɪ	e̞ˑɪ	f	h	i	iˑ	iˑu	iˑə	j	k	kʰ	l	m	n	nˑ	oː	oˑə	öʊ	o̞ˑ	o̟ʊ	p	s	t	tʰ	u̞	u̞ː	u̞ˑ	u̞ˑə	v	v̥	z̥	æø̝̈	æɪ	æʏ	ø̝̈	ŋ	ɑ̈	ɒʊ	ɔ	ɔˑ	ɔ̝ˑ	ə	ɛ	ɛ̝ɪ	ɛ̝ˑɪ	ɛ̞ɪ	ɛ̞ˑɪ	ɪ	ɫ	ɹ	ɹ̩	ɾ	ʁ	ʁ̞	ʊ	ʌ	ʌ̈	ʌ̝	χ	
+Grou
+-	ä	äː	äˑʊ	a̠	a̠ː	b	d	e	f	h	i	iə	iː	iˑ	iˑə	i̞	j	k	m	m̩	n	n̩	oˑ	oˑə	õˑə̃	õ̞ˑə̃	o̝ː	o̝ˑə	õ̞	p	q	r	r̥	r̩	s	s̺	t	t͡s	uˑə	ũ	u̞ː	ũ̞	v	w	w̃	y	ŋ	ŋ̩	œ	œ̈	ɒ	ɒˑɪ	ɒˑʊ	ɒ̃	ɔ	ɔ̃	ɔ̞ː	ə	ə̃	ɛ	ɛɪ	ɛˑ	ɛˑi	ɛˑə	ɛ̝ˑɪ	ɡ	ɪ	ɪiə	ɪ̞	ɫ	ɫ̩	ɾ	ɾ̥	ʁ	ʊ	ʌ	ʌ̝	β	β̞	χ	
 
 Hard
--	aˑ	äː	a̠	a̠ɪ	a̠ʊ	a̠ː	a̠ˑ	ã̠ː	b	d	eːə	eˑ	eˑɐ	eˑə	eˑɪ	ẽˑə̃	f	fˑ	h	iː	iˑə	i̞	i̞ə	j	k	kʰ	k̟	l	l̩	m	m̩	n	oɐ	oɛ̈	oː	oˑɐ	õɛ̃	õˑɐ̃	o̞	o̞ɐ	o̞ː	õ̞ˑɐ̃	p	r	s	sˑ	t	tʰ	tˑ	t͡s	uː	u̞ː	v	x	yː	ỹˑɛ̈̃	øː	ŋ	œˑʏ	ɔ	ɔː	ɔ̈ˑʊˑ	ɔ̞	ɔ̞ɐ	ɔ̞ː	ə	ɛ̈	ɛ̝	ɛ̝ː	ɛ̝ˑ	ɛ̝̈	ɡ	ɪ	ɪə	ɪ̝	ɸ	ɾ	ʁ	ʁ̞	ʃ	ʊ	ʊə	ʊˑ	ʊˑə	ʊˑɛ̈	ʊ̞	ʏˑə	ʏ̠ˑ	ʔ	β	
+-	aˑ	äː	a̠	a̠ɪ	a̠ʊ	a̠ː	a̠ˑ	ã̠ː	b	d	eːə	eˑ	eˑɐ	eˑə	eˑɪ	ẽˑə̃	f	fˑ	h	iː	iˑə	i̞	i̞ə	j	k	kʰ	k̟	l	l̩	m	m̩	n	o	oɐ	oɛ̈	oː	oˑɐ	õɛ̃	õˑɐ̃	o̞	o̞ɐ	o̞ː	õ̞ˑɐ̃	p	r	s	sˑ	t	tʰ	tˑ	t͡s	uː	u̞ː	v	x	yː	ỹˑɛ̈̃	øː	ŋ	œˑʏ	ɔ	ɔː	ɔ̈ˑʊˑ	ɔ̞	ɔ̞ɐ	ɔ̞ː	ə	ɛ̈	ɛ̝	ɛ̝ˑ	ɛ̝̈	ɡ	ɪ	ɪə	ɪ̝	ɸ	ɾ	ʁ	ʁ̞	ʃ	ʊ	ʊə	ʊˑ	ʊˑə	ʊˑɛ̈	ʊ̞	ʋ	ʏˑə	ʏ̠ˑ	ʔ	β	
 
-Tuebingen
--	ä	äɔ̈	äɪ	äɪə	äː	äˑ	äˑe	äˑɔ̈	äˑɪ	a̠	b	d	eə	eː	eˑə	e̞ə	e̞ː	f	h	i	iː	iˑ	iˑɔ̈	i̞	j	k	kʰ	l	l̩	m	n	nˑ	o̞	o̞ː	õ̞ː	p	s	t	tʰ	t̪	t͡s	u	uˑiˑ	uˑɔ̈	uˑə	v	w	x	x̟	yː	ç	ø	øˑɔ̈	ŋ	ŋˑ	ɐ̟iˑ	ɐ̠uˑ	ɑ̈ˑʊ	ɑ̟ɵ̠	ɑ̟ʊ	ɑ̟ʊɔ̈	ɑ̟ˑɵ̠	ɒ	ɔɪ	ɔː	ɔˑ	ɔˑe	ɔˑɪ	ɔ̈	ɔ̝	ɔ̞	ɔ̞ː	ɔ̞ˑẽ	ɔ̞̃ˑẽ	ə	ɛ	ɛ̈	ɛ̈iˑ	ɛ̝̈	ɛ̝	ɡ	ɪ	ʁ	ʁ̞	ʁ̞̩	ʃ	ʊ	ʊɔ̈	ʊə	ʊ̞	ʔ	β	β̞	χ	
+Heligoland
+-	ä	äe	äe̞	äː	äˑ	ä̝	ä̠	ä̠e	ä̠ː	a̠	b	bⁿ	d	dˡ	d̥	d̥ʲ	dⁿ	e	ea	eä	ei̞	eæ	eɐ	eɐ̠	eɑ̝	eɛ̽	eː	ë	e̝ː	e̞	e̞a	e̞ː	f	h	iu	iɐ	iˑ	j	k	kʰ	l	l̩	m	m̩	n	n̩	oä	oɐ̝	oɐ̠	oɑ	oɒ	oʌ	oʏɘ	õ	o̞	o̞o̝	o̞ɐ	o̞ɑ	o̞ː	o̞ˑ	pʰ	s	sʲ	s̠	s̪	t	tʰ	uɐ	uɐ̠	uʌ	uː	uˑ	v	æ	ç	ø̠œ̠	ŋ	œ	œ̠	ɐ	ɐˑ	ɑo	ɑː	ɒ	ɔ	ɔ̃	ɔ̟	ɖ̥	ə	ə̞	ɛ	ɛˑ	ɛ̽	ɜ̠	ɡ	ɡ̥	ɤ	ɤ̈	ɪ	ɪ̞	ʀ	ʁ	ʁ̥	ʃ	ʈ	ʊ	ʏ	ʏ̈	ʏ̞̈	ʒ	ʔ	β̞	χ	
 
 Herrlisheim
 -	ä	äi	äː	äˑi	b	d	eː	e̝	e̝ː	f	h	i	iː	iˑ	iˑə	j	k	kʰ	k̟	k̟ʰ	l	l̩	m	m̩	n	o	oː	o̞ː	p	pʰ	s	t	tʰ	t͡s	v	yː	yˑ	øː	øˑə	ŋ	œʏ	œː	œˑʏ	ɒ	ɒ̝	ɔ	ɔː	ɔ̈	ə	ə̠	ɛː	ɛ̝	ɛ̝ː	ɛ̝ˑi	ɡ	ɪ	ɸ	ʁ	ʁ̞	ʁ̥	ʃ	ʊ	ʔ	β	χ	
 
-Walser
--	a	aː	aˑ	ä	äˑ	äˑʊ	a̠	a̠ː	a̠ˑ	b	d	eː	f	h	i	iː	iˑ	iˑə	i̞	j	k	kʰ	l	l̩	m	n	o	oː	oˑɐ	oˑə	oˑɛ̈	o̞	o̞ː	o̟	p	r	r̥	s	t	tʰ	t͡s	uː	uˑ	uˑə	u̞	u̞ˑɛ̈	x	x̟	yː	yˑɛ̈	æ	æɪ̝	æˑɪ̝	øː	ŋ	ɐ	ɑö̞	ɑʊ	ɔ	ɔ̝	ɔ̞	ɔ̞ː	ə	ɛ̈	ɛ̝	ɛ̝ː	ɜ̹ˑʏ	ɜ̹̟ˑʏ	ɡ	ɪ	ɪ̝	ɸ	ɹ	ɹ̝	ɹ̝̥	ɾ	ɾ̥	ʃ	ʊ	ʊɔ̈	ʔ	β	β̞	χ	
+Limburg
+-	ä	äː	a̟ˑ	b	d	eː	eˑə	e̞ː	e̞ˑə	f	h	iə	iː	iˑə	j	k	k̟	l	m	n	oː	oˑɐ	ö	o̞ː	o̞ˑ	õ̞̞ˑə	p	s	s̺	t	tʰ	uː	v	w	x	x̟	yˑə	z	ç	ø	øə	øˑ	ŋ	œ̈ɪ	ɑ̈	ɒʊ	ɔ	ɔː	ɔˑ	ɔ̈	ɔ̞	ɔ̞ə	ɔ̞ː	ə	ɛi	ɛɪ	ɛˑ	ɛˑɪ	ɛ̝	ɛ̝ː	ɛ̝ˑ	ɛ̝ˑi	ɣ	ɣ̟	ɪ	ɪə	ɫ̩	ɸ	ʁ	ʁ̞	ʃ	ʊ	ʊə	ʊː	ʊˑ	ʌ	β	β̞	χ	
+
+Luxembourg
+-	aˑɪ	ä	äˑ	a̠ː	b	d	eː	eˑɐ	e̝ː	e̞ɐ	f	h	i	iː	iˑə	iˑɛ̈	j	k	kʰ	l	m	n	oː	oˑɐ	p	s	t	t͡s	uɛ̈	v	z	æ	æ̈iˑ	æ̈ˑʊ	ŋ	ŋˑ	œ̈	œ̈ʊɑ̈	œ̈ʊˑ	ɐ	ɐˑ	ɑ̟ˑɪ	ɔ	ɔ̝̈	ɔ̞ɐˑ	ɔ̟	ə	ə̆ɪˑɜ̠	ɛ	ɛiˑ	ɛi̞	ɛɪɐ	ɛ̈ʊˑ	ɛ̞	ɡ	ɨ̞	ɪ	ɪə	ɪ̠	ɯ	ɵ̟	ʀ	ʁ	ʃ	ʊ	ʊə	ʊɛ̈	ʊɪ	ʊˑə	ʊˑɛ̈	ʊ̈	ʊ̞	ʌ̞̈	ʔ	χ	
 
 Ortisei
--	aɵ̠	ä	äɪ	äɵ̠	äˑ	äˑɪ	a̠ɵ̠	a̠ʊ	a̠ː	b	d	eə	eː	f	h	i	iː	iˑə	iˑɛ̈	i̞	j	k	kʰ	k̟	l	l̩	m	m̩	n	n̩	o	oː	oˑ	o̞	o̞ə	p	s	t	t͡s	uˑɛ̈	yː	z	ç	øə	øː	ŋ	ɑː	ɑ̈	ɒ	ɔ	ɔː	ɔˑ	ɔˑə	ɔ̈	ɔ̝ː	ɔ̝ˑ	ɔ̞	ɔ̞ː	ɔ̞ˑ	ə	ɛ	ɛ̈	ɛ̝̈	ɛ̝ː	ɡ	ɪ	ɪ̝	ɱ	ʁ	ʁ̞	ʁ̥	ʃ	ʊ	ʊə	ʊɛ	ʊɛ̈	ʌ	ʏ	ʔ	β	β̞	χ	
+-	aɵ̠	ä	äɪ	äˑ	äˑɪ	a̠ɵ̠	a̠ʊ	a̠ː	b	d	eə	eː	f	h	i	iː	iˑə	iˑɛ̈	i̞	j	k	kʰ	k̟	l	l̩	m	m̩	n	n̩	o	oː	oˑ	o̞	o̞ə	p	s	t	t͡s	uˑɛ̈	yː	z	ç	øə	øː	ŋ	ɑː	ɑ̈	ɒ	ɔ	ɔː	ɔˑ	ɔˑə	ɔ̈	ɔ̝ː	ɔ̝ˑ	ɔ̞	ɔ̞ː	ɔ̞ˑ	ə	ɛ	ɛ̈	ɛ̝̈	ɛ̝ː	ɡ	ɪ	ɪ̝	ɱ	ʁ	ʁ̞	ʁ̥	ʃ	ʊ	ʊə	ʊɛ	ʊɛ̈	ʌ	ʏ	ʔ	β	β̞	χ	
 
-Biel
--	a	aː	aˑ	ä	äː	äˑə	a̠	a̠ˑ	a̠ˑɪə	b	d	d̪	eˑ	e̞i̞	e̞ɪ	e̞ː	f	fˑ	h	i	iː	iˑə	i̞ː	j	k	k̟	k͡x	l	m	m̩	n	nˑ	n̪	oə	p	r	r̥	s	sˑ	t	tˑ	t̪	t͡s	u	uə	uː	u̞ː	yː	z̠	z̠̥	ŋ	ŋˑ	œɪ	œː	œˑɪ	ɑʊ	ɑː	ɑ̈ʊ	ɑ̈ː	ɑ̈ˑ	ɑ̟ː	ɒ	ɒː	ɒˑ	ɔ	ɔː	ɔˑ	ɔˑʊ	ɔ̝	ɔ̞o	ə	ə̟	ɛ	ɛː	ɛ̈	ɛ̝	ɛ̝ɪ	ɛ̝ˑɪ	ɡ	ɪ	ɪʊ	ɪˑ	ɵ	ɾ	ɾ̥	ʃ	ʊ	ʊə	ʊə̟	ʊɛ̈	ʊɛ̈ʊ	ʊˑ	ʏɛ̝̈	ʏˑ	ʔ	β	β̞	χ	
+Ostend
+-	a	aː	ä	äː	a̝	a̝ː	a̠	a̠ː	a̠ˑɔ̈	b	d	d̪	eː	eˑ	e̝ː	f	h	i	iː	iˑə	i̞	j	k	k̟	l	m	m̩	n	n̩	oə	oː	o̞ː	o̞ˑ	p	r	r̥	r̥̩	r̩	s	s̠	t	tʰ	u	uə	uˑə	u̞ː	u̞ˑə	v	v̥	z	ç	ø̈	ŋ	œ	ɑ̈	ɑ̈ː	ɑ̈ˑö	ɑ̈ˑɔ̈	ɑ̝̈	ɑ̟̃	ɔ	ɔː	ɔˑ	ɔ̝ː	ɔ̞	ɔ̞ː	ə	ə̃	ɛ	ɛː	ɛˑʊ	ɛ̝	ɛ̝ː	ɣ	ɪ	ɫ̩	ɾ	ɾ̥	ʃ	ʉ	ʉ̝̟	ʉ̟	ʊ	β	β̞	χ	
 
-Cologne
--	a	aː	ä	äː	äˑɪ	a̠	a̠ː	a̠ˑ	b	d	eː	e̝ɪ	e̝ˑɪ	e̞ə	e̞ɪ	e̞ˑɪ	f	h	i	iː	iˑ	iˑə	j	k	kʰ	l	l̩	m	n	nˑ	o	oɐ	oː	oˑ	p	s	t	tʰ	tˑ	t͡s	u	uː	v	z	ø	øˑɐ	ŋ	ŋˑ	œʏ	œ̃ˑ	ɐ	ɒ	ɒ̝̈	ɔʊ	ɔˑʊ	ɔ̈	ɔ̞	ɔ̞ː	ɔ̞ˑ	ɔ̞̃ˑ	ə	ɛˑɪ	ɛ̝	ɛ̝ˑ	ɛ̝ˑɪ	ɡ	ɪ	ʀ	ʁ	ʁ̞	ʁ̥	ʃ	ʊ	ʌ	ʌ̈	ʏ	ʏˑɐ	ʔ	β	β̞	χ	
+Tuebingen
+-	ä	äɔ̈	äɪ	äɪə	äː	äˑ	äˑe	äˑɔ̈	äˑɪ	a̠	b	d	eə	eː	eˑə	e̞ə	e̞ː	f	h	i	iː	iˑ	iˑɔ̈	i̞	j	k	kʰ	l	l̩	m	n	nˑ	o̞	o̞ː	õ̞ː	p	s	t	tʰ	t̪	t͡s	u	uˑiˑ	uˑɔ̈	uˑə	v	w	x	yː	ç	ø	øˑɔ̈	ŋ	ŋˑ	ɐ̟iˑ	ɐ̠uˑ	ɑ̈ˑʊ	ɑ̟ɵ̠	ɑ̟ʊ	ɑ̟ʊɔ̈	ɑ̟ˑɵ̠	ɒ	ɔɪ	ɔː	ɔˑ	ɔˑe	ɔˑɪ	ɔ̈	ɔ̝	ɔ̞	ɔ̞ː	ɔ̞ˑẽ	ɔ̞̃ˑẽ	ə	ɛ	ɛ̈	ɛ̈iˑ	ɛ̝̈	ɛ̝	ɡ	ɪ	ʁ	ʁ̞	ʁ̞̩	ʃ	ʊ	ʊɔ̈	ʊə	ʊ̞	ʔ	β	β̞	χ	
+
+Veenkolonien
+-	ä	äe	äiɔ	äo̝	äu̞	äː	äˑ	äˑɪ	ä̠o	a̠	b	bⁿ	d	dˡ	d̥	dⁿ	e	ee̽	ei	eɐ	e̝	e̝i	e̞i	e̞ˑə	e̽	f	h	i	iː	iˑ	j	kʰ	k̚	l	l̩	m	m̩	n	o	ou	oɔ	oʌ	oˑ	o̝ː	o̝ːʌ	o̞	o̞ː	o̞ˑʌ	p	pʰ	pⁿ	r	s	s̠	s̻	tʰ	t̠	u	uˑ	v	v̞	v̥	x	z	z̥	æˑ	æˑi	ç	øɐ	øɤ	øː	øˑ	ø̞i	ŋ	ŋ̩	œə	ɐ	ɑo	ɑo̝	ɑu	ɒ	ɔ	ɔː	ɔˑ	ɔ̝ː	ɔ̝ˑ	ɘ	ə	ɛ	ɛe	ɛi	ɛ̠e̝	ɛ̠i	ɡ	ɡˡ	ɡⁿ	ɤ	ɤ̞	ɤ̟	ɤ̟œ	ɪ	ɪ̈	ɵ	ɹ̝	ʃ	ʊ	ʊɛ̠e	ʌ	ʌ̝	ʔ	χ	
+
+Walser
+-	a	aː	aˑ	ä	äˑ	äˑʊ	a̠	a̠ː	a̠ˑ	b	d	eː	f	h	i	iː	iˑ	iˑə	i̞	j	k	kʰ	l	l̩	m	n	o	oː	oˑɐ	oˑə	oˑɛ̈	o̞	o̞ː	o̟	p	r	r̥	s	t	tʰ	t͡s	uː	uˑ	uˑə	u̞	u̞ˑɛ̈	x	x̟	yː	yˑɛ̈	æ	æɪ̝	æˑɪ̝	øː	ŋ	ɐ	ɑö̞	ɑʊ	ɔ	ɔ̝	ɔ̞	ɔ̞ː	ə	ɛ̈	ɛ̝	ɛ̝ː	ɜ̟ˑʏ	ɜ̹ˑʏ	ɡ	ɪ	ɪ̝	ɸ	ɹ	ɹ̝	ɹ̝̥	ɾ	ɾ̥	ʃ	ʊ	ʊɔ̈	ʔ	β	β̞	χ	
+
+Westerkwartier
+-	a	ae̞	aɔ	aɛ	aː	aˑ	ã	äɔ	a̟̞	a̠	b	bⁿ	d	d̥	dⁿ	e	ei	eː	eˑæ	eˑɛ	ẽ	ẽˑ	e̝ɛ	f	h	i	iˑ	ĩ	j	k	kʰ	l	m	m̩	n	n̩	o	ou	oɔ	oɤ	oː	oˑ	oˑə	oˑɤ	õː	õˑɤ	õ̞	pʰ	pⁿ	r	s	s̠ʲ	t	tʰ	t͡s	t͡s̠ʲ	t͡ʃ	u	uɤ	v	x	y	z	z̥	æ	æa	æe	æi	ð̞	øæ	øœ̽	øɛ	ø̞ː	ŋ	ŋ̩	œ	ɐ	ɐ̝	ɐ̰	ɑ	ɑi	ɑ̝	ɑ̝o	ɑ̟	ɒ	ɒo	ɔ	ɔo	ɔu	ɔ̃	ɔ̝̃	ɔ̝ˑ	ɔ̟u	əũ	ə̠	ɛa	ɛi	ɛĩ	ɛˑ	ɛˑe	ɛ̟ˑ	ɛ̽	ɡ̥	ɡⁿ	ɣ̞	ɦ	ɪ	ɫ	ɴ	ɶ	ɹ	ɹ̝	ɹ̝̥	ɹ̝̩	ɹ̥̝̩	ɾ	ɾ̥̩ʰ	ʃ	ʊu	ʌ	ʏ̈	ʒ	ʒ̥	ʔ	ʟ	χ	
 
 

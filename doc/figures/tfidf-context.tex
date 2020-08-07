@@ -1,7 +1,6 @@
 \documentclass{standalone}
 \usepackage[dvipsnames]{xcolor} % has to come before tikz
 \usepackage{tikz, tipa}
-\usepackage[geometry]{ifsym}
 \begin{document}
 
 \definecolor{purple}{HTML}{520066}
@@ -15,127 +14,221 @@
 \tikzset{corres/.style={fill=white, right=6mm, above=1mm,inner sep=0pt}}
 \begin{tikzpicture}
 % Doculects by singleton cluster number (alphabetical index).
-\node[label=left:Ortisei \upper](14) at (0, 0.5) {};
-\node[label=left:Herrlisheim \upper] (11) at (0, 1.0) {};
-\node[label=left:Hard \upper] (9) at (0, 1.5) {};
-\node[label=left:Walser \upper] (18) at (0, 2.0) {};
-\node[label=left:Graub\"{u}nden \upper] (7) at (0, 2.5) {};
-\node[label=left:Biel \upper] (2) at (0, 3.0) {};
-\node[label=left:T\"{u}bingen \upper] (16) at (0, 3.5) {};
-\node[label=left:Cologne \central] (3) at (0, 4.0) {};
-\node[label=left:Luxembourg \central] (13) at (0, 4.5) {};
-\node[label=left:Westerkwartier \ingv] (19) at (0, 5.0) {};
-\node[label=left:Feer \ingv] (6) at (0, 5.5) {};
-\node[label=left:Heligoland \ingv] (10) at (0, 6.0) {};
-\node[label=left:Ostend \dutch] (15) at (0, 6.5) {};
-\node[label=left:Antwerp \dutch] (1) at (0, 7.0) {};
-\node[label=left:Std. Dutch (BE) \dutch] (4) at (0, 7.5) {};
-\node[label=left:Veenkoloni\"{e}n \ingv] (17) at (0, 8.0) {};
-\node[label=left:Achterhoek \ingv] (0) at (0, 8.5) {};
-\node[label=left:Limburg \dutch] (12) at (0, 9.0) {};
-\node[label=left:Std. Dutch (NL) \dutch] (5) at (0, 9.5) {};
-\node[label=left:Grou \ingv] (8) at (0, 10.0) {};
+\node[label=left:Ortisei] (14) at (0, 0.5) {};
+\node[label=left:Herrlisheim] (11) at (0, 1.0) {};
+\node[label=left:Hard] (9) at (0, 1.5) {};
+\node[label=left:Walser] (18) at (0, 2.0) {};
+\node[label=left:Graubuenden] (7) at (0, 2.5) {};
+\node[label=left:Biel] (2) at (0, 3.0) {};
+\node[label=left:Tuebingen] (16) at (0, 3.5) {};
+\node[label=left:Cologne] (3) at (0, 4.0) {};
+\node[label=left:Luxembourg] (13) at (0, 4.5) {};
+\node[label=left:Westerkwartier] (19) at (0, 5.0) {};
+\node[label=left:Veenkolonien] (17) at (0, 5.5) {};
+\node[label=left:Feer] (6) at (0, 6.0) {};
+\node[label=left:Heligoland] (10) at (0, 6.5) {};
+\node[label=left:Antwerp] (1) at (0, 7.0) {};
+\node[label=left:Ostend] (15) at (0, 7.5) {};
+\node[label=left:Dutch Std BE] (4) at (0, 8.0) {};
+\node[label=left:Dutch Std NL] (5) at (0, 8.5) {};
+\node[label=left:Achterhoek] (0) at (0, 9.0) {};
+\node[label=left:Limburg] (12) at (0, 9.5) {};
+\node[label=left:Grou] (8) at (0, 10.0) {};
 
 % Clusters from Z.
-\node (20) at (4.600251109974757,4.25) {};
-\draw (3) -| (20.center);
-\draw (13) -| (20.center);
-\node (21) at (5.324997475178177,3.875) {};
-\draw (16) -| (21.center);
-\draw (20) -| (21.center);
-\node (22) at (5.369210543381547,2.25) {};
-\draw (7) -| (22.center);
-\draw (18) -| (22.center);
-\node (23) at (5.425952895832472,6.75) {};
-\draw (1) -| (23.center);
-\draw (15) -| (23.center);
-\node (24) at (5.478959421666252,0.75) {};
-\draw (11) -| (24.center);
-\draw (14) -| (24.center);
-\node (25) at (5.52906001710829,8.25) {};
-\draw (0) -| (25.center);
-\draw (17) -| (25.center);
-\node (26) at (5.600975873777832,7.125) {};
-\draw (4) -| (26.center);
-\draw (23) -| (26.center);
-\node (27) at (5.621362568055732,5.75) {};
-\draw (6) -| (27.center);
-\draw (10) -| (27.center);
-\node (28) at (6.42700040325985,5.375) {};
-\draw (19) -| (28.center);
-\draw (27) -| (28.center);
-\node (29) at (6.553134988963326,2.625) {};
+\node (20) at (4.402503450583868,5.25) {};
+\draw (17) -| (20.center);
+\draw (19) -| (20.center);
+\node (21) at (4.663569942550238,4.25) {};
+\draw (3) -| (21.center);
+\draw (13) -| (21.center);
+\node (22) at (4.95868411174099,6.25) {};
+\draw (6) -| (22.center);
+\draw (10) -| (22.center);
+\node (23) at (5.159442319569982,3.875) {};
+\draw (16) -| (23.center);
+\draw (21) -| (23.center);
+\node (24) at (5.330116803591659,2.25) {};
+\draw (7) -| (24.center);
+\draw (18) -| (24.center);
+\node (25) at (5.591213635641856,0.75) {};
+\draw (11) -| (25.center);
+\draw (14) -| (25.center);
+\node (26) at (5.609750719067403,7.25) {};
+\draw (1) -| (26.center);
+\draw (15) -| (26.center);
+\node (27) at (5.787974373517383,7.625) {};
+\draw (4) -| (27.center);
+\draw (26) -| (27.center);
+\node (28) at (5.832756479523573,5.75) {};
+\draw (20) -| (28.center);
+\draw (22) -| (28.center);
+\node (29) at (6.917718072908566,2.625) {};
 \draw (2) -| (29.center);
-\draw (22) -| (29.center);
-\node (30) at (7.3170666639543835,8.625) {};
-\draw (12) -| (30.center);
-\draw (25) -| (30.center);
-\node (31) at (7.530925163697542,4.625) {};
-\draw (21) -| (31.center);
-\draw (28) -| (31.center);
-\node (32) at (7.586969825140694,1.125) {};
+\draw (24) -| (29.center);
+\node (30) at (6.9769617843721035,4.8125) {};
+\draw (23) -| (30.center);
+\draw (28) -| (30.center);
+\node (31) at (7.16484427786611,9.25) {};
+\draw (0) -| (31.center);
+\draw (12) -| (31.center);
+\node (32) at (7.756985409439904,2.0625) {};
 \draw (9) -| (32.center);
-\draw (24) -| (32.center);
-\node (33) at (7.9752126858407815,7.875) {};
-\draw (26) -| (33.center);
-\draw (30) -| (33.center);
-\node (34) at (8.401369630295033,1.875) {};
-\draw (29) -| (34.center);
-\draw (32) -| (34.center);
-\node (35) at (9.039180544468206,3.25) {};
-\draw (31) -| (35.center);
-\draw (34) -| (35.center);
-\node (36) at (9.195150556412361,8.6875) {};
-\draw (5) -| (36.center);
-\draw (33) -| (36.center);
-\node (37) at (10.031668119160312,9.34375) {};
-\draw (8) -| (37.center);
+\draw (29) -| (32.center);
+\node (33) at (8.246588161588985,8.0625) {};
+\draw (5) -| (33.center);
+\draw (27) -| (33.center);
+\node (34) at (8.516345530370376,8.65625) {};
+\draw (31) -| (34.center);
+\draw (33) -| (34.center);
+\node (35) at (8.59910338668015,1.40625) {};
+\draw (25) -| (35.center);
+\draw (32) -| (35.center);
+\node (36) at (9.518447288899212,3.109375) {};
+\draw (30) -| (36.center);
+\draw (35) -| (36.center);
+\node (37) at (11.060264237306432,5.8828125) {};
+\draw (34) -| (37.center);
 \draw (36) -| (37.center);
-\node (38) at (11.145931695579483,6.296875) {};
-\draw (35) -| (38.center);
+\node (38) at (12.871697222309388,7.94140625) {};
+\draw (8) -| (38.center);
 \draw (37) -| (38.center);
 
 % Sound correspondences.
-\node[corres] at (20) {x $>$ \textesh};
-\node[corres] at (21) {n $>$ n\texthalflength};
-\node[corres, right=6mm, below=2mm] at (22) {a $>$ \textsubbar{a}\texthalflength{} / cons\_};
-\node[corres, right=6mm, below=1mm] at (23) {x $>$ $\emptyset$ / \_vow};
-\node[corres, right=4.5mm, above=0mm] at (24) {a $>$ \textopeno / \_cons};
-% \node[corres] at (25) {};
-\node[corres] at (26) {f $>$ v};
-\node[corres, right=6mm, above=0mm] at (27) {d $>$ $\emptyset$ / cons\_};
-\node[corres, right=6mm, below=-3mm] at (28) {t $>$ t\textsuperscript{h} / vow\_};
-\node[corres, right=6mm, above=0mm] at (29) {e $>$ y\textlengthmark / cons\_};
-\node[corres, left=2mm, below=-2.7mm] at (30) {u $>$ o\texthalflength\textturna{} / cons\_};
-\node[corres, right=4mm, above=0mm] at (31) {r $>$ $\emptyset$  / \_\#};
-\node[corres, right=6mm, above=0mm] at (32) {r $>$ \textlowering{\textinvscr} / \_cons};
-\node[corres, right=6mm, above=0mm] at (33) {t $>$ t / \#\_};
-\node[corres, right=6mm, above=0mm] at (34) {e $>$ y\textlengthmark{} / cons\_};
-\node[corres, right=4mm, above=0mm] at (35) {$\emptyset$ $>$ \textglotstop{} / \#\_};
-\node[corres, right=4mm, above=0mm] at (36) {k $>$ k / \#\_};
-\node[corres, right=4mm, above=0mm] at (37) {k $>$ k / \#\_};
-% \node[corres] at (20) {x $>$ \textesh};
-% \node[corres] at (21) {n $>$ n\texthalflength};
-% \node[corres] at (22) {a $>$ \textsubbar{a}\texthalflength{} / cons\_};
-% \node[corres] at (23) {x $>$ $\emptyset$ / \_vow};
-% \node[corres] at (24) {a $>$ \textopeno / \_cons};
-% % \node[corres] at (25) {};
-% \node[corres] at (26) {f $>$ v};
-% \node[corres] at (27) {d $>$ $\emptyset$ / cons\_};
-% \node[corres] at (28) {t $>$ t\textsuperscript{h} / vow\_};
-% \node[corres] at (29) {e $>$ y\textlengthmark / cons\_};
-% \node[corres] at (30) {u $>$ o\texthalflength\textturna{} / cons\_};
-% \node[corres] at (31) {r $>$ $\emptyset$  / \_\#};
-% \node[corres] at (32) {r $>$ \textlowering{\textinvscr} / \_cons};
-% \node[corres] at (33) {t $>$ t / \#\_};
-% \node[corres] at (34) {e $>$ y\textlengthmark{} / cons\_};
-% \node[corres] at (35) {$\emptyset$ $>$ \textglotstop{} / \#\_};
-% \node[corres] at (36) {k $>$ k / \#\_};
-% \node[corres] at (37) {k $>$ k / \#\_};
+% NOTE Manually add the sound correspondences here:
+\node[corres] at (20) { $>$ };
+\node[corres] at (21) { $>$ };
+\node[corres] at (22) { $>$ };
+\node[corres] at (23) { $>$ };
+\node[corres] at (24) { $>$ };
+\node[corres] at (25) { $>$ };
+\node[corres] at (26) { $>$ };
+\node[corres] at (27) { $>$ };
+\node[corres] at (28) { $>$ };
+\node[corres] at (29) { $>$ };
+\node[corres] at (30) { $>$ };
+\node[corres] at (31) { $>$ };
+\node[corres] at (32) { $>$ };
+\node[corres] at (33) { $>$ };\documentclass{standalone}
+\usepackage[dvipsnames]{xcolor} % has to come before tikz
+\usepackage{tikz, tipa}
+\begin{document}
+
+\definecolor{purple}{HTML}{520066}
+\definecolor{blue}{HTML}{31688e}
+\definecolor{green}{HTML}{35b779}
+\def\upper{\color{purple}\FilledBigTriangleUp}
+\def\central{\color{blue}\FilledBigSquare}
+\def\dutch{\color{green}\FilledBigCircle}
+\def\ingv{\color{green}\BigCircle}
+
+\tikzset{corres/.style={fill=white, right=6mm, above=1mm,inner sep=0pt}}
+\begin{tikzpicture}
+% Doculects by singleton cluster number (alphabetical index).
+\node[label=left:Ortisei] (14) at (0, 0.5) {};
+\node[label=left:Herrlisheim] (11) at (0, 1.0) {};
+\node[label=left:Hard] (9) at (0, 1.5) {};
+\node[label=left:Walser] (18) at (0, 2.0) {};
+\node[label=left:Graubuenden] (7) at (0, 2.5) {};
+\node[label=left:Biel] (2) at (0, 3.0) {};
+\node[label=left:Tuebingen] (16) at (0, 3.5) {};
+\node[label=left:Cologne] (3) at (0, 4.0) {};
+\node[label=left:Luxembourg] (13) at (0, 4.5) {};
+\node[label=left:Westerkwartier] (19) at (0, 5.0) {};
+\node[label=left:Veenkolonien] (17) at (0, 5.5) {};
+\node[label=left:Feer] (6) at (0, 6.0) {};
+\node[label=left:Heligoland] (10) at (0, 6.5) {};
+\node[label=left:Antwerp] (1) at (0, 7.0) {};
+\node[label=left:Ostend] (15) at (0, 7.5) {};
+\node[label=left:Dutch Std BE] (4) at (0, 8.0) {};
+\node[label=left:Dutch Std NL] (5) at (0, 8.5) {};
+\node[label=left:Achterhoek] (0) at (0, 9.0) {};
+\node[label=left:Limburg] (12) at (0, 9.5) {};
+\node[label=left:Grou] (8) at (0, 10.0) {};
+
+% Clusters from Z.
+\node (20) at (4.402503450583868,5.25) {};
+\draw (17) -| (20.center);
+\draw (19) -| (20.center);
+\node (21) at (4.663569942550238,4.25) {};
+\draw (3) -| (21.center);
+\draw (13) -| (21.center);
+\node (22) at (4.95868411174099,6.25) {};
+\draw (6) -| (22.center);
+\draw (10) -| (22.center);
+\node (23) at (5.159442319569982,3.875) {};
+\draw (16) -| (23.center);
+\draw (21) -| (23.center);
+\node (24) at (5.330116803591659,2.25) {};
+\draw (7) -| (24.center);
+\draw (18) -| (24.center);
+\node (25) at (5.591213635641856,0.75) {};
+\draw (11) -| (25.center);
+\draw (14) -| (25.center);
+\node (26) at (5.609750719067403,7.25) {};
+\draw (1) -| (26.center);
+\draw (15) -| (26.center);
+\node (27) at (5.787974373517383,7.625) {};
+\draw (4) -| (27.center);
+\draw (26) -| (27.center);
+\node (28) at (5.832756479523573,5.75) {};
+\draw (20) -| (28.center);
+\draw (22) -| (28.center);
+\node (29) at (6.917718072908566,2.625) {};
+\draw (2) -| (29.center);
+\draw (24) -| (29.center);
+\node (30) at (6.9769617843721035,4.8125) {};
+\draw (23) -| (30.center);
+\draw (28) -| (30.center);
+\node (31) at (7.16484427786611,9.25) {};
+\draw (0) -| (31.center);
+\draw (12) -| (31.center);
+\node (32) at (7.756985409439904,2.0625) {};
+\draw (9) -| (32.center);
+\draw (29) -| (32.center);
+\node (33) at (8.246588161588985,8.0625) {};
+\draw (5) -| (33.center);
+\draw (27) -| (33.center);
+\node (34) at (8.516345530370376,8.65625) {};
+\draw (31) -| (34.center);
+\draw (33) -| (34.center);
+\node (35) at (8.59910338668015,1.40625) {};
+\draw (25) -| (35.center);
+\draw (32) -| (35.center);
+\node (36) at (9.518447288899212,3.109375) {};
+\draw (30) -| (36.center);
+\draw (35) -| (36.center);
+\node (37) at (11.060264237306432,5.8828125) {};
+\draw (34) -| (37.center);
+\draw (36) -| (37.center);
+\node (38) at (12.871697222309388,7.94140625) {};
+\draw (8) -| (38.center);
+\draw (37) -| (38.center);
+
+% Sound correspondences.
+% NOTE Manually add the sound correspondences here:
+\node[corres, right=6mm, above=0mm] at (20) {t $>$ t\textsuperscript{h} / cons \_};
+\node[corres] at (21) {r $>$ \textscr};
+\node[corres, right=2mm, above=0mm] at (22) {s $>$ s / \_ K};
+\node[corres] at (23) {n $>$ n\texthalflength};
+\node[corres, right=5mm, below=2mm] at (24) {a $>$ \textsubbar{a}\texthalflength{} / cons\_};
+\node[corres, right=5mm, above=0mm] at (25) {a $>$ \textopeno / \_cons};
+\node[corres, right=5mm, below=1mm] at (26) {x $>$ $\emptyset$ / \_vow};
+\node[corres] at (27) {f $>$ v};
+\node[corres] at (28) {d $>$ t\textsuperscript{h}};
+\node[corres] at (29) {e $>$ y\textlengthmark};
+\node[corres] at (30) {r $>$ $\emptyset$};
+\node[corres, right=1mm, above=0mm] at (31) {u $>$ o\texthalflength\textturna{}};
+\node[corres] at (32) {e $>$ y\textlengthmark};
+\node[corres, right=1mm, above=0mm] at (33) {b $>$ f};
+\node[corres, right=4mm, above=0mm] at (34) {s $>$ s / A \_};
+\node[corres, right=4mm, below=2mm] at (35) {t $>$ s / \_ \#};
+\node[corres, right=4mm, below=2mm] at (36) {$\emptyset$ $>$ \textglotstop{} / \#\_};
+\node[corres] at (37) {l $>$ l};
 
 
 % X axis.
-\draw[->] (0,0) -- node[label={[label distance=-1.3cm]Average cosine distance}]{{}} (12.0, 0);
+\draw[->] (0,0) -- node[label={[label distance=-1.3cm]Cosine distance}]{{}} (14.0, 0);
 \draw (0.0, 1pt) -- (0.0, -3pt) node[label={[label distance=-7mm]0.00}] {};
 \draw (1.5, 1pt) -- (1.5, -3pt) node[label={[label distance=-7mm]0.10}] {};
 \draw (3.0, 1pt) -- (3.0, -3pt) node[label={[label distance=-7mm]0.20}] {};
@@ -144,5 +237,28 @@
 \draw (7.5, 1pt) -- (7.5, -3pt) node[label={[label distance=-7mm]0.50}] {};
 \draw (9.0, 1pt) -- (9.0, -3pt) node[label={[label distance=-7mm]0.60}] {};
 \draw (10.5, 1pt) -- (10.5, -3pt) node[label={[label distance=-7mm]0.70}] {};
+\draw (12.0, 1pt) -- (12.0, -3pt) node[label={[label distance=-7mm]0.80}] {};
+\draw (13.5, 1pt) -- (13.5, -3pt) node[label={[label distance=-7mm]0.90}] {};
+\end{tikzpicture}
+\end{document}
+
+\node[corres] at (34) { $>$ };
+\node[corres] at (35) { $>$ };
+\node[corres] at (36) { $>$ };
+\node[corres] at (37) { $>$ };
+
+
+% X axis.
+\draw[->] (0,0) -- node[label={[label distance=-1.3cm]Cosine distance}]{{}} (14.0, 0);
+\draw (0.0, 1pt) -- (0.0, -3pt) node[label={[label distance=-7mm]0.00}] {};
+\draw (1.5, 1pt) -- (1.5, -3pt) node[label={[label distance=-7mm]0.10}] {};
+\draw (3.0, 1pt) -- (3.0, -3pt) node[label={[label distance=-7mm]0.20}] {};
+\draw (4.5, 1pt) -- (4.5, -3pt) node[label={[label distance=-7mm]0.30}] {};
+\draw (6.0, 1pt) -- (6.0, -3pt) node[label={[label distance=-7mm]0.40}] {};
+\draw (7.5, 1pt) -- (7.5, -3pt) node[label={[label distance=-7mm]0.50}] {};
+\draw (9.0, 1pt) -- (9.0, -3pt) node[label={[label distance=-7mm]0.60}] {};
+\draw (10.5, 1pt) -- (10.5, -3pt) node[label={[label distance=-7mm]0.70}] {};
+\draw (12.0, 1pt) -- (12.0, -3pt) node[label={[label distance=-7mm]0.80}] {};
+\draw (13.5, 1pt) -- (13.5, -3pt) node[label={[label distance=-7mm]0.90}] {};
 \end{tikzpicture}
 \end{document}

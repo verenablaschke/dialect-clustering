@@ -25,38 +25,57 @@ def transform(Z, labels, f):
 
     # Leaf nodes.
     f.write("\\documentclass{standalone}\n")
+    # This line is for the colour-/shape-coding of the doculect groups:
+    f.write("\\usepackage[dvipsnames]{xcolor} % has to come before tikz\n")
     f.write("\\usepackage{tikz, tipa}\n")
-    f.write("\\begin{document}\n")
+    f.write("\\begin{document}\n\n")
+
+    # These are for the colour-/shape-coding of the doculect groups:
+    f.write("\\definecolor{purple}{HTML}{520066}\n")
+    f.write("\\definecolor{blue}{HTML}{31688e}\n")
+    f.write("\\definecolor{green}{HTML}{35b779}\n")
+    f.write("\\def\\upper{\\color{purple}\\FilledBigTriangleUp}\n")
+    f.write("\\def\\central{\\color{blue}\\FilledBigSquare}\n")
+    f.write("\\def\\dutch{\\color{green}\\FilledBigCircle}\n")
+    f.write("\\def\\ingv{\\color{green}\\BigCircle}\n\n")
+
     f.write("\\tikzset{corres/.style={fill=white, right=6mm, above=1mm,"
             "inner sep=0pt}}\n")
-    # f.write("\\tikzset{doc/.append style={prefix after command={\\pgfextra"
-    #         "{\\tikzset{every label/.style={rotate=-45}}}}}}\n") # TODO
     f.write("\\begin{tikzpicture}\n")
     f.write("% Doculects by singleton cluster number (alphabetical index).\n")
     for l in labels:
         i = label2cluster[l]
-        # f.write("\\node[doc, label=right:{}] ({}) at ({}, 0) {{}};\n" # TODO
         f.write("\\node[label=left:{}] ({}) at (0, {}) {{}};\n"
                 .format(l, i, cluster2xcoord[i] * DIST_MULTIPLIER_Y))
 
     # Branches.
     f.write("\n% Clusters from Z.\n")
+    min_branch, max_branch = -1, -1
     for row in Z:
         cl_1 = int(row[0])
         cl_2 = int(row[1])
         dist = row[2] * DIST_MULTIPLIER_X
         cl_new = int(row[4])
+        if min_branch == -1:
+            min_branch = cl_new
         y = (cluster2xcoord[cl_1] + cluster2xcoord[cl_2]) / 2
         cluster2xcoord[cl_new] = y
         f.write("\\node ({}) at ({},{}) {{}};\n"
-                # .format(cl_new, x, dist)) # TODO
                 .format(cl_new, dist, y * DIST_MULTIPLIER_Y))
         f.write("\\draw ({}) -| ({}.center);\n"
                 .format(cl_1, cl_new))
         f.write("\\draw ({}) -| ({}.center);\n"
                 .format(cl_2, cl_new))
+    max_branch = cl_new 
 
-    # Y axis.
+    # Sound correspondences:
+    f.write("\n% Sound correspondences.\n")
+    f.write("% NOTE Manually add the sound correspondences here:\n")
+    for i in range(min_branch, max_branch):
+        f.write("\\node[corres] at (" + str(i) + ") { $>$ };\n")
+    f.write("\n")
+
+    # X axis.
     max_dist = round(dist) + 1
     f.write("\n% X axis.\n")
     f.write("\\draw[->] (0,0) -- node"
@@ -90,18 +109,19 @@ labels = [
     'Luxembourg',
 
     'Westerkwartier',
+    'Veenkolonien',
+
     'Feer',
     'Heligoland',
 
-    'Ostend',
     'Antwerp',
+    'Ostend',
     'Dutch_Std_BE',
 
-    'Veenkolonien',
+    'Dutch_Std_NL',
     'Achterhoek',
     'Limburg',
 
-    'Dutch_Std_NL',
     'Grou',
 ]
 with open('doc/figures/tfidf-context.tex', 'w') as f:  # TODO
