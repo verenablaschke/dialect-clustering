@@ -79,8 +79,6 @@ def transform(Z, labels, f):
     max_dist = round(dist) + 1
     f.write("\n% X axis.\n")
     f.write("\\draw[->] (0,0) -- node"
-            # "[label={[rotate=90, label distance=1cm]90:Distance}]{{}} " +
-            # "(0, {});\n".format(max_dist)) # TODO
             "[label={[label distance=-1.3cm]Cosine distance}]{{}} " +
             "({}, 0);\n".format(max_dist))
     # Not the most elegant way of performing this loop in LaTeX but it works.
