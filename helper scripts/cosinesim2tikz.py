@@ -48,44 +48,64 @@ with open('helper scripts/coordinates.csv', encoding='utf8') as f:
         doculect2coord[row['doculect']] = (float(row['longitude']),
                                            float(row['latitude']))
 
-with open('doc/figures/cosine2.tex', 'w', encoding='utf8') as f:
-    f.write("\\documentclass{standalone}\n")
-    f.write("\\usepackage{tikz}\n")
-    f.write("\\usepackage[outline]{contour}\n")
-    f.write("\\begin{document}\n")
-    f.write("\\contourlength{0.2em}\n")
-    f.write("\\begin{tikzpicture}[scale=2.5, "
-            "dot/.style={draw=white, circle, minimum size=8pt, fill=red}, "
-            "doculect/.style={inner sep=1em}]\n\n")
-    f.write("% Establish doculect coordinates.\n")
-    for doc, loc in doculect2coord.items():
-        f.write("\\node ({}) at ({}, {}) {{}};\n"
-                .format(clean_node(doc), 0.7 * loc[0], loc[1]))
 
-    docs = {i: d for i, d in enumerate(sorted(doculect2coord.keys(),
-                                              key=lambda x: alias(x)))}
-    # Sort lines by similiarity score
-    # -> print darker lines later.
-    sims = []
-    for i in range(n - 1):
-        for j in range(i + 1, n):
-            # normalize similarity score
-            d = (sim[i, j] - min_sim) / (max_sim - min_sim)
-            line = "\\draw[line width={}mm, color=black!60!blue!{}]" \
-                   "({}.center) -- ({}.center);\n" \
-                   .format(d * 1.3, int(100 * d),
-                           clean_node(docs[i]), clean_node(docs[j]))
-            sims.append((d, line))
-    f.write("\n% Draw similarity lines.\n")
-    for _, line in sorted(sims)[int(len(sims) * 0.9):]:
-        f.write(line)
+def cosinesim2tizk(tikzfile, min_percentile=0.0, label_pos={}):
+    with open(tikzfile, 'w', encoding='utf8') as f:
+        f.write("\\documentclass{standalone}\n")
+        f.write("\\usepackage{tikz}\n")
+        f.write("\\usepackage[outline]{contour}\n")
+        f.write("\\begin{document}\n")
+        f.write("\\contourlength{0.2em}\n")
+        f.write("\\begin{tikzpicture}[scale=2.5, "
+                "dot/.style={draw=white, circle, minimum size=8pt, fill=red}, "
+                "doculect/.style={inner sep=1em}]\n\n")
+        f.write("% Establish doculect coordinates.\n")
+        for doc, loc in doculect2coord.items():
+            f.write("\\node ({}) at ({}, {}) {{}};\n"
+                    .format(clean_node(doc), 0.7 * loc[0], loc[1]))
 
-    f.write("\n% Mark the locations with circles and labels.\n")
-    for doc, loc in doculect2coord.items():
-        f.write("\\node[dot] at ({}.center) {{}};\n"
-                .format(clean_node(doc)))
-        f.write("\\node[doculect, right] at ({}.center) "
-                "{{\\contour{{white}}{{\\LARGE {}}}}};\n"
-                .format(clean_node(doc), clean_label(doc)))
-    f.write("\\end{tikzpicture}\n")
-    f.write("\\end{document}\n")
+        docs = {i: d for i, d in enumerate(sorted(doculect2coord.keys(),
+                                                  key=lambda x: alias(x)))}
+        # Sort lines by similiarity score
+        # -> print darker lines later.
+        sims = []
+        for i in range(n - 1):
+            for j in range(i + 1, n):
+                # normalize similarity score
+                d = (sim[i, j] - min_sim) / (max_sim - min_sim)
+                line = "\\draw[line width={}mm, color=black!60!blue!{}]" \
+                       "({}.center) -- ({}.center);\n" \
+                       .format(d * 1.3, int(100 * d),
+                               clean_node(docs[i]), clean_node(docs[j]))
+                sims.append((d, line))
+        f.write("\n% Draw similarity lines.\n")
+        for _, line in sorted(sims)[int(len(sims) * min_percentile):]:
+            f.write(line)
+
+        f.write("\n% Mark the locations with circles and labels.\n")
+        for doc, loc in doculect2coord.items():
+            f.write("\\node[dot] at ({}.center) {{}};\n"
+                    .format(clean_node(doc)))
+            f.write("\\node[doculect, {}] at ({}.center) "
+                    "{{\\contour{{white}}{{\\LARGE {}}}}};\n"
+                    .format(label_pos.get(doc, 'right'),
+                            clean_node(doc), clean_label(doc)))
+        f.write("\\end{tikzpicture}\n")
+        f.write("\\end{document}\n")
+
+
+label_pos = {'Achterhoek': 'below',
+             'Biel': 'below',
+             'Graubünden': 'below',
+             'Grou': 'left',
+             'Heligoland': 'left',
+             'Herrlisheim': 'left',
+             'Limburg': 'below',
+             'Luxembourg': 'left',
+             'Ostend': 'above',
+             'Std. Dutch (BE)': 'left',
+             'Std. Dutch (NL)': 'left',
+             'Westerkwartier': 'above'}
+
+cosinesim2tizk('doc/figures/cosine_all.tex', 0.0, label_pos)
+cosinesim2tizk('doc/figures/cosine_top10percent.tex', 0.9, label_pos)

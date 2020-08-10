@@ -1,0 +1,93 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage[outline]{contour}
+\begin{document}
+\contourlength{0.2em}
+\begin{tikzpicture}[scale=2.5, dot/.style={draw=white, circle, minimum size=8pt, fill=red}, doculect/.style={inner sep=1em}]
+
+% Establish doculect coordinates.
+\node (Achterhoek) at (4.561668999999999, 52.11667) {};
+\node (Antwerp) at (3.08, 51.21667) {};
+\node (Biel) at (5.068, 47.15) {};
+\node (Cologne) at (4.876669, 50.95) {};
+\node (StdDutchBE) at (3.0449999999999995, 50.85) {};
+\node (StdDutchNL) at (3.5854000000000004, 52.091) {};
+\node (Feer) at (5.949999999999999, 54.71666999999999) {};
+\node (Graubuenden) at (6.617554999999999, 46.70013) {};
+\node (Grou) at (4.0809999999999995, 53.1) {};
+\node (Hard) at (6.776, 47.48) {};
+\node (Heligoland) at (5.519696000000001, 54.1825) {};
+\node (Herrlisheim) at (5.5347599999999995, 48.730059999999995) {};
+\node (Limburg) at (4.241419, 50.8925) {};
+\node (Luxembourg) at (4.281669, 49.6) {};
+\node (Ortisei) at (8.166668999999999, 46.56667) {};
+\node (Ostend) at (2.0416689999999997, 51.23333) {};
+\node (Tuebingen) at (6.336469999999999, 48.5229) {};
+\node (Veenkolonien) at (4.809798, 53.10041999999999) {};
+\node (Walser) at (6.670999999999999, 47.12) {};
+\node (Westerkwartier) at (4.47209, 53.16444) {};
+
+% Draw similarity lines.
+\draw[line width=0.9715509637212233mm, color=black!60!blue!74](Graubuenden.center) -- (Tuebingen.center);
+\draw[line width=0.9725232803452537mm, color=black!60!blue!74](Heligoland.center) -- (Westerkwartier.center);
+\draw[line width=0.9831609216554879mm, color=black!60!blue!75](Feer.center) -- (Westerkwartier.center);
+\draw[line width=0.9862623751555971mm, color=black!60!blue!75](Antwerp.center) -- (StdDutchBE.center);
+\draw[line width=1.0145564489652361mm, color=black!60!blue!78](Feer.center) -- (Tuebingen.center);
+\draw[line width=1.0155185093381829mm, color=black!60!blue!78](Herrlisheim.center) -- (Ortisei.center);
+\draw[line width=1.0249426182380872mm, color=black!60!blue!78](Antwerp.center) -- (Ostend.center);
+\draw[line width=1.047130818877773mm, color=black!60!blue!80](Tuebingen.center) -- (Veenkolonien.center);
+\draw[line width=1.0647865486365182mm, color=black!60!blue!81](Feer.center) -- (Luxembourg.center);
+\draw[line width=1.0684105064501215mm, color=black!60!blue!82](Heligoland.center) -- (Luxembourg.center);
+\draw[line width=1.0804050868296822mm, color=black!60!blue!83](Graubuenden.center) -- (Walser.center);
+\draw[line width=1.1038977314142986mm, color=black!60!blue!84](Cologne.center) -- (Tuebingen.center);
+\draw[line width=1.1078561280916919mm, color=black!60!blue!85](Luxembourg.center) -- (Veenkolonien.center);
+\draw[line width=1.1433298379140042mm, color=black!60!blue!87](Heligoland.center) -- (Veenkolonien.center);
+\draw[line width=1.1579783958319858mm, color=black!60!blue!89](Feer.center) -- (Veenkolonien.center);
+\draw[line width=1.1760527238863696mm, color=black!60!blue!90](Luxembourg.center) -- (Tuebingen.center);
+\draw[line width=1.2008441739581404mm, color=black!60!blue!92](Cologne.center) -- (Luxembourg.center);
+\draw[line width=1.2883699989691597mm, color=black!60!blue!99](Feer.center) -- (Heligoland.center);
+\draw[line width=1.3mm, color=black!60!blue!100](Veenkolonien.center) -- (Westerkwartier.center);
+
+% Mark the locations with circles and labels.
+\node[dot] at (Achterhoek.center) {};
+\node[doculect, below] at (Achterhoek.center) {\contour{white}{\LARGE Achterhoek}};
+\node[dot] at (Antwerp.center) {};
+\node[doculect, right] at (Antwerp.center) {\contour{white}{\LARGE Antwerp}};
+\node[dot] at (Biel.center) {};
+\node[doculect, below] at (Biel.center) {\contour{white}{\LARGE Biel}};
+\node[dot] at (Cologne.center) {};
+\node[doculect, right] at (Cologne.center) {\contour{white}{\LARGE Cologne}};
+\node[dot] at (StdDutchBE.center) {};
+\node[doculect, left] at (StdDutchBE.center) {\contour{white}{\LARGE Std. Dutch (BE)}};
+\node[dot] at (StdDutchNL.center) {};
+\node[doculect, left] at (StdDutchNL.center) {\contour{white}{\LARGE Std. Dutch (NL)}};
+\node[dot] at (Feer.center) {};
+\node[doculect, right] at (Feer.center) {\contour{white}{\LARGE Feer}};
+\node[dot] at (Graubuenden.center) {};
+\node[doculect, below] at (Graubuenden.center) {\contour{white}{\LARGE Graub\"{u}nden}};
+\node[dot] at (Grou.center) {};
+\node[doculect, left] at (Grou.center) {\contour{white}{\LARGE Grou}};
+\node[dot] at (Hard.center) {};
+\node[doculect, right] at (Hard.center) {\contour{white}{\LARGE Hard}};
+\node[dot] at (Heligoland.center) {};
+\node[doculect, left] at (Heligoland.center) {\contour{white}{\LARGE Heligoland}};
+\node[dot] at (Herrlisheim.center) {};
+\node[doculect, left] at (Herrlisheim.center) {\contour{white}{\LARGE Herrlisheim}};
+\node[dot] at (Limburg.center) {};
+\node[doculect, below] at (Limburg.center) {\contour{white}{\LARGE Limburg}};
+\node[dot] at (Luxembourg.center) {};
+\node[doculect, left] at (Luxembourg.center) {\contour{white}{\LARGE Luxembourg}};
+\node[dot] at (Ortisei.center) {};
+\node[doculect, right] at (Ortisei.center) {\contour{white}{\LARGE Ortisei}};
+\node[dot] at (Ostend.center) {};
+\node[doculect, above] at (Ostend.center) {\contour{white}{\LARGE Ostend}};
+\node[dot] at (Tuebingen.center) {};
+\node[doculect, right] at (Tuebingen.center) {\contour{white}{\LARGE T\"{u}bingen}};
+\node[dot] at (Veenkolonien.center) {};
+\node[doculect, right] at (Veenkolonien.center) {\contour{white}{\LARGE Veenkoloni\"{e}n}};
+\node[dot] at (Walser.center) {};
+\node[doculect, right] at (Walser.center) {\contour{white}{\LARGE Walser}};
+\node[dot] at (Westerkwartier.center) {};
+\node[doculect, above] at (Westerkwartier.center) {\contour{white}{\LARGE Westerkwartier}};
+\end{tikzpicture}
+\end{document}
