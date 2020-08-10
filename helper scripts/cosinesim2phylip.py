@@ -1,3 +1,7 @@
+# Transforms the cosine similarity matrix produced by cluster.py into a
+# Phylip-formated cosine distance file that can be used as input to SplitsTree
+# to generate a NeighborNet visualization of the data.
+
 import pickle
 import csv
 
