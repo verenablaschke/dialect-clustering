@@ -1,0 +1,31 @@
+% Requires the packages booktabs, xcolor, calc.
+% Based on: https://tex.stackexchange.com/a/445291
+\newlength\BARWIDTH
+\setlength\BARWIDTH{1cm}
+\def\blackwhitebar#1{%%
+#1 {\color{black!100}\rule{#1cm}{8pt}}{\color{black!30}\rule{\BARWIDTH - #1 cm}{8pt}}}
+\begin{tabular}{l r r r}
+\toprule
+Doculect & Cluster A & Cluster B & Cluster C\\\midrule
+Veenkoloni\"{e}n & \blackwhitebar{0.81} & \blackwhitebar{0.12} & \blackwhitebar{0.06}\\
+Heligoland & \blackwhitebar{0.78} & \blackwhitebar{0.13} & \blackwhitebar{0.08}\\
+Feer & \blackwhitebar{0.72} & \blackwhitebar{0.16} & \blackwhitebar{0.12}\\
+Westerkwartier & \blackwhitebar{0.70} & \blackwhitebar{0.19} & \blackwhitebar{0.11}\\
+Luxembourg & \blackwhitebar{0.54} & \blackwhitebar{0.33} & \blackwhitebar{0.13}\\
+Cologne & \blackwhitebar{0.44} & \blackwhitebar{0.39} & \blackwhitebar{0.17}\\
+Walser & \blackwhitebar{0.18} & \blackwhitebar{0.65} & \blackwhitebar{0.16}\\
+Ortisei & \blackwhitebar{0.21} & \blackwhitebar{0.65} & \blackwhitebar{0.14}\\
+Hard & \blackwhitebar{0.22} & \blackwhitebar{0.62} & \blackwhitebar{0.16}\\
+Graub\"{u}nden & \blackwhitebar{0.22} & \blackwhitebar{0.60} & \blackwhitebar{0.19}\\
+Herrlisheim & \blackwhitebar{0.24} & \blackwhitebar{0.59} & \blackwhitebar{0.17}\\
+T\"{u}bingen & \blackwhitebar{0.36} & \blackwhitebar{0.52} & \blackwhitebar{0.12}\\
+Biel & \blackwhitebar{0.22} & \blackwhitebar{0.51} & \blackwhitebar{0.27}\\
+Limburg & \blackwhitebar{0.25} & \blackwhitebar{0.39} & \blackwhitebar{0.36}\\
+Std. Dutch (BE) & \blackwhitebar{0.10} & \blackwhitebar{0.12} & \blackwhitebar{0.78}\\
+Ostend & \blackwhitebar{0.09} & \blackwhitebar{0.13} & \blackwhitebar{0.78}\\
+Antwerp & \blackwhitebar{0.11} & \blackwhitebar{0.14} & \blackwhitebar{0.74}\\
+Std. Dutch (NL) & \blackwhitebar{0.21} & \blackwhitebar{0.24} & \blackwhitebar{0.56}\\
+Achterhoek & \blackwhitebar{0.21} & \blackwhitebar{0.25} & \blackwhitebar{0.54}\\
+Grou & \blackwhitebar{0.29} & \blackwhitebar{0.30} & \blackwhitebar{0.41}\\
+\bottomrule
+\end{tabular}
