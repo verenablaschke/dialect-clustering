@@ -101,8 +101,7 @@ if __name__ == "__main__":
     print("Calculating fuzzy clusters.")
     A_tfidf = TfidfTransformer().fit_transform(A).toarray()
     m = 1.5
-    # fuzzy.find_fuzzy_c_means(A_tfidf, 2, 7, doculects, m,
-    #                          'output/tfidf-context-fuzzy-{}.txt'.format(k))
+    # fuzzy.find_fuzzy_c_means(A_tfidf, 2, 7, doculects, m)
     k = 3
     part = fuzzy.fuzzy_c_means(A_tfidf, k, doculects, m,
                                'output/tfidf-context-fuzzy-{}.txt'.format(k))

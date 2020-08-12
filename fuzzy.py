@@ -35,15 +35,22 @@ def fuzzy_c_means(data, k, doculects, m=1.5, filename=None, max_iter=1000):
 
 
 def update_partitions(data, centroids, n, k, f, m):
+    if m == 1:
+        m = 1.01
+    exponent = 2 / (m - 1)  # TODO convert to log?
     partitions = np.zeros((n, k))
     for i in range(n):
         dists = [np.sum([(da - ce) ** 2 for da, ce in
                          zip(data[i], centroids[c])]) ** 0.5
                  for c in range(k)]
-        exponent = 2 / (m - 1) if m != 1 else 1
-        dist_sum = np.sum([d ** -exponent for d in dists])
         for j in range(k):
-            partitions[i][j] = (1 / dists[j] ** exponent) / dist_sum
+            if dists[j] == 0:
+                partitions[i][j] = 0
+                continue
+            div = 0
+            for j2 in range(k):
+                div += (dists[j] / dists[j2]) ** exponent
+            partitions[i][j] = 1 / div
     return partitions
 
 
@@ -66,7 +73,7 @@ def print_to_log(partitions, doculects, k, m, n_iter, filename):
                       for doc, part in zip(doculects, partitions)],
                      key=lambda x: (x[0], -x[2][x[0]]))
     with open(filename, 'w', encoding='utf8') as f:
-        f.write("k={}, m={}".format(k, m))
+        f.write("k={}, m={}\n".format(k, m))
         f.write("Found a partitioning after {} iterations.\n\n".format(n_iter))
         prev_argmax = entries[0][0]
         for argmax, doc, part in entries:
