@@ -98,53 +98,57 @@ if __name__ == "__main__":
     A, A_original, corres2int, all_corres = construct_A(all_correspondences,
                                                         correspondences,
                                                         doculects)
-    A = TfidfTransformer().fit_transform(A).toarray()
+    print("Calculating fuzzy clusters.")
+    A_tfidf = TfidfTransformer().fit_transform(A).toarray()
+    m = 1.5
+    # fuzzy.find_fuzzy_c_means(A_tfidf, 2, 7, doculects, m,
+    #                          'output/tfidf-context-fuzzy-{}.txt'.format(k))
     k = 3
-    part = fuzzy.fuzzy_c_means(A, k, doculects,
+    part = fuzzy.fuzzy_c_means(A_tfidf, k, doculects, m,
                                'output/tfidf-context-fuzzy-{}.txt'.format(k))
     fuzzy.print_to_tex(part, doculects, k,
                        'doc/tables/tfidf-context-fuzzy-{}.tex'.format(k))
 
-    # print("Creating dendrogram.")
-    # clusters = agglomerative(A, doculects, context='context')
-    # print("Scoring.")
-    # print_clusters("output/tfidf-context.txt", A_original,
-    #                clusters, doculect2int, corres2int,
-    #                corres2lang2word, doculects, all_corres)
+    print("Creating dendrogram.")
+    clusters = agglomerative(A, doculects, context='context')
+    print("Scoring.")
+    print_clusters("output/tfidf-context.txt", A_original,
+                   clusters, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres)
 
-    # print("\nConstructing features for tfidf-nocontext.")
-    # A, A_original, corres2int, all_corres = construct_A(corres_no_context,
-    #                                                     correspondences,
-    #                                                     doculects)
-    # print("Creating dendrogram.")
-    # clusters = agglomerative(A, doculects, context='nocontext')
-    # print("Scoring.")
-    # print_clusters("output/tfidf-nocontext.txt", A_original,
-    #                clusters, doculect2int, corres2int,
-    #                corres2lang2word, doculects, all_corres)
+    print("\nConstructing features for tfidf-nocontext.")
+    A, A_original, corres2int, all_corres = construct_A(corres_no_context,
+                                                        correspondences,
+                                                        doculects)
+    print("Creating dendrogram.")
+    clusters = agglomerative(A, doculects, context='nocontext')
+    print("Scoring.")
+    print_clusters("output/tfidf-nocontext.txt", A_original,
+                   clusters, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres)
 
-    # print("\nConstructing features for bsgc-context.")
-    # A, A_original, corres2int, all_corres = construct_A(all_correspondences,
-    #                                                     correspondences,
-    #                                                     doculects,
-    #                                                     binary=True)
-    # print("Clustering.")
-    # clusters, feature_clusters = bsgc_hierarchical(A, doculects, all_corres)
-    # print("Scoring.")
-    # print_clusters("output/bsgc-context.txt", A_original,
-    #                clusters, doculect2int, corres2int,
-    #                corres2lang2word, doculects, all_corres,
-    #                feature_clusters)
+    print("\nConstructing features for bsgc-context.")
+    A, A_original, corres2int, all_corres = construct_A(all_correspondences,
+                                                        correspondences,
+                                                        doculects,
+                                                        binary=True)
+    print("Clustering.")
+    clusters, feature_clusters = bsgc_hierarchical(A, doculects, all_corres)
+    print("Scoring.")
+    print_clusters("output/bsgc-context.txt", A_original,
+                   clusters, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres,
+                   feature_clusters)
 
-    # print("\nConstructing features for bsgc-nocontext.")
-    # A, A_original, corres2int, all_corres = construct_A(corres_no_context,
-    #                                                     correspondences,
-    #                                                     doculects,
-    #                                                     binary=True)
-    # print("Clustering.")
-    # clusters, feature_clusters = bsgc_hierarchical(A, doculects, all_corres)
-    # print("Scoring.")
-    # print_clusters("output/bsgc-nocontext.txt", A_original,
-    #                clusters, doculect2int, corres2int,
-    #                corres2lang2word, doculects, all_corres,
-    #                feature_clusters)
+    print("\nConstructing features for bsgc-nocontext.")
+    A, A_original, corres2int, all_corres = construct_A(corres_no_context,
+                                                        correspondences,
+                                                        doculects,
+                                                        binary=True)
+    print("Clustering.")
+    clusters, feature_clusters = bsgc_hierarchical(A, doculects, all_corres)
+    print("Scoring.")
+    print_clusters("output/bsgc-nocontext.txt", A_original,
+                   clusters, doculect2int, corres2int,
+                   corres2lang2word, doculects, all_corres,
+                   feature_clusters)

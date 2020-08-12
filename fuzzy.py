@@ -2,7 +2,15 @@ import numpy as np
 np.set_printoptions(precision=4, suppress=True)
 
 
-def fuzzy_c_means(data, k, doculects, filename=None, m=1.5, max_iter=1000):
+def find_fuzzy_c_means(data, k_min, k_max, doculects, m=1.5,
+                       filename=None, max_iter=1000):
+    for k_i in range(k_min, k_max + 1):
+        partitions = fuzzy_c_means(data, k_i, doculects, m, filename, max_iter)
+        # Get each doculect's distance to its 'best' cluster.
+        print(k_i, np.sum([part[np.argmax(part)] for part in partitions]))
+
+
+def fuzzy_c_means(data, k, doculects, m=1.5, filename=None, max_iter=1000):
     # m = 2 tends to produce a partition matrix where every entry is 1 / k
 
     n = data.shape[0]
@@ -84,7 +92,7 @@ def print_to_tex(partitions, doculects, k, filename):
         f.write("% Requires the packages booktabs, xcolor, calc.\n")
         f.write("% Based on: https://tex.stackexchange.com/a/445291\n")
         f.write("\\newlength\\BARWIDTH\n\\setlength\\BARWIDTH{1cm}\n")
-        f.write("\\def\\blackwhitebar#1{%%\n#1 {\\color{black!100}"
+        f.write("\\def\\bwbar#1{%%\n#1 {\\color{black!100}"
                 "\\rule{#1cm}{8pt}}{\\color{black!30}\\rule{"
                 "\\BARWIDTH - #1 cm}{8pt}}}\n")
         f.write("\\begin{tabular}{l " + ' '.join(['r' for _ in range(k)]))
@@ -95,7 +103,7 @@ def print_to_tex(partitions, doculects, k, filename):
         f.write("\\\\\\midrule\n")
         for argmax, doc, part in entries:
             f.write(doculects_tex.get(doc, doc) + ' & ')
-            f.write(' & '.join(["\\blackwhitebar{" + "{:.2f}".format(p) + "}"
+            f.write(' & '.join(["\\bwbar{" + "{:.2f}".format(p) + "}"
                                 for p in part]))
             f.write('\\\\\n')
         f.write("\\bottomrule\n\\end{tabular}\n")
