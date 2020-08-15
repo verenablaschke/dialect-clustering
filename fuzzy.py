@@ -5,9 +5,15 @@ np.set_printoptions(precision=4, suppress=True)
 def find_fuzzy_c_means(data, k_min, k_max, doculects, m=1.5,
                        filename=None, max_iter=1000):
     for k_i in range(k_min, k_max + 1):
-        partitions = fuzzy_c_means(data, k_i, doculects, m, filename, max_iter)
-        # Get each doculect's distance to its 'best' cluster.
-        print(k_i, np.sum([part[np.argmax(part)] for part in partitions]))
+        partitions, centroids = fuzzy_c_means(data, k_i, doculects, m,
+                                              filename, max_iter)
+        # Get each doculect's distance to its highest-scoring cluster.
+        dist = 0
+        for datum, part in zip(data, partitions):
+            centre = centroids[np.argmax(part)]
+            dist += np.sum([(d - c) ** 2 for d, c in
+                           zip(datum, centre)]) ** 0.5
+        print(k_i, dist)
 
 
 def fuzzy_c_means(data, k, doculects, m=1.5, filename=None, max_iter=1000):
@@ -31,7 +37,7 @@ def fuzzy_c_means(data, k, doculects, m=1.5, filename=None, max_iter=1000):
           "(change to previous: {:.4f})".format(i, change))
     if filename:
         print_to_log(partitions, doculects, k, m, i, filename)
-    return partitions
+    return partitions, centroids
 
 
 def update_partitions(data, centroids, n, k, f, m):

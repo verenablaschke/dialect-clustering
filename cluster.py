@@ -103,9 +103,10 @@ if __name__ == "__main__":
     m = 1.5
     # fuzzy.find_fuzzy_c_means(A_tfidf, 2, 7, doculects, m)
     k = 3
-    part = fuzzy.fuzzy_c_means(A_tfidf, k, doculects, m,
-                               'output/tfidf-context-fuzzy-{}.txt'.format(k))
-    fuzzy.print_to_tex(part, doculects, k,
+    parts, _ = fuzzy.fuzzy_c_means(A_tfidf, k, doculects, m,
+                                   'output/tfidf-context-fuzzy-{}.txt'
+                                   .format(k))
+    fuzzy.print_to_tex(parts, doculects, k,
                        'doc/tables/tfidf-context-fuzzy-{}.tex'.format(k))
 
     print("Creating dendrogram.")
