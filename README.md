@@ -13,7 +13,7 @@ to explore how historical sound shifts are associated with the resulting cluster
 
 Details on this are in my Bachelor's thesis, which can be found
 [here](https://github.com/verenablaschke/dialect-clustering/blob/master/doc/Verena-Blaschke_BA-Thesis.pdf).
-A [summary](https://github.com/verenablaschke/dialect-clustering/blob/master/doc/Verena-Blaschke_BA-Thesis_Summary.pdf) is also available. 
+A [summary](https://github.com/verenablaschke/dialect-clustering/blob/master/doc/Verena-Blaschke_BA-Thesis_Summary.pdf) and a [presentation](https://github.com/verenablaschke/dialect-clustering/blob/master/doc/Verena-Blaschke_BA-Thesis_Presentation.pdf) are also available. 
 
 ### Abstract
 
